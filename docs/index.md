@@ -1,25 +1,30 @@
---- 
-title: "A Minimal Book Example"
-author: "John Doe"
-date: "`r Sys.Date()`"
+---
+title: "Genetic analysis of quantitative traits in medaka fish and humans"
+author: "Ian Brettell"
+date: "2022-05-25"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::bs4_book,
-  set in the _output.yml file.
+  Thesis for the award of Doctor of Philosophy from EMBL-EBI and the University of Cambridge. 
 biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
 ---
 
 # About
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
+Code to render PDF:
 
-## Usage 
+
+```r
+bookdown::render_book("book", bookdown::pdf_book())
+```
+
+This is a *sample* book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
+
+## Usage
 
 Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
 
@@ -31,13 +36,14 @@ The `index.Rmd` file is required, and is also your first book chapter. It will b
 
 You can render the HTML version of this example book without changing anything:
 
-1. Find the **Build** pane in the RStudio IDE, and
+1.  Find the **Build** pane in the RStudio IDE, and
 
-1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
+2.  Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
 
 Or build the book from the R console:
 
-```{r, eval=FALSE}
+
+```r
 bookdown::render_book()
 ```
 
@@ -47,14 +53,9 @@ To render this example to PDF as a `bookdown::pdf_book`, you'll need to install 
 
 As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
 
-```{r eval=FALSE}
+
+```r
 bookdown::serve_book()
 ```
 
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```

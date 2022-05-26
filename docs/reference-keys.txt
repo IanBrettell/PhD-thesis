@@ -1,0 +1,12 @@
+fig:InbreedingFigure
+fig:ABBABABA
+fig:NucleotideDiversity
+about
+usage
+render-book
+preview-book
+genomic-variations-in-the-mikk-panel
+genomic-characterisation-of-the-medaka-inbred-karlsruhe-kiyosu-mikk-panel
+assessing-the-inbreeding-trajectory-of-the-mikk-panel
+introgression-with-northern-japanese-and-korean-medaka-populations
+nucleotide-diversity
