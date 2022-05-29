@@ -1,0 +1,6 @@
+---
+zotero: ["PhD"]
+bibliography: book.bib
+---
+
+# Classification and genetic analysis of bold/shy behaviours in medaka fish {#MIKK-F2-chap}

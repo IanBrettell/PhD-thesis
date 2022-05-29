@@ -8,6 +8,7 @@ bookdown::bs4_book:
     subdir: book
   includes:
     in_header: css.html
+  bibliography: book.bib
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

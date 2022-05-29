@@ -24,9 +24,14 @@ To obtain our “control SNP” dataset, we assigned each trait SNP to one of 20
 FST and ranking traits by signed Kolmogorov-Smirnov D statistic
 We then calculated FST  for each of the trait SNPs and their matched control SNPs using the Weir and Cockerham method,44 as implemented in the R package pegas.45 To rank all traits based on the directional difference in FST distributions between trait and control SNPs, we ran three Kolmogorov-Smirnov (KS) tests for each trait t with xt = FST, trait SNPs and yt = FST, control SNPs : 1) two-sided (Dt) ; 2) one-sided “greater” (Dt+) ; and 3) one-sided “less” (Dt–). We note that Dt  = max(Dt+, Dt–), where  Dt+ is the greatest vertical distance attained by the eCDF of xt over the eCDF of yt, and Dt– is the greatest vertical distance attained by the eCDF of yt over the eCDF of xt.46,47 Accordingly, we used a comparison of Dt+ and Dt– to created a signed D statistic (DtS), based on the logic that trait SNPs with a lower overall FST than control SNPs tend to have a higher D under the “greater” test than the “less” test, and vice versa. 
 Therefore, DtS:
-Dt+ >Dt–:       –Dt
-Dt+ =Dt–:        0
-Dt+ <Dt–:          Dt
+
+$$
+\begin{aligned}
+D_{t}^+ >D_{t}^– :& &–D_t \\
+D_{t}^+ =D_{t}^– :&  &0 \\
+D_{t}^+ <D_{t}^– :& &D_t
+\end{aligned}
+$$
 
 This allowed us to rank the traits based on the direction and size of the distance between the FST distributions for trait and control SNPs, from large negative DtS (FST for traits SNPs is lower overall than control SNPs) to large positive DtS (FST for trait SNPs is higher overall than control SNPs). We then plotted the distributions and eCDFs of hits and controls for each trait using the R packages tidyverse,48 ggridges,49 cowplot,50 and plotly.51
 
