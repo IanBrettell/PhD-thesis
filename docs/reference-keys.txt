@@ -13,8 +13,11 @@ MIKK-genomes-chap
 the-medaka-inbred-kiyosu-karlruhe-mikk-panel
 genomic-characterisation-of-the-mikk-panel
 non-sib-calls
-assessing-the-inbreeding-trajectory-of-the-mikk-panel
-introgression-with-northern-japanese-and-korean-medaka-populations
+inbreeding-sec
+introgression-sec
 nuc-div
 ld-decay-sec
 mikksv-sec
+conclusions
+Pilot-chap
+MIKK-F2-chap
