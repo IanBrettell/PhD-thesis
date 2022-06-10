@@ -1,7 +1,7 @@
 ---
 title: "Genetic analysis of quantitative traits in medaka fish and humans"
 author: "Ian Brettell"
-date: "2022-05-30"
+date: "2022-06-09"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
