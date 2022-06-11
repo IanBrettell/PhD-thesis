@@ -9,16 +9,39 @@ In this chapter I illustrate the distribution of $F_{ST}$ scores for loci associ
 
 ## Background
 
-As seen in previous chapters, an individual's phenotypic value at a given point in time is the product of complex interactions between their genome and their environment, accumulating during their initial development and proceeding thorughout their lifetimes. 
+As seen in previous chapters, an individual's phenotypic value at a given point in time is the product of complex interactions between their genome and their environment, accumulating during their initial development and continuing throughout their lifetimes. 
 
-A richer understanding of the cumulative effect of genetic variants on any trait would permit the prediction of the value they are most likely to have for that trait. Diseases are traits with particular salience for humans -- in 2018, the global healthcare industry was valued at US\$8 trillion, and predicted to increase to US\$12 trillion by 2022 [@11TrillionGlobal2019]. This strong financial imperative complements the moral imperative to reduce suffering, together driving many to determine how to use genetic information to improve human health across the globe.
+A richer understanding of the cumulative effect of genetic variants on any trait allows for the prediction of the value that an individual is most likely to have for that trait. Of all human traits, diseases are particularly salient -- in 2018, the global healthcare industry was valued at US\$8 trillion, and predicted to increase to US\$12 trillion by 2022 [@11TrillionGlobal2019]. This strong financial imperative complements the moral imperative to reduce suffering, together driving many to determine how to use genetic information to improve human health.
 
-Once it became possible to sequence human genomes at scale, researchers have sought to use an individual's genetic sequence information to predict their likely value for a given trait.[@wrayPredictionIndividualGenetic2007] It is thought that by combining genetic information with with other environmental and phenotypic information, clinicians could one day carry out "precision medicine", where their patients' medicine, diet, and other lifestyle factors could be tailored to their unique needs. The genetic component of this pursuit is now commonly known as polygenic risk scores (**PRS**), also known as genetic risk profiling, which seeks to predict the likelihood of a given trait based on an individual's genomic variants. To date, PRS studies have shown reliably yet modest predictions for a variety of health-related traits including blood pressure,
+Once it became possible to sequence human genomes at scale, researchers have sought to use genetic sequence information to predict an individual's likely value for a given trait.[@wrayPredictionIndividualGenetic2007] It is thought that by combining genetic information with with other environmental and phenotypic information, clinicians could work towards achieving "precision medicine", where their patients' medications, diet, and other lifestyle factors could be tailored to their unique needs. The genetic component of this pursuit is now commonly known as polygenic risk scores (**PRS**), also known as genetic risk profiling, which seeks to predict the likelihood of a given trait based on an individual's genomic variants. To date, PRS studies have shown reliable yet modest improvement above clinical models to predictions for a variety of health-related traits including blood pressure, breast cancer [@maasBreastCancerRisk2016], prostate cancer, [@schumacherAssociationAnalysesMore2018], type I diabetes [@sharpDevelopmentStandardizationImproved2019].
 
+PRS scores can further be combined with lifestyle and clinical factors to more accurately predict the risk of cardiovascular disease [@kheraGenomewidePolygenicScores2018; @kulloIncorporatingGeneticRisk2016; @natarajanPolygenicRiskScore2017; @paquettePolygenicRiskScore2017; @tikkanenGeneticRiskPrediction2013].
 
-The scores are calculated by summing the trait-associated alleles identified from genome-wide association studies (**GWAS**).[@duncanAnalysisPolygenicRisk2019] However, most GWAS have been performed with individuals of European ancestry -- although the proportion of participants in GWAS from a non-European background GWAS is increasing (from 4% to 16 % between 2009 and 2016[@popejoyGenomicsFailingDiversity2016]). As of 2019, however, 79% of all GWAS participants recorded int he GWAS Catalog were of European ancestry.
+The scores are calculated by summing the trait-associated alleles identified through genome-wide association studies (**GWAS**), weighted by the alleles' effect sizes.[@duncanAnalysisPolygenicRisk2019] However, most GWAS have been performed with individuals of European ancestry. Although the proportion of participants in GWAS from a non-European background is increasing (from 4% in 20019 to 16 % in 2016 [@popejoyGenomicsFailingDiversity2016]), as of 2019, 79% of all GWAS participants recorded in the GWAS Catalog were of European ancestry.[@martinClinicalUseCurrent2019] The consequence of this is that PRS scores are far better at predicting disease risk in individuals of European ancestry [@martinHumanDemographicHistory2017; @martinClinicalUseCurrent2019]. For example, @martinHumanDemographicHistory2017 found that height was predicted to decrease with genetic distance from Europeans, despite robust evidence that West Africans are as tall as Europeans on average. Indeed, the predictive accuracy of PRS scores decays with genetic divergence of the GWAS "independent" or "test" sample from the  "discovery" - or "training" - sample, as established in both humans [@martinHumanDemographicHistory2017; @martinClinicalUseCurrent2019], and livestock [@clarkImportanceInformationRelatives2012; @habierImpactGeneticRelationship2010; @pszczolaReliabilityDirectGenomic2012]. 
 
+What explains this disparity in predictive value? A number of factors may be responsible including:
 
+1. GWAS neglect causal variants that do not exist within the "discovery" sample [@martinClinicalUseCurrent2019].
+
+1. The sample populations may differ in linkage disequilibrium (**LD**) structure, which would change the causal variant effect sizes even when the variants themselves are the same [@martinClinicalUseCurrent2019].
+
+1. allele frequencies of the causal variants, and the distribution of the effect sizes of the causal variants [@martinHumanDemographicHistory2017; @scutariUsingGeneticDistance2016]. 
+
+1. The environments and demographies between differ between populations [@martinClinicalUseCurrent2019]. 
+
+The first three factors can degrade predictive performance even in the absence of biological and environmental differences, whereas environmental and demographic differences can drive forces of natural selection can in turn drive differences in causal genetic architecture [@martinClinicalUseCurrent2019]. 
+
+### Discovery of causal variants
+
+The power to discover a causal variant through GWAS depends on the variant's effect size and frequency in the study population [@martinClinicalUseCurrent2019; @shamPowerLinkageAssociation2000]. That is to say, the greater the effect of the variant, or the more common it is, the more likely it is to be discovered.
+
+Many SNP arrays or sequencing procedures In addition, if imputation panels are used to impute missing genotypes, they are likely to miss the rare variants that are unrepresentated int he imputations panels.
+
+Genetic divergence between popoulations can be measured by $F_{ST}$, and the correlation between true and predicted phenotypic vlaues decays approximately linearly with respect to $F_{ST}$ [@scutariUsingGeneticDistance2016].
+
+It was demonstrated in simulations that using LD information from an external reference panel as a prior to infer the posterior mean effect size of a genetic variant can improve PRS predictive accuracy  [@vilhjalmsson2015modeling].
+
+Causal variants can differ in both frequency and effect size between different ancestry groups (e.g. for lactase persistence)
 
 As noted in the 2019 review of PRS scores by @duncanAnalysisPolygenicRisk2019, 67% of PRS studies included only participants of European ancestry, with another 19% including only East Asian ancestry participants, and only 3.8% with cohorts of African, Hispanic, or Indigenous ancestry. 
 

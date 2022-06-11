@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.9)  9 JUN 2022 19:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.9)  11 JUN 2022 15:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -452,7 +452,7 @@ Chapter 2.
 [7
 
 ]
-<figs/introduction/homunculus.png, id=146, 665.48625pt x 2609.75pt>
+<figs/introduction/homunculus.png, id=151, 665.48625pt x 2609.75pt>
 File: figs/introduction/homunculus.png Graphic file (type png)
 <use figs/introduction/homunculus.png>
 Package pdftex.def Info: figs/introduction/homunculus.png  used on input line 227.
@@ -484,7 +484,7 @@ Underfull \hbox (badness 1990) in paragraph at lines 265--265
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [13] [14]
-<figs/mikk_genome/20211213_final_figure.png, id=273, 1156.32pt x 867.24pt>
+<figs/mikk_genome/20211213_final_figure.png, id=278, 1156.32pt x 867.24pt>
 File: figs/mikk_genome/20211213_final_figure.png Graphic file (type png)
 <use figs/mikk_genome/20211213_final_figure.png>
 Package pdftex.def Info: figs/mikk_genome/20211213_final_figure.png  used on input line 282.
@@ -504,30 +504,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 290--290
 [][][]\T1/lmr/m/n/8 Simon mar-tin, \T1/lmr/m/it/8 Si-monhmartin/Genomics_general\T1/lmr/m/n/8 , 2022, []$https : / / github . com /
  []
 
-<figs/mikk_genome/07_introgression.png, id=292, 6914.83376pt x 4322.1475pt>
+<figs/mikk_genome/07_introgression.png, id=297, 6914.83376pt x 4322.1475pt>
 File: figs/mikk_genome/07_introgression.png Graphic file (type png)
 <use figs/mikk_genome/07_introgression.png>
 Package pdftex.def Info: figs/mikk_genome/07_introgression.png  used on input line 295.
 (pdftex.def)             Requested size: 344.91785pt x 215.59242pt.
 [16] [17 <./figs/mikk_genome/07_introgression.png>]
-<figs/mikk_genome/supp_01_pi_circos.png, id=319, 569.05399pt x 569.05399pt>
+<figs/mikk_genome/supp_01_pi_circos.png, id=324, 569.05399pt x 569.05399pt>
 File: figs/mikk_genome/supp_01_pi_circos.png Graphic file (type png)
 <use figs/mikk_genome/supp_01_pi_circos.png>
 Package pdftex.def Info: figs/mikk_genome/supp_01_pi_circos.png  used on input line 308.
 (pdftex.def)             Requested size: 345.01244pt x 345.01244pt.
 [18 <./figs/mikk_genome/supp_01_pi_circos.png (PNG copy)>]
-<figs/mikk_genome/20210224_sv_invs_lines.png, id=331, 3160.80875pt x 3160.80875pt>
+<figs/mikk_genome/20210224_sv_invs_lines.png, id=336, 3160.80875pt x 3160.80875pt>
 File: figs/mikk_genome/20210224_sv_invs_lines.png Graphic file (type png)
 <use figs/mikk_genome/20210224_sv_invs_lines.png>
 Package pdftex.def Info: figs/mikk_genome/20210224_sv_invs_lines.png  used on input line 318.
 (pdftex.def)             Requested size: 344.98917pt x 344.98917pt.
 [19] [20 <./figs/mikk_genome/20210224_sv_invs_lines.png>]
-<figs/mikk_genome/08_ld_decay.png, id=368, 654.33258pt x 625.8582pt>
+<figs/mikk_genome/08_ld_decay.png, id=373, 654.33258pt x 625.8582pt>
 File: figs/mikk_genome/08_ld_decay.png Graphic file (type png)
 <use figs/mikk_genome/08_ld_decay.png>
 Package pdftex.def Info: figs/mikk_genome/08_ld_decay.png  used on input line 333.
 (pdftex.def)             Requested size: 345.00742pt x 329.99384pt.
-<figs/mikk_genome/20210401_hdrr_repeats_final.png, id=372, 4741.715pt x 6638.8025pt>
+<figs/mikk_genome/20210401_hdrr_repeats_final.png, id=377, 4741.715pt x 6638.8025pt>
 File: figs/mikk_genome/20210401_hdrr_repeats_final.png Graphic file (type png)
 <use figs/mikk_genome/20210401_hdrr_repeats_final.png>
 Package pdftex.def Info: figs/mikk_genome/20210401_hdrr_repeats_final.png  used on input line 341.
@@ -536,7 +536,7 @@ Package pdftex.def Info: figs/mikk_genome/20210401_hdrr_repeats_final.png  used 
 LaTeX Warning: Float too large for page by 17.49763pt on input line 342.
 
 [21] [22 <./figs/mikk_genome/08_ld_decay.png (PNG copy)>] [23 <./figs/mikk_genome/20210401_hdrr_repeats_final.png>]
-<figs/mikk_genome/20210408_sv_main.png, id=401, 4741.715pt x 6638.8025pt>
+<figs/mikk_genome/20210408_sv_main.png, id=406, 4741.715pt x 6638.8025pt>
 File: figs/mikk_genome/20210408_sv_main.png Graphic file (type png)
 <use figs/mikk_genome/20210408_sv_main.png>
 Package pdftex.def Info: figs/mikk_genome/20210408_sv_main.png  used on input line 356.
@@ -561,117 +561,147 @@ Chapter 5.
 
 ]
 Chapter 6.
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 384--384
+\T1/lmr/m/n/8 home / 20190625005862 / en / The -[] 11 . 9 -[] Trillion -[] Global -[] Healthcare -[] Market -[] Key -[] Opportunities -[]
+ []
 
-Overfull \hbox (60.39516pt too wide) in paragraph at lines 385--385
+
+Overfull \hbox (266.4907pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 32 \T1/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[32]
+Overfull \hbox (60.39516pt too wide) in paragraph at lines 404--404
 [][][]\T1/lmr/m/n/8 ``Index of /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/,''
  []
 
 
-Underfull \hbox (badness 4001) in paragraph at lines 385--385
+Underfull \hbox (badness 4001) in paragraph at lines 404--404
 \T1/lmr/m/n/8 ac-cessed March 24, 2022, []$http : / / ftp . 1000genomes . ebi . ac . uk / vol1 / ftp / data _ collections /
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[31]
-Overfull \hbox (266.4907pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 32 \T1/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[32]
-Underfull \hbox (badness 1331) in paragraph at lines 403--403
-[]$\OML/lmm/m/it/12 F[]$ \T1/lmr/bx/n/12 and rank-ing traits by signed Kolmogorov-
- []
-
 [33]
-<figs/fst/20220314_final_0.1_1000.pdf, id=511, 867.24pt x 867.24pt>
-File: figs/fst/20220314_final_0.1_1000.pdf Graphic file (type pdf)
-<use figs/fst/20220314_final_0.1_1000.pdf>
-Package pdftex.def Info: figs/fst/20220314_final_0.1_1000.pdf  used on input line 428.
-(pdftex.def)             Requested size: 344.99754pt x 344.99754pt.
-
 Overfull \hbox (266.4907pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 34 \T1/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
-[34] [35 <./figs/fst/20220314_final_0.1_1000.pdf>]
+[34]
+Underfull \hbox (badness 1331) in paragraph at lines 422--422
+[]$\OML/lmm/m/it/12 F[]$ \T1/lmr/bx/n/12 and rank-ing traits by signed Kolmogorov-
+ []
+
+[35]
+<figs/fst/20220314_final_0.1_1000.pdf, id=574, 867.24pt x 867.24pt>
+File: figs/fst/20220314_final_0.1_1000.pdf Graphic file (type pdf)
+<use figs/fst/20220314_final_0.1_1000.pdf>
+Package pdftex.def Info: figs/fst/20220314_final_0.1_1000.pdf  used on input line 453.
+(pdftex.def)             Requested size: 344.99754pt x 344.99754pt.
+
 Overfull \hbox (266.4907pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 36 \T1/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
-[36
+[36] [37 <./figs/fst/20220314_final_0.1_1000.pdf>]
+Overfull \hbox (266.4907pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 38 \T1/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[38
 
 ]
 Underfull \vbox (badness 2698) has occurred while \output is active []
 
-[37]
-Overfull \hbox (47.18825pt too wide) in paragraph at lines 470--472
+[39]
+Overfull \hbox (47.18825pt too wide) in paragraph at lines 501--503
 []\T1/lmr/m/n/10 ``Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple_alignments/50_fish.epo/.''
  []
 
 
-Underfull \hbox (badness 7963) in paragraph at lines 470--472
+Underfull \hbox (badness 7963) in paragraph at lines 501--503
 \T1/lmr/m/n/10 Ac-cessed Jan-uary 25, 2022. []$https : / / ftp . ensembl . org / pub / release -[]
  []
 
 
-Overfull \hbox (112.66333pt too wide) in paragraph at lines 473--475
+Overfull \hbox (112.66333pt too wide) in paragraph at lines 504--506
 []\T1/lmr/m/n/10 ``Index of /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/.''
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 473--475
+Underfull \hbox (badness 1173) in paragraph at lines 504--506
 \T1/lmr/m/n/10 Ac-cessed March 24, 2022. []$http : / / ftp . 1000genomes . ebi . ac . uk / vol1 / ftp /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--475
+Underfull \hbox (badness 10000) in paragraph at lines 504--506
 \T1/lmr/m/n/10 data _ collections / 1000G _ 2504 _ high _ coverage / working / 20201028 _ 3202 _
  []
 
 
 Overfull \hbox (266.4907pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 38 \T1/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+\T1/lmr/m/n/10 40 \T1/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
-[38]
-Underfull \hbox (badness 2142) in paragraph at lines 539--541
+[40] [41]
+Overfull \hbox (266.4907pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 42 \T1/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[42]
+Underfull \hbox (badness 2142) in paragraph at lines 600--602
 []\T1/lmr/m/n/10 Spivakov, Mikhail, Thomas O Auer, Ravin-dra Per-avali, Ian Dun-ham,
  []
 
 
-Underfull \hbox (badness 1092) in paragraph at lines 539--541
+Underfull \hbox (badness 1092) in paragraph at lines 600--602
 \T1/lmr/m/n/10 Dirk Dolle, Asao Fu-jiyama, At-sushi Toy-oda, et al. ``Ge-nomic and
  []
 
 
-Underfull \hbox (badness 3930) in paragraph at lines 539--541
+Underfull \hbox (badness 3930) in paragraph at lines 600--602
 \T1/lmr/m/n/10 the Es-tab-lish-ment of an Iso-genic Pop-u-la-tion Ge-netic Re-source in
  []
 
-[39]
-Overfull \hbox (266.4907pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 40 \T1/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+
+Underfull \hbox (badness 2556) in paragraph at lines 606--608
+[]\T1/lmr/m/n/10 ``The $11.9 Tril-lion Global Health-care Mar-ket: Key Op-por-tu-ni-ties &
  []
 
-[40] (./PhD-thesis.aux)
+
+Underfull \hbox (badness 3536) in paragraph at lines 606--608
+\T1/lmr/m/n/10 Strate-gies (2014-2022) - Re-searchAnd-Mar-kets.com,'' June 25, 2019.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 606--608
+[]$\T1/lmr/m/n/10 https : / / www . businesswire . com / news / home / 20190625005862 / en / The -[] 11 . 9 -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 606--608
+\T1/lmr/m/n/10 Trillion -[] Global -[] Healthcare -[] Market -[] Key -[] Opportunities -[] Strategies -[] 2014 -[]
+ []
+
+[43] (./PhD-thesis.aux)
 Package rerunfilecheck Info: File `PhD-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 9F5C87E02232AF8FA79F70C1D07A0443;3188.
+(rerunfilecheck)             Checksum: 302AE6A91A96F7247D06304E0EE3A8EC;3293.
  ) 
 Here is how much of TeX's memory you used:
- 11606 strings out of 480253
- 183472 string characters out of 5893265
- 475461 words of memory out of 5000000
- 29118 multiletter control sequences out of 15000+600000
+ 11641 strings out of 480253
+ 184234 string characters out of 5893265
+ 479514 words of memory out of 5000000
+ 29120 multiletter control sequences out of 15000+600000
  550773 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  72i,8n,77p,2986b,364s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Users/brettell/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Users/brettell/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/brettell/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/brettell/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/Users/brettell/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro10.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/brettell/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on PhD-thesis.pdf (40 pages, 17294495 bytes).
+Output written on PhD-thesis.pdf (43 pages, 17312679 bytes).
 PDF statistics:
- 791 PDF objects out of 1000 (max. 8388607)
- 684 compressed objects within 7 object streams
- 204 named destinations out of 1000 (max. 500000)
- 174 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 905 PDF objects out of 1000 (max. 8388607)
+ 794 compressed objects within 8 object streams
+ 237 named destinations out of 1000 (max. 500000)
+ 182 words of extra memory for PDF output out of 10000 (max. 10000000)
 
