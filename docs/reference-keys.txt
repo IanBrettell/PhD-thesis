@@ -1,5 +1,12 @@
+fig:InbreedingFigure
+fig:ABBABABA
+fig:NucleotideDiversity
+fig:SVInvs
+fig:LDdecay
+fig:repeats
+fig:SV-main
 fig:FstMain
-url-your-book-url-like-httpsbookdown.orgyihuibookdown
+about
 usage
 render-book
 preview-book
@@ -22,6 +29,9 @@ Pilot-chap
 MIKK-F2-chap
 Fst-chap
 background
+polygenic-risk-scores-prs-and-genome-wide-association-studies-gwas
+effect-of-the-environment-on
+discovery-of-causal-variants
 datasets
 genomes
 gwas-catalog

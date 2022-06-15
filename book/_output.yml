@@ -10,10 +10,16 @@ bookdown::bs4_book:
     in_header: css.html
   bibliography: book.bib
 bookdown::pdf_book:
+  pandoc_args: --listings
   includes:
     in_header: preamble.tex
   latex_engine: xelatex
-  citation_package: natbib
+#  citation_package: natbib
   keep_tex: yes
-  bibliography: [book.bib, packages.bib]
-bookdown::epub_book: default
+  biblio-style: apalike
+
+
+
+
+
+

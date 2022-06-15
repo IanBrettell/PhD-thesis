@@ -1,16 +1,15 @@
 ---
 title: "Genetic analysis of quantitative traits in medaka fish and humans"
 author: "Ian Brettell"
-date: "2022-06-11"
+date: "2022-06-14"
 site: bookdown::bookdown_site
-documentclass: book
-bibliography: [book.bib, packages.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  Thesis for the award of Doctor of Philosophy from EMBL-EBI and the University of Cambridge. 
-biblio-style: apalike
-csl: chicago-fullnote-bibliography.csl
+  Thesis for the award of Doctor of Philosophy from EMBL-EBI and the University of Cambridge.
+documentclass: book
+bibliography: [book.bib, packages.bib]
+mainfont: Georgia
 ---
 
 # About
@@ -21,6 +20,54 @@ Code to render PDF:
 ```r
 bookdown::render_book("book", bookdown::pdf_book())
 ```
+
+Code to render PDF with different fonts:
+
+First make the `bookdown::pdf_book:` entry in `_output.yml` first.
+
+Then...
+
+
+```r
+bookdown::render_book("book")
+```
+
+To clean up the references:
+
+
+```r
+citr::tidy_bib_file(rmd_file = c("book/index.Rmd",
+                                 "book/01-Introduction.Rmd",
+                                 "book/02-MIKK_genome.Rmd",
+                                 "book/03-Pilot.Rmd",
+                                 "book/04-MIKK_F2.Rmd",
+                                 "book/06-Fst.Rmd",
+                                 "book/07-references.Rmd"),
+                    messy_bibliography = "book/book.bib",
+                    file = "book/tidy_references.bib")
+```
+
+Test to understand which commands are creating errors:
+
+
+
+```r
+bookdown::render_book("book",
+                      bookdown::pdf_book(pandoc_args = "--listings",
+                                         latex_engine = "xelatex",
+                                         biblio_style = "apalike",
+                                         csl = "chicago-fullnote-bibliography.csl",
+                                         includes = rmarkdown::includes(in_header = "preamble.tex"),
+                                         documentclass = "book",
+                                         sansfont = "Georgia",
+                                         monofont = "Andale Mono",
+                                         highlight = "pygments"))
+
+```
+
+`citation_package = "natbib"` throws an ugly error, and ends up removing all references in the document.
+
+Weirdly, fonts only change if they go in `index.Rmd`.
 
 This is a *sample* book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
 

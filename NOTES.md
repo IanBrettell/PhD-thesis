@@ -1,5 +1,17 @@
 # Notes
 
+## 14 June 2022
+
+Battling with bookdown and LaTeX .pdf format. Discovered...
+
+* `documentclass: book` needs to go in `index.Rmd`, and doesn't work in `_output.yml`.
+
+* `bibliography:` needs to go in `index.Rmd`, otherwise it won't appear.
+
+* `biblio-style: apalike` *can't* go in `index.Rmd`, otherwise it'll keep doing footnotes instead.
+
+* `mainfont = "Georgia"` can go in the `bookdown::render_book("book", bookdown::pdf_book())` command.
+
 ## 1 June 2022
 
 Meeting with EB re: Chapter 2 draft:
