@@ -1,7 +1,7 @@
 ---
 title: "Genetic analysis of quantitative traits in medaka fish and humans"
 author: "Ian Brettell"
-date: "2022-06-14"
+date: "2022-06-15"
 site: bookdown::bookdown_site
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
@@ -9,7 +9,8 @@ description: |
   Thesis for the award of Doctor of Philosophy from EMBL-EBI and the University of Cambridge.
 documentclass: book
 bibliography: [book.bib, packages.bib]
-mainfont: Georgia
+csl: chicago-fullnote-bibliography.csl
+mainfont: Libre Baskerville
 ---
 
 # About
@@ -68,6 +69,21 @@ bookdown::render_book("book",
 `citation_package = "natbib"` throws an ugly error, and ends up removing all references in the document.
 
 Weirdly, fonts only change if they go in `index.Rmd`.
+
+## `bs4_book`
+
+
+```r
+bookdown::render_book("book",
+                      bookdown::bs4_book(css = "style.css",
+                                         theme = list("primary" = "#52002E"),
+                                         repo = list("base" = "https://github.com/brettellebi/PhD-thesis",
+                                                                                         "branch" = "master", "subdir" = "book"),
+                                         includes = rmarkdown::includes(in_header = "css.html"),
+                                         footnotes_inline = T,
+                                         bibliography = "book.bib"))
+```
+
 
 This is a *sample* book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
 

@@ -3,13 +3,13 @@ zotero: ["PhD"]
 bibliography: book.bib
 ---
 
-# Introduction
+# Introduction {#Introduction}
 
 ## A brief history of genetics
 
-### Ancient Greece
-
 Humankind has long sought to understand the basis of biological variation. What gives rise to the wondrous variety of life forms on Earth? Why do individuals of a particular species differ from one another? How do children inherit traits that are similar to those of their parents, yet on the whole remain distinct from both their parents and their siblings? And are the traits we care about -- our health, our intelligence, our ability to thrive in a changing world -- pre-determined from birth, or continuously pliable throughout our lives? 
+
+### Ancient Greece
 
 Around 500 BC, the Ancient Grecian Pythagoras applied his understanding of triangles to this question, proposing the theory known as "spermism". He posited that  hereditary information was passed down from parent to child via male sperm, with the female only providing the nutrients that would allow it to grow, and, like the theorem that bears his name, that these two sides of the "triangle" the length of the third side: the characteristics of the child [@mukherjeeGeneIntimateHistory2016].
 

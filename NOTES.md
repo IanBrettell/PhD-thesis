@@ -10,7 +10,9 @@ Battling with bookdown and LaTeX .pdf format. Discovered...
 
 * `biblio-style: apalike` *can't* go in `index.Rmd`, otherwise it'll keep doing footnotes instead.
 
-* `mainfont = "Georgia"` can go in the `bookdown::render_book("book", bookdown::pdf_book())` command.
+* `mainfont = "Georgia"` can go in the `bookdown::render_book("book", bookdown::pdf_book())` command, or `index.Rmd`.
+
+* `csl: chicago-fullnote-bibliography.csl` needs to go into `index.Rmd` to create the links in `bs4_book`. It needs to be hashed out to allow APA style in the `pdf_book`. 
 
 ## 1 June 2022
 

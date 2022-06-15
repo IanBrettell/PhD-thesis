@@ -3,7 +3,8 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-]{article}
+  9pt,
+]{book}
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -15,7 +16,9 @@
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-  \setmainfont[]{Georgia}
+  \setmainfont[]{Libre Baskerville}
+  \setsansfont[]{Avenir}
+  \setmonofont[]{Andale Mono}
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -42,7 +45,6 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
-\usepackage[margin=1in]{geometry}
 \usepackage{listings}
 \newcommand{\passthrough}[1]{#1}
 \lstset{defaultdialect=[5.3]Lua}
@@ -104,17 +106,17 @@
 
 \title{Genetic analysis of quantitative traits in medaka fish and humans}
 \author{Ian Brettell}
-\date{2022-06-14}
+\date{2022-06-15}
 
 \begin{document}
 \maketitle
 
 {
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
 \tableofcontents
 }
 \hypertarget{about}{%
-\section{About}\label{about}}
+\chapter{About}\label{about}}
 
 Code to render PDF:
 
@@ -154,15 +156,35 @@ bookdown::render_book("book",
                                          latex_engine = "xelatex",
                                          biblio_style = "apalike",
                                          csl = "chicago-fullnote-bibliography.csl",
-                                         includes = includes(in_header = "preamble.tex")))
+                                         includes = rmarkdown::includes(in_header = "preamble.tex"),
+                                         documentclass = "book",
+                                         sansfont = "Georgia",
+                                         monofont = "Andale Mono",
+                                         highlight = "pygments"))
 \end{lstlisting}
 
 \passthrough{\lstinline!citation\_package = "natbib"!} throws an ugly error, and ends up removing all references in the document.
 
+Weirdly, fonts only change if they go in \passthrough{\lstinline!index.Rmd!}.
+
+\hypertarget{bs4_book}{%
+\section{\texorpdfstring{\texttt{bs4\_book}}{bs4\_book}}\label{bs4_book}}
+
+\begin{lstlisting}[language=R]
+bookdown::render_book("book",
+                      bookdown::bs4_book(css = "style.css",
+                                         theme = list("primary" = "#52002E"),
+                                         repo = list("base" = "https://github.com/brettellebi/PhD-thesis",
+                                                                                         "branch" = "master", "subdir" = "book"),
+                                         includes = rmarkdown::includes(in_header = "css.html"),
+                                         footnotes_inline = T,
+                                         bibliography = "book.bib"))
+\end{lstlisting}
+
 This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports; for example, a math equation \(a^2 + b^2 = c^2\).
 
 \hypertarget{usage}{%
-\subsection{Usage}\label{usage}}
+\section{Usage}\label{usage}}
 
 Each \textbf{bookdown} chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter \emph{must} start with a first-level heading: \passthrough{\lstinline!\# A good chapter!}, and can contain one (and only one) first-level heading.
 
@@ -171,7 +193,7 @@ Use second-level and higher headings within chapters like: \passthrough{\lstinli
 The \passthrough{\lstinline!index.Rmd!} file is required, and is also your first book chapter. It will be the homepage when you render the book.
 
 \hypertarget{render-book}{%
-\subsection{Render book}\label{render-book}}
+\section{Render book}\label{render-book}}
 
 You can render the HTML version of this example book without changing anything:
 
@@ -192,7 +214,7 @@ bookdown::render_book()
 To render this example to PDF as a \passthrough{\lstinline!bookdown::pdf\_book!}, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
 
 \hypertarget{preview-book}{%
-\subsection{Preview book}\label{preview-book}}
+\section{Preview book}\label{preview-book}}
 
 As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in ``Preview book'', or from the R console:
 
@@ -201,36 +223,36 @@ bookdown::serve_book()
 \end{lstlisting}
 
 \hypertarget{introduction}{%
-\section{Introduction}\label{introduction}}
+\chapter{Introduction}\label{introduction}}
 
 \hypertarget{a-brief-history-of-genetics}{%
-\subsection{A brief history of genetics}\label{a-brief-history-of-genetics}}
+\section{A brief history of genetics}\label{a-brief-history-of-genetics}}
 
 \hypertarget{ancient-greece}{%
-\subsubsection{Ancient Greece}\label{ancient-greece}}
+\subsection{Ancient Greece}\label{ancient-greece}}
 
 Humankind has long sought to understand the basis of biological variation. What gives rise to the wondrous variety of life forms on Earth? Why do individuals of a particular species differ from one another? How do children inherit traits that are similar to those of their parents, yet on the whole remain distinct from both their parents and their siblings? And are the traits we care about -- our health, our intelligence, our ability to thrive in a changing world -- pre-determined from birth, or continuously pliable throughout our lives?
 
-Around 500 BC, the Ancient Grecian Pythagoras applied his understanding of triangles to this question, proposing the theory known as ``spermism''. He posited that hereditary information was passed down from parent to child via male sperm, with the female only providing the nutrients that would allow it to grow, and, like the theorem that bears his name, that these two sides of the ``triangle'' the length of the third side: the characteristics of the child (Mukherjee 2016).
+Around 500 BC, the Ancient Grecian Pythagoras applied his understanding of triangles to this question, proposing the theory known as ``spermism''. He posited that hereditary information was passed down from parent to child via male sperm, with the female only providing the nutrients that would allow it to grow, and, like the theorem that bears his name, that these two sides of the ``triangle'' the length of the third side: the characteristics of the child.\footnote{Siddhartha Mukherjee, \emph{The {Gene}: {An Intimate History}} ({Simon and Schuster}, 2016), \url{https://books.google.com?id=XvAsDAAAQBAJ}.}
 
 Over a century later, in 380 BC, Plato extended this metaphor in \emph{The Republic} to argue that this principle could be applied to perfect humanity, by breeding perfect combinations of parents.
 
-Aristotle joined the discussion with his treatise \emph{Generation of Animals}, where he noted cases where human skin colour and other traits could skip generations, and thus hereditary information must not only be transmitted through sperm. He suggested an idea of ``movement'' -- the transmission of information -- from the father's sperm, which sculpts the mother's menstrual blood in the same way a carpenter carves a piece of wood.(Mukherjee 2016)
+Aristotle joined the discussion with his treatise \emph{Generation of Animals}, where he noted cases where human skin colour and other traits could skip generations, and thus hereditary information must not only be transmitted through sperm. He suggested an idea of ``movement'' -- the transmission of information -- from the father's sperm, which sculpts the mother's menstrual blood in the same way a carpenter carves a piece of wood.\footnote{Mukherjee.}
 
 \hypertarget{medieval-times}{%
-\subsubsection{Medieval times}\label{medieval-times}}
+\subsection{Medieval times}\label{medieval-times}}
 
 In medieval times, the prevailing theory was that a tiny human -- a homunculus -- sat within the sperm, waiting to be inflated upon its introduction to a woman's uterus. However, this would require a homunculus to sit within another homunculus, \emph{ad infinitum}, like Matryoshka dolls, all the way back to the Biblical first man, Adam. Even the inventor of the microscope, Nicolaas Hartsoeker, thought he saw one in a sperm he was studying.
 
 \includegraphics[width=0.5\linewidth]{figs/introduction/homunculus}
 
 \hypertarget{charles-darwin-and-gregor-mendel}{%
-\subsubsection{Charles Darwin and Gregor Mendel}\label{charles-darwin-and-gregor-mendel}}
+\subsection{Charles Darwin and Gregor Mendel}\label{charles-darwin-and-gregor-mendel}}
 
 In 1831, a young Charles Darwin boarded the HMS \emph{Beagle} to embark on an expedition to collect specimens from South America. After collecting a huge number of fossils from the along the eastern coast and shipping them back to England, the \emph{Beagle} spent 5 weeks touring through the 18 volcanic islands of the Galàpagos, where Darwin collected
 
 \hypertarget{MIKK-genomes-chap}{%
-\section{Genomic variations in the MIKK panel}\label{MIKK-genomes-chap}}
+\chapter{Genomic variations in the MIKK panel}\label{MIKK-genomes-chap}}
 
 This project was carried out in collaboration with Felix Loosli's group at the Karlsruhe Institute of Technology (KIT), and Joachim Wittbrodt's group in the Centre for Organismal Studies (COS) at the University of Heidelberg.
 
@@ -238,41 +260,41 @@ This chapter sets out my contributions to the the following pair of papers publi
 
 \begin{itemize}
 \item
-  Fitzgerald et al. (2022)
+  Tomas Fitzgerald et al.\footnote{{``The {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel,''} \emph{Genome Biology} 23, no. 1 (February 21, 2022): 59, \url{https://doi.org/10.1186/s13059-022-02623-z}.}
 \item
-  Leger et al. (2022)
+  Adrien Leger et al.\footnote{{``Genomic Variations and Epigenomic Landscape of the {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel,''} \emph{Genome Biology} 23, no. 1 (February 21, 2022): 58, \url{https://doi.org/10.1186/s13059-022-02602-4}.}
 \end{itemize}
 
 \hypertarget{the-medaka-inbred-kiyosu-karlruhe-mikk-panel}{%
-\subsection{The Medaka Inbred Kiyosu-Karlruhe (MIKK) panel}\label{the-medaka-inbred-kiyosu-karlruhe-mikk-panel}}
+\section{The Medaka Inbred Kiyosu-Karlruhe (MIKK) panel}\label{the-medaka-inbred-kiyosu-karlruhe-mikk-panel}}
 
-Biological traits are the product of an interaction between an organism's genes and its environment, often described as the relationship between ``nature and nurture''.(Plomin and Asbury 2005) This is especially true for complex traits such as behaviour, which I investigate in Chapters \ref{Pilot-chap} and \ref{MIKK-F2-chap}.
+Biological traits are the product of an interaction between an organism's genes and its environment, often described as the relationship between ``nature and nurture''.\footnote{Robert Plomin and Kathryn Asbury, {``Nature and {Nurture}: {Genetic} and {Environmental Influences} on {Behavior},''} \emph{The ANNALS of the American Academy of Political and Social Science} 600, no. 1 (July 1, 2005): 86--98, \url{https://doi.org/10.1177/0002716205277184}.} This is especially true for complex traits such as behaviour, which I investigate in Chapters \ref{Pilot-chap} and \ref{MIKK-F2-chap}.
 
-It is unfeasible to explore the relationship between genes and environment experimentally in humans due to the insufficient ability to manipulate either set of variables. Researchers accordingly resort to using model organisms, with which it is possible to control for both. The genetics of model organisms may be controlled to a degree by establishing inbred strains through the repeated mating of siblings over successive generations. Eventually, as the individuals within each line inherit the same same haplotype from their related parents, they become almost genetically identical to one another, with the added benefit that their genotypes can be replicated across time in subsequent generations. This utility has led to the establishment of ``panels'' of inbred strains for several model organisms including the thale cress (\emph{Arabidopsis thaliana}),(Bergelson and Roux 2010) common bean (\emph{Phaseolus vulgaris L}),(Johnson and Gepts 1999) tomato (\emph{Lycopersicon esculentum}),(Saliba-Colombani et al. 2000) maize (\emph{Zea mays}),(Limami et al. 2002) nematode (\emph{Caenorhabditis elegans}),(Evans et al. 2021) fruit fly (\emph{Drosophila melanogaster}) (Mackay and Huang 2018), and mouse (\emph{Mus musculus}) (Saul et al. 2019).
+It is unfeasible to explore the relationship between genes and environment experimentally in humans due to the insufficient ability to manipulate either set of variables. Researchers accordingly resort to using model organisms, with which it is possible to control for both. The genetics of model organisms may be controlled to a degree by establishing inbred strains through the repeated mating of siblings over successive generations. Eventually, as the individuals within each line inherit the same same haplotype from their related parents, they become almost genetically identical to one another, with the added benefit that their genotypes can be replicated across time in subsequent generations. This utility has led to the establishment of ``panels'' of inbred strains for several model organisms including the thale cress (\emph{Arabidopsis thaliana}),\footnote{Joy Bergelson and Fabrice Roux, {``Towards Identifying Genes Underlying Ecologically Relevant Traits in {Arabidopsis} Thaliana,''} \emph{Nature Reviews Genetics} 11, no. 12, 12 (December 2010): 867--79, \url{https://doi.org/10.1038/nrg2896}.} common bean (\emph{Phaseolus vulgaris L}),\footnote{William C. Johnson and Paul Gepts, {``Segregation for Performance in Recombinant Inbred Populations Resulting from Inter-Gene Pool Crosses of Common Bean ( {Phaseolus} Vulgaris {L}.),''} \emph{Euphytica} 106, no. 1 (March 1, 1999): 45--56, \url{https://doi.org/10.1023/A:1003541201923}.} tomato (\emph{Lycopersicon esculentum}),\footnote{Vera Saliba-Colombani et al., {``Efficiency of {RFLP}, {RAPD}, and {AFLP} Markers for the Construction of an Intraspecific Map of the Tomato Genome,''} \emph{Genome} 43, no. 1 (February 2000): 29--40, \url{https://doi.org/10.1139/g99-096}.} maize (\emph{Zea mays}),\footnote{Anis M. Limami et al., {``Genetic and {Physiological Analysis} of {Germination Efficiency} in {Maize} in {Relation} to {Nitrogen Metabolism Reveals} the {Importance} of {Cytosolic Glutamine Synthetase},''} \emph{Plant Physiology} 130, no. 4 (December 1, 2002): 1860--70, \url{https://doi.org/10.1104/pp.009647}.} nematode (\emph{Caenorhabditis elegans}),\footnote{Kathryn S. Evans et al., {``From {QTL} to Gene: {C}. Elegans Facilitates Discoveries of the Genetic Mechanisms Underlying Natural Variation,''} \emph{Trends in Genetics} 37, no. 10 (October 1, 2021): 933--47, \url{https://doi.org/10.1016/j.tig.2021.06.005}.} fruit fly (\emph{Drosophila melanogaster}),\footnote{Trudy F. C. Mackay and Wen Huang, {``Charting the Genotype--Phenotype Map: Lessons from the {Drosophila} Melanogaster {Genetic Reference Panel},''} \emph{WIREs Developmental Biology} 7, no. 1 (2018): e289, \url{https://doi.org/10.1002/wdev.289}.} and mouse (\emph{Mus musculus}).\footnote{Michael C. Saul et al., {``High-{Diversity Mouse Populations} for {Complex Traits},''} \emph{Trends in Genetics} 35, no. 7 (July 1, 2019): 501--14, \url{https://doi.org/10.1016/j.tig.2019.04.003}.}
 
-Although the mouse is an appropriate model for humans due to their orthologous mammalian organ systems and cell types, inbred strains of this organism descend from individuals that had already been domesticated, and therefore do not represent the genetic variation present in wild populations. Furthermore, the large panels of inbred mice such as the Collaborative Cross (CC),(Threadgill et al. 2011) Diversity Outcross (DO)(Svenson et al. 2012) and B6-by-D2 (BXD)(Peirce et al. 2004) are derived from only a small number of individuals. As gene-environment studies seek to ultimately understand their effects on traits ``in the wild'' (such as with humans), there is accordingly a need for a panel of inbred vertebrates that represents the genetic variation present in natural populations.
+Although the mouse is an appropriate model for humans due to their orthologous mammalian organ systems and cell types, inbred strains of this organism descend from individuals that had already been domesticated, and therefore do not represent the genetic variation present in wild populations. Furthermore, the large panels of inbred mice such as the Collaborative Cross (CC),\footnote{David W. Threadgill et al., {``The {Collaborative Cross}: {A Recombinant Inbred Mouse Population} for the {Systems Genetic Era},''} \emph{ILAR Journal} 52, no. 1 (January 1, 2011): 24--31, \url{https://doi.org/10.1093/ilar.52.1.24}.} Diversity Outcross (DO)\footnote{Karen L Svenson et al., {``High-{Resolution Genetic Mapping Using} the {Mouse Diversity Outbred Population},''} \emph{Genetics} 190, no. 2 (February 1, 2012): 437--47, \url{https://doi.org/10.1534/genetics.111.132597}.} and B6-by-D2 (BXD)\footnote{Jeremy L. Peirce et al., {``A New Set of {BXD} Recombinant Inbred Lines from Advanced Intercross Populations in Mice,''} \emph{BMC Genetics} 5, no. 1 (April 29, 2004): 7, \url{https://doi.org/10.1186/1471-2156-5-7}.} are derived from only a small number of individuals. As gene-environment studies seek to ultimately understand their effects on traits ``in the wild'' (such as with humans), there is accordingly a need for a panel of inbred vertebrates that represents the genetic variation present in natural populations.
 
-The medaka fish (\emph{Oryzias latipes}) has been studied as a model organism in Japan for over a century,(Wittbrodt, Shima, and Schartl 2002) and is gaining recognition elsewhere as a powerful genetic model for vertebrates.(Spivakov et al. 2014) In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, and high fertility), medaka are also -- uniquely among vertebrates -- resilient to inbreeding from the wild.
+The medaka fish (\emph{Oryzias latipes}) has been studied as a model organism in Japan for over a century,\footnote{Joachim Wittbrodt, Akihiro Shima, and Manfred Schartl, {``Medaka --- a Model Organism from the Far East,''} \emph{Nature Reviews Genetics} 3, no. 1, 1 (January 2002): 53--64, \url{https://doi.org/10.1038/nrg704}.} and is gaining recognition elsewhere as a powerful genetic model for vertebrates.\footnote{Mikhail Spivakov et al., {``Genomic and {Phenotypic Characterization} of a {Wild Medaka Population}: {Towards} the {Establishment} of an {Isogenic Population Genetic Resource} in {Fish},''} \emph{G3 Genes\textbar Genomes\textbar Genetics} 4, no. 3 (March 1, 2014): 433--45, \url{https://doi.org/10.1534/g3.113.008722}.} In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, and high fertility), medaka are also -- uniquely among vertebrates -- resilient to inbreeding from the wild.
 
-Since 2010, the Birney Group at EMBL-EBI, in collaboration with the Wittbrodt Group at COS, University of Heidelberg and the Loosli Group at the Karlsruhe Institute of Technology (KIT), have been working to establish the world's first panel of vertebrate inbred strains -- now known as the Medaka Inbred Kiyosu-Karlsruhe Panel (\textbf{MIKK panel}). The MIKK Panel was bred from a wild population caught near Kiyosu in Southern Japan, and now comprises 80 inbred, near-isogenic ``lines''.(Fitzgerald et al. 2022)
+Since 2010, the Birney Group at EMBL-EBI, in collaboration with the Wittbrodt Group at COS, University of Heidelberg and the Loosli Group at the Karlsruhe Institute of Technology (KIT), have been working to establish the world's first panel of vertebrate inbred strains -- now known as the Medaka Inbred Kiyosu-Karlsruhe Panel (\textbf{MIKK panel}). The MIKK Panel was bred from a wild population caught near Kiyosu in Southern Japan, and now comprises 80 inbred, near-isogenic ``lines''.\footnote{Fitzgerald et al., {``The {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel.''}}
 
-The MIKK Panel was created to map genetic variants associated with quantitative traits at a high resolution, and to explore the interactions between those variants and any environmental variables of interest. The purpose of the companion papers Fitzgerald et al. (2022) and Leger et al. (2022) was to introduce the MIKK panel to the scientific community, and describe the genetic characteristics of the MIKK panel that would make it a useful resource for other researchers who wish to explore the genetics of quantitative traits in vertebrates. My contributions to these papers involved visualising the inbreeding trajectory of the panel (Chapter \ref{inbreeding-sec}),
+The MIKK Panel was created to map genetic variants associated with quantitative traits at a high resolution, and to explore the interactions between those variants and any environmental variables of interest. The purpose of the companion papers Fitzgerald et al.\footnote{} and Leger et al.\footnote{{``Genomic Variations and Epigenomic Landscape of the {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel.''}} was to introduce the MIKK panel to the scientific community, and describe the genetic characteristics of the MIKK panel that would make it a useful resource for other researchers who wish to explore the genetics of quantitative traits in vertebrates. My contributions to these papers involved visualising the inbreeding trajectory of the panel (Chapter \ref{inbreeding-sec}),
 exploring the evolutionary history of the MIKK panel's founding population (Chapter \ref{introgression-sec}), measuring the levels of homozygosity across the panel (Chapter \ref{nuc-div}), assessing its allele-frequency distribution and rate of linkage disequilibrium (LD) decay (Chapter \ref{ld-decay-sec}), and characterising the structural variants present in a smaller sample of lines using Oxford Nanopore long-read sequencing data (Chapter \ref{mikksv-sec}).
 
 \hypertarget{genomic-characterisation-of-the-mikk-panel}{%
-\subsection{Genomic characterisation of the MIKK panel}\label{genomic-characterisation-of-the-mikk-panel}}
+\section{Genomic characterisation of the MIKK panel}\label{genomic-characterisation-of-the-mikk-panel}}
 
 \hypertarget{non-sib-calls}{%
-\subsubsection{MIKK panel DNA sequence dataset}\label{non-sib-calls}}
+\subsection{MIKK panel DNA sequence dataset}\label{non-sib-calls}}
 
-For the preparation of Fitzgerald et al. (2022), 79 of the 80 extant MIKK panel lines -- together with several wild Kiyosu samples and individuals from the established \emph{iCab} medaka strain -- had their DNA sequenced from brain samples using Illumina short-read sequencing technology. Tomas Fitzgerald from the Birney Group at EMBL-EBI then aligned these sequences to the \emph{HdrR} medaka reference and called variants to produce the \textbf{MIKK Illumina call set} in the form of a .vcf file containing single nucleotide polymorphism (SNP) and small insertion-deletion (INDEL) calls for each line. To avoid allele frequency biases introduced by the 16 pairs/triplets of ``sibling lines'' (see \ref{inbreeding-sec}), I removed each pair's arbitrarily-labelled second sibling line from the variant call set, leaving 63 MIKK panel lines (\textbf{MIKK non-sibling call set}), and used only those calls for the analyses in Chapters \ref{nuc-div} and \ref{ld-decay-sec}.
+For the preparation of Fitzgerald et al.\footnote{{``The {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel.''}}, 79 of the 80 extant MIKK panel lines -- together with several wild Kiyosu samples and individuals from the established \emph{iCab} medaka strain -- had their DNA sequenced from brain samples using Illumina short-read sequencing technology. Tomas Fitzgerald from the Birney Group at EMBL-EBI then aligned these sequences to the \emph{HdrR} medaka reference and called variants to produce the \textbf{MIKK Illumina call set} in the form of a .vcf file containing single nucleotide polymorphism (SNP) and small insertion-deletion (INDEL) calls for each line. To avoid allele frequency biases introduced by the 16 pairs/triplets of ``sibling lines'' (see \ref{inbreeding-sec}), I removed each pair's arbitrarily-labelled second sibling line from the variant call set, leaving 63 MIKK panel lines (\textbf{MIKK non-sibling call set}), and used only those calls for the analyses in Chapters \ref{nuc-div} and \ref{ld-decay-sec}.
 
-For the preparation of Leger et al. (2022), 12 MIKK panel lines had their DNA sequenced from brain samples using Oxford Nanopore Technologies (ONT) long-read sequencing technology. Adrien Leger from the Birney Group at EMBL-EBI then aligned these sequences to the \emph{HdrR} medaka reference, and called variants to produce the \textbf{MIKK ONT call set} in the form of a .vcf file containing structural variants calls for each line with tags for insertions (INS), deletions (DEL), duplications (SUP), inversions (INV) and translocations (TRA). The work described below used these variant call sets as the primary datasets.
+For the preparation of Leger et al.\footnote{{``Genomic Variations and Epigenomic Landscape of the {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel.''}}, 12 MIKK panel lines had their DNA sequenced from brain samples using Oxford Nanopore Technologies (ONT) long-read sequencing technology. Adrien Leger from the Birney Group at EMBL-EBI then aligned these sequences to the \emph{HdrR} medaka reference, and called variants to produce the \textbf{MIKK ONT call set} in the form of a .vcf file containing structural variants calls for each line with tags for insertions (INS), deletions (DEL), duplications (SUP), inversions (INV) and translocations (TRA). The work described below used these variant call sets as the primary datasets.
 
 \hypertarget{inbreeding-sec}{%
-\subsubsection{Assessing the inbreeding trajectory of the MIKK panel}\label{inbreeding-sec}}
+\subsection{Assessing the inbreeding trajectory of the MIKK panel}\label{inbreeding-sec}}
 
-The MIKK panel was bred from a wild population of medaka found in the Kiyosu area near Toyohashi, Aichi Prefecture, in southern Japan.(Spivakov et al. 2014) From this wild population, the Loosli Group at KIT set up random crosses of single mating pairs to create 115 `founder families'. For each founder family, they then set up between two and five single full-sibling-pair inbreeding crosses, which resulted in 253 F1 lines. Lines derived from the same founder family are referred to as `sibling lines'. Over the course of the next eight generations of inbreeding, they used only one mating pair per line. I generated \textbf{Fig. \ref{fig:InbreedingFigure}A} and \textbf{B} from the inbreeding data provided by the Loosli Group. \textbf{Fig. \ref{fig:InbreedingFigure}A} shows the number of lines that survived over the course of the first 14 generations of the inbreeding program, and the various causes for the termination of other lines. \textbf{Fig. \ref{fig:InbreedingFigure}B} shows the average fecundity levels of the surviving lines at generation F16. In addition, the Birney Group at EMBL-EBI generated morphometric data for the MIKK panel lines to demonstrate the distribution of physical phenotypes across the MIKK panel. I used this data on relative eye diameters to generate \textbf{Fig. \ref{fig:InbreedingFigure}C}.
+The MIKK panel was bred from a wild population of medaka found in the Kiyosu area near Toyohashi, Aichi Prefecture, in southern Japan.\footnote{Spivakov et al., {``Genomic and {Phenotypic Characterization} of a {Wild Medaka Population}.''}} From this wild population, the Loosli Group at KIT set up random crosses of single mating pairs to create 115 `founder families'. For each founder family, they then set up between two and five single full-sibling-pair inbreeding crosses, which resulted in 253 F1 lines. Lines derived from the same founder family are referred to as `sibling lines'. Over the course of the next eight generations of inbreeding, they used only one mating pair per line. I generated \textbf{Fig. \ref{fig:InbreedingFigure}A} and \textbf{B} from the inbreeding data provided by the Loosli Group. \textbf{Fig. \ref{fig:InbreedingFigure}A} shows the number of lines that survived over the course of the first 14 generations of the inbreeding program, and the various causes for the termination of other lines. \textbf{Fig. \ref{fig:InbreedingFigure}B} shows the average fecundity levels of the surviving lines at generation F16. In addition, the Birney Group at EMBL-EBI generated morphometric data for the MIKK panel lines to demonstrate the distribution of physical phenotypes across the MIKK panel. I used this data on relative eye diameters to generate \textbf{Fig. \ref{fig:InbreedingFigure}C}.
 
 
 
@@ -281,11 +303,11 @@ The MIKK panel was bred from a wild population of medaka found in the Kiyosu are
 \end{figure}
 
 \hypertarget{introgression-sec}{%
-\subsubsection{Introgression with northern Japanese and Korean medaka populations}\label{introgression-sec}}
+\subsection{Introgression with northern Japanese and Korean medaka populations}\label{introgression-sec}}
 
-To explore the evolutionary history of the MIKK panel's founding population, we sought to determine whether there was evidence of introgression between that southern Japanese population, and northern Japanese and Korean medaka populations. To this end, I used the 50-fish multiple alignment from Ensembl release 102 to obtain the aligned genome sequences for the established medaka inbred lines \emph{HdrR} (southern Japan), \emph{HNI} (northern Japan), and \emph{HSOK} (Korea), as well as the most recent common ancestor of all three strains.({``Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple\_alignments/50\_fish.epo/''} n.d.) Using the phylogenetic tree provided with the dataset, and the \emph{ape} R package,(Paradis and Schliep 2019) I identified the most recent common ancestor of those three strains. For each locus with a non-missing base for \emph{HdrR}, I assigned the allele in that ancestral sequence as the `ancestral' allele, and the alternative allele as the `derived' allele, and then combined that dataset with the MIKK Illumina call set and variant calls for the southern Japanese \emph{iCab} strain (see \ref{non-sib-calls}).
+To explore the evolutionary history of the MIKK panel's founding population, we sought to determine whether there was evidence of introgression between that southern Japanese population, and northern Japanese and Korean medaka populations. To this end, I used the 50-fish multiple alignment from Ensembl release 102 to obtain the aligned genome sequences for the established medaka inbred lines \emph{HdrR} (southern Japan), \emph{HNI} (northern Japan), and \emph{HSOK} (Korea), as well as the most recent common ancestor of all three strains.\footnote{{``Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple\_alignments/50\_fish.epo/,''} accessed January 25, 2022, \url{https://ftp.ensembl.org/pub/release-102/emf/ensembl-compara/multiple_alignments/50_fish.epo/}.} Using the phylogenetic tree provided with the dataset, and the \emph{ape} R package,\footnote{Emmanuel Paradis and Klaus Schliep, {``Ape 5.0: An Environment for Modern Phylogenetics and Evolutionary Analyses in {R},''} \emph{Bioinformatics} 35, no. 3 (February 1, 2019): 526--28, \url{https://doi.org/10.1093/bioinformatics/bty633}.} I identified the most recent common ancestor of those three strains. For each locus with a non-missing base for \emph{HdrR}, I assigned the allele in that ancestral sequence as the `ancestral' allele, and the alternative allele as the `derived' allele, and then combined that dataset with the MIKK Illumina call set and variant calls for the southern Japanese \emph{iCab} strain (see \ref{non-sib-calls}).
 
-I then carried out an ABBA BABA analysis to calculate a modified `admixture proportion' statistic \(\hat{f}_d\)(S. H. Martin, Davey, and Jiggins 2015) as a measure of the proportion of shared genome in 500-kb sliding windows between the MIKK panel and either \emph{iCab}, \emph{HNI}, or \emph{HSOK} (\textbf{Fig. \ref{fig:ABBABABA}}), using the scripts provided by the first author of S. H. Martin, Davey, and Jiggins (2015) on their GitHub page.(martin {[}2016{]} 2022)
+I then carried out an ABBA BABA analysis to calculate a modified `admixture proportion' statistic \(\hat{f}_d\)\footnote{Simon H. Martin, John W. Davey, and Chris D. Jiggins, {``Evaluating the {Use} of {ABBA}--{BABA Statistics} to {Locate Introgressed Loci},''} \emph{Molecular Biology and Evolution} 32, no. 1 (January 1, 2015): 244--57, \url{https://doi.org/10.1093/molbev/msu269}.} as a measure of the proportion of shared genome in 500-kb sliding windows between the MIKK panel and either \emph{iCab}, \emph{HNI}, or \emph{HSOK} (\textbf{Fig. \ref{fig:ABBABABA}}), using the scripts provided by the first author of Martin, Davey, and Jiggins\footnote{} on their GitHub page.\footnote{Simon martin, \emph{Simonhmartin/Genomics\_general}, 2022, \url{https://github.com/simonhmartin/genomics_general}.}
 
 
 
@@ -293,10 +315,10 @@ I then carried out an ABBA BABA analysis to calculate a modified `admixture prop
 \includegraphics[width=1\linewidth]{figs/mikk_genome/07_introgression} \caption{\textbf{Figure 2}: ABBA-BABA analysis. \textbf{A}. Phylogenetic tree generated from the Ensembl release 102 50-fish multiple alignment, showing only the medaka lines used in the ABBA-BABA analysis. \textbf{B}. Schema of the comparisons carried out in the ABBA-BABA analysis. \textbf{C}. Circos plot comparing introgression (\(\hat{f}_d\)) between the MIKK panel and either \emph{iCab} (yellow), \emph{HNI} (orange), or \emph{HSOK} (purple), calculated within 500-kb sliding windows using a minimum of 250 SNPs per window.}\label{fig:ABBABABA}
 \end{figure}
 
-Based on the genome-wide mean \(\hat{f}_d\), the MIKK panel shares approximately 25\% of its genome with \emph{iCab}, 9\% with \emph{HNI}, and 12\% with \emph{HSOK}. These results provide evidence that the MIKK panel's originating population has more recently introgressed with medaka from Korea than with medaka from northern Japan. This supports the findings in Spivakov et al. (2014), where the authors found little evidence of significant interbreeding between southern and northern Japanese medaka since the populations diverged. Although the proportional difference between \emph{HNI} and \emph{HSOK} is small, this further supports the general finding that northern and southern Japanese medaka strains show low levels of interbreeding that may be a result of geographical isolation or genome divergence.(Katsumura et al. 2019)
+Based on the genome-wide mean \(\hat{f}_d\), the MIKK panel shares approximately 25\% of its genome with \emph{iCab}, 9\% with \emph{HNI}, and 12\% with \emph{HSOK}. These results provide evidence that the MIKK panel's originating population has more recently introgressed with medaka from Korea than with medaka from northern Japan. This supports the findings in Spivakov et al.\footnote{{``Genomic and {Phenotypic Characterization} of a {Wild Medaka Population}.''}}, where the authors found little evidence of significant interbreeding between southern and northern Japanese medaka since the populations diverged. Although the proportional difference between \emph{HNI} and \emph{HSOK} is small, this further supports the general finding that northern and southern Japanese medaka strains show low levels of interbreeding that may be a result of geographical isolation or genome divergence.\footnote{Takafumi Katsumura et al., {``Medaka {Population Genome Structure} and {Demographic History Described} via {Genotyping-by-Sequencing},''} \emph{G3 Genes\textbar Genomes\textbar Genetics} 9, no. 1 (January 1, 2019): 217--28, \url{https://doi.org/10.1534/g3.118.200779}.}
 
 \hypertarget{nuc-div}{%
-\subsubsection{Nucleotide diversity}\label{nuc-div}}
+\subsection{Nucleotide diversity}\label{nuc-div}}
 
 As a means of assessing genetic diversity in the MIKK panel, I calculated nucleotide diversity (\(\hat{\pi}\)) within 500-kb non-overlapping windows across the genome of the 63 lines in the MIKK non-sibling call set (see \ref{non-sib-calls}), and compared this to the nucleotide diversity in 7 wild medaka from the same Kiyosu population from which the MIKK panel was derived. Mean and median nucleotide diversity in both the MIKK panel and wild Kiyosu medaka were close to 0, and slightly higher in the MIKK panel (mean: MIKK = 0.0038, wild = 0.0037; median: MIKK = 0.0033, wild = 0.0031). The patterns of varying nucleotide diversity across the genome are shared between the MIKK panel and wild Kiyosu medaka, where regions with high levels of repeat content tend to have higher nucleotide diversity (r = 0.386, p \textless{} 0.001) (\textbf{Fig. \ref{fig:NucleotideDiversity}}). I also calculated \(\hat{\pi}\) for each line individually, and as expected, levels of \(\hat{\pi}\) around the (XX/XY) sex determination region of 1:\textasciitilde16-17 Mb are elevated in all lines relative to the consistently low levels found in most other chromosomes.
 
@@ -306,7 +328,7 @@ As a means of assessing genetic diversity in the MIKK panel, I calculated nucleo
 \includegraphics[width=1\linewidth]{figs/mikk_genome/supp_01_pi_circos} \caption{Circos plot with nucleotide diversity (\(\hat{\pi}\)) calculated within 500-kb non-overlapping windows for 63 non-sibling lines from the MIKK panel (\emph{green}) and 7 wild Kiyosu medaka samples from the same originating population (\emph{purple}); proportion of sequence classified as repeats by RepeatMasker (\emph{blue}); and mean mapping quality (\emph{pink}).}\label{fig:NucleotideDiversity}
 \end{figure}
 
-The higher level of \(\hat{\pi}\) observed within specific regions on several chromosomes -- such as chromosomes 2, 11, and 18 -- correspond closely to the regions we identified as containing large (\textgreater250 kb) inversions that appear to be shared across at least some of the MIKK panel (\textbf{Fig. \ref{fig:SVInvs}}). These regions are also enriched for large deletions and duplications.(Leger et al. 2022) Inversions cause permanent heterozygosity (Hoffmann, Sgr`o, and Weeks 2004), and duplications and deletions may have increased the density of called SNPs in these regions (Fredman et al. 2004), so the observed depressions in homozygosity at these loci may be the result of such large structural variants that are present in the MIKK panel's genomes.
+The higher level of \(\hat{\pi}\) observed within specific regions on several chromosomes -- such as chromosomes 2, 11, and 18 -- correspond closely to the regions we identified as containing large (\textgreater250 kb) inversions that appear to be shared across at least some of the MIKK panel (\textbf{Fig. \ref{fig:SVInvs}}). These regions are also enriched for large deletions and duplications.\footnote{Leger et al., {``Genomic Variations and Epigenomic Landscape of the {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel.''}} Inversions cause permanent heterozygosity,\footnote{Ary A. Hoffmann, Carla M. Sgr`o, and Andrew R. Weeks, {``Chromosomal Inversion Polymorphisms and Adaptation,''} \emph{Trends in Ecology \& Evolution} 19, no. 9 (September 1, 2004): 482--88, \url{https://doi.org/10.1016/j.tree.2004.06.013}.} and duplications and deletions may have increased the density of called SNPs in these regions,\footnote{David Fredman et al., {``Complex {SNP-related} Sequence Variation in Segmental Genome Duplications,''} \emph{Nature Genetics} 36, no. 8, 8 (August 2004): 861--66, \url{https://doi.org/10.1038/ng1401}.} so the observed depressions in homozygosity at these loci may be the result of such large structural variants that are present in the MIKK panel's genomes.
 
 Overall, this analysis confirms that the MIKK panel shows similar levels of homozygosity compared to classical laboratory inbred medaka strains, and possesses a strong increase in isogenic genotypes compared to wild medaka from the original wild population.
 
@@ -317,11 +339,11 @@ Overall, this analysis confirms that the MIKK panel shows similar levels of homo
 \end{figure}
 
 \hypertarget{ld-decay-sec}{%
-\subsubsection{LD decay}\label{ld-decay-sec}}
+\subsection{LD decay}\label{ld-decay-sec}}
 
 I analysed the MIKK panel's allele frequency distribution and linkage disequilibrium (LD) structure to assess their likely effects on genetic mapping. To remove allele-frequency biases introduced by the presence of sibling lines in the MIKK panel, I used only the MIKK non-sibling call set (see Chapter \ref{non-sib-calls}).
 
-To assess how accurately one may be able to map genetic variants using the MIKK panel relative to a human dataset, I compared the MIKK panel's minor allele frequency (MAF) distribution and LD structure against that of the 2,504 humans in the 1KG Phase 3 release.({``A Global Reference for Human Genetic Variation''} 2015) To prepare the \textbf{``1KG call set''}, I first downloaded the .vcf files for each autosome from the project's FTP site (\url{ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/}), then merged them into a single VCF using GATK.(McKenna et al. 2010) I then used PLINK(Chang et al. 2015; Purcell and Chang, n.d.) to calculate the minor allele frequencies for all non-missing, biallelic SNPs in both the MIKK non-sibling and IKG call sets (\emph{N} SNPs = 16,395,558 and 81,042,381 respectively) (\textbf{Fig. \ref{fig:LDdecay}A}). As expected, the 1KG and MIKK panel calls are similarly enriched for low-frequency variants, albeit to a lesser extent in the MIKK panel, which is likely due to its smaller sample size.
+To assess how accurately one may be able to map genetic variants using the MIKK panel relative to a human dataset, I compared the MIKK panel's minor allele frequency (MAF) distribution and LD structure against that of the 2,504 humans in the 1KG Phase 3 release.\footnote{{``A Global Reference for Human Genetic Variation,''} \emph{Nature} 526, no. 7571 (2015): 68--74, \url{https://doi.org/10.1038/nature15393}.} To prepare the \textbf{``1KG call set''}, I first downloaded the .vcf files for each autosome from the project's FTP site (\url{ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/}), then merged them into a single VCF using GATK.\footnote{Aaron McKenna et al., {``The {Genome Analysis Toolkit}: {A MapReduce} Framework for Analyzing Next-Generation {DNA} Sequencing Data,''} \emph{Genome Research} 20, no. 9 (January 9, 2010): 1297--1303, \url{https://doi.org/10.1101/gr.107524.110}.} I then used PLINK\footnote{Christopher C Chang et al., {``Second-Generation {PLINK}: Rising to the Challenge of Larger and Richer Datasets,''} \emph{GigaScience} 4, no. 1 (December 2015): 7, \url{https://doi.org/10.1186/s13742-015-0047-8}; Shaun M Purcell and Christopher C Chang, \emph{{PLINK} 1.9}, n.d., \href{https://www.cog-genomics.org/plink/1.9/}{www.cog-genomics.org/plink/1.9/}.} to calculate the minor allele frequencies for all non-missing, biallelic SNPs in both the MIKK non-sibling and IKG call sets (\emph{N} SNPs = 16,395,558 and 81,042,381 respectively) (\textbf{Fig. \ref{fig:LDdecay}A}). As expected, the 1KG and MIKK panel calls are similarly enriched for low-frequency variants, albeit to a lesser extent in the MIKK panel, which is likely due to its smaller sample size.
 
 To determine the rate of LD decay in the MIKK panel and compare it to that in the 1KG sample, for both the MIKK non-sibling and 1KG call sets, I used PLINK to compute \(r^2\) on each autosome for all pairs of non-missing, biallelic SNPs with MAF \(>\) 0.10 within 10 kb of one another (for 1KG and the MIKK panel respectively \textasciitilde{} 5.5M and \textasciitilde{} 3M SNPs, with a total number of pairwise \(r^2\) observations of 204,152,922 and 146,785,673). I then grouped the \(r^2\) observations for each pair of SNPs based on their distance from one another into non-overlapping bins of 100 bp in length, and calculated the mean \(r^2\) in each of those bins to generate \textbf{Fig. \ref{fig:LDdecay}B} using the mean \(r^2\) and left boundary of each bin.
 
@@ -331,7 +353,7 @@ To determine the rate of LD decay in the MIKK panel and compare it to that in th
 \includegraphics[width=1\linewidth]{figs/mikk_genome/08_ld_decay} \caption{Minor allele frequency distributions and LD decay for biallelic, non-missing SNPs in the 1000 Genomes Phase 3 variant calls (N = 2,504) (1KG), and the MIKK panel Illumina-based calls excluding one of each pair of sibling lines (N = 63), across all autosomes (1KG: chrs 1-22; MIKK: chrs 1-24). \textbf{A}: Histogram of allele frequencies in the 1KG and MIKK panel calls. \textbf{B}: LD decay for each autosome, calculated by taking the mean \(r^2\) of pairs of SNPs with MAF \(>\) 0.1 within non-overlapping 100 bp windows of distance from one another, up to a maximum of 10 kb. LD decays faster on chromosome 2 for the MIKK panel due to its higher recombination rate.}\label{fig:LDdecay}
 \end{figure}
 
-Based on the 1KG calls under these parameters, LD decays in humans to a mean \(r^2\) of around 0.2-0.35 at a distance of 10 kb, whereas the MIKK panel reaches this level within 1 kb, with a mean \(r^2\) of 0.3-0.4 at a distance of \textasciitilde100 bp. This implies that when a causal variant is present in at least two lines in the MIKK panel, one may be able to map causal variants at a higher resolution than in humans. We note that LD decays faster in chromosome 2 of the MIKK panel relative to the other chromosomes. This suggests that it has a much higher recombination rate, which is consistent with the linkage map described in Naruse et al. (2000), showing a higher genetic distance per Mb for this chromosome. This higher recombination rate in chromosome 2 may in turn be caused by its relatively high proportion of repeat content (\textbf{Fig. \ref{fig:repeats}}).
+Based on the 1KG calls under these parameters, LD decays in humans to a mean \(r^2\) of around 0.2-0.35 at a distance of 10 kb, whereas the MIKK panel reaches this level within 1 kb, with a mean \(r^2\) of 0.3-0.4 at a distance of \textasciitilde100 bp. This implies that when a causal variant is present in at least two lines in the MIKK panel, one may be able to map causal variants at a higher resolution than in humans. We note that LD decays faster in chromosome 2 of the MIKK panel relative to the other chromosomes. This suggests that it has a much higher recombination rate, which is consistent with the linkage map described in Kiyoshi Naruse et al.\footnote{{``A {Detailed Linkage Map} of {Medaka}, {Oryzias} Latipes: {Comparative Genomics} and {Genome Evolution},''} \emph{Genetics} 154, no. 4 (April 1, 2000): 1773--84, \url{https://www.genetics.org/content/154/4/1773}.}, showing a higher genetic distance per Mb for this chromosome. This higher recombination rate in chromosome 2 may in turn be caused by its relatively high proportion of repeat content (\textbf{Fig. \ref{fig:repeats}}).
 
 
 
@@ -340,13 +362,13 @@ Based on the 1KG calls under these parameters, LD decays in humans to a mean \(r
 \end{figure}
 
 \hypertarget{mikksv-sec}{%
-\subsection{Structural variation in the MIKK panel}\label{mikksv-sec}}
+\section{Structural variation in the MIKK panel}\label{mikksv-sec}}
 
-As an alternative to the variation pangenome approach described in Leger et al. (2022), I explored the structural variants (SVs) present in 9 of the MIKK panel lines in a reference-anchored manner, similar to many human studies. Differences in SVs between panel lines is another important class of genetic variation that could cause or contribute to significant phenotypic differences. Here we used ONT data obtained for 9 of the 12 selected lines allowing us to characterise larger SVs in the MIKK panel and to create a more extensive picture of genomic rearrangements compared to available medaka reference genomes. Adrien Leger from the Birney Group at EMBL-EBI first called structural variants using only the ONT long reads, producing a set of structural variants classified into five types: deletions (DEL), insertions (INS), translocations (TRA), duplications (DUP) and inversions (INV). I then ``polished'' the called DEL and INS variants with Illumina short reads to improve their accuracy. The polishing process filtered out 7.4\% of DEL and 12.8\% of INS variants, and adjusted the breakpoints (i.e.~start and end positions) for 75-77\% of DEL and INS variants in each sample by a mean of 23 bp for the start position, and 33 bp for the end position. This process produced a total of 143,326 filtered SVs.
+As an alternative to the variation pangenome approach described in Leger et al.\footnote{{``Genomic Variations and Epigenomic Landscape of the {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel.''}}, I explored the structural variants (SVs) present in 9 of the MIKK panel lines in a reference-anchored manner, similar to many human studies. Differences in SVs between panel lines is another important class of genetic variation that could cause or contribute to significant phenotypic differences. Here we used ONT data obtained for 9 of the 12 selected lines allowing us to characterise larger SVs in the MIKK panel and to create a more extensive picture of genomic rearrangements compared to available medaka reference genomes. Adrien Leger from the Birney Group at EMBL-EBI first called structural variants using only the ONT long reads, producing a set of structural variants classified into five types: deletions (DEL), insertions (INS), translocations (TRA), duplications (DUP) and inversions (INV). I then ``polished'' the called DEL and INS variants with Illumina short reads to improve their accuracy. The polishing process filtered out 7.4\% of DEL and 12.8\% of INS variants, and adjusted the breakpoints (i.e.~start and end positions) for 75-77\% of DEL and INS variants in each sample by a mean of 23 bp for the start position, and 33 bp for the end position. This process produced a total of 143,326 filtered SVs.
 
 The 9 ``polished'' samples contained a mean per-sample count of approximately 37K DEL variants (12\% singletons), 29.5K INS variants (14\%), 3.5K TRA variants (9\%), 2.5K DUP (7\%) and 600 INV (7\%) (\textbf{Fig. \ref{fig:SV-main}D}). DEL variants were up to 494 kb in length, with 90\% of unique DEL variants shorter than 3.8 kb. INS variants were only up to 13.8 kb in length, with 90\% of unique INS variants shorter than 2 kb. DUP and INV variants tended to be longer, with a mean length of 19 and 70.5 kb respectively (\textbf{Fig. \ref{fig:SV-main}A}). \textbf{Fig. \ref{fig:SV-main}E} shows the per-sample distribution of DEL variants across the genome. Most large DEL variants over 250 kb in length were common among the MIKK panel lines. A number of large DEL variants appear to have accumulated within the 0-10 Mb region of chromosome 2, which is enriched for repeats in the HdrR reference genome (\textbf{Fig. \ref{fig:repeats}}).
 
-SVs were generally enriched in regions covered by repeats. While only 16\% of bases in the \emph{HdrR} reference were classified as repeats (irrespective of strand), those bases overlapped with 72\% of DEL, 63\% of DUP, 81\% of INV and 35\% of TRA variant regions. However, repeat bases only overlapped with 21\% of INS variants. We also assessed each SV's probability of being loss-of-function (pLI)(Lek et al. 2016) by calculating the logarithm of odds (LOD) for the pLI scores of all genes overlapping the variant (\textbf{Fig. \ref{fig:SV-main}B,C}). 30,357 out of 134,088 DEL, INS, DUP and INV variants overlapped at least one gene, and 9\% of those had a score greater than 10, indicating a high probability that the SV would cause a loss of function. Two INS variants on chr2 had an outlying LOD score of 57 as a result of overlapping medaka gene ENSORLG00000003411, which has a pLI score of 1 -- the highest intolerance to variants causing a loss of function. This gene is homologous with human genes \emph{SCN1A}, \emph{SCN2A} and \emph{SCN3A}, which encode sodium channels and have been associated with neuronal and sleep disorders. We did not find evidence that longer SVs tended to have a higher probability of causing a loss of function (\textbf{Fig. \ref{fig:SV-main}B}).
+SVs were generally enriched in regions covered by repeats. While only 16\% of bases in the \emph{HdrR} reference were classified as repeats (irrespective of strand), those bases overlapped with 72\% of DEL, 63\% of DUP, 81\% of INV and 35\% of TRA variant regions. However, repeat bases only overlapped with 21\% of INS variants. We also assessed each SV's probability of being loss-of-function (pLI)\footnote{Monkol Lek et al., {``Analysis of Protein-Coding Genetic Variation in 60,706 Humans,''} \emph{Nature} 536, no. 7616, 7616 (August 2016): 285--91, \url{https://doi.org/10.1038/nature19057}.} by calculating the logarithm of odds (LOD) for the pLI scores of all genes overlapping the variant (\textbf{Fig. \ref{fig:SV-main}B,C}). 30,357 out of 134,088 DEL, INS, DUP and INV variants overlapped at least one gene, and 9\% of those had a score greater than 10, indicating a high probability that the SV would cause a loss of function. Two INS variants on chr2 had an outlying LOD score of 57 as a result of overlapping medaka gene ENSORLG00000003411, which has a pLI score of 1 -- the highest intolerance to variants causing a loss of function. This gene is homologous with human genes \emph{SCN1A}, \emph{SCN2A} and \emph{SCN3A}, which encode sodium channels and have been associated with neuronal and sleep disorders. We did not find evidence that longer SVs tended to have a higher probability of causing a loss of function (\textbf{Fig. \ref{fig:SV-main}B}).
 
 
 
@@ -354,109 +376,109 @@ SVs were generally enriched in regions covered by repeats. While only 16\% of ba
 \includegraphics[width=1\linewidth]{figs/mikk_genome/20210408_sv_main} \caption{Polished SVs in 9 MIKK panel lines sequenced with ONT. DEL: deletion; INS: insertion; TRA: translocation; DUP: duplication; INV: inversion. \textbf{A}. Aggregate log10 counts and lengths of distinct SVs by type, excluding TRA. \textbf{B}. pLI LOD scores in distinct SVs by SV type. \textbf{C}. Histogram of LOD scores by SV type. \textbf{D}. Total and singleton counts of SV types per sample. \textbf{E}. Circos plot showing per-sample distribution and lengths of DEL variants across the genome.}\label{fig:SV-main}
 \end{figure}
 
-We compared these polished INS and DEL calls with the high-quality graph-based alternative paths and large-scale deletions, respectively (see section titled \emph{Novel genetic sequences and large-scale insertions and deletions in the MIKK panel} in Leger et al. (2022)). We found that 2 of the 19 regions covered by graph-based alternative paths, and 4 of the 16 regions covered by graph-based deletions, had no SVs that overlapped those regions at all, which suggests they would have been missed entirely when using a reference-anchored approach alone.
+We compared these polished INS and DEL calls with the high-quality graph-based alternative paths and large-scale deletions, respectively (see section titled \emph{Novel genetic sequences and large-scale insertions and deletions in the MIKK panel} in Leger et al.\footnote{{``Genomic Variations and Epigenomic Landscape of the {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel.''}}). We found that 2 of the 19 regions covered by graph-based alternative paths, and 4 of the 16 regions covered by graph-based deletions, had no SVs that overlapped those regions at all, which suggests they would have been missed entirely when using a reference-anchored approach alone.
 
 With the exception of one alternative path on chromosome 20, the alternative paths were not captured by INS variants, which only covered up to 63\% of the bases in each region, and in many cases substantially less. On the other hand, for 8 of the 16 graph-based deletions, the DEL variants covered at least 85\% of the bases in those regions. The other 8 graph-based deletions were either not at all covered by DEL variants, or only slightly. This indicates that the reference-based approach is better at detecting large-scale deletions than alternative paths (``insertions''), but still misses around half of such variants relative to the graph-based approach.
 
 \hypertarget{conclusions}{%
-\subsection{Conclusions}\label{conclusions}}
+\section{Conclusions}\label{conclusions}}
 
 Taken together, these analyses show that the MIKK panel is highly homozygous, with LD characteristics that will favour high-resolution genetic mapping relative to humans. In the future, the SV analysis performed on a subset of the MIKK panel will be expanded across the entire panel, which will permit the inclusion of both large- and small-scale variants in genetic linkage studies. I proceeded to use the MIKK panel to analyse bold/shy behaviours, as I describe in Chapter \ref{MIKK-F2-chap}, with a view to carrying out an F2-cross linkage study to identify genetic variants associated with differences in the behaviours of an individual, and the extent to which they transmit those behaviours to their social companions. However, before carrying out this study, we first ran a ``pilot'' study on 5 previously-established inbred lines to validate our behavioural assay. This is the subject of the following chapter.
 
 \hypertarget{Pilot-chap}{%
-\section{Classification of bold/shy behaviours in 5 inbred medaka lines}\label{Pilot-chap}}
+\chapter{Classification of bold/shy behaviours in 5 inbred medaka lines}\label{Pilot-chap}}
 
 \hypertarget{MIKK-F2-chap}{%
-\section{Bold/shy behaviours in the MIKK panel}\label{MIKK-F2-chap}}
+\chapter{Bold/shy behaviours in the MIKK panel}\label{MIKK-F2-chap}}
 
 \hypertarget{Fst-chap}{%
-\section{Variation in the frequency of trait-associated alleles across global human populations}\label{Fst-chap}}
+\chapter{Variation in the frequency of trait-associated alleles across global human populations}\label{Fst-chap}}
 
 In this chapter I illustrate the distribution of \(F_{ST}\) scores for loci associated with 587 traits, a subset of the GWAS Catalog which passed our criteria for suitable polygenic traits (Methods). Our analysis is empirical, in that we do not explicitly formulate a statistical test for drift or selection, differential or otherwise. Using high-coverage sequence data for 2,504 individuals from the 1000 Genomes Project phase 3 release, for each trait in the GWAS Catalog we calculated the distribution of \(F_{ST}\) across all approximately-unlinked SNPs associated with it (trait SNPs), and compared these \(F_{ST}\) distributions with the \(F_{ST}\) distributions of random-selected SNPs that were matched to the trait SNPs by their allele frequencies in European populations (control SNPs). Our results show that traits related to the physical correlates of ``race'' (such as skin-pigmentation, eye colour, and hair shape) tend to have relatively high \(F_{ST}\) values -- signifying relatively high variance in allele frequencies between populations -- whereas traits related to intelligence (such as self-reported EA, mathematical ability, and cognitive function measurement) tend to have lower \(F_{ST}\) values that are similar to those of most polygenic traits such as height and body mass index.
 
 \hypertarget{background}{%
-\subsection{Background}\label{background}}
+\section{Background}\label{background}}
 
 \hypertarget{polygenic-risk-scores-prs-and-genome-wide-association-studies-gwas}{%
-\subsubsection{Polygenic Risk Scores (PRS) and Genome-Wide Association Studies (GWAS)}\label{polygenic-risk-scores-prs-and-genome-wide-association-studies-gwas}}
+\subsection{Polygenic Risk Scores (PRS) and Genome-Wide Association Studies (GWAS)}\label{polygenic-risk-scores-prs-and-genome-wide-association-studies-gwas}}
 
 As seen in previous chapters, an individual's phenotypic value at a given point in time is the product of complex interactions between their genome and their environment, accumulating during their initial development and continuing throughout their lifetimes.
 
-A richer understanding of the cumulative effect of genetic variants on any trait allows for the prediction of the value that an individual is most likely to have for that trait. Of all human traits, diseases are particularly salient -- in 2018, the global healthcare industry was valued at US\$8 trillion, and predicted to increase to US\$12 trillion by 2022 ({``The \$11.9 {Trillion Global Healthcare Market}: {Key Opportunities} \& {Strategies} (2014-2022) - {ResearchAndMarkets}.com''} 2019). This strong financial imperative complements the moral imperative to reduce suffering, together driving many to determine how to use genetic information to improve human health.
+A richer understanding of the cumulative effect of genetic variants on any trait allows for the prediction of the value that an individual is most likely to have for that trait. Of all human traits, diseases are particularly salient -- in 2018, the global healthcare industry was valued at US\$8 trillion, and predicted to increase to US\$12 trillion by 2022.\footnote{{``The \$11.9 {Trillion Global Healthcare Market}: {Key Opportunities} \& {Strategies} (2014-2022) - {ResearchAndMarkets}.com,''} June 25, 2019, \url{https://www.businesswire.com/news/home/20190625005862/en/The-11.9-Trillion-Global-Healthcare-Market-Key-Opportunities-Strategies-2014-2022---ResearchAndMarkets.com}.} This strong financial imperative complements the moral imperative to reduce suffering, together driving many to determine how to use genetic information to improve human health.
 
-Once it became possible to sequence human genomes at scale, researchers have sought to use genetic information to predict an individual's likely value for a given trait (Wray, Goddard, and Visscher 2007). It is thought that by combining genetic information with with other environmental and phenotypic information, clinicians could work towards applying ``precision medicine'', where their patients' medications, diet, and other lifestyle factors could be tailored to their unique needs. The genetic component of this pursuit is now commonly known as polygenic risk scores (\textbf{PRS}), also known as genetic risk profiling, which seeks to predict the likelihood of a given trait based on an individual's genomic variants. To date, PRS studies have shown reliable yet modest improvement above clinical models to predictions for a variety of health-related traits including blood pressure, breast cancer (Maas et al. 2016), prostate cancer, (Schumacher et al. 2018), type I diabetes (Sharp et al. 2019).
+Once it became possible to sequence human genomes at scale, researchers have sought to use genetic information to predict an individual's likely value for a given trait.\footnote{Naomi R. Wray, Michael E. Goddard, and Peter M. Visscher, {``Prediction of Individual Genetic Risk to Disease from Genome-Wide Association Studies,''} \emph{Genome Research} 17, no. 10 (January 10, 2007): 1520--28, \url{https://doi.org/10.1101/gr.6665407}.} It is thought that by combining genetic information with with other environmental and phenotypic information, clinicians could work towards applying ``precision medicine'', where their patients' medications, diet, and other lifestyle factors could be tailored to their unique needs. The genetic component of this pursuit is now commonly known as polygenic risk scores (\textbf{PRS}), also known as genetic risk profiling, which seeks to predict the likelihood of a given trait based on an individual's genomic variants. To date, PRS studies have shown reliable yet modest improvement above clinical models to predictions for a variety of health-related traits including blood pressure, breast cancer,\footnote{Paige Maas et al., {``Breast {Cancer Risk From Modifiable} and {Nonmodifiable Risk Factors Among White Women} in the {United States},''} \emph{JAMA Oncology} 2, no. 10 (October 1, 2016): 1295--1302, \url{https://doi.org/10.1001/jamaoncol.2016.1025}.} prostate cancer,,\footnote{Fredrick R. Schumacher et al., {``Association Analyses of More Than 140,000 Men Identify 63 New Prostate Cancer Susceptibility Loci,''} \emph{Nature Genetics} 50, no. 7, 7 (July 2018): 928--36, \url{https://doi.org/10.1038/s41588-018-0142-8}.} type I diabetes.\footnote{Seth A. Sharp et al., {``Development and {Standardization} of an {Improved Type} 1 {Diabetes Genetic Risk Score} for {Use} in {Newborn Screening} and {Incident Diagnosis},''} \emph{Diabetes Care} 42, no. 2 (January 11, 2019): 200--207, \url{https://doi.org/10.2337/dc18-1785}.}
 
-PRS scores can further be combined with lifestyle and clinical factors to more accurately predict the risk of cardiovascular disease (Khera et al. 2018; Kullo et al. 2016; Natarajan et al. 2017; Paquette et al. 2017; Tikkanen et al. 2013).
+PRS scores can further be combined with lifestyle and clinical factors to more accurately predict the risk of cardiovascular disease.\footnote{Amit V. Khera et al., {``Genome-Wide Polygenic Scores for Common Diseases Identify Individuals with Risk Equivalent to Monogenic Mutations,''} \emph{Nature Genetics} 50, no. 9, 9 (September 2018): 1219--24, \url{https://doi.org/10.1038/s41588-018-0183-z}; Iftikhar J. Kullo et al., {``Incorporating a {Genetic Risk Score Into Coronary Heart Disease Risk Estimates},''} \emph{Circulation} 133, no. 12 (March 22, 2016): 1181--88, \url{https://doi.org/10.1161/CIRCULATIONAHA.115.020109}; Pradeep Natarajan et al., {``Polygenic {Risk Score Identifies Subgroup With Higher Burden} of {Atherosclerosis} and {Greater Relative Benefit From Statin Therapy} in the {Primary Prevention Setting},''} \emph{Circulation} 135, no. 22 (May 30, 2017): 2091--101, \url{https://doi.org/10.1161/CIRCULATIONAHA.116.024436}; Martine Paquette et al., {``Polygenic Risk Score Predicts Prevalence of Cardiovascular Disease in Patients with Familial Hypercholesterolemia,''} \emph{Journal of Clinical Lipidology} 11, no. 3 (May 1, 2017): 725--732.e5, \url{https://doi.org/10.1016/j.jacl.2017.03.019}; Emmi Tikkanen et al., {``Genetic {Risk Prediction} and a 2-{Stage Risk Screening Strategy} for {Coronary Heart Disease},''} \emph{Arteriosclerosis, Thrombosis, and Vascular Biology} 33, no. 9 (September 2013): 2261--66, \url{https://doi.org/10.1161/ATVBAHA.112.301120}.}
 
-The scores are calculated by summing the trait-associated alleles identified through genome-wide association studies (\textbf{GWAS}), weighted by the alleles' effect sizes.(Duncan et al. 2019) However, most GWAS have been performed with individuals of European ancestry. Although the proportion of participants in GWAS from a non-European background is increasing (from 4\% in 20019 to 16 \% in 2016 (Popejoy and Fullerton 2016)), as of 2019, 79\% of all GWAS participants recorded in the GWAS Catalog were of European ancestry.(A. R. Martin et al. 2019) The consequence of this is that PRS scores are far better at predicting disease risk in individuals of European ancestry (A. R. Martin et al. 2017, 2019). For example, A. R. Martin et al. (2017) found that height was predicted to decrease with genetic distance from Europeans, despite robust evidence that West Africans are as tall as Europeans on average. Indeed, the predictive accuracy of PRS scores decays with genetic divergence of the GWAS ``independent'' or ``test'' sample from the ``discovery'' - or ``training'' - sample, as established in both humans (A. R. Martin et al. 2017, 2019), and livestock (Clark et al. 2012; Habier et al. 2010; Pszczola et al. 2012).
+The scores are calculated by summing the trait-associated alleles identified through genome-wide association studies (\textbf{GWAS}), weighted by the alleles' effect sizes.\footnote{L. Duncan et al., {``Analysis of Polygenic Risk Score Usage and Performance in Diverse Human Populations,''} \emph{Nature Communications} 10, no. 1, 1 (July 25, 2019): 3328, \url{https://doi.org/10.1038/s41467-019-11112-0}.} However, most GWAS have been performed with individuals of European ancestry. Although the proportion of participants in GWAS from a non-European background is increasing (from 4\% in 20019 to 16 \% in 2016),\footnote{Alice B. Popejoy and Stephanie M. Fullerton, {``Genomics Is Failing on Diversity,''} \emph{Nature} 538, no. 7624, 7624 (October 2016): 161--64, \url{https://doi.org/10.1038/538161a}.} as of 2019, 79\% of all GWAS participants recorded in the GWAS Catalog were of European ancestry.\footnote{Alicia R. Martin, Masahiro Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities,''} \emph{Nature Genetics} 51, no. 4, 4 (April 2019): 584--91, \url{https://doi.org/10.1038/s41588-019-0379-x}.} The consequence of this is that PRS scores are far better at predicting disease risk in individuals of European ancestry.\footnote{Alicia R. Martin, Christopher R. Gignoux, et al., {``Human {Demographic History Impacts Genetic Risk Prediction} Across {Diverse Populations},''} \emph{The American Journal of Human Genetics} 100, no. 4 (April 6, 2017): 635--49, \url{https://doi.org/10.1016/j.ajhg.2017.03.004}; Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} For example, Martin, Gignoux, et al.\footnote{{``Human {Demographic History Impacts Genetic Risk Prediction} Across {Diverse Populations}.''}} found that height was predicted to decrease with genetic distance from Europeans, despite robust evidence that West Africans are as tall as Europeans on average. Indeed, the predictive accuracy of PRS scores decays with genetic divergence of the GWAS ``independent'' or ``test'' sample from the ``discovery'' - or ``training'' - sample, as established in both humans,\footnote{Martin, Gignoux, et al.; Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} and livestock.\footnote{Samuel A. Clark et al., {``The Importance of Information on Relatives for the Prediction of Genomic Breeding Values and the Implications for the Makeup of Reference Data Sets in Livestock Breeding Schemes,''} \emph{Genetics Selection Evolution} 44, no. 1 (February 9, 2012): 4, \url{https://doi.org/10.1186/1297-9686-44-4}; David Habier et al., {``The Impact of Genetic Relationship Information on Genomic Breeding Values in {German Holstein} Cattle,''} \emph{Genetics Selection Evolution} 42, no. 1 (February 19, 2010): 5, \url{https://doi.org/10.1186/1297-9686-42-5}; M. Pszczola et al., {``Reliability of Direct Genomic Values for Animals with Different Relationships Within and to the Reference Population,''} \emph{Journal of Dairy Science} 95, no. 1 (January 1, 2012): 389--400, \url{https://doi.org/10.3168/jds.2011-4338}.}
 
-These differences in representation cause PRS scores to have a lower accuracy for individuals of non-European ancestry. For example, compared to PRS scores for those of European ancestry, PRS scores across multiple traits for individuals of African ancestry are \textasciitilde64-78\% less accurate (Duncan et al. 2019; A. R. Martin et al. 2019), and for indiviauls of South-Asian acnestry \textasciitilde37\% less accurace, and \textasciitilde50\% less accurate for individuals of East-Asian ancestry (A. R. Martin et al. 2019).
+These differences in representation cause PRS scores to have a lower accuracy for individuals of non-European ancestry. For example, compared to PRS scores for those of European ancestry, PRS scores across multiple traits for individuals of African ancestry are \textasciitilde64-78\% less accurate,\footnote{Duncan et al., {``Analysis of Polygenic Risk Score Usage and Performance in Diverse Human Populations''}; Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} and for indiviauls of South-Asian acnestry \textasciitilde37\% less accurace, and \textasciitilde50\% less accurate for individuals of East-Asian ancestry.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}}
 
 What explains this disparity in predictive value? A number of factors may be responsible including:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  GWAS neglect causal variants that do not exist within the ``discovery'' sample (A. R. Martin et al. 2019).
+  GWAS neglect causal variants that do not exist within the ``discovery'' sample.\footnote{Martin, Kanai, et al.}
 \item
-  The sample populations may differ in linkage disequilibrium (\textbf{LD}) -- the correlation structure of the genome -- which would change the estimated effect sizes of the causal variants, even when the causal variants themselves are the same (A. R. Martin et al. 2019). To illusatrate, if a SNP has an LD \(r^2\) with a causal variant of 0.8 in the discovery population and 0.6 in the target population, it would explain 25\% = (1 - 0.6/0.8) less trait variation in the target population and therefore would be less predictive (Wang et al. 2020). Differences in effect-size estimates may typically be small for most regions of the genome, but PRS sum across these effects, therefore aggregating these population differences (A. R. Martin et al. 2019). Previous empirical and simulation studies have shown that accruacy of PRS scores decay wtih increased genetic differentation (\(F_{ST}\)) and LD differences between populations (Habier et al. 2010; Pszczola et al. 2012; Scutari, Mackay, and Balding 2016; Wang et al. 2020).
+  The sample populations may differ in linkage disequilibrium (\textbf{LD}) -- the correlation structure of the genome -- which would change the estimated effect sizes of the causal variants, even when the causal variants themselves are the same.\footnote{Martin, Kanai, et al.} To illusatrate, if a SNP has an LD \(r^2\) with a causal variant of 0.8 in the discovery population and 0.6 in the target population, it would explain 25\% = (1 - 0.6/0.8) less trait variation in the target population and therefore would be less predictive.\footnote{Ying Wang et al., {``Theoretical and Empirical Quantification of the Accuracy of Polygenic Scores in Ancestry Divergent Populations,''} \emph{Nature Communications} 11, no. 1, 1 (July 31, 2020): 3865, \url{https://doi.org/10.1038/s41467-020-17719-y}.} Differences in effect-size estimates may typically be small for most regions of the genome, but PRS sum across these effects, therefore aggregating these population differences.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} Previous empirical and simulation studies have shown that accruacy of PRS scores decay wtih increased genetic differentation (\(F_{ST}\)) and LD differences between populations.\footnote{Habier et al., {``The Impact of Genetic Relationship Information on Genomic Breeding Values in {German Holstein} Cattle''}; Pszczola et al., {``Reliability of Direct Genomic Values for Animals with Different Relationships Within and to the Reference Population''}; Marco Scutari, Ian Mackay, and David Balding, {``Using {Genetic Distance} to {Infer} the {Accuracy} of {Genomic Prediction},''} \emph{PLOS Genetics} 12, no. 9 (September 2, 2016): e1006288, \url{https://doi.org/10.1371/journal.pgen.1006288}; Wang et al., {``Theoretical and Empirical Quantification of the Accuracy of Polygenic Scores in Ancestry Divergent Populations.''}}
 \item
-  Allele frequencies of the causal variants, and the distribution of the effect sizes of the causal variants, may differ between populations (A. R. Martin et al. 2017; Scutari, Mackay, and Balding 2016).
+  Allele frequencies of the causal variants, and the distribution of the effect sizes of the causal variants, may differ between populations.\footnote{Martin, Gignoux, et al., {``Human {Demographic History Impacts Genetic Risk Prediction} Across {Diverse Populations}''}; Scutari, Mackay, and Balding, {``Using {Genetic Distance} to {Infer} the {Accuracy} of {Genomic Prediction}.''}}
 \item
-  The environments and demographies may differ between populations. These differences are often correlated with genetic divergence due to geography, making it difficult to determine whether the associations are driven by the differences between population in their genetics, or their environments (A. R. Martin et al. 2019; Kerminen et al. 2019).
+  The environments and demographies may differ between populations. These differences are often correlated with genetic divergence due to geography, making it difficult to determine whether the associations are driven by the differences between population in their genetics, or their environments.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities''}; Sini Kerminen et al., {``Geographic {Variation} and {Bias} in the {Polygenic Scores} of {Complex Diseases} and {Traits} in {Finland},''} \emph{The American Journal of Human Genetics} 104, no. 6 (June 6, 2019): 1169--81, \url{https://doi.org/10.1016/j.ajhg.2019.05.001}.}
 \end{enumerate}
 
-The first three factors can degrade predictive performance even in the absence of biological and environmental differences, whereas environmental and demographic differences can drive forces of natural selection can in turn drive differences in causal genetic architecture (A. R. Martin et al. 2019).
+The first three factors can degrade predictive performance even in the absence of biological and environmental differences, whereas environmental and demographic differences can drive forces of natural selection can in turn drive differences in causal genetic architecture.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}}
 
-Differences in LD and allele frequencies between populations can explain 70-80\% of the loss of PRS relative accuracy for traits like body mass index and type 2 diabetes (Wang et al. 2020).
+Differences in LD and allele frequencies between populations can explain 70-80\% of the loss of PRS relative accuracy for traits like body mass index and type 2 diabetes.\footnote{Wang et al., {``Theoretical and Empirical Quantification of the Accuracy of Polygenic Scores in Ancestry Divergent Populations.''}}
 
 \hypertarget{effect-of-the-environment-on}{%
-\subsubsection{Effect of the environment on}\label{effect-of-the-environment-on}}
+\subsection{Effect of the environment on}\label{effect-of-the-environment-on}}
 
 \hypertarget{discovery-of-causal-variants}{%
-\subsubsection{Discovery of causal variants}\label{discovery-of-causal-variants}}
+\subsection{Discovery of causal variants}\label{discovery-of-causal-variants}}
 
-The power to discover a causal variant through GWAS depends on the variant's effect size and frequency in the study population (A. R. Martin et al. 2019; Sham et al. 2000). That is to say, the greater the effect of the variant, or the more common it is, the more likely it is to be discovered.
+The power to discover a causal variant through GWAS depends on the variant's effect size and frequency in the study population.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities''}; P. C. Sham et al., {``Power of {Linkage} Versus {Association Analysis} of {Quantitative Traits}, by {Use} of {Variance-Components Models}, for {Sibship Data},''} \emph{The American Journal of Human Genetics} 66, no. 5 (May 1, 2000): 1616--30, \url{https://doi.org/10.1086/302891}.} That is to say, the greater the effect of the variant, or the more common it is, the more likely it is to be discovered.
 
-Many SNP arrays used for GWAS do not sequence the whole genome, but rather a selection (from several hundred thousand to millions) of genetic markers intended to present common genomic variation (Porcu et al. 2013). To increase the density of genotypes, which would increase the likelihood of refining the association signal and identifying causal variants, researchers often ``impute'' variants that aren't sequenced directly (Porcu et al. 2013). The imputation process involves ``phasing'' the study genotypes onto the genotypes of a ``reference panel'' (McCarthy et al. 2016). However, if the reference panel does not sufficiently represent the populations in the study sample, they are likely to miss or incorrectly impute genotypes from those under-represented populations (A. R. Martin et al. 2019).
+Many SNP arrays used for GWAS do not sequence the whole genome, but rather a selection (from several hundred thousand to millions) of genetic markers intended to present common genomic variation.\footnote{Eleonora Porcu et al., {``Genotype {Imputation} in {Genome-Wide Association Studies},''} \emph{Current Protocols in Human Genetics} 78, no. 1 (2013): 1.25.1--14, \url{https://doi.org/10.1002/0471142905.hg0125s78}.} To increase the density of genotypes, which would increase the likelihood of refining the association signal and identifying causal variants, researchers often ``impute'' variants that aren't sequenced directly.\footnote{Porcu et al.} The imputation process involves ``phasing'' the study genotypes onto the genotypes of a ``reference panel.''\footnote{Shane McCarthy et al., {``A Reference Panel of 64,976 Haplotypes for Genotype Imputation,''} \emph{Nature Genetics} 48, no. 10, 10 (October 2016): 1279--83, \url{https://doi.org/10.1038/ng.3643}.} However, if the reference panel does not sufficiently represent the populations in the study sample, they are likely to miss or incorrectly impute genotypes from those under-represented populations.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}}
 
-Genetic divergence between popoulations can be measured by \(F_{ST}\), and the correlation between true and predicted phenotypic vlaues decays approximately linearly with respect to \(F_{ST}\) (Scutari, Mackay, and Balding 2016).
+Genetic divergence between popoulations can be measured by \(F_{ST}\), and the correlation between true and predicted phenotypic vlaues decays approximately linearly with respect to \(F_{ST}\).\footnote{Scutari, Mackay, and Balding, {``Using {Genetic Distance} to {Infer} the {Accuracy} of {Genomic Prediction}.''}}
 
-It was demonstrated in simulations that using LD information from an external reference panel as a prior to infer the posterior mean effect size of a genetic variant can improve PRS predictive accuracy (Vilhjálmsson et al. 2015).
+It was demonstrated in simulations that using LD information from an external reference panel as a prior to infer the posterior mean effect size of a genetic variant can improve PRS predictive accuracy.\footnote{Bjarni J Vilhjálmsson et al., {``Modeling Linkage Disequilibrium Increases Accuracy of Polygenic Risk Scores,''} \emph{The American Journal of Human Genetics} 97, no. 4 (2015): 576--92.}
 
 Causal variants can differ in both frequency and effect size between different ancestry groups (e.g.~for lactase persistence)
 
-As noted in the 2019 review of PRS scores by Duncan et al. (2019), 67\% of PRS studies included only participants of European ancestry, with another 19\% including only East Asian ancestry participants, and only 3.8\% with cohorts of African, Hispanic, or Indigenous ancestry.
+As noted in the 2019 review of PRS scores by Duncan et al.\footnote{{``Analysis of Polygenic Risk Score Usage and Performance in Diverse Human Populations.''}}, 67\% of PRS studies included only participants of European ancestry, with another 19\% including only East Asian ancestry participants, and only 3.8\% with cohorts of African, Hispanic, or Indigenous ancestry.
 
-As \(F_{ST}\) does not take into account the effect size or direction of the effect of the trait-associated allele, for highly-polygenic traits like the ones shown here, \(F_{ST}\) is almost entirely decoupled from the mean additive genetic value (or polygenic risk score) between populations, (Berg and Coop 2014)
+As \(F_{ST}\) does not take into account the effect size or direction of the effect of the trait-associated allele, for highly-polygenic traits like the ones shown here, \(F_{ST}\) is almost entirely decoupled from the mean additive genetic value (or polygenic risk score) between populations,\footnote{Jeremy J. Berg and Graham Coop, {``A {Population Genetic Signal} of {Polygenic Adaptation},''} \emph{PLOS Genetics} 10, no. 8 (August 7, 2014): e1004412, \url{https://doi.org/10.1371/journal.pgen.1004412}.}
 
 \hypertarget{datasets}{%
-\subsection{Datasets}\label{datasets}}
+\section{Datasets}\label{datasets}}
 
 \hypertarget{genomes}{%
-\subsubsection{1000 Genomes}\label{genomes}}
+\subsection{1000 Genomes}\label{genomes}}
 
-As the reference for human genomic variation across diverse populations, we used the New York Genome Center high-coverage, phased .vcf files({``Index of /Vol1/Ftp/Data\_collections/{1000g}\_2504\_high\_coverage/Working/20201028\_3202\_phased/''} n.d.) for the 2,504 individuals described in the 1000 Genomes phase 3 release.(Consortium et al. 2015) We then annotated those .vcf files with human SNP IDs from dbSNP release 9606.(Smigielski et al. 2000)
+As the reference for human genomic variation across diverse populations, we used the New York Genome Center high-coverage, phased .vcf files\footnote{{``Index of /Vol1/Ftp/Data\_collections/{1000g}\_2504\_high\_coverage/Working/20201028\_3202\_phased/,''} accessed March 24, 2022, \url{http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20201028_3202_phased/}.} for the 2,504 individuals described in the 1000 Genomes phase 3 release.\footnote{1000 Genomes Project Consortium et al., {``A Global Reference for Human Genetic Variation,''} \emph{Nature} 526, no. 7571 (2015): 68.} We then annotated those .vcf files with human SNP IDs from dbSNP release 9606.\footnote{Elizabeth M. Smigielski et al., {``{dbSNP}: A Database of Single Nucleotide Polymorphisms,''} \emph{Nucleic Acids Research} 28, no. 1 (January 1, 2000): 352--55, \url{https://doi.org/10.1093/nar/28.1.352}.}
 
 \hypertarget{gwas-catalog}{%
-\subsubsection{GWAS Catalog}\label{gwas-catalog}}
+\subsection{GWAS Catalog}\label{gwas-catalog}}
 
-We used the R package \emph{gwasrapidd}(Magno and Maia 2020) to query all traits in the GWAS Catalog(MacArthur et al. 2017) as of 9 August 2021 (\(N_{TRAITS}\) = 3,459). For 541 of these traits, no matching variant IDs could be pulled out from the 1000 Genomes VCFs, leaving \(N_{TRAITS}\) = 3,008.
+We used the R package \emph{gwasrapidd}\footnote{Ramiro Magno and Ana-Teresa Maia, {``Gwasrapidd: An {R} Package to Query, Download and Wrangle {GWAS} Catalog Data,''} \emph{Bioinformatics} 36, no. 2 (January 15, 2020): 649--50, \url{https://doi.org/10.1093/bioinformatics/btz605}.} to query all traits in the GWAS Catalog\footnote{Jacqueline MacArthur et al., {``The New {NHGRI-EBI Catalog} of Published Genome-Wide Association Studies ({GWAS Catalog}),''} \emph{Nucleic Acids Research} 45, no. D1 (January 4, 2017): D896--901, \url{https://doi.org/10.1093/nar/gkw1133}.} as of 9 August 2021 (\(N_{TRAITS}\) = 3,459). For 541 of these traits, no matching variant IDs could be pulled out from the 1000 Genomes VCFs, leaving \(N_{TRAITS}\) = 3,008.
 
 \hypertarget{linkage-disequilibrium}{%
-\subsubsection{Linkage disequilibrium}\label{linkage-disequilibrium}}
+\subsection{Linkage disequilibrium}\label{linkage-disequilibrium}}
 
-To obtain the ``trait SNP'' dataset, for each trait, we sought to isolate the SNP closest to each of its true causal variants, and exclude the SNPs in linkage disequilibrium (LD) with them. To this end, we used PLINK 1.9(Chang et al. 2015; Purcell and Chang, n.d.) to ``clump'' the SNPs associated with each of the remaining 3,008 traits, using an index variant p-value threshold of \(10^{-8}\),(Panagiotou, Ioannidis, and Genome-Wide Significance Project 2012) \(r^2\) threshold of 0.1,(Hill and Robertson 1968) and base window size of 1 Mb. This process left us with 2,045 traits with at least one index SNP that met the p-value threshold. The index SNPs for each trait formed our set of trait SNPs. In order to target relatively polygenic traits, we further filtered out traits with fewer than 10 trait SNPs, leaving \(N_{TRAITS}\) = 587. Supplementary Fig. 4 shows the counts of unique SNP IDs associated with each trait before and after clumping, and an interactive version is available in the notebook cited above.
+To obtain the ``trait SNP'' dataset, for each trait, we sought to isolate the SNP closest to each of its true causal variants, and exclude the SNPs in linkage disequilibrium (LD) with them. To this end, we used PLINK 1.9\footnote{Chang et al., {``Second-Generation {PLINK}''}; Purcell and Chang, \emph{{PLINK} 1.9}.} to ``clump'' the SNPs associated with each of the remaining 3,008 traits, using an index variant p-value threshold of \(10^{-8}\),\footnote{Orestis A. Panagiotou, John P. A. Ioannidis, and Genome-Wide Significance Project, {``What Should the Genome-Wide Significance Threshold Be? {Empirical} Replication of Borderline Genetic Associations,''} \emph{International Journal of Epidemiology} 41, no. 1 (February 2012): 273--86, \url{https://doi.org/10.1093/ije/dyr178}.} \(r^2\) threshold of 0.1,\footnote{W. G. Hill and Alan Robertson, {``Linkage Disequilibrium in Finite Populations,''} \emph{Theoretical and Applied Genetics} 38, no. 6 (June 1, 1968): 226--31, \url{https://doi.org/10.1007/BF01245622}.} and base window size of 1 Mb. This process left us with 2,045 traits with at least one index SNP that met the p-value threshold. The index SNPs for each trait formed our set of trait SNPs. In order to target relatively polygenic traits, we further filtered out traits with fewer than 10 trait SNPs, leaving \(N_{TRAITS}\) = 587. Supplementary Fig. 4 shows the counts of unique SNP IDs associated with each trait before and after clumping, and an interactive version is available in the notebook cited above.
 
 \hypertarget{control-snps}{%
-\subsubsection{Control SNPs}\label{control-snps}}
+\subsection{Control SNPs}\label{control-snps}}
 
 To obtain our ``control SNP'' dataset, we assigned each trait SNP to one of 20 bins based on its minor allele frequency in European populations (as provided in the original 1000 Genomes .vcf files under the column header `INFO/AC\_EUR'). For example, if a trait SNP had a minor allele frequency of 0.08 in European populations, it was assigned to the \((0.05, 0.1]\) bin. We did the same for all (unassociated) SNPs in the .vcf files, then paired each trait SNP with a random SNP from the .vcf file in the equivalent bin. These allele-frequency-paired random SNPs formed our set of ``control SNPs'', which we used to infer the \(F_{ST}\) distribution of a random set of SNPs with the same allele frequencies as the trait SNPs, and against which we could compare the \(F_{ST}\) distribution of the trait SNPs.
 
 \hypertarget{f_st-and-ranking-traits-by-signed-kolmogorov-smirnov-d-statistic}{%
-\subsubsection{\texorpdfstring{\(F_{ST}\) and ranking traits by signed Kolmogorov-Smirnov \(D\) statistic}{F\_\{ST\} and ranking traits by signed Kolmogorov-Smirnov D statistic}}\label{f_st-and-ranking-traits-by-signed-kolmogorov-smirnov-d-statistic}}
+\subsection{\texorpdfstring{\(F_{ST}\) and ranking traits by signed Kolmogorov-Smirnov \(D\) statistic}{F\_\{ST\} and ranking traits by signed Kolmogorov-Smirnov D statistic}}\label{f_st-and-ranking-traits-by-signed-kolmogorov-smirnov-d-statistic}}
 
-We then calculated \(F_{ST}\) for each of the trait SNPs and their matched control SNPs using the Weir and Cockerham method,(Weir and Cockerham 1984) as implemented in the R package \emph{pegas}.(Paradis 2010) To rank all traits based on the directional difference in \(F_{ST}\) distributions between trait and control SNPs, we ran three Kolmogorov-Smirnov (KS) tests for each trait \(t\) with \(x_t\) = \(F_{ST, trait SNPs}\) and \(y_t\) = \(F_{ST, control SNPs}\):
+We then calculated \(F_{ST}\) for each of the trait SNPs and their matched control SNPs using the Weir and Cockerham method,\footnote{B. S. Weir and C. Clark Cockerham, {``Estimating {F-Statistics} for the {Analysis} of {Population Structure},''} \emph{Evolution} 38, no. 6 (1984): 1358--70, \url{https://doi.org/10.2307/2408641}.} as implemented in the R package \emph{pegas}.\footnote{Emmanuel Paradis, {``Pegas: An {R} Package for Population Genetics with an Integrated--Modular Approach,''} \emph{Bioinformatics} 26, no. 3 (February 1, 2010): 419--20, \url{https://doi.org/10.1093/bioinformatics/btp696}.} To rank all traits based on the directional difference in \(F_{ST}\) distributions between trait and control SNPs, we ran three Kolmogorov-Smirnov (KS) tests for each trait \(t\) with \(x_t\) = \(F_{ST, trait SNPs}\) and \(y_t\) = \(F_{ST, control SNPs}\):
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -468,7 +490,7 @@ We then calculated \(F_{ST}\) for each of the trait SNPs and their matched contr
   one-sided ``less'' (\(D_t^-\)).
 \end{enumerate}
 
-I note that \(D_{t} = max(D_t^+, D_t^-)\), where \(D_t^+\) is the greatest vertical distance attained by the eCDF of \(x_t\) over the eCDF of \(y_t\), and \(D_t^-\) is the greatest vertical distance attained by the eCDF of \(y_t\) over the eCDF of \(x_t\).(Conover 1999; Durbin 1973) Accordingly, we used a comparison of \(D_t^+\) and \(D_t^-\) to created a signed D statistic (\(D\)), based on the logic that trait SNPs with a lower overall \(F_{ST}\) than control SNPs tend to have a higher \(D\) under the ``greater'' test than the ``less'' test, and vice versa.
+I note that \(D_{t} = max(D_t^+, D_t^-)\), where \(D_t^+\) is the greatest vertical distance attained by the eCDF of \(x_t\) over the eCDF of \(y_t\), and \(D_t^-\) is the greatest vertical distance attained by the eCDF of \(y_t\) over the eCDF of \(x_t\).\footnote{W. J. Conover, \emph{Practical {Nonparametric Statistics}} ({John Wiley \& Sons}, 1999), \url{https://books.google.com?id=n_39DwAAQBAJ}; J. Durbin, \emph{Distribution {Theory} for {Tests Based} on {Sample Distribution Function}} ({SIAM}, 1973), \url{https://books.google.com?id=zAryCrT1IUYC}.} Accordingly, we used a comparison of \(D_t^+\) and \(D_t^-\) to created a signed D statistic (\(D\)), based on the logic that trait SNPs with a lower overall \(F_{ST}\) than control SNPs tend to have a higher \(D\) under the ``greater'' test than the ``less'' test, and vice versa.
 
 Therefore, \({D_t^S}\):
 
@@ -489,205 +511,205 @@ In \textbf{Figure \ref{fig:FstMain}} we present the \(F_{ST}\) distributions of 
 \end{figure}
 
 \hypertarget{references}{%
-\section*{References}\label{references}}
-\addcontentsline{toc}{section}{References}
+\chapter*{References}\label{references}}
+\addcontentsline{toc}{chapter}{References}
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
 \leavevmode\vadjust pre{\hypertarget{ref-GlobalReferenceHuman2015}{}}%
-{``A Global Reference for Human Genetic Variation.''} 2015. \emph{Nature} 526 (7571): 68--74. \url{https://doi.org/10.1038/nature15393}.
+{``A Global Reference for Human Genetic Variation.''} \emph{Nature} 526, no. 7571 (2015): 68--74. \url{https://doi.org/10.1038/nature15393}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-bergPopulationGeneticSignal2014a}{}}%
-Berg, Jeremy J., and Graham Coop. 2014. {``A {Population Genetic Signal} of {Polygenic Adaptation}.''} \emph{PLOS Genetics} 10 (8): e1004412. \url{https://doi.org/10.1371/journal.pgen.1004412}.
+Berg, Jeremy J., and Graham Coop. {``A {Population Genetic Signal} of {Polygenic Adaptation}.''} \emph{PLOS Genetics} 10, no. 8 (August 7, 2014): e1004412. \url{https://doi.org/10.1371/journal.pgen.1004412}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-bergelsonIdentifyingGenesUnderlying2010}{}}%
-Bergelson, Joy, and Fabrice Roux. 2010. {``Towards Identifying Genes Underlying Ecologically Relevant Traits in {Arabidopsis} Thaliana.''} \emph{Nature Reviews Genetics} 11 (12, 12): 867--79. \url{https://doi.org/10.1038/nrg2896}.
+Bergelson, Joy, and Fabrice Roux. {``Towards Identifying Genes Underlying Ecologically Relevant Traits in {Arabidopsis} Thaliana.''} \emph{Nature Reviews Genetics} 11, no. 12, 12 (December 2010): 867--79. \url{https://doi.org/10.1038/nrg2896}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-changSecondgenerationPLINKRising2015}{}}%
-Chang, Christopher C, Carson C Chow, Laurent CAM Tellier, Shashaank Vattikuti, Shaun M Purcell, and James J Lee. 2015. {``Second-Generation {PLINK}: Rising to the Challenge of Larger and Richer Datasets.''} \emph{GigaScience} 4 (1): 7. \url{https://doi.org/10.1186/s13742-015-0047-8}.
+Chang, Christopher C, Carson C Chow, Laurent CAM Tellier, Shashaank Vattikuti, Shaun M Purcell, and James J Lee. {``Second-Generation {PLINK}: Rising to the Challenge of Larger and Richer Datasets.''} \emph{GigaScience} 4, no. 1 (December 2015): 7. \url{https://doi.org/10.1186/s13742-015-0047-8}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-clarkImportanceInformationRelatives2012}{}}%
-Clark, Samuel A., John M. Hickey, Hans D. Daetwyler, and Julius HJ van der Werf. 2012. {``The Importance of Information on Relatives for the Prediction of Genomic Breeding Values and the Implications for the Makeup of Reference Data Sets in Livestock Breeding Schemes.''} \emph{Genetics Selection Evolution} 44 (1): 4. \url{https://doi.org/10.1186/1297-9686-44-4}.
+Clark, Samuel A., John M. Hickey, Hans D. Daetwyler, and Julius HJ van der Werf. {``The Importance of Information on Relatives for the Prediction of Genomic Breeding Values and the Implications for the Makeup of Reference Data Sets in Livestock Breeding Schemes.''} \emph{Genetics Selection Evolution} 44, no. 1 (February 9, 2012): 4. \url{https://doi.org/10.1186/1297-9686-44-4}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-conoverPracticalNonparametricStatistics1999}{}}%
-Conover, W. J. 1999. \emph{Practical {Nonparametric Statistics}}. {John Wiley \& Sons}. \url{https://books.google.com?id=n_39DwAAQBAJ}.
+Conover, W. J. \emph{Practical {Nonparametric Statistics}}. {John Wiley \& Sons}, 1999. \url{https://books.google.com?id=n_39DwAAQBAJ}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-10002015global}{}}%
-Consortium, 1000 Genomes Project et al. 2015. {``A Global Reference for Human Genetic Variation.''} \emph{Nature} 526 (7571): 68.
+Consortium, 1000 Genomes Project et al. {``A Global Reference for Human Genetic Variation.''} \emph{Nature} 526, no. 7571 (2015): 68.
 
 \leavevmode\vadjust pre{\hypertarget{ref-duncanAnalysisPolygenicRisk2019}{}}%
-Duncan, L., H. Shen, B. Gelaye, J. Meijsen, K. Ressler, M. Feldman, R. Peterson, and B. Domingue. 2019. {``Analysis of Polygenic Risk Score Usage and Performance in Diverse Human Populations.''} \emph{Nature Communications} 10 (1, 1): 3328. \url{https://doi.org/10.1038/s41467-019-11112-0}.
+Duncan, L., H. Shen, B. Gelaye, J. Meijsen, K. Ressler, M. Feldman, R. Peterson, and B. Domingue. {``Analysis of Polygenic Risk Score Usage and Performance in Diverse Human Populations.''} \emph{Nature Communications} 10, no. 1, 1 (July 25, 2019): 3328. \url{https://doi.org/10.1038/s41467-019-11112-0}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-durbinDistributionTheoryTests1973}{}}%
-Durbin, J. 1973. \emph{Distribution {Theory} for {Tests Based} on {Sample Distribution Function}}. {SIAM}. \url{https://books.google.com?id=zAryCrT1IUYC}.
+Durbin, J. \emph{Distribution {Theory} for {Tests Based} on {Sample Distribution Function}}. {SIAM}, 1973. \url{https://books.google.com?id=zAryCrT1IUYC}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-evansQTLGeneElegans2021}{}}%
-Evans, Kathryn S., Marijke H. van Wijk, Patrick T. McGrath, Erik C. Andersen, and Mark G. Sterken. 2021. {``From {QTL} to Gene: {C}. Elegans Facilitates Discoveries of the Genetic Mechanisms Underlying Natural Variation.''} \emph{Trends in Genetics} 37 (10): 933--47. \url{https://doi.org/10.1016/j.tig.2021.06.005}.
+Evans, Kathryn S., Marijke H. van Wijk, Patrick T. McGrath, Erik C. Andersen, and Mark G. Sterken. {``From {QTL} to Gene: {C}. Elegans Facilitates Discoveries of the Genetic Mechanisms Underlying Natural Variation.''} \emph{Trends in Genetics} 37, no. 10 (October 1, 2021): 933--47. \url{https://doi.org/10.1016/j.tig.2021.06.005}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-fitzgeraldMedakaInbredKiyosuKarlsruhe2022}{}}%
-Fitzgerald, Tomas, Ian Brettell, Adrien Leger, Nadeshda Wolf, Natalja Kusminski, Jack Monahan, Carl Barton, et al. 2022. {``The {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel.''} \emph{Genome Biology} 23 (1): 59. \url{https://doi.org/10.1186/s13059-022-02623-z}.
+Fitzgerald, Tomas, Ian Brettell, Adrien Leger, Nadeshda Wolf, Natalja Kusminski, Jack Monahan, Carl Barton, et al. {``The {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel.''} \emph{Genome Biology} 23, no. 1 (February 21, 2022): 59. \url{https://doi.org/10.1186/s13059-022-02623-z}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-fredmanComplexSNPrelatedSequence2004}{}}%
-Fredman, David, Stefan J. White, Susanna Potter, Evan E. Eichler, Johan T. Den Dunnen, and Anthony J. Brookes. 2004. {``Complex {SNP-related} Sequence Variation in Segmental Genome Duplications.''} \emph{Nature Genetics} 36 (8, 8): 861--66. \url{https://doi.org/10.1038/ng1401}.
+Fredman, David, Stefan J. White, Susanna Potter, Evan E. Eichler, Johan T. Den Dunnen, and Anthony J. Brookes. {``Complex {SNP-related} Sequence Variation in Segmental Genome Duplications.''} \emph{Nature Genetics} 36, no. 8, 8 (August 2004): 861--66. \url{https://doi.org/10.1038/ng1401}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-habierImpactGeneticRelationship2010}{}}%
-Habier, David, Jens Tetens, Franz-Reinhold Seefried, Peter Lichtner, and Georg Thaller. 2010. {``The Impact of Genetic Relationship Information on Genomic Breeding Values in {German Holstein} Cattle.''} \emph{Genetics Selection Evolution} 42 (1): 5. \url{https://doi.org/10.1186/1297-9686-42-5}.
+Habier, David, Jens Tetens, Franz-Reinhold Seefried, Peter Lichtner, and Georg Thaller. {``The Impact of Genetic Relationship Information on Genomic Breeding Values in {German Holstein} Cattle.''} \emph{Genetics Selection Evolution} 42, no. 1 (February 19, 2010): 5. \url{https://doi.org/10.1186/1297-9686-42-5}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-hillLinkageDisequilibriumFinite1968}{}}%
-Hill, W. G., and Alan Robertson. 1968. {``Linkage Disequilibrium in Finite Populations.''} \emph{Theoretical and Applied Genetics} 38 (6): 226--31. \url{https://doi.org/10.1007/BF01245622}.
+Hill, W. G., and Alan Robertson. {``Linkage Disequilibrium in Finite Populations.''} \emph{Theoretical and Applied Genetics} 38, no. 6 (June 1, 1968): 226--31. \url{https://doi.org/10.1007/BF01245622}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-hoffmannChromosomalInversionPolymorphisms2004}{}}%
-Hoffmann, Ary A., Carla M. Sgr`o, and Andrew R. Weeks. 2004. {``Chromosomal Inversion Polymorphisms and Adaptation.''} \emph{Trends in Ecology \& Evolution} 19 (9): 482--88. \url{https://doi.org/10.1016/j.tree.2004.06.013}.
+Hoffmann, Ary A., Carla M. Sgr`o, and Andrew R. Weeks. {``Chromosomal Inversion Polymorphisms and Adaptation.''} \emph{Trends in Ecology \& Evolution} 19, no. 9 (September 1, 2004): 482--88. \url{https://doi.org/10.1016/j.tree.2004.06.013}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-IndexPubRelease102}{}}%
-{``Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple\_alignments/50\_fish.epo/.''} n.d. Accessed January 25, 2022. \url{https://ftp.ensembl.org/pub/release-102/emf/ensembl-compara/multiple_alignments/50_fish.epo/}.
+{``Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple\_alignments/50\_fish.epo/.''} Accessed January 25, 2022. \url{https://ftp.ensembl.org/pub/release-102/emf/ensembl-compara/multiple_alignments/50_fish.epo/}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-IndexVol1Ftp}{}}%
-{``Index of /Vol1/Ftp/Data\_collections/{1000g}\_2504\_high\_coverage/Working/20201028\_3202\_phased/.''} n.d. Accessed March 24, 2022. \url{http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20201028_3202_phased/}.
+{``Index of /Vol1/Ftp/Data\_collections/{1000g}\_2504\_high\_coverage/Working/20201028\_3202\_phased/.''} Accessed March 24, 2022. \url{http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20201028_3202_phased/}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-johnsonSegregationPerformanceRecombinant1999}{}}%
-Johnson, William C., and Paul Gepts. 1999. {``Segregation for Performance in Recombinant Inbred Populations Resulting from Inter-Gene Pool Crosses of Common Bean ( {Phaseolus} Vulgaris {L}.).''} \emph{Euphytica} 106 (1): 45--56. \url{https://doi.org/10.1023/A:1003541201923}.
+Johnson, William C., and Paul Gepts. {``Segregation for Performance in Recombinant Inbred Populations Resulting from Inter-Gene Pool Crosses of Common Bean ( {Phaseolus} Vulgaris {L}.).''} \emph{Euphytica} 106, no. 1 (March 1, 1999): 45--56. \url{https://doi.org/10.1023/A:1003541201923}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-katsumuraMedakaPopulationGenome2019}{}}%
-Katsumura, Takafumi, Shoji Oda, Hiroshi Mitani, and Hiroki Oota. 2019. {``Medaka {Population Genome Structure} and {Demographic History Described} via {Genotyping-by-Sequencing}.''} \emph{G3 Genes\textbar Genomes\textbar Genetics} 9 (1): 217--28. \url{https://doi.org/10.1534/g3.118.200779}.
+Katsumura, Takafumi, Shoji Oda, Hiroshi Mitani, and Hiroki Oota. {``Medaka {Population Genome Structure} and {Demographic History Described} via {Genotyping-by-Sequencing}.''} \emph{G3 Genes\textbar Genomes\textbar Genetics} 9, no. 1 (January 1, 2019): 217--28. \url{https://doi.org/10.1534/g3.118.200779}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-kerminenGeographicVariationBias2019}{}}%
-Kerminen, Sini, Alicia R. Martin, Jukka Koskela, Sanni E. Ruotsalainen, Aki S. Havulinna, Ida Surakka, Aarno Palotie, et al. 2019. {``Geographic {Variation} and {Bias} in the {Polygenic Scores} of {Complex Diseases} and {Traits} in {Finland}.''} \emph{The American Journal of Human Genetics} 104 (6): 1169--81. \url{https://doi.org/10.1016/j.ajhg.2019.05.001}.
+Kerminen, Sini, Alicia R. Martin, Jukka Koskela, Sanni E. Ruotsalainen, Aki S. Havulinna, Ida Surakka, Aarno Palotie, et al. {``Geographic {Variation} and {Bias} in the {Polygenic Scores} of {Complex Diseases} and {Traits} in {Finland}.''} \emph{The American Journal of Human Genetics} 104, no. 6 (June 6, 2019): 1169--81. \url{https://doi.org/10.1016/j.ajhg.2019.05.001}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-kheraGenomewidePolygenicScores2018}{}}%
-Khera, Amit V., Mark Chaffin, Krishna G. Aragam, Mary E. Haas, Carolina Roselli, Seung Hoan Choi, Pradeep Natarajan, et al. 2018. {``Genome-Wide Polygenic Scores for Common Diseases Identify Individuals with Risk Equivalent to Monogenic Mutations.''} \emph{Nature Genetics} 50 (9, 9): 1219--24. \url{https://doi.org/10.1038/s41588-018-0183-z}.
+Khera, Amit V., Mark Chaffin, Krishna G. Aragam, Mary E. Haas, Carolina Roselli, Seung Hoan Choi, Pradeep Natarajan, et al. {``Genome-Wide Polygenic Scores for Common Diseases Identify Individuals with Risk Equivalent to Monogenic Mutations.''} \emph{Nature Genetics} 50, no. 9, 9 (September 2018): 1219--24. \url{https://doi.org/10.1038/s41588-018-0183-z}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-kulloIncorporatingGeneticRisk2016}{}}%
-Kullo, Iftikhar J., Hayan Jouni, Erin E. Austin, Sherry-Ann Brown, Teresa M. Kruisselbrink, Iyad N. Isseh, Raad A. Haddad, et al. 2016. {``Incorporating a {Genetic Risk Score Into Coronary Heart Disease Risk Estimates}.''} \emph{Circulation} 133 (12): 1181--88. \url{https://doi.org/10.1161/CIRCULATIONAHA.115.020109}.
+Kullo, Iftikhar J., Hayan Jouni, Erin E. Austin, Sherry-Ann Brown, Teresa M. Kruisselbrink, Iyad N. Isseh, Raad A. Haddad, et al. {``Incorporating a {Genetic Risk Score Into Coronary Heart Disease Risk Estimates}.''} \emph{Circulation} 133, no. 12 (March 22, 2016): 1181--88. \url{https://doi.org/10.1161/CIRCULATIONAHA.115.020109}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-legerGenomicVariationsEpigenomic2022}{}}%
-Leger, Adrien, Ian Brettell, Jack Monahan, Carl Barton, Nadeshda Wolf, Natalja Kusminski, Cathrin Herder, et al. 2022. {``Genomic Variations and Epigenomic Landscape of the {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel.''} \emph{Genome Biology} 23 (1): 58. \url{https://doi.org/10.1186/s13059-022-02602-4}.
+Leger, Adrien, Ian Brettell, Jack Monahan, Carl Barton, Nadeshda Wolf, Natalja Kusminski, Cathrin Herder, et al. {``Genomic Variations and Epigenomic Landscape of the {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel.''} \emph{Genome Biology} 23, no. 1 (February 21, 2022): 58. \url{https://doi.org/10.1186/s13059-022-02602-4}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-lekAnalysisProteincodingGenetic2016}{}}%
-Lek, Monkol, Konrad J. Karczewski, Eric V. Minikel, Kaitlin E. Samocha, Eric Banks, Timothy Fennell, Anne H. O'NADonnell-Luria, et al. 2016. {``Analysis of Protein-Coding Genetic Variation in 60,706 Humans.''} \emph{Nature} 536 (7616, 7616): 285--91. \url{https://doi.org/10.1038/nature19057}.
+Lek, Monkol, Konrad J. Karczewski, Eric V. Minikel, Kaitlin E. Samocha, Eric Banks, Timothy Fennell, Anne H. O'NADonnell-Luria, et al. {``Analysis of Protein-Coding Genetic Variation in 60,706 Humans.''} \emph{Nature} 536, no. 7616, 7616 (August 2016): 285--91. \url{https://doi.org/10.1038/nature19057}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-limamiGeneticPhysiologicalAnalysis2002}{}}%
-Limami, Anis M., Clothilde Rouillon, Gaëlle Glevarec, Andr'e Gallais, and Bertrand Hirel. 2002. {``Genetic and {Physiological Analysis} of {Germination Efficiency} in {Maize} in {Relation} to {Nitrogen Metabolism Reveals} the {Importance} of {Cytosolic Glutamine Synthetase}.''} \emph{Plant Physiology} 130 (4): 1860--70. \url{https://doi.org/10.1104/pp.009647}.
+Limami, Anis M., Clothilde Rouillon, Gaëlle Glevarec, Andr'e Gallais, and Bertrand Hirel. {``Genetic and {Physiological Analysis} of {Germination Efficiency} in {Maize} in {Relation} to {Nitrogen Metabolism Reveals} the {Importance} of {Cytosolic Glutamine Synthetase}.''} \emph{Plant Physiology} 130, no. 4 (December 1, 2002): 1860--70. \url{https://doi.org/10.1104/pp.009647}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-maasBreastCancerRisk2016}{}}%
-Maas, Paige, Myrto Barrdahl, Amit D. Joshi, Paul L. Auer, Mia M. Gaudet, Roger L. Milne, Fredrick R. Schumacher, et al. 2016. {``Breast {Cancer Risk From Modifiable} and {Nonmodifiable Risk Factors Among White Women} in the {United States}.''} \emph{JAMA Oncology} 2 (10): 1295--1302. \url{https://doi.org/10.1001/jamaoncol.2016.1025}.
+Maas, Paige, Myrto Barrdahl, Amit D. Joshi, Paul L. Auer, Mia M. Gaudet, Roger L. Milne, Fredrick R. Schumacher, et al. {``Breast {Cancer Risk From Modifiable} and {Nonmodifiable Risk Factors Among White Women} in the {United States}.''} \emph{JAMA Oncology} 2, no. 10 (October 1, 2016): 1295--1302. \url{https://doi.org/10.1001/jamaoncol.2016.1025}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-macarthurNewNHGRIEBICatalog2017}{}}%
-MacArthur, Jacqueline, Emily Bowler, Maria Cerezo, Laurent Gil, Peggy Hall, Emma Hastings, Heather Junkins, et al. 2017. {``The New {NHGRI-EBI Catalog} of Published Genome-Wide Association Studies ({GWAS Catalog}).''} \emph{Nucleic Acids Research} 45 (D1): D896--901. \url{https://doi.org/10.1093/nar/gkw1133}.
+MacArthur, Jacqueline, Emily Bowler, Maria Cerezo, Laurent Gil, Peggy Hall, Emma Hastings, Heather Junkins, et al. {``The New {NHGRI-EBI Catalog} of Published Genome-Wide Association Studies ({GWAS Catalog}).''} \emph{Nucleic Acids Research} 45, no. D1 (January 4, 2017): D896--901. \url{https://doi.org/10.1093/nar/gkw1133}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mackayChartingGenotypePhenotype2018}{}}%
-Mackay, Trudy F. C., and Wen Huang. 2018. {``Charting the Genotype--Phenotype Map: Lessons from the {Drosophila} Melanogaster {Genetic Reference Panel}.''} \emph{WIREs Developmental Biology} 7 (1): e289. \url{https://doi.org/10.1002/wdev.289}.
+Mackay, Trudy F. C., and Wen Huang. {``Charting the Genotype--Phenotype Map: Lessons from the {Drosophila} Melanogaster {Genetic Reference Panel}.''} \emph{WIREs Developmental Biology} 7, no. 1 (2018): e289. \url{https://doi.org/10.1002/wdev.289}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-magnoGwasrapiddPackageQuery2020}{}}%
-Magno, Ramiro, and Ana-Teresa Maia. 2020. {``Gwasrapidd: An {R} Package to Query, Download and Wrangle {GWAS} Catalog Data.''} \emph{Bioinformatics} 36 (2): 649--50. \url{https://doi.org/10.1093/bioinformatics/btz605}.
+Magno, Ramiro, and Ana-Teresa Maia. {``Gwasrapidd: An {R} Package to Query, Download and Wrangle {GWAS} Catalog Data.''} \emph{Bioinformatics} 36, no. 2 (January 15, 2020): 649--50. \url{https://doi.org/10.1093/bioinformatics/btz605}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-martinHumanDemographicHistory2017}{}}%
-Martin, Alicia R., Christopher R. Gignoux, Raymond K. Walters, Genevieve L. Wojcik, Benjamin M. Neale, Simon Gravel, Mark J. Daly, Carlos D. Bustamante, and Eimear E. Kenny. 2017. {``Human {Demographic History Impacts Genetic Risk Prediction} Across {Diverse Populations}.''} \emph{The American Journal of Human Genetics} 100 (4): 635--49. \url{https://doi.org/10.1016/j.ajhg.2017.03.004}.
+Martin, Alicia R., Christopher R. Gignoux, Raymond K. Walters, Genevieve L. Wojcik, Benjamin M. Neale, Simon Gravel, Mark J. Daly, Carlos D. Bustamante, and Eimear E. Kenny. {``Human {Demographic History Impacts Genetic Risk Prediction} Across {Diverse Populations}.''} \emph{The American Journal of Human Genetics} 100, no. 4 (April 6, 2017): 635--49. \url{https://doi.org/10.1016/j.ajhg.2017.03.004}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-martinClinicalUseCurrent2019}{}}%
-Martin, Alicia R., Masahiro Kanai, Yoichiro Kamatani, Yukinori Okada, Benjamin M. Neale, and Mark J. Daly. 2019. {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''} \emph{Nature Genetics} 51 (4, 4): 584--91. \url{https://doi.org/10.1038/s41588-019-0379-x}.
+Martin, Alicia R., Masahiro Kanai, Yoichiro Kamatani, Yukinori Okada, Benjamin M. Neale, and Mark J. Daly. {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''} \emph{Nature Genetics} 51, no. 4, 4 (April 2019): 584--91. \url{https://doi.org/10.1038/s41588-019-0379-x}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-martinSimonhmartinGenomicsGeneral2022}{}}%
-martin, Simon. (2016) 2022. \emph{Simonhmartin/Genomics\_general}. \url{https://github.com/simonhmartin/genomics_general}.
+martin, Simon. \emph{Simonhmartin/Genomics\_general}, 2022. \url{https://github.com/simonhmartin/genomics_general}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-martinEvaluatingUseABBA2015}{}}%
-Martin, Simon H., John W. Davey, and Chris D. Jiggins. 2015. {``Evaluating the {Use} of {ABBA}--{BABA Statistics} to {Locate Introgressed Loci}.''} \emph{Molecular Biology and Evolution} 32 (1): 244--57. \url{https://doi.org/10.1093/molbev/msu269}.
+Martin, Simon H., John W. Davey, and Chris D. Jiggins. {``Evaluating the {Use} of {ABBA}--{BABA Statistics} to {Locate Introgressed Loci}.''} \emph{Molecular Biology and Evolution} 32, no. 1 (January 1, 2015): 244--57. \url{https://doi.org/10.1093/molbev/msu269}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mccarthyReferencePanel642016}{}}%
-McCarthy, Shane, Sayantan Das, Warren Kretzschmar, Olivier Delaneau, Andrew R Wood, Alexander Teumer, Hyun Min Kang, et al. 2016. {``A Reference Panel of 64,976 Haplotypes for Genotype Imputation.''} \emph{Nature Genetics} 48 (10, 10): 1279--83. \url{https://doi.org/10.1038/ng.3643}.
+McCarthy, Shane, Sayantan Das, Warren Kretzschmar, Olivier Delaneau, Andrew R Wood, Alexander Teumer, Hyun Min Kang, et al. {``A Reference Panel of 64,976 Haplotypes for Genotype Imputation.''} \emph{Nature Genetics} 48, no. 10, 10 (October 2016): 1279--83. \url{https://doi.org/10.1038/ng.3643}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mckennaGenomeAnalysisToolkit2010}{}}%
-McKenna, Aaron, Matthew Hanna, Eric Banks, Andrey Sivachenko, Kristian Cibulskis, Andrew Kernytsky, Kiran Garimella, et al. 2010. {``The {Genome Analysis Toolkit}: {A MapReduce} Framework for Analyzing Next-Generation {DNA} Sequencing Data.''} \emph{Genome Research} 20 (9): 1297--1303. \url{https://doi.org/10.1101/gr.107524.110}.
+McKenna, Aaron, Matthew Hanna, Eric Banks, Andrey Sivachenko, Kristian Cibulskis, Andrew Kernytsky, Kiran Garimella, et al. {``The {Genome Analysis Toolkit}: {A MapReduce} Framework for Analyzing Next-Generation {DNA} Sequencing Data.''} \emph{Genome Research} 20, no. 9 (January 9, 2010): 1297--1303. \url{https://doi.org/10.1101/gr.107524.110}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mukherjeeGeneIntimateHistory2016}{}}%
-Mukherjee, Siddhartha. 2016. \emph{The {Gene}: {An Intimate History}}. {Simon and Schuster}. \url{https://books.google.com?id=XvAsDAAAQBAJ}.
+Mukherjee, Siddhartha. \emph{The {Gene}: {An Intimate History}}. {Simon and Schuster}, 2016. \url{https://books.google.com?id=XvAsDAAAQBAJ}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-naruseDetailedLinkageMap2000}{}}%
-Naruse, Kiyoshi, Shoji Fukamachi, Hiroshi Mitani, Mariko Kondo, Tomoko Matsuoka, Shu Kondo, Nana Hanamura, et al. 2000. {``A {Detailed Linkage Map} of {Medaka}, {Oryzias} Latipes: {Comparative Genomics} and {Genome Evolution}.''} \emph{Genetics} 154 (4): 1773--84. \url{https://www.genetics.org/content/154/4/1773}.
+Naruse, Kiyoshi, Shoji Fukamachi, Hiroshi Mitani, Mariko Kondo, Tomoko Matsuoka, Shu Kondo, Nana Hanamura, et al. {``A {Detailed Linkage Map} of {Medaka}, {Oryzias} Latipes: {Comparative Genomics} and {Genome Evolution}.''} \emph{Genetics} 154, no. 4 (April 1, 2000): 1773--84. \url{https://www.genetics.org/content/154/4/1773}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-natarajanPolygenicRiskScore2017}{}}%
-Natarajan, Pradeep, Robin Young, Nathan O. Stitziel, Sandosh Padmanabhan, Usman Baber, Roxana Mehran, Samantha Sartori, et al. 2017. {``Polygenic {Risk Score Identifies Subgroup With Higher Burden} of {Atherosclerosis} and {Greater Relative Benefit From Statin Therapy} in the {Primary Prevention Setting}.''} \emph{Circulation} 135 (22): 2091--101. \url{https://doi.org/10.1161/CIRCULATIONAHA.116.024436}.
+Natarajan, Pradeep, Robin Young, Nathan O. Stitziel, Sandosh Padmanabhan, Usman Baber, Roxana Mehran, Samantha Sartori, et al. {``Polygenic {Risk Score Identifies Subgroup With Higher Burden} of {Atherosclerosis} and {Greater Relative Benefit From Statin Therapy} in the {Primary Prevention Setting}.''} \emph{Circulation} 135, no. 22 (May 30, 2017): 2091--101. \url{https://doi.org/10.1161/CIRCULATIONAHA.116.024436}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-panagiotouWhatShouldGenomewide2012}{}}%
-Panagiotou, Orestis A., John P. A. Ioannidis, and Genome-Wide Significance Project. 2012. {``What Should the Genome-Wide Significance Threshold Be? {Empirical} Replication of Borderline Genetic Associations.''} \emph{International Journal of Epidemiology} 41 (1): 273--86. \url{https://doi.org/10.1093/ije/dyr178}.
+Panagiotou, Orestis A., John P. A. Ioannidis, and Genome-Wide Significance Project. {``What Should the Genome-Wide Significance Threshold Be? {Empirical} Replication of Borderline Genetic Associations.''} \emph{International Journal of Epidemiology} 41, no. 1 (February 2012): 273--86. \url{https://doi.org/10.1093/ije/dyr178}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-paquettePolygenicRiskScore2017}{}}%
-Paquette, Martine, Michael Chong, S'ebastien Th'eriault, Robert Dufour, Guillaume Par'e, and Alexis Baass. 2017. {``Polygenic Risk Score Predicts Prevalence of Cardiovascular Disease in Patients with Familial Hypercholesterolemia.''} \emph{Journal of Clinical Lipidology} 11 (3): 725--732.e5. \url{https://doi.org/10.1016/j.jacl.2017.03.019}.
+Paquette, Martine, Michael Chong, S'ebastien Th'eriault, Robert Dufour, Guillaume Par'e, and Alexis Baass. {``Polygenic Risk Score Predicts Prevalence of Cardiovascular Disease in Patients with Familial Hypercholesterolemia.''} \emph{Journal of Clinical Lipidology} 11, no. 3 (May 1, 2017): 725--732.e5. \url{https://doi.org/10.1016/j.jacl.2017.03.019}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-paradisPegasPackagePopulation2010}{}}%
-Paradis, Emmanuel. 2010. {``Pegas: An {R} Package for Population Genetics with an Integrated--Modular Approach.''} \emph{Bioinformatics} 26 (3): 419--20. \url{https://doi.org/10.1093/bioinformatics/btp696}.
+Paradis, Emmanuel. {``Pegas: An {R} Package for Population Genetics with an Integrated--Modular Approach.''} \emph{Bioinformatics} 26, no. 3 (February 1, 2010): 419--20. \url{https://doi.org/10.1093/bioinformatics/btp696}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-paradisApeEnvironmentModern2019}{}}%
-Paradis, Emmanuel, and Klaus Schliep. 2019. {``Ape 5.0: An Environment for Modern Phylogenetics and Evolutionary Analyses in {R}.''} \emph{Bioinformatics} 35 (3): 526--28. \url{https://doi.org/10.1093/bioinformatics/bty633}.
+Paradis, Emmanuel, and Klaus Schliep. {``Ape 5.0: An Environment for Modern Phylogenetics and Evolutionary Analyses in {R}.''} \emph{Bioinformatics} 35, no. 3 (February 1, 2019): 526--28. \url{https://doi.org/10.1093/bioinformatics/bty633}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-peirceNewSetBXD2004}{}}%
-Peirce, Jeremy L., Lu Lu, Jing Gu, Lee M. Silver, and Robert W. Williams. 2004. {``A New Set of {BXD} Recombinant Inbred Lines from Advanced Intercross Populations in Mice.''} \emph{BMC Genetics} 5 (1): 7. \url{https://doi.org/10.1186/1471-2156-5-7}.
+Peirce, Jeremy L., Lu Lu, Jing Gu, Lee M. Silver, and Robert W. Williams. {``A New Set of {BXD} Recombinant Inbred Lines from Advanced Intercross Populations in Mice.''} \emph{BMC Genetics} 5, no. 1 (April 29, 2004): 7. \url{https://doi.org/10.1186/1471-2156-5-7}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-plominNatureNurtureGenetic2005}{}}%
-Plomin, Robert, and Kathryn Asbury. 2005. {``Nature and {Nurture}: {Genetic} and {Environmental Influences} on {Behavior}.''} \emph{The ANNALS of the American Academy of Political and Social Science} 600 (1): 86--98. \url{https://doi.org/10.1177/0002716205277184}.
+Plomin, Robert, and Kathryn Asbury. {``Nature and {Nurture}: {Genetic} and {Environmental Influences} on {Behavior}.''} \emph{The ANNALS of the American Academy of Political and Social Science} 600, no. 1 (July 1, 2005): 86--98. \url{https://doi.org/10.1177/0002716205277184}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-popejoyGenomicsFailingDiversity2016}{}}%
-Popejoy, Alice B., and Stephanie M. Fullerton. 2016. {``Genomics Is Failing on Diversity.''} \emph{Nature} 538 (7624, 7624): 161--64. \url{https://doi.org/10.1038/538161a}.
+Popejoy, Alice B., and Stephanie M. Fullerton. {``Genomics Is Failing on Diversity.''} \emph{Nature} 538, no. 7624, 7624 (October 2016): 161--64. \url{https://doi.org/10.1038/538161a}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-porcuGenotypeImputationGenomeWide2013}{}}%
-Porcu, Eleonora, Serena Sanna, Christian Fuchsberger, and Lars G. Fritsche. 2013. {``Genotype {Imputation} in {Genome-Wide Association Studies}.''} \emph{Current Protocols in Human Genetics} 78 (1): 1.25.1--14. \url{https://doi.org/10.1002/0471142905.hg0125s78}.
+Porcu, Eleonora, Serena Sanna, Christian Fuchsberger, and Lars G. Fritsche. {``Genotype {Imputation} in {Genome-Wide Association Studies}.''} \emph{Current Protocols in Human Genetics} 78, no. 1 (2013): 1.25.1--14. \url{https://doi.org/10.1002/0471142905.hg0125s78}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-pszczolaReliabilityDirectGenomic2012}{}}%
-Pszczola, M., T. Strabel, H. A. Mulder, and M. P. L. Calus. 2012. {``Reliability of Direct Genomic Values for Animals with Different Relationships Within and to the Reference Population.''} \emph{Journal of Dairy Science} 95 (1): 389--400. \url{https://doi.org/10.3168/jds.2011-4338}.
+Pszczola, M., T. Strabel, H. A. Mulder, and M. P. L. Calus. {``Reliability of Direct Genomic Values for Animals with Different Relationships Within and to the Reference Population.''} \emph{Journal of Dairy Science} 95, no. 1 (January 1, 2012): 389--400. \url{https://doi.org/10.3168/jds.2011-4338}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-purcellPLINK}{}}%
-Purcell, Shaun M, and Christopher C Chang. n.d. \emph{{PLINK} 1.9}. \href{https://www.cog-genomics.org/plink/1.9/}{www.cog-genomics.org/plink/1.9/}.
+Purcell, Shaun M, and Christopher C Chang. \emph{{PLINK} 1.9}, n.d. \href{https://www.cog-genomics.org/plink/1.9/}{www.cog-genomics.org/plink/1.9/}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-saliba-colombaniEfficiencyRFLPRAPD2000}{}}%
-Saliba-Colombani, Vera, Mathilde Causse, Laurent Gervais, and Jacqueline Philouze. 2000. {``Efficiency of {RFLP}, {RAPD}, and {AFLP} Markers for the Construction of an Intraspecific Map of the Tomato Genome.''} \emph{Genome} 43 (1): 29--40. \url{https://doi.org/10.1139/g99-096}.
+Saliba-Colombani, Vera, Mathilde Causse, Laurent Gervais, and Jacqueline Philouze. {``Efficiency of {RFLP}, {RAPD}, and {AFLP} Markers for the Construction of an Intraspecific Map of the Tomato Genome.''} \emph{Genome} 43, no. 1 (February 2000): 29--40. \url{https://doi.org/10.1139/g99-096}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-saulHighDiversityMousePopulations2019}{}}%
-Saul, Michael C., Vivek M. Philip, Laura G. Reinholdt, and Elissa J. Chesler. 2019. {``High-{Diversity Mouse Populations} for {Complex Traits}.''} \emph{Trends in Genetics} 35 (7): 501--14. \url{https://doi.org/10.1016/j.tig.2019.04.003}.
+Saul, Michael C., Vivek M. Philip, Laura G. Reinholdt, and Elissa J. Chesler. {``High-{Diversity Mouse Populations} for {Complex Traits}.''} \emph{Trends in Genetics} 35, no. 7 (July 1, 2019): 501--14. \url{https://doi.org/10.1016/j.tig.2019.04.003}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-schumacherAssociationAnalysesMore2018}{}}%
-Schumacher, Fredrick R., Ali Amin Al Olama, Sonja I. Berndt, Sara Benlloch, Mahbubl Ahmed, Edward J. Saunders, Tokhir Dadaev, et al. 2018. {``Association Analyses of More Than 140,000 Men Identify 63 New Prostate Cancer Susceptibility Loci.''} \emph{Nature Genetics} 50 (7, 7): 928--36. \url{https://doi.org/10.1038/s41588-018-0142-8}.
+Schumacher, Fredrick R., Ali Amin Al Olama, Sonja I. Berndt, Sara Benlloch, Mahbubl Ahmed, Edward J. Saunders, Tokhir Dadaev, et al. {``Association Analyses of More Than 140,000 Men Identify 63 New Prostate Cancer Susceptibility Loci.''} \emph{Nature Genetics} 50, no. 7, 7 (July 2018): 928--36. \url{https://doi.org/10.1038/s41588-018-0142-8}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-scutariUsingGeneticDistance2016}{}}%
-Scutari, Marco, Ian Mackay, and David Balding. 2016. {``Using {Genetic Distance} to {Infer} the {Accuracy} of {Genomic Prediction}.''} \emph{PLOS Genetics} 12 (9): e1006288. \url{https://doi.org/10.1371/journal.pgen.1006288}.
+Scutari, Marco, Ian Mackay, and David Balding. {``Using {Genetic Distance} to {Infer} the {Accuracy} of {Genomic Prediction}.''} \emph{PLOS Genetics} 12, no. 9 (September 2, 2016): e1006288. \url{https://doi.org/10.1371/journal.pgen.1006288}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-shamPowerLinkageAssociation2000}{}}%
-Sham, P. C., S. S. Cherny, S. Purcell, and J. K. Hewitt. 2000. {``Power of {Linkage} Versus {Association Analysis} of {Quantitative Traits}, by {Use} of {Variance-Components Models}, for {Sibship Data}.''} \emph{The American Journal of Human Genetics} 66 (5): 1616--30. \url{https://doi.org/10.1086/302891}.
+Sham, P. C., S. S. Cherny, S. Purcell, and J. K. Hewitt. {``Power of {Linkage} Versus {Association Analysis} of {Quantitative Traits}, by {Use} of {Variance-Components Models}, for {Sibship Data}.''} \emph{The American Journal of Human Genetics} 66, no. 5 (May 1, 2000): 1616--30. \url{https://doi.org/10.1086/302891}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-sharpDevelopmentStandardizationImproved2019}{}}%
-Sharp, Seth A., Stephen S. Rich, Andrew R. Wood, Samuel E. Jones, Robin N. Beaumont, James W. Harrison, Darius A. Schneider, et al. 2019. {``Development and {Standardization} of an {Improved Type} 1 {Diabetes Genetic Risk Score} for {Use} in {Newborn Screening} and {Incident Diagnosis}.''} \emph{Diabetes Care} 42 (2): 200--207. \url{https://doi.org/10.2337/dc18-1785}.
+Sharp, Seth A., Stephen S. Rich, Andrew R. Wood, Samuel E. Jones, Robin N. Beaumont, James W. Harrison, Darius A. Schneider, et al. {``Development and {Standardization} of an {Improved Type} 1 {Diabetes Genetic Risk Score} for {Use} in {Newborn Screening} and {Incident Diagnosis}.''} \emph{Diabetes Care} 42, no. 2 (January 11, 2019): 200--207. \url{https://doi.org/10.2337/dc18-1785}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-smigielskiDbSNPDatabaseSingle2000}{}}%
-Smigielski, Elizabeth M., Karl Sirotkin, Minghong Ward, and Stephen T. Sherry. 2000. {``{dbSNP}: A Database of Single Nucleotide Polymorphisms.''} \emph{Nucleic Acids Research} 28 (1): 352--55. \url{https://doi.org/10.1093/nar/28.1.352}.
+Smigielski, Elizabeth M., Karl Sirotkin, Minghong Ward, and Stephen T. Sherry. {``{dbSNP}: A Database of Single Nucleotide Polymorphisms.''} \emph{Nucleic Acids Research} 28, no. 1 (January 1, 2000): 352--55. \url{https://doi.org/10.1093/nar/28.1.352}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-spivakovGenomicPhenotypicCharacterization2014}{}}%
-Spivakov, Mikhail, Thomas O Auer, Ravindra Peravali, Ian Dunham, Dirk Dolle, Asao Fujiyama, Atsushi Toyoda, et al. 2014. {``Genomic and {Phenotypic Characterization} of a {Wild Medaka Population}: {Towards} the {Establishment} of an {Isogenic Population Genetic Resource} in {Fish}.''} \emph{G3 Genes\textbar Genomes\textbar Genetics} 4 (3): 433--45. \url{https://doi.org/10.1534/g3.113.008722}.
+Spivakov, Mikhail, Thomas O Auer, Ravindra Peravali, Ian Dunham, Dirk Dolle, Asao Fujiyama, Atsushi Toyoda, et al. {``Genomic and {Phenotypic Characterization} of a {Wild Medaka Population}: {Towards} the {Establishment} of an {Isogenic Population Genetic Resource} in {Fish}.''} \emph{G3 Genes\textbar Genomes\textbar Genetics} 4, no. 3 (March 1, 2014): 433--45. \url{https://doi.org/10.1534/g3.113.008722}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-svensonHighResolutionGeneticMapping2012}{}}%
-Svenson, Karen L, Daniel M Gatti, William Valdar, Catherine E Welsh, Riyan Cheng, Elissa J Chesler, Abraham A Palmer, Leonard McMillan, and Gary A Churchill. 2012. {``High-{Resolution Genetic Mapping Using} the {Mouse Diversity Outbred Population}.''} \emph{Genetics} 190 (2): 437--47. \url{https://doi.org/10.1534/genetics.111.132597}.
+Svenson, Karen L, Daniel M Gatti, William Valdar, Catherine E Welsh, Riyan Cheng, Elissa J Chesler, Abraham A Palmer, Leonard McMillan, and Gary A Churchill. {``High-{Resolution Genetic Mapping Using} the {Mouse Diversity Outbred Population}.''} \emph{Genetics} 190, no. 2 (February 1, 2012): 437--47. \url{https://doi.org/10.1534/genetics.111.132597}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-11TrillionGlobal2019}{}}%
-{``The \$11.9 {Trillion Global Healthcare Market}: {Key Opportunities} \& {Strategies} (2014-2022) - {ResearchAndMarkets}.com.''} 2019. June 25, 2019. \url{https://www.businesswire.com/news/home/20190625005862/en/The-11.9-Trillion-Global-Healthcare-Market-Key-Opportunities-Strategies-2014-2022---ResearchAndMarkets.com}.
+{``The \$11.9 {Trillion Global Healthcare Market}: {Key Opportunities} \& {Strategies} (2014-2022) - {ResearchAndMarkets}.com,''} June 25, 2019. \url{https://www.businesswire.com/news/home/20190625005862/en/The-11.9-Trillion-Global-Healthcare-Market-Key-Opportunities-Strategies-2014-2022---ResearchAndMarkets.com}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-threadgillCollaborativeCrossRecombinant2011}{}}%
-Threadgill, David W., Darla R. Miller, Gary A. Churchill, and Fernando Pardo-Manuel de Villena. 2011. {``The {Collaborative Cross}: {A Recombinant Inbred Mouse Population} for the {Systems Genetic Era}.''} \emph{ILAR Journal} 52 (1): 24--31. \url{https://doi.org/10.1093/ilar.52.1.24}.
+Threadgill, David W., Darla R. Miller, Gary A. Churchill, and Fernando Pardo-Manuel de Villena. {``The {Collaborative Cross}: {A Recombinant Inbred Mouse Population} for the {Systems Genetic Era}.''} \emph{ILAR Journal} 52, no. 1 (January 1, 2011): 24--31. \url{https://doi.org/10.1093/ilar.52.1.24}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-tikkanenGeneticRiskPrediction2013}{}}%
-Tikkanen, Emmi, Aki S. Havulinna, Aarno Palotie, Veikko Salomaa, and Samuli Ripatti. 2013. {``Genetic {Risk Prediction} and a 2-{Stage Risk Screening Strategy} for {Coronary Heart Disease}.''} \emph{Arteriosclerosis, Thrombosis, and Vascular Biology} 33 (9): 2261--66. \url{https://doi.org/10.1161/ATVBAHA.112.301120}.
+Tikkanen, Emmi, Aki S. Havulinna, Aarno Palotie, Veikko Salomaa, and Samuli Ripatti. {``Genetic {Risk Prediction} and a 2-{Stage Risk Screening Strategy} for {Coronary Heart Disease}.''} \emph{Arteriosclerosis, Thrombosis, and Vascular Biology} 33, no. 9 (September 2013): 2261--66. \url{https://doi.org/10.1161/ATVBAHA.112.301120}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-vilhjalmsson2015modeling}{}}%
-Vilhjálmsson, Bjarni J, Jian Yang, Hilary K Finucane, Alexander Gusev, Sara Lindström, Stephan Ripke, Giulio Genovese, et al. 2015. {``Modeling Linkage Disequilibrium Increases Accuracy of Polygenic Risk Scores.''} \emph{The American Journal of Human Genetics} 97 (4): 576--92.
+Vilhjálmsson, Bjarni J, Jian Yang, Hilary K Finucane, Alexander Gusev, Sara Lindström, Stephan Ripke, Giulio Genovese, et al. {``Modeling Linkage Disequilibrium Increases Accuracy of Polygenic Risk Scores.''} \emph{The American Journal of Human Genetics} 97, no. 4 (2015): 576--92.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wangTheoreticalEmpiricalQuantification2020}{}}%
-Wang, Ying, Jing Guo, Guiyan Ni, Jian Yang, Peter M. Visscher, and Loic Yengo. 2020. {``Theoretical and Empirical Quantification of the Accuracy of Polygenic Scores in Ancestry Divergent Populations.''} \emph{Nature Communications} 11 (1, 1): 3865. \url{https://doi.org/10.1038/s41467-020-17719-y}.
+Wang, Ying, Jing Guo, Guiyan Ni, Jian Yang, Peter M. Visscher, and Loic Yengo. {``Theoretical and Empirical Quantification of the Accuracy of Polygenic Scores in Ancestry Divergent Populations.''} \emph{Nature Communications} 11, no. 1, 1 (July 31, 2020): 3865. \url{https://doi.org/10.1038/s41467-020-17719-y}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-weirEstimatingFStatisticsAnalysis1984}{}}%
-Weir, B. S., and C. Clark Cockerham. 1984. {``Estimating {F-Statistics} for the {Analysis} of {Population Structure}.''} \emph{Evolution} 38 (6): 1358--70. \url{https://doi.org/10.2307/2408641}.
+Weir, B. S., and C. Clark Cockerham. {``Estimating {F-Statistics} for the {Analysis} of {Population Structure}.''} \emph{Evolution} 38, no. 6 (1984): 1358--70. \url{https://doi.org/10.2307/2408641}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wittbrodtMedakaModelOrganism2002}{}}%
-Wittbrodt, Joachim, Akihiro Shima, and Manfred Schartl. 2002. {``Medaka --- a Model Organism from the Far East.''} \emph{Nature Reviews Genetics} 3 (1, 1): 53--64. \url{https://doi.org/10.1038/nrg704}.
+Wittbrodt, Joachim, Akihiro Shima, and Manfred Schartl. {``Medaka --- a Model Organism from the Far East.''} \emph{Nature Reviews Genetics} 3, no. 1, 1 (January 2002): 53--64. \url{https://doi.org/10.1038/nrg704}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wrayPredictionIndividualGenetic2007}{}}%
-Wray, Naomi R., Michael E. Goddard, and Peter M. Visscher. 2007. {``Prediction of Individual Genetic Risk to Disease from Genome-Wide Association Studies.''} \emph{Genome Research} 17 (10): 1520--28. \url{https://doi.org/10.1101/gr.6665407}.
+Wray, Naomi R., Michael E. Goddard, and Peter M. Visscher. {``Prediction of Individual Genetic Risk to Disease from Genome-Wide Association Studies.''} \emph{Genome Research} 17, no. 10 (January 10, 2007): 1520--28. \url{https://doi.org/10.1101/gr.6665407}.
 
 \end{CSLReferences}
 

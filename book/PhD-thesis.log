@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.14)  14 JUN 2022 17:56
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.14)  15 JUN 2022 09:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -179,84 +179,89 @@ LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 \g__um_primekern_muskip=\muskip17
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex)))
 
-Package fontspec Info: Georgia scale = 0.8952177509579395.
+Package fontspec Info: Libre Baskerville scale = 0.8132042770525879.
 
 
-Package fontspec Info: Georgia scale = 0.8952177509579395.
+Package fontspec Info: Libre Baskerville scale = 0.8132042770525879.
 
 
-Package fontspec Info: Georgia/B scale = 0.8898031445213442.
+Package fontspec Info: Libre Baskerville/B scale = 0.8132042770525879.
 
 
-Package fontspec Info: Georgia/I scale = 0.8748114630467573.
+Package fontspec Info: Libre Baskerville/I scale = 0.8132042770525879.
 
 
-Package fontspec Info: Georgia/BI scale = 0.8696401796792498.
+Package fontspec Info: Libre Baskerville/BI scale = 0.8132042770525879.
 
 
-Package fontspec Info: Font family 'Georgia(0)' created for font 'Georgia'
-(fontspec)             with options
+Package fontspec Info: Font family 'LibreBaskerville(0)' created for font
+(fontspec)             'Libre Baskerville' with options
 (fontspec)             [Scale=MatchLowercase,Ligatures=TeX,Scale=1].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"Georgia/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[1]"Libre
+(fontspec)             Baskerville/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1]"Georgia/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[1]"Libre
+(fontspec)             Baskerville/B/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"Georgia/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->s*[1]"Libre
+(fontspec)             Baskerville/I/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1]"Georgia/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->s*[1]"Libre
+(fontspec)             Baskerville/BI/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-LaTeX Font Info:    Font shape `TU/Georgia(0)/m/n' will be
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 19.
 
-Package fontspec Info: Georgia scale = 0.9999968306388482.
+Package fontspec Info: Libre Baskerville scale = 0.9999971209931421.
 
 
-Package fontspec Info: Georgia scale = 0.9999968306388482.
+Package fontspec Info: Libre Baskerville scale = 0.9999971209931421.
 
 
-Package fontspec Info: Georgia/B scale = 0.9939484817651155.
+Package fontspec Info: Libre Baskerville/B scale = 0.9999971209931421.
 
 
-Package fontspec Info: Georgia/I scale = 0.9772021270994578.
+Package fontspec Info: Libre Baskerville/I scale = 0.9999971209931421.
 
 
-Package fontspec Info: Georgia/BI scale = 0.9714255805862668.
+Package fontspec Info: Libre Baskerville/BI scale = 0.9999971209931421.
 
 
-Package fontspec Info: Font family 'Georgia(1)' created for font 'Georgia'
-(fontspec)             with options [Scale=MatchLowercase].
+Package fontspec Info: Font family 'LibreBaskerville(1)' created for font
+(fontspec)             'Libre Baskerville' with options
+(fontspec)             [Scale=MatchLowercase].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999968306388482]"Georgia/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[0.9999971209931421]"Libre
+(fontspec)             Baskerville/OT:script=latn;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9939484817651155]"Georgia/B/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[0.9999971209931421]"Libre
+(fontspec)             Baskerville/B/OT:script=latn;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[0.9772021270994578]"Georgia/I/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[0.9999971209931421]"Libre
+(fontspec)             Baskerville/I/OT:script=latn;language=dflt;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[0.9714255805862668]"Georgia/BI/OT:script=latn;language=dflt;"
+(fontspec)             <->s*[0.9999971209931421]"Libre
+(fontspec)             Baskerville/BI/OT:script=latn;language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/Georgia(1)/m/n on input line 19.
+(Font)                  OT1/lmr/m/n --> TU/LibreBaskerville(1)/m/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/Georgia(1)/m/it on input line 19.
+(Font)                  OT1/lmr/m/it --> TU/LibreBaskerville(1)/m/it on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/Georgia(1)/b/n on input line 19.
+(Font)                  OT1/lmr/bx/n --> TU/LibreBaskerville(1)/b/n on input line 19.
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -275,7 +280,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 ) (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2022-05-17 v7.00q Hypertext links for LaTeX
+Package: hyperref 2022-06-13 v7.00r Hypertext links for LaTeX
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 ) (/Users/brettell/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
@@ -316,7 +321,7 @@ Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 \Hy@linkcounter=\count287
 \Hy@pagecounter=\count288
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2022-05-17 v7.00q Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2022-06-13 v7.00r Hyperref: PDFDocEncoding definition (HO)
 ) (/Users/brettell/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/Users/brettell/Library/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
@@ -324,7 +329,7 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count289
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2022-05-17 v7.00q Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2022-06-13 v7.00r Hyperref: PDF Unicode definition (HO)
 )
 Package hyperref Info: Option `unicode' set `true' on input line 4020.
 Package hyperref Info: Hyper figures OFF on input line 4139.
@@ -366,7 +371,7 @@ package with kernel methods
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2022-05-17 v7.00q Hyperref driver for XeTeX
+File: hxetex.def 2022-06-13 v7.00r Hyperref driver for XeTeX
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
@@ -522,13 +527,13 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 108.
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
 Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
@@ -539,28 +544,28 @@ Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1.117039166468999]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             <->s*[1.2296954269793]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.117039166468999]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             <->s*[1.2296954269793]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 11.17035pt on input line 108.
+(Font)              scaled to size 12.2969pt on input line 108.
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
-
-
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
+
+
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
 Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
@@ -571,14 +576,14 @@ Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <8.5->s*[1.117039166468999]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[1.117039166468999]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[1.117039166468999]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             <8.5->s*[1.2296954269793]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[1.2296954269793]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[1.2296954269793]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.117039166468999]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             <->s*[1.2296954269793]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 11.17035pt on input line 108.
+(Font)              scaled to size 12.2969pt on input line 108.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `normal' on input line 108.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -588,80 +593,80 @@ LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 108.
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117150870385646.
+Package fontspec Info: latinmodern-math scale = 1.229818396521998.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117150870385646.
+Package fontspec Info: latinmodern-math scale = 1.229818396521998.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117150870385646.
+Package fontspec Info: latinmodern-math scale = 1.229818396521998.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117150870385646.
+Package fontspec Info: latinmodern-math scale = 1.229818396521998.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117150870385646.
+Package fontspec Info: latinmodern-math scale = 1.229818396521998.
 
 
 Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
 (fontspec)             'latinmodern-math.otf' with options
 (fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmodern-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=1.0001,FontAdjustment={\fontdimen
-(fontspec)             8\font =7.56233pt\relax \fontdimen 9\font
-(fontspec)             =4.40112pt\relax \fontdimen 10\font =4.95964pt\relax
-(fontspec)             \fontdimen 11\font =7.66286pt\relax \fontdimen 12\font
-(fontspec)             =3.85378pt\relax \fontdimen 13\font =4.05484pt\relax
-(fontspec)             \fontdimen 14\font =4.05484pt\relax \fontdimen 15\font
-(fontspec)             =3.22823pt\relax \fontdimen 16\font =2.75908pt\relax
-(fontspec)             \fontdimen 17\font =2.75908pt\relax \fontdimen 18\font
-(fontspec)             =2.79259pt\relax \fontdimen 19\font =2.23407pt\relax
-(fontspec)             \fontdimen 22\font =2.79259pt\relax \fontdimen 20\font
+(fontspec)             8\font =8.32501pt\relax \fontdimen 9\font
+(fontspec)             =4.84499pt\relax \fontdimen 10\font =5.45982pt\relax
+(fontspec)             \fontdimen 11\font =8.43568pt\relax \fontdimen 12\font
+(fontspec)             =4.24243pt\relax \fontdimen 13\font =4.46378pt\relax
+(fontspec)             \fontdimen 14\font =4.46378pt\relax \fontdimen 15\font
+(fontspec)             =3.5538pt\relax \fontdimen 16\font =3.03734pt\relax
+(fontspec)             \fontdimen 17\font =3.03734pt\relax \fontdimen 18\font
+(fontspec)             =3.07423pt\relax \fontdimen 19\font =2.45938pt\relax
+(fontspec)             \fontdimen 22\font =3.07423pt\relax \fontdimen 20\font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <8.5->s*[1.117150870385646]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[1.117150870385646]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[1.117150870385646]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             <8.5->s*[1.229818396521998]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[1.229818396521998]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[1.229818396521998]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =7.56233pt\relax \fontdimen 9\font
-(fontspec)             =4.40112pt\relax \fontdimen 10\font =4.95964pt\relax
-(fontspec)             \fontdimen 11\font =7.66286pt\relax \fontdimen 12\font
-(fontspec)             =3.85378pt\relax \fontdimen 13\font =4.05484pt\relax
-(fontspec)             \fontdimen 14\font =4.05484pt\relax \fontdimen 15\font
-(fontspec)             =3.22823pt\relax \fontdimen 16\font =2.75908pt\relax
-(fontspec)             \fontdimen 17\font =2.75908pt\relax \fontdimen 18\font
-(fontspec)             =2.79259pt\relax \fontdimen 19\font =2.23407pt\relax
-(fontspec)             \fontdimen 22\font =2.79259pt\relax \fontdimen 20\font
+(fontspec)             \fontdimen 8\font =8.32501pt\relax \fontdimen 9\font
+(fontspec)             =4.84499pt\relax \fontdimen 10\font =5.45982pt\relax
+(fontspec)             \fontdimen 11\font =8.43568pt\relax \fontdimen 12\font
+(fontspec)             =4.24243pt\relax \fontdimen 13\font =4.46378pt\relax
+(fontspec)             \fontdimen 14\font =4.46378pt\relax \fontdimen 15\font
+(fontspec)             =3.5538pt\relax \fontdimen 16\font =3.03734pt\relax
+(fontspec)             \fontdimen 17\font =3.03734pt\relax \fontdimen 18\font
+(fontspec)             =3.07423pt\relax \fontdimen 19\font =2.45938pt\relax
+(fontspec)             \fontdimen 22\font =3.07423pt\relax \fontdimen 20\font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.117150870385646]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             <->s*[1.229818396521998]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =7.56233pt\relax \fontdimen 9\font
-(fontspec)             =4.40112pt\relax \fontdimen 10\font =4.95964pt\relax
-(fontspec)             \fontdimen 11\font =7.66286pt\relax \fontdimen 12\font
-(fontspec)             =3.85378pt\relax \fontdimen 13\font =4.05484pt\relax
-(fontspec)             \fontdimen 14\font =4.05484pt\relax \fontdimen 15\font
-(fontspec)             =3.22823pt\relax \fontdimen 16\font =2.75908pt\relax
-(fontspec)             \fontdimen 17\font =2.75908pt\relax \fontdimen 18\font
-(fontspec)             =2.79259pt\relax \fontdimen 19\font =2.23407pt\relax
-(fontspec)             \fontdimen 22\font =2.79259pt\relax \fontdimen 20\font
+(fontspec)             \fontdimen 8\font =8.32501pt\relax \fontdimen 9\font
+(fontspec)             =4.84499pt\relax \fontdimen 10\font =5.45982pt\relax
+(fontspec)             \fontdimen 11\font =8.43568pt\relax \fontdimen 12\font
+(fontspec)             =4.24243pt\relax \fontdimen 13\font =4.46378pt\relax
+(fontspec)             \fontdimen 14\font =4.46378pt\relax \fontdimen 15\font
+(fontspec)             =3.5538pt\relax \fontdimen 16\font =3.03734pt\relax
+(fontspec)             \fontdimen 17\font =3.03734pt\relax \fontdimen 18\font
+(fontspec)             =3.07423pt\relax \fontdimen 19\font =2.45938pt\relax
+(fontspec)             \fontdimen 22\font =3.07423pt\relax \fontdimen 20\font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
@@ -673,63 +678,63 @@ LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 108.
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.116927462552352.
+Package fontspec Info: latinmodern-math scale = 1.229572457436602.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.116927462552352.
+Package fontspec Info: latinmodern-math scale = 1.229572457436602.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.116927462552352.
+Package fontspec Info: latinmodern-math scale = 1.229572457436602.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.116927462552352.
+Package fontspec Info: latinmodern-math scale = 1.229572457436602.
 
 
-Package fontspec Info: latinmodern-math scale = 1.117039166468999.
+Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
 
-Package fontspec Info: latinmodern-math scale = 1.116927462552352.
+Package fontspec Info: latinmodern-math scale = 1.229572457436602.
 
 
 Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
 (fontspec)             'latinmodern-math.otf' with options
 (fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmodern-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=0.9999,FontAdjustment={\fontdimen
-(fontspec)             8\font =0.44681pt\relax \fontdimen 9\font
-(fontspec)             =2.23407pt\relax \fontdimen 10\font =1.86545pt\relax
-(fontspec)             \fontdimen 11\font =1.23991pt\relax \fontdimen 12\font
-(fontspec)             =6.70221pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)             8\font =0.49188pt\relax \fontdimen 9\font
+(fontspec)             =2.45938pt\relax \fontdimen 10\font =2.05359pt\relax
+(fontspec)             \fontdimen 11\font =1.36496pt\relax \fontdimen 12\font
+(fontspec)             =7.37814pt\relax \fontdimen 13\font =0pt\relax }].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <8.5->s*[1.116927462552352]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[1.116927462552352]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[1.116927462552352]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             <8.5->s*[1.229572457436602]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[1.229572457436602]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[1.229572457436602]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =0.44681pt\relax \fontdimen 9\font
-(fontspec)             =2.23407pt\relax \fontdimen 10\font =1.86545pt\relax
-(fontspec)             \fontdimen 11\font =1.23991pt\relax \fontdimen 12\font
-(fontspec)             =6.70221pt\relax \fontdimen 13\font =0pt\relax 
+(fontspec)             \fontdimen 8\font =0.49188pt\relax \fontdimen 9\font
+(fontspec)             =2.45938pt\relax \fontdimen 10\font =2.05359pt\relax
+(fontspec)             \fontdimen 11\font =1.36496pt\relax \fontdimen 12\font
+(fontspec)             =7.37814pt\relax \fontdimen 13\font =0pt\relax 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.116927462552352]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             <->s*[1.229572457436602]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =0.44681pt\relax \fontdimen 9\font
-(fontspec)             =2.23407pt\relax \fontdimen 10\font =1.86545pt\relax
-(fontspec)             \fontdimen 11\font =1.23991pt\relax \fontdimen 12\font
-(fontspec)             =6.70221pt\relax \fontdimen 13\font =0pt\relax 
+(fontspec)             \fontdimen 8\font =0.49188pt\relax \fontdimen 9\font
+(fontspec)             =2.45938pt\relax \fontdimen 10\font =2.05359pt\relax
+(fontspec)             \fontdimen 11\font =1.36496pt\relax \fontdimen 12\font
+(fontspec)             =7.37814pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 108.
@@ -745,32 +750,32 @@ Package hyperref Info: Link coloring OFF on input line 108.
 \openout3 = `PhD-thesis.out'.
 
 \c@lstlisting=\count320
-LaTeX Font Info:    Font shape `TU/Georgia(0)/m/n' will be
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
 (Font)              scaled to size 17.28pt on input line 110.
-LaTeX Font Info:    Font shape `TU/Georgia(0)/m/n' will be
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 110.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 13.40442pt on input line 110.
+(Font)              scaled to size 14.75629pt on input line 110.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.93628pt on input line 110.
+(Font)              scaled to size 9.83752pt on input line 110.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.70221pt on input line 110.
+(Font)              scaled to size 7.37814pt on input line 110.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 110.
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 13.40588pt on input line 110.
+(Font)              scaled to size 14.75775pt on input line 110.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.93726pt on input line 110.
+(Font)              scaled to size 9.8385pt on input line 110.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.70294pt on input line 110.
+(Font)              scaled to size 7.37888pt on input line 110.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 13.40314pt on input line 110.
+(Font)              scaled to size 14.75482pt on input line 110.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.93542pt on input line 110.
+(Font)              scaled to size 9.83655pt on input line 110.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.70157pt on input line 110.
+(Font)              scaled to size 7.37741pt on input line 110.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 110.
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -782,36 +787,36 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]
-LaTeX Font Info:    Font shape `TU/Georgia(0)/m/sl' in size <10> not available
-(Font)              Font shape `TU/Georgia(0)/m/it' tried instead on input line 113.
-LaTeX Font Info:    Font shape `TU/Georgia(0)/m/it' will be
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/sl' in size <10> not available
+(Font)              Font shape `TU/LibreBaskerville(0)/m/it' tried instead on input line 113.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/it' will be
 (Font)              scaled to size 10.0pt on input line 113.
 [2
 
 ]
-LaTeX Font Info:    Font shape `TU/Georgia(0)/m/n' will be
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
 (Font)              scaled to size 24.88pt on input line 113.
-LaTeX Font Info:    Font shape `TU/Georgia(0)/b/n' will be
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
 (Font)              scaled to size 24.88pt on input line 113.
 (./PhD-thesis.toc
-LaTeX Font Info:    Font shape `TU/Georgia(0)/b/n' will be
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 1.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.81924pt on input line 2.
+(Font)              scaled to size 8.60783pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.58517pt on input line 2.
+(Font)              scaled to size 6.14845pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 11.17157pt on input line 2.
+(Font)              scaled to size 12.29813pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.8201pt on input line 2.
+(Font)              scaled to size 8.60869pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.58578pt on input line 2.
+(Font)              scaled to size 6.14906pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.16928pt on input line 2.
+(Font)              scaled to size 12.29568pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.8185pt on input line 2.
+(Font)              scaled to size 8.60698pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.58464pt on input line 2.
+(Font)              scaled to size 6.14784pt on input line 2.
 )
 \tf@toc=\write4
 \openout4 = `PhD-thesis.toc'.
@@ -820,9 +825,9 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 
 ]
 Chapter 1.
-LaTeX Font Info:    Font shape `TU/Georgia(0)/m/n' will be
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
 (Font)              scaled to size 20.74pt on input line 116.
-LaTeX Font Info:    Font shape `TU/Georgia(0)/b/n' will be
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
 (Font)              scaled to size 20.74pt on input line 116.
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -880,27 +885,82 @@ Overfull \hbox (27.00378pt too wide) in paragraph at lines 158--159
 [][][][][][][][][][][][] 
  []
 
-Missing character: There is no ␣ (U+2423) in font Georgia/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ␣ (U+2423) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
 
 Overfull \hbox (51.00403pt too wide) in paragraph at lines 159--160
 [][][][][][][][][][][][][][] 
  []
 
 [5]
-Overfull \hbox (45.00397pt too wide) in paragraph at lines 160--161
+Overfull \hbox (39.0039pt too wide) in paragraph at lines 160--161
 [][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Font shape `TU/Georgia(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 170.
-LaTeX Font Info:    Font shape `TU/Georgia(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 170.
+
+Overfull \hbox (9.0036pt too wide) in paragraph at lines 161--162
+[][][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 169.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
+(Font)              scaled to size 14.4pt on input line 169.
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 169.
+
+Overfull \hbox (9.0036pt too wide) in paragraph at lines 173--174
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (117.0047pt too wide) in paragraph at lines 174--175
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (291.00647pt too wide) in paragraph at lines 175--176
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (429.00787pt too wide) in paragraph at lines 176--177
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (231.00586pt too wide) in paragraph at lines 177--178
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.00378pt too wide) in paragraph at lines 178--179
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (63.00415pt too wide) in paragraph at lines 179--180
+[][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
+[]\TU/LibreBaskerville(0)/m/n/10 Use second-level and higher headings within chapters like:
+ []
+
 [6] [7] [8
 
 ]
 Chapter 2.
-LaTeX Font Info:    Font shape `TU/Georgia(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 215.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 230.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 234.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 234.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 234.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/it' will be
+(Font)              scaled to size 8.0pt on input line 234.
 [9]
 File: figs/introduction/homunculus.png Graphic file (type bmp)
 <figs/introduction/homunculus.png>
@@ -913,322 +973,494 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [11] [12]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--252
-[]\TU/Georgia(0)/b/n/14.4 The Medaka Inbred Kiyosu-Karlruhe
- []
-
-
-Underfull \hbox (badness 1331) in paragraph at lines 256--257
-\TU/Georgia(0)/m/n/10 1999) tomato (\TU/Georgia(0)/m/it/10 Lycopersicon esculentum\TU/Georgia(0)/m/n/10 ),(Saliba-Colombani et al. 2000)
- []
-
-
-Underfull \hbox (badness 1609) in paragraph at lines 256--257
-\TU/Georgia(0)/m/n/10 maize (\TU/Georgia(0)/m/it/10 Zea mays\TU/Georgia(0)/m/n/10 ),(Limami et al. 2002) nematode (\TU/Georgia(0)/m/it/10 Caenorhabditis ele-
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
+[]\TU/LibreBaskerville(0)/b/n/14.4 The Medaka Inbred Kiyosu-Karlruhe
  []
 
 [13
 
 ] [14]
-Underfull \hbox (badness 2556) in paragraph at lines 268--268
-[]\TU/Georgia(0)/b/n/14.4 Genomic characterisation of the MIKK
- []
-
-
-Underfull \hbox (badness 1983) in paragraph at lines 275--276
-\TU/Georgia(0)/m/n/10 deletions (DEL), duplications (SUP), inversions (INV) and translocations
+Underfull \hbox (badness 1297) in paragraph at lines 277--278
+\TU/LibreBaskerville(0)/m/n/10 caught near Kiyosu in Southern Japan, and now comprises 80
  []
 
 [15]
+Underfull \hbox (badness 4441) in paragraph at lines 290--291
+\TU/LibreBaskerville(0)/m/n/10 (DEL), duplications (SUP), inversions (INV) and translocations
+ []
+
+[16]
 File: figs/mikk_genome/20211213_final_figure.png Graphic file (type bmp)
 <figs/mikk_genome/20211213_final_figure.png>
 
-Underfull \hbox (badness 1796) in paragraph at lines 291--292
-\TU/Georgia(0)/m/n/10 between that southern Japanese population, and northern Japanese and
+Overfull \hbox (32.77336pt too wide) in paragraph at lines 306--306
+[][][]\TU/LibreBaskerville(0)/m/n/8 “Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple_alignments/50_fish.epo/,”
+ []
+
+[17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
+[][][]\TU/LibreBaskerville(0)/m/n/8 Simon martin, \TU/LibreBaskerville(0)/m/it/8 Simonhmartin/Genomics_general\TU/LibreBaskerville(0)/m/n/8 , 2022, []$[][][][][] [] [] [] [][][][][][] [] [][][] []
+ []
+
+File: figs/mikk_genome/07_introgression.png Graphic file (type bmp)
+<figs/mikk_genome/07_introgression.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--316
+[][][]\TU/LibreBaskerville(0)/m/n/8 Takafumi Katsumura et al., “Medaka Population Genome Structure
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 291--292
-\TU/Georgia(0)/m/n/10 ment from Ensembl release 102 to obtain the aligned genome sequences
- []
-
-
-Underfull \hbox (badness 4608) in paragraph at lines 291--292
-\TU/Georgia(0)/m/n/10 for the established medaka inbred lines \TU/Georgia(0)/m/it/10 HdrR \TU/Georgia(0)/m/n/10 (southern Japan), \TU/Georgia(0)/m/it/10 HNI
- []
-
-
-Underfull \hbox (badness 4072) in paragraph at lines 291--292
-\TU/Georgia(0)/m/n/10 ancestor of all three strains.(“Index of /Pub/Release-102/Emf/Ensembl-
+Underfull \hbox (badness 10000) in paragraph at lines 316--316
+\TU/LibreBaskerville(0)/m/n/8 and Demographic History Described via Genotyping-by-Sequencing,” \TU/LibreBaskerville(0)/m/it/8 G3
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[16]
-File: figs/mikk_genome/07_introgression.png Graphic file (type bmp)
-<figs/mikk_genome/07_introgression.png>
-[17] [18]
+[19] [20]
 File: figs/mikk_genome/supp_01_pi_circos.png Graphic file (type bmp)
 <figs/mikk_genome/supp_01_pi_circos.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 1062) in paragraph at lines 331--332
+\TU/LibreBaskerville(0)/m/n/10 levels of homozygosity compared to classical laboratory inbred
+ []
 
-[19]
 File: figs/mikk_genome/20210224_sv_invs_lines.png Graphic file (type bmp)
 <figs/mikk_genome/20210224_sv_invs_lines.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[21] [22] [23]
+Underfull \hbox (badness 5893) in paragraph at lines 344--345
+\TU/LibreBaskerville(0)/m/n/10 the MIKK panel’s minor allele frequency (MAF) distribution
+ []
+
 File: figs/mikk_genome/08_ld_decay.png Graphic file (type bmp)
 <figs/mikk_genome/08_ld_decay.png>
-[20] [21] [22]
+[24] [25]
 File: figs/mikk_genome/20210401_hdrr_repeats_final.png Graphic file (type bmp)
 <figs/mikk_genome/20210401_hdrr_repeats_final.png>
 
-LaTeX Warning: Float too large for page by 17.1656pt on input line 345.
+LaTeX Warning: Float too large for page by 28.93764pt on input line 360.
 
-[23] [24]
+[26] [27]
 File: figs/mikk_genome/20210408_sv_main.png Graphic file (type bmp)
 <figs/mikk_genome/20210408_sv_main.png>
 
-LaTeX Warning: Float too large for page by 29.1656pt on input line 360.
+LaTeX Warning: Float too large for page by 29.59764pt on input line 375.
 
-[25] [26] [27] [28
-
-]
-Chapter 4.
-[29]
-Overfull \hbox (84.14543pt too wide) has occurred while \output is active
-\TU/Georgia(0)/m/n/10 30 \TU/Georgia(0)/m/it/10 CHAPTER 4.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
+[28] [29]
+Underfull \hbox (badness 3746) in paragraph at lines 384--385
+\TU/LibreBaskerville(0)/m/n/10 Taken together, these analyses show that the MIKK panel is
  []
 
-[30
+
+Underfull \hbox (badness 5696) in paragraph at lines 384--385
+\TU/LibreBaskerville(0)/m/n/10 highly homozygous, with LD characteristics that will favour
+ []
+
+
+Underfull \hbox (badness 2680) in paragraph at lines 384--385
+\TU/LibreBaskerville(0)/m/n/10 previously-established inbred lines to validate our behavioural
+ []
+
+[30]
+Chapter 4.
+[31
+
+]
+Overfull \hbox (130.24818pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 32 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 4.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
+ []
+
+[32
 
 ]
 Chapter 5.
-[31] [32
+[33] [34
 
 ]
 Chapter 6.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[33]
-Overfull \hbox (234.93245pt too wide) has occurred while \output is active
-\TU/Georgia(0)/m/n/10 34 \TU/Georgia(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
+[][][] [] [][][][] [] [][][][] [] [][][][][][][][][][][][][][] [] [][] [] [][][] [][] [][] [] [] [][] [][][][][][][][] [][] [][][][][][] [][] [][][][][][][][][][] [][]
  []
 
-[34] [35]
-Overfull \hbox (234.94221pt too wide) has occurred while \output is active
-\TU/Georgia(0)/m/n/10 36 \TU/Georgia(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+
+Overfull \hbox (303.0721pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 36 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
 [36]
-Overfull \hbox (80.09277pt too wide) in paragraph at lines 444--445
-\TU/Georgia(0)/m/n/10 /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/”
+Underfull \hbox (badness 1314) in paragraph at lines 411--412
+\TU/LibreBaskerville(0)/m/n/10 the proportion of participants in GWAS from a non-European
  []
 
 [37]
-Underfull \hbox (badness 1028) in paragraph at lines 462--462
-[]$[][]$ \TU/Georgia(0)/b/n/12 and ranking traits by signed Kolmogorov-
+Underfull \hbox (badness 1253) in paragraph at lines 422--424
+\TU/LibreBaskerville(0)/m/n/10 target population and therefore would be less predictive.[][][]
  []
 
-File: figs/fst/20220314_final_0.1_1000.pdf Graphic file (type pdf)
-<use figs/fst/20220314_final_0.1_1000.pdf>
 
-Overfull \hbox (235.24495pt too wide) has occurred while \output is active
-\TU/Georgia(0)/m/n/10 38 \TU/Georgia(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+Overfull \hbox (302.7021pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 38 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
 [38] [39]
-Overfull \hbox (235.55257pt too wide) has occurred while \output is active
-\TU/Georgia(0)/m/n/10 40 \TU/Georgia(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+Underfull \hbox (badness 1515) in paragraph at lines 441--442
+[]\TU/LibreBaskerville(0)/m/n/10 Many SNP arrays used for GWAS do not sequence the whole
+ []
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 441--442
+\TU/LibreBaskerville(0)/m/n/10 identifying causal variants, researchers often “impute” variants
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 441--442
+\TU/LibreBaskerville(0)/m/n/10 or incorrectly impute genotypes from those under-represented
+ []
+
+
+Overfull \hbox (303.4721pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 40 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
 [40]
-Underfull \hbox (badness 1383) in paragraph at lines 511--513
-[]\TU/Georgia(0)/m/n/10 Chang, Christopher C, Carson C Chow, Laurent CAM Tellier, Shashaank
+Overfull \hbox (92.90135pt too wide) in paragraph at lines 459--459
+[][][]\TU/LibreBaskerville(0)/m/n/8 “Index of /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/,”
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--459
+\TU/LibreBaskerville(0)/m/n/8 accessed March 24, 2022, []$[][][][] [] [] [] [][][] [] [][][][][][][][][][][] [] [][][] [] [][] [] [][] [] [][][][] [] [][][] [] [][][][] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[41]
+Underfull \hbox (badness 1062) in paragraph at lines 469--469
+[][][]\TU/LibreBaskerville(0)/m/n/8 Orestis A. Panagiotou, John P. A. Ioannidis, and Genome-Wide Significance
+ []
+
+
+Overfull \hbox (302.4921pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 42 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[42]
+Underfull \hbox (badness 1205) in paragraph at lines 479--479
+[][][]\TU/LibreBaskerville(0)/m/n/8 Emmanuel Paradis, “Pegas: An R Package for Population Genetics with an
+ []
+
+
+Underfull \hbox (badness 1975) in paragraph at lines 491--491
+[][][]\TU/LibreBaskerville(0)/m/n/8 W. J. Conover, \TU/LibreBaskerville(0)/m/it/8 Practical Nonparametric Statistics \TU/LibreBaskerville(0)/m/n/8 (John Wiley & Sons, 1999),
+ []
+
+
+Underfull \hbox (badness 1776) in paragraph at lines 491--491
+\TU/LibreBaskerville(0)/m/it/8 Based on Sample Distribution Function \TU/LibreBaskerville(0)/m/n/8 (SIAM, 1973), []$[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][][] [] [][] []
+ []
+
+[43]
+File: figs/fst/20220314_final_0.1_1000.pdf Graphic file (type pdf)
+<use figs/fst/20220314_final_0.1_1000.pdf>
+
+Overfull \hbox (302.1821pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 44 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[44] [45]
+Overfull \hbox (302.7621pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 46 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[46
+
+]
+Underfull \hbox (badness 2189) in paragraph at lines 526--528
+[]\TU/LibreBaskerville(0)/m/n/10 Chang, Christopher C, Carson C Chow, Laurent CAM Tellier,
+ []
+
+
+Underfull \hbox (badness 3396) in paragraph at lines 526--528
+\TU/LibreBaskerville(0)/m/n/10 Generation PLINK: Rising to the Challenge of Larger and
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 526--528
+\TU/LibreBaskerville(0)/m/n/10 Richer Datasets.” \TU/LibreBaskerville(0)/m/it/10 GigaScience \TU/LibreBaskerville(0)/m/n/10 4, no. 1 (December 2015): 7.
+ []
+
+
+Underfull \hbox (badness 3849) in paragraph at lines 541--543
+[]\TU/LibreBaskerville(0)/m/n/10 Durbin, J. \TU/LibreBaskerville(0)/m/it/10 Distribution Theory for Tests Based on Sample Distri-
+ []
+
+
+Underfull \hbox (badness 2941) in paragraph at lines 541--543
+\TU/LibreBaskerville(0)/m/it/10 bution Function\TU/LibreBaskerville(0)/m/n/10 . SIAM, 1973. []$[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][][] [] [][] []
  []
 
 
 Underfull \vbox (badness 2698) has occurred while \output is active []
 
-[41
-
-]
-Overfull \hbox (54.72983pt too wide) in paragraph at lines 547--549
-[]\TU/Georgia(0)/m/n/10 “Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple_alignments/50_fish.epo/.”
+[47]
+Overfull \hbox (109.13666pt too wide) in paragraph at lines 562--564
+[]\TU/LibreBaskerville(0)/m/n/10 “Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple_alignments/50_fish.epo/.”
  []
 
 
-Overfull \hbox (124.17807pt too wide) in paragraph at lines 550--552
-[]\TU/Georgia(0)/m/n/10 “Index of /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/.”
+Overfull \hbox (184.29666pt too wide) in paragraph at lines 565--567
+[]\TU/LibreBaskerville(0)/m/n/10 “Index of /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/.”
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 550--552
-[][][] [] [][][][] [] [][][][][][][][][][][] [] [][][][][] [] [][][][] [] [][][][] [] [][][][][][][][] [] [][][][][][][] [] [][][][][][][][] []
+Underfull \hbox (badness 7869) in paragraph at lines 565--567
+\TU/LibreBaskerville(0)/m/n/10 Accessed March 24, 2022. []$[][][][] [] [] [] [][][] [] [][][][][][][][][][][] [] [][][] [] [][] []
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 556--558
-\TU/Georgia(0)/m/n/10 “Medaka Population Genome Structure and Demographic History De-
+Underfull \hbox (badness 10000) in paragraph at lines 565--567
+[][] [] [][][][] [] [][][] [] [][][][] [] [][][][][][][][][][][] [] [][][][][] [] [][][][] [] [][][][] [] [][][][][][][][] []
  []
 
 
-Underfull \hbox (badness 1448) in paragraph at lines 562--564
-\TU/Georgia(0)/m/n/10 Polygenic Scores for Common Diseases Identify Individuals with Risk
+Underfull \hbox (badness 2932) in paragraph at lines 571--573
+[]\TU/LibreBaskerville(0)/m/n/10 Katsumura, Takafumi, Shoji Oda, Hiroshi Mitani, and Hiroki
  []
 
 
-Overfull \hbox (235.00081pt too wide) has occurred while \output is active
-\TU/Georgia(0)/m/n/10 42 \TU/Georgia(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[42]
-Underfull \hbox (badness 1616) in paragraph at lines 580--582
-[]\TU/Georgia(0)/m/n/10 MacArthur, Jacqueline, Emily Bowler, Maria Cerezo, Laurent Gil, Peggy
+Underfull \hbox (badness 2856) in paragraph at lines 571--573
+\TU/LibreBaskerville(0)/m/n/10 Oota. “Medaka Population Genome Structure and Demo-
  []
 
 
-Underfull \hbox (badness 3895) in paragraph at lines 580--582
-\TU/Georgia(0)/m/n/10 Hall, Emma Hastings, Heather Junkins, et al. 2017. “The New
+Underfull \hbox (badness 10000) in paragraph at lines 571--573
+\TU/LibreBaskerville(0)/m/n/10 graphic History Described via Genotyping-by-Sequencing.”
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--582
-\TU/Georgia(0)/m/n/10 NHGRI-EBI Catalog of Published Genome-Wide Association Stud-
+Underfull \hbox (badness 3209) in paragraph at lines 574--576
+\TU/LibreBaskerville(0)/m/n/10 salainen, Aki S. Havulinna, Ida Surakka, Aarno Palotie, et
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 580--582
-\TU/Georgia(0)/m/n/10 ies (GWAS Catalog).” \TU/Georgia(0)/m/it/10 Nucleic Acids Research \TU/Georgia(0)/m/n/10 45 (D1): D896–901.
+Underfull \hbox (badness 1270) in paragraph at lines 574--576
+\TU/LibreBaskerville(0)/m/n/10 al. “Geographic Variation and Bias in the Polygenic Scores
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 583--585
-\TU/Georgia(0)/m/n/10 Phenotype Map: Lessons from the Drosophila Melanogaster Ge-
+Underfull \hbox (badness 1953) in paragraph at lines 574--576
+\TU/LibreBaskerville(0)/m/n/10 of Complex Diseases and Traits in Finland.” \TU/LibreBaskerville(0)/m/it/10 The American
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 583--585
-\TU/Georgia(0)/m/n/10 netic Reference Panel.” \TU/Georgia(0)/m/it/10 WIREs Developmental Biology \TU/Georgia(0)/m/n/10 7 (1): e289.
+Overfull \hbox (302.3921pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 48 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
-[43]
-Underfull \hbox (badness 1609) in paragraph at lines 613--615
-[]\TU/Georgia(0)/m/n/10 Natarajan, Pradeep, Robin Young, Nathan O. Stitziel, Sandosh Padman-
- []
-
-
-Underfull \hbox (badness 7344) in paragraph at lines 613--615
-\TU/Georgia(0)/m/n/10 “Polygenic Risk Score Identifies Subgroup With Higher Burden of
+[48]
+Underfull \hbox (badness 3930) in paragraph at lines 577--579
+\TU/LibreBaskerville(0)/m/n/10 Carolina Roselli, Seung Hoan Choi, Pradeep Natarajan, et
  []
 
 
-Underfull \hbox (badness 2617) in paragraph at lines 613--615
-\TU/Georgia(0)/m/n/10 Atherosclerosis and Greater Relative Benefit From Statin Therapy in
+Underfull \hbox (badness 1609) in paragraph at lines 577--579
+\TU/LibreBaskerville(0)/m/n/10 al. “Genome-Wide Polygenic Scores for Common Diseases
  []
 
 
-Underfull \hbox (badness 4181) in paragraph at lines 613--615
-\TU/Georgia(0)/m/n/10 the Primary Prevention Setting.” \TU/Georgia(0)/m/it/10 Circulation \TU/Georgia(0)/m/n/10 135 (22): 2091–101.
+Underfull \hbox (badness 1348) in paragraph at lines 586--588
+[]\TU/LibreBaskerville(0)/m/n/10 Lek, Monkol, Konrad J. Karczewski, Eric V. Minikel, Kaitlin E.
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 616--618
-[]\TU/Georgia(0)/m/n/10 Panagiotou, Orestis A., John P. A. Ioannidis, and Genome-Wide Signif-
+Underfull \hbox (badness 1609) in paragraph at lines 589--591
+\TU/LibreBaskerville(0)/m/n/10 of Germination Efficiency in Maize in Relation to Nitrogen
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 616--618
-\TU/Georgia(0)/m/n/10 icance Project. 2012. “What Should the Genome-Wide Significance
+Underfull \hbox (badness 2119) in paragraph at lines 589--591
+\TU/LibreBaskerville(0)/m/n/10 Metabolism Reveals the Importance of Cytosolic Glutamine
  []
 
 
-Underfull \hbox (badness 6173) in paragraph at lines 616--618
-\TU/Georgia(0)/m/n/10 Threshold Be? Empirical Replication of Borderline Genetic Asso-
+Underfull \hbox (badness 1616) in paragraph at lines 592--594
+\TU/LibreBaskerville(0)/m/n/10 M. Gaudet, Roger L. Milne, Fredrick R. Schumacher, et al.
  []
 
 
-Underfull \hbox (badness 4048) in paragraph at lines 616--618
-\TU/Georgia(0)/m/n/10 ciations.” \TU/Georgia(0)/m/it/10 International Journal of Epidemiology \TU/Georgia(0)/m/n/10 41 (1): 273–86.
+Underfull \hbox (badness 10000) in paragraph at lines 592--594
+\TU/LibreBaskerville(0)/m/n/10 “Breast Cancer Risk From Modifiable and Nonmodifiable
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 619--621
-[]\TU/Georgia(0)/m/n/10 Paquette, Martine, Michael Chong, S’ebastien Th’eriault, Robert Dufour,
+Underfull \hbox (badness 4391) in paragraph at lines 592--594
+\TU/LibreBaskerville(0)/m/n/10 Risk Factors Among White Women in the United States.”
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 619--621
-\TU/Georgia(0)/m/n/10 Prevalence of Cardiovascular Disease in Patients with Familial Hyper-
+Underfull \hbox (badness 3861) in paragraph at lines 592--594
+\TU/LibreBaskerville(0)/m/it/10 JAMA Oncology \TU/LibreBaskerville(0)/m/n/10 2, no. 10 (October 1, 2016): 1295–1302.
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 619--621
-\TU/Georgia(0)/m/n/10 cholesterolemia.” \TU/Georgia(0)/m/it/10 Journal of Clinical Lipidology \TU/Georgia(0)/m/n/10 11 (3): 725–732.e5.
+Underfull \hbox (badness 1845) in paragraph at lines 595--597
+\TU/LibreBaskerville(0)/m/n/10 NHGRI-EBI Catalog of Published Genome-Wide Association
  []
 
 
-Overfull \hbox (235.06429pt too wide) has occurred while \output is active
-\TU/Georgia(0)/m/n/10 44 \TU/Georgia(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+Underfull \hbox (badness 1005) in paragraph at lines 598--600
+\TU/LibreBaskerville(0)/m/n/10 Phenotype Map: Lessons from the Drosophila Melanogaster
  []
 
-[44]
-Underfull \hbox (badness 1112) in paragraph at lines 664--666
-[]\TU/Georgia(0)/m/n/10 Smigielski, Elizabeth M., Karl Sirotkin, Minghong Ward, and Stephen T.
- []
-
-
-Underfull \hbox (badness 1990) in paragraph at lines 667--669
-\TU/Georgia(0)/m/n/10 notypic Characterization of a Wild Medaka Population: Towards the
- []
-
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 673--675
-[]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][] [] [][][] [] [][][][] [] [][][][] [] [][][][][][][][][][][][][][] [] [][] [] [][][] [][]
+[49]
+Underfull \hbox (badness 2582) in paragraph at lines 604--606
+[]\TU/LibreBaskerville(0)/m/n/10 Martin, Alicia R., Christopher R. Gignoux, Raymond K. Wal-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--675
-[][] [] [] [][] [][][][][][][][] [][] [][][][][][] [][] [][][][][][][][][][] [][] [][][][][][] [][] [][][] [][] [][][][][][][][][][][][][] [][] [][][][][][][][][][] [][]
+Underfull \hbox (badness 1688) in paragraph at lines 604--606
+\TU/LibreBaskerville(0)/m/n/10 Mark J. Daly, Carlos D. Bustamante, and Eimear E. Kenny.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 679--681
-[]\TU/Georgia(0)/m/n/10 Tikkanen, Emmi, Aki S. Havulinna, Aarno Palotie, Veikko Salomaa,
+Underfull \hbox (badness 7151) in paragraph at lines 604--606
+\TU/LibreBaskerville(0)/m/n/10 “Human Demographic History Impacts Genetic Risk Pre-
  []
 
 
-Underfull \hbox (badness 2065) in paragraph at lines 679--681
-\TU/Georgia(0)/m/n/10 and Samuli Ripatti. 2013. “Genetic Risk Prediction and a 2-Stage
+Underfull \hbox (badness 10000) in paragraph at lines 604--606
+\TU/LibreBaskerville(0)/m/n/10 diction Across Diverse Populations.” \TU/LibreBaskerville(0)/m/it/10 The American Jour-
  []
 
 
-Underfull \hbox (badness 4872) in paragraph at lines 679--681
-\TU/Georgia(0)/m/n/10 Risk Screening Strategy for Coronary Heart Disease.” \TU/Georgia(0)/m/it/10 Arterioscle-
+Underfull \hbox (badness 1902) in paragraph at lines 604--606
+\TU/LibreBaskerville(0)/m/it/10 nal of Human Genetics \TU/LibreBaskerville(0)/m/n/10 100, no. 4 (April 6, 2017): 635–49.
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 679--681
-\TU/Georgia(0)/m/it/10 rosis, Thrombosis, and Vascular Biology \TU/Georgia(0)/m/n/10 33 (9): 2261–66. []$[][][][][] []
+Underfull \hbox (badness 1067) in paragraph at lines 607--609
+[]\TU/LibreBaskerville(0)/m/n/10 Martin, Alicia R., Masahiro Kanai, Yoichiro Kamatani, Yukinori
  []
 
 
-Overfull \hbox (235.07405pt too wide) has occurred while \output is active
-\TU/Georgia(0)/m/n/10 46 \TU/Georgia(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+Underfull \hbox (badness 1038) in paragraph at lines 607--609
+\TU/LibreBaskerville(0)/m/n/10 parities.” \TU/LibreBaskerville(0)/m/it/10 Nature Genetics \TU/LibreBaskerville(0)/m/n/10 51, no. 4, 4 (April 2019): 584–91.
  []
 
-[46] (./PhD-thesis.aux)
+
+Underfull \hbox (badness 3525) in paragraph at lines 610--612
+[]\TU/LibreBaskerville(0)/m/n/10 martin, Simon. \TU/LibreBaskerville(0)/m/it/10 Simonhmartin/Genomics_general\TU/LibreBaskerville(0)/m/n/10 , 2022. []$[][][][][] []
+ []
+
+
+Underfull \hbox (badness 1946) in paragraph at lines 628--630
+[]\TU/LibreBaskerville(0)/m/n/10 Natarajan, Pradeep, Robin Young, Nathan O. Stitziel, Sandosh
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 628--630
+\TU/LibreBaskerville(0)/m/n/10 Padmanabhan, Usman Baber, Roxana Mehran, Samantha
+ []
+
+
+Underfull \hbox (badness 4518) in paragraph at lines 628--630
+\TU/LibreBaskerville(0)/m/n/10 Sartori, et al. “Polygenic Risk Score Identifies Subgroup
+ []
+
+
+Underfull \hbox (badness 4686) in paragraph at lines 628--630
+\TU/LibreBaskerville(0)/m/n/10 With Higher Burden of Atherosclerosis and Greater Rela-
+ []
+
+
+Overfull \hbox (303.30211pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 50 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[50]
+Underfull \hbox (badness 1297) in paragraph at lines 658--660
+[]\TU/LibreBaskerville(0)/m/n/10 Purcell, Shaun M, and Christopher C Chang. \TU/LibreBaskerville(0)/m/it/10 PLINK 1.9\TU/LibreBaskerville(0)/m/n/10 , n.d.
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 661--663
+\TU/LibreBaskerville(0)/m/n/10 Jacqueline Philouze. “Efficiency of RFLP, RAPD, and AFLP
+ []
+
+[51]
+Underfull \hbox (badness 3138) in paragraph at lines 679--681
+[]\TU/LibreBaskerville(0)/m/n/10 Smigielski, Elizabeth M., Karl Sirotkin, Minghong Ward, and
+ []
+
+
+Underfull \hbox (badness 2435) in paragraph at lines 685--687
+[]\TU/LibreBaskerville(0)/m/n/10 Svenson, Karen L, Daniel M Gatti, William Valdar, Catherine
+ []
+
+
+Underfull \hbox (badness 2538) in paragraph at lines 685--687
+\TU/LibreBaskerville(0)/m/n/10 Genetic Mapping Using the Mouse Diversity Outbred Pop-
+ []
+
+
+Underfull \hbox (badness 2443) in paragraph at lines 685--687
+\TU/LibreBaskerville(0)/m/n/10 ulation.” \TU/LibreBaskerville(0)/m/it/10 Genetics \TU/LibreBaskerville(0)/m/n/10 190, no. 2 (February 1, 2012): 437–47.
+ []
+
+
+Underfull \hbox (badness 3646) in paragraph at lines 688--690
+[]\TU/LibreBaskerville(0)/m/n/10 “The $11.9 Trillion Global Healthcare Market: Key Opportu-
+ []
+
+
+Underfull \hbox (badness 3942) in paragraph at lines 688--690
+\TU/LibreBaskerville(0)/m/n/10 nities & Strategies (2014-2022) - ResearchAndMarkets.com,”
+ []
+
+
+Underfull \hbox (badness 6526) in paragraph at lines 688--690
+\TU/LibreBaskerville(0)/m/n/10 June 25, 2019. []$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][] [] [][][] [] [][][][] [] [][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 688--690
+[][][][][][][][][][][][][][] [] [][] [] [][][] [][] [][] [] [] [][] [][][][][][][][] [][] [][][][][][] [][] [][][][][][][][][][] [][]
+ []
+
+
+Overfull \hbox (51.22998pt too wide) in paragraph at lines 688--690
+[][][][][][] [][] [][][] [][] [][][][][][][][][][][][][] [][] [][][][][][][][][][] [][] [][][][] [][] [][][][] [][][][][][] [][][][][][][][][][][][][][][][][][] []
+ []
+
+
+Overfull \hbox (302.3221pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 52 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[52]
+Underfull \hbox (badness 1502) in paragraph at lines 697--699
+\TU/LibreBaskerville(0)/m/n/10 Gusev, Sara Lindström, Stephan Ripke, Giulio Genovese, et
+ []
+
+[53] (./PhD-thesis.aux)
 Package rerunfilecheck Info: File `PhD-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 302AE6A91A96F7247D06304E0EE3A8EC;3293.
+(rerunfilecheck)             Checksum: BCEF0657EAC4887C821E27478D29ECCD;3391.
  ) 
 Here is how much of TeX's memory you used:
- 18785 strings out of 477884
- 342577 string characters out of 5846472
- 986512 words of memory out of 5000000
- 39427 multiletter control sequences out of 15000+600000
- 475798 words of font info for 92 fonts, out of 8000000 for 9000
+ 18812 strings out of 477884
+ 343897 string characters out of 5846472
+ 986705 words of memory out of 5000000
+ 39448 multiletter control sequences out of 15000+600000
+ 475830 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 86i,7n,122p,1378b,1705s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,8n,122p,3236b,1705s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on PhD-thesis.pdf (46 pages).
+Output written on PhD-thesis.pdf (53 pages).
