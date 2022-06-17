@@ -13,7 +13,7 @@ csl: chicago-fullnote-bibliography.csl
 mainfont: Libre Baskerville
 ---
 
-# About
+# About {-}
 
 Code to render PDF:
 

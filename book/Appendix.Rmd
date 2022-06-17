@@ -1,0 +1,10 @@
+# Appendix {-}
+
+## eCDF of all polygenic traits in the GWAS Catalog ranked by ${D_t^S}$ {-}
+
+(ref:eCDFall) 587 traits from the GWAS Catalog that passed our filters for polygenic traits, ranked by ${D_t^S}$.
+
+```{r eCDFall, echo = F, fig.cap = '(ref:eCDFall)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/fst/0.1_1000_20220314_ecdf_all_faceted_with_controls_d_rank_long.png"), auto_pdf = T)
+```
+

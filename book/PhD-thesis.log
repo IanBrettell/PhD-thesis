@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.14)  15 JUN 2022 09:24
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.14)  16 JUN 2022 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -495,37 +495,39 @@ Package graphics Info: Driver file: xetex.def on input line 107.
 \cslhangindent=\skip62
 \csllabelwidth=\skip63
 \cslentryspacingunit=\skip64
-(./PhD-thesis.aux)
+(/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (./PhD-thesis.aux)
 \openout1 = `PhD-thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 108.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 108.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 108.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 110.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 108.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 110.
 
 Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
@@ -551,7 +553,7 @@ Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 12.2969pt on input line 108.
+(Font)              scaled to size 12.2969pt on input line 110.
 
 Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
@@ -583,15 +585,15 @@ Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.2969pt on input line 108.
+(Font)              scaled to size 12.2969pt on input line 110.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 108.
+(Font)              `operators' in the math version `normal' on input line 110.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 108.
+(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 110.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 108.
+(Font)              `operators' in the math version `bold' on input line 110.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 108.
+(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 110.
 
 Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
@@ -670,13 +672,13 @@ Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 108.
+(Font)              `symbols' in the math version `normal' on input line 110.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 108.
+(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 110.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 108.
+(Font)              `symbols' in the math version `bold' on input line 110.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 108.
+(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 110.
 
 Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
@@ -737,50 +739,50 @@ Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
 (fontspec)             =7.37814pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 108.
+(Font)              `largesymbols' in the math version `normal' on input line 110.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 108.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 110.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 108.
+(Font)              `largesymbols' in the math version `bold' on input line 110.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 108.
-Package hyperref Info: Link coloring OFF on input line 108.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 110.
+Package hyperref Info: Link coloring OFF on input line 110.
 (./PhD-thesis.out) (./PhD-thesis.out)
 \@outlinefile=\write3
 \openout3 = `PhD-thesis.out'.
 
 \c@lstlisting=\count320
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 110.
+(Font)              scaled to size 17.28pt on input line 112.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 110.
+(Font)              scaled to size 12.0pt on input line 112.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.75629pt on input line 110.
+(Font)              scaled to size 14.75629pt on input line 112.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 9.83752pt on input line 110.
+(Font)              scaled to size 9.83752pt on input line 112.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.37814pt on input line 110.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 110.
+(Font)              scaled to size 7.37814pt on input line 112.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 112.
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.75775pt on input line 110.
+(Font)              scaled to size 14.75775pt on input line 112.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 9.8385pt on input line 110.
+(Font)              scaled to size 9.8385pt on input line 112.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.37888pt on input line 110.
+(Font)              scaled to size 7.37888pt on input line 112.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.75482pt on input line 110.
+(Font)              scaled to size 14.75482pt on input line 112.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.83655pt on input line 110.
+(Font)              scaled to size 9.83655pt on input line 112.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.37741pt on input line 110.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 110.
+(Font)              scaled to size 7.37741pt on input line 112.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 112.
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 110.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 112.
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -788,16 +790,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/sl' in size <10> not available
-(Font)              Font shape `TU/LibreBaskerville(0)/m/it' tried instead on input line 113.
+(Font)              Font shape `TU/LibreBaskerville(0)/m/it' tried instead on input line 115.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 113.
+(Font)              scaled to size 10.0pt on input line 115.
 [2
 
 ]
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 113.
+(Font)              scaled to size 24.88pt on input line 115.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 113.
+(Font)              scaled to size 24.88pt on input line 115.
 (./PhD-thesis.toc
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 1.
@@ -817,150 +819,143 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 8.60698pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 6.14784pt on input line 2.
-)
+[3])
 \tf@toc=\write4
 \openout4 = `PhD-thesis.toc'.
 
-[3] [4
-
-]
-Chapter 1.
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 116.
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 20.74pt on input line 116.
-(/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/listings/lstlang1.sty
+[4] (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
 ) (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
-Overfull \hbox (15.00366pt too wide) in paragraph at lines 138--139
+Overfull \hbox (15.00366pt too wide) in paragraph at lines 141--142
 [][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (9.0036pt too wide) in paragraph at lines 139--140
+Overfull \hbox (9.0036pt too wide) in paragraph at lines 142--143
 [][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (9.0036pt too wide) in paragraph at lines 143--144
+Overfull \hbox (9.0036pt too wide) in paragraph at lines 146--147
 [][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (63.00415pt too wide) in paragraph at lines 152--153
+Overfull \hbox (63.00415pt too wide) in paragraph at lines 155--156
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (51.00403pt too wide) in paragraph at lines 153--154
+Overfull \hbox (51.00403pt too wide) in paragraph at lines 156--157
 [][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (51.00403pt too wide) in paragraph at lines 154--155
+Overfull \hbox (51.00403pt too wide) in paragraph at lines 157--158
 [][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (153.00507pt too wide) in paragraph at lines 155--156
+Overfull \hbox (153.00507pt too wide) in paragraph at lines 158--159
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (255.0061pt too wide) in paragraph at lines 156--157
+Overfull \hbox (255.0061pt too wide) in paragraph at lines 159--160
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (39.0039pt too wide) in paragraph at lines 157--158
+Overfull \hbox (39.0039pt too wide) in paragraph at lines 160--161
 [][][][][][][][][][][][] 
  []
 
+[5
 
-Overfull \hbox (27.00378pt too wide) in paragraph at lines 158--159
+]
+Overfull \hbox (27.00378pt too wide) in paragraph at lines 161--162
 [][][][][][][][][][][][] 
  []
 
 Missing character: There is no ␣ (U+2423) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
 
-Overfull \hbox (51.00403pt too wide) in paragraph at lines 159--160
+Overfull \hbox (51.00403pt too wide) in paragraph at lines 162--163
 [][][][][][][][][][][][][][] 
  []
 
-[5]
-Overfull \hbox (39.0039pt too wide) in paragraph at lines 160--161
+
+Overfull \hbox (45.00397pt too wide) in paragraph at lines 163--164
 [][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (9.0036pt too wide) in paragraph at lines 161--162
-[][][][][][][][][][][][][] 
- []
-
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 169.
+(Font)              scaled to size 14.4pt on input line 171.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 169.
+(Font)              scaled to size 14.4pt on input line 171.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 169.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 171.
 
-Overfull \hbox (9.0036pt too wide) in paragraph at lines 173--174
+Overfull \hbox (9.0036pt too wide) in paragraph at lines 175--176
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (117.0047pt too wide) in paragraph at lines 174--175
+Overfull \hbox (117.0047pt too wide) in paragraph at lines 176--177
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (291.00647pt too wide) in paragraph at lines 175--176
+Overfull \hbox (291.00647pt too wide) in paragraph at lines 177--178
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (429.00787pt too wide) in paragraph at lines 176--177
+Overfull \hbox (429.00787pt too wide) in paragraph at lines 178--179
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (231.00586pt too wide) in paragraph at lines 177--178
+Overfull \hbox (231.00586pt too wide) in paragraph at lines 179--180
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (27.00378pt too wide) in paragraph at lines 178--179
+Overfull \hbox (27.00378pt too wide) in paragraph at lines 180--181
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (63.00415pt too wide) in paragraph at lines 179--180
+Overfull \hbox (63.00415pt too wide) in paragraph at lines 181--182
 [][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 []\TU/LibreBaskerville(0)/m/n/10 Use second-level and higher headings within chapters like:
  []
 
 [6] [7] [8
 
 ]
-Chapter 2.
+Chapter 1.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
+(Font)              scaled to size 20.74pt on input line 226.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 230.
+(Font)              scaled to size 20.74pt on input line 226.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 234.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 234.
+(Font)              scaled to size 7.0pt on input line 236.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 234.
+(Font)              scaled to size 8.0pt on input line 236.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 234.
+(Font)              scaled to size 6.0pt on input line 236.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 234.
+(Font)              scaled to size 8.0pt on input line 236.
 [9]
 File: figs/introduction/homunculus.png Graphic file (type bmp)
 <figs/introduction/homunculus.png>
@@ -971,496 +966,656 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [11] [12]
-Chapter 3.
+Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--267
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 []\TU/LibreBaskerville(0)/b/n/14.4 The Medaka Inbred Kiyosu-Karlruhe
  []
 
+
+Underfull \vbox (badness 6364) has occurred while \output is active []
+
 [13
 
-] [14]
-Underfull \hbox (badness 1297) in paragraph at lines 277--278
+]
+Underfull \vbox (badness 4954) has occurred while \output is active []
+
+[14] [15]
+Underfull \hbox (badness 1297) in paragraph at lines 282--283
 \TU/LibreBaskerville(0)/m/n/10 caught near Kiyosu in Southern Japan, and now comprises 80
  []
 
-[15]
-Underfull \hbox (badness 4441) in paragraph at lines 290--291
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[16]
+Underfull \hbox (badness 4441) in paragraph at lines 295--296
 \TU/LibreBaskerville(0)/m/n/10 (DEL), duplications (SUP), inversions (INV) and translocations
  []
 
-[16]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[17]
 File: figs/mikk_genome/20211213_final_figure.png Graphic file (type bmp)
 <figs/mikk_genome/20211213_final_figure.png>
 
-Overfull \hbox (32.77336pt too wide) in paragraph at lines 306--306
-[][][]\TU/LibreBaskerville(0)/m/n/8 “Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple_alignments/50_fish.epo/,”
+Overfull \hbox (32.77336pt too wide) in paragraph at lines 311--311
+[][]\TU/LibreBaskerville(0)/m/n/8 “Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple_alignments/50_fish.epo/,”
  []
 
-[17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
-[][][]\TU/LibreBaskerville(0)/m/n/8 Simon martin, \TU/LibreBaskerville(0)/m/it/8 Simonhmartin/Genomics_general\TU/LibreBaskerville(0)/m/n/8 , 2022, []$[][][][][] [] [] [] [][][][][][] [] [][][] []
+[18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 313--313
+[][]\TU/LibreBaskerville(0)/m/n/8 Simon martin, \TU/LibreBaskerville(0)/m/it/8 Simonhmartin/Genomics_general\TU/LibreBaskerville(0)/m/n/8 , 2022, []$[][][][][] [] [] [] [][][][][][] [] [][][] []
  []
 
 File: figs/mikk_genome/07_introgression.png Graphic file (type bmp)
 <figs/mikk_genome/07_introgression.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
-[][][]\TU/LibreBaskerville(0)/m/n/8 Takafumi Katsumura et al., “Medaka Population Genome Structure
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
+[][]\TU/LibreBaskerville(0)/m/n/8 Takafumi Katsumura et al., “Medaka Population Genome Structure
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 \TU/LibreBaskerville(0)/m/n/8 and Demographic History Described via Genotyping-by-Sequencing,” \TU/LibreBaskerville(0)/m/it/8 G3
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[19] [20]
+[20] [21]
 File: figs/mikk_genome/supp_01_pi_circos.png Graphic file (type bmp)
 <figs/mikk_genome/supp_01_pi_circos.png>
 
-Underfull \hbox (badness 1062) in paragraph at lines 331--332
+Underfull \hbox (badness 1062) in paragraph at lines 336--337
 \TU/LibreBaskerville(0)/m/n/10 levels of homozygosity compared to classical laboratory inbred
  []
 
+[22] [23]
 File: figs/mikk_genome/20210224_sv_invs_lines.png Graphic file (type bmp)
 <figs/mikk_genome/20210224_sv_invs_lines.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[21] [22] [23]
-Underfull \hbox (badness 5893) in paragraph at lines 344--345
+[24]
+Underfull \hbox (badness 5893) in paragraph at lines 349--350
 \TU/LibreBaskerville(0)/m/n/10 the MIKK panel’s minor allele frequency (MAF) distribution
  []
 
 File: figs/mikk_genome/08_ld_decay.png Graphic file (type bmp)
 <figs/mikk_genome/08_ld_decay.png>
-[24] [25]
+[25] [26]
 File: figs/mikk_genome/20210401_hdrr_repeats_final.png Graphic file (type bmp)
 <figs/mikk_genome/20210401_hdrr_repeats_final.png>
 
-LaTeX Warning: Float too large for page by 28.93764pt on input line 360.
+LaTeX Warning: Float too large for page by 28.93764pt on input line 365.
 
-[26] [27]
+[27] [28]
 File: figs/mikk_genome/20210408_sv_main.png Graphic file (type bmp)
 <figs/mikk_genome/20210408_sv_main.png>
 
-LaTeX Warning: Float too large for page by 29.59764pt on input line 375.
+LaTeX Warning: Float too large for page by 29.59764pt on input line 380.
 
-[28] [29]
-Underfull \hbox (badness 3746) in paragraph at lines 384--385
+[29]
+Underfull \hbox (badness 3746) in paragraph at lines 389--390
 \TU/LibreBaskerville(0)/m/n/10 Taken together, these analyses show that the MIKK panel is
  []
 
 
-Underfull \hbox (badness 5696) in paragraph at lines 384--385
+Underfull \hbox (badness 5696) in paragraph at lines 389--390
 \TU/LibreBaskerville(0)/m/n/10 highly homozygous, with LD characteristics that will favour
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 384--385
+Underfull \hbox (badness 2680) in paragraph at lines 389--390
 \TU/LibreBaskerville(0)/m/n/10 previously-established inbred lines to validate our behavioural
  []
 
-[30]
-Chapter 4.
-[31
+[30] [31] [32]
+Chapter 3.
+[33
 
 ]
-Overfull \hbox (130.24818pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 32 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 4.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
+Overfull \hbox (130.32817pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 34 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
  []
 
-[32
+[34
+
+]
+Chapter 4.
+[35] [36
 
 ]
 Chapter 5.
-[33] [34
-
-]
-Chapter 6.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 405--405
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 407--407
 [][][] [] [][][][] [] [][][][] [] [][][][][][][][][][][][][][] [] [][] [] [][][] [][] [][] [] [] [][] [][][][][][][][] [][] [][][][][][] [][] [][][][][][][][][][] [][]
  []
 
+Missing character: There is no ∼ (U+223C) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
 
-Overfull \hbox (303.0721pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 36 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[36]
-Underfull \hbox (badness 1314) in paragraph at lines 411--412
-\TU/LibreBaskerville(0)/m/n/10 the proportion of participants in GWAS from a non-European
- []
-
-[37]
-Underfull \hbox (badness 1253) in paragraph at lines 422--424
-\TU/LibreBaskerville(0)/m/n/10 target population and therefore would be less predictive.[][][]
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (302.7021pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 38 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+Overfull \hbox (302.4521pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 38 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
 [38] [39]
-Underfull \hbox (badness 1515) in paragraph at lines 441--442
-[]\TU/LibreBaskerville(0)/m/n/10 Many SNP arrays used for GWAS do not sequence the whole
+Overfull \hbox (303.2221pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 40 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[40] [41]
+Overfull \hbox (302.2421pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 42 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[42] [43]
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/it' will be
+(Font)              scaled to size 10.0pt on input line 466.
+
+Underfull \hbox (badness 1960) in paragraph at lines 466--467
+[]\TU/LibreBaskerville(0)/m/n/10 The neglect of rare variants can be overcome by using next-
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 441--442
-\TU/LibreBaskerville(0)/m/n/10 identifying causal variants, researchers often “impute” variants
+Underfull \hbox (badness 2334) in paragraph at lines 466--467
+\TU/LibreBaskerville(0)/m/n/10 generation sequencing technologies such as whole-genome se-
  []
 
 
-Underfull \hbox (badness 1509) in paragraph at lines 441--442
-\TU/LibreBaskerville(0)/m/n/10 or incorrectly impute genotypes from those under-represented
+Overfull \hbox (301.9321pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 44 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[44] [45]
+Underfull \hbox (badness 1552) in paragraph at lines 488--489
+[]\TU/LibreBaskerville(0)/m/n/10 Differences in allele frequencies between populations can arise
  []
 
 
-Overfull \hbox (303.4721pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 40 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[40]
-Overfull \hbox (92.90135pt too wide) in paragraph at lines 459--459
-[][][]\TU/LibreBaskerville(0)/m/n/8 “Index of /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/,”
+Underfull \hbox (badness 1701) in paragraph at lines 490--491
+\TU/LibreBaskerville(0)/m/n/10 populations for all polygenic traits in the GWAS Catalog, and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--459
+Overfull \hbox (302.5121pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 46 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[46]
+Underfull \hbox (badness 1990) in paragraph at lines 507--508
+\TU/LibreBaskerville(0)/m/n/10 associated with 587 traits, a subset of the GWAS Catalog that
+ []
+
+
+Underfull \hbox (badness 2229) in paragraph at lines 507--508
+\TU/LibreBaskerville(0)/m/n/10 Using high-coverage sequence data for 2,504 individuals from
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 507--508
+\TU/LibreBaskerville(0)/m/n/10 GWAS Catalog we calculated the distribution of $[][]$ across all
+ []
+
+[47]
+Overfull \hbox (92.90135pt too wide) in paragraph at lines 515--515
+[][]\TU/LibreBaskerville(0)/m/n/8 “Index of /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/,”
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--515
 \TU/LibreBaskerville(0)/m/n/8 accessed March 24, 2022, []$[][][][] [] [] [] [][][] [] [][][][][][][][][][][] [] [][][] [] [][] [] [][] [] [][][][] [] [][][] [] [][][][] []
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (302.1421pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 48 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
 
-[41]
-Underfull \hbox (badness 1062) in paragraph at lines 469--469
-[][][]\TU/LibreBaskerville(0)/m/n/8 Orestis A. Panagiotou, John P. A. Ioannidis, and Genome-Wide Significance
+[48]
+Underfull \hbox (badness 1062) in paragraph at lines 525--525
+[][]\TU/LibreBaskerville(0)/m/n/8 Orestis A. Panagiotou, John P. A. Ioannidis, and Genome-Wide Significance
+ []
+
+File: figs/fst/0.1_1000_20220314_snp_counts.pdf Graphic file (type pdf)
+<use figs/fst/0.1_1000_20220314_snp_counts.pdf>
+[49]
+Overfull \hbox (303.05211pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 50 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[50]
+Underfull \hbox (badness 1205) in paragraph at lines 541--541
+[][]\TU/LibreBaskerville(0)/m/n/8 Emmanuel Paradis, “Pegas: An R Package for Population Genetics with an
  []
 
 
-Overfull \hbox (302.4921pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 42 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[42]
-Underfull \hbox (badness 1205) in paragraph at lines 479--479
-[][][]\TU/LibreBaskerville(0)/m/n/8 Emmanuel Paradis, “Pegas: An R Package for Population Genetics with an
+Underfull \hbox (badness 1975) in paragraph at lines 553--553
+[][]\TU/LibreBaskerville(0)/m/n/8 W. J. Conover, \TU/LibreBaskerville(0)/m/it/8 Practical Nonparametric Statistics \TU/LibreBaskerville(0)/m/n/8 (John Wiley & Sons, 1999),
  []
 
 
-Underfull \hbox (badness 1975) in paragraph at lines 491--491
-[][][]\TU/LibreBaskerville(0)/m/n/8 W. J. Conover, \TU/LibreBaskerville(0)/m/it/8 Practical Nonparametric Statistics \TU/LibreBaskerville(0)/m/n/8 (John Wiley & Sons, 1999),
- []
-
-
-Underfull \hbox (badness 1776) in paragraph at lines 491--491
+Underfull \hbox (badness 1776) in paragraph at lines 553--553
 \TU/LibreBaskerville(0)/m/it/8 Based on Sample Distribution Function \TU/LibreBaskerville(0)/m/n/8 (SIAM, 1973), []$[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][][] [] [][] []
  []
 
-[43]
-File: figs/fst/20220314_final_0.1_1000.pdf Graphic file (type pdf)
-<use figs/fst/20220314_final_0.1_1000.pdf>
+[51]
+File: figs/fst/0.1_1000_20220314_final.pdf Graphic file (type pdf)
+<use figs/fst/0.1_1000_20220314_final.pdf>
 
-Overfull \hbox (302.1821pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 44 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+Overfull \hbox (302.0721pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 52 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
-[44] [45]
-Overfull \hbox (302.7621pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 46 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+[52] [53]
+Underfull \vbox (badness 1817) has occurred while \output is active []
+
+
+Overfull \hbox (301.7621pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 54 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
-[46
+[54] [55]
+Overfull \hbox (302.3421pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 56 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[56
 
 ]
-Underfull \hbox (badness 2189) in paragraph at lines 526--528
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 17.70753pt on input line 604.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 17.70929pt on input line 604.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 17.70576pt on input line 604.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 605.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 605.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 605.
+
+File: figs/fst/0.1_1000_20220314_ecdf_all_faceted_with_controls_d_rank_long.pdf Graphic file (type pdf)
+<use figs/fst/0.1_1000_20220314_ecdf_all_faceted_with_controls_d_rank_long.pdf>
+[57]
+Overfull \hbox (301.9721pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 58 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[58
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 622--624
+[]\TU/LibreBaskerville(0)/m/n/10 Adhikari, Kaustubh, Javier Mendoza-Revilla, Anood Sohail,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--624
+\TU/LibreBaskerville(0)/m/n/10 Macarena Fuentes-Guajardo, Jodie Lampert, Juan Camilo
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 622--624
+\TU/LibreBaskerville(0)/m/n/10 Chac’on-Duque, Malena Hurtado, et al. “A GWAS in Latin
+ []
+
+
+Underfull \hbox (badness 3989) in paragraph at lines 631--633
+[]\TU/LibreBaskerville(0)/m/n/10 Berg, Jeremy J, Arbel Harpak, Nasa Sinnott-Armstrong, Anja
+ []
+
+
+Underfull \hbox (badness 4995) in paragraph at lines 631--633
+\TU/LibreBaskerville(0)/m/n/10 Mark I McCarthy, Magnus Nordborg, Nicholas H Barton,
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 631--633
+\TU/LibreBaskerville(0)/m/n/10 and Joachim Hermisson. \TU/LibreBaskerville(0)/b/it/10 eLife \TU/LibreBaskerville(0)/m/n/10 8 (March 21, 2019): e39725.
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 637--639
+[]\TU/LibreBaskerville(0)/m/n/10 Bien, Stephanie A., Genevieve L. Wojcik, Chani J. Hodonsky,
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 637--639
+\TU/LibreBaskerville(0)/m/n/10 Christopher R. Gignoux, Iona Cheng, Tara C. Matise, Ul-
+ []
+
+
+Underfull \hbox (badness 4291) in paragraph at lines 637--639
+\TU/LibreBaskerville(0)/m/n/10 rike Peters, Eimear E. Kenny, and Kari E. North. “The
+ []
+
+
+Underfull \hbox (badness 4582) in paragraph at lines 637--639
+\TU/LibreBaskerville(0)/m/n/10 Future of Genomic Studies Must Be Globally Representa-
+ []
+
+
+Underfull \hbox (badness 4899) in paragraph at lines 637--639
+\TU/LibreBaskerville(0)/m/n/10 tive: Perspectives from PAGE.” \TU/LibreBaskerville(0)/b/it/10 Annual Review of Genomics
+ []
+
+
+Underfull \hbox (badness 1803) in paragraph at lines 637--639
+\TU/LibreBaskerville(0)/b/it/10 and Human Genetics \TU/LibreBaskerville(0)/m/n/10 20, no. 1 (August 31, 2019): 181–200.
+ []
+
+[59]
+Underfull \hbox (badness 2189) in paragraph at lines 640--642
 []\TU/LibreBaskerville(0)/m/n/10 Chang, Christopher C, Carson C Chow, Laurent CAM Tellier,
  []
 
 
-Underfull \hbox (badness 3396) in paragraph at lines 526--528
+Underfull \hbox (badness 3396) in paragraph at lines 640--642
 \TU/LibreBaskerville(0)/m/n/10 Generation PLINK: Rising to the Challenge of Larger and
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 526--528
-\TU/LibreBaskerville(0)/m/n/10 Richer Datasets.” \TU/LibreBaskerville(0)/m/it/10 GigaScience \TU/LibreBaskerville(0)/m/n/10 4, no. 1 (December 2015): 7.
+Underfull \hbox (badness 1168) in paragraph at lines 640--642
+\TU/LibreBaskerville(0)/m/n/10 Richer Datasets.” \TU/LibreBaskerville(0)/b/it/10 GigaScience \TU/LibreBaskerville(0)/m/n/10 4, no. 1 (December 2015): 7.
  []
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 541--543
-[]\TU/LibreBaskerville(0)/m/n/10 Durbin, J. \TU/LibreBaskerville(0)/m/it/10 Distribution Theory for Tests Based on Sample Distri-
+Underfull \hbox (badness 1348) in paragraph at lines 652--654
+[]\TU/LibreBaskerville(0)/m/n/10 Domingue, Benjamin W., Daniel W. Belsky, Jason M. Fletcher,
  []
 
 
-Underfull \hbox (badness 2941) in paragraph at lines 541--543
-\TU/LibreBaskerville(0)/m/it/10 bution Function\TU/LibreBaskerville(0)/m/n/10 . SIAM, 1973. []$[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][][] [] [][] []
+Underfull \hbox (badness 3849) in paragraph at lines 658--660
+[]\TU/LibreBaskerville(0)/m/n/10 Durbin, J. \TU/LibreBaskerville(0)/b/it/10 Distribution Theory for Tests Based on Sample Distri-
  []
 
 
-Underfull \vbox (badness 2698) has occurred while \output is active []
+Underfull \hbox (badness 2941) in paragraph at lines 658--660
+\TU/LibreBaskerville(0)/b/it/10 bution Function\TU/LibreBaskerville(0)/m/n/10 . SIAM, 1973. []$[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][][] [] [][] []
+ []
 
-[47]
-Overfull \hbox (109.13666pt too wide) in paragraph at lines 562--564
+
+Overfull \hbox (303.80211pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 60 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[60]
+Underfull \hbox (badness 3386) in paragraph at lines 679--681
+[]\TU/LibreBaskerville(0)/m/n/10 Gros, Pierre-Alexis, Herv’e Le Nagard, and Olivier Tenaillon.
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 679--681
+\TU/LibreBaskerville(0)/m/n/10 “The Evolution of Epistasis and Its Links With Genetic Ro-
+ []
+
+
+Underfull \hbox (badness 3439) in paragraph at lines 679--681
+\TU/LibreBaskerville(0)/m/n/10 bustness, Complexity and Drift in a Phenotypic Model of
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 679--681
+\TU/LibreBaskerville(0)/m/n/10 Adaptation.” \TU/LibreBaskerville(0)/b/it/10 Genetics \TU/LibreBaskerville(0)/m/n/10 182, no. 1 (May 1, 2009): 277–93.
+ []
+
+[61]
+Overfull \hbox (109.13666pt too wide) in paragraph at lines 694--696
 []\TU/LibreBaskerville(0)/m/n/10 “Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple_alignments/50_fish.epo/.”
  []
 
 
-Overfull \hbox (184.29666pt too wide) in paragraph at lines 565--567
+Overfull \hbox (184.29666pt too wide) in paragraph at lines 697--699
 []\TU/LibreBaskerville(0)/m/n/10 “Index of /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/.”
  []
 
 
-Underfull \hbox (badness 7869) in paragraph at lines 565--567
+Underfull \hbox (badness 7869) in paragraph at lines 697--699
 \TU/LibreBaskerville(0)/m/n/10 Accessed March 24, 2022. []$[][][][] [] [] [] [][][] [] [][][][][][][][][][][] [] [][][] [] [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 565--567
+Underfull \hbox (badness 10000) in paragraph at lines 697--699
 [][] [] [][][][] [] [][][] [] [][][][] [] [][][][][][][][][][][] [] [][][][][] [] [][][][] [] [][][][] [] [][][][][][][][] []
  []
 
 
-Underfull \hbox (badness 2932) in paragraph at lines 571--573
+Underfull \hbox (badness 2932) in paragraph at lines 703--705
 []\TU/LibreBaskerville(0)/m/n/10 Katsumura, Takafumi, Shoji Oda, Hiroshi Mitani, and Hiroki
  []
 
 
-Underfull \hbox (badness 2856) in paragraph at lines 571--573
+Underfull \hbox (badness 2856) in paragraph at lines 703--705
 \TU/LibreBaskerville(0)/m/n/10 Oota. “Medaka Population Genome Structure and Demo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 571--573
+Underfull \hbox (badness 10000) in paragraph at lines 703--705
 \TU/LibreBaskerville(0)/m/n/10 graphic History Described via Genotyping-by-Sequencing.”
  []
 
 
-Underfull \hbox (badness 3209) in paragraph at lines 574--576
+Underfull \hbox (badness 3209) in paragraph at lines 706--708
 \TU/LibreBaskerville(0)/m/n/10 salainen, Aki S. Havulinna, Ida Surakka, Aarno Palotie, et
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 574--576
+Underfull \hbox (badness 1270) in paragraph at lines 706--708
 \TU/LibreBaskerville(0)/m/n/10 al. “Geographic Variation and Bias in the Polygenic Scores
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 574--576
-\TU/LibreBaskerville(0)/m/n/10 of Complex Diseases and Traits in Finland.” \TU/LibreBaskerville(0)/m/it/10 The American
+Underfull \hbox (badness 1953) in paragraph at lines 706--708
+\TU/LibreBaskerville(0)/m/n/10 of Complex Diseases and Traits in Finland.” \TU/LibreBaskerville(0)/b/it/10 The American
  []
 
 
-Overfull \hbox (302.3921pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 48 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[48]
-Underfull \hbox (badness 3930) in paragraph at lines 577--579
+Underfull \hbox (badness 3930) in paragraph at lines 709--711
 \TU/LibreBaskerville(0)/m/n/10 Carolina Roselli, Seung Hoan Choi, Pradeep Natarajan, et
  []
 
 
-Underfull \hbox (badness 1609) in paragraph at lines 577--579
+Underfull \hbox (badness 1609) in paragraph at lines 709--711
 \TU/LibreBaskerville(0)/m/n/10 al. “Genome-Wide Polygenic Scores for Common Diseases
  []
 
 
-Underfull \hbox (badness 1348) in paragraph at lines 586--588
+Overfull \hbox (302.8221pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 62 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[62]
+Underfull \hbox (badness 1348) in paragraph at lines 721--723
 []\TU/LibreBaskerville(0)/m/n/10 Lek, Monkol, Konrad J. Karczewski, Eric V. Minikel, Kaitlin E.
  []
 
 
-Underfull \hbox (badness 1609) in paragraph at lines 589--591
+Underfull \hbox (badness 1609) in paragraph at lines 724--726
 \TU/LibreBaskerville(0)/m/n/10 of Germination Efficiency in Maize in Relation to Nitrogen
  []
 
 
-Underfull \hbox (badness 2119) in paragraph at lines 589--591
+Underfull \hbox (badness 2119) in paragraph at lines 724--726
 \TU/LibreBaskerville(0)/m/n/10 Metabolism Reveals the Importance of Cytosolic Glutamine
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 592--594
+Underfull \hbox (badness 1616) in paragraph at lines 727--729
 \TU/LibreBaskerville(0)/m/n/10 M. Gaudet, Roger L. Milne, Fredrick R. Schumacher, et al.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--594
+Underfull \hbox (badness 10000) in paragraph at lines 727--729
 \TU/LibreBaskerville(0)/m/n/10 “Breast Cancer Risk From Modifiable and Nonmodifiable
  []
 
 
-Underfull \hbox (badness 4391) in paragraph at lines 592--594
+Underfull \hbox (badness 4391) in paragraph at lines 727--729
 \TU/LibreBaskerville(0)/m/n/10 Risk Factors Among White Women in the United States.”
  []
 
 
-Underfull \hbox (badness 3861) in paragraph at lines 592--594
-\TU/LibreBaskerville(0)/m/it/10 JAMA Oncology \TU/LibreBaskerville(0)/m/n/10 2, no. 10 (October 1, 2016): 1295–1302.
+Underfull \hbox (badness 3861) in paragraph at lines 727--729
+\TU/LibreBaskerville(0)/b/it/10 JAMA Oncology \TU/LibreBaskerville(0)/m/n/10 2, no. 10 (October 1, 2016): 1295–1302.
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 595--597
+Underfull \hbox (badness 1845) in paragraph at lines 730--732
 \TU/LibreBaskerville(0)/m/n/10 NHGRI-EBI Catalog of Published Genome-Wide Association
  []
 
-
-Underfull \hbox (badness 1005) in paragraph at lines 598--600
+[63]
+Underfull \hbox (badness 1005) in paragraph at lines 733--735
 \TU/LibreBaskerville(0)/m/n/10 Phenotype Map: Lessons from the Drosophila Melanogaster
  []
 
-[49]
-Underfull \hbox (badness 2582) in paragraph at lines 604--606
-[]\TU/LibreBaskerville(0)/m/n/10 Martin, Alicia R., Christopher R. Gignoux, Raymond K. Wal-
+
+Underfull \hbox (badness 1226) in paragraph at lines 739--741
+[]\TU/LibreBaskerville(0)/m/n/10 Martin, Alicia R, Christopher R Gignoux, Raymond K Walters,
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 604--606
-\TU/LibreBaskerville(0)/m/n/10 Mark J. Daly, Carlos D. Bustamante, and Eimear E. Kenny.
- []
-
-
-Underfull \hbox (badness 7151) in paragraph at lines 604--606
-\TU/LibreBaskerville(0)/m/n/10 “Human Demographic History Impacts Genetic Risk Pre-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 604--606
-\TU/LibreBaskerville(0)/m/n/10 diction Across Diverse Populations.” \TU/LibreBaskerville(0)/m/it/10 The American Jour-
- []
-
-
-Underfull \hbox (badness 1902) in paragraph at lines 604--606
-\TU/LibreBaskerville(0)/m/it/10 nal of Human Genetics \TU/LibreBaskerville(0)/m/n/10 100, no. 4 (April 6, 2017): 635–49.
- []
-
-
-Underfull \hbox (badness 1067) in paragraph at lines 607--609
+Underfull \hbox (badness 1067) in paragraph at lines 742--744
 []\TU/LibreBaskerville(0)/m/n/10 Martin, Alicia R., Masahiro Kanai, Yoichiro Kamatani, Yukinori
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 607--609
-\TU/LibreBaskerville(0)/m/n/10 parities.” \TU/LibreBaskerville(0)/m/it/10 Nature Genetics \TU/LibreBaskerville(0)/m/n/10 51, no. 4, 4 (April 2019): 584–91.
+Underfull \hbox (badness 1038) in paragraph at lines 742--744
+\TU/LibreBaskerville(0)/m/n/10 parities.” \TU/LibreBaskerville(0)/b/it/10 Nature Genetics \TU/LibreBaskerville(0)/m/n/10 51, no. 4, 4 (April 2019): 584–91.
  []
 
 
-Underfull \hbox (badness 3525) in paragraph at lines 610--612
-[]\TU/LibreBaskerville(0)/m/n/10 martin, Simon. \TU/LibreBaskerville(0)/m/it/10 Simonhmartin/Genomics_general\TU/LibreBaskerville(0)/m/n/10 , 2022. []$[][][][][] []
+Underfull \hbox (badness 3525) in paragraph at lines 748--750
+[]\TU/LibreBaskerville(0)/m/n/10 martin, Simon. \TU/LibreBaskerville(0)/b/it/10 Simonhmartin/Genomics_general\TU/LibreBaskerville(0)/m/n/10 , 2022. []$[][][][][] []
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 628--630
+Overfull \hbox (302.5121pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 64 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[64]
+Underfull \hbox (badness 1946) in paragraph at lines 769--771
 []\TU/LibreBaskerville(0)/m/n/10 Natarajan, Pradeep, Robin Young, Nathan O. Stitziel, Sandosh
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 628--630
+Underfull \hbox (badness 10000) in paragraph at lines 769--771
 \TU/LibreBaskerville(0)/m/n/10 Padmanabhan, Usman Baber, Roxana Mehran, Samantha
  []
 
 
-Underfull \hbox (badness 4518) in paragraph at lines 628--630
+Underfull \hbox (badness 4518) in paragraph at lines 769--771
 \TU/LibreBaskerville(0)/m/n/10 Sartori, et al. “Polygenic Risk Score Identifies Subgroup
  []
 
 
-Underfull \hbox (badness 4686) in paragraph at lines 628--630
+Underfull \hbox (badness 4686) in paragraph at lines 769--771
 \TU/LibreBaskerville(0)/m/n/10 With Higher Burden of Atherosclerosis and Greater Rela-
  []
 
 
-Overfull \hbox (303.30211pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 50 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[50]
-Underfull \hbox (badness 1297) in paragraph at lines 658--660
-[]\TU/LibreBaskerville(0)/m/n/10 Purcell, Shaun M, and Christopher C Chang. \TU/LibreBaskerville(0)/m/it/10 PLINK 1.9\TU/LibreBaskerville(0)/m/n/10 , n.d.
+Underfull \hbox (badness 2961) in paragraph at lines 772--774
+[]\TU/LibreBaskerville(0)/m/n/10 Okbay, Aysu, Yeda Wu, Nancy Wang, Hariharan Jayashankar,
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 661--663
+Underfull \hbox (badness 1237) in paragraph at lines 772--774
+\TU/LibreBaskerville(0)/m/n/10 “Polygenic Prediction of Educational Attainment Within and
+ []
+
+[65]
+Overfull \hbox (303.0921pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 66 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[66]
+Underfull \hbox (badness 1297) in paragraph at lines 808--810
+[]\TU/LibreBaskerville(0)/m/n/10 Purcell, Shaun M, and Christopher C Chang. \TU/LibreBaskerville(0)/b/it/10 PLINK 1.9\TU/LibreBaskerville(0)/m/n/10 , n.d.
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 811--813
 \TU/LibreBaskerville(0)/m/n/10 Jacqueline Philouze. “Efficiency of RFLP, RAPD, and AFLP
  []
 
-[51]
-Underfull \hbox (badness 3138) in paragraph at lines 679--681
+[67]
+Underfull \hbox (badness 3138) in paragraph at lines 835--837
 []\TU/LibreBaskerville(0)/m/n/10 Smigielski, Elizabeth M., Karl Sirotkin, Minghong Ward, and
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 685--687
+Underfull \hbox (badness 2435) in paragraph at lines 841--843
 []\TU/LibreBaskerville(0)/m/n/10 Svenson, Karen L, Daniel M Gatti, William Valdar, Catherine
  []
 
 
-Underfull \hbox (badness 2538) in paragraph at lines 685--687
+Underfull \hbox (badness 2538) in paragraph at lines 841--843
 \TU/LibreBaskerville(0)/m/n/10 Genetic Mapping Using the Mouse Diversity Outbred Pop-
  []
 
 
-Underfull \hbox (badness 2443) in paragraph at lines 685--687
-\TU/LibreBaskerville(0)/m/n/10 ulation.” \TU/LibreBaskerville(0)/m/it/10 Genetics \TU/LibreBaskerville(0)/m/n/10 190, no. 2 (February 1, 2012): 437–47.
+Underfull \hbox (badness 2443) in paragraph at lines 841--843
+\TU/LibreBaskerville(0)/m/n/10 ulation.” \TU/LibreBaskerville(0)/b/it/10 Genetics \TU/LibreBaskerville(0)/m/n/10 190, no. 2 (February 1, 2012): 437–47.
  []
 
 
-Underfull \hbox (badness 3646) in paragraph at lines 688--690
+Underfull \hbox (badness 3646) in paragraph at lines 844--846
 []\TU/LibreBaskerville(0)/m/n/10 “The $11.9 Trillion Global Healthcare Market: Key Opportu-
  []
 
 
-Underfull \hbox (badness 3942) in paragraph at lines 688--690
+Underfull \hbox (badness 3942) in paragraph at lines 844--846
 \TU/LibreBaskerville(0)/m/n/10 nities & Strategies (2014-2022) - ResearchAndMarkets.com,”
  []
 
 
-Underfull \hbox (badness 6526) in paragraph at lines 688--690
+Underfull \hbox (badness 6526) in paragraph at lines 844--846
 \TU/LibreBaskerville(0)/m/n/10 June 25, 2019. []$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][] [] [][][] [] [][][][] [] [][][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 688--690
+Underfull \hbox (badness 10000) in paragraph at lines 844--846
 [][][][][][][][][][][][][][] [] [][] [] [][][] [][] [][] [] [] [][] [][][][][][][][] [][] [][][][][][] [][] [][][][][][][][][][] [][]
  []
 
 
-Overfull \hbox (51.22998pt too wide) in paragraph at lines 688--690
+Overfull \hbox (51.22998pt too wide) in paragraph at lines 844--846
 [][][][][][] [][] [][][] [][] [][][][][][][][][][][][][] [][] [][][][][][][][][][] [][] [][][][] [][] [][][][] [][][][][][] [][][][][][][][][][][][][][][][][][] []
  []
 
 
-Overfull \hbox (302.3221pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 52 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+Overfull \hbox (302.7221pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 68 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
-[52]
-Underfull \hbox (badness 1502) in paragraph at lines 697--699
+[68]
+Underfull \hbox (badness 1502) in paragraph at lines 856--858
 \TU/LibreBaskerville(0)/m/n/10 Gusev, Sara Lindström, Stephan Ripke, Giulio Genovese, et
  []
 
-[53] (./PhD-thesis.aux)
+[69]
+Missing character: There is no ∼ (U+223C) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
+
+Overfull \hbox (302.3921pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 70 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[70] (./PhD-thesis.aux)
 Package rerunfilecheck Info: File `PhD-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: BCEF0657EAC4887C821E27478D29ECCD;3391.
+(rerunfilecheck)             Checksum: C20876269AC11851BE7C0EBF7F4225D4;3994.
  ) 
 Here is how much of TeX's memory you used:
- 18812 strings out of 477884
- 343897 string characters out of 5846472
- 986705 words of memory out of 5000000
- 39448 multiletter control sequences out of 15000+600000
- 475830 words of font info for 96 fonts, out of 8000000 for 9000
+ 18906 strings out of 477884
+ 347059 string characters out of 5846472
+ 985447 words of memory out of 5000000
+ 39531 multiletter control sequences out of 15000+600000
+ 476791 words of font info for 102 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 86i,8n,122p,3236b,1705s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,8n,122p,2992b,1703s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on PhD-thesis.pdf (53 pages).
+Output written on PhD-thesis.pdf (70 pages).

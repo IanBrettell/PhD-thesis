@@ -3,7 +3,6 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-  9pt,
 ]{book}
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -17,8 +16,6 @@
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
   \setmainfont[]{Libre Baskerville}
-  \setsansfont[]{Avenir}
-  \setmonofont[]{Andale Mono}
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -100,13 +97,15 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 \usepackage{booktabs}
+\usepackage{setspace}
+\onehalfspacing
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 
 \title{Genetic analysis of quantitative traits in medaka fish and humans}
 \author{Ian Brettell}
-\date{2022-06-15}
+\date{2022-06-16}
 
 \begin{document}
 \maketitle
@@ -116,7 +115,8 @@
 \tableofcontents
 }
 \hypertarget{about}{%
-\chapter{About}\label{about}}
+\chapter*{About}\label{about}}
+\addcontentsline{toc}{chapter}{About}
 
 Code to render PDF:
 
@@ -222,16 +222,16 @@ As you work, you may start a local server to live preview this HTML book. This p
 bookdown::serve_book()
 \end{lstlisting}
 
-\hypertarget{introduction}{%
-\chapter{Introduction}\label{introduction}}
+\hypertarget{Introduction}{%
+\chapter{Introduction}\label{Introduction}}
 
 \hypertarget{a-brief-history-of-genetics}{%
 \section{A brief history of genetics}\label{a-brief-history-of-genetics}}
 
+Humankind has long sought to understand the basis of biological variation. What gives rise to the wondrous variety of life forms on Earth? Why do individuals of a particular species differ from one another? How do children inherit traits that are similar to those of their parents, yet on the whole remain distinct from both their parents and their siblings? And are the traits we care about -- our health, our intelligence, our ability to thrive in a changing world -- pre-determined from birth, or continuously pliable throughout our lives?
+
 \hypertarget{ancient-greece}{%
 \subsection{Ancient Greece}\label{ancient-greece}}
-
-Humankind has long sought to understand the basis of biological variation. What gives rise to the wondrous variety of life forms on Earth? Why do individuals of a particular species differ from one another? How do children inherit traits that are similar to those of their parents, yet on the whole remain distinct from both their parents and their siblings? And are the traits we care about -- our health, our intelligence, our ability to thrive in a changing world -- pre-determined from birth, or continuously pliable throughout our lives?
 
 Around 500 BC, the Ancient Grecian Pythagoras applied his understanding of triangles to this question, proposing the theory known as ``spermism''. He posited that hereditary information was passed down from parent to child via male sperm, with the female only providing the nutrients that would allow it to grow, and, like the theorem that bears his name, that these two sides of the ``triangle'' the length of the third side: the characteristics of the child.\footnote{Siddhartha Mukherjee, \emph{The {Gene}: {An Intimate History}} ({Simon and Schuster}, 2016), \url{https://books.google.com?id=XvAsDAAAQBAJ}.}
 
@@ -250,6 +250,9 @@ In medieval times, the prevailing theory was that a tiny human -- a homunculus -
 \subsection{Charles Darwin and Gregor Mendel}\label{charles-darwin-and-gregor-mendel}}
 
 In 1831, a young Charles Darwin boarded the HMS \emph{Beagle} to embark on an expedition to collect specimens from South America. After collecting a huge number of fossils from the along the eastern coast and shipping them back to England, the \emph{Beagle} spent 5 weeks touring through the 18 volcanic islands of the Galàpagos, where Darwin collected
+
+\hypertarget{breeding-programs-in-agriculture}{%
+\subsection{Breeding programs in agriculture}\label{breeding-programs-in-agriculture}}
 
 \hypertarget{MIKK-genomes-chap}{%
 \chapter{Genomic variations in the MIKK panel}\label{MIKK-genomes-chap}}
@@ -394,91 +397,148 @@ Taken together, these analyses show that the MIKK panel is highly homozygous, wi
 \hypertarget{Fst-chap}{%
 \chapter{Variation in the frequency of trait-associated alleles across global human populations}\label{Fst-chap}}
 
-In this chapter I illustrate the distribution of \(F_{ST}\) scores for loci associated with 587 traits, a subset of the GWAS Catalog which passed our criteria for suitable polygenic traits (Methods). Our analysis is empirical, in that we do not explicitly formulate a statistical test for drift or selection, differential or otherwise. Using high-coverage sequence data for 2,504 individuals from the 1000 Genomes Project phase 3 release, for each trait in the GWAS Catalog we calculated the distribution of \(F_{ST}\) across all approximately-unlinked SNPs associated with it (trait SNPs), and compared these \(F_{ST}\) distributions with the \(F_{ST}\) distributions of random-selected SNPs that were matched to the trait SNPs by their allele frequencies in European populations (control SNPs). Our results show that traits related to the physical correlates of ``race'' (such as skin-pigmentation, eye colour, and hair shape) tend to have relatively high \(F_{ST}\) values -- signifying relatively high variance in allele frequencies between populations -- whereas traits related to intelligence (such as self-reported EA, mathematical ability, and cognitive function measurement) tend to have lower \(F_{ST}\) values that are similar to those of most polygenic traits such as height and body mass index.
+\hypertarget{Fst-background}{%
+\section{Background}\label{Fst-background}}
 
-\hypertarget{background}{%
-\section{Background}\label{background}}
+Humans have long sought to use genetic information to predict an individual's likely value for a given trait, in our own species and for other organisms (Chapter \ref{Introduction}). As seen in previous chapters, an individual's phenotypic value at a given point in time is the product of complex interactions between their genome and their environment, beginning from embryonic development and continuing throughout their lifetimes.
 
-\hypertarget{polygenic-risk-scores-prs-and-genome-wide-association-studies-gwas}{%
-\subsection{Polygenic Risk Scores (PRS) and Genome-Wide Association Studies (GWAS)}\label{polygenic-risk-scores-prs-and-genome-wide-association-studies-gwas}}
+It is now clear that ``complex'' traits such as height, intelligence, and behaviour are highly polygenic, meaning that they are genetically influenced by hundreds or thousands of genetic variants, each exerting a small effect in one or the other direction along the trait's spectrum.\footnote{G. Sella and N. Barton, {``Thinking {About} the {Evolution} of {Complex Traits} in the {Era} of {Genome-Wide Association Studies}.''} \emph{Annual Review of Genomics and Human Genetics}, 2019, \url{https://doi.org/10.1146/annurev-genom-083115-022316}.}
 
-As seen in previous chapters, an individual's phenotypic value at a given point in time is the product of complex interactions between their genome and their environment, accumulating during their initial development and continuing throughout their lifetimes.
+A richer understanding of the cumulative effect of genetic variants on any trait allows for the prediction of the value that an individual is most likely to have for that trait. Of all human traits, diseases are particularly salient; in 2018, the global healthcare industry was valued at US\$8 trillion, and predicted to increase to US\$12 trillion by 2022.\footnote{{``The \$11.9 {Trillion Global Healthcare Market}: {Key Opportunities} \& {Strategies} (2014-2022) - {ResearchAndMarkets}.com,''} June 25, 2019, \url{https://www.businesswire.com/news/home/20190625005862/en/The-11.9-Trillion-Global-Healthcare-Market-Key-Opportunities-Strategies-2014-2022---ResearchAndMarkets.com}.} This strong financial imperative complements the moral imperative to reduce suffering, together driving the question of how to use genetic information to improve human health.
 
-A richer understanding of the cumulative effect of genetic variants on any trait allows for the prediction of the value that an individual is most likely to have for that trait. Of all human traits, diseases are particularly salient -- in 2018, the global healthcare industry was valued at US\$8 trillion, and predicted to increase to US\$12 trillion by 2022.\footnote{{``The \$11.9 {Trillion Global Healthcare Market}: {Key Opportunities} \& {Strategies} (2014-2022) - {ResearchAndMarkets}.com,''} June 25, 2019, \url{https://www.businesswire.com/news/home/20190625005862/en/The-11.9-Trillion-Global-Healthcare-Market-Key-Opportunities-Strategies-2014-2022---ResearchAndMarkets.com}.} This strong financial imperative complements the moral imperative to reduce suffering, together driving many to determine how to use genetic information to improve human health.
+Recent technological developments have made it possible to sequence human genomes at scale, and it is thought that by combining detailed genetic information with with other environmental and phenotypic information (such as lifestyle or clinical factors), clinicians could move towards the practice of ``precision medicine'', where interventions could be tailored to their patients' unique risk profiles.\footnote{Naomi R. Wray, Michael E. Goddard, and Peter M. Visscher, {``Prediction of Individual Genetic Risk to Disease from Genome-Wide Association Studies,''} \emph{Genome Research} 17, no. 10 (January 10, 2007): 1520--28, \url{https://doi.org/10.1101/gr.6665407}.} The use of genetic information to predict individuals' values for a trait of interest entails the construction of metrics known as ``polygenic scores'' (\textbf{PGS}). When the trait is a disease, PGS is commonly known as polygenic risk scores (\textbf{PRS}), or genetic risk profiling, but I will use the term PGS to encompass both disease and non-disease traits.
 
-Once it became possible to sequence human genomes at scale, researchers have sought to use genetic information to predict an individual's likely value for a given trait.\footnote{Naomi R. Wray, Michael E. Goddard, and Peter M. Visscher, {``Prediction of Individual Genetic Risk to Disease from Genome-Wide Association Studies,''} \emph{Genome Research} 17, no. 10 (January 10, 2007): 1520--28, \url{https://doi.org/10.1101/gr.6665407}.} It is thought that by combining genetic information with with other environmental and phenotypic information, clinicians could work towards applying ``precision medicine'', where their patients' medications, diet, and other lifestyle factors could be tailored to their unique needs. The genetic component of this pursuit is now commonly known as polygenic risk scores (\textbf{PRS}), also known as genetic risk profiling, which seeks to predict the likelihood of a given trait based on an individual's genomic variants. To date, PRS studies have shown reliable yet modest improvement above clinical models to predictions for a variety of health-related traits including blood pressure, breast cancer,\footnote{Paige Maas et al., {``Breast {Cancer Risk From Modifiable} and {Nonmodifiable Risk Factors Among White Women} in the {United States},''} \emph{JAMA Oncology} 2, no. 10 (October 1, 2016): 1295--1302, \url{https://doi.org/10.1001/jamaoncol.2016.1025}.} prostate cancer,,\footnote{Fredrick R. Schumacher et al., {``Association Analyses of More Than 140,000 Men Identify 63 New Prostate Cancer Susceptibility Loci,''} \emph{Nature Genetics} 50, no. 7, 7 (July 2018): 928--36, \url{https://doi.org/10.1038/s41588-018-0142-8}.} type I diabetes.\footnote{Seth A. Sharp et al., {``Development and {Standardization} of an {Improved Type} 1 {Diabetes Genetic Risk Score} for {Use} in {Newborn Screening} and {Incident Diagnosis},''} \emph{Diabetes Care} 42, no. 2 (January 11, 2019): 200--207, \url{https://doi.org/10.2337/dc18-1785}.}
+\hypertarget{polygenic-scores-pgs-and-genome-wide-association-studies-gwas}{%
+\subsection{Polygenic Scores (PGS) and Genome-Wide Association Studies (GWAS)}\label{polygenic-scores-pgs-and-genome-wide-association-studies-gwas}}
 
-PRS scores can further be combined with lifestyle and clinical factors to more accurately predict the risk of cardiovascular disease.\footnote{Amit V. Khera et al., {``Genome-Wide Polygenic Scores for Common Diseases Identify Individuals with Risk Equivalent to Monogenic Mutations,''} \emph{Nature Genetics} 50, no. 9, 9 (September 2018): 1219--24, \url{https://doi.org/10.1038/s41588-018-0183-z}; Iftikhar J. Kullo et al., {``Incorporating a {Genetic Risk Score Into Coronary Heart Disease Risk Estimates},''} \emph{Circulation} 133, no. 12 (March 22, 2016): 1181--88, \url{https://doi.org/10.1161/CIRCULATIONAHA.115.020109}; Pradeep Natarajan et al., {``Polygenic {Risk Score Identifies Subgroup With Higher Burden} of {Atherosclerosis} and {Greater Relative Benefit From Statin Therapy} in the {Primary Prevention Setting},''} \emph{Circulation} 135, no. 22 (May 30, 2017): 2091--101, \url{https://doi.org/10.1161/CIRCULATIONAHA.116.024436}; Martine Paquette et al., {``Polygenic Risk Score Predicts Prevalence of Cardiovascular Disease in Patients with Familial Hypercholesterolemia,''} \emph{Journal of Clinical Lipidology} 11, no. 3 (May 1, 2017): 725--732.e5, \url{https://doi.org/10.1016/j.jacl.2017.03.019}; Emmi Tikkanen et al., {``Genetic {Risk Prediction} and a 2-{Stage Risk Screening Strategy} for {Coronary Heart Disease},''} \emph{Arteriosclerosis, Thrombosis, and Vascular Biology} 33, no. 9 (September 2013): 2261--66, \url{https://doi.org/10.1161/ATVBAHA.112.301120}.}
+\hypertarget{pgs}{%
+\subsubsection{PGS}\label{pgs}}
 
-The scores are calculated by summing the trait-associated alleles identified through genome-wide association studies (\textbf{GWAS}), weighted by the alleles' effect sizes.\footnote{L. Duncan et al., {``Analysis of Polygenic Risk Score Usage and Performance in Diverse Human Populations,''} \emph{Nature Communications} 10, no. 1, 1 (July 25, 2019): 3328, \url{https://doi.org/10.1038/s41467-019-11112-0}.} However, most GWAS have been performed with individuals of European ancestry. Although the proportion of participants in GWAS from a non-European background is increasing (from 4\% in 20019 to 16 \% in 2016),\footnote{Alice B. Popejoy and Stephanie M. Fullerton, {``Genomics Is Failing on Diversity,''} \emph{Nature} 538, no. 7624, 7624 (October 2016): 161--64, \url{https://doi.org/10.1038/538161a}.} as of 2019, 79\% of all GWAS participants recorded in the GWAS Catalog were of European ancestry.\footnote{Alicia R. Martin, Masahiro Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities,''} \emph{Nature Genetics} 51, no. 4, 4 (April 2019): 584--91, \url{https://doi.org/10.1038/s41588-019-0379-x}.} The consequence of this is that PRS scores are far better at predicting disease risk in individuals of European ancestry.\footnote{Alicia R. Martin, Christopher R. Gignoux, et al., {``Human {Demographic History Impacts Genetic Risk Prediction} Across {Diverse Populations},''} \emph{The American Journal of Human Genetics} 100, no. 4 (April 6, 2017): 635--49, \url{https://doi.org/10.1016/j.ajhg.2017.03.004}; Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} For example, Martin, Gignoux, et al.\footnote{{``Human {Demographic History Impacts Genetic Risk Prediction} Across {Diverse Populations}.''}} found that height was predicted to decrease with genetic distance from Europeans, despite robust evidence that West Africans are as tall as Europeans on average. Indeed, the predictive accuracy of PRS scores decays with genetic divergence of the GWAS ``independent'' or ``test'' sample from the ``discovery'' - or ``training'' - sample, as established in both humans,\footnote{Martin, Gignoux, et al.; Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} and livestock.\footnote{Samuel A. Clark et al., {``The Importance of Information on Relatives for the Prediction of Genomic Breeding Values and the Implications for the Makeup of Reference Data Sets in Livestock Breeding Schemes,''} \emph{Genetics Selection Evolution} 44, no. 1 (February 9, 2012): 4, \url{https://doi.org/10.1186/1297-9686-44-4}; David Habier et al., {``The Impact of Genetic Relationship Information on Genomic Breeding Values in {German Holstein} Cattle,''} \emph{Genetics Selection Evolution} 42, no. 1 (February 19, 2010): 5, \url{https://doi.org/10.1186/1297-9686-42-5}; M. Pszczola et al., {``Reliability of Direct Genomic Values for Animals with Different Relationships Within and to the Reference Population,''} \emph{Journal of Dairy Science} 95, no. 1 (January 1, 2012): 389--400, \url{https://doi.org/10.3168/jds.2011-4338}.}
+PGS using genetic information alone show modest yet reliable accuracy for the prediction of complex traits:\footnote{Alicia R. Martin, Masahiro Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities,''} \emph{Nature Genetics} 51, no. 4, 4 (April 2019): 584--91, \url{https://doi.org/10.1038/s41588-019-0379-x}.} the correlations between PGS and the trait value as measured by \(R^2\) have reached 0.24 for height,\footnote{Loic Yengo et al., {``Meta-Analysis of Genome-Wide Association Studies for Height and Body Mass Index in ∼700000 Individuals of {European} Ancestry,''} \emph{Human Molecular Genetics} 27, no. 20 (October 15, 2018): 3641--49, \url{https://doi.org/10.1093/hmg/ddy271}.} and 0.12-0.16 for educational attainment.\footnote{Aysu Okbay et al., {``Polygenic Prediction of Educational Attainment Within and Between Families from Genome-Wide Association Analyses in 3 Million Individuals,''} \emph{Nature Genetics}, March 31, 2022, 1--13, \url{https://doi.org/10.1038/s41588-022-01016-z}.} For a variety of health-related traits, PGS improve predictions beyond non-genetic clinical models -- these traits include blood pressure, breast cancer,\footnote{Paige Maas et al., {``Breast {Cancer Risk From Modifiable} and {Nonmodifiable Risk Factors Among White Women} in the {United States},''} \emph{JAMA Oncology} 2, no. 10 (October 1, 2016): 1295--1302, \url{https://doi.org/10.1001/jamaoncol.2016.1025}.} prostate cancer,,\footnote{Fredrick R. Schumacher et al., {``Association Analyses of More Than 140,000 Men Identify 63 New Prostate Cancer Susceptibility Loci,''} \emph{Nature Genetics} 50, no. 7, 7 (July 2018): 928--36, \url{https://doi.org/10.1038/s41588-018-0142-8}.} and type I diabetes.\footnote{Seth A. Sharp et al., {``Development and {Standardization} of an {Improved Type} 1 {Diabetes Genetic Risk Score} for {Use} in {Newborn Screening} and {Incident Diagnosis},''} \emph{Diabetes Care} 42, no. 2 (January 11, 2019): 200--207, \url{https://doi.org/10.2337/dc18-1785}.}
 
-These differences in representation cause PRS scores to have a lower accuracy for individuals of non-European ancestry. For example, compared to PRS scores for those of European ancestry, PRS scores across multiple traits for individuals of African ancestry are \textasciitilde64-78\% less accurate,\footnote{Duncan et al., {``Analysis of Polygenic Risk Score Usage and Performance in Diverse Human Populations''}; Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} and for indiviauls of South-Asian acnestry \textasciitilde37\% less accurace, and \textasciitilde50\% less accurate for individuals of East-Asian ancestry.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}}
+PGS scores can further be combined with lifestyle and clinical factors to improve the accuracy of predictions for diseases such as cardiovascular disease.\footnote{Amit V. Khera et al., {``Genome-Wide Polygenic Scores for Common Diseases Identify Individuals with Risk Equivalent to Monogenic Mutations,''} \emph{Nature Genetics} 50, no. 9, 9 (September 2018): 1219--24, \url{https://doi.org/10.1038/s41588-018-0183-z}; Iftikhar J. Kullo et al., {``Incorporating a {Genetic Risk Score Into Coronary Heart Disease Risk Estimates},''} \emph{Circulation} 133, no. 12 (March 22, 2016): 1181--88, \url{https://doi.org/10.1161/CIRCULATIONAHA.115.020109}; Pradeep Natarajan et al., {``Polygenic {Risk Score Identifies Subgroup With Higher Burden} of {Atherosclerosis} and {Greater Relative Benefit From Statin Therapy} in the {Primary Prevention Setting},''} \emph{Circulation} 135, no. 22 (May 30, 2017): 2091--101, \url{https://doi.org/10.1161/CIRCULATIONAHA.116.024436}; Martine Paquette et al., {``Polygenic Risk Score Predicts Prevalence of Cardiovascular Disease in Patients with Familial Hypercholesterolemia,''} \emph{Journal of Clinical Lipidology} 11, no. 3 (May 1, 2017): 725--732.e5, \url{https://doi.org/10.1016/j.jacl.2017.03.019}; Emmi Tikkanen et al., {``Genetic {Risk Prediction} and a 2-{Stage Risk Screening Strategy} for {Coronary Heart Disease},''} \emph{Arteriosclerosis, Thrombosis, and Vascular Biology} 33, no. 9 (September 2013): 2261--66, \url{https://doi.org/10.1161/ATVBAHA.112.301120}.}
 
-What explains this disparity in predictive value? A number of factors may be responsible including:
+Beyond trait prediction, PGS have also been harnessed by evolutionary biologists to test whether a set of causal variants are evolving across populations or over time. Jeremy J Berg et al.\footnote{{``Reduced Signal for Polygenic Adaptation of Height in {UK Biobank},''} ed. Magnus Nordborg et al., \emph{eLife} 8 (March 21, 2019): e39725, \url{https://doi.org/10.7554/eLife.39725}.} and Michael D Edge and Graham Coop\footnote{{``Reconstructing the {History} of {Polygenic Scores Using Coalescent Trees},''} \emph{Genetics} 211, no. 1 (January 1, 2019): 235--62, \url{https://doi.org/10.1534/genetics.118.301687}.} found that this tends to occur through small, coordinated shifts in their allele frequencies.
+
+\hypertarget{gwas}{%
+\subsubsection{GWAS}\label{gwas}}
+
+PGS are calculated for an individual by summing trait-associated alleles identified by genome-wide association studies (\textbf{GWAS}), as weighted by the alleles' effect sizes.\footnote{L. Duncan et al., {``Analysis of Polygenic Risk Score Usage and Performance in Diverse Human Populations,''} \emph{Nature Communications} 10, no. 1, 1 (July 25, 2019): 3328, \url{https://doi.org/10.1038/s41467-019-11112-0}.} GWAS aim to identify genetic variants associated with traits by comparing the allele frequencies of individuals who share similar ancestries, but differ in the trait in question.\footnote{Emil Uffelmann et al., {``Genome-Wide Association Studies,''} \emph{Nature Reviews Methods Primers} 1, no. 1, 1 (August 26, 2021): 1--21, \url{https://doi.org/10.1038/s43586-021-00056-9}.} As of 2021, over 5,700 GWAS have been performed for more than 3,330 traits.\footnote{Uffelmann et al.}
+
+However, most GWAS have been performed with individuals of European ancestry, despite only constituting 16\% of the present global population. Although the proportion of participants in GWAS from a non-European background increased from 4\% in 2009 to 16 \% in 2016),\footnote{Alice B. Popejoy and Stephanie M. Fullerton, {``Genomics Is Failing on Diversity,''} \emph{Nature} 538, no. 7624, 7624 (October 2016): 161--64, \url{https://doi.org/10.1038/538161a}.} as of 2019, 79\% of all GWAS participants recorded in the GWAS Catalog were of European ancestry, and the proportion of non-European individuals has remained the same or reduced since late 2014.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} This bias extends to PGS studies, where as of 2019, only 67\% of them included only participants of European ancestry, with another 19\% including only East Asian ancestry participants, and only 3.8\% with cohorts of African, Hispanic, or Indigenous ancestry.\footnote{Duncan et al., {``Analysis of Polygenic Risk Score Usage and Performance in Diverse Human Populations.''}}
+
+It is therefore unsurprising that PGS scores are far better at predicting disease risk in individuals of European ancestry than in those of non-European ancestry.\footnote{Alicia R Martin, Christopher R Gignoux, et al., {``Human Demographic History Impacts Genetic Risk Prediction Across Diverse Populations,''} \emph{The American Journal of Human Genetics} 100, no. 4 (2017): 635--49, \url{https://doi.org/10.1016/j.ajhg.2017.03.004}; Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} For example, Martin, Gignoux, et al.\footnote{{``Human Demographic History Impacts Genetic Risk Prediction Across Diverse Populations.''}} found that height was predicted to decrease with genetic distance from Europeans, despite robust evidence that West Africans are as tall as Europeans on average. Indeed, the predictive accuracy of PGS scores decays with genetic divergence of the GWAS ``independent'' or ``test'' sample from the ``discovery'' or ``training'' sample, as established in both humans,\footnote{Martin, Gignoux, et al.; Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} and livestock.\footnote{Samuel A. Clark et al., {``The Importance of Information on Relatives for the Prediction of Genomic Breeding Values and the Implications for the Makeup of Reference Data Sets in Livestock Breeding Schemes,''} \emph{Genetics Selection Evolution} 44, no. 1 (February 9, 2012): 4, \url{https://doi.org/10.1186/1297-9686-44-4}; David Habier et al., {``The Impact of Genetic Relationship Information on Genomic Breeding Values in {German Holstein} Cattle,''} \emph{Genetics Selection Evolution} 42, no. 1 (February 19, 2010): 5, \url{https://doi.org/10.1186/1297-9686-42-5}; M. Pszczola et al., {``Reliability of Direct Genomic Values for Animals with Different Relationships Within and to the Reference Population,''} \emph{Journal of Dairy Science} 95, no. 1 (January 1, 2012): 389--400, \url{https://doi.org/10.3168/jds.2011-4338}.}
+
+These differences in representation cause PGS scores to have a lower accuracy for individuals of non-European ancestry. For example, compared to PGS scores for those of European ancestry, PGS scores across multiple traits for individuals of African ancestry are \textasciitilde64-78\% less accurate,\footnote{Duncan et al., {``Analysis of Polygenic Risk Score Usage and Performance in Diverse Human Populations''}; Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} and for individuals of South-Asian ancestry \textasciitilde37\% less accurate, and \textasciitilde50\% less accurate for individuals of East-Asian ancestry.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}}
+
+\hypertarget{contributors-to-pgs-non-transferability}{%
+\subsection{Contributors to PGS non-transferability}\label{contributors-to-pgs-non-transferability}}
+
+What explains this disparity in predictive value? A number of factors may be responsible, including:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  GWAS neglect causal variants that do not exist within the ``discovery'' sample.\footnote{Martin, Kanai, et al.}
+  The failure of GWAS to identify causal variants that either do not exist or are not identifiable within the ``discovery'' sample.\footnote{Martin, Kanai, et al.}
 \item
-  The sample populations may differ in linkage disequilibrium (\textbf{LD}) -- the correlation structure of the genome -- which would change the estimated effect sizes of the causal variants, even when the causal variants themselves are the same.\footnote{Martin, Kanai, et al.} To illusatrate, if a SNP has an LD \(r^2\) with a causal variant of 0.8 in the discovery population and 0.6 in the target population, it would explain 25\% = (1 - 0.6/0.8) less trait variation in the target population and therefore would be less predictive.\footnote{Ying Wang et al., {``Theoretical and Empirical Quantification of the Accuracy of Polygenic Scores in Ancestry Divergent Populations,''} \emph{Nature Communications} 11, no. 1, 1 (July 31, 2020): 3865, \url{https://doi.org/10.1038/s41467-020-17719-y}.} Differences in effect-size estimates may typically be small for most regions of the genome, but PRS sum across these effects, therefore aggregating these population differences.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} Previous empirical and simulation studies have shown that accruacy of PRS scores decay wtih increased genetic differentation (\(F_{ST}\)) and LD differences between populations.\footnote{Habier et al., {``The Impact of Genetic Relationship Information on Genomic Breeding Values in {German Holstein} Cattle''}; Pszczola et al., {``Reliability of Direct Genomic Values for Animals with Different Relationships Within and to the Reference Population''}; Marco Scutari, Ian Mackay, and David Balding, {``Using {Genetic Distance} to {Infer} the {Accuracy} of {Genomic Prediction},''} \emph{PLOS Genetics} 12, no. 9 (September 2, 2016): e1006288, \url{https://doi.org/10.1371/journal.pgen.1006288}; Wang et al., {``Theoretical and Empirical Quantification of the Accuracy of Polygenic Scores in Ancestry Divergent Populations.''}}
+  The sample populations may differ in linkage disequilibrium (\textbf{LD}) -- the correlation structure of the genome -- which would change the estimated effect sizes of the causal variants, even when the causal variants themselves are the same.\footnote{Martin, Kanai, et al.}
 \item
-  Allele frequencies of the causal variants, and the distribution of the effect sizes of the causal variants, may differ between populations.\footnote{Martin, Gignoux, et al., {``Human {Demographic History Impacts Genetic Risk Prediction} Across {Diverse Populations}''}; Scutari, Mackay, and Balding, {``Using {Genetic Distance} to {Infer} the {Accuracy} of {Genomic Prediction}.''}}
+  Allele frequencies of the causal variants, and the distribution of the effect sizes of the causal variants, may differ between populations.\footnote{Martin, Gignoux, et al., {``Human Demographic History Impacts Genetic Risk Prediction Across Diverse Populations''}; Marco Scutari, Ian Mackay, and David Balding, {``Using {Genetic Distance} to {Infer} the {Accuracy} of {Genomic Prediction},''} \emph{PLOS Genetics} 12, no. 9 (September 2, 2016): e1006288, \url{https://doi.org/10.1371/journal.pgen.1006288}.}
 \item
   The environments and demographies may differ between populations. These differences are often correlated with genetic divergence due to geography, making it difficult to determine whether the associations are driven by the differences between population in their genetics, or their environments.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities''}; Sini Kerminen et al., {``Geographic {Variation} and {Bias} in the {Polygenic Scores} of {Complex Diseases} and {Traits} in {Finland},''} \emph{The American Journal of Human Genetics} 104, no. 6 (June 6, 2019): 1169--81, \url{https://doi.org/10.1016/j.ajhg.2019.05.001}.}
 \end{enumerate}
 
-The first three factors can degrade predictive performance even in the absence of biological and environmental differences, whereas environmental and demographic differences can drive forces of natural selection can in turn drive differences in causal genetic architecture.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}}
+The first three factors can degrade predictive performance even in the absence of biological and environmental differences. On the other hand, environmental and demographic differences can drive forces of natural selection can in turn drive differences in causal genetic architecture.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}}
 
-Differences in LD and allele frequencies between populations can explain 70-80\% of the loss of PRS relative accuracy for traits like body mass index and type 2 diabetes.\footnote{Wang et al., {``Theoretical and Empirical Quantification of the Accuracy of Polygenic Scores in Ancestry Divergent Populations.''}}
+Differences in LD and allele frequencies between populations can explain 70-80\% of the loss of PGS relative accuracy for traits like body mass index and type 2 diabetes.\footnote{Ying Wang et al., {``Theoretical and Empirical Quantification of the Accuracy of Polygenic Scores in Ancestry Divergent Populations,''} \emph{Nature Communications} 11, no. 1, 1 (July 31, 2020): 3865, \url{https://doi.org/10.1038/s41467-020-17719-y}.}
 
-\hypertarget{effect-of-the-environment-on}{%
-\subsection{Effect of the environment on}\label{effect-of-the-environment-on}}
+I discuss each of these factors in turn
 
-\hypertarget{discovery-of-causal-variants}{%
-\subsection{Discovery of causal variants}\label{discovery-of-causal-variants}}
+\hypertarget{fst-discovery-sec}{%
+\subsubsection{Failure to discover causal variants}\label{fst-discovery-sec}}
 
-The power to discover a causal variant through GWAS depends on the variant's effect size and frequency in the study population.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities''}; P. C. Sham et al., {``Power of {Linkage} Versus {Association Analysis} of {Quantitative Traits}, by {Use} of {Variance-Components Models}, for {Sibship Data},''} \emph{The American Journal of Human Genetics} 66, no. 5 (May 1, 2000): 1616--30, \url{https://doi.org/10.1086/302891}.} That is to say, the greater the effect of the variant, or the more common it is, the more likely it is to be discovered.
+The power to discover a causal variant through GWAS depends on the variant's effect size and frequency in the study population.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities''}; P. C. Sham et al., {``Power of {Linkage} Versus {Association Analysis} of {Quantitative Traits}, by {Use} of {Variance-Components Models}, for {Sibship Data},''} \emph{The American Journal of Human Genetics} 66, no. 5 (May 1, 2000): 1616--30, \url{https://doi.org/10.1086/302891}.} That is to say, the stronger the variant's effect, or the more common it is, the more likely it is to be discovered. Rare variants tend to have stronger effect sizes,\footnote{Kyoko Watanabe et al., {``A Global Overview of Pleiotropy and Genetic Architecture in Complex Traits,''} \emph{Nature Genetics} 51, no. 9, 9 (September 2019): 1339--48, \url{https://doi.org/10.1038/s41588-019-0481-0}.} likely due to purifying selection,\footnote{Ju-Hyun Park et al., {``Distribution of Allele Frequencies and Effect Sizes and Their Interrelationships for Common Genetic Susceptibility Variants,''} \emph{Proceedings of the National Academy of Sciences} 108, no. 44 (November 2011): 18026--31, \url{https://doi.org/10.1073/pnas.1114759108}.} and tend not to be shared across populations.\footnote{Simon Gravel et al., {``Demographic History and Rare Allele Sharing Among Human Populations,''} \emph{Proceedings of the National Academy of Sciences} 108, no. 29 (2011): 11983--88, \url{https://doi.org/10.1073/pnas.1019276108}; 1000 Genomes Project Consortium et al., {``A Global Reference for Human Genetic Variation,''} \emph{Nature} 526, no. 7571 (2015): 68.}
 
-Many SNP arrays used for GWAS do not sequence the whole genome, but rather a selection (from several hundred thousand to millions) of genetic markers intended to present common genomic variation.\footnote{Eleonora Porcu et al., {``Genotype {Imputation} in {Genome-Wide Association Studies},''} \emph{Current Protocols in Human Genetics} 78, no. 1 (2013): 1.25.1--14, \url{https://doi.org/10.1002/0471142905.hg0125s78}.} To increase the density of genotypes, which would increase the likelihood of refining the association signal and identifying causal variants, researchers often ``impute'' variants that aren't sequenced directly.\footnote{Porcu et al.} The imputation process involves ``phasing'' the study genotypes onto the genotypes of a ``reference panel.''\footnote{Shane McCarthy et al., {``A Reference Panel of 64,976 Haplotypes for Genotype Imputation,''} \emph{Nature Genetics} 48, no. 10, 10 (October 2016): 1279--83, \url{https://doi.org/10.1038/ng.3643}.} However, if the reference panel does not sufficiently represent the populations in the study sample, they are likely to miss or incorrectly impute genotypes from those under-represented populations.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}}
+There are several issues that can affect the discoverability of causal variants through GWAS, including the technology used for genotyping, the selection of the cohort, and the necessary exclusion of genotypic outliers.
 
-Genetic divergence between popoulations can be measured by \(F_{ST}\), and the correlation between true and predicted phenotypic vlaues decays approximately linearly with respect to \(F_{ST}\).\footnote{Scutari, Mackay, and Balding, {``Using {Genetic Distance} to {Infer} the {Accuracy} of {Genomic Prediction}.''}}
+With respect to genotyping technologies, GWAS often use data from SNP microarrays. These do not sequence the whole genome, but rather a selection (from several hundred thousand to millions) of genetic markers intended to present common genomic variation,\footnote{Eleonora Porcu et al., {``Genotype {Imputation} in {Genome-Wide Association Studies},''} \emph{Current Protocols in Human Genetics} 78, no. 1 (2013): 1.25.1--14, \url{https://doi.org/10.1002/0471142905.hg0125s78}.} which accordingly tend to neglect rare genetic variants.\footnote{Uffelmann et al., {``Genome-Wide Association Studies.''}} To increase the density of genotypes, which would increase the likelihood of refining the association signal and identifying causal variants, researchers often ``impute'' variants that aren't sequenced directly.\footnote{Porcu et al., {``Genotype {Imputation} in {Genome-Wide Association Studies}.''}} The imputation process involves ``phasing'' the study genotypes onto the genotypes of a ``reference panel.''\footnote{Shane McCarthy et al., {``A Reference Panel of 64,976 Haplotypes for Genotype Imputation,''} \emph{Nature Genetics} 48, no. 10, 10 (October 2016): 1279--83, \url{https://doi.org/10.1038/ng.3643}.} However, if the reference panel does not sufficiently represent the populations in the study sample, they are likely to miss or incorrectly impute those genotypes.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} This is particularly problematic for African populations, which are far more genetically diverse than European populations,\footnote{Consortium et al., {``A Global Reference for Human Genetic Variation.''}} making it difficult to capture a sufficient range of variation.
 
-It was demonstrated in simulations that using LD information from an external reference panel as a prior to infer the posterior mean effect size of a genetic variant can improve PRS predictive accuracy.\footnote{Bjarni J Vilhjálmsson et al., {``Modeling Linkage Disequilibrium Increases Accuracy of Polygenic Risk Scores,''} \emph{The American Journal of Human Genetics} 97, no. 4 (2015): 576--92.}
+The neglect of rare variants can be overcome by using next-generation sequencing technologies such as whole-genome sequencing (\textbf{WGS}) and whole-exome sequencing (\textbf{WES}); the former seeks to sequence the full genome, and the latter of only targets the coding regions of the genome. However, these methods are more expensive, although as their costs continue to decrease, their application in large-scale GWAS is likely to become more widespread. \textbf{\emph{Alignment issues}}
 
-Causal variants can differ in both frequency and effect size between different ancestry groups (e.g.~for lactase persistence)
+A second issue is the selection of GWAS cohorts, which can introduce selection and collider biases.\footnote{Uffelmann et al., {``Genome-Wide Association Studies.''}} For instance, the UK Biobank, which contains genetic and phenotypic data on 500,000 participants recruited between 2006 and 2010, tend to be older, female, healthier, and wealthier than non-participants.\footnote{Anna Fry et al., {``Comparison of {Sociodemographic} and {Health-Related Characteristics} of {UK Biobank Participants With Those} of the {General Population},''} \emph{American Journal of Epidemiology} 186, no. 9 (November 1, 2017): 1026--34, \url{https://doi.org/10.1093/aje/kwx246}.}
 
-As noted in the 2019 review of PRS scores by Duncan et al.\footnote{{``Analysis of Polygenic Risk Score Usage and Performance in Diverse Human Populations.''}}, 67\% of PRS studies included only participants of European ancestry, with another 19\% including only East Asian ancestry participants, and only 3.8\% with cohorts of African, Hispanic, or Indigenous ancestry.
+A third issue is the ``quality control'' step that is required during the GWAS process.\footnote{Uffelmann et al., {``Genome-Wide Association Studies.''}} To avoid confounding from population stratification, which can lead to overestimated heritability and biased PGS, GWAS cohorts are filtered to include only those with similar ancestries -- or relative genetic homogeneity -- by clustering individuals through principal component analysis (\textbf{PCA}) of their genotypes. I elaborate on the issue of population stratification in section \ref{fst-env-sec} below.
 
-As \(F_{ST}\) does not take into account the effect size or direction of the effect of the trait-associated allele, for highly-polygenic traits like the ones shown here, \(F_{ST}\) is almost entirely decoupled from the mean additive genetic value (or polygenic risk score) between populations,\footnote{Jeremy J. Berg and Graham Coop, {``A {Population Genetic Signal} of {Polygenic Adaptation},''} \emph{PLOS Genetics} 10, no. 8 (August 7, 2014): e1004412, \url{https://doi.org/10.1371/journal.pgen.1004412}.}
+\hypertarget{differences-in-ld}{%
+\subsubsection{Differences in LD}\label{differences-in-ld}}
+
+Because GWAS SNP markers are often not the causal variants themselves, but merely in physical proximity to them, the estimated effect size of a SNP marker depends on the extent to which it is in LD with the causal variant.\footnote{Hakhamanesh Mostafavi et al., {``Variable Prediction Accuracy of Polygenic Scores Within an Ancestry Group,''} ed. Ruth Loos, Michael B Eisen, and Paul O'Reilly, \emph{eLife} 9 (January 30, 2020): e48376, \url{https://doi.org/10.7554/eLife.48376}; Jonathan K. Pritchard and Molly Przeworski, {``Linkage {Disequilibrium} in {Humans}: {Models} and {Data},''} \emph{The American Journal of Human Genetics} 69, no. 1 (July 1, 2001): 1--14, \url{https://doi.org/10.1086/321275}.} To illustrate the problem, if a SNP has an LD \(r^2\) with a causal variant of 0.8 in the discovery population and 0.6 in the target population, it would explain 25\% = (1 - 0.6/0.8) less trait variation in the target population, and would therefore be less predictive.\footnote{Wang et al., {``Theoretical and Empirical Quantification of the Accuracy of Polygenic Scores in Ancestry Divergent Populations.''}}
+
+Differences in effect-size estimates may typically be small for most regions of the genome, but as PGS sum across these effects, they aggregate these population differences.\footnote{Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''}} Previous empirical and simulation studies have shown that accuracy of PGS scores decay with increased genetic differentiation (\(F_{ST}\)) and LD differences between populations.\footnote{Habier et al., {``The Impact of Genetic Relationship Information on Genomic Breeding Values in {German Holstein} Cattle''}; Pszczola et al., {``Reliability of Direct Genomic Values for Animals with Different Relationships Within and to the Reference Population''}; Scutari, Mackay, and Balding, {``Using {Genetic Distance} to {Infer} the {Accuracy} of {Genomic Prediction}''}; Wang et al., {``Theoretical and Empirical Quantification of the Accuracy of Polygenic Scores in Ancestry Divergent Populations.''}}
+
+It was demonstrated in simulations that using LD information from an external reference panel as a prior to infer the posterior mean effect size of a genetic variant can improve PGS predictive accuracy.\footnote{Bjarni J Vilhjálmsson et al., {``Modeling Linkage Disequilibrium Increases Accuracy of Polygenic Risk Scores,''} \emph{The American Journal of Human Genetics} 97, no. 4 (2015): 576--92.}
+
+Genetic divergence between populations can be measured by \(F_{ST}\), and the correlation between true and predicted phenotypic values decays approximately linearly with respect to \(F_{ST}\).\footnote{Scutari, Mackay, and Balding, {``Using {Genetic Distance} to {Infer} the {Accuracy} of {Genomic Prediction}.''}}
+
+\hypertarget{differences-in-allele-frequencies}{%
+\subsubsection{Differences in allele frequencies}\label{differences-in-allele-frequencies}}
+
+Causal variants can differ in both frequency and effect size between different ancestry groups, e.g.~for lactase persistence, or skin pigmentation.\footnote{Kaustubh Adhikari et al., {``A {GWAS} in {Latin Americans} Highlights the Convergent Evolution of Lighter Skin Pigmentation in {Eurasia},''} \emph{Nature Communications} 10, no. 1, 1 (January 21, 2019): 358, \url{https://doi.org/10.1038/s41467-018-08147-0}.} If a causal allele is rare in the GWAS discovery population, even if it is discovered (see \ref{fst-discovery-sec}) it is likely to have noisy effect size estimates, and therefore likely to inaccurately estimate its effect size in a different population where it exists at a higher frequency.
+
+Differences in allele frequencies between populations can arise through random genetic drift, or be driven by selective pressures towards the trait optima for a given environment.\footnote{Arbel Harpak and Molly Przeworski, {``The Evolution of Group Differences in Changing Environments,''} \emph{PLOS Biology} 19, no. 1 (January 25, 2021): e3001072, \url{https://doi.org/10.1371/journal.pbio.3001072}.}
+
+Chapter \ref{Fst-chap} will explore the differences in allele frequencies across populations for all polygenic traits in the GWAS Catalog, and demonstrate that with few exceptions -- including skin pigmentation, and HIV viral load -- the differences in allele frequencies between populations tends to be small. And therefore, the
+
+\hypertarget{fst-env-sec}{%
+\subsubsection{Differences in environment}\label{fst-env-sec}}
+
+Genes interact with the environment to create phenotypic values.\footnote{Plomin and Asbury, {``Nature and {Nurture}.''}} Yet when it comes to the differences in mean values between groups (i.e.~populations) for traits that carry social benefit -- such as intelligence -- there is ongoing debate about what proportion of the variance that we observe between populations is genetic.
+
+\begin{itemize}
+\item
+  The second issue is the same as what often affects the interpretation of the slippery biological concept of heritability. ``Heritability'' in its genetic sense describes the proportion of variance in a trait that is attributable to genetic factors. Because it is a \emph{proportion} of variance, when studying a population that is subject to greater environmental variation, the variance attributable to genetic factors will proportionately reduce. Conversely, when studying a population where the environment is held constant, the heritability for that trait will approach 1. PGS also measure the proportion of variance within a population that is explained by genetics, and the higher that proportion, the more accurate the predictions will be. So in the same way as heritability, increases in the amount of environmental variance in a population will reduce the proportion of variance explained by genetics.
+\item
+  The third issue is the confounding that different environments often have with population structure.\footnote{Berg et al., {``Reduced Signal for Polygenic Adaptation of Height in {UK Biobank}.''}} For example, in East Asia, there is a greater proportion of individuals of East-Asian ancestry than there is of European ancestry, and \emph{vice versa} in Europe. Those East-Asian individuals will therefore tend to share more of their genetic background with each other than with Europeans, and that ``population structure'' will be correlated with the different environments that exist in East Asia compared to Europe. This makes it difficult to determine whether it is the environment or the population structure that is driving the differences between those populations.
+\end{itemize}
+
+\hypertarget{Fst-analysis-chap}{%
+\section{Analysis}\label{Fst-analysis-chap}}
+
+In this chapter I explore the distribution of \(F_{ST}\) scores for loci associated with 587 traits, a subset of the GWAS Catalog that passed our criteria for suitable polygenic traits (see Chapter \ref{Fst-analysis-chap}). Using high-coverage sequence data for 2,504 individuals from the 1000 Genomes Project phase 3 release, for each trait in the GWAS Catalog we calculated the distribution of \(F_{ST}\) across all approximately-unlinked SNPs associated with it (trait SNPs), and compared these \(F_{ST}\) distributions with the \(F_{ST}\) distributions of random-selected SNPs that were matched to the trait SNPs by their allele frequencies in European populations (control SNPs). Our results show that traits related to the physical correlates of ``race'' (such as skin-pigmentation, eye colour, and hair shape) tend to have relatively high \(F_{ST}\) values -- signifying relatively high variance in allele frequencies between populations -- whereas traits related to intelligence (such as self-reported EA, mathematical ability, and cognitive function measurement) tend to have lower \(F_{ST}\) values that are similar to those of most polygenic traits such as height and body mass index.
 
 \hypertarget{datasets}{%
-\section{Datasets}\label{datasets}}
+\subsection{Datasets}\label{datasets}}
 
 \hypertarget{genomes}{%
-\subsection{1000 Genomes}\label{genomes}}
+\subsubsection{1000 Genomes}\label{genomes}}
 
-As the reference for human genomic variation across diverse populations, we used the New York Genome Center high-coverage, phased .vcf files\footnote{{``Index of /Vol1/Ftp/Data\_collections/{1000g}\_2504\_high\_coverage/Working/20201028\_3202\_phased/,''} accessed March 24, 2022, \url{http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20201028_3202_phased/}.} for the 2,504 individuals described in the 1000 Genomes phase 3 release.\footnote{1000 Genomes Project Consortium et al., {``A Global Reference for Human Genetic Variation,''} \emph{Nature} 526, no. 7571 (2015): 68.} We then annotated those .vcf files with human SNP IDs from dbSNP release 9606.\footnote{Elizabeth M. Smigielski et al., {``{dbSNP}: A Database of Single Nucleotide Polymorphisms,''} \emph{Nucleic Acids Research} 28, no. 1 (January 1, 2000): 352--55, \url{https://doi.org/10.1093/nar/28.1.352}.}
+As the reference for human genomic variation across diverse populations, we used the New York Genome Center high-coverage, phased .vcf files\footnote{{``Index of /Vol1/Ftp/Data\_collections/{1000g}\_2504\_high\_coverage/Working/20201028\_3202\_phased/,''} accessed March 24, 2022, \url{http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20201028_3202_phased/}.} for the 2,504 individuals described in the 1000 Genomes phase 3 release.\footnote{Consortium et al., {``A Global Reference for Human Genetic Variation.''}} We then annotated those .vcf files with human SNP IDs from dbSNP release 9606.\footnote{Elizabeth M. Smigielski et al., {``{dbSNP}: A Database of Single Nucleotide Polymorphisms,''} \emph{Nucleic Acids Research} 28, no. 1 (January 1, 2000): 352--55, \url{https://doi.org/10.1093/nar/28.1.352}.}
 
 \hypertarget{gwas-catalog}{%
-\subsection{GWAS Catalog}\label{gwas-catalog}}
+\subsubsection{GWAS Catalog}\label{gwas-catalog}}
 
 We used the R package \emph{gwasrapidd}\footnote{Ramiro Magno and Ana-Teresa Maia, {``Gwasrapidd: An {R} Package to Query, Download and Wrangle {GWAS} Catalog Data,''} \emph{Bioinformatics} 36, no. 2 (January 15, 2020): 649--50, \url{https://doi.org/10.1093/bioinformatics/btz605}.} to query all traits in the GWAS Catalog\footnote{Jacqueline MacArthur et al., {``The New {NHGRI-EBI Catalog} of Published Genome-Wide Association Studies ({GWAS Catalog}),''} \emph{Nucleic Acids Research} 45, no. D1 (January 4, 2017): D896--901, \url{https://doi.org/10.1093/nar/gkw1133}.} as of 9 August 2021 (\(N_{TRAITS}\) = 3,459). For 541 of these traits, no matching variant IDs could be pulled out from the 1000 Genomes VCFs, leaving \(N_{TRAITS}\) = 3,008.
 
 \hypertarget{linkage-disequilibrium}{%
 \subsection{Linkage disequilibrium}\label{linkage-disequilibrium}}
 
-To obtain the ``trait SNP'' dataset, for each trait, we sought to isolate the SNP closest to each of its true causal variants, and exclude the SNPs in linkage disequilibrium (LD) with them. To this end, we used PLINK 1.9\footnote{Chang et al., {``Second-Generation {PLINK}''}; Purcell and Chang, \emph{{PLINK} 1.9}.} to ``clump'' the SNPs associated with each of the remaining 3,008 traits, using an index variant p-value threshold of \(10^{-8}\),\footnote{Orestis A. Panagiotou, John P. A. Ioannidis, and Genome-Wide Significance Project, {``What Should the Genome-Wide Significance Threshold Be? {Empirical} Replication of Borderline Genetic Associations,''} \emph{International Journal of Epidemiology} 41, no. 1 (February 2012): 273--86, \url{https://doi.org/10.1093/ije/dyr178}.} \(r^2\) threshold of 0.1,\footnote{W. G. Hill and Alan Robertson, {``Linkage Disequilibrium in Finite Populations,''} \emph{Theoretical and Applied Genetics} 38, no. 6 (June 1, 1968): 226--31, \url{https://doi.org/10.1007/BF01245622}.} and base window size of 1 Mb. This process left us with 2,045 traits with at least one index SNP that met the p-value threshold. The index SNPs for each trait formed our set of trait SNPs. In order to target relatively polygenic traits, we further filtered out traits with fewer than 10 trait SNPs, leaving \(N_{TRAITS}\) = 587. Supplementary Fig. 4 shows the counts of unique SNP IDs associated with each trait before and after clumping, and an interactive version is available in the notebook cited above.
+To obtain the ``trait SNP'' dataset, for each trait, we sought to isolate the SNP closest to each of its true causal variants, and exclude the SNPs in linkage disequilibrium (LD) with them. To this end, we used PLINK 1.9\footnote{Chang et al., {``Second-Generation {PLINK}''}; Purcell and Chang, \emph{{PLINK} 1.9}.} to ``clump'' the SNPs associated with each of the remaining 3,008 traits, using an ``index'' SNP p-value threshold of \(10^{-8}\),\footnote{Orestis A. Panagiotou, John P. A. Ioannidis, and Genome-Wide Significance Project, {``What Should the Genome-Wide Significance Threshold Be? {Empirical} Replication of Borderline Genetic Associations,''} \emph{International Journal of Epidemiology} 41, no. 1 (February 2012): 273--86, \url{https://doi.org/10.1093/ije/dyr178}.} \(r^2\) threshold of 0.1,\footnote{W. G. Hill and Alan Robertson, {``Linkage Disequilibrium in Finite Populations,''} \emph{Theoretical and Applied Genetics} 38, no. 6 (June 1, 1968): 226--31, \url{https://doi.org/10.1007/BF01245622}.} and base window size of 1 Mb. This process left us with 2,045 traits with at least one index SNP that met the p-value threshold. The index SNPs for each trait formed our set of trait SNPs, and \textbf{Figure \ref{fig:FstSnpCount}} shows the counts of unique SNP IDs associated with each trait before and after clumping. In order to target relatively polygenic traits, we further filtered out traits with fewer than 10 trait SNPs, leaving \(N_{TRAITS}\) = 587.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/fst/0.1_1000_20220314_snp_counts} \caption{log10 counts of associated SNPs for each trait before and after the clumping process, which involved: a) excluding all SNPs with a \emph{p}-value greater than \(10^{-8}\); and b) starting with the SNPs with the lowest \emph{p}-values (``index'' SNPs), excluding all other SNPs within a 1 Mb region of the index SNP with an LD \(r^2\) of more than 0.1.}\label{fig:FstSnpCount}
+\end{figure}
 
 \hypertarget{control-snps}{%
 \subsection{Control SNPs}\label{control-snps}}
 
-To obtain our ``control SNP'' dataset, we assigned each trait SNP to one of 20 bins based on its minor allele frequency in European populations (as provided in the original 1000 Genomes .vcf files under the column header `INFO/AC\_EUR'). For example, if a trait SNP had a minor allele frequency of 0.08 in European populations, it was assigned to the \((0.05, 0.1]\) bin. We did the same for all (unassociated) SNPs in the .vcf files, then paired each trait SNP with a random SNP from the .vcf file in the equivalent bin. These allele-frequency-paired random SNPs formed our set of ``control SNPs'', which we used to infer the \(F_{ST}\) distribution of a random set of SNPs with the same allele frequencies as the trait SNPs, and against which we could compare the \(F_{ST}\) distribution of the trait SNPs.
+To obtain our ``control SNP'' dataset, we assigned each trait SNP to one of 20 bins based on its minor allele frequency in European populations (as provided in the original 1000 Genomes .vcf files under the column header `INFO/AC\_EUR'). For example, if a trait SNP had a minor allele frequency of 0.08 in European populations, it was assigned to the \((0.05, 0.1]\) bin. I did the same for all (un-associated) SNPs in the .vcf files, then paired each trait SNP with a random SNP from the .vcf file in the equivalent bin. These allele-frequency-paired random SNPs formed our set of ``control SNPs'', which I used to infer the \(F_{ST}\) distribution of a random set of SNPs with the same allele frequencies as the trait SNPs, and against which I could compare the \(F_{ST}\) distribution of the trait SNPs.
 
 \hypertarget{f_st-and-ranking-traits-by-signed-kolmogorov-smirnov-d-statistic}{%
 \subsection{\texorpdfstring{\(F_{ST}\) and ranking traits by signed Kolmogorov-Smirnov \(D\) statistic}{F\_\{ST\} and ranking traits by signed Kolmogorov-Smirnov D statistic}}\label{f_st-and-ranking-traits-by-signed-kolmogorov-smirnov-d-statistic}}
 
-We then calculated \(F_{ST}\) for each of the trait SNPs and their matched control SNPs using the Weir and Cockerham method,\footnote{B. S. Weir and C. Clark Cockerham, {``Estimating {F-Statistics} for the {Analysis} of {Population Structure},''} \emph{Evolution} 38, no. 6 (1984): 1358--70, \url{https://doi.org/10.2307/2408641}.} as implemented in the R package \emph{pegas}.\footnote{Emmanuel Paradis, {``Pegas: An {R} Package for Population Genetics with an Integrated--Modular Approach,''} \emph{Bioinformatics} 26, no. 3 (February 1, 2010): 419--20, \url{https://doi.org/10.1093/bioinformatics/btp696}.} To rank all traits based on the directional difference in \(F_{ST}\) distributions between trait and control SNPs, we ran three Kolmogorov-Smirnov (KS) tests for each trait \(t\) with \(x_t\) = \(F_{ST, trait SNPs}\) and \(y_t\) = \(F_{ST, control SNPs}\):
+I then calculated \(F_{ST}\) for each of the trait SNPs and their matched control SNPs using the Weir and Cockerham method,\footnote{B. S. Weir and C. Clark Cockerham, {``Estimating {F-Statistics} for the {Analysis} of {Population Structure},''} \emph{Evolution} 38, no. 6 (1984): 1358--70, \url{https://doi.org/10.2307/2408641}.} as implemented in the R package \emph{pegas}.\footnote{Emmanuel Paradis, {``Pegas: An {R} Package for Population Genetics with an Integrated--Modular Approach,''} \emph{Bioinformatics} 26, no. 3 (February 1, 2010): 419--20, \url{https://doi.org/10.1093/bioinformatics/btp696}.} To rank all traits based on the directional difference in \(F_{ST}\) distributions between trait and control SNPs, I ran three Kolmogorov-Smirnov (KS) tests for each trait \(t\) with \(x_t\) = \(F_{ST, trait SNPs}\) and \(y_t\) = \(F_{ST, control SNPs}\):
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -490,7 +550,7 @@ We then calculated \(F_{ST}\) for each of the trait SNPs and their matched contr
   one-sided ``less'' (\(D_t^-\)).
 \end{enumerate}
 
-I note that \(D_{t} = max(D_t^+, D_t^-)\), where \(D_t^+\) is the greatest vertical distance attained by the eCDF of \(x_t\) over the eCDF of \(y_t\), and \(D_t^-\) is the greatest vertical distance attained by the eCDF of \(y_t\) over the eCDF of \(x_t\).\footnote{W. J. Conover, \emph{Practical {Nonparametric Statistics}} ({John Wiley \& Sons}, 1999), \url{https://books.google.com?id=n_39DwAAQBAJ}; J. Durbin, \emph{Distribution {Theory} for {Tests Based} on {Sample Distribution Function}} ({SIAM}, 1973), \url{https://books.google.com?id=zAryCrT1IUYC}.} Accordingly, we used a comparison of \(D_t^+\) and \(D_t^-\) to created a signed D statistic (\(D\)), based on the logic that trait SNPs with a lower overall \(F_{ST}\) than control SNPs tend to have a higher \(D\) under the ``greater'' test than the ``less'' test, and vice versa.
+I note that \(D_{t} = max(D_t^+, D_t^-)\), where \(D_t^+\) is the greatest vertical distance attained by the eCDF of \(x_t\) over the eCDF of \(y_t\), and \(D_t^-\) is the greatest vertical distance attained by the eCDF of \(y_t\) over the eCDF of \(x_t\).\footnote{W. J. Conover, \emph{Practical {Nonparametric Statistics}} ({John Wiley \& Sons}, 1999), \url{https://books.google.com?id=n_39DwAAQBAJ}; J. Durbin, \emph{Distribution {Theory} for {Tests Based} on {Sample Distribution Function}} ({SIAM}, 1973), \url{https://books.google.com?id=zAryCrT1IUYC}.} Accordingly, we used a comparison of \(D_t^+\) and \(D_t^-\) to formulate a signed D statistic (\(D_t^S\)), based on the logic that trait SNPs with a lower overall \(F_{ST}\) than control SNPs tend to have a higher \(D\) under the ``greater'' test than the ``less'' test, and vice versa.
 
 Therefore, \({D_t^S}\):
 
@@ -502,12 +562,52 @@ D_t^- < D_t^+ &: &D_t \\
 \end{aligned}
 \]
 
-In \textbf{Figure \ref{fig:FstMain}} we present the \(F_{ST}\) distributions of trait SNPs for an illustrative subset of 28 human traits, ranked by \({D_t^S}\) when compared with their matched control SNPs. \textbf{Figure \ref{fig:FstMain}A} shows the densities of SNPs as a function of \(F_{ST}\), and \textbf{Figure \ref{fig:FstMain}B and C} show their empirical Cumulative Distribution Functions (eCDFs). \textbf{Figure \ref{fig:FstMain}B} includes the eCDFs of control SNPs in grey. eCDF figures for all 587 traits that passed our filters (Methods) are provided in Supplementary Fig. 1.
+In \textbf{Figure \ref{fig:FstMain}} I present the \(F_{ST}\) distributions of trait SNPs for an illustrative subset of 28 human traits, ranked by \({D_t^S}\) when compared with their matched control SNPs. \textbf{Figure \ref{fig:FstMain}A} shows the densities of SNPs as a function of \(F_{ST}\), and \textbf{Figure \ref{fig:FstMain}B and C} show their empirical Cumulative Distribution Functions (eCDFs). \textbf{Figure \ref{fig:FstMain}B} includes the eCDFs of control SNPs in grey. eCDF figures for all 587 traits that passed our filters (Methods) are provided in \ref{fig:eCDFall}.
 
 
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{figs/fst/20220314_final_0.1_1000} \caption{Distributions of \(F_{ST}\) across 28 illustrative human traits, ranked by signed-D (Kolmogorov-Smirnov test) comparing trait and control SNPs. \textbf{A}. \(F_{ST}\) density ridge plots with SNP markers. \textbf{B}. Empirical Cumulative Distribution Functions (eCDFs) of \(F_{ST}\) for trait-associated (colour) and random control (grey) SNPs, faceted by trait. \textbf{C}. Consolidated eCDFs of trait-associated SNPs from (B). eCDFs for all traits are included in Supplementary Figure 1.}\label{fig:FstMain}
+\includegraphics[width=1\linewidth]{figs/fst/0.1_1000_20220314_final} \caption{Distributions of \(F_{ST}\) across 28 illustrative human traits, ranked by signed-D (Kolmogorov-Smirnov test) comparing trait and control SNPs. \textbf{A}. \(F_{ST}\) density ridge plots with SNP markers. \textbf{B}. Empirical Cumulative Distribution Functions (eCDFs) of \(F_{ST}\) for trait-associated (colour) and random control (grey) SNPs, faceted by trait. \textbf{C}. Consolidated eCDFs of trait-associated SNPs from (B). eCDFs for all traits are included in Supplementary Figure 1.}\label{fig:FstMain}
+\end{figure}
+
+\hypertarget{implications}{%
+\section{Implications}\label{implications}}
+
+The low \(F_{ST}\) that we see for trait-associated alleles across various polygenic traits show that their allele frequencies do not substantially differ between populations. This means that, generally speaking, the genetic architecture of polygenic traits is shared across global populations.
+
+This leads to the conclusion that the poor transferability of PGS across populations is not primarily driven by differences in trait-associated allele frequencies, but must rather by caused by differences in LD structure and environment.
+
+\hypertarget{f_st-has-no-connection-with-mean-population-values}{%
+\subsection{\texorpdfstring{\(F_{ST}\) has no connection with mean population values}{F\_\{ST\} has no connection with mean population values}}\label{f_st-has-no-connection-with-mean-population-values}}
+
+The loci of educational attainment have similar \(F_{ST}\) distributions to those of most polygenic traits.
+
+As \(F_{ST}\) does not take into account the effect size or direction of the effect of the trait-associated allele, for highly-polygenic traits like the ones shown here, \(F_{ST}\) is almost entirely decoupled from the mean additive genetic value (or polygenic risk score) between populations.\footnote{Jeremy J. Berg and Graham Coop, {``A {Population Genetic Signal} of {Polygenic Adaptation},''} \emph{PLOS Genetics} 10, no. 8 (August 7, 2014): e1004412, \url{https://doi.org/10.1371/journal.pgen.1004412}.}
+
+Height and BMI, which are under strong differential selection, look the same as other polygenic traits, which illustrates the limitations of this analysis {[}\textbf{CITE}{]}
+
+\hypertarget{the-importance-of-environment-and-its-complex-interactions-with-genetics}{%
+\subsection{The importance of environment, and its complex interactions with genetics}\label{the-importance-of-environment-and-its-complex-interactions-with-genetics}}
+
+Genes interact with themselves (GxG, or ``epistasis''),\footnote{Pierre-Alexis Gros, Herv'e Le Nagard, and Olivier Tenaillon, {``The {Evolution} of {Epistasis} and {Its Links With Genetic Robustness}, {Complexity} and {Drift} in a {Phenotypic Model} of {Adaptation},''} \emph{Genetics} 182, no. 1 (May 1, 2009): 277--93, \url{https://doi.org/10.1534/genetics.108.099127}.} the genes of one's parents (``genetic nurture'', Augustine Kong et al.\footnote{{``The Nature of Nurture: {Effects} of Parental Genotypes,''} \emph{Science} 359, no. 6374 (January 26, 2018): 424--28, \url{https://doi.org/10.1126/science.aan6877}.}) or social companions (``social genetic effects'')\footnote{Benjamin W. Domingue et al., {``The Social Genome of Friends and Schoolmates in the {National Longitudinal Study} of {Adolescent} to {Adult Health},''} \emph{Proceedings of the National Academy of Sciences} 115, no. 4 (January 23, 2018): 702--7, \url{https://doi.org/10.1073/pnas.1711803115}; Amelie Baud et al., {``Genetic {Variation} in the {Social Environment Contributes} to {Health} and {Disease},''} \emph{PLOS Genetics} 13, no. 1 (January 25, 2017): e1006498, \url{https://doi.org/10.1371/journal.pgen.1006498}.} and Chapters \ref{Pilot-chap} and \ref{MIKK-F2-chap}, and the wider non-genetic environment (GxE).
+
+\hypertarget{a-push-for-diversity-in-genetic-studies}{%
+\subsection{A push for diversity in genetic studies}\label{a-push-for-diversity-in-genetic-studies}}
+
+The obvious solution to this issue of non-transferability of PGS scores to diverse populations is to increase the representation of those populations in GWAS and PGS studies, as has been often proposed elsewhere.\footnote{Martin, Gignoux, et al., {``Human Demographic History Impacts Genetic Risk Prediction Across Diverse Populations''}; Alicia R Martin et al., {``The Critical Needs and Challenges for Genetic Architecture Studies in {Africa},''} \emph{Current Opinion in Genetics \& Development}, Genetics of {Human Origins}, 53 (December 1, 2018): 113--20, \url{https://doi.org/10.1016/j.gde.2018.08.005}; Stephanie A. Bien et al., {``The {Future} of {Genomic Studies Must Be Globally Representative}: {Perspectives} from {PAGE},''} \emph{Annual Review of Genomics and Human Genetics} 20, no. 1 (August 31, 2019): 181--200, \url{https://doi.org/10.1146/annurev-genom-091416-035517}; Martin, Kanai, et al., {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities''}; Giorgio Sirugo, Scott M. Williams, and Sarah A. Tishkoff, {``The {Missing Diversity} in {Human Genetic Studies},''} \emph{Cell} 177, no. 1 (March 21, 2019): 26--31, \url{https://doi.org/10.1016/j.cell.2019.02.048}; Genevieve L. Wojcik et al., {``Genetic Analyses of Diverse Populations Improves Discovery for Complex Traits,''} \emph{Nature} 570, no. 7762, 7762 (June 2019): 514--18, \url{https://doi.org/10.1038/s41586-019-1310-4}.}
+
+\hypertarget{appendix}{%
+\chapter*{Appendix}\label{appendix}}
+\addcontentsline{toc}{chapter}{Appendix}
+
+\hypertarget{ecdf-of-all-polygenic-traits-in-the-gwas-catalog-ranked-by-d_ts}{%
+\section*{\texorpdfstring{eCDF of all polygenic traits in the GWAS Catalog ranked by \({D_t^S}\)}{eCDF of all polygenic traits in the GWAS Catalog ranked by \{D\_t\^{}S\}}}\label{ecdf-of-all-polygenic-traits-in-the-gwas-catalog-ranked-by-d_ts}}
+\addcontentsline{toc}{section}{eCDF of all polygenic traits in the GWAS Catalog ranked by \({D_t^S}\)}
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/fst/0.1_1000_20220314_ecdf_all_faceted_with_controls_d_rank_long} \caption{587 traits from the GWAS Catalog that passed our filters for polygenic traits, ranked by \({D_t^S}\).}\label{fig:eCDFall}
 \end{figure}
 
 \hypertarget{references}{%
@@ -519,11 +619,23 @@ In \textbf{Figure \ref{fig:FstMain}} we present the \(F_{ST}\) distributions of 
 \leavevmode\vadjust pre{\hypertarget{ref-GlobalReferenceHuman2015}{}}%
 {``A Global Reference for Human Genetic Variation.''} \emph{Nature} 526, no. 7571 (2015): 68--74. \url{https://doi.org/10.1038/nature15393}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-adhikariGWASLatinAmericans2019}{}}%
+Adhikari, Kaustubh, Javier Mendoza-Revilla, Anood Sohail, Macarena Fuentes-Guajardo, Jodie Lampert, Juan Camilo Chac'on-Duque, Malena Hurtado, et al. {``A {GWAS} in {Latin Americans} Highlights the Convergent Evolution of Lighter Skin Pigmentation in {Eurasia}.''} \emph{Nature Communications} 10, no. 1, 1 (January 21, 2019): 358. \url{https://doi.org/10.1038/s41467-018-08147-0}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-baudGeneticVariationSocial2017}{}}%
+Baud, Amelie, Megan K. Mulligan, Francesco Paolo Casale, Jesse F. Ingels, Casey J. Bohl, Jacques Callebert, Jean-Marie Launay, et al. {``Genetic {Variation} in the {Social Environment Contributes} to {Health} and {Disease}.''} \emph{PLOS Genetics} 13, no. 1 (January 25, 2017): e1006498. \url{https://doi.org/10.1371/journal.pgen.1006498}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-bergPopulationGeneticSignal2014a}{}}%
 Berg, Jeremy J., and Graham Coop. {``A {Population Genetic Signal} of {Polygenic Adaptation}.''} \emph{PLOS Genetics} 10, no. 8 (August 7, 2014): e1004412. \url{https://doi.org/10.1371/journal.pgen.1004412}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-bergReducedSignalPolygenic2019}{}}%
+Berg, Jeremy J, Arbel Harpak, Nasa Sinnott-Armstrong, Anja Moltke Joergensen, Hakhamanesh Mostafavi, Yair Field, Evan August Boyle, et al. {``Reduced Signal for Polygenic Adaptation of Height in {UK Biobank}.''} Edited by Magnus Nordborg, Mark I McCarthy, Magnus Nordborg, Nicholas H Barton, and Joachim Hermisson. \emph{eLife} 8 (March 21, 2019): e39725. \url{https://doi.org/10.7554/eLife.39725}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-bergelsonIdentifyingGenesUnderlying2010}{}}%
 Bergelson, Joy, and Fabrice Roux. {``Towards Identifying Genes Underlying Ecologically Relevant Traits in {Arabidopsis} Thaliana.''} \emph{Nature Reviews Genetics} 11, no. 12, 12 (December 2010): 867--79. \url{https://doi.org/10.1038/nrg2896}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-bienFutureGenomicStudies2019}{}}%
+Bien, Stephanie A., Genevieve L. Wojcik, Chani J. Hodonsky, Christopher R. Gignoux, Iona Cheng, Tara C. Matise, Ulrike Peters, Eimear E. Kenny, and Kari E. North. {``The {Future} of {Genomic Studies Must Be Globally Representative}: {Perspectives} from {PAGE}.''} \emph{Annual Review of Genomics and Human Genetics} 20, no. 1 (August 31, 2019): 181--200. \url{https://doi.org/10.1146/annurev-genom-091416-035517}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-changSecondgenerationPLINKRising2015}{}}%
 Chang, Christopher C, Carson C Chow, Laurent CAM Tellier, Shashaank Vattikuti, Shaun M Purcell, and James J Lee. {``Second-Generation {PLINK}: Rising to the Challenge of Larger and Richer Datasets.''} \emph{GigaScience} 4, no. 1 (December 2015): 7. \url{https://doi.org/10.1186/s13742-015-0047-8}.
@@ -537,11 +649,17 @@ Conover, W. J. \emph{Practical {Nonparametric Statistics}}. {John Wiley \& Sons}
 \leavevmode\vadjust pre{\hypertarget{ref-10002015global}{}}%
 Consortium, 1000 Genomes Project et al. {``A Global Reference for Human Genetic Variation.''} \emph{Nature} 526, no. 7571 (2015): 68.
 
+\leavevmode\vadjust pre{\hypertarget{ref-domingueSocialGenomeFriends2018}{}}%
+Domingue, Benjamin W., Daniel W. Belsky, Jason M. Fletcher, Dalton Conley, Jason D. Boardman, and Kathleen Mullan Harris. {``The Social Genome of Friends and Schoolmates in the {National Longitudinal Study} of {Adolescent} to {Adult Health}.''} \emph{Proceedings of the National Academy of Sciences} 115, no. 4 (January 23, 2018): 702--7. \url{https://doi.org/10.1073/pnas.1711803115}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-duncanAnalysisPolygenicRisk2019}{}}%
 Duncan, L., H. Shen, B. Gelaye, J. Meijsen, K. Ressler, M. Feldman, R. Peterson, and B. Domingue. {``Analysis of Polygenic Risk Score Usage and Performance in Diverse Human Populations.''} \emph{Nature Communications} 10, no. 1, 1 (July 25, 2019): 3328. \url{https://doi.org/10.1038/s41467-019-11112-0}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-durbinDistributionTheoryTests1973}{}}%
 Durbin, J. \emph{Distribution {Theory} for {Tests Based} on {Sample Distribution Function}}. {SIAM}, 1973. \url{https://books.google.com?id=zAryCrT1IUYC}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-edgeReconstructingHistoryPolygenic2019}{}}%
+Edge, Michael D, and Graham Coop. {``Reconstructing the {History} of {Polygenic Scores Using Coalescent Trees}.''} \emph{Genetics} 211, no. 1 (January 1, 2019): 235--62. \url{https://doi.org/10.1534/genetics.118.301687}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-evansQTLGeneElegans2021}{}}%
 Evans, Kathryn S., Marijke H. van Wijk, Patrick T. McGrath, Erik C. Andersen, and Mark G. Sterken. {``From {QTL} to Gene: {C}. Elegans Facilitates Discoveries of the Genetic Mechanisms Underlying Natural Variation.''} \emph{Trends in Genetics} 37, no. 10 (October 1, 2021): 933--47. \url{https://doi.org/10.1016/j.tig.2021.06.005}.
@@ -552,8 +670,20 @@ Fitzgerald, Tomas, Ian Brettell, Adrien Leger, Nadeshda Wolf, Natalja Kusminski,
 \leavevmode\vadjust pre{\hypertarget{ref-fredmanComplexSNPrelatedSequence2004}{}}%
 Fredman, David, Stefan J. White, Susanna Potter, Evan E. Eichler, Johan T. Den Dunnen, and Anthony J. Brookes. {``Complex {SNP-related} Sequence Variation in Segmental Genome Duplications.''} \emph{Nature Genetics} 36, no. 8, 8 (August 2004): 861--66. \url{https://doi.org/10.1038/ng1401}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-fryComparisonSociodemographicHealthRelated2017}{}}%
+Fry, Anna, Thomas J Littlejohns, Cathie Sudlow, Nicola Doherty, Ligia Adamska, Tim Sprosen, Rory Collins, and Naomi E Allen. {``Comparison of {Sociodemographic} and {Health-Related Characteristics} of {UK Biobank Participants With Those} of the {General Population}.''} \emph{American Journal of Epidemiology} 186, no. 9 (November 1, 2017): 1026--34. \url{https://doi.org/10.1093/aje/kwx246}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-gravel2011demographic}{}}%
+Gravel, Simon, Brenna M Henn, Ryan N Gutenkunst, Amit R Indap, Gabor T Marth, Andrew G Clark, Fuli Yu, et al. {``Demographic History and Rare Allele Sharing Among Human Populations.''} \emph{Proceedings of the National Academy of Sciences} 108, no. 29 (2011): 11983--88. \url{https://doi.org/10.1073/pnas.1019276108}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-grosEvolutionEpistasisIts2009}{}}%
+Gros, Pierre-Alexis, Herv'e Le Nagard, and Olivier Tenaillon. {``The {Evolution} of {Epistasis} and {Its Links With Genetic Robustness}, {Complexity} and {Drift} in a {Phenotypic Model} of {Adaptation}.''} \emph{Genetics} 182, no. 1 (May 1, 2009): 277--93. \url{https://doi.org/10.1534/genetics.108.099127}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-habierImpactGeneticRelationship2010}{}}%
 Habier, David, Jens Tetens, Franz-Reinhold Seefried, Peter Lichtner, and Georg Thaller. {``The Impact of Genetic Relationship Information on Genomic Breeding Values in {German Holstein} Cattle.''} \emph{Genetics Selection Evolution} 42, no. 1 (February 19, 2010): 5. \url{https://doi.org/10.1186/1297-9686-42-5}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-harpakEvolutionGroupDifferences2021}{}}%
+Harpak, Arbel, and Molly Przeworski. {``The Evolution of Group Differences in Changing Environments.''} \emph{PLOS Biology} 19, no. 1 (January 25, 2021): e3001072. \url{https://doi.org/10.1371/journal.pbio.3001072}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-hillLinkageDisequilibriumFinite1968}{}}%
 Hill, W. G., and Alan Robertson. {``Linkage Disequilibrium in Finite Populations.''} \emph{Theoretical and Applied Genetics} 38, no. 6 (June 1, 1968): 226--31. \url{https://doi.org/10.1007/BF01245622}.
@@ -578,6 +708,9 @@ Kerminen, Sini, Alicia R. Martin, Jukka Koskela, Sanni E. Ruotsalainen, Aki S. H
 
 \leavevmode\vadjust pre{\hypertarget{ref-kheraGenomewidePolygenicScores2018}{}}%
 Khera, Amit V., Mark Chaffin, Krishna G. Aragam, Mary E. Haas, Carolina Roselli, Seung Hoan Choi, Pradeep Natarajan, et al. {``Genome-Wide Polygenic Scores for Common Diseases Identify Individuals with Risk Equivalent to Monogenic Mutations.''} \emph{Nature Genetics} 50, no. 9, 9 (September 2018): 1219--24. \url{https://doi.org/10.1038/s41588-018-0183-z}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-kongNatureNurtureEffects2018}{}}%
+Kong, Augustine, Gudmar Thorleifsson, Michael L. Frigge, Bjarni J. Vilhjalmsson, Alexander I. Young, Thorgeir E. Thorgeirsson, Stefania Benonisdottir, et al. {``The Nature of Nurture: {Effects} of Parental Genotypes.''} \emph{Science} 359, no. 6374 (January 26, 2018): 424--28. \url{https://doi.org/10.1126/science.aan6877}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-kulloIncorporatingGeneticRisk2016}{}}%
 Kullo, Iftikhar J., Hayan Jouni, Erin E. Austin, Sherry-Ann Brown, Teresa M. Kruisselbrink, Iyad N. Isseh, Raad A. Haddad, et al. {``Incorporating a {Genetic Risk Score Into Coronary Heart Disease Risk Estimates}.''} \emph{Circulation} 133, no. 12 (March 22, 2016): 1181--88. \url{https://doi.org/10.1161/CIRCULATIONAHA.115.020109}.
@@ -604,10 +737,13 @@ Mackay, Trudy F. C., and Wen Huang. {``Charting the Genotype--Phenotype Map: Les
 Magno, Ramiro, and Ana-Teresa Maia. {``Gwasrapidd: An {R} Package to Query, Download and Wrangle {GWAS} Catalog Data.''} \emph{Bioinformatics} 36, no. 2 (January 15, 2020): 649--50. \url{https://doi.org/10.1093/bioinformatics/btz605}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-martinHumanDemographicHistory2017}{}}%
-Martin, Alicia R., Christopher R. Gignoux, Raymond K. Walters, Genevieve L. Wojcik, Benjamin M. Neale, Simon Gravel, Mark J. Daly, Carlos D. Bustamante, and Eimear E. Kenny. {``Human {Demographic History Impacts Genetic Risk Prediction} Across {Diverse Populations}.''} \emph{The American Journal of Human Genetics} 100, no. 4 (April 6, 2017): 635--49. \url{https://doi.org/10.1016/j.ajhg.2017.03.004}.
+Martin, Alicia R, Christopher R Gignoux, Raymond K Walters, Genevieve L Wojcik, Benjamin M Neale, Simon Gravel, Mark J Daly, Carlos D Bustamante, and Eimear E Kenny. {``Human Demographic History Impacts Genetic Risk Prediction Across Diverse Populations.''} \emph{The American Journal of Human Genetics} 100, no. 4 (2017): 635--49. \url{https://doi.org/10.1016/j.ajhg.2017.03.004}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-martinClinicalUseCurrent2019}{}}%
 Martin, Alicia R., Masahiro Kanai, Yoichiro Kamatani, Yukinori Okada, Benjamin M. Neale, and Mark J. Daly. {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''} \emph{Nature Genetics} 51, no. 4, 4 (April 2019): 584--91. \url{https://doi.org/10.1038/s41588-019-0379-x}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-martinCriticalNeedsChallenges2018}{}}%
+Martin, Alicia R, Solomon Teferra, Marlo Möller, Eileen G Hoal, and Mark J Daly. {``The Critical Needs and Challenges for Genetic Architecture Studies in {Africa}.''} \emph{Current Opinion in Genetics \& Development}, Genetics of {Human Origins}, 53 (December 1, 2018): 113--20. \url{https://doi.org/10.1016/j.gde.2018.08.005}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-martinSimonhmartinGenomicsGeneral2022}{}}%
 martin, Simon. \emph{Simonhmartin/Genomics\_general}, 2022. \url{https://github.com/simonhmartin/genomics_general}.
@@ -621,6 +757,9 @@ McCarthy, Shane, Sayantan Das, Warren Kretzschmar, Olivier Delaneau, Andrew R Wo
 \leavevmode\vadjust pre{\hypertarget{ref-mckennaGenomeAnalysisToolkit2010}{}}%
 McKenna, Aaron, Matthew Hanna, Eric Banks, Andrey Sivachenko, Kristian Cibulskis, Andrew Kernytsky, Kiran Garimella, et al. {``The {Genome Analysis Toolkit}: {A MapReduce} Framework for Analyzing Next-Generation {DNA} Sequencing Data.''} \emph{Genome Research} 20, no. 9 (January 9, 2010): 1297--1303. \url{https://doi.org/10.1101/gr.107524.110}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-mostafaviVariablePredictionAccuracy2020}{}}%
+Mostafavi, Hakhamanesh, Arbel Harpak, Ipsita Agarwal, Dalton Conley, Jonathan K Pritchard, and Molly Przeworski. {``Variable Prediction Accuracy of Polygenic Scores Within an Ancestry Group.''} Edited by Ruth Loos, Michael B Eisen, and Paul O'Reilly. \emph{eLife} 9 (January 30, 2020): e48376. \url{https://doi.org/10.7554/eLife.48376}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-mukherjeeGeneIntimateHistory2016}{}}%
 Mukherjee, Siddhartha. \emph{The {Gene}: {An Intimate History}}. {Simon and Schuster}, 2016. \url{https://books.google.com?id=XvAsDAAAQBAJ}.
 
@@ -629,6 +768,9 @@ Naruse, Kiyoshi, Shoji Fukamachi, Hiroshi Mitani, Mariko Kondo, Tomoko Matsuoka,
 
 \leavevmode\vadjust pre{\hypertarget{ref-natarajanPolygenicRiskScore2017}{}}%
 Natarajan, Pradeep, Robin Young, Nathan O. Stitziel, Sandosh Padmanabhan, Usman Baber, Roxana Mehran, Samantha Sartori, et al. {``Polygenic {Risk Score Identifies Subgroup With Higher Burden} of {Atherosclerosis} and {Greater Relative Benefit From Statin Therapy} in the {Primary Prevention Setting}.''} \emph{Circulation} 135, no. 22 (May 30, 2017): 2091--101. \url{https://doi.org/10.1161/CIRCULATIONAHA.116.024436}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-okbayPolygenicPredictionEducational2022}{}}%
+Okbay, Aysu, Yeda Wu, Nancy Wang, Hariharan Jayashankar, Michael Bennett, Seyed Moeen Nehzati, Julia Sidorenko, et al. {``Polygenic Prediction of Educational Attainment Within and Between Families from Genome-Wide Association Analyses in 3 Million Individuals.''} \emph{Nature Genetics}, March 31, 2022, 1--13. \url{https://doi.org/10.1038/s41588-022-01016-z}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-panagiotouWhatShouldGenomewide2012}{}}%
 Panagiotou, Orestis A., John P. A. Ioannidis, and Genome-Wide Significance Project. {``What Should the Genome-Wide Significance Threshold Be? {Empirical} Replication of Borderline Genetic Associations.''} \emph{International Journal of Epidemiology} 41, no. 1 (February 2012): 273--86. \url{https://doi.org/10.1093/ije/dyr178}.
@@ -642,6 +784,9 @@ Paradis, Emmanuel. {``Pegas: An {R} Package for Population Genetics with an Inte
 \leavevmode\vadjust pre{\hypertarget{ref-paradisApeEnvironmentModern2019}{}}%
 Paradis, Emmanuel, and Klaus Schliep. {``Ape 5.0: An Environment for Modern Phylogenetics and Evolutionary Analyses in {R}.''} \emph{Bioinformatics} 35, no. 3 (February 1, 2019): 526--28. \url{https://doi.org/10.1093/bioinformatics/bty633}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-parkDistributionAlleleFrequencies2011}{}}%
+Park, Ju-Hyun, Mitchell H. Gail, Clarice R. Weinberg, Raymond J. Carroll, Charles C. Chung, Zhaoming Wang, Stephen J. Chanock, Joseph F. Fraumeni, and Nilanjan Chatterjee. {``Distribution of Allele Frequencies and Effect Sizes and Their Interrelationships for Common Genetic Susceptibility Variants.''} \emph{Proceedings of the National Academy of Sciences} 108, no. 44 (November 2011): 18026--31. \url{https://doi.org/10.1073/pnas.1114759108}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-peirceNewSetBXD2004}{}}%
 Peirce, Jeremy L., Lu Lu, Jing Gu, Lee M. Silver, and Robert W. Williams. {``A New Set of {BXD} Recombinant Inbred Lines from Advanced Intercross Populations in Mice.''} \emph{BMC Genetics} 5, no. 1 (April 29, 2004): 7. \url{https://doi.org/10.1186/1471-2156-5-7}.
 
@@ -653,6 +798,9 @@ Popejoy, Alice B., and Stephanie M. Fullerton. {``Genomics Is Failing on Diversi
 
 \leavevmode\vadjust pre{\hypertarget{ref-porcuGenotypeImputationGenomeWide2013}{}}%
 Porcu, Eleonora, Serena Sanna, Christian Fuchsberger, and Lars G. Fritsche. {``Genotype {Imputation} in {Genome-Wide Association Studies}.''} \emph{Current Protocols in Human Genetics} 78, no. 1 (2013): 1.25.1--14. \url{https://doi.org/10.1002/0471142905.hg0125s78}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-pritchardLinkageDisequilibriumHumans2001}{}}%
+Pritchard, Jonathan K., and Molly Przeworski. {``Linkage {Disequilibrium} in {Humans}: {Models} and {Data}.''} \emph{The American Journal of Human Genetics} 69, no. 1 (July 1, 2001): 1--14. \url{https://doi.org/10.1086/321275}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-pszczolaReliabilityDirectGenomic2012}{}}%
 Pszczola, M., T. Strabel, H. A. Mulder, and M. P. L. Calus. {``Reliability of Direct Genomic Values for Animals with Different Relationships Within and to the Reference Population.''} \emph{Journal of Dairy Science} 95, no. 1 (January 1, 2012): 389--400. \url{https://doi.org/10.3168/jds.2011-4338}.
@@ -672,11 +820,17 @@ Schumacher, Fredrick R., Ali Amin Al Olama, Sonja I. Berndt, Sara Benlloch, Mahb
 \leavevmode\vadjust pre{\hypertarget{ref-scutariUsingGeneticDistance2016}{}}%
 Scutari, Marco, Ian Mackay, and David Balding. {``Using {Genetic Distance} to {Infer} the {Accuracy} of {Genomic Prediction}.''} \emph{PLOS Genetics} 12, no. 9 (September 2, 2016): e1006288. \url{https://doi.org/10.1371/journal.pgen.1006288}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-sellaThinkingEvolutionComplex2019}{}}%
+Sella, G., and N. Barton. {``Thinking {About} the {Evolution} of {Complex Traits} in the {Era} of {Genome-Wide Association Studies}.''} \emph{Annual Review of Genomics and Human Genetics}, 2019. \url{https://doi.org/10.1146/annurev-genom-083115-022316}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-shamPowerLinkageAssociation2000}{}}%
 Sham, P. C., S. S. Cherny, S. Purcell, and J. K. Hewitt. {``Power of {Linkage} Versus {Association Analysis} of {Quantitative Traits}, by {Use} of {Variance-Components Models}, for {Sibship Data}.''} \emph{The American Journal of Human Genetics} 66, no. 5 (May 1, 2000): 1616--30. \url{https://doi.org/10.1086/302891}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-sharpDevelopmentStandardizationImproved2019}{}}%
 Sharp, Seth A., Stephen S. Rich, Andrew R. Wood, Samuel E. Jones, Robin N. Beaumont, James W. Harrison, Darius A. Schneider, et al. {``Development and {Standardization} of an {Improved Type} 1 {Diabetes Genetic Risk Score} for {Use} in {Newborn Screening} and {Incident Diagnosis}.''} \emph{Diabetes Care} 42, no. 2 (January 11, 2019): 200--207. \url{https://doi.org/10.2337/dc18-1785}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-sirugoMissingDiversityHuman2019}{}}%
+Sirugo, Giorgio, Scott M. Williams, and Sarah A. Tishkoff. {``The {Missing Diversity} in {Human Genetic Studies}.''} \emph{Cell} 177, no. 1 (March 21, 2019): 26--31. \url{https://doi.org/10.1016/j.cell.2019.02.048}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-smigielskiDbSNPDatabaseSingle2000}{}}%
 Smigielski, Elizabeth M., Karl Sirotkin, Minghong Ward, and Stephen T. Sherry. {``{dbSNP}: A Database of Single Nucleotide Polymorphisms.''} \emph{Nucleic Acids Research} 28, no. 1 (January 1, 2000): 352--55. \url{https://doi.org/10.1093/nar/28.1.352}.
@@ -696,11 +850,17 @@ Threadgill, David W., Darla R. Miller, Gary A. Churchill, and Fernando Pardo-Man
 \leavevmode\vadjust pre{\hypertarget{ref-tikkanenGeneticRiskPrediction2013}{}}%
 Tikkanen, Emmi, Aki S. Havulinna, Aarno Palotie, Veikko Salomaa, and Samuli Ripatti. {``Genetic {Risk Prediction} and a 2-{Stage Risk Screening Strategy} for {Coronary Heart Disease}.''} \emph{Arteriosclerosis, Thrombosis, and Vascular Biology} 33, no. 9 (September 2013): 2261--66. \url{https://doi.org/10.1161/ATVBAHA.112.301120}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-uffelmannGenomewideAssociationStudies2021}{}}%
+Uffelmann, Emil, Qin Qin Huang, Nchangwi Syntia Munung, Jantina de Vries, Yukinori Okada, Alicia R. Martin, Hilary C. Martin, Tuuli Lappalainen, and Danielle Posthuma. {``Genome-Wide Association Studies.''} \emph{Nature Reviews Methods Primers} 1, no. 1, 1 (August 26, 2021): 1--21. \url{https://doi.org/10.1038/s43586-021-00056-9}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-vilhjalmsson2015modeling}{}}%
 Vilhjálmsson, Bjarni J, Jian Yang, Hilary K Finucane, Alexander Gusev, Sara Lindström, Stephan Ripke, Giulio Genovese, et al. {``Modeling Linkage Disequilibrium Increases Accuracy of Polygenic Risk Scores.''} \emph{The American Journal of Human Genetics} 97, no. 4 (2015): 576--92.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wangTheoreticalEmpiricalQuantification2020}{}}%
 Wang, Ying, Jing Guo, Guiyan Ni, Jian Yang, Peter M. Visscher, and Loic Yengo. {``Theoretical and Empirical Quantification of the Accuracy of Polygenic Scores in Ancestry Divergent Populations.''} \emph{Nature Communications} 11, no. 1, 1 (July 31, 2020): 3865. \url{https://doi.org/10.1038/s41467-020-17719-y}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-watanabeGlobalOverviewPleiotropy2019}{}}%
+Watanabe, Kyoko, Sven Stringer, Oleksandr Frei, Maša Umi'cevi'c Mirkov, Christiaan de Leeuw, Tinca J. C. Polderman, Sophie van der Sluis, Ole A. Andreassen, Benjamin M. Neale, and Danielle Posthuma. {``A Global Overview of Pleiotropy and Genetic Architecture in Complex Traits.''} \emph{Nature Genetics} 51, no. 9, 9 (September 2019): 1339--48. \url{https://doi.org/10.1038/s41588-019-0481-0}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-weirEstimatingFStatisticsAnalysis1984}{}}%
 Weir, B. S., and C. Clark Cockerham. {``Estimating {F-Statistics} for the {Analysis} of {Population Structure}.''} \emph{Evolution} 38, no. 6 (1984): 1358--70. \url{https://doi.org/10.2307/2408641}.
@@ -708,8 +868,14 @@ Weir, B. S., and C. Clark Cockerham. {``Estimating {F-Statistics} for the {Analy
 \leavevmode\vadjust pre{\hypertarget{ref-wittbrodtMedakaModelOrganism2002}{}}%
 Wittbrodt, Joachim, Akihiro Shima, and Manfred Schartl. {``Medaka --- a Model Organism from the Far East.''} \emph{Nature Reviews Genetics} 3, no. 1, 1 (January 2002): 53--64. \url{https://doi.org/10.1038/nrg704}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-wojcikGeneticAnalysesDiverse2019}{}}%
+Wojcik, Genevieve L., Mariaelisa Graff, Katherine K. Nishimura, Ran Tao, Jeffrey Haessler, Christopher R. Gignoux, Heather M. Highland, et al. {``Genetic Analyses of Diverse Populations Improves Discovery for Complex Traits.''} \emph{Nature} 570, no. 7762, 7762 (June 2019): 514--18. \url{https://doi.org/10.1038/s41586-019-1310-4}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-wrayPredictionIndividualGenetic2007}{}}%
 Wray, Naomi R., Michael E. Goddard, and Peter M. Visscher. {``Prediction of Individual Genetic Risk to Disease from Genome-Wide Association Studies.''} \emph{Genome Research} 17, no. 10 (January 10, 2007): 1520--28. \url{https://doi.org/10.1101/gr.6665407}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-yengoMetaanalysisGenomewideAssociation2018}{}}%
+Yengo, Loic, Julia Sidorenko, Kathryn E Kemper, Zhili Zheng, Andrew R Wood, Michael N Weedon, Timothy M Frayling, et al. {``Meta-Analysis of Genome-Wide Association Studies for Height and Body Mass Index in ∼700000 Individuals of {European} Ancestry.''} \emph{Human Molecular Genetics} 27, no. 20 (October 15, 2018): 3641--49. \url{https://doi.org/10.1093/hmg/ddy271}.
 
 \end{CSLReferences}
 
