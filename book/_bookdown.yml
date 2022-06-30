@@ -13,6 +13,6 @@ rmd_files: [
   "03-Pilot.Rmd",
   "04-MIKK_F2.Rmd",
   "06-Fst.Rmd",
+  "07-references.Rmd",
   "Appendix.Rmd",
-  "07-references.Rmd"
 ]

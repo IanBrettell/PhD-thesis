@@ -1,6 +1,6 @@
-# Appendix {-}
+# (APPENDIX) Appendix {-}
 
-## eCDF of all polygenic traits in the GWAS Catalog ranked by ${D_t^S}$ {-}
+# eCDF of all polygenic traits in the GWAS Catalog ranked by ${D_t^S}$ 
 
 (ref:eCDFall) 587 traits from the GWAS Catalog that passed our filters for polygenic traits, ranked by ${D_t^S}$.
 

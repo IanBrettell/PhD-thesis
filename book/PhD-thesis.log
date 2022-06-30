@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.14)  16 JUN 2022 18:34
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.14)  29 JUN 2022 22:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -948,14 +948,6 @@ LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
 (Font)              scaled to size 20.74pt on input line 226.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 234.
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 236.
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 236.
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 236.
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 236.
 [9]
 File: figs/introduction/homunculus.png Graphic file (type bmp)
 <figs/introduction/homunculus.png>
@@ -972,86 +964,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 272--272
 []\TU/LibreBaskerville(0)/b/n/14.4 The Medaka Inbred Kiyosu-Karlruhe
  []
 
-
-Underfull \vbox (badness 6364) has occurred while \output is active []
-
 [13
 
 ]
-Underfull \vbox (badness 4954) has occurred while \output is active []
+Underfull \hbox (badness 1137) in paragraph at lines 278--279
+\TU/LibreBaskerville(0)/m/n/10 been domesticated, and therefore do not represent the genetic
+ []
 
-[14] [15]
+[14]
 Underfull \hbox (badness 1297) in paragraph at lines 282--283
 \TU/LibreBaskerville(0)/m/n/10 caught near Kiyosu in Southern Japan, and now comprises 80
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[16]
-Underfull \hbox (badness 4441) in paragraph at lines 295--296
-\TU/LibreBaskerville(0)/m/n/10 (DEL), duplications (SUP), inversions (INV) and translocations
+Underfull \hbox (badness 1931) in paragraph at lines 284--286
+\TU/LibreBaskerville(0)/m/n/10 panel (Chapter []2.2.4[]), assessing its allele-frequency distribution
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[17]
+[15]
+Underfull \hbox (badness 1902) in paragraph at lines 295--296
+\TU/LibreBaskerville(0)/m/n/10 Technologies (ONT) long-read sequencing technology. Adrien
+ []
+
+[16]
 File: figs/mikk_genome/20211213_final_figure.png Graphic file (type bmp)
 <figs/mikk_genome/20211213_final_figure.png>
 
-Overfull \hbox (32.77336pt too wide) in paragraph at lines 311--311
-[][]\TU/LibreBaskerville(0)/m/n/8 “Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple_alignments/50_fish.epo/,”
+Underfull \hbox (badness 3271) in paragraph at lines 311--312
+\TU/LibreBaskerville(0)/m/n/10 northern Japanese and Korean medaka populations. To this
  []
 
-[18] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 313--313
-[][]\TU/LibreBaskerville(0)/m/n/8 Simon martin, \TU/LibreBaskerville(0)/m/it/8 Simonhmartin/Genomics_general\TU/LibreBaskerville(0)/m/n/8 , 2022, []$[][][][][] [] [] [] [][][][][][] [] [][][] []
+
+Underfull \hbox (badness 4819) in paragraph at lines 311--312
+\TU/LibreBaskerville(0)/m/n/10 of all three strains.(“Index of /Pub/Release-102/Emf/Ensembl-
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+\TU/LibreBaskerville(0)/m/n/10 Compara/Multiple_alignments/50_fish.epo/” n.d.) Using the
+ []
+
+[17] [18]
 File: figs/mikk_genome/07_introgression.png Graphic file (type bmp)
 <figs/mikk_genome/07_introgression.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 321--321
-[][]\TU/LibreBaskerville(0)/m/n/8 Takafumi Katsumura et al., “Medaka Population Genome Structure
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 321--321
-\TU/LibreBaskerville(0)/m/n/8 and Demographic History Described via Genotyping-by-Sequencing,” \TU/LibreBaskerville(0)/m/it/8 G3
- []
-
-[20] [21]
+[19]
 File: figs/mikk_genome/supp_01_pi_circos.png Graphic file (type bmp)
 <figs/mikk_genome/supp_01_pi_circos.png>
-
+[20] [21]
 Underfull \hbox (badness 1062) in paragraph at lines 336--337
 \TU/LibreBaskerville(0)/m/n/10 levels of homozygosity compared to classical laboratory inbred
  []
 
-[22] [23]
 File: figs/mikk_genome/20210224_sv_invs_lines.png Graphic file (type bmp)
 <figs/mikk_genome/20210224_sv_invs_lines.png>
-[24]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[22]
 Underfull \hbox (badness 5893) in paragraph at lines 349--350
 \TU/LibreBaskerville(0)/m/n/10 the MIKK panel’s minor allele frequency (MAF) distribution
  []
 
+
+Underfull \hbox (badness 1629) in paragraph at lines 349--350
+\TU/LibreBaskerville(0)/m/n/10 Phase 3 release.(“A Global Reference for Human Genetic Vari-
+ []
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 349--350
+\TU/LibreBaskerville(0)/m/n/10 ation” 2015) To prepare the \TU/LibreBaskerville(0)/b/n/10 “1KG call set”\TU/LibreBaskerville(0)/m/n/10 , I first downloaded
+ []
+
+
+Underfull \hbox (badness 4024) in paragraph at lines 349--350
+\TU/LibreBaskerville(0)/m/n/10 the .vcf files for each autosome from the project’s FTP site
+ []
+
 File: figs/mikk_genome/08_ld_decay.png Graphic file (type bmp)
 <figs/mikk_genome/08_ld_decay.png>
-[25] [26]
+[23] [24]
 File: figs/mikk_genome/20210401_hdrr_repeats_final.png Graphic file (type bmp)
 <figs/mikk_genome/20210401_hdrr_repeats_final.png>
 
 LaTeX Warning: Float too large for page by 28.93764pt on input line 365.
 
-[27] [28]
+[25] [26]
 File: figs/mikk_genome/20210408_sv_main.png Graphic file (type bmp)
 <figs/mikk_genome/20210408_sv_main.png>
 
 LaTeX Warning: Float too large for page by 29.59764pt on input line 380.
 
-[29]
+[27] [28]
 Underfull \hbox (badness 3746) in paragraph at lines 389--390
 \TU/LibreBaskerville(0)/m/n/10 Taken together, these analyses show that the MIKK panel is
  []
@@ -1066,556 +1072,562 @@ Underfull \hbox (badness 2680) in paragraph at lines 389--390
 \TU/LibreBaskerville(0)/m/n/10 previously-established inbred lines to validate our behavioural
  []
 
-[30] [31] [32]
-Chapter 3.
-[33
+[29] [30
 
 ]
-Overfull \hbox (130.32817pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 34 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
+Chapter 3.
+[31]
+Overfull \hbox (130.63818pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 32 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
  []
 
-[34
+[32
 
 ]
 Chapter 4.
-[35] [36
+[33] [34
 
 ]
 Chapter 5.
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 407--407
-[][][] [] [][][][] [] [][][][] [] [][][][][][][][][][][][][][] [] [][] [] [][][] [][] [][] [] [] [][] [][][][][][][][] [][] [][][][][][] [][] [][][][][][][][][][] [][]
+[35]
+Overfull \hbox (302.8221pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 36 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
-Missing character: There is no ∼ (U+223C) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
+[36]
+Underfull \hbox (badness 1147) in paragraph at lines 426--427
+[]\TU/LibreBaskerville(0)/m/n/10 Compared to PGS scores for those of European ancestry, PGS
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+[37]
 Overfull \hbox (302.4521pt too wide) has occurred while \output is active
 \TU/LibreBaskerville(0)/m/n/10 38 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
 [38] [39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (303.2221pt too wide) has occurred while \output is active
 \TU/LibreBaskerville(0)/m/n/10 40 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
-[40] [41]
-Overfull \hbox (302.2421pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 42 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[42] [43]
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/it' will be
-(Font)              scaled to size 10.0pt on input line 466.
-
-Underfull \hbox (badness 1960) in paragraph at lines 466--467
-[]\TU/LibreBaskerville(0)/m/n/10 The neglect of rare variants can be overcome by using next-
- []
-
-
-Underfull \hbox (badness 2334) in paragraph at lines 466--467
-\TU/LibreBaskerville(0)/m/n/10 generation sequencing technologies such as whole-genome se-
- []
-
-
-Overfull \hbox (301.9321pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 44 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[44] [45]
-Underfull \hbox (badness 1552) in paragraph at lines 488--489
+[40]
+Underfull \hbox (badness 1552) in paragraph at lines 474--475
 []\TU/LibreBaskerville(0)/m/n/10 Differences in allele frequencies between populations can arise
  []
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 490--491
-\TU/LibreBaskerville(0)/m/n/10 populations for all polygenic traits in the GWAS Catalog, and
+Underfull \hbox (badness 1043) in paragraph at lines 474--475
+\TU/LibreBaskerville(0)/m/n/10 towards the trait optima for a given environment (Harpak and
  []
+
+[41]
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 479.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 479.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 479.
+
+Overfull \hbox (302.2421pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 42 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[42]
+Overfull \hbox (341.678pt too wide) in paragraph at lines 490--491
+\TU/LibreBaskerville(0)/m/n/10 high-coverage, phased .vcf files(“Index of /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/”
+ []
+
+[43]
+File: figs/fst/circos_all_fst.png Graphic file (type bmp)
+<figs/fst/circos_all_fst.png>
+File: figs/fst/histo_fst_all.png Graphic file (type bmp)
+<figs/fst/histo_fst_all.png>
+
+Overfull \hbox (301.9321pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 44 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[44] [45]
+Underfull \hbox (badness 2744) in paragraph at lines 505--506
+\TU/LibreBaskerville(0)/m/n/10 I calculated the distribution of $[][]$ across all approximately-
+ []
+
+
+Underfull \vbox (badness 1210) has occurred while \output is active []
 
 
 Overfull \hbox (302.5121pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 46 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+\TU/LibreBaskerville(0)/m/n/10 46 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
 [46]
-Underfull \hbox (badness 1990) in paragraph at lines 507--508
-\TU/LibreBaskerville(0)/m/n/10 associated with 587 traits, a subset of the GWAS Catalog that
- []
-
-
-Underfull \hbox (badness 2229) in paragraph at lines 507--508
-\TU/LibreBaskerville(0)/m/n/10 Using high-coverage sequence data for 2,504 individuals from
- []
-
-
-Underfull \hbox (badness 1112) in paragraph at lines 507--508
-\TU/LibreBaskerville(0)/m/n/10 GWAS Catalog we calculated the distribution of $[][]$ across all
- []
-
-[47]
-Overfull \hbox (92.90135pt too wide) in paragraph at lines 515--515
-[][]\TU/LibreBaskerville(0)/m/n/8 “Index of /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/,”
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 515--515
-\TU/LibreBaskerville(0)/m/n/8 accessed March 24, 2022, []$[][][][] [] [] [] [][][] [] [][][][][][][][][][][] [] [][][] [] [][] [] [][] [] [][][][] [] [][][] [] [][][][] []
- []
-
-
-Overfull \hbox (302.1421pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 48 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[48]
-Underfull \hbox (badness 1062) in paragraph at lines 525--525
-[][]\TU/LibreBaskerville(0)/m/n/8 Orestis A. Panagiotou, John P. A. Ioannidis, and Genome-Wide Significance
- []
-
 File: figs/fst/0.1_1000_20220314_snp_counts.pdf Graphic file (type pdf)
 <use figs/fst/0.1_1000_20220314_snp_counts.pdf>
-[49]
-Overfull \hbox (303.05211pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 50 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+[47]
+Overfull \hbox (302.1421pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 48 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
-[50]
-Underfull \hbox (badness 1205) in paragraph at lines 541--541
-[][]\TU/LibreBaskerville(0)/m/n/8 Emmanuel Paradis, “Pegas: An R Package for Population Genetics with an
- []
-
-
-Underfull \hbox (badness 1975) in paragraph at lines 553--553
-[][]\TU/LibreBaskerville(0)/m/n/8 W. J. Conover, \TU/LibreBaskerville(0)/m/it/8 Practical Nonparametric Statistics \TU/LibreBaskerville(0)/m/n/8 (John Wiley & Sons, 1999),
- []
-
-
-Underfull \hbox (badness 1776) in paragraph at lines 553--553
-\TU/LibreBaskerville(0)/m/it/8 Based on Sample Distribution Function \TU/LibreBaskerville(0)/m/n/8 (SIAM, 1973), []$[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][][] [] [][] []
- []
-
-[51]
+[48] [49]
 File: figs/fst/0.1_1000_20220314_final.pdf Graphic file (type pdf)
 <use figs/fst/0.1_1000_20220314_final.pdf>
 
+Underfull \hbox (badness 1436) in paragraph at lines 565--566
+\TU/LibreBaskerville(0)/m/n/10 discovered variants, but perhaps rather by as-yet undiscovered
+ []
+
+
+Underfull \hbox (badness 1708) in paragraph at lines 565--566
+\TU/LibreBaskerville(0)/m/n/10 variants of larger effect sizes in non-European populations, as
+ []
+
+
+Overfull \hbox (303.05211pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 50 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[50] [51]
+File: figs/fst/20220324_n_individuals.pdf Graphic file (type pdf)
+<use figs/fst/20220324_n_individuals.pdf>
+
+Overfull \hbox (0.13997pt too wide) in paragraph at lines 579--580
+\TU/LibreBaskerville(0)/m/n/10 from the mean additive genetic value between populations (Jeremy J.
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (302.0721pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 52 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+\TU/LibreBaskerville(0)/m/n/10 52 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
 [52] [53]
-Underfull \vbox (badness 1817) has occurred while \output is active []
-
-
 Overfull \hbox (301.7621pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 54 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+\TU/LibreBaskerville(0)/m/n/10 54 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
-[54] [55]
-Overfull \hbox (302.3421pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 56 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[56
-
-]
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 17.70753pt on input line 604.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 17.70929pt on input line 604.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 17.70576pt on input line 604.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 605.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 605.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 605.
-
-File: figs/fst/0.1_1000_20220314_ecdf_all_faceted_with_controls_d_rank_long.pdf Graphic file (type pdf)
-<use figs/fst/0.1_1000_20220314_ecdf_all_faceted_with_controls_d_rank_long.pdf>
-[57]
-Overfull \hbox (301.9721pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 58 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[58
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 622--624
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 597--599
 []\TU/LibreBaskerville(0)/m/n/10 Adhikari, Kaustubh, Javier Mendoza-Revilla, Anood Sohail,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 622--624
+Underfull \hbox (badness 10000) in paragraph at lines 597--599
 \TU/LibreBaskerville(0)/m/n/10 Macarena Fuentes-Guajardo, Jodie Lampert, Juan Camilo
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 622--624
-\TU/LibreBaskerville(0)/m/n/10 Chac’on-Duque, Malena Hurtado, et al. “A GWAS in Latin
- []
-
-
-Underfull \hbox (badness 3989) in paragraph at lines 631--633
+Underfull \hbox (badness 3989) in paragraph at lines 615--617
 []\TU/LibreBaskerville(0)/m/n/10 Berg, Jeremy J, Arbel Harpak, Nasa Sinnott-Armstrong, Anja
  []
 
 
-Underfull \hbox (badness 4995) in paragraph at lines 631--633
-\TU/LibreBaskerville(0)/m/n/10 Mark I McCarthy, Magnus Nordborg, Nicholas H Barton,
+Underfull \hbox (badness 1590) in paragraph at lines 615--617
+\TU/LibreBaskerville(0)/m/n/10 August Boyle, et al. 2019. “Reduced Signal for Polygenic
  []
 
 
-Underfull \hbox (badness 1354) in paragraph at lines 631--633
-\TU/LibreBaskerville(0)/m/n/10 and Joachim Hermisson. \TU/LibreBaskerville(0)/b/it/10 eLife \TU/LibreBaskerville(0)/m/n/10 8 (March 21, 2019): e39725.
+Underfull \hbox (badness 2460) in paragraph at lines 615--617
+\TU/LibreBaskerville(0)/m/n/10 Adaptation of Height in UK Biobank.” Edited by Magnus
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 637--639
+Underfull \hbox (badness 5331) in paragraph at lines 615--617
+\TU/LibreBaskerville(0)/m/n/10 Nordborg, Mark I McCarthy, Magnus Nordborg, Nicholas
+ []
+
+[55
+
+]
+Underfull \hbox (badness 2662) in paragraph at lines 621--623
 []\TU/LibreBaskerville(0)/m/n/10 Bien, Stephanie A., Genevieve L. Wojcik, Chani J. Hodonsky,
  []
 
 
-Underfull \hbox (badness 3635) in paragraph at lines 637--639
-\TU/LibreBaskerville(0)/m/n/10 Christopher R. Gignoux, Iona Cheng, Tara C. Matise, Ul-
+Underfull \hbox (badness 1009) in paragraph at lines 621--623
+\TU/LibreBaskerville(0)/m/n/10 (1): 181–200. []$[][][][][] [] [] [] [][][] [] [][][] [] [][] [] [][][][] [] [][][][][][][] [][] [][][][][] [][] [][][][][][] [][]
  []
 
 
-Underfull \hbox (badness 4291) in paragraph at lines 637--639
-\TU/LibreBaskerville(0)/m/n/10 rike Peters, Eimear E. Kenny, and Kari E. North. “The
+Underfull \hbox (badness 6493) in paragraph at lines 624--626
+[]\TU/LibreBaskerville(0)/m/n/10 Chang, Christopher C, Carson C Chow, Laurent CAM Tel-
  []
 
 
-Underfull \hbox (badness 4582) in paragraph at lines 637--639
-\TU/LibreBaskerville(0)/m/n/10 Future of Genomic Studies Must Be Globally Representa-
+Underfull \hbox (badness 6995) in paragraph at lines 624--626
+\TU/LibreBaskerville(0)/m/n/10 lier, Shashaank Vattikuti, Shaun M Purcell, and James J
  []
 
 
-Underfull \hbox (badness 4899) in paragraph at lines 637--639
-\TU/LibreBaskerville(0)/m/n/10 tive: Perspectives from PAGE.” \TU/LibreBaskerville(0)/b/it/10 Annual Review of Genomics
+Underfull \hbox (badness 1845) in paragraph at lines 624--626
+\TU/LibreBaskerville(0)/m/n/10 lenge of Larger and Richer Datasets.” \TU/LibreBaskerville(0)/m/it/10 GigaScience \TU/LibreBaskerville(0)/m/n/10 4 (1): 7.
  []
 
 
-Underfull \hbox (badness 1803) in paragraph at lines 637--639
-\TU/LibreBaskerville(0)/b/it/10 and Human Genetics \TU/LibreBaskerville(0)/m/n/10 20, no. 1 (August 31, 2019): 181–200.
+Overfull \hbox (302.3421pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 56 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
-[59]
-Underfull \hbox (badness 2189) in paragraph at lines 640--642
-[]\TU/LibreBaskerville(0)/m/n/10 Chang, Christopher C, Carson C Chow, Laurent CAM Tellier,
- []
-
-
-Underfull \hbox (badness 3396) in paragraph at lines 640--642
-\TU/LibreBaskerville(0)/m/n/10 Generation PLINK: Rising to the Challenge of Larger and
+[56]
+Underfull \hbox (badness 2334) in paragraph at lines 639--641
+\TU/LibreBaskerville(0)/m/n/10 man, R. Peterson, and B. Domingue. 2019. “Analysis of
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 640--642
-\TU/LibreBaskerville(0)/m/n/10 Richer Datasets.” \TU/LibreBaskerville(0)/b/it/10 GigaScience \TU/LibreBaskerville(0)/m/n/10 4, no. 1 (December 2015): 7.
+Underfull \hbox (badness 10000) in paragraph at lines 639--641
+\TU/LibreBaskerville(0)/m/n/10 Polygenic Risk Score Usage and Performance in Diverse
  []
 
 
-Underfull \hbox (badness 1348) in paragraph at lines 652--654
-[]\TU/LibreBaskerville(0)/m/n/10 Domingue, Benjamin W., Daniel W. Belsky, Jason M. Fletcher,
+Underfull \hbox (badness 1087) in paragraph at lines 639--641
+\TU/LibreBaskerville(0)/m/n/10 Human Populations.” \TU/LibreBaskerville(0)/m/it/10 Nature Communications \TU/LibreBaskerville(0)/m/n/10 10 (1, 1): 3328.
  []
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 658--660
-[]\TU/LibreBaskerville(0)/m/n/10 Durbin, J. \TU/LibreBaskerville(0)/b/it/10 Distribution Theory for Tests Based on Sample Distri-
+Underfull \hbox (badness 3068) in paragraph at lines 642--644
+[]\TU/LibreBaskerville(0)/m/n/10 Durbin, J. 1973. \TU/LibreBaskerville(0)/m/it/10 Distribution Theory for Tests Based on Sample
  []
 
 
-Underfull \hbox (badness 2941) in paragraph at lines 658--660
-\TU/LibreBaskerville(0)/b/it/10 bution Function\TU/LibreBaskerville(0)/m/n/10 . SIAM, 1973. []$[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][][] [] [][] []
+Underfull \hbox (badness 10000) in paragraph at lines 642--644
+\TU/LibreBaskerville(0)/m/it/10 Distribution Function\TU/LibreBaskerville(0)/m/n/10 . SIAM. []$[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][][] [] [][] []
+ []
+
+[57]
+Underfull \hbox (badness 10000) in paragraph at lines 678--680
+\TU/LibreBaskerville(0)/m/n/10 “Chromosomal Inversion Polymorphisms and Adaptation.”
  []
 
 
-Overfull \hbox (303.80211pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 60 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[60]
-Underfull \hbox (badness 3386) in paragraph at lines 679--681
-[]\TU/LibreBaskerville(0)/m/n/10 Gros, Pierre-Alexis, Herv’e Le Nagard, and Olivier Tenaillon.
- []
-
-
-Underfull \hbox (badness 1308) in paragraph at lines 679--681
-\TU/LibreBaskerville(0)/m/n/10 “The Evolution of Epistasis and Its Links With Genetic Ro-
- []
-
-
-Underfull \hbox (badness 3439) in paragraph at lines 679--681
-\TU/LibreBaskerville(0)/m/n/10 bustness, Complexity and Drift in a Phenotypic Model of
- []
-
-
-Underfull \hbox (badness 2753) in paragraph at lines 679--681
-\TU/LibreBaskerville(0)/m/n/10 Adaptation.” \TU/LibreBaskerville(0)/b/it/10 Genetics \TU/LibreBaskerville(0)/m/n/10 182, no. 1 (May 1, 2009): 277–93.
- []
-
-[61]
-Overfull \hbox (109.13666pt too wide) in paragraph at lines 694--696
+Overfull \hbox (109.13666pt too wide) in paragraph at lines 684--686
 []\TU/LibreBaskerville(0)/m/n/10 “Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple_alignments/50_fish.epo/.”
  []
 
 
-Overfull \hbox (184.29666pt too wide) in paragraph at lines 697--699
+Underfull \hbox (badness 10000) in paragraph at lines 684--686
+[][][][][][][] [][] [][][] [] [][][] [] [][][][][][][] [][] [][][][][][][] [] [][][][][][][][] [] [][][][][][][][][][] [] [][] []
+ []
+
+
+Overfull \hbox (184.29666pt too wide) in paragraph at lines 687--689
 []\TU/LibreBaskerville(0)/m/n/10 “Index of /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/.”
  []
 
 
-Underfull \hbox (badness 7869) in paragraph at lines 697--699
-\TU/LibreBaskerville(0)/m/n/10 Accessed March 24, 2022. []$[][][][] [] [] [] [][][] [] [][][][][][][][][][][] [] [][][] [] [][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 697--699
+Underfull \hbox (badness 10000) in paragraph at lines 687--689
 [][] [] [][][][] [] [][][] [] [][][][] [] [][][][][][][][][][][] [] [][][][][] [] [][][][] [] [][][][] [] [][][][][][][][] []
  []
 
 
-Underfull \hbox (badness 2932) in paragraph at lines 703--705
-[]\TU/LibreBaskerville(0)/m/n/10 Katsumura, Takafumi, Shoji Oda, Hiroshi Mitani, and Hiroki
+Overfull \hbox (301.9721pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 58 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[58]
+Underfull \hbox (badness 10000) in paragraph at lines 693--695
+[]\TU/LibreBaskerville(0)/m/n/10 Katsumura, Takafumi, Shoji Oda, Hiroshi Mitani, and Hi-
  []
 
 
-Underfull \hbox (badness 2856) in paragraph at lines 703--705
-\TU/LibreBaskerville(0)/m/n/10 Oota. “Medaka Population Genome Structure and Demo-
+Underfull \hbox (badness 2591) in paragraph at lines 693--695
+\TU/LibreBaskerville(0)/m/n/10 roki Oota. 2019. “Medaka Population Genome Structure
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 703--705
-\TU/LibreBaskerville(0)/m/n/10 graphic History Described via Genotyping-by-Sequencing.”
+Underfull \hbox (badness 10000) in paragraph at lines 693--695
+\TU/LibreBaskerville(0)/m/n/10 and Demographic History Described via Genotyping-by-
  []
 
 
-Underfull \hbox (badness 3209) in paragraph at lines 706--708
+Underfull \hbox (badness 3209) in paragraph at lines 696--698
 \TU/LibreBaskerville(0)/m/n/10 salainen, Aki S. Havulinna, Ida Surakka, Aarno Palotie, et
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 706--708
-\TU/LibreBaskerville(0)/m/n/10 al. “Geographic Variation and Bias in the Polygenic Scores
+Underfull \hbox (badness 1178) in paragraph at lines 696--698
+\TU/LibreBaskerville(0)/m/n/10 al. 2019. “Geographic Variation and Bias in the Polygenic
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 706--708
-\TU/LibreBaskerville(0)/m/n/10 of Complex Diseases and Traits in Finland.” \TU/LibreBaskerville(0)/b/it/10 The American
+Underfull \hbox (badness 4242) in paragraph at lines 696--698
+\TU/LibreBaskerville(0)/m/n/10 Scores of Complex Diseases and Traits in Finland.” \TU/LibreBaskerville(0)/m/it/10 The
  []
 
 
-Underfull \hbox (badness 3930) in paragraph at lines 709--711
-\TU/LibreBaskerville(0)/m/n/10 Carolina Roselli, Seung Hoan Choi, Pradeep Natarajan, et
+Underfull \hbox (badness 1484) in paragraph at lines 696--698
+\TU/LibreBaskerville(0)/m/it/10 American Journal of Human Genetics \TU/LibreBaskerville(0)/m/n/10 104 (6): 1169–81. []$[][][][][] []
  []
 
 
-Underfull \hbox (badness 1609) in paragraph at lines 709--711
-\TU/LibreBaskerville(0)/m/n/10 al. “Genome-Wide Polygenic Scores for Common Diseases
+Underfull \hbox (badness 1552) in paragraph at lines 708--710
+\TU/LibreBaskerville(0)/m/n/10 Teresa M. Kruisselbrink, Iyad N. Isseh, Raad A. Haddad, et
  []
 
 
-Overfull \hbox (302.8221pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 62 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+Underfull \hbox (badness 1147) in paragraph at lines 708--710
+\TU/LibreBaskerville(0)/m/n/10 Heart Disease Risk Estimates.” \TU/LibreBaskerville(0)/m/it/10 Circulation \TU/LibreBaskerville(0)/m/n/10 133 (12): 1181–88.
  []
 
-[62]
-Underfull \hbox (badness 1348) in paragraph at lines 721--723
+[59]
+Underfull \hbox (badness 1377) in paragraph at lines 714--716
+\TU/LibreBaskerville(0)/m/n/10 Kiyosu-Karlsruhe (MIKK) Panel.” \TU/LibreBaskerville(0)/m/it/10 Genome Biology \TU/LibreBaskerville(0)/m/n/10 23 (1): 58.
+ []
+
+
+Underfull \hbox (badness 1348) in paragraph at lines 717--719
 []\TU/LibreBaskerville(0)/m/n/10 Lek, Monkol, Konrad J. Karczewski, Eric V. Minikel, Kaitlin E.
  []
 
 
-Underfull \hbox (badness 1609) in paragraph at lines 724--726
-\TU/LibreBaskerville(0)/m/n/10 of Germination Efficiency in Maize in Relation to Nitrogen
+Underfull \hbox (badness 1377) in paragraph at lines 717--719
+\TU/LibreBaskerville(0)/m/n/10 ation in 60,706 Humans.” \TU/LibreBaskerville(0)/m/it/10 Nature \TU/LibreBaskerville(0)/m/n/10 536 (7616, 7616): 285–91.
  []
 
 
-Underfull \hbox (badness 2119) in paragraph at lines 724--726
-\TU/LibreBaskerville(0)/m/n/10 Metabolism Reveals the Importance of Cytosolic Glutamine
+Underfull \hbox (badness 2512) in paragraph at lines 720--722
+[]\TU/LibreBaskerville(0)/m/n/10 Limami, Anis M., Clothilde Rouillon, Gaëlle Glevarec, Andr’e
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 727--729
-\TU/LibreBaskerville(0)/m/n/10 M. Gaudet, Roger L. Milne, Fredrick R. Schumacher, et al.
+Underfull \hbox (badness 1097) in paragraph at lines 720--722
+\TU/LibreBaskerville(0)/m/n/10 ical Analysis of Germination Efficiency in Maize in Relation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 727--729
-\TU/LibreBaskerville(0)/m/n/10 “Breast Cancer Risk From Modifiable and Nonmodifiable
+Underfull \hbox (badness 1917) in paragraph at lines 720--722
+\TU/LibreBaskerville(0)/m/n/10 to Nitrogen Metabolism Reveals the Importance of Cytoso-
  []
 
 
-Underfull \hbox (badness 4391) in paragraph at lines 727--729
-\TU/LibreBaskerville(0)/m/n/10 Risk Factors Among White Women in the United States.”
+Underfull \hbox (badness 1642) in paragraph at lines 729--731
+[]\TU/LibreBaskerville(0)/m/n/10 Mackay, Trudy F. C., and Wen Huang. 2018. “Charting the
  []
 
 
-Underfull \hbox (badness 3861) in paragraph at lines 727--729
-\TU/LibreBaskerville(0)/b/it/10 JAMA Oncology \TU/LibreBaskerville(0)/m/n/10 2, no. 10 (October 1, 2016): 1295–1302.
+Underfull \hbox (badness 7203) in paragraph at lines 729--731
+\TU/LibreBaskerville(0)/m/n/10 Genotype–Phenotype Map: Lessons from the Drosophila
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 730--732
-\TU/LibreBaskerville(0)/m/n/10 NHGRI-EBI Catalog of Published Genome-Wide Association
+Overfull \hbox (303.80211pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 60 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
  []
 
-[63]
-Underfull \hbox (badness 1005) in paragraph at lines 733--735
-\TU/LibreBaskerville(0)/m/n/10 Phenotype Map: Lessons from the Drosophila Melanogaster
- []
-
-
-Underfull \hbox (badness 1226) in paragraph at lines 739--741
+[60]
+Underfull \hbox (badness 1226) in paragraph at lines 738--740
 []\TU/LibreBaskerville(0)/m/n/10 Martin, Alicia R, Christopher R Gignoux, Raymond K Walters,
  []
 
 
-Underfull \hbox (badness 1067) in paragraph at lines 742--744
-[]\TU/LibreBaskerville(0)/m/n/10 Martin, Alicia R., Masahiro Kanai, Yoichiro Kamatani, Yukinori
+Underfull \hbox (badness 4995) in paragraph at lines 741--743
+[]\TU/LibreBaskerville(0)/m/n/10 Martin, Alicia R., Masahiro Kanai, Yoichiro Kamatani, Yuki-
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 742--744
-\TU/LibreBaskerville(0)/m/n/10 parities.” \TU/LibreBaskerville(0)/b/it/10 Nature Genetics \TU/LibreBaskerville(0)/m/n/10 51, no. 4, 4 (April 2019): 584–91.
+Underfull \hbox (badness 2005) in paragraph at lines 741--743
+\TU/LibreBaskerville(0)/m/n/10 nori Okada, Benjamin M. Neale, and Mark J. Daly. 2019.
  []
 
 
-Underfull \hbox (badness 3525) in paragraph at lines 748--750
-[]\TU/LibreBaskerville(0)/m/n/10 martin, Simon. \TU/LibreBaskerville(0)/b/it/10 Simonhmartin/Genomics_general\TU/LibreBaskerville(0)/m/n/10 , 2022. []$[][][][][] []
+Underfull \hbox (badness 3386) in paragraph at lines 741--743
+\TU/LibreBaskerville(0)/m/n/10 “Clinical Use of Current Polygenic Risk Scores May Exac-
  []
 
 
-Overfull \hbox (302.5121pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 64 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+Underfull \hbox (badness 1043) in paragraph at lines 741--743
+\TU/LibreBaskerville(0)/m/n/10 erbate Health Disparities.” \TU/LibreBaskerville(0)/m/it/10 Nature Genetics \TU/LibreBaskerville(0)/m/n/10 51 (4, 4): 584–91.
  []
 
-[64]
-Underfull \hbox (badness 1946) in paragraph at lines 769--771
-[]\TU/LibreBaskerville(0)/m/n/10 Natarajan, Pradeep, Robin Young, Nathan O. Stitziel, Sandosh
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 769--771
-\TU/LibreBaskerville(0)/m/n/10 Padmanabhan, Usman Baber, Roxana Mehran, Samantha
- []
-
-
-Underfull \hbox (badness 4518) in paragraph at lines 769--771
-\TU/LibreBaskerville(0)/m/n/10 Sartori, et al. “Polygenic Risk Score Identifies Subgroup
- []
-
-
-Underfull \hbox (badness 4686) in paragraph at lines 769--771
-\TU/LibreBaskerville(0)/m/n/10 With Higher Burden of Atherosclerosis and Greater Rela-
- []
-
-
-Underfull \hbox (badness 2961) in paragraph at lines 772--774
+[61]
+Underfull \hbox (badness 2961) in paragraph at lines 771--773
 []\TU/LibreBaskerville(0)/m/n/10 Okbay, Aysu, Yeda Wu, Nancy Wang, Hariharan Jayashankar,
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 772--774
-\TU/LibreBaskerville(0)/m/n/10 “Polygenic Prediction of Educational Attainment Within and
- []
-
-[65]
-Overfull \hbox (303.0921pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 66 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
- []
-
-[66]
-Underfull \hbox (badness 1297) in paragraph at lines 808--810
-[]\TU/LibreBaskerville(0)/m/n/10 Purcell, Shaun M, and Christopher C Chang. \TU/LibreBaskerville(0)/b/it/10 PLINK 1.9\TU/LibreBaskerville(0)/m/n/10 , n.d.
+Underfull \hbox (badness 1845) in paragraph at lines 771--773
+\TU/LibreBaskerville(0)/m/n/10 Michael Bennett, Seyed Moeen Nehzati, Julia Sidorenko, et
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 811--813
-\TU/LibreBaskerville(0)/m/n/10 Jacqueline Philouze. “Efficiency of RFLP, RAPD, and AFLP
+Underfull \hbox (badness 1270) in paragraph at lines 771--773
+\TU/LibreBaskerville(0)/m/n/10 al. 2022. “Polygenic Prediction of Educational Attainment
  []
 
-[67]
-Underfull \hbox (badness 3138) in paragraph at lines 835--837
+
+Underfull \hbox (badness 1596) in paragraph at lines 783--785
+[]\TU/LibreBaskerville(0)/m/n/10 Paradis, Emmanuel, and Klaus Schliep. 2019. “Ape 5.0: An
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 783--785
+\TU/LibreBaskerville(0)/m/n/10 Environment for Modern Phylogenetics and Evolution-
+ []
+
+
+Underfull \hbox (badness 4279) in paragraph at lines 783--785
+\TU/LibreBaskerville(0)/m/n/10 ary Analyses in R.” \TU/LibreBaskerville(0)/m/it/10 Bioinformatics \TU/LibreBaskerville(0)/m/n/10 35 (3): 526–28. []$[][][][][] []
+ []
+
+
+Overfull \hbox (302.8221pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 62 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[62] [63]
+Underfull \hbox (badness 4403) in paragraph at lines 816--818
+\TU/LibreBaskerville(0)/m/n/10 Jacqueline Philouze. 2000. “Efficiency of RFLP, RAPD,
+ []
+
+
+Underfull \hbox (badness 7504) in paragraph at lines 816--818
+\TU/LibreBaskerville(0)/m/n/10 and AFLP Markers for the Construction of an Intraspe-
+ []
+
+
+Underfull \hbox (badness 1496) in paragraph at lines 816--818
+\TU/LibreBaskerville(0)/m/n/10 cific Map of the Tomato Genome.” \TU/LibreBaskerville(0)/m/it/10 Genome \TU/LibreBaskerville(0)/m/n/10 43 (1): 29–40.
+ []
+
+
+Underfull \hbox (badness 1014) in paragraph at lines 837--839
+\TU/LibreBaskerville(0)/m/n/10 ing and Incident Diagnosis.” \TU/LibreBaskerville(0)/m/it/10 Diabetes Care \TU/LibreBaskerville(0)/m/n/10 42 (2): 200–207.
+ []
+
+
+Overfull \hbox (302.5121pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 64 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[64]
+Underfull \hbox (badness 3138) in paragraph at lines 843--845
 []\TU/LibreBaskerville(0)/m/n/10 Smigielski, Elizabeth M., Karl Sirotkin, Minghong Ward, and
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 841--843
-[]\TU/LibreBaskerville(0)/m/n/10 Svenson, Karen L, Daniel M Gatti, William Valdar, Catherine
+Underfull \hbox (badness 1210) in paragraph at lines 849--851
+[]\TU/LibreBaskerville(0)/m/n/10 Sun, Luanluan, Lisa Pennells, Stephen Kaptoge, Christopher P.
  []
 
 
-Underfull \hbox (badness 2538) in paragraph at lines 841--843
-\TU/LibreBaskerville(0)/m/n/10 Genetic Mapping Using the Mouse Diversity Outbred Pop-
+Underfull \hbox (badness 5637) in paragraph at lines 852--854
+[]\TU/LibreBaskerville(0)/m/n/10 Svenson, Karen L, Daniel M Gatti, William Valdar, Cather-
  []
 
 
-Underfull \hbox (badness 2443) in paragraph at lines 841--843
-\TU/LibreBaskerville(0)/m/n/10 ulation.” \TU/LibreBaskerville(0)/b/it/10 Genetics \TU/LibreBaskerville(0)/m/n/10 190, no. 2 (February 1, 2012): 437–47.
+Underfull \hbox (badness 4940) in paragraph at lines 852--854
+\TU/LibreBaskerville(0)/m/n/10 ine E Welsh, Riyan Cheng, Elissa J Chesler, Abraham A
  []
 
 
-Underfull \hbox (badness 3646) in paragraph at lines 844--846
-[]\TU/LibreBaskerville(0)/m/n/10 “The $11.9 Trillion Global Healthcare Market: Key Opportu-
+Underfull \hbox (badness 3482) in paragraph at lines 852--854
+\TU/LibreBaskerville(0)/m/n/10 Palmer, Leonard McMillan, and Gary A Churchill. 2012.
  []
 
 
-Underfull \hbox (badness 3942) in paragraph at lines 844--846
-\TU/LibreBaskerville(0)/m/n/10 nities & Strategies (2014-2022) - ResearchAndMarkets.com,”
+Underfull \hbox (badness 2343) in paragraph at lines 852--854
+\TU/LibreBaskerville(0)/m/n/10 “High-Resolution Genetic Mapping Using the Mouse Diver-
  []
 
 
-Underfull \hbox (badness 6526) in paragraph at lines 844--846
+Underfull \hbox (badness 1817) in paragraph at lines 852--854
+\TU/LibreBaskerville(0)/m/n/10 sity Outbred Population.” \TU/LibreBaskerville(0)/m/it/10 Genetics \TU/LibreBaskerville(0)/m/n/10 190 (2): 437–47. []$[][][][][] []
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 855--857
+\TU/LibreBaskerville(0)/m/n/10 & Strategies (2014-2022) - ResearchAndMarkets.com.” 2019.
+ []
+
+
+Underfull \hbox (badness 6526) in paragraph at lines 855--857
 \TU/LibreBaskerville(0)/m/n/10 June 25, 2019. []$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][] [] [][][] [] [][][][] [] [][][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 844--846
+Underfull \hbox (badness 10000) in paragraph at lines 855--857
 [][][][][][][][][][][][][][] [] [][] [] [][][] [][] [][] [] [] [][] [][][][][][][][] [][] [][][][][][] [][] [][][][][][][][][][] [][]
  []
 
 
-Overfull \hbox (51.22998pt too wide) in paragraph at lines 844--846
+Overfull \hbox (51.22998pt too wide) in paragraph at lines 855--857
 [][][][][][] [][] [][][] [][] [][][][][][][][][][][][][] [][] [][][][][][][][][][] [][] [][][][] [][] [][][][] [][][][][][] [][][][][][][][][][][][][][][][][][] []
  []
 
-
-Overfull \hbox (302.7221pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 68 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+[65]
+Underfull \hbox (badness 1527) in paragraph at lines 879--881
+[]\TU/LibreBaskerville(0)/m/n/10 Weir, Bruce S., Lon R. Cardon, Amy D. Anderson, Dahlia M.
  []
 
-[68]
-Underfull \hbox (badness 1502) in paragraph at lines 856--858
-\TU/LibreBaskerville(0)/m/n/10 Gusev, Sara Lindström, Stephan Ripke, Giulio Genovese, et
+
+Underfull \hbox (badness 3612) in paragraph at lines 879--881
+\TU/LibreBaskerville(0)/m/n/10 Nielsen, and William G. Hill. 2005. “Measures of Hu-
  []
 
-[69]
+
+Underfull \hbox (badness 3179) in paragraph at lines 879--881
+\TU/LibreBaskerville(0)/m/n/10 man Population Structure Show Heterogeneity Among Ge-
+ []
+
+
+Underfull \hbox (badness 2189) in paragraph at lines 879--881
+\TU/LibreBaskerville(0)/m/n/10 nomic Regions.” \TU/LibreBaskerville(0)/m/it/10 Genome Research \TU/LibreBaskerville(0)/m/n/10 15 (11): 1468–76. []$[][][][][] []
+ []
+
+
+Overfull \hbox (303.0921pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 66 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[66]
 Missing character: There is no ∼ (U+223C) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
+[67]
+Overfull \hbox (302.7221pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 68 \TU/LibreBaskerville(0)/m/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
 
-Overfull \hbox (302.3921pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/n/10 70 \TU/LibreBaskerville(0)/b/it/10 CHAPTER 5.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+[68
+
+]
+Appendix A.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 30.5947pt on input line 904.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 25.50378pt on input line 904.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 21.24904pt on input line 904.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 30.59773pt on input line 904.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 25.50632pt on input line 904.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 21.25116pt on input line 904.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 30.59166pt on input line 904.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 25.50125pt on input line 904.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 21.24693pt on input line 904.
+File: figs/fst/0.1_1000_20220314_ecdf_all_faceted_with_controls_d_rank_long.pdf Graphic file (type pdf)
+<use figs/fst/0.1_1000_20220314_ecdf_all_faceted_with_controls_d_rank_long.pdf>
+[69]
+Overfull \hbox (128.29036pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/n/10 70 \TU/LibreBaskerville(0)/m/it/10 APPENDIX A.  ECDF OF ALL POLYGENIC TRAITS IN THE GWAS CATALOG RANKED BY $[]$
  []
 
 [70] (./PhD-thesis.aux)
 Package rerunfilecheck Info: File `PhD-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: C20876269AC11851BE7C0EBF7F4225D4;3994.
+(rerunfilecheck)             Checksum: E5BB54C0D314E33591BF36CED003B534;3931.
  ) 
 Here is how much of TeX's memory you used:
- 18906 strings out of 477884
- 347059 string characters out of 5846472
- 985447 words of memory out of 5000000
- 39531 multiletter control sequences out of 15000+600000
- 476791 words of font info for 102 fonts, out of 8000000 for 9000
+ 18966 strings out of 477884
+ 349004 string characters out of 5846472
+ 985381 words of memory out of 5000000
+ 39583 multiletter control sequences out of 15000+600000
+ 478705 words of font info for 113 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 86i,8n,122p,2992b,1703s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,8n,122p,1460b,1703s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on PhD-thesis.pdf (70 pages).
