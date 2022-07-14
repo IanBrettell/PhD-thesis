@@ -12,6 +12,7 @@ rmd_files: [
   "02-MIKK_genome.Rmd",
   "03-Pilot.Rmd",
   "04-MIKK_F2.Rmd",
+  "05-somites.Rmd",
   "06-Fst.Rmd",
   "07-references.Rmd",
   "Appendix.Rmd",

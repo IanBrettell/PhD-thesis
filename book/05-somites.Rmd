@@ -20,8 +20,74 @@ Three methods were formerly used [@zhangMixedLinearModel2010]:
 
 "Ronald fished introduced random effects models to study the correlations of trait values between relatives" [@fisherXVCorrelationRelatives1919].
 
+## Somite period development
 
 
 
+## F2-cross linkage study experimental plan
 
 
+
+## F0 homozygosity and F1 heterozygosity
+
+I aligned the high-coverage sequencing data for the F0 *Cab* and *Kaga* lines to the medaka *HdrR* reference (Ensembl release 104, build ASM223467v1) using BWA-MEM2, sorted the aligned .sam files, marked duplicate reads, and merged the paired reads with picard, and indexed the .bam files with Samtools. 
+
+To then call variants, I followed the GATK best practices (to the extent they were applicable) with GATK's HaplotypeCaller and GenotypeGVCFs tools, then merged all calls into a single .vcf file with picard.
+
+Finally, I extracted the biallelic calls for *Cab* and *Kaga* with bcftools, counted the number of SNPs within non-overlapping, 5-kb bins, and calculated the proportion of SNPs that were homozgyous. 
+
+**Figure \@ref(fig:somite-f0-cab)** is a circos plot generated with circlize for the *Cab* F0 lines
+
+(ref:somite-f0-cab) Proportion of homozygous SNPs within 5 kb bins in the *Cab* F0 generation genome (green), and number of SNPs in each bin (yellow).
+
+```{r somite-f0-cab, echo = F, fig.cap = '(ref:somite-f0-cab)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/Cab.png"), auto_pdf = T)
+```
+
+(ref:somite-f0-kaga) Proportion of homozygous SNPs within 5 kb bins in the *Kaga* F0 generation genome (red), and number of SNPs in each bin (yellow).
+
+```{r somite-f0-kaga, echo = F, fig.cap = '(ref:somite-f0-kaga)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/Kaga.png"), auto_pdf = T)
+```
+
+```{r somite-f0-kaga, echo = F, fig.cap = '(ref:somite-f0-kaga)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/Kaga.png"), auto_pdf = T)
+```
+
+To determine whether the low levels of observed homozygosity in Kaga was affected by its alignments to the southern Japanese *HdrR* reference, we also aligned the F0 samples to the northern Japanese *HNI* reference (**Figure \@ref(fig:somite-f0-kaga-hni)**. This did not make differences to the levels of observed homozygosity in either sample, which gave us confidence that the low homozygosity observed in *Kaga* was not driven by reference bias. 
+
+(ref:somite-f0-kaga-hni) Proportion of homozygous SNPs within 5 kb bins in the *Kaga* F0 generation genome when aligned to the *HNI* reference (red), and number of SNPs in each bin (yellow).
+
+```{r somite-f0-kaga-hni, echo = F, fig.cap = '(ref:somite-f0-kaga-hni)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/Kaga_HNI.png"), auto_pdf = T)
+```
+
+## F1 homozygosity {#f1-homozygosity}
+
+We next examined the level of heterozygosity in the F1 generation from the *Cab*-*Kaga* cross. 
+
+(ref:somite-f1) Proportion of heterozygous SNPs within 5 kb bins in the *Cab*-*Kaga* F1 cross (brown), and number of SNPs in each bin (yellow).
+
+```{r somite-f1, echo = F, fig.cap = '(ref:somite-f1)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/F1.png"), auto_pdf = T)
+```
+
+For the purpose of mapping the F2 sample sequences to the genomes of their parental strains, we selected only biallelic SNPs that were homozygous-divergent in the F0 generation (i.e. homozygous reference allele in *Cab* and homozygous alternative allele in *Kaga* or vice versa) *and* heterozygous in the F1 generation. 
+
+The number of SNPs that met these criteria per chromosome are set out in **Figure \@ref(snp-counts-per-chrom)**. 
+
+(ref:snp-counts-per-chrom) Number of SNPs per chromosome that were homozygous-divergent in the F0 *Cab* and *Kaga* generations, and heterozygous in the F1 generation.
+
+```{r snp-counts-per-chrom, echo = F, fig.cap = '(ref:snp-counts-per-chrom)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/snp_counts_per_chrom.png"), auto_pdf = T)
+```
+
+## F2 genotyping
+
+To maximise the efficiency of our sequencing runs, we "shallow-sequenced" the F2 generation with the short-read Illumina platform at a depth of ~1x. We then aligned these sequences to the *HdrR* reference with BWA-MEM2, sorted the reads and marked duplicates with Picard, then indexed the resulting BAM files with samtools. Genotyping these shallow sequences with the same method as used for the high-coverage sequences for the F0 and F1 generation would be inappropriate. We therefore used a different method whereby we used *bam-readcount* to count the reads that supported either the *Cab* or the *Kaga* allele for all SNPs that met the criteria described above in section \@ref(f1-homozygosity), summed the read counts within 5 kb blocks, and calculated the frequency of reads within each bin that supported the *Kaga* allele. This generated a value for each bin between 0 and 1, where 0 signified that all reads within that bin supported the *Cab* allele, and 1 signified that all reads within that bin supported the *Kaga* allele. Bins containing no reads were imputed with a value of 0.5. 
+
+We then used these values for all F2 individuals as the input to a Hidden Markov Model (HMM) with *hmmlearn*, which we applied to classify each bin as one of three states, with state 0 corresponding to homozygous-*Cab*, 1 corresponding to heterozygous, and 2 corresponding to homozygous-*Kaga*. 
+
+Across each chromosome of every sample, we expected  the output of the HMM to produce a sequence of states. Based on previous biological knowledge that crossover events occur on average once per chromosome, we expected to observe the same state persisting for long stretches of the chromosome, only changing to another state between 0 and 3 times, and rarely more. 
+
+Using the default parameters, the HMM produced an apparently noisy output (Figure @\ref(fig:))
