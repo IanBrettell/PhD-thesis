@@ -50,10 +50,6 @@ knitr::include_graphics(here::here("book/figs/somites/Cab.png"), auto_pdf = T)
 knitr::include_graphics(here::here("book/figs/somites/Kaga.png"), auto_pdf = T)
 ```
 
-```{r somite-f0-kaga, echo = F, fig.cap = '(ref:somite-f0-kaga)', out.width='100%'}
-knitr::include_graphics(here::here("book/figs/somites/Kaga.png"), auto_pdf = T)
-```
-
 To determine whether the low levels of observed homozygosity in Kaga was affected by its alignments to the southern Japanese *HdrR* reference, we also aligned the F0 samples to the northern Japanese *HNI* reference (**Figure \@ref(fig:somite-f0-kaga-hni)**. This did not make differences to the levels of observed homozygosity in either sample, which gave us confidence that the low homozygosity observed in *Kaga* was not driven by reference bias. 
 
 (ref:somite-f0-kaga-hni) Proportion of homozygous SNPs within 5 kb bins in the *Kaga* F0 generation genome when aligned to the *HNI* reference (red), and number of SNPs in each bin (yellow).
@@ -90,4 +86,33 @@ We then used these values for all F2 individuals as the input to a Hidden Markov
 
 Across each chromosome of every sample, we expected  the output of the HMM to produce a sequence of states. Based on previous biological knowledge that crossover events occur on average once per chromosome, we expected to observe the same state persisting for long stretches of the chromosome, only changing to another state between 0 and 3 times, and rarely more. 
 
-Using the default parameters, the HMM produced an apparently noisy output (Figure @\ref(fig:))
+Allowing the HMM to train itself for the transition probabilities and emission variances, the HMM produced an apparently noisy output (Figure @\ref(fig:hmm-standard)). 
+
+```{r hmm-scatter-diagnoses, echo = F, fig.cap = '(ref:hmm-standard)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/scatter_collage.png"), auto_pdf = T)
+```
+
+```{r karyo-wi-missing, echo = F, fig.cap = '(ref:karyo-wi-missing)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/karyoplot_wi_missing.png"), auto_pdf = T)
+```
+
+
+```{r karyo-no-missing, echo = F, fig.cap = '(ref:karyo-no-missing)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/karyoplot_no_missing.png"), auto_pdf = T)
+```
+
+
+```{r prop_sites_total, echo = F, fig.cap = '(ref:prop_sites_total)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/prop_sites_total.png"), auto_pdf = T)
+```
+
+## Genome-wide linkage anlaysis
+
+### Period intercept
+
+```{r somite-manhattan, echo = F, fig.cap = '(ref:somite-manhattan)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/manhattan_intercept.png"), auto_pdf = T)
+```
+
+### PSM area
+
