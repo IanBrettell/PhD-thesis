@@ -84,9 +84,11 @@ To maximise the efficiency of our sequencing runs, we "shallow-sequenced" the F2
 
 We then used these values for all F2 individuals as the input to a Hidden Markov Model (HMM) with *hmmlearn*, which we applied to classify each bin as one of three states, with state 0 corresponding to homozygous-*Cab*, 1 corresponding to heterozygous, and 2 corresponding to homozygous-*Kaga*. 
 
-Across each chromosome of every sample, we expected  the output of the HMM to produce a sequence of states. Based on previous biological knowledge that crossover events occur on average once per chromosome, we expected to observe the same state persisting for long stretches of the chromosome, only changing to another state between 0 and 3 times, and rarely more. 
+Across each chromosome of every sample, we expected the output of the HMM to produce a sequence of states. Based on previous biological knowledge that crossover events occur on average once per chromosome [CITE], we expected to observe the same state persisting for long stretches of the chromosome, only changing to another state between 0 and 3 times, and rarely more. 
 
-Allowing the HMM to train itself for the transition probabilities and emission variances, the HMM produced an apparently noisy output (Figure @\ref(fig:hmm-standard)). 
+**Figure @\ref(fig:hmm-standard)** shows how adjusting the HMM parameters changed the called genotypes for 10 F2 samples on chromosome 18. Allowing the HMM to train itself for the transition probabilities and emission variances, the HMM produced an apparently noisy output (**Figure @\ref(fig:hmm-standard)A**). Fixing the transition probabilities to make it very likely for a state to transition 
+
+(ref:hmm-standard) HMM states called for each bin across chr18 for 10 F2 samples. States 0, 1, and 2 correspond to homozygous *Cab*, heterozygous, and homozygous *Kaga*. Each point represents a 5-kb bin. Y-axis is the proportion of reads within each bin that align to the *Kaga* allele. X-axis is the bp location of the start of each bin. **A**: Standard HMM with all model parameters trained on the data. **B**. HMM with fixed transition probabilities of 0→0/1→1/2→2 = 0.999, 0→1/2→1 = 0.00066, 0→2/2→0 = 0.000333, 1→0/1→2 = 0.0005. **C**-**F** retain those transition probabilities but with different fixed emission variances of 0.01 (**C**), 0.33 (**D**), 0.8 (**E**), and 1 (**F**). 
 
 ```{r hmm-scatter-diagnoses, echo = F, fig.cap = '(ref:hmm-standard)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/somites/scatter_collage.png"), auto_pdf = T)
