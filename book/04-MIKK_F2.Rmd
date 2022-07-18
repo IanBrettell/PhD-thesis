@@ -1,6 +1,22 @@
----
-zotero: ["PhD"]
-bibliography: book.bib
----
+# Genetic linkage study of bold/shy behaviours in the MIKK panel {#MIKK-F2-chap}
 
-# Bold/shy behaviours in the MIKK panel {#MIKK-F2-chap}
+## Mean speed for all MIKK lines
+
+```{r mikk-mean-speed, echo = F, fig.cap = '(ref:mikk-mean-speed)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/F0_line_mean_speed_0.08.png"), auto_pdf = T)
+```
+
+## HMM states
+
+```{r mikk-hmm-asym, echo = F, fig.cap = '(ref:mikk-hmm-asym)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/compare_params.png"), auto_pdf = T)
+```
+
+```{r mikk-hmm-asym, echo = F, fig.cap = '(ref:mikk-hmm-asym)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_17_polar_all_dge.png"), auto_pdf = T)
+```
+
+```{r mikk-hmm-asym, echo = F, fig.cap = '(ref:mikk-hmm-asym)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_polar_all_dge.png"), auto_pdf = T)
+```
+
