@@ -8,7 +8,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/F0_line_mean_speed_
 
 ## HMM states
 
-```{r mikk-hmm-asym, echo = F, fig.cap = '(ref:mikk-hmm-asym)', out.width='100%'}
+```{r mikk-param-comp, echo = F, fig.cap = '(ref:mikk-param-comp)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/compare_params.png"), auto_pdf = T)
 ```
 
@@ -16,7 +16,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/compare_params.png"
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_17_polar_all_dge.png"), auto_pdf = T)
 ```
 
-```{r mikk-hmm-asym, echo = F, fig.cap = '(ref:mikk-hmm-asym)', out.width='100%'}
-knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_polar_all_dge.png"), auto_pdf = T)
+```{r mikk-hmm-sym, echo = F, fig.cap = '(ref:mikk-hmm-sym)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.05_15_polar_all_dge.png"), auto_pdf = T)
 ```
 

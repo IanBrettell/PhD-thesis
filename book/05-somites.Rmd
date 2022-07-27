@@ -22,6 +22,8 @@ Three methods were formerly used [@zhangMixedLinearModel2010]:
 
 ## Somite period development
 
+## Phenotype
+
 
 
 ## F2-cross linkage study experimental plan
@@ -70,7 +72,7 @@ knitr::include_graphics(here::here("book/figs/somites/F1.png"), auto_pdf = T)
 
 For the purpose of mapping the F2 sample sequences to the genomes of their parental strains, we selected only biallelic SNPs that were homozygous-divergent in the F0 generation (i.e. homozygous reference allele in *Cab* and homozygous alternative allele in *Kaga* or vice versa) *and* heterozygous in the F1 generation. 
 
-The number of SNPs that met these criteria per chromosome are set out in **Figure \@ref(snp-counts-per-chrom)**. 
+The number of SNPs that met these criteria per chromosome are set out in **Figure \@ref(fig:snp-counts-per-chrom)**. 
 
 (ref:snp-counts-per-chrom) Number of SNPs per chromosome that were homozygous-divergent in the F0 *Cab* and *Kaga* generations, and heterozygous in the F1 generation.
 
@@ -94,6 +96,8 @@ Across each chromosome of every sample, we expected the output of the HMM to pro
 knitr::include_graphics(here::here("book/figs/somites/scatter_collage.png"), auto_pdf = T)
 ```
 
+I used these genotype-block calls to generate the recombination karyoplots shown in Figures \@ref(fig:karyo-wi-missing) and \@ref(fig:karyo-no-missing). 
+
 ```{r karyo-wi-missing, echo = F, fig.cap = '(ref:karyo-wi-missing)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/somites/karyoplot_wi_missing.png"), auto_pdf = T)
 ```
@@ -109,6 +113,8 @@ knitr::include_graphics(here::here("book/figs/somites/prop_sites_total.png"), au
 ```
 
 ## Genome-wide linkage anlaysis
+
+Finally, I used the 
 
 ### Period intercept
 

@@ -15,109 +15,20 @@ mainfont: Libre Baskerville
 
 # About {-}
 
-Code to render PDF:
+## Summary
 
-```{r, eval = F}
-bookdown::render_book("book", bookdown::pdf_book())
-```
+Japanese courage: a genetic analysis of complex traits in medaka fish and humans
 
-Code to render PDF with different fonts:
+This thesis primarily explores how an individual's genes interact with the genes of their social companions to create differences in behaviour, using the Japanese medaka fish as a model organism. Chapter 1 sets out the introduction to the diverse topics covered in this thesis. 
 
-First make the `bookdown::pdf_book:` entry in `_output.yml` first.
+Chapter 2 describes several genomic characteristics of the Medaka Inbred Kiyosu-Karlsruhe (MIKK) panel, which comprises 80 inbred lines of medaka that were bred from a wild population residing in Kiyosu, southern Japan. In this chapter I plot the inbreeding trajectory of the MIKK panel, and analyse its evolutionary relationship with other previously established inbred medaka strains; degree of homozygosity; rate of linkage disequilibrium decay; repeat content; and structural variation, all which relate to its utility for the genetic mapping of complex traits.
 
-Then...
+In Chapter 3, I use a custom behavioural assay to characterise and classify bold-shy behaviours in 5 previously established inbred medaka lines. Here I describe the assay, assess its robustness against confounding factors, and apply a hidden markov model (HMM) to classify the fishes' behaviours across a spectrum of boldness-shyness based on their distance and angle of travel between time points. I describe how the different lines differ in their behaviours over the course of the assay (a direct genetic effect) and how the behaviour of a single "reference" line (*iCab*) differs in the presence of different lines (a social genetic effect).
 
-```{r, eval = F}
-bookdown::render_book("book")
-```
+In Chapter 4, I explain how I applied this behavioural assay to the MIKK panel in order to identify lines that diverge in both their own bold-shy behaviours (the direct genetic effect) and the extent to which they transmit those behaviours onto their tank partners (the social genetic effect). I then describe how we used those divergent lines as the parental lines in a multi-way F2 cross in an attempt to isolate the genetic variants that are associated with both direct and social genetic effects.
 
-To clean up the references:
+In Chapter 5 I describe the bioinformatic processes and genetic association models used to map the variants associated with differences in the period of somite development, based on a separate F2 cross between the southern Japanese *iCab* strain, and the northern Japanese *Kaga* strain. 
 
-```{r, eval = F}
-citr::tidy_bib_file(rmd_file = c("book/index.Rmd",
-                                 "book/01-Introduction.Rmd",
-                                 "book/02-MIKK_genome.Rmd",
-                                 "book/03-Pilot.Rmd",
-                                 "book/04-MIKK_F2.Rmd",
-                                 "book/06-Fst.Rmd",
-                                 "book/07-references.Rmd"),
-                    messy_bibliography = "book/book.bib",
-                    file = "book/tidy_references.bib")
-```
+Finally, in Chapter 6, I compare and rank all complex traits in the GWAS Catalog based on the extent to which their associated alleles vary across global human populations, using the Fixation Index (Fst) as a metric and the 1000 Genomes dataset as a sample of global genetic variation. In this chapter I set out the bioinformatic pipelines used to process the data, present the distributions of Fst for trait-associated alleles across the genome, and use the Kolmogorov-Smirnov test to compare the distributions of Fst across different traits.
 
-Test to understand which commands are creating errors:
-
-
-```{r, eval = F}
-bookdown::render_book("book",
-                      bookdown::pdf_book(pandoc_args = "--listings",
-                                         latex_engine = "xelatex",
-                                         biblio_style = "apalike",
-                                         csl = "chicago-fullnote-bibliography.csl",
-                                         includes = rmarkdown::includes(in_header = "preamble.tex"),
-                                         documentclass = "book",
-                                         sansfont = "Georgia",
-                                         monofont = "Andale Mono",
-                                         highlight = "pygments"))
-
-
-```
-
-`citation_package = "natbib"` throws an ugly error, and ends up removing all references in the document.
-
-Weirdly, fonts only change if they go in `index.Rmd`.
-
-## `bs4_book`
-
-```{r, eval = F}
-bookdown::render_book("book",
-                      bookdown::bs4_book(css = "style.css",
-                                         theme = list("primary" = "#52002E"),
-                                         repo = list("base" = "https://github.com/brettellebi/PhD-thesis",
-                                                                                         "branch" = "master", "subdir" = "book"),
-                                         includes = rmarkdown::includes(in_header = "css.html"),
-                                         footnotes_inline = T,
-                                         bibliography = "book.bib"))
-```
-
-
-This is a *sample* book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
-
-## Usage
-
-Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
-
-Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
-
-The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
-
-## Render book
-
-You can render the HTML version of this example book without changing anything:
-
-1.  Find the **Build** pane in the RStudio IDE, and
-
-2.  Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
-
-Or build the book from the R console:
-
-```{r, eval=FALSE}
-bookdown::render_book()
-```
-
-To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
-
-## Preview book
-
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
-
-```{r eval=FALSE}
-bookdown::serve_book()
-```
-
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+Altogether, this thesis describes some of the genomic characteristics of both medaka fish and humans, and how those variations relate to differences in complex traits, with a particular focus on the genetic causes of adaptive behaviours and the transmission of those behaviours onto one's social companions.

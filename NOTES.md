@@ -14,6 +14,73 @@ Battling with bookdown and LaTeX .pdf format. Discovered...
 
 * `csl: chicago-fullnote-bibliography.csl` needs to go into `index.Rmd` to create the links in `bs4_book`. It needs to be hashed out to allow APA style in the `pdf_book`. 
 
+Code to render PDF:
+
+```{r, eval = F}
+bookdown::render_book("book", bookdown::pdf_book())
+```
+
+Code to render PDF with different fonts:
+
+First make the `bookdown::pdf_book:` entry in `_output.yml` first.
+
+Then...
+
+```{r, eval = F}
+bookdown::render_book("book")
+```
+
+To clean up the references:
+
+```{r, eval = F}
+citr::tidy_bib_file(rmd_file = c("book/index.Rmd",
+                                 "book/01-Introduction.Rmd",
+                                 "book/02-MIKK_genome.Rmd",
+                                 "book/03-Pilot.Rmd",
+                                 "book/04-MIKK_F2.Rmd",
+                                 "book/06-Fst.Rmd",
+                                 "book/07-references.Rmd"),
+                    messy_bibliography = "book/book.bib",
+                    file = "book/tidy_references.bib")
+```
+
+Test to understand which commands are creating errors:
+
+
+```{r, eval = F}
+bookdown::render_book("book",
+                      bookdown::pdf_book(pandoc_args = "--listings",
+                                         latex_engine = "xelatex",
+                                         biblio_style = "apalike",
+                                         csl = "chicago-fullnote-bibliography.csl",
+                                         includes = rmarkdown::includes(in_header = "preamble.tex"),
+                                         documentclass = "book",
+                                         sansfont = "Georgia",
+                                         monofont = "Andale Mono",
+                                         highlight = "pygments"))
+
+
+```
+
+`citation_package = "natbib"` throws an ugly error, and ends up removing all references in the document.
+
+Weirdly, fonts only change if they go in `index.Rmd`.
+
+## `bs4_book`
+
+```{r, eval = F}
+bookdown::render_book("book",
+                      bookdown::bs4_book(css = "style.css",
+                                         theme = list("primary" = "#52002E"),
+                                         repo = list("base" = "https://github.com/brettellebi/PhD-thesis",
+                                                                                         "branch" = "master", "subdir" = "book"),
+                                         includes = rmarkdown::includes(in_header = "css.html"),
+                                         footnotes_inline = T,
+                                         bibliography = "book.bib"))
+```
+
+
+
 ## 1 June 2022
 
 Meeting with EB re: Chapter 2 draft:
