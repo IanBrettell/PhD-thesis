@@ -1,4 +1,4 @@
-# Genetic loci associated with somite period development
+# Genetic loci associated with somite development periodicity
 
 ## Background
 
@@ -20,11 +20,24 @@ Three methods were formerly used [@zhangMixedLinearModel2010]:
 
 "Ronald fished introduced random effects models to study the correlations of trait values between relatives" [@fisherXVCorrelationRelatives1919].
 
-## Somite period development
+## Somite development
 
-## Phenotype
+During the development of an embryo, somites are the earliest primitive segmental structures that form from the presomatic mesoderm (**PSM**) [@kimPeriodSomiteSegmentation2011]. They later differentiate into vertebrae, ribs, and skeletal muscles, thereby establishing the body's anterior-posterior axis. Vertebral number is precisely defined for a given species [@gomezControlSegmentNumber2008], but is the most variable physical trait across species [@kimuraGeneticAnalysisVertebral2012]. For example, frogs have 6-10, humans have 33, and snakes can have more than 300 [@gomezControlSegmentNumber2008; @kimuraGeneticAnalysisVertebral2012]. The number of vertebrae is determined by the periodicity of somite formation, which occurs rhythmically and sequentially. This periodic somite formation is controlled by a molecular oscillator, known as the 'segmentation clock', which drives the periodic activation of the Notch, Wnt, and fibroblast growth factor (FGF) pathways, forming a signalling gradient that regresses towards the tail in concert with axis elongation [@gomezControlSegmentNumber2008]. Over the course of elongation the PSM progressively shrinks until it is exhausted, terminating somite formation [@gomezControlSegmentNumber2008].  **Figure \@ref(fig:mouse-embryo)** depicts a number of formed somites in a 9.5-day-old mouse embryo.
 
+(ref:mouse-embryo) Image of a mouse embryo at day 9.5 from @gridleyLongShortIt2006, showing somites in darker colours. 
 
+```{r mouse-embryo, echo = F, fig.cap = '(ref:mouse-embryo)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/mouse_embryo_gridley.png"), auto_pdf = T)
+```
+
+The genetic basis of the segmentation clock is an area of active inquiry. In zebrafish, the average somite formation rate is one pair every 30 min, which is relatively fast compared to the chicken (90), corn snake (100), and mouse (120) [@gomezControlSegmentNumber2008].
+
+It is known that *Cab* and *Kaga* have divergent somite periodicity [WHERE?], where *Kaga*'s tends to be faster, and *Cab*'s slower. @kimuraGeneticAnalysisVertebral2012 discovered that the sourthern Japanese 
+*HdrR* strain develops 
+
+## Phenotype {#somite-phenotype}
+
+Our collaborators for this project - Ali Seleit and Alexander Aulehla at EMBL-Heidelberg - developed methods for measure the periodicity of somite development. I have plotted their phenotype data in \@ref(fig:raw-period-data). 
 
 ## F2-cross linkage study experimental plan
 
@@ -32,7 +45,7 @@ Three methods were formerly used [@zhangMixedLinearModel2010]:
 
 ## F0 homozygosity and F1 heterozygosity
 
-I aligned the high-coverage sequencing data for the F0 *Cab* and *Kaga* lines to the medaka *HdrR* reference (Ensembl release 104, build ASM223467v1) using BWA-MEM2, sorted the aligned .sam files, marked duplicate reads, and merged the paired reads with picard, and indexed the .bam files with Samtools. 
+I aligned the high-coverage sequencing data for the F0 *Cab* and *Kaga* lines to the medaka *HdrR* reference (Ensembl release 104, build ASM223467v1) using BWA-MEM2, sorted the aligned .sam files, marked duplicate reads, and merged the paired reads with picard [@Picard2019toolkit], and indexed the .bam files with Samtools. 
 
 To then call variants, I followed the GATK best practices (to the extent they were applicable) with GATK's HaplotypeCaller and GenotypeGVCFs tools, then merged all calls into a single .vcf file with picard.
 
@@ -84,9 +97,8 @@ knitr::include_graphics(here::here("book/figs/somites/snp_counts_per_chrom.png")
 
 To maximise the efficiency of our sequencing runs, we "shallow-sequenced" the F2 generation with the short-read Illumina platform at a depth of ~1x. We then aligned these sequences to the *HdrR* reference with BWA-MEM2, sorted the reads and marked duplicates with Picard, then indexed the resulting BAM files with samtools. Genotyping these shallow sequences with the same method as used for the high-coverage sequences for the F0 and F1 generation would be inappropriate. We therefore used a different method whereby we used *bam-readcount* to count the reads that supported either the *Cab* or the *Kaga* allele for all SNPs that met the criteria described above in section \@ref(f1-homozygosity), summed the read counts within 5 kb blocks, and calculated the frequency of reads within each bin that supported the *Kaga* allele. This generated a value for each bin between 0 and 1, where 0 signified that all reads within that bin supported the *Cab* allele, and 1 signified that all reads within that bin supported the *Kaga* allele. Bins containing no reads were imputed with a value of 0.5. 
 
-We then used these values for all F2 individuals as the input to a Hidden Markov Model (HMM) with *hmmlearn*, which we applied to classify each bin as one of three states, with state 0 corresponding to homozygous-*Cab*, 1 corresponding to heterozygous, and 2 corresponding to homozygous-*Kaga*. 
-
-Across each chromosome of every sample, we expected the output of the HMM to produce a sequence of states. Based on previous biological knowledge that crossover events occur on average once per chromosome [CITE], we expected to observe the same state persisting for long stretches of the chromosome, only changing to another state between 0 and 3 times, and rarely more. 
+We then used these values for all F2 individuals as the input to a Hidden Markov Model (HMM) with the software package *hmmlearn*, which we applied to classify each bin as one of three states, with state 0 corresponding to homozygous-*Cab*, 1 corresponding to heterozygous, and 2 corresponding to homozygous-*Kaga*. 
+Across each chromosome of every sample, the output of the HMM was expected to produce a sequence of states. Based on previous biological knowledge that crossover events occur on average once per chromosome [CITE], I expected to observe the same state persisting for long stretches of the chromosome, only changing to another state between 0 and 3 times, and rarely more. 
 
 **Figure @\ref(fig:hmm-standard)** shows how adjusting the HMM parameters changed the called genotypes for 10 F2 samples on chromosome 18. Allowing the HMM to train itself for the transition probabilities and emission variances, the HMM produced an apparently noisy output (**Figure @\ref(fig:hmm-standard)A**). Fixing the transition probabilities to make it very likely for a state to transition 
 
@@ -107,6 +119,9 @@ knitr::include_graphics(here::here("book/figs/somites/karyoplot_wi_missing.png")
 knitr::include_graphics(here::here("book/figs/somites/karyoplot_no_missing.png"), auto_pdf = T)
 ```
 
+**Figure \@ref(fig:prop_sites_total)** shows the proportion of 5-kb bins called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga* within each F2 sample (points). The ordinary expectation for the ratios would be 0.25, 0.5, and 0.25 respectively. However, we observe a skew towards homozygous-*Cab* and away from homozygous *Kaga*. This may have been caused by the low homozygosity observed in *Kaga*. 
+
+(ref:prop_sites_total) Proportions of 5-kb blocks called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga*
 
 ```{r prop_sites_total, echo = F, fig.cap = '(ref:prop_sites_total)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/somites/prop_sites_total.png"), auto_pdf = T)
@@ -114,9 +129,23 @@ knitr::include_graphics(here::here("book/figs/somites/prop_sites_total.png"), au
 
 ## Genome-wide linkage anlaysis
 
-Finally, I used the 
+Finally, I used the called recombination blocks as pseudo-SNPs in a genetic linkage analysis. To detect associations between the pseudo-SNPs and the three phenotypes of interest, I used a mixed linear model (**MLM**) as implemented in GCTA [@yangGCTAToolGenomewide2011]. That paper describes the model as follows:
+
+$$
+\textbf{y} = \textbf{X}\beta + \textbf{Wu} + \epsilon \\
+var(\textbf{y}) = \textbf{V} = \textbf{WW}'\sigma^2_{u} + \textbf{I}\sigma_{\epsilon}^2
+$$
+Where $\textbf{y}$ is a $n$ x 1 vector of phenotypes with $n$ being the sample size, $\textbf{W}$ is a standardised genotype matrix, $\textbf{u}$ is a vector of SNP effects, and $\epsilon$ is a vector of residual effects. I additionally used the leave-one-chromosome-out implementation of GCTA's MLM, with excludes the chromosome on which the candidate SNP is located when calculating the GRM. 
+
+As described above in \@ref(somite-phenotype), the microscope used to image the embryos (either DB or AU) differed by several degrees in heat, which likely caused differences in the measurements observed. We accordingly experimented with including microscope as a covariate, either alone or together with the genotype for the reporter locus (either homozygous or heterozygous), or excluding it altogether. In an attempt to avoid complications resulting from its inclusion, we also tried inverse-normalising the period phenotype within each microscope group, transforming the phenotype to fit a normal distribution across both microscopes. 
+
+To set the significance threshold, we permuted the phenotype across samples using 10 different random seeds, together with all covariates when included, and ran a separate linkage model for each permutation. We then set the lowest $p$-value from all 10 permutation as the significance threshold for the non-permuted model. We additionally applied a Bonferroni correction to our $p$-values by dividing $\alpha$ (0.05) by the number of pseudo-SNPs in the model, and set this as a secondary threshold. 
 
 ### Period intercept
+
+Figure \@ref(fig:somite-manhattan) is a Manhattan plot of the genetic linkage results for the period intercept phenotype, inverse-normalised across microscopes.
+
+(ref:somite-manhattan) Manhattan plot of the genetic linkage results for the period intercept phenotype, inverse-normalised across microscopes. Pseudo-SNPs with $p$-values lower than the permutation significance threshold are highlighted in red.
 
 ```{r somite-manhattan, echo = F, fig.cap = '(ref:somite-manhattan)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/somites/manhattan_intercept.png"), auto_pdf = T)
@@ -124,3 +153,4 @@ knitr::include_graphics(here::here("book/figs/somites/manhattan_intercept.png"),
 
 ### PSM area
 
+We additionally 

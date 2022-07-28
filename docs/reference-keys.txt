@@ -5,7 +5,9 @@ fig:SVInvs
 fig:LDdecay
 fig:repeats
 fig:SV-main
+fig:behavioural-schema
 fig:assay-setup
+fig:line-locations
 fig:covariate-effects
 fig:compare-params
 fig:pilot-polar
@@ -18,6 +20,7 @@ fig:mikk-mean-speed
 fig:mikk-param-comp
 fig:mikk-hmm-asym
 fig:mikk-hmm-sym
+fig:mouse-embryo
 fig:somite-f0-cab
 fig:somite-f0-kaga
 fig:somite-f0-kaga-hni
@@ -33,10 +36,7 @@ fig:FstSnpCount
 fig:FstMain
 fig:fst-n-indivs
 fig:eCDFall
-bs4_book
-usage
-render-book
-preview-book
+summary
 Introduction
 a-brief-history-of-genetics
 ancient-greece
@@ -71,7 +71,8 @@ mean-speed-for-all-mikk-lines
 hmm-states
 genetic-loci-associated-with-somite-period-development
 background
-somite-period-development
+somite-development
+somite-phenotype
 f2-cross-linkage-study-experimental-plan
 f0-homozygosity-and-f1-heterozygosity
 f1-homozygosity

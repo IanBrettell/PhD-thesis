@@ -20,9 +20,23 @@ Three methods were formerly used [@zhangMixedLinearModel2010]:
 
 "Ronald fished introduced random effects models to study the correlations of trait values between relatives" [@fisherXVCorrelationRelatives1919].
 
-## Somite period development
+## Somite development
 
+Somites are the earliest 'metameric' - or primitive segmental - structures that form during the development of an embryo [@kimPeriodSomiteSegmentation2011]. They later differentiate into vertebrae, ribs, and skeletal muscles, thereby establishing the body's anterior-posterior axis. Vertebral number is the most variable physical trait among vertebrates [@kimuraGeneticAnalysisVertebral2012]. Somites form sequentially, and the number of vertebrae segments is determined by a molecular oscillator - also known as a segmentation clock - in combination with gradients of signaling molecules [@gridleyLongShortIt2006]. **Figure \@ref(fig:mouse-embryo)** is an image of formed somites in a 9.5-day-old mouse embryo.
 
+(ref:mouse-embryo) Image of a mouse embryo at day 9.5 from @gridleyLongShortIt2006, showing somites in darker colours. 
+
+<div class="figure">
+<img src="figs/somites/mouse_embryo_gridley.png" alt="(ref:mouse-embryo)" width="100%" />
+<p class="caption">(\#fig:mouse-embryo)(ref:mouse-embryo)</p>
+</div>
+
+It is known that *Cab* and *Kaga* have divergent somite periodicity [WHERE?], where *Kaga*'s tends to be faster, and *Cab*'s slower. @kimuraGeneticAnalysisVertebral2012 discovered that the sourthern Japanese 
+*HdrR* strain develops 
+
+## Phenotype {#somite-phenotype}
+
+Our collaborators for this project - Ali Seleit and Alexander Aulehla at EMBL-Heidelberg - developed methods for measure the periodicity of somite development. I have plotted their phenotype data in \@ref(fig:raw-period-data). 
 
 ## F2-cross linkage study experimental plan
 
@@ -30,7 +44,7 @@ Three methods were formerly used [@zhangMixedLinearModel2010]:
 
 ## F0 homozygosity and F1 heterozygosity
 
-I aligned the high-coverage sequencing data for the F0 *Cab* and *Kaga* lines to the medaka *HdrR* reference (Ensembl release 104, build ASM223467v1) using BWA-MEM2, sorted the aligned .sam files, marked duplicate reads, and merged the paired reads with picard, and indexed the .bam files with Samtools. 
+I aligned the high-coverage sequencing data for the F0 *Cab* and *Kaga* lines to the medaka *HdrR* reference (Ensembl release 104, build ASM223467v1) using BWA-MEM2, sorted the aligned .sam files, marked duplicate reads, and merged the paired reads with picard [@Picard2019toolkit], and indexed the .bam files with Samtools. 
 
 To then call variants, I followed the GATK best practices (to the extent they were applicable) with GATK's HaplotypeCaller and GenotypeGVCFs tools, then merged all calls into a single .vcf file with picard.
 
@@ -74,7 +88,7 @@ We next examined the level of heterozygosity in the F1 generation from the *Cab*
 
 For the purpose of mapping the F2 sample sequences to the genomes of their parental strains, we selected only biallelic SNPs that were homozygous-divergent in the F0 generation (i.e. homozygous reference allele in *Cab* and homozygous alternative allele in *Kaga* or vice versa) *and* heterozygous in the F1 generation. 
 
-The number of SNPs that met these criteria per chromosome are set out in **Figure \@ref(snp-counts-per-chrom)**. 
+The number of SNPs that met these criteria per chromosome are set out in **Figure \@ref(fig:snp-counts-per-chrom)**. 
 
 (ref:snp-counts-per-chrom) Number of SNPs per chromosome that were homozygous-divergent in the F0 *Cab* and *Kaga* generations, and heterozygous in the F1 generation.
 
@@ -87,9 +101,8 @@ The number of SNPs that met these criteria per chromosome are set out in **Figur
 
 To maximise the efficiency of our sequencing runs, we "shallow-sequenced" the F2 generation with the short-read Illumina platform at a depth of ~1x. We then aligned these sequences to the *HdrR* reference with BWA-MEM2, sorted the reads and marked duplicates with Picard, then indexed the resulting BAM files with samtools. Genotyping these shallow sequences with the same method as used for the high-coverage sequences for the F0 and F1 generation would be inappropriate. We therefore used a different method whereby we used *bam-readcount* to count the reads that supported either the *Cab* or the *Kaga* allele for all SNPs that met the criteria described above in section \@ref(f1-homozygosity), summed the read counts within 5 kb blocks, and calculated the frequency of reads within each bin that supported the *Kaga* allele. This generated a value for each bin between 0 and 1, where 0 signified that all reads within that bin supported the *Cab* allele, and 1 signified that all reads within that bin supported the *Kaga* allele. Bins containing no reads were imputed with a value of 0.5. 
 
-We then used these values for all F2 individuals as the input to a Hidden Markov Model (HMM) with *hmmlearn*, which we applied to classify each bin as one of three states, with state 0 corresponding to homozygous-*Cab*, 1 corresponding to heterozygous, and 2 corresponding to homozygous-*Kaga*. 
-
-Across each chromosome of every sample, we expected the output of the HMM to produce a sequence of states. Based on previous biological knowledge that crossover events occur on average once per chromosome [CITE], we expected to observe the same state persisting for long stretches of the chromosome, only changing to another state between 0 and 3 times, and rarely more. 
+We then used these values for all F2 individuals as the input to a Hidden Markov Model (HMM) with the software package *hmmlearn*, which we applied to classify each bin as one of three states, with state 0 corresponding to homozygous-*Cab*, 1 corresponding to heterozygous, and 2 corresponding to homozygous-*Kaga*. 
+Across each chromosome of every sample, the output of the HMM was expected to produce a sequence of states. Based on previous biological knowledge that crossover events occur on average once per chromosome [CITE], I expected to observe the same state persisting for long stretches of the chromosome, only changing to another state between 0 and 3 times, and rarely more. 
 
 **Figure @\ref(fig:hmm-standard)** shows how adjusting the HMM parameters changed the called genotypes for 10 F2 samples on chromosome 18. Allowing the HMM to train itself for the transition probabilities and emission variances, the HMM produced an apparently noisy output (**Figure @\ref(fig:hmm-standard)A**). Fixing the transition probabilities to make it very likely for a state to transition 
 
@@ -99,6 +112,8 @@ Across each chromosome of every sample, we expected the output of the HMM to pro
 <img src="figs/somites/scatter_collage.png" alt="(ref:hmm-standard)" width="100%" />
 <p class="caption">(\#fig:hmm-scatter-diagnoses)(ref:hmm-standard)</p>
 </div>
+
+I used these genotype-block calls to generate the recombination karyoplots shown in Figures \@ref(fig:karyo-wi-missing) and \@ref(fig:karyo-no-missing). 
 
 <div class="figure">
 <img src="figs/somites/karyoplot_wi_missing.png" alt="(ref:karyo-wi-missing)" width="100%" />
@@ -111,6 +126,7 @@ Across each chromosome of every sample, we expected the output of the HMM to pro
 <p class="caption">(\#fig:karyo-no-missing)(ref:karyo-no-missing)</p>
 </div>
 
+**Figure \@ref(fig:prop_sites_total)** shows the proportion of 5-kb bins called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga* within each F2 sample (points). The ordinary expectation for the ratios would be 0.25, 0.5, and 0.25 respectively. However, we observe a skew towards homozygous-*Cab* and away from homozygous *Kaga*. This may have been caused by the low homozygosity observed in *Kaga*. 
 
 <div class="figure">
 <img src="figs/somites/prop_sites_total.png" alt="(ref:prop_sites_total)" width="100%" />
@@ -119,7 +135,21 @@ Across each chromosome of every sample, we expected the output of the HMM to pro
 
 ## Genome-wide linkage anlaysis
 
+Finally, I used the called recombination blocks as pseudo-SNPs in a genetic linkage analysis. To detect associations between the pseudo-SNPs and the three phenotypes of interest, I used a mixed linear model (**MLM**) as implemented in GCTA [@yangGCTAToolGenomewide2011]. That paper describes the model as follows:
+
+$$
+\textbf{y} = \textbf{X}\beta + \textbf{Wu} + \epsilon \\
+var(\textbf{y}) = \textbf{V} = \textbf{WW}'\sigma^2_{u} + \textbf{I}\sigma_{\epsilon}^2
+$$
+Where $\textbf{y}$ is a $n$ x 1 vector of phenotypes with $n$ being the sample size, $\textbf{W}$ is a standardised genotype matrix, $\textbf{u}$ is a vector of SNP effects, and $\epsilon$ is a vector of residual effects. I additionally used the leave-one-chromosome-out implementation of GCTA's MLM, with excludes the chromosome on which the candidate SNP is located when calculating the GRM. 
+
+As described above in \@ref(somite-phenotype), the microscope used to image the embryos (either DB or AU) differed by several degrees in heat, which likely caused differences in the measurements observed. We accordingly experimented with including microscope as a covariate, either alone or together with the genotype for the reporter locus (either homozygous or heterozygous), or excluding it altogether. In an attempt to avoid complications resulting from its inclusion, we also tried inverse-normalising the period phenotype within each microscope group, transforming the phenotype to fit a normal distribution across both microscopes. 
+
+To set the significance threshold, we permuted the phenotype across samples using 10 different random seeds, together with all covariates when included, and ran a separate linkage model for each permutation. We then set the lowest $p$-value from all 10 permutation as the significance threshold for the non-permuted model. We additionally applied a Bonferroni correction to our $p$-values by dividing $\alpha$ (0.05) by the number of pseudo-SNPs in the model, and set this as a secondary threshold. 
+
 ### Period intercept
+
+Figure \@ref(fig:somite-manhattan) is a Manhattan plot of the genetic linkage results for the period intercept phenotype, inverse-normalised across 
 
 <div class="figure">
 <img src="figs/somites/manhattan_intercept.png" alt="(ref:somite-manhattan)" width="100%" />
