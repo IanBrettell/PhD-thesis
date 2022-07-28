@@ -22,7 +22,9 @@ Three methods were formerly used [@zhangMixedLinearModel2010]:
 
 ## Somite development
 
-During the development of an embryo, somites are the earliest primitive segmental structures that form from the presomatic mesoderm (**PSM**) [@kimPeriodSomiteSegmentation2011]. They later differentiate into vertebrae, ribs, and skeletal muscles, thereby establishing the body's anterior-posterior axis. Vertebral number is precisely defined for a given species [@gomezControlSegmentNumber2008], but is the most variable physical trait across species [@kimuraGeneticAnalysisVertebral2012]. For example, frogs have 6-10, humans have 33, and snakes can have more than 300 [@gomezControlSegmentNumber2008; @kimuraGeneticAnalysisVertebral2012]. The number of vertebrae is determined by the periodicity of somite formation, which occurs rhythmically and sequentially. This periodic somite formation is controlled by a molecular oscillator, known as the 'segmentation clock', which drives the periodic activation of the Notch, Wnt, and fibroblast growth factor (FGF) pathways, forming a signalling gradient that regresses towards the tail in concert with axis elongation [@gomezControlSegmentNumber2008]. Over the course of elongation the PSM progressively shrinks until it is exhausted, terminating somite formation [@gomezControlSegmentNumber2008].  **Figure \@ref(fig:mouse-embryo)** depicts a number of formed somites in a 9.5-day-old mouse embryo.
+During the development of an embryo, somites are the earliest primitive segmental structures that form from the presomatic mesoderm (**PSM**) [@kimPeriodSomiteSegmentation2011]. They later differentiate into vertebrae, ribs, and skeletal muscles, thereby establishing the body's anterior-posterior axis. Vertebral number is precisely defined for a given species [@gomezControlSegmentNumber2008], but is the most variable physical trait across species [@kimuraGeneticAnalysisVertebral2012]. For example, frogs have 6-10, humans have 33, and snakes can have more than 300 [@gomezControlSegmentNumber2008; @kimuraGeneticAnalysisVertebral2012]. **Figure \@ref(fig:mouse-embryo)** depicts a number of formed somites in a 9.5-day-old mouse embryo.
+
+The number of vertebrae is determined by the periodicity of somite formation, which occurs rhythmically and sequentially. This periodic somite formation is controlled by a molecular oscillator, known as the 'segmentation clock', which drives periodic waves of gene expression in the NOTCH, FGF, and WNT pathways, forming a signalling gradient that regresses towards the tail in concert with axis elongation [@gomezControlSegmentNumber2008]. Over the course of elongation, the wave period increases (i.e. each somite takes longer to form), and the PSM progressively shrinks until it is exhausted, eventually terminating somite formation [@gomezControlSegmentNumber2008]. 
 
 (ref:mouse-embryo) Image of a mouse embryo at day 9.5 from @gridleyLongShortIt2006, showing somites in darker colours. 
 
@@ -30,28 +32,30 @@ During the development of an embryo, somites are the earliest primitive segmenta
 knitr::include_graphics(here::here("book/figs/somites/mouse_embryo_gridley.png"), auto_pdf = T)
 ```
 
-The genetic basis of the segmentation clock is an area of active inquiry. In zebrafish, the average somite formation rate is one pair every 30 min, which is relatively fast compared to the chicken (90), corn snake (100), and mouse (120) [@gomezControlSegmentNumber2008].
+It is not fully understood how the sychrony and phase waves of the segmentation clock are intially established [@falkImagingOnsetOscillatory2022]. To explore this question, our collaborators Ali Seleit and Alexander Aulehla at EMBL-Heidelberg used a CRISPR-Case9 knock-in approach [@seleitEndogenousProteinTagging2021] to establish a medaka *Cab* strain with an endogenous, fluorescing reporter gene (Her7-Venus) for the oscillation signalling pathway. This method allows them to image somite formation and extract quantitative measures for segmentation clock dynamics. 
 
-It is known that *Cab* and *Kaga* have divergent somite periodicity [WHERE?], where *Kaga*'s tends to be faster, and *Cab*'s slower. @kimuraGeneticAnalysisVertebral2012 discovered that the sourthern Japanese 
-*HdrR* strain develops 
+In medaka, it is known that the southern Japanese *Cab* strain and the northern Japanese *Kaga* strain have divergent somite periodicity [WHERE?], where *Kaga*'s tends to be faster, and *Cab*'s slower. Accordingly, to identify genetic loci associated with these differences in clock dynamics, they set up an F2 cross experiment using the reporter-carrying *Cab* strain and the *Kaga* strain as the parental F0 strains. They inter-crossed the hybrid F1 generation to create a sample of 622 F2 individuals, imaged the developing embryos of these F2 samples, and used pyBOAT [@schmalAnalysisComplexCircadian2022] to extract the oscillation features during somite development.
+
+(ref:somite-period-ali) Screenshot of somite extension in an F2 individual captured by Ali Seleit during imaging. The blue circle represents the point tracked by pyBOAT over time, generating the quantitative phenotype data on period development used in this study.  
+
+```{r somite-period-ali, echo = F, fig.cap = '(ref:somite-period-ali)', out.width='50%'}
+knitr::include_graphics(here::here("book/figs/somites/somite_period_ali.png"), auto_pdf = T)
+```
+
 
 ## Phenotype {#somite-phenotype}
 
-Our collaborators for this project - Ali Seleit and Alexander Aulehla at EMBL-Heidelberg - developed methods for measure the periodicity of somite development. I have plotted their phenotype data in \@ref(fig:raw-period-data). 
+Figure \@ref(fig:raw-period-data) shows the period data generated by pyBOAT for this study.
 
-## F2-cross linkage study experimental plan
+## Genetic sequencing data
 
-
+Our collaborators extracted DNA from the F0, F1, and F2, and sequenced the F0 and F1 samples with the Illumina platform at high coverage (~30x). They sequenced the F2 samples at low coverage (~1x), which would be sufficient to map their genotypes back to the genotypes of their parental strains.
 
 ## F0 homozygosity and F1 heterozygosity
 
-I aligned the high-coverage sequencing data for the F0 *Cab* and *Kaga* lines to the medaka *HdrR* reference (Ensembl release 104, build ASM223467v1) using BWA-MEM2, sorted the aligned .sam files, marked duplicate reads, and merged the paired reads with picard [@Picard2019toolkit], and indexed the .bam files with Samtools. 
+Before proceeding to map the F2 sequences to the genotypes of the F0 generation, I first investigated the levels of homozygosity in the F0 *Cab* and *Kaga* strains, as this would have an effect on the resolution of our genetic mapping. That is to say, for regions where either parent is consistently heterozygous, it would be difficult to determine the parent from which a particular F2 individual derived its chromosomes at that locus. I therefore aligned the high-coverage sequencing data for the F0 *Cab* and *Kaga* lines to the medaka *HdrR* reference (Ensembl release 104, build ASM223467v1) using BWA-MEM2, sorted the aligned .sam files, marked duplicate reads, and merged the paired reads with picard [@Picard2019toolkit], and indexed the .bam files with Samtools [@liSequenceAlignmentMap2009]. 
 
-To then call variants, I followed the GATK best practices (to the extent they were applicable) with GATK's HaplotypeCaller and GenotypeGVCFs tools, then merged all calls into a single .vcf file with picard.
-
-Finally, I extracted the biallelic calls for *Cab* and *Kaga* with bcftools, counted the number of SNPs within non-overlapping, 5-kb bins, and calculated the proportion of SNPs that were homozgyous. 
-
-**Figure \@ref(fig:somite-f0-cab)** is a circos plot generated with circlize for the *Cab* F0 lines
+To call variants, I followed the GATK best practices (to the extent they were applicable) with GATK's HaplotypeCaller and GenotypeGVCFs tools, then merged all calls into a single .vcf file with picard. Finally, I extracted the biallelic calls for *Cab* and *Kaga* with bcftools [@danecekTwelveYearsSAMtools2021], counted the number of SNPs within non-overlapping, 5-kb bins, and calculated the proportion of SNPs that were homozgyous. **Figure \@ref(fig:somite-f0-cab)** is a circos plot generated with circlize [@guCirclizeImplementsEnhances2014]for the *Cab* F0 strain used in this experiment, featuring the proportion of homozygous SNPs per 5-kb bin (green), and the total number of SNPs in each bin (yellow). 
 
 (ref:somite-f0-cab) Proportion of homozygous SNPs within 5 kb bins in the *Cab* F0 generation genome (green), and number of SNPs in each bin (yellow).
 

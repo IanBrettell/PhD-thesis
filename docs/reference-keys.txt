@@ -69,11 +69,11 @@ discussion
 MIKK-F2-chap
 mean-speed-for-all-mikk-lines
 hmm-states
-genetic-loci-associated-with-somite-period-development
+genetic-loci-associated-with-somite-development-periodicity
 background
 somite-development
 somite-phenotype
-f2-cross-linkage-study-experimental-plan
+genetic-sequencing-data
 f0-homozygosity-and-f1-heterozygosity
 f1-homozygosity
 f2-genotyping
