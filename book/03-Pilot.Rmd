@@ -104,10 +104,10 @@ We next sought to determine whether there was a difference in the proportion of 
 
 #### Direct genetic effects
 
-To determine whether the test fish strains differed in the proporportions of time they spent in each state, we ran separate multi-way ANOVAs for each combination of assay component (open field or novel object) and state (states 1 to 14): 
+To determine whether the test fish strains differed in the proportions of time they spent in each state, we ran separate multi-way ANOVAs for each combination of assay component (open field or novel object) and state (states 1 to 14): 
 
 $$
-frequency_{assay~component,state} = \beta_{1}(test~fish~strain) + \beta_{2}(date) + \beta_{3}(time) + \beta_{4}(quadrant) + \beta_{5}(tank~side)
+frequency_{assay component,state} = \beta_{1}(test fish strain) + \beta_{2}(date) + \beta_{3}(time) + \beta_{4}(quadrant) + \beta_{5}(tank side)
 $$
 
 The proportion of time each individual spent within a state was first inverse-normalised within each combination of assay and state, and the date of assay, time of assay, tank quadrant, and tank side were included as covariates. P-values were then adjusted for the False Discovery Rate (**FDR**).

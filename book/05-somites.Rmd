@@ -123,11 +123,11 @@ knitr::include_graphics(here::here("book/figs/somites/karyoplot_wi_missing.png")
 knitr::include_graphics(here::here("book/figs/somites/karyoplot_no_missing.png"), auto_pdf = T)
 ```
 
-**Figure \@ref(fig:prop_sites_total)** shows the proportion of 5-kb bins called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga* within each F2 sample (points). The ordinary expectation for the ratios would be 0.25, 0.5, and 0.25 respectively. However, we observe a skew towards homozygous-*Cab* and away from homozygous *Kaga*. This may have been caused by the low homozygosity observed in *Kaga*. 
+**Figure \@ref(fig:prop-sites-total)** shows the proportion of 5-kb bins called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga* within each F2 sample (points). The ordinary expectation for the ratios would be 0.25, 0.5, and 0.25 respectively. However, we observe a skew towards homozygous-*Cab* and away from homozygous *Kaga*. This may have been caused by the low homozygosity observed in *Kaga*. 
 
-(ref:prop_sites_total) Proportions of 5-kb blocks called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga*
+(ref:prop-sites-total) Proportions of 5-kb blocks called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga*.
 
-```{r prop_sites_total, echo = F, fig.cap = '(ref:prop_sites_total)', out.width='100%'}
+```{r prop-sites-total, echo = F, fig.cap = '(ref:prop-sites-total)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/somites/prop_sites_total.png"), auto_pdf = T)
 ```
 

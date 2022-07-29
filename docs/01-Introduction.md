@@ -21,7 +21,8 @@ Aristotle joined the discussion with his treatise *Generation of Animals*, where
 
 In medieval times, the prevailing theory was that a tiny human -- a homunculus -- sat within the sperm, waiting to be inflated upon its introduction to a woman's uterus. However, this would require a homunculus to sit within another homunculus, *ad infinitum*, like Matryoshka dolls, all the way back to the Biblical first man, Adam. Even the inventor of the microscope, Nicolaas Hartsoeker, thought he saw one in a sperm he was studying.
 
-<img src="figs/introduction/homunculus.png" width="50%" />
+
+\includegraphics[width=0.5\linewidth]{figs/introduction/homunculus} 
 
 ### Charles Darwin and Gregor Mendel
 

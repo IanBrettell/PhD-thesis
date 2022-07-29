@@ -28,21 +28,19 @@ The number of vertebrae is determined by the periodicity of somite formation, wh
 
 (ref:mouse-embryo) Image of a mouse embryo at day 9.5 from @gridleyLongShortIt2006, showing somites in darker colours. 
 
-<div class="figure">
-<img src="figs/somites/mouse_embryo_gridley.png" alt="(ref:mouse-embryo)" width="100%" />
-<p class="caption">(\#fig:mouse-embryo)(ref:mouse-embryo)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/mouse_embryo_gridley} \caption{(ref:mouse-embryo)}(\#fig:mouse-embryo)
+\end{figure}
 
 It is not fully understood how the sychrony and phase waves of the segmentation clock are intially established [@falkImagingOnsetOscillatory2022]. To explore this question, our collaborators Ali Seleit and Alexander Aulehla at EMBL-Heidelberg used a CRISPR-Case9 knock-in approach [@seleitEndogenousProteinTagging2021] to establish a medaka *Cab* strain with an endogenous, fluorescing reporter gene (Her7-Venus) for the oscillation signalling pathway. This method allows them to image somite formation and extract quantitative measures for segmentation clock dynamics. 
 
 In medaka, it is known that the southern Japanese *Cab* strain and the northern Japanese *Kaga* strain have divergent somite periodicity [WHERE?], where *Kaga*'s tends to be faster, and *Cab*'s slower. Accordingly, to identify genetic loci associated with these differences in clock dynamics, they set up an F2 cross experiment using the reporter-carrying *Cab* strain and the *Kaga* strain as the parental F0 strains. They inter-crossed the hybrid F1 generation to create a sample of 622 F2 individuals, imaged the developing embryos of these F2 samples, and used pyBOAT [@schmalAnalysisComplexCircadian2022] to extract the oscillation features during somite development.
 
-(ref:somite_period_ali) Screenshot of somite extension in an F2 individual captured by Ali Seleit during imaging. The blue circle represents the point tracked by pyBOAT over time, generating the quantitative phenotype data on period development used in this study.  
+(ref:somite-period-ali) Screenshot of somite extension in an F2 individual captured by Ali Seleit during imaging. The blue circle represents the point tracked by pyBOAT over time, generating the quantitative phenotype data on period development used in this study.  
 
-<div class="figure">
-<img src="figs/somites/somite_period_ali.png" alt="(ref:somite_period_ali)" width="100%" />
-<p class="caption">(\#fig:somite_period_ali)(ref:somite_period_ali)</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{figs/somites/somite_period_ali} \caption{(ref:somite-period-ali)}(\#fig:somite-period-ali)
+\end{figure}
 
 
 ## Phenotype {#somite-phenotype}
@@ -61,26 +59,23 @@ To call variants, I followed the GATK best practices (to the extent they were ap
 
 (ref:somite-f0-cab) Proportion of homozygous SNPs within 5 kb bins in the *Cab* F0 generation genome (green), and number of SNPs in each bin (yellow).
 
-<div class="figure">
-<img src="figs/somites/Cab.png" alt="(ref:somite-f0-cab)" width="100%" />
-<p class="caption">(\#fig:somite-f0-cab)(ref:somite-f0-cab)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/Cab} \caption{(ref:somite-f0-cab)}(\#fig:somite-f0-cab)
+\end{figure}
 
 (ref:somite-f0-kaga) Proportion of homozygous SNPs within 5 kb bins in the *Kaga* F0 generation genome (red), and number of SNPs in each bin (yellow).
 
-<div class="figure">
-<img src="figs/somites/Kaga.png" alt="(ref:somite-f0-kaga)" width="100%" />
-<p class="caption">(\#fig:somite-f0-kaga)(ref:somite-f0-kaga)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/Kaga} \caption{(ref:somite-f0-kaga)}(\#fig:somite-f0-kaga)
+\end{figure}
 
 To determine whether the low levels of observed homozygosity in Kaga was affected by its alignments to the southern Japanese *HdrR* reference, we also aligned the F0 samples to the northern Japanese *HNI* reference (**Figure \@ref(fig:somite-f0-kaga-hni)**. This did not make differences to the levels of observed homozygosity in either sample, which gave us confidence that the low homozygosity observed in *Kaga* was not driven by reference bias. 
 
 (ref:somite-f0-kaga-hni) Proportion of homozygous SNPs within 5 kb bins in the *Kaga* F0 generation genome when aligned to the *HNI* reference (red), and number of SNPs in each bin (yellow).
 
-<div class="figure">
-<img src="figs/somites/Kaga_HNI.png" alt="(ref:somite-f0-kaga-hni)" width="100%" />
-<p class="caption">(\#fig:somite-f0-kaga-hni)(ref:somite-f0-kaga-hni)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/Kaga_HNI} \caption{(ref:somite-f0-kaga-hni)}(\#fig:somite-f0-kaga-hni)
+\end{figure}
 
 ## F1 homozygosity {#f1-homozygosity}
 
@@ -88,10 +83,9 @@ We next examined the level of heterozygosity in the F1 generation from the *Cab*
 
 (ref:somite-f1) Proportion of heterozygous SNPs within 5 kb bins in the *Cab*-*Kaga* F1 cross (brown), and number of SNPs in each bin (yellow).
 
-<div class="figure">
-<img src="figs/somites/F1.png" alt="(ref:somite-f1)" width="100%" />
-<p class="caption">(\#fig:somite-f1)(ref:somite-f1)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/F1} \caption{(ref:somite-f1)}(\#fig:somite-f1)
+\end{figure}
 
 For the purpose of mapping the F2 sample sequences to the genomes of their parental strains, we selected only biallelic SNPs that were homozygous-divergent in the F0 generation (i.e. homozygous reference allele in *Cab* and homozygous alternative allele in *Kaga* or vice versa) *and* heterozygous in the F1 generation. 
 
@@ -99,10 +93,9 @@ The number of SNPs that met these criteria per chromosome are set out in **Figur
 
 (ref:snp-counts-per-chrom) Number of SNPs per chromosome that were homozygous-divergent in the F0 *Cab* and *Kaga* generations, and heterozygous in the F1 generation.
 
-<div class="figure">
-<img src="figs/somites/snp_counts_per_chrom.png" alt="(ref:snp-counts-per-chrom)" width="100%" />
-<p class="caption">(\#fig:snp-counts-per-chrom)(ref:snp-counts-per-chrom)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/snp_counts_per_chrom} \caption{(ref:snp-counts-per-chrom)}(\#fig:snp-counts-per-chrom)
+\end{figure}
 
 ## F2 genotyping
 
@@ -115,32 +108,28 @@ Across each chromosome of every sample, the output of the HMM was expected to pr
 
 (ref:hmm-standard) HMM states called for each bin across chr18 for 10 F2 samples. States 0, 1, and 2 correspond to homozygous *Cab*, heterozygous, and homozygous *Kaga*. Each point represents a 5-kb bin. Y-axis is the proportion of reads within each bin that align to the *Kaga* allele. X-axis is the bp location of the start of each bin. **A**: Standard HMM with all model parameters trained on the data. **B**. HMM with fixed transition probabilities of 0→0/1→1/2→2 = 0.999, 0→1/2→1 = 0.00066, 0→2/2→0 = 0.000333, 1→0/1→2 = 0.0005. **C**-**F** retain those transition probabilities but with different fixed emission variances of 0.01 (**C**), 0.33 (**D**), 0.8 (**E**), and 1 (**F**). 
 
-<div class="figure">
-<img src="figs/somites/scatter_collage.png" alt="(ref:hmm-standard)" width="100%" />
-<p class="caption">(\#fig:hmm-scatter-diagnoses)(ref:hmm-standard)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/scatter_collage} \caption{(ref:hmm-standard)}(\#fig:hmm-scatter-diagnoses)
+\end{figure}
 
 I used these genotype-block calls to generate the recombination karyoplots shown in Figures \@ref(fig:karyo-wi-missing) and \@ref(fig:karyo-no-missing). 
 
-<div class="figure">
-<img src="figs/somites/karyoplot_wi_missing.png" alt="(ref:karyo-wi-missing)" width="100%" />
-<p class="caption">(\#fig:karyo-wi-missing)(ref:karyo-wi-missing)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/karyoplot_wi_missing} \caption{(ref:karyo-wi-missing)}(\#fig:karyo-wi-missing)
+\end{figure}
 
 
-<div class="figure">
-<img src="figs/somites/karyoplot_no_missing.png" alt="(ref:karyo-no-missing)" width="100%" />
-<p class="caption">(\#fig:karyo-no-missing)(ref:karyo-no-missing)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/karyoplot_no_missing} \caption{(ref:karyo-no-missing)}(\#fig:karyo-no-missing)
+\end{figure}
 
-**Figure \@ref(fig:prop_sites_total)** shows the proportion of 5-kb bins called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga* within each F2 sample (points). The ordinary expectation for the ratios would be 0.25, 0.5, and 0.25 respectively. However, we observe a skew towards homozygous-*Cab* and away from homozygous *Kaga*. This may have been caused by the low homozygosity observed in *Kaga*. 
+**Figure \@ref(fig:prop-sites-total)** shows the proportion of 5-kb bins called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga* within each F2 sample (points). The ordinary expectation for the ratios would be 0.25, 0.5, and 0.25 respectively. However, we observe a skew towards homozygous-*Cab* and away from homozygous *Kaga*. This may have been caused by the low homozygosity observed in *Kaga*. 
 
-(ref:prop_sites_total) Proportions of 5-kb blocks called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga*
+(ref:prop-sites-total) Proportions of 5-kb blocks called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga*.
 
-<div class="figure">
-<img src="figs/somites/prop_sites_total.png" alt="(ref:prop_sites_total)" width="100%" />
-<p class="caption">(\#fig:prop_sites_total)(ref:prop_sites_total)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/prop_sites_total} \caption{(ref:prop-sites-total)}(\#fig:prop-sites-total)
+\end{figure}
 
 ## Genome-wide linkage anlaysis
 
@@ -162,10 +151,9 @@ Figure \@ref(fig:somite-manhattan) is a Manhattan plot of the genetic linkage re
 
 (ref:somite-manhattan) Manhattan plot of the genetic linkage results for the period intercept phenotype, inverse-normalised across microscopes. Pseudo-SNPs with $p$-values lower than the permutation significance threshold are highlighted in red.
 
-<div class="figure">
-<img src="figs/somites/manhattan_intercept.png" alt="(ref:somite-manhattan)" width="100%" />
-<p class="caption">(\#fig:somite-manhattan)(ref:somite-manhattan)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/manhattan_intercept} \caption{(ref:somite-manhattan)}(\#fig:somite-manhattan)
+\end{figure}
 
 ### PSM area
 
