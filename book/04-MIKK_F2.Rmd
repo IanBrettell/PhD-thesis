@@ -2,7 +2,7 @@
 
 The purpose of the study described in this chapter was to run the behavioural analysis described in Chapter  \@ref(Pilot-chap) over the MIKK panel described in Chapter \@ref(MIKK-genomes-chap), identify the lines that diverged in both their behaviour, and the level of transmission of their behaviour onto their *iCab* reference tank partner, and then use them as the parental strains in an F2 cross to attempt to identify the genetic variants associated with those differences.
 
-## F2 cross
+## F2 cross {#MIKK-F2-cross}
 
 The F2 cross is a traditional method for mapping genetic variants associated with traits of interest. A schema for the method is presented in **Figure \@ref(fig:F2-cross-schema)**. In essence, it involves starting with two inbred strains that diverge for the trait of interest (the 'parental strains', or F0 generation F0). One then crosses the parental strains to create a generation of F1 hybrid individuals who each possess, for every pair of their chromosomes, one chromosome from each of their parents. The individuals in this F1 generation are genetically identical to their parents with respect to their germline. Finally, one inter-crosses the F1 generation to create a set of F2 individuals that share unique combinations of the original F0 strains' genotypes, and tend to display values for the trait of interest that span across the spectrum between the extreme values of their parents.
 
@@ -28,6 +28,10 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/F0_line_mean_speed_
 
 This figure shows that there are clear differences between some MIKK panel lines at the extremes, and that the lines differ in the amount of within-line variance observed. This figure acted as a guide to determine which lines to select as the parental strains in the F2 cross. To identify genetic variants directly associated with bold-shy behaviours, I sought to select lines that showed either high or low levels of movement, and preferably low within-line variance. 
 
+```{r mikk-mean-speed-variance, echo = F, fig.cap = '(ref:mikk-mean-speed-variance)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/line_mean_speed_variance_0.05_all.png"), auto_pdf = T)
+```
+
 ## HMM states
 
 To examine these behaviours at a finer resolution, as for the pilot study described in \@ref(Pilot-chap), I again applied a hidden markov model (**HMM**) to classify the fishes' movements based on their distance and angle of travel between time intervals. I used the same method to select the best choice of time interval and number of states (**Figure \@ref(mikk-param-comp)**). Here we observed the same phenomenon where the parameter combinations that performed the best showed an asymmetry between some states that would make interpretation difficult. For example, a time interval of 0.08 seconds combined with a state space of 17 caused state 4 to appear to get carved out of state 3 (**Figure \@ref(fig:mikk-hmm-asym)**).
@@ -50,8 +54,18 @@ I therefore selected the best combination of parameters without this asymmetry, 
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.05_15_polar_all_dge.png"), auto_pdf = T)
 ```
 
+```{r F0-line-mean-speed-select, echo = F, fig.cap = '(ref:F0-line-mean-speed-select)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/line_mean_speed_0.05_selected.png"), auto_pdf = T)
+```
+
+```{r F0-line-mean-speed-var_select, echo = F, fig.cap = '(ref:F0-line-mean-speed-var_select)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/line_mean_speed_variance_selected.png"), auto_pdf = T)
+```
+
 (ref:F2-time-dge-of) HMM states that significantly differed between 
 
 ```{r F2-time-dge-of, echo = F, fig.cap = '(ref:F2-time-dge-of)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/select_0.05_15_dge_of.png"), auto_pdf = T)
 ```
+
+

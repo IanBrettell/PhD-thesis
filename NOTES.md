@@ -1,5 +1,30 @@
 # Notes
 
+## 2 August 2022
+
+Meeting with Ali:
+- Is periodicity related to the number of vertebrae?
+    - Function of period, and how long the clock is on for.
+    - The eel makes 112 vertebrae, while the zebrafish make 30. But eels has clock that goes for a lot longer.
+    - Seems like evolution is playing on both period and total clock.
+- Difference between Her7 and Hes7?
+    - Homologue –core clock oscillator.
+    - Medaka and zebrafish have duplications in Her genes, so there are more than in mouse and human.
+- What’s the difference between Cab and iCab?
+- What generation were Cab and Kaga when sequenced?
+    - Cabs is 99, and Kaga were 55. The genetics of Kaga are complicated. 20% loss of fish that don’t make it to hatch. Some hatch, but don’t make it to adulthod (10%).
+- Any period measurements for Kaga?
+    - Not from the Her7 reporter. Trying with a backcross with a Kaga. Take an F2 male, then backcross to female Kaga, image, then clean up the genome, then cross back to a Kaga.
+- Paper that shows difference in period between Cab and Kaga?
+- Clock slows down. COnserved in zebrafish and medaka. Doesn’t happen in mouse. Slope in F2 seems to be conserved. Don’t know what the explanation is.
+- Send the period slope data so I can generate a figure
+- Next steps?
+    - List of 53 genes for period. RNA seq on unsegmented PSMs – which are expressed? From those, took top 5 that play a role in segmentation, then trying to do knock outs. MESBB – when we knock i tout, we get faster period. First example of a genetic perturbation that makes it faster. 3 minute difference.
+    - Kaga has lower period (therefore faster). Measurements based on segment forming time. Less accurate; not as stringent. Based on subjective “bright field” image measurements. More global. Pure Kaga has around 50 minutes, as opposed to 60 minutes.
+- Segmentation clock is highly quantitative. Each species has its specific rate, and it’s unclear about what control that because the genes controlling the clock is highly conserved. So why is the mouse developing at twice the rate as humans?
+- People using this for developmental timing.
+- Mouse proteins are degraded faster, humans more stable, and this accounts for the differences in timing. But how are these proteins different? Is anything encoded in these genomes? It’s polygenic, and we have some candidate genes.
+
 ## 14 June 2022
 
 Battling with bookdown and LaTeX .pdf format. Discovered...
