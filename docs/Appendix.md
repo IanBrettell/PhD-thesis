@@ -4,9 +4,10 @@
 
 (ref:eCDFall) 587 traits from the GWAS Catalog that passed our filters for polygenic traits, ranked by ${D_t^S}$.
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/fst/0.1_1000_20220314_ecdf_all_faceted_with_controls_d_rank_long} \caption{(ref:eCDFall)}(\#fig:eCDFall)
-\end{figure}
+<div class="figure">
+<img src="figs/fst/0.1_1000_20220314_ecdf_all_faceted_with_controls_d_rank_long.png" alt="(ref:eCDFall)" width="100%" />
+<p class="caption">(\#fig:eCDFall)(ref:eCDFall)</p>
+</div>
 
 # HMM state time dependence for all MIKK panel lines
 
@@ -16,17 +17,19 @@
 
 (ref:mikk-all-tile-dge) Tile plot for all 1610 test fishes included in the MIKK panel behaviour analysis, ordered by each line's group median for individual mean speed over the course of the 20-minute video (open field and novel object combined). The order of lines is identical to that shown in **Figure \@ref(fig:mikk-mean-speed)**. 
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/mikk_behaviour/all_0.05_15_tile_dge} \caption{(ref:mikk-all-tile-dge)}(\#fig:mikk-all-tile-dge)
-\end{figure}
+<div class="figure">
+<img src="figs/mikk_behaviour/all_0.05_15_tile_dge.png" alt="(ref:mikk-all-tile-dge)" width="100%" />
+<p class="caption">(\#fig:mikk-all-tile-dge)(ref:mikk-all-tile-dge)</p>
+</div>
 
 ### Density plot
 
 (ref:mikk-all-dens-dge) Density plot for all 1610 test fishes included in the MIKK panel behaviour analysis, ordered by each line's group median for individual mean speed over the course of the 20-minute video (open field and novel object combined). The order of lines is identical to that shown in **Figure \@ref(fig:mikk-mean-speed)**. 
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/mikk_behaviour/all_0.05_15_dens_dge} \caption{(ref:mikk-all-tile-dge)}(\#fig:mikk-all-dens-dge)
-\end{figure}
+<div class="figure">
+<img src="figs/mikk_behaviour/all_0.05_15_dens_dge.png" alt="(ref:mikk-all-tile-dge)" width="100%" />
+<p class="caption">(\#fig:mikk-all-dens-dge)(ref:mikk-all-tile-dge)</p>
+</div>
 
 ## Social genetic effects
 
@@ -34,14 +37,16 @@
 
 (ref:mikk-all-tile-sge) Tile plot for all 1610 reference fishes included in the MIKK panel behaviour analysis, ordered by each line's group median for individual mean speed over the course of the 20-minute video (open field and novel object combined). The order of lines is identical to that shown in **Figure \@ref(fig:mikk-mean-speed)**. 
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/mikk_behaviour/all_0.05_15_tile_sge} \caption{(ref:mikk-all-tile-sge)}(\#fig:mikk-all-tile-sge)
-\end{figure}
+<div class="figure">
+<img src="figs/mikk_behaviour/all_0.05_15_tile_sge.png" alt="(ref:mikk-all-tile-sge)" width="100%" />
+<p class="caption">(\#fig:mikk-all-tile-sge)(ref:mikk-all-tile-sge)</p>
+</div>
 
 ### Density plot
 
 (ref:mikk-all-dens-sge) Density plot for all 1610 test fishes included in the MIKK panel behaviour analysis, ordered by each line's group median for individual mean speed over the course of the 20-minute video (open field and novel object combined). The order of lines is identical to that shown in **Figure \@ref(fig:mikk-mean-speed)**. 
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/mikk_behaviour/all_0.05_15_dens_sge} \caption{(ref:mikk-all-tile-sge)}(\#fig:mikk-all-dens-sge)
-\end{figure}
+<div class="figure">
+<img src="figs/mikk_behaviour/all_0.05_15_dens_sge.png" alt="(ref:mikk-all-tile-sge)" width="100%" />
+<p class="caption">(\#fig:mikk-all-dens-sge)(ref:mikk-all-tile-sge)</p>
+</div>
