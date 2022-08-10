@@ -42,10 +42,9 @@ The MIKK panel was bred from a wild population of medaka found in the Kiyosu are
 
 (ref:InbreedingFigure) Inbreeding, fecundity and eye size in the MIKK panel lines. **A**: Status of all MIKK panel lines during the first 14 generations of inbreeding, showing cause of death for non-extant lines. **B**: Average fecundity of MIKK panel lines in generation F16, as measured during peak egg production in July 2020. **C**: Distribution of mean relative eye size for female and male medaka across all MIKK panel lines.
 
-<div class="figure">
-<img src="figs/mikk_genome/20211213_final_figure.png" alt="(ref:InbreedingFigure)" width="100%" />
-<p class="caption">(\#fig:InbreedingFigure)(ref:InbreedingFigure)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/20211213_final_figure} \caption{(ref:InbreedingFigure)}(\#fig:InbreedingFigure)
+\end{figure}
 
 ### Introgression with northern Japanese and Korean medaka populations {#introgression-sec}
 
@@ -55,10 +54,9 @@ I then carried out an ABBA BABA analysis to calculate a modified 'admixture prop
 
 (ref:ABBABABA) **Figure 2**: ABBA-BABA analysis. **A**. Phylogenetic tree generated from the Ensembl release 102 50-fish multiple alignment, showing only the medaka lines used in the ABBA-BABA analysis. **B**. Schema of the comparisons carried out in the ABBA-BABA analysis. **C**. Circos plot comparing introgression ($\hat{f}_d$) between the MIKK panel and either *iCab* (yellow), *HNI* (orange), or *HSOK* (purple), calculated within 500-kb sliding windows using a minimum of 250 SNPs per window.
 
-<div class="figure">
-<img src="figs/mikk_genome/07_introgression.png" alt="(ref:ABBABABA)" width="100%" />
-<p class="caption">(\#fig:ABBABABA)(ref:ABBABABA)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/07_introgression} \caption{(ref:ABBABABA)}(\#fig:ABBABABA)
+\end{figure}
 
 Based on the genome-wide mean $\hat{f}_d$, the MIKK panel shares approximately 25% of its genome with *iCab*, 9% with *HNI*, and 12% with *HSOK*. These results provide evidence that the MIKK panel's originating population has more recently introgressed with medaka from Korea than with medaka from northern Japan. This supports the findings in @spivakovGenomicPhenotypicCharacterization2014, where the authors found little evidence of significant interbreeding between southern and northern Japanese medaka since the populations diverged. Although the proportional difference between *HNI* and *HSOK* is small, this further supports the general finding that northern and southern Japanese medaka strains show low levels of interbreeding that may be a result of geographical isolation or genome divergence.[@katsumuraMedakaPopulationGenome2019]
 
@@ -68,10 +66,9 @@ As a  means of assessing genetic diversity in the MIKK panel, I calculated nucle
 
 (ref:NucleotideDiversity) Circos plot with nucleotide diversity ($\hat{\pi}$) calculated within 500-kb non-overlapping windows for 63 non-sibling lines from the MIKK panel (*green*) and 7 wild Kiyosu medaka samples from the same originating population (*purple*); proportion of sequence classified as repeats by RepeatMasker (*blue*); and mean mapping quality (*pink*).
 
-<div class="figure">
-<img src="figs/mikk_genome/supp_01_pi_circos.png" alt="(ref:NucleotideDiversity)" width="100%" />
-<p class="caption">(\#fig:NucleotideDiversity)(ref:NucleotideDiversity)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/supp_01_pi_circos} \caption{(ref:NucleotideDiversity)}(\#fig:NucleotideDiversity)
+\end{figure}
 
 The higher level of $\hat{\pi}$ observed within specific regions on several chromosomes -- such as chromosomes 2, 11, and 18 -- correspond closely to the regions we identified as containing large (>250 kb) inversions that appear to be shared across at least some of the MIKK panel (**Fig. \@ref(fig:SVInvs)**). These regions are also enriched for large deletions and duplications.[@legerGenomicVariationsEpigenomic2022] Inversions cause permanent heterozygosity [@hoffmannChromosomalInversionPolymorphisms2004], and duplications and deletions may have increased the density of called SNPs in these regions [@fredmanComplexSNPrelatedSequence2004], so the observed depressions in homozygosity at these loci may be the result of such large structural variants that are present in the MIKK panel's genomes.
 
@@ -79,10 +76,9 @@ Overall, this analysis confirms that the MIKK panel shows similar levels of homo
 
 (ref:SVInvs) Inversions identified in 9 MIKK panel lines using a combination of Oxford Nanopore Technologies long-read and Illumina short-read sequences (see Chapter \@ref(mikksv-sec) below).
 
-<div class="figure">
-<img src="figs/mikk_genome/20210224_sv_invs_lines.png" alt="(ref:SVInvs)" width="100%" />
-<p class="caption">(\#fig:SVInvs)(ref:SVInvs)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/20210224_sv_invs_lines} \caption{(ref:SVInvs)}(\#fig:SVInvs)
+\end{figure}
 
 ### LD decay {#ld-decay-sec}
 
@@ -94,19 +90,17 @@ To determine the rate of LD decay in the MIKK panel and compare it to that in th
 
 (ref:LDdecay) Minor allele frequency distributions and LD decay for biallelic, non-missing SNPs in the 1000 Genomes Phase 3 variant calls (N = 2,504) (1KG), and the MIKK panel Illumina-based calls excluding one of each pair of sibling lines (N = 63), across all autosomes (1KG: chrs 1-22; MIKK: chrs 1-24). **A**: Histogram of allele frequencies in the 1KG and MIKK panel calls. **B**: LD decay for each autosome, calculated by taking the mean $r^2$ of pairs of SNPs with MAF $>$ 0.1 within non-overlapping 100 bp windows of distance from one another, up to a maximum of 10 kb. LD decays faster on chromosome 2 for the MIKK panel due to its higher recombination rate.
 
-<div class="figure">
-<img src="figs/mikk_genome/08_ld_decay.png" alt="(ref:LDdecay)" width="100%" />
-<p class="caption">(\#fig:LDdecay)(ref:LDdecay)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/08_ld_decay} \caption{(ref:LDdecay)}(\#fig:LDdecay)
+\end{figure}
 
 Based on the 1KG calls under these parameters, LD decays in humans to a mean $r^2$ of around 0.2-0.35 at a distance of 10 kb, whereas the MIKK panel reaches this level within 1 kb, with a mean $r^2$ of 0.3-0.4 at a distance of ~100 bp. This implies that when a causal variant is present in at least two lines in the MIKK panel, one may be able to map causal variants at a higher resolution than in humans. We note that LD decays faster in chromosome 2 of the MIKK panel relative to the other chromosomes. This suggests that it has a much higher recombination rate, which is consistent with the linkage map described in @naruseDetailedLinkageMap2000, showing a higher genetic distance per Mb for this chromosome. This higher recombination rate in chromosome 2 may in turn be caused by its relatively high proportion of repeat content (**Fig. \@ref(fig:repeats)**).
 
 (ref:repeats-fig) Repeat content in the *HdrR* genome based on RepeatMasker results obtained by Jack Monahan. **A**. Proportion of repeat content per-chromosome. **B**. log10 of repeat lengths and counts per repeat class. "Misc" includes all repeats assigned to their own specific class, for example "(GAG)n" or "(GATCCA)n". **C**.  Circos plot showing repeat length (radial axes) by locus (angular axis) and repeat class (track). 
 
-<div class="figure">
-<img src="figs/mikk_genome/20210401_hdrr_repeats_final.png" alt="(ref:repeats-fig)" width="100%" />
-<p class="caption">(\#fig:repeats)(ref:repeats-fig)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/20210401_hdrr_repeats_final} \caption{(ref:repeats-fig)}(\#fig:repeats)
+\end{figure}
 
 ## Structural variation in the MIKK panel {#mikksv-sec}
 
@@ -119,10 +113,9 @@ SVs were generally enriched in regions covered by repeats. While only 16% of bas
 (ref:SV-cap) Polished SVs in 9 MIKK panel lines sequenced with ONT. DEL: deletion; INS: insertion; TRA: translocation; DUP: duplication; INV: inversion. **A**. Aggregate log10 counts and lengths of distinct SVs by type, excluding TRA. **B**. pLI LOD scores in distinct SVs by SV type. **C**. Histogram of LOD scores by SV type. **D**. Total and singleton counts of SV types per sample. **E**. Circos plot showing per-sample distribution and lengths of DEL variants across the genome.
 
 
-<div class="figure">
-<img src="figs/mikk_genome/20210408_sv_main.png" alt="(ref:SV-cap)" width="100%" />
-<p class="caption">(\#fig:SV-main)(ref:SV-cap)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/20210408_sv_main} \caption{(ref:SV-cap)}(\#fig:SV-main)
+\end{figure}
 
 We compared these polished INS and DEL calls with the high-quality graph-based alternative paths and large-scale deletions, respectively (see section titled *Novel genetic sequences and large-scale insertions and deletions in the MIKK panel* in @legerGenomicVariationsEpigenomic2022). We found that 2 of the 19 regions covered by graph-based alternative paths, and 4 of the 16 regions covered by graph-based deletions, had no SVs that overlapped those regions at all, which suggests they would have been missed entirely when using a reference-anchored approach alone.
 

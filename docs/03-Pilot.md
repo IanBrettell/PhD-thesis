@@ -25,10 +25,9 @@ Taking advantage of the rich genetic resources offered by medaka we established 
 
 (ref:behavioural-schema) Schema for experimental plan. *iCab*-*iCab* pairings are the control condition. To explore direct genetic effects on behaviour, we compare the behaviours of test fishes from different lines, and infer that the differences between lines are caused by the differences in their genetics (direct genetic effects). To explore social genetic effects, we use the same data but turn our focus to the reference fish, and infer that the differences we observe between their behaviours are caused by the differences in their social environments, which are in turn driven by the different genetics in the test fish lines (social genetic effects). 
 
-<div class="figure">
-<img src="figs/pilot/experimental_schema.png" alt="(ref:behavioural-schema)" width="100%" />
-<p class="caption">(\#fig:behavioural-schema)(ref:behavioural-schema)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/experimental_schema} \caption{(ref:behavioural-schema)}(\#fig:behavioural-schema)
+\end{figure}
 
 
 [Wrap up the findings in one or two sentences:
@@ -45,19 +44,17 @@ Our behavioural assay is 20 minutes long, comprising two consecutively-run 10-mi
 
 (ref:assay-setup) **A**: Experimental setup, with two test boxes side-by-side (denoted as “L” for left and “R” for right). Each test box contains one test tank, separated by removable barriers into quadrants, allowing for the simultaneous assay of four pairs of fish per test tank. The interior of the box is ambiently illuminated by LED lights, and a camera is suspended over the centre of each test tank to record the videos. **B**: Four pairs of fishes in a test tank with labelled quadrants (I, II, III, IV) and strains (*iCab* or *HdrR*). C: Paths of *iCab* reference fish and *HdrR* test fish from the video at panel (B) at 110 seconds. 
 
-<div class="figure">
-<img src="figs/pilot/setup_pic_with_frame_110.png" alt="(ref:assay-setup)" width="100%" />
-<p class="caption">(\#fig:assay-setup)(ref:assay-setup)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/setup_pic_with_frame_110} \caption{(ref:assay-setup)}(\#fig:assay-setup)
+\end{figure}
 
 Between 11 and 16 June 2019, I assayed a total of 307 pairs of fish, comprising the following counts for each strain pairing: 68 *iCab/iCab*, 60 *iCab/HdrR*, 76 *iCab/HNI*, 47 *iCab/Kaga*, and 56 *iCab/HO5*. The locations of the lines' originating populations are shown in **Figure \@ref(fig:line-locations)**. The fish from the iCab strain was denoted as the "reference fish", and was introduced to the test tank first. The “test fish” which was either another iCab fish (for the control condition), or a fish from one of the other four strains that were assayed in this experiment (*HdrR*, *HNI*, *Kaga*, *HO5*). The order in which the strains were assayed across the six days was randomly determined prior to the collection of the data. The test tanks were also rinsed between runs to remove any substances released by subjects during previous runs that could influence the behaviour of the subjects that followed.
 
 (ref:line-locations) Image adapted from [@spivakovGenomicPhenotypicCharacterization2014], showing the locations of the originating populations of the 5 inbred medaka lines used in this study. 
 
-<div class="figure">
-<img src="figs/pilot/line_locations.png" alt="(ref:line-locations)" width="100%" />
-<p class="caption">(\#fig:line-locations)(ref:line-locations)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/line_locations} \caption{(ref:line-locations)}(\#fig:line-locations)
+\end{figure}
 
 ### Tracking
 
@@ -73,10 +70,9 @@ We examined the effects of several covariates, including date of assay, time of 
 
 (ref:covariate-effects) Effect of covariates on mean speed of iCab individuals when paired with another iCab over the course of the full video (including both open field and novel object assays). *P*-values were calculated from a multi-way ANOVA with all four covariates included as terms, and adjusted for false discovery rate.
 
-<div class="figure">
-<img src="figs/pilot/covariate_effects_no-split-by-assay.png" alt="(ref:covariate-effects)" width="100%" />
-<p class="caption">(\#fig:covariate-effects)(ref:covariate-effects)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/covariate_effects_no-split-by-assay} \caption{(ref:covariate-effects)}(\#fig:covariate-effects)
+\end{figure}
 
 ### Choice of time interval and number of HMM states {#pilot-hmm-params}
 
@@ -86,10 +82,9 @@ HMMs are well-suited for classifying the hidden states that generate stochastic,
 
 (ref:compare-params) Comparison between HMM parameters. Horizontal axis: Mean concordance between states assigned by HMMs through a 2-fold cross-validation process. Vertical axis: Kruskal-Wallis statistic comparing strains based on the proportion of time spent in each HMM state, summed across all states. Size of points correspond to the interval, in seconds, between which the distance and angle of travel was calculated (Methods).
 
-<div class="figure">
-<img src="figs/pilot/compare_params.png" alt="(ref:compare-params)" width="100%" />
-<p class="caption">(\#fig:compare-params)(ref:compare-params)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/compare_params} \caption{(ref:compare-params)}(\#fig:compare-params)
+\end{figure}
 
 Based on these results and a visualisation of the polar plots for each combination of state number and time interval, we excluded combinations with 15 or more states due to an asymmetry across states that would create difficulties for interpreting their biological meaning (Supplementary material). For the downstream analysis we selected the combination of 14 states with a 0.08-second interval between time points, because out of the remaining combinations it appeared to optimally balance the level of overfitting and detection of differences between strains. 
 
@@ -97,10 +92,9 @@ The distances and angles of travel for the 14 states are shown in Figure 4, gene
 
 (ref:pilot-polar) Classification of movements by the 14-state HMM, based on distance (in log<sub>10</sub>(pixels)) and angle of travel between a time interval of 0.08 seconds from points B → C for distance, and points A → B → C for angle. Each point represents the distance and angle at point C, and A → B is aligned vertically along the 0-180° radial axis. The figure shows an illustrative 10,000 data points (movements), randomly selected from the full dataset. States are sorted in ascending order by mean distance.
 
-<div class="figure">
-<img src="figs/pilot/polar_all_dge.png" alt="(ref:pilot-polar)" width="100%" />
-<p class="caption">(\#fig:pilot-polar)(ref:pilot-polar)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/polar_all_dge} \caption{(ref:pilot-polar)}(\#fig:pilot-polar)
+\end{figure}
 
 We next sought to determine whether there was a difference in the proportion of time spent in each state between the 5 inbred strains (implying the presence of direct genetic effects), and between the *iCab* reference fishes depending on the inbred strains of their tank partner (implying the presence of social genetic effects).  
 
@@ -118,77 +112,113 @@ The proportion of time each individual spent within a state was first inverse-no
 
 The states that showed a significant difference across any of the variables included in the model are set out in **Table \@ref(tab:pilot-dge-tbl)**. The test fish strains differed significantly in the proportion of time spent in a given state (p < 0.05, FDR-adjusted) for 11 out of 14 states in the open field assay (4.45x10<sup>-24</sup> < p < 1.06x10-2), and 7 out of 14 states for the novel object assay (5.53x10<sup>-16</sup> < p < 4.2x10-3), with the strain of the test fish explaining up to ~28% of the variance in the proportion of time spent in a given state. For some states, there was also a significant difference between quadrants, date of assay, and tank side (open field: 1.03e-09 < p < 1.18x10-2; novel object: 1.75x10-8 < p < 4.9x10-2). Full tables for all states and variables are provided in the Supplementary Material.
 
+\begin{table}
 
-Table: (\#tab:pilot-dge-tbl)Significant differences in the proportion of time spent in each HMM state across test fish strains for the open field and novel object assay components.
-
-|Assay        |State |Variance explained (%) |p-value (FDR-adjusted) |
-|:------------|:-----|:----------------------|:----------------------|
-|open field   |1     |26.62                  |3.60e-22               |
-|open field   |2     |21.94                  |6.18e-18               |
-|open field   |3     |28.21                  |4.45e-24               |
-|open field   |4     |17.73                  |2.12e-15               |
-|open field   |5     |7.48                   |2.78e-05               |
-|open field   |6     |5.60                   |2.48e-04               |
-|open field   |7     |5.46                   |3.11e-04               |
-|open field   |8     |5.79                   |1.08e-04               |
-|open field   |9     |7.36                   |8.96e-06               |
-|open field   |10    |3.78                   |1.06e-02               |
-|open field   |13    |4.66                   |3.42e-03               |
-|novel object |1     |17.19                  |7.28e-14               |
-|novel object |2     |14.28                  |2.92e-11               |
-|novel object |3     |19.30                  |5.53e-16               |
-|novel object |4     |13.12                  |1.26e-10               |
-|novel object |6     |4.12                   |4.20e-03               |
-|novel object |7     |8.93                   |1.84e-06               |
-|novel object |9     |10.68                  |9.87e-08               |
+\caption{(\#tab:pilot-dge-tbl)Significant differences in the proportion of time spent in each HMM state across test fish strains for the open field and novel object assay components.}
+\centering
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Assay & State & Variance explained (\%) & p-value (FDR-adjusted)\\
+\hline
+open field & 1 & 26.62 & 3.60e-22\\
+\hline
+open field & 2 & 21.94 & 6.18e-18\\
+\hline
+open field & 3 & 28.21 & 4.45e-24\\
+\hline
+open field & 4 & 17.73 & 2.12e-15\\
+\hline
+open field & 5 & 7.48 & 2.78e-05\\
+\hline
+open field & 6 & 5.60 & 2.48e-04\\
+\hline
+open field & 7 & 5.46 & 3.11e-04\\
+\hline
+open field & 8 & 5.79 & 1.08e-04\\
+\hline
+open field & 9 & 7.36 & 8.96e-06\\
+\hline
+open field & 10 & 3.78 & 1.06e-02\\
+\hline
+open field & 13 & 4.66 & 3.42e-03\\
+\hline
+novel object & 1 & 17.19 & 7.28e-14\\
+\hline
+novel object & 2 & 14.28 & 2.92e-11\\
+\hline
+novel object & 3 & 19.30 & 5.53e-16\\
+\hline
+novel object & 4 & 13.12 & 1.26e-10\\
+\hline
+novel object & 6 & 4.12 & 4.20e-03\\
+\hline
+novel object & 7 & 8.93 & 1.84e-06\\
+\hline
+novel object & 9 & 10.68 & 9.87e-08\\
+\hline
+\end{tabular}
+\end{table}
 
 **Figure \@ref(fig:pilot-dge-time)** depicts the time dependence of HMM states over the course of the video, and the regions of the test tank that were most frequently occupied by the different strains. Figures A and H show the HMM states with panels coloured red to indicate the states that were found to significantly differ between test fish strains. **Figures \@ref(fig:pilot-dge-time)B** and **E** show how each individual test fish, grouped by inbred strain, moved through HMM states throughout the course of the video, with each tile coloured by the state most frequently-occupied by the individual within 2-second intervals. Figures **\@ref(fig:pilot-dge-time)C** and **F** show the same data, recalculated as densities within each strain, with only the states that showed significant differences between strains in colour, and the remaining states consolidated and coloured grey. There is an especially clear difference between strains in the proportions of time spent in the slowest-moving states (i.e. states 1 to 3) at the beginning of each assay component, with an increase across all strains in the novel object assay, likely as a consequence of having less room to move, as well as the fear response that the novel object was designed to elicit. The differences are clearest when comparing the southern Japanese medaka strains (*iCab*, *HdrR*, and *HO5*) against the northern Japanese strains (*Kaga* and *HNI*). In addition, we note that *Kaga* tends to spend more time in the fast- and forward-moving state 13 at the beginning of the assay than at other times, which suggests that for that strain, such movements may be the manifestation of a stress response. **Figures \@ref(fig:pilot-dge-time)D** and **G** show, as densities, the regions of the tank that were most frequently occupied by each strain. Although the northern Japanese strains *Kaga* and *HNI* were similarly fast-moving relative to the southern Japanese strains, in the open field assay component they appear to favour different regions of the tank – where *HNI* occupied the central regions of the tank with more frequency, *Kaga* tended to prefer swimming along the boundaries of the tank.
 
 (ref:pilot-dge-time) Differences between test fish strains in the HMM states they occupied during the open field (top) and novel object (bottom) assay components. **A and H**: 14 HMM states with panels coloured red to indicate significant differences between test fish strains in the proportion of time spent in those states during the separate assay components. **B and E**: Transitions between HMM states across time for each individual test fish, grouped by strain. Tiles are coloured by the state most frequently occupied by each fish within 2-second intervals. **C and F**: Densities within each strain for the occupation of states that significantly differed between strains (colour), with other states consolidated (grey). **D and G**: Densities of the test tank locations occupied by each strain, calculated within 900 grid points (30x30).
 
-<div class="figure">
-<img src="figs/pilot/0.08_14_dge.png" alt="(ref:pilot-dge-time)" width="100%" />
-<p class="caption">(\#fig:pilot-dge-time)(ref:pilot-dge-time)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/0.08_14_dge} \caption{(ref:pilot-dge-time)}(\#fig:pilot-dge-time)
+\end{figure}
 
 #### Social genetic effects
 
 To determine whether the iCab reference fishes altered their behaviour depending on the inbred strain of their tank partner, we carried out the same analysis and model as above using only data from the iCab reference fishes. The states that showed a significant difference across any of the variables included in the model are set out in **Table \@ref(tab:pilot-sge-tbl)**. The iCab reference fishes differed significantly in the proportion of time they spent in a given state depending on the strain of their tank partner ($p$ < 0.05, FDR-adjusted) for 5 out of 14 states in the open field assay (2.04x10<sup>-6</sup> < $p$ < 2.11x10<sup>-2</sup>), and 7 out of 14 states for the novel object assay (4.76x10<sup>-7</sup> < $p$ < 4.06x10<sup>-2</sup>). The strain of the tank partner explained up to ~9% of the variance in the proportion of time the *iCab* reference spent in a given state. Full tables for all states and variables are provided in the Supplementary Material. 
 
+\begin{table}
 
-Table: (\#tab:pilot-sge-tbl)Significant differences in the proportion of time spent in each HMM state by iCab reference fishes depending on the strain of their tank partner during the open field and novel object assay components.
-
-|Assay        |State |Variance explained (%) |p-value (FDR-adjusted) |
-|:------------|:-----|:----------------------|:----------------------|
-|open field   |1     |8.52                   |5.88e-06               |
-|open field   |2     |9.09                   |2.04e-06               |
-|open field   |3     |7.97                   |1.77e-05               |
-|open field   |5     |3.92                   |4.29e-03               |
-|open field   |12    |2.97                   |2.11e-02               |
-|novel object |1     |7.94                   |8.73e-06               |
-|novel object |2     |9.38                   |4.76e-07               |
-|novel object |3     |8.73                   |1.58e-06               |
-|novel object |6     |4.76                   |1.23e-03               |
-|novel object |8     |2.80                   |4.06e-02               |
-|novel object |10    |3.81                   |8.43e-03               |
+\caption{(\#tab:pilot-sge-tbl)Significant differences in the proportion of time spent in each HMM state by iCab reference fishes depending on the strain of their tank partner during the open field and novel object assay components.}
+\centering
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Assay & State & Variance explained (\%) & p-value (FDR-adjusted)\\
+\hline
+open field & 1 & 8.52 & 5.88e-06\\
+\hline
+open field & 2 & 9.09 & 2.04e-06\\
+\hline
+open field & 3 & 7.97 & 1.77e-05\\
+\hline
+open field & 5 & 3.92 & 4.29e-03\\
+\hline
+open field & 12 & 2.97 & 2.11e-02\\
+\hline
+novel object & 1 & 7.94 & 8.73e-06\\
+\hline
+novel object & 2 & 9.38 & 4.76e-07\\
+\hline
+novel object & 3 & 8.73 & 1.58e-06\\
+\hline
+novel object & 6 & 4.76 & 1.23e-03\\
+\hline
+novel object & 8 & 2.80 & 4.06e-02\\
+\hline
+novel object & 10 & 3.81 & 8.43e-03\\
+\hline
+\end{tabular}
+\end{table}
 
 We observe that the proportions of time the *iCab* reference fishes spent in different states do differ based on the strains of their tank partner, and that their behavioural patterns tend to reflect those of the test fish strains they are paired with (**Figure \@ref(fig:pilot-sge-time)**). Thus, the *iCab* reference fishes spend less time in the slower-moving states when in the presence of the faster-moving northern Japanese strains *Kaga* and *HNI*, which in turn shows that the test fishes are transmitting their behaviours to some degree to their *iCab* tank partners.The differences in the behaviours of *iCab* reference fishes based on the strain of their tank partners are not as large as those between the test fish strains. However, unlike what was observed with the test fishes, here there is a greater number of states that show significant differences during the novel object component of the assay compared to the open field component. This suggests that when movement is restricted, or when in the presence of a potential threat, the behaviour of the test fish tank partner has more of an influence on the *iCab* reference fish’s behaviour than otherwise.
 
 (ref:pilot-sge-time) Differences between HMM states occupied by the reference fish when paired with different test fish strains during the open field (top) and novel object (bottom) assay components. **A and H**: 14 HMM states with panels coloured red to indicate significant differences between the reference fishes under different strain-pairings in the proportion of time spent in those states during the separate assay components. The HMM states are the same as those in **Figure \@ref(fig:pilot-dge-time)**, but coloured with a different palette. **B and E**: Transitions between HMM states across time for each individual iCab reference fish, grouped by the strain of its tank partner. Tiles are coloured by the state most frequently occupied by each fish within 2-second intervals. **C and F**: Densities within each strain-pairing for the occupation of states that significantly differed between strain-pairings (colour), with other states consolidated (grey). **D and G**: Densities of the test tank locations occupied by the iCab reference fishes when paired with different strain, calculated within 900 grid points (30x30).
 
-<div class="figure">
-<img src="figs/pilot/0.08_14_sge.png" alt="(ref:pilot-sge-time)" width="100%" />
-<p class="caption">(\#fig:pilot-sge-time)(ref:pilot-sge-time)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/0.08_14_sge} \caption{(ref:pilot-sge-time)}(\#fig:pilot-sge-time)
+\end{figure}
 
 Finally, to develop a metric to quantify the degree to which the *iCab* reference fishes’ behaviour is influenced by the strain of its tank partner, we calculated the proportions of time that the pairs of fish spent simultaneously occupying the same HMM state. **Figure \@ref(fig:pilot-cooc-heat)** shows that when paired with the slowest-moving *HdrR* strain, the *iCab* reference fishes spent more time co-occupying the slow- and forward-moving state 2, whereas they tended to co-occupy the fast- and forward-moving state 11 when paired with the faster-moving northern *Kaga* and *HNI* strains. When paired with another *iCab*, they preferred to co-occupy the slow-moving and pan-directional state 4. For each combination of assay component and state, we then ran a Kruskal-Wallis test to determine whether there were differences in the frequencies of state co-occupancy under different strain pairings ($p$ < 0.05, FDR-adjusted), and found significant differences for states 1 to 6 for the open field component (1.1x10<sup>-8</sup> < $p$ < 4.1x10<sup>-2</sup>), and states 1 to 4 and 7 for the novel object component (1.6x10<sup>-6</sup> < $p$ < 2.5x10<sup>-2</sup>). The heatmaps show that *iCab* tends to co-occupy state 4 at the highest frequency when paired with another *iCab*, which suggests that this pan-directional, slow-moving state is a more comfortable or natural state for *iCab* to occupy, particularly when under stress.
 
 (ref:pilot-cooc-heat) Frequency of HMM state co-occupancy between pairs of fish, calculated across all all videos per strain-pairing.
 
-<div class="figure">
-<img src="figs/pilot/0.08_14_cooc_heatmap.png" alt="(ref:pilot-cooc-heat)" width="100%" />
-<p class="caption">(\#fig:pilot-cooc-heat)(ref:pilot-cooc-heat)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/0.08_14_cooc_heatmap} \caption{(ref:pilot-cooc-heat)}(\#fig:pilot-cooc-heat)
+\end{figure}
 
 
 ## Discussion

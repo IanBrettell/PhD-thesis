@@ -34,14 +34,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Genetic analysis of quantitative traits in medaka fish and humans},
-  pdfauthor={Ian Brettell},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage{listings}
 \newcommand{\passthrough}[1]{#1}
 \lstset{defaultdialect=[5.3]Lua}
@@ -102,10 +94,18 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Japanese courage: a genetic analysis of complex traits in medaka fish and humans},
+  pdfauthor={Ian Brettell},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
 
-\title{Genetic analysis of quantitative traits in medaka fish and humans}
+\title{Japanese courage: a genetic analysis of complex traits in medaka fish and humans}
 \author{Ian Brettell}
-\date{2022-06-29}
+\date{2022-08-09}
 
 \begin{document}
 \maketitle
@@ -118,109 +118,24 @@
 \chapter*{About}\label{about}}
 \addcontentsline{toc}{chapter}{About}
 
-Code to render PDF:
+\hypertarget{summary}{%
+\section{Summary}\label{summary}}
 
-\begin{lstlisting}[language=R]
-bookdown::render_book("book", bookdown::pdf_book())
-\end{lstlisting}
+Japanese courage: a genetic analysis of complex traits in medaka fish and humans
 
-Code to render PDF with different fonts:
+This thesis primarily explores how an individual's genes interact with the genes of their social companions to create differences in behaviour, using the Japanese medaka fish as a model organism. Chapter 1 sets out the introduction to the diverse topics covered in this thesis.
 
-First make the \passthrough{\lstinline!bookdown::pdf\_book:!} entry in \passthrough{\lstinline!\_output.yml!} first.
+Chapter 2 describes several genomic characteristics of the Medaka Inbred Kiyosu-Karlsruhe (MIKK) panel, which comprises 80 inbred lines of medaka that were bred from a wild population residing in Kiyosu, southern Japan. In this chapter I plot the inbreeding trajectory of the MIKK panel, and analyse its evolutionary relationship with other previously established inbred medaka strains; degree of homozygosity; rate of linkage disequilibrium decay; repeat content; and structural variation, all which relate to its utility for the genetic mapping of complex traits.
 
-Then\ldots{}
+In Chapter 3, I use a custom behavioural assay to characterise and classify bold-shy behaviours in 5 previously established inbred medaka lines. Here I describe the assay, assess its robustness against confounding factors, and apply a hidden markov model (HMM) to classify the fishes' behaviours across a spectrum of boldness-shyness based on their distance and angle of travel between time points. I describe how the different lines differ in their behaviours over the course of the assay (a direct genetic effect) and how the behaviour of a single ``reference'' line (\emph{iCab}) differs in the presence of different lines (a social genetic effect).
 
-\begin{lstlisting}[language=R]
-bookdown::render_book("book")
-\end{lstlisting}
+In Chapter 4, I explain how I applied this behavioural assay to the MIKK panel in order to identify lines that diverge in both their own bold-shy behaviours (the direct genetic effect) and the extent to which they transmit those behaviours onto their tank partners (the social genetic effect). I then describe how we used those divergent lines as the parental lines in a multi-way F2 cross in an attempt to isolate the genetic variants that are associated with both direct and social genetic effects.
 
-To clean up the references:
+In Chapter 5 I describe the bioinformatic processes and genetic association models used to map the variants associated with differences in the period of somite development, based on a separate F2 cross between the southern Japanese \emph{iCab} strain, and the northern Japanese \emph{Kaga} strain.
 
-\begin{lstlisting}[language=R]
-citr::tidy_bib_file(rmd_file = c("book/index.Rmd",
-                                 "book/01-Introduction.Rmd",
-                                 "book/02-MIKK_genome.Rmd",
-                                 "book/03-Pilot.Rmd",
-                                 "book/04-MIKK_F2.Rmd",
-                                 "book/06-Fst.Rmd",
-                                 "book/07-references.Rmd"),
-                    messy_bibliography = "book/book.bib",
-                    file = "book/tidy_references.bib")
-\end{lstlisting}
+Finally, in Chapter 6, I compare and rank all complex traits in the GWAS Catalog based on the extent to which their associated alleles vary across global human populations, using the Fixation Index (Fst) as a metric and the 1000 Genomes dataset as a sample of global genetic variation. In this chapter I set out the bioinformatic pipelines used to process the data, present the distributions of Fst for trait-associated alleles across the genome, and use the Kolmogorov-Smirnov test to compare the distributions of Fst across different traits.
 
-Test to understand which commands are creating errors:
-
-\begin{lstlisting}[language=R]
-bookdown::render_book("book",
-                      bookdown::pdf_book(pandoc_args = "--listings",
-                                         latex_engine = "xelatex",
-                                         biblio_style = "apalike",
-                                         csl = "chicago-fullnote-bibliography.csl",
-                                         includes = rmarkdown::includes(in_header = "preamble.tex"),
-                                         documentclass = "book",
-                                         sansfont = "Georgia",
-                                         monofont = "Andale Mono",
-                                         highlight = "pygments"))
-\end{lstlisting}
-
-\passthrough{\lstinline!citation\_package = "natbib"!} throws an ugly error, and ends up removing all references in the document.
-
-Weirdly, fonts only change if they go in \passthrough{\lstinline!index.Rmd!}.
-
-\hypertarget{bs4_book}{%
-\section{\texorpdfstring{\texttt{bs4\_book}}{bs4\_book}}\label{bs4_book}}
-
-\begin{lstlisting}[language=R]
-bookdown::render_book("book",
-                      bookdown::bs4_book(css = "style.css",
-                                         theme = list("primary" = "#52002E"),
-                                         repo = list("base" = "https://github.com/brettellebi/PhD-thesis",
-                                                                                         "branch" = "master", "subdir" = "book"),
-                                         includes = rmarkdown::includes(in_header = "css.html"),
-                                         footnotes_inline = T,
-                                         bibliography = "book.bib"))
-\end{lstlisting}
-
-This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports; for example, a math equation \(a^2 + b^2 = c^2\).
-
-\hypertarget{usage}{%
-\section{Usage}\label{usage}}
-
-Each \textbf{bookdown} chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter \emph{must} start with a first-level heading: \passthrough{\lstinline!\# A good chapter!}, and can contain one (and only one) first-level heading.
-
-Use second-level and higher headings within chapters like: \passthrough{\lstinline!\#\# A short section!} or \passthrough{\lstinline!\#\#\# An even shorter section!}.
-
-The \passthrough{\lstinline!index.Rmd!} file is required, and is also your first book chapter. It will be the homepage when you render the book.
-
-\hypertarget{render-book}{%
-\section{Render book}\label{render-book}}
-
-You can render the HTML version of this example book without changing anything:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Find the \textbf{Build} pane in the RStudio IDE, and
-\item
-  Click on \textbf{Build Book}, then select your output format, or select ``All formats'' if you'd like to use multiple formats from the same book source files.
-\end{enumerate}
-
-Or build the book from the R console:
-
-\begin{lstlisting}[language=R]
-bookdown::render_book()
-\end{lstlisting}
-
-To render this example to PDF as a \passthrough{\lstinline!bookdown::pdf\_book!}, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
-
-\hypertarget{preview-book}{%
-\section{Preview book}\label{preview-book}}
-
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in ``Preview book'', or from the R console:
-
-\begin{lstlisting}[language=R]
-bookdown::serve_book()
-\end{lstlisting}
+Altogether, this thesis describes some of the genomic characteristics of both medaka fish and humans, and how those variations relate to differences in complex traits, with a particular focus on the genetic causes of adaptive behaviours and the transmission of those behaviours onto one's social companions.
 
 \hypertarget{Introduction}{%
 \chapter{Introduction}\label{Introduction}}
@@ -233,16 +148,21 @@ Humankind has long sought to understand the basis of biological variation. What 
 \hypertarget{ancient-greece}{%
 \subsection{Ancient Greece}\label{ancient-greece}}
 
-Around 500 BC, the Ancient Grecian Pythagoras applied his understanding of triangles to this question, proposing the theory known as ``spermism''. He posited that hereditary information was passed down from parent to child via male sperm, with the female only providing the nutrients that would allow it to grow, and, like the theorem that bears his name, that these two sides of the ``triangle'' the length of the third side: the characteristics of the child (Mukherjee 2016).
+Around 500 BC, the Ancient Grecian Pythagoras applied his understanding of triangles to this question, proposing the theory known as ``spermism''. He posited that hereditary information was passed down from parent to child via male sperm, with the female only providing the nutrients that would allow it to grow, and, like the theorem that bears his name, that these two sides of the ``triangle'' would determine the length of the third side: the characteristics of the child (Mukherjee 2016).
 
-Over a century later, in 380 BC, Plato extended this metaphor in \emph{The Republic} to argue that this principle could be applied to perfect humanity, by breeding perfect combinations of parents.
+Over a century later, in 380 BC, Plato extended this metaphor in \emph{The Republic} to argue that this principle could be applied in order to perfect humanity, by breeding perfect combinations of parents at perfect times.
 
-Aristotle joined the discussion with his treatise \emph{Generation of Animals}, where he noted cases where human skin colour and other traits could skip generations, and thus hereditary information must not only be transmitted through sperm. He suggested an idea of ``movement'' -- the transmission of information -- from the father's sperm, which sculpts the mother's menstrual blood in the same way a carpenter carves a piece of wood.(Mukherjee 2016)
+Aristotle joined the discussion with his treatise \emph{Generation of Animals}, where he noted that children inherited features from their mothers as well as their fathers, and raised cases where human skin colour and other traits could skip generations, and thus hereditary information must not only be transmitted through sperm. He suggested an idea of ``movement'' -- the transmission of information -- from the father's sperm, which sculpts the mother's menstrual blood in the same way a carpenter carves a piece of wood (Mukherjee 2016). Aristotle, however, could not deduce the form in which the information was conveyed.
 
 \hypertarget{medieval-times}{%
 \subsection{Medieval times}\label{medieval-times}}
 
-In medieval times, the prevailing theory was that a tiny human -- a homunculus -- sat within the sperm, waiting to be inflated upon its introduction to a woman's uterus. However, this would require a homunculus to sit within another homunculus, \emph{ad infinitum}, like Matryoshka dolls, all the way back to the Biblical first man, Adam. Even the inventor of the microscope, Nicolaas Hartsoeker, thought he saw one in a sperm he was studying.
+In medieval times, the prevailing theory was that a tiny human -- a homunculus -- sat within the sperm, waiting to be inflated upon its introduction to a woman's uterus. However, this would require a homunculus to sit within another homunculus, \emph{ad infinitum}, like Matryoshka dolls, all the way back to the Biblical first man, Adam. Even the inventor of the microscope, Nicolaas Hartsoeker, thought he saw one in a sperm he was studying. But what then triggered the expansion of the human form, involving the development of new parts from embryo to fetus? The answer could only have been some instruction, blueprint, or code, but any specifics were out of reach.
+
+\hypertarget{mendel}{%
+\subsection{Mendel}\label{mendel}}
+
+In 1831, Charles Darwin boarded the
 
 \includegraphics[width=0.5\linewidth]{figs/introduction/homunculus}
 
@@ -253,6 +173,36 @@ In 1831, a young Charles Darwin boarded the HMS \emph{Beagle} to embark on an ex
 
 \hypertarget{breeding-programs-in-agriculture}{%
 \subsection{Breeding programs in agriculture}\label{breeding-programs-in-agriculture}}
+
+\hypertarget{mixed-models-for-genetic-association-analysis}{%
+\section{Mixed models for genetic association analysis}\label{mixed-models-for-genetic-association-analysis}}
+
+``The distinction between Mendelian loci and QTLs is artificial, as the same mapping techniques can be applied to both. In fact, the classification of genetic (and allelic) effects should be considered as a continuum. At one end of the spectrum is the dichotomous Mendelian trait with only two detectable and distinct phenotypes, which are governed by a single gene. At the other end are traits, such as growth, which are likely to be affected by many genes that each contribute a small portion to the overall phenotype.'' (Members of the Complex Trait Consortium 2003)
+
+Since it became possible to sequence the genotypes of individuals at scale, it has been an ongoing point of debate as to how best to model the effects that genetic variants have on a trait of interest.
+
+Population structure and unequal relatedness among individuals in a given cohort can lead to false discoveries (Ewens and Spielman 1995; Members of the Complex Trait Consortium 2003). This is because individuals who share common ancestries will share both variants that do affect the trait of interest, and variants that do not, and these variants will be correlated with one other due to that shared ancestry. Therefore, if an association is found between the causal variants and a trait of interest, the non-causal variants that are correlated with the causal variants will also be found to be statistically associated with the trait.
+
+How then does one control for population structure?
+
+Three methods were formerly used (Zhang et al. 2010):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Structured association (Jonathan K. Pritchard, Stephens, and Donnelly 2000)
+\item
+  Genomic control (Devlin and Roeder 1999)
+\item
+  Family-based tests of association (Abecasis, Cardon, and Cookson 2000)
+\end{enumerate}
+
+``Ronald fished introduced random effects models to study the correlations of trait values between relatives'' (Fisher 1919).
+
+\hypertarget{somites}{%
+\section{Somites}\label{somites}}
+
+Vertebral number is precisely defined for a given species (Gomez et al. 2008), but is the most variable physical trait across species (Kimura, Shinya, and Naruse 2012); for example, frogs have 6-10, humans have 33, and snakes can have more than 300 (Gomez et al. 2008; Kimura, Shinya, and Naruse 2012). The total number of vertebrae is a function of both how long the somite segmentation process persists for, and the
 
 \hypertarget{MIKK-genomes-chap}{%
 \chapter{Genomic variations in the MIKK panel}\label{MIKK-genomes-chap}}
@@ -391,8 +341,746 @@ Taken together, these analyses show that the MIKK panel is highly homozygous, wi
 \hypertarget{Pilot-chap}{%
 \chapter{Classification of bold/shy behaviours in 5 inbred medaka lines}\label{Pilot-chap}}
 
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+Humankind has long sought to understand what causes differences between the minds of individuals, and the behaviours they manifest. The origin of these differences resides in our genomes, as genetic differences between individuals are what set them on their unique developmental trajectories (Mitchell 2007). During the course of an organism's development, and ongoing throughout its lifespan, their genes interact with each other and the environment, leading to the creation of measurable traits, or phenotypes (Plomin and Asbury 2005). A core domain of biological inquiry concerns the extent to which an individual's value for a trait is determined by their genes (\textbf{G}), their environment (\textbf{E}), or an interaction between the two (\textbf{GxE}), commonly referred to as the interplay between `nature and nurture' (Galton and Okamoto 1874; Plomin and Asbury 2005).
+
+Experimental investigations of GxE in humans are hampered by the difficulties in sufficiently controlling for either genes or environment. To explore this fundamental question, researchers accordingly turned to model organisms, including the nematode (\emph{Caenorhabditis elegans}) (Snoek et al. 2019), fruit fly (\emph{Drosophila melanogaster}) (Schneider, Atallah, and Levine 2017), mouse (\emph{Mus musculus}) (Baud et al. 2017), and teleost species such as zebrafish (\emph{Danio rerio}) (Raterman et al. 2020) and medaka (\emph{Oryzias latipes}). Medaka is an established model organism which has been studied in Japan for over a century(Wittbrodt, Shima, and Schartl 2002). In addition to possessing many favourable traits including ease of handling, a rapid reproduction cycle, a short lifespan, and a well-annotated genome, medaka has a trait that is singular among vertebrates -- they have a high tolerance to inbreeding from the wild, allowing one to establish near-isogenic inbred strains with relative ease (Fitzgerald et al. 2022; Kirchmaier et al. 2015).
+
+Inbred strains permit experimental quantification of complex trait parameters with sufficient replication under controlled assay conditions. By comparing individuals from different strains, one can measure the strength of genetic effects on a trait of interest. Furthermore, the low degree of genetic variance between individuals of an inbred strain allows one to measure the strength of environmental effects on a given trait by controlled variation of the environment.
+
+\hypertarget{boldness-shyness}{%
+\section{Boldness-shyness}\label{boldness-shyness}}
+
+Behaviour is a complex trait that is affected by both genes and environment, and for social animals such as humans and medaka, one's social environment is considered likely to constitute a large component of the environmental effect (Ruzzante and Doyle 1990; Young 2008). Apart from social aspects, an organism must face many ``hostile forces of nature'' throughout its life (Buss 1991; Darwin 1859), such as food shortages, predation, harsh climate, and diseases. Adaptive behaviours allow individuals to navigate such dangers and maximise the likelihood of their survival at both the individual and population level (Lima and Dill 1990).
+
+Boldness-shyness is thought to be a fundamental axis of behavioural variation in many species, with an obvious causal relationship to an individual's likelihood of survival, and consequently with natural selection at the population level (Sloan Wilson et al. 1994). It represents an evolutionary trade-off between acquiring benefits (in terms of food or mates) and avoiding harms (in terms of predators or conspecific competitors), with each situation accompanied by its own optimal degree of risk (Lima and Dill 1990). It is both heritable (Svartberg 2002; Culum Brown, Burgess, and Braithwaite 2007), and subject to change following different life experiences or under different environmental conditions (Culum Brown, Burgess, and Braithwaite 2007).
+Boldness-shyness has been studied extensively with fish. Shy individuals tend to react to novelty by reducing their activity and becoming more vigilant, whereas bold individuals show higher levels of activity and exploratory behaviour (C. Brown, Jones, and Braithwaite 2007). One assay commonly used to measure this behavioural domain is referred to as the `open field' assay, where fishes are observed while swimming freely in an experimental setting (C. Brown, Jones, and Braithwaite 2007; Laland, Krause, and Brown 2011; Lucon-Xiccato et al. 2022, 2020; Lucon-Xiccato and Bisazza 2017; Matsunaga and Watanabe 2010). Another is the `novel object' assay, where a novel object is introduced to the fishes' environment to simulate a threat (C. Brown, Jones, and Braithwaite 2007; Schjolden, Stoskhus, and Winberg 2005; Wilson et al. 1993; Dominic Wright, Butlin, and Carlborg 2006; D. Wright et al. 2003). Where both assays were performed on the same fish, the behaviours exhibited were found to be correlated across assays, indicating that both were measuring the same boldness-shyness axis (C. Brown, Jones, and Braithwaite 2007). {[}\textbf{there is also an aspect of habituation in both parts of the test that should be mentioned}{]}
+
+\hypertarget{social-genetic-effects}{%
+\section{Social genetic effects}\label{social-genetic-effects}}
+
+The specific environmental factor is the so-called indirect or social genetic effect, which describes the indirect interactions between an individual's genes and the genes of their companions (Baud et al. 2017). Social genetic effects have been shown to exert influence on various traits in mice including anxiety, wound healing, immune function, and body weight (Baud et al. 2017), and various traits related to development and survival in many species of livestock (Ellen et al. 2014). However, in those studies the social interactions were maintained throughout development, and it is unclear whether social genetic effects can still exert influence on adaptive behaviours during discrete, time-limited interactions.
+
+Taking advantage of the rich genetic resources offered by medaka we established an OFT to examine the performance of isogenic inbred strains for an inter-strain comparative analysis of the boldness-shyness behaviour of medaka. We used a combined open-field and novel-object assay involving assaying pairs for fish, to determine: a) whether there were consistent differences in bold-shy behaviours exhibited by 5 established inbred strains of medaka fish (\emph{iCab}, \emph{HdrR}, and \emph{HO5} from southern Japan, and \emph{Kaga} and \emph{HNI} from northern Japan); and b) whether there were consistent differences in bold-shy behaviours exhibited by a given strain (\emph{iCab}) dependent on the strain that it was partnered with. The former was intended to measure the effect of an individual's own genes on its behaviour (a direct genetic effect), and the latter to measure the effect of the genes of the focal fish's tank partner on the behaviour of the focal fish (social genetic effect). Our experimental design allowed us to assess both direct and indirect effects on behaviour simultaneously, and to infer the degree to which variation in bold-shy behaviours is attributable to the differences in an individual's own genetics, the differences in the genetics of their social companions, and stochastic variation. A schema for the experimental plan is shown in \textbf{Figure \ref{fig:behavioural-schema}}.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/experimental_schema} \caption{Schema for experimental plan. \emph{iCab}-\emph{iCab} pairings are the control condition. To explore direct genetic effects on behaviour, we compare the behaviours of test fishes from different lines, and infer that the differences between lines are caused by the differences in their genetics (direct genetic effects). To explore social genetic effects, we use the same data but turn our focus to the reference fish, and infer that the differences we observe between their behaviours are caused by the differences in their social environments, which are in turn driven by the different genetics in the test fish lines (social genetic effects).}\label{fig:behavioural-schema}
+\end{figure}
+
+{[}Wrap up the findings in one or two sentences:
+We find inter-strain differences that are statistically significant
+Social genetic effects that influence behaviour of a strain depending on the partner (or genetic configuration of the test pair, not sure whether this sounds ok){]}
+
+To detect
+
+\hypertarget{results}{%
+\section{Results}\label{results}}
+
+\hypertarget{pilot-data-collection}{%
+\subsection{Data collection}\label{pilot-data-collection}}
+
+Our behavioural assay is 20 minutes long, comprising two consecutively-run 10-minute components: a) an `open field' component, where the fishes are introduced to the test tank and left to swim around freely; and b) a `novel object' component, where a small black plastic cylinder is added to the tank at the beginning of the second 10-minute period, after which the fishes are again left to swim around freely. The assay is run on pairs of fish. Medaka is a seasonal breeder in which photoperiod has a strong effect on physiology and behaviour (L'opez-Olmeda et al. 2021). In this study we tested fish that were acclimated to summer conditions. To avoid confounding mating behaviours between males and females and associated aggressive interactions between males we used only female fish in all experiments. To increase the throughput of the assay, the test tank was divided into four quadrants with barriers, allowing us to run the assay on four pairs of fish simultaneously. Two test tanks situated side-by-side were used, allowing to run 8 concurrent assays. The experimental setup used is shown in Figure \ref{fig:assay-setup}.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/setup_pic_with_frame_110} \caption{\textbf{A}: Experimental setup, with two test boxes side-by-side (denoted as ``L'' for left and ``R'' for right). Each test box contains one test tank, separated by removable barriers into quadrants, allowing for the simultaneous assay of four pairs of fish per test tank. The interior of the box is ambiently illuminated by LED lights, and a camera is suspended over the centre of each test tank to record the videos. \textbf{B}: Four pairs of fishes in a test tank with labelled quadrants (I, II, III, IV) and strains (\emph{iCab} or \emph{HdrR}). C: Paths of \emph{iCab} reference fish and \emph{HdrR} test fish from the video at panel (B) at 110 seconds.}\label{fig:assay-setup}
+\end{figure}
+
+Between 11 and 16 June 2019, I assayed a total of 307 pairs of fish, comprising the following counts for each strain pairing: 68 \emph{iCab/iCab}, 60 \emph{iCab/HdrR}, 76 \emph{iCab/HNI}, 47 \emph{iCab/Kaga}, and 56 \emph{iCab/HO5}. The locations of the lines' originating populations are shown in \textbf{Figure \ref{fig:line-locations}}. The fish from the iCab strain was denoted as the ``reference fish'', and was introduced to the test tank first. The ``test fish'' which was either another iCab fish (for the control condition), or a fish from one of the other four strains that were assayed in this experiment (\emph{HdrR}, \emph{HNI}, \emph{Kaga}, \emph{HO5}). The order in which the strains were assayed across the six days was randomly determined prior to the collection of the data. The test tanks were also rinsed between runs to remove any substances released by subjects during previous runs that could influence the behaviour of the subjects that followed.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/line_locations} \caption{Image adapted from (Spivakov et al. 2014), showing the locations of the originating populations of the 5 inbred medaka lines used in this study.}\label{fig:line-locations}
+\end{figure}
+
+\hypertarget{tracking}{%
+\subsection{Tracking}\label{tracking}}
+
+We split the videos by quadrant and assay component, and tracked the movement of the fishes with the open-access software package \emph{idtrackerai} (Romero-Ferrero et al. 2019). Each individual fish was tracked across at least 85\% of frames in each video, with 78\% of videos tracked for over 99\% of frames. The failure to track both fishes across all frames was usually caused by instances where a fish was situated behind the novel object or quadrant divider, rendering it invisible to the camera. A random selection of 20 videos was reviewed to search for instances of mislabeled fishes due to software errors. We found none, which is consistent with the reliability of the software as reported by its authors. We therefore concluded that such instances would be absent or very rare and thus negligible.
+
+To identify which fish was the reference or test fish, we could generally distinguish between the strains based on their colour, as \emph{iCab} pigmentation is light-brown, \emph{HO5} are light-brown with an orange hue, \emph{HdrR} females are white, and \emph{HNI} and \emph{Kaga} are grey. Where the reference fish was indistinguishable in colour from the test fish, we identified the fish that was introduced to the test tank first, and followed it by eye through to the first frame of the assay. In cases of \emph{iCab}-\emph{iCab} pairings, we randomly assigned the individuals to either the ``reference'' or ``test'' fish.
+
+We then used the coordinates of the fishes in each frame to calculate the distance and angle travelled by each fish between a fixed time interval, for example every 0.05 seconds. Distance was calculated between points B → C, and angle was calculated between points A → B → C. We used these distance and angle variables to train a HMM with the \emph{hmmlearn} Python package (\emph{Hmmlearn/Hmmlearn} {[}2014{]} 2022) in order to classify the movements as discrete behaviours or ``modes of movement''.
+
+\hypertarget{effect-of-covariates}{%
+\subsection{Effect of covariates}\label{effect-of-covariates}}
+
+We examined the effects of several covariates, including date of assay, time of assay, tank quadrant, and tank side. To achieve this, we calculated the mean speed of individuals in \emph{iCab}-\emph{iCab} pairings (\(N\) = 136) over the course of the entire 20-minute video (including both open field and novel object assays), and ran a multi-way ANOVA with all covariates (\textbf{Figure \ref{fig:covariate-effects}}). We found significant differences for date of assay and and tank quadrant (p = 0.0139 and 0.0108), but not for time of assay or tank side. This may have been driven by a difference in the way the assay was performed on the first day of the experiment (11 June 2019), where we used a thick fabric sheet to cover the front of the box rather than the wooden doors shown in \textbf{Figure \ref{fig:assay-setup}}, as they were only installed the following day. The greater level of external light and sound permeating through the fabric may have caused the fishes to exhibit slower movement on that first day, and when the data from that day is excluded, the p-values for date of assay and tank quadrant increase to 0.0477 and 0.0469 respectively.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/covariate_effects_no-split-by-assay} \caption{Effect of covariates on mean speed of iCab individuals when paired with another iCab over the course of the full video (including both open field and novel object assays). \emph{P}-values were calculated from a multi-way ANOVA with all four covariates included as terms, and adjusted for false discovery rate.}\label{fig:covariate-effects}
+\end{figure}
+
+\hypertarget{pilot-hmm-params}{%
+\subsection{Choice of time interval and number of HMM states}\label{pilot-hmm-params}}
+
+HMMs are well-suited for classifying the hidden states that generate stochastic, sequential observations. To determine the optimal parameters for the HMM's classification of behaviours, we sought to reduce overfitting (which tends to favour using a lower number of HMM states) while maximising the ability to distinguish between strains based on the relative time they spent in each HMM state (which tends to favour a higher number of HMM states). We additionally considered the time interval between which the distance and angle of travel was measured.
+
+\textbf{Figure \ref{fig:compare-params}} sets out the comparison of HMM parameters on two measures designed to quantify, respectively, the level of overfitting (`mean concordance between cross-validated HMM states'), and the quantification of differences between strains ('summed Kruskal-Wallis statistic comparing frequency of time spent in each HMM state across medaka strains) (Methods).
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/compare_params} \caption{Comparison between HMM parameters. Horizontal axis: Mean concordance between states assigned by HMMs through a 2-fold cross-validation process. Vertical axis: Kruskal-Wallis statistic comparing strains based on the proportion of time spent in each HMM state, summed across all states. Size of points correspond to the interval, in seconds, between which the distance and angle of travel was calculated (Methods).}\label{fig:compare-params}
+\end{figure}
+
+Based on these results and a visualisation of the polar plots for each combination of state number and time interval, we excluded combinations with 15 or more states due to an asymmetry across states that would create difficulties for interpreting their biological meaning (Supplementary material). For the downstream analysis we selected the combination of 14 states with a 0.08-second interval between time points, because out of the remaining combinations it appeared to optimally balance the level of overfitting and detection of differences between strains.
+
+The distances and angles of travel for the 14 states are shown in Figure 4, generated from 10,000 randomly-selected data points (i.e.~movements). Each point represents the radial distance in log10(pixels) that a fish travelled from its previous location (B → C), and the polar angle travelled from A → B → C, where A → B is always aligned vertically along the 0-180° axis. For example, a point at 45° far from the pole represents a fast, forward movement to the right, and a point at 260° close to the pole represents a slow, backward movement to the left.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/polar_all_dge} \caption{Classification of movements by the 14-state HMM, based on distance (in log10(pixels)) and angle of travel between a time interval of 0.08 seconds from points B → C for distance, and points A → B → C for angle. Each point represents the distance and angle at point C, and A → B is aligned vertically along the 0-180° radial axis. The figure shows an illustrative 10,000 data points (movements), randomly selected from the full dataset. States are sorted in ascending order by mean distance.}\label{fig:pilot-polar}
+\end{figure}
+
+We next sought to determine whether there was a difference in the proportion of time spent in each state between the 5 inbred strains (implying the presence of direct genetic effects), and between the \emph{iCab} reference fishes depending on the inbred strains of their tank partner (implying the presence of social genetic effects).
+
+\hypertarget{direct-and-social-genetic-effects-on-boldshy-behaviour}{%
+\subsection{Direct and social genetic effects on bold/shy behaviour}\label{direct-and-social-genetic-effects-on-boldshy-behaviour}}
+
+\hypertarget{direct-genetic-effects}{%
+\subsubsection{Direct genetic effects}\label{direct-genetic-effects}}
+
+To determine whether the test fish strains differed in the proportions of time they spent in each state, we ran separate multi-way ANOVAs for each combination of assay component (open field or novel object) and state (states 1 to 14):
+
+\[
+frequency_{assay component,state} = \beta_{1}(test fish strain) + \beta_{2}(date) + \beta_{3}(time) + \beta_{4}(quadrant) + \beta_{5}(tank side)
+\]
+
+The proportion of time each individual spent within a state was first inverse-normalised within each combination of assay and state, and the date of assay, time of assay, tank quadrant, and tank side were included as covariates. P-values were then adjusted for the False Discovery Rate (\textbf{FDR}).
+
+The states that showed a significant difference across any of the variables included in the model are set out in \textbf{Table \ref{tab:pilot-dge-tbl}}. The test fish strains differed significantly in the proportion of time spent in a given state (p \textless{} 0.05, FDR-adjusted) for 11 out of 14 states in the open field assay (4.45x10-24 \textless{} p \textless{} 1.06x10-2), and 7 out of 14 states for the novel object assay (5.53x10-16 \textless{} p \textless{} 4.2x10-3), with the strain of the test fish explaining up to \textasciitilde28\% of the variance in the proportion of time spent in a given state. For some states, there was also a significant difference between quadrants, date of assay, and tank side (open field: 1.03e-09 \textless{} p \textless{} 1.18x10-2; novel object: 1.75x10-8 \textless{} p \textless{} 4.9x10-2). Full tables for all states and variables are provided in the Supplementary Material.
+
+\begin{table}
+
+\caption{\label{tab:pilot-dge-tbl}Significant differences in the proportion of time spent in each HMM state across test fish strains for the open field and novel object assay components.}
+\centering
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Assay & State & Variance explained (\%) & p-value (FDR-adjusted)\\
+\hline
+open field & 1 & 26.62 & 3.60e-22\\
+\hline
+open field & 2 & 21.94 & 6.18e-18\\
+\hline
+open field & 3 & 28.21 & 4.45e-24\\
+\hline
+open field & 4 & 17.73 & 2.12e-15\\
+\hline
+open field & 5 & 7.48 & 2.78e-05\\
+\hline
+open field & 6 & 5.60 & 2.48e-04\\
+\hline
+open field & 7 & 5.46 & 3.11e-04\\
+\hline
+open field & 8 & 5.79 & 1.08e-04\\
+\hline
+open field & 9 & 7.36 & 8.96e-06\\
+\hline
+open field & 10 & 3.78 & 1.06e-02\\
+\hline
+open field & 13 & 4.66 & 3.42e-03\\
+\hline
+novel object & 1 & 17.19 & 7.28e-14\\
+\hline
+novel object & 2 & 14.28 & 2.92e-11\\
+\hline
+novel object & 3 & 19.30 & 5.53e-16\\
+\hline
+novel object & 4 & 13.12 & 1.26e-10\\
+\hline
+novel object & 6 & 4.12 & 4.20e-03\\
+\hline
+novel object & 7 & 8.93 & 1.84e-06\\
+\hline
+novel object & 9 & 10.68 & 9.87e-08\\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Figure \ref{fig:pilot-dge-time}} depicts the time dependence of HMM states over the course of the video, and the regions of the test tank that were most frequently occupied by the different strains. Figures A and H show the HMM states with panels coloured red to indicate the states that were found to significantly differ between test fish strains. \textbf{Figures \ref{fig:pilot-dge-time}B} and \textbf{E} show how each individual test fish, grouped by inbred strain, moved through HMM states throughout the course of the video, with each tile coloured by the state most frequently-occupied by the individual within 2-second intervals. Figures \textbf{\ref{fig:pilot-dge-time}C} and \textbf{F} show the same data, recalculated as densities within each strain, with only the states that showed significant differences between strains in colour, and the remaining states consolidated and coloured grey. There is an especially clear difference between strains in the proportions of time spent in the slowest-moving states (i.e.~states 1 to 3) at the beginning of each assay component, with an increase across all strains in the novel object assay, likely as a consequence of having less room to move, as well as the fear response that the novel object was designed to elicit. The differences are clearest when comparing the southern Japanese medaka strains (\emph{iCab}, \emph{HdrR}, and \emph{HO5}) against the northern Japanese strains (\emph{Kaga} and \emph{HNI}). In addition, we note that \emph{Kaga} tends to spend more time in the fast- and forward-moving state 13 at the beginning of the assay than at other times, which suggests that for that strain, such movements may be the manifestation of a stress response. \textbf{Figures \ref{fig:pilot-dge-time}D} and \textbf{G} show, as densities, the regions of the tank that were most frequently occupied by each strain. Although the northern Japanese strains \emph{Kaga} and \emph{HNI} were similarly fast-moving relative to the southern Japanese strains, in the open field assay component they appear to favour different regions of the tank -- where \emph{HNI} occupied the central regions of the tank with more frequency, \emph{Kaga} tended to prefer swimming along the boundaries of the tank.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/0.08_14_dge} \caption{Differences between test fish strains in the HMM states they occupied during the open field (top) and novel object (bottom) assay components. \textbf{A and H}: 14 HMM states with panels coloured red to indicate significant differences between test fish strains in the proportion of time spent in those states during the separate assay components. \textbf{B and E}: Transitions between HMM states across time for each individual test fish, grouped by strain. Tiles are coloured by the state most frequently occupied by each fish within 2-second intervals. \textbf{C and F}: Densities within each strain for the occupation of states that significantly differed between strains (colour), with other states consolidated (grey). \textbf{D and G}: Densities of the test tank locations occupied by each strain, calculated within 900 grid points (30x30).}\label{fig:pilot-dge-time}
+\end{figure}
+
+\hypertarget{social-genetic-effects-1}{%
+\subsubsection{Social genetic effects}\label{social-genetic-effects-1}}
+
+To determine whether the iCab reference fishes altered their behaviour depending on the inbred strain of their tank partner, we carried out the same analysis and model as above using only data from the iCab reference fishes. The states that showed a significant difference across any of the variables included in the model are set out in \textbf{Table \ref{tab:pilot-sge-tbl}}. The iCab reference fishes differed significantly in the proportion of time they spent in a given state depending on the strain of their tank partner (\(p\) \textless{} 0.05, FDR-adjusted) for 5 out of 14 states in the open field assay (2.04x10-6 \textless{} \(p\) \textless{} 2.11x10-2), and 7 out of 14 states for the novel object assay (4.76x10-7 \textless{} \(p\) \textless{} 4.06x10-2). The strain of the tank partner explained up to \textasciitilde9\% of the variance in the proportion of time the \emph{iCab} reference spent in a given state. Full tables for all states and variables are provided in the Supplementary Material.
+
+\begin{table}
+
+\caption{\label{tab:pilot-sge-tbl}Significant differences in the proportion of time spent in each HMM state by iCab reference fishes depending on the strain of their tank partner during the open field and novel object assay components.}
+\centering
+\begin{tabular}[t]{l|l|l|l}
+\hline
+Assay & State & Variance explained (\%) & p-value (FDR-adjusted)\\
+\hline
+open field & 1 & 8.52 & 5.88e-06\\
+\hline
+open field & 2 & 9.09 & 2.04e-06\\
+\hline
+open field & 3 & 7.97 & 1.77e-05\\
+\hline
+open field & 5 & 3.92 & 4.29e-03\\
+\hline
+open field & 12 & 2.97 & 2.11e-02\\
+\hline
+novel object & 1 & 7.94 & 8.73e-06\\
+\hline
+novel object & 2 & 9.38 & 4.76e-07\\
+\hline
+novel object & 3 & 8.73 & 1.58e-06\\
+\hline
+novel object & 6 & 4.76 & 1.23e-03\\
+\hline
+novel object & 8 & 2.80 & 4.06e-02\\
+\hline
+novel object & 10 & 3.81 & 8.43e-03\\
+\hline
+\end{tabular}
+\end{table}
+
+We observe that the proportions of time the \emph{iCab} reference fishes spent in different states do differ based on the strains of their tank partner, and that their behavioural patterns tend to reflect those of the test fish strains they are paired with (\textbf{Figure \ref{fig:pilot-sge-time}}). Thus, the \emph{iCab} reference fishes spend less time in the slower-moving states when in the presence of the faster-moving northern Japanese strains \emph{Kaga} and \emph{HNI}, which in turn shows that the test fishes are transmitting their behaviours to some degree to their \emph{iCab} tank partners.The differences in the behaviours of \emph{iCab} reference fishes based on the strain of their tank partners are not as large as those between the test fish strains. However, unlike what was observed with the test fishes, here there is a greater number of states that show significant differences during the novel object component of the assay compared to the open field component. This suggests that when movement is restricted, or when in the presence of a potential threat, the behaviour of the test fish tank partner has more of an influence on the \emph{iCab} reference fish's behaviour than otherwise.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/0.08_14_sge} \caption{Differences between HMM states occupied by the reference fish when paired with different test fish strains during the open field (top) and novel object (bottom) assay components. \textbf{A and H}: 14 HMM states with panels coloured red to indicate significant differences between the reference fishes under different strain-pairings in the proportion of time spent in those states during the separate assay components. The HMM states are the same as those in \textbf{Figure \ref{fig:pilot-dge-time}}, but coloured with a different palette. \textbf{B and E}: Transitions between HMM states across time for each individual iCab reference fish, grouped by the strain of its tank partner. Tiles are coloured by the state most frequently occupied by each fish within 2-second intervals. \textbf{C and F}: Densities within each strain-pairing for the occupation of states that significantly differed between strain-pairings (colour), with other states consolidated (grey). \textbf{D and G}: Densities of the test tank locations occupied by the iCab reference fishes when paired with different strain, calculated within 900 grid points (30x30).}\label{fig:pilot-sge-time}
+\end{figure}
+
+Finally, to develop a metric to quantify the degree to which the \emph{iCab} reference fishes' behaviour is influenced by the strain of its tank partner, we calculated the proportions of time that the pairs of fish spent simultaneously occupying the same HMM state. \textbf{Figure \ref{fig:pilot-cooc-heat}} shows that when paired with the slowest-moving \emph{HdrR} strain, the \emph{iCab} reference fishes spent more time co-occupying the slow- and forward-moving state 2, whereas they tended to co-occupy the fast- and forward-moving state 11 when paired with the faster-moving northern \emph{Kaga} and \emph{HNI} strains. When paired with another \emph{iCab}, they preferred to co-occupy the slow-moving and pan-directional state 4. For each combination of assay component and state, we then ran a Kruskal-Wallis test to determine whether there were differences in the frequencies of state co-occupancy under different strain pairings (\(p\) \textless{} 0.05, FDR-adjusted), and found significant differences for states 1 to 6 for the open field component (1.1x10-8 \textless{} \(p\) \textless{} 4.1x10-2), and states 1 to 4 and 7 for the novel object component (1.6x10-6 \textless{} \(p\) \textless{} 2.5x10-2). The heatmaps show that \emph{iCab} tends to co-occupy state 4 at the highest frequency when paired with another \emph{iCab}, which suggests that this pan-directional, slow-moving state is a more comfortable or natural state for \emph{iCab} to occupy, particularly when under stress.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/pilot/0.08_14_cooc_heatmap} \caption{Frequency of HMM state co-occupancy between pairs of fish, calculated across all all videos per strain-pairing.}\label{fig:pilot-cooc-heat}
+\end{figure}
+
+\hypertarget{discussion}{%
+\section{Discussion}\label{discussion}}
+
+In this chapter have described an assay for measuring bold-shy behaviours in medaka fish that can reliably detect differences: (a) between individuals from different inbred strains -- allowing for the quantification of direct genetic effects on behaviour; and (b) between the behaviour of individuals when paired with tank partners from a different strain -- allowing for the quantification of social genetic effects on behaviour.
+
+I found that behaviours exhibited during the assay show minimal variance across the covariates of date of assay, time of assay, tank quadrant, and tank side. This creates confidence that the genetic effects that we observed -- both direct and indirect -- are not unduly affected by these variables.
+
+I have shown that a Hidden Markov Model (HMM) allows an adequate classification of movements based on the direction and angle of travel within set time intervals. The HMM method has previously been used to classify maternal behaviour patterns in mice (Carola, Mirabeau, and Gross 2011), and I have extended the application here to bold-shy behaviours in medaka fish. In principle, this method can be expanded to include additional behavioural features such as proximity to the wall or other objects, inwards/outwards orientation, proximity to the tank partner, and other metrics related to leader-follower dynamics, a possibility that will be tested in future studies.
+
+The HMM classification of behaviours also facilitated the ranking of behaviours by speed and angle of movement, which may be further interpreted in terms of biology and adaptation styles. However, even though the HMM classifies the slowest-moving states as separate modes of movement, one should be cautious when attributing biological meaning to their differences, because even when a fish is almost completely still, the fish object's centroid (upon which the variables of distance and angle of travel are calculated) will tend to move by one or several pixels through minor changes in the segmentation of the object, and are thus subject to greater noise than the faster-moving states.
+
+I have found that inbred strains of medaka fish can be distinguished by the proportion of time they spend in certain states. The slowest states, capturing no or minimal movement, were the states that most clearly separated the strains, and these differences appeared most clearly at the beginning of the open field and novel object assays. This suggests that for southern Japanese strains such as \emph{iCab}, \emph{HdrR}, and \emph{HO5}, the ``freeze'' reflex is caused by anxiety, which eventually dissipates over time indicating habituation. Similar observations showing initial anxiety as shown by freezing behaviour and subsequent habituation have been made in other studies using open field assays with \emph{iCab} fish (Lucon-Xiccato et al. 2022).
+
+On the other hand, the northern Japanese strains \emph{Kaga} and \emph{HNI} spent little time in the slow-moving states at the beginning of the video, which indicates either that their habituation sets in earlier, or that their stress and anxiety is expressed to a lesser degree as freezing behaviour. The former appears to be more likely for \emph{Kaga}, as in the open field assay, it spends more time in the faster-moving states at the beginning of the video and then slows down thereafter, which suggests that its higher level of movement may be induced by stress. It is interesting then that once the novel object is introduced, \emph{Kaga} tends to move slowly like the other strains. Obviously introduction to a novel environment and exposure to a potentially dangerous object elicits different behavioural patterns in this strain. Taken together with the overt thigmotaxis behaviour (i.e.~moving along the sides of the tank during the open field assay component) relative to other strains, its behaviour may suggest an ``escape-seeking'' response. It will be interesting to carry out further experiments to determine under which fear-inducing conditions \emph{Kaga} reacts with this more frantic style of movement rather than the freeze response that it displays in the novel object component in common with the other strains, and to explore its physiological basis.
+
+With respect to social genetic effects, we have found that a fish's behaviour is affected by the differential behaviour of its tank partner, although the effect is less powerful than the direct genetic effect on a fish's own biology. These social genetic effects are detectable when observing the proportions of time the reference fishes spend in certain states over the course of the video, and can be quantified by measuring the frequency of state co-occupancy with their tank partners.
+
+It is also interesting to find that \emph{iCab} prefers to co-occupy the slow, pan-directional state 4 when paired with another individual from the same strain. As the strains are raised exclusively in the company of individuals from the same strain, that type of behaviour may represent a more comfortable -- yet still cautious -- mode of movement, or a type of mimicry that tends to occur when in the company of individuals that are more genetically or socially familiar.
+
+In this study we only used one strain as the reference fish, but future experiments can expand on this analysis by using different strains as the reference, thereby exploring how a strain's genetics influence the degree of their behavioural plasticity, and how the distinct behaviours of strains may interact in intriguing ways.
+
+In summary we show that the OFT experimental setup in combination with the HMM analysis can reliably detect both direct and social genetic effects. This creates the opportunity to carry out a similar study on a larger panel of inbred strains, such as the MIKK panel (Fitzgerald et al. 2022), with a view to identifying the genetic variants associated with not only these differences in behaviour, but also the differences in the degree to which an individual transmits their behaviour onto their social companions. This in turn will shed light on longstanding biological questions concerning the direct and indirect influences on behaviour, their physiological bases, and their adaptive purposes. This is the subject of the following chapter.
+
 \hypertarget{MIKK-F2-chap}{%
-\chapter{Bold/shy behaviours in the MIKK panel}\label{MIKK-F2-chap}}
+\chapter{Genetic linkage study of bold/shy behaviours in the MIKK panel}\label{MIKK-F2-chap}}
+
+The purpose of the study described in this chapter was to run the behavioural analysis described in Chapter \ref{Pilot-chap} over the MIKK panel described in Chapter \ref{MIKK-genomes-chap}, identify the lines that diverged in both their behaviour, and the level of transmission of their behaviour onto their \emph{iCab} reference tank partner, and then use them as the parental strains in an F2 cross to attempt to identify the genetic variants associated with those differences.
+
+\hypertarget{MIKK-F2-cross}{%
+\section{F2 cross}\label{MIKK-F2-cross}}
+
+The F2 cross is a traditional method for mapping genetic variants associated with traits of interest. A schema for the method is presented in \textbf{Figure \ref{fig:F2-cross-schema}}. In essence, it involves starting with two inbred strains that diverge for the trait of interest (the `parental strains', or F0 generation F0). One then crosses the parental strains to create a generation of F1 hybrid individuals who each possess, for every pair of their chromosomes, one chromosome from each of their parents. The individuals in this F1 generation are genetically identical to their parents with respect to their germline. Finally, one inter-crosses the F1 generation to create a set of F2 individuals that share unique combinations of the original F0 strains' genotypes, and tend to display values for the trait of interest that span across the spectrum between the extreme values of their parents.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/F2-cross-schema} \caption{Schema of the F2-cross experimental setup. The F0 generation comprises two medaka strains that have extreme, opposing values for a trait of interest, represented by the colours red and blue. Below them is an illustrative single pair of chromosomes. The chromosomes within each pair are depicted as the same colour, as the strains are homozygous through successive generations of inbreeding. Their F1 offspring is heterozygous for each pair of their 24 chromosomes, and all F1 individuals are therefore almost genetically identical to one another (with the exception of somatic mutations and the regions of the genome that were not homozygous in the parental generations). The F1 individuals are then inter-crossed with one another to produce the F2 generation, which, due to recombination events during gamete formation, have unqiue combinations of the parental strains' genotypes, and tend to span the phenotypic spectrum between the extremes of their F0 parental strains, represented by their colours.}\label{fig:F2-cross-schema}
+\end{figure}
+
+\hypertarget{data-collection---f0-generation}{%
+\section{Data collection - F0 generation}\label{data-collection---f0-generation}}
+
+In November 2019 I traveled to the fish facility managed by our collaborator, Felix Loosli at KIT in Karlsruhe, and over the course of 11 days from 11 to 21 November 2019, I ran the behavioural assay described in Chapter \ref{pilot-data-collection} another 206 times. I again used the \emph{iCab} strain as the reference fish, and for the test fish I used either an individual from one of the MIKK panel lines, individuals captured from the same Kiyosu population as the MIKK panel but permitted to breed freely within a separate tank in the facility (`Kiyosu closed-capture', or `Kiyosu CC'), or individuals from a related but different species of medaka from the Philippines, \emph{Oryzias luzonensis}. I ensured that I performed at least 2 assay runs for each MIKK panel line that was available, generating a minimum of 8 test fish replicates per line. As there were four pairs of fish in the test tank during each run, the complete dataset comprises 824 videos of pairs of fish, which I further divided by assay component (open field and novel object) to create 1648 videos.
+
+I again used the software \emph{idtrackerai} (Romero-Ferrero et al. 2019) to track the movement of the fishes across frames of each video. After adjusting the software parameters for each video to maximise the number of frames that were successfully tracked, I was left with 1610 out of the 1648 videos (\textasciitilde97.7\%) where both fishes were tracked over at least 85\% of frames. Only these 1610 videos were used in the downstream analysis. The first question to address was whether the MIKK panel lines differed in their behaviours. I therefore computed each individual fish's mean speed (measured as the distance traveled in pixels per 0.05 seconds) over the course of the full 20-minute video, grouped them by line, and plotted the results presented in \textbf{Figure \ref{fig:mikk-mean-speed}}.
+
+
+
+\hypertarget{mean-speed-for-all-mikk-lines}{%
+\section{Mean speed for all MIKK lines}\label{mean-speed-for-all-mikk-lines}}
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/F0_line_mean_speed_0.08} \caption{Mean speed of the MIKK panel and other strains over the course of the entire 20-minute video (measured as the distance traveled in pixels per 0.05 seconds). \emph{iCab} fishes in the \emph{iCab}-\emph{iCab} control condition are at the top, the MIKK panel lines are sorted by their group median, and the Kiyosu closed capture and \emph{O. luzonensis} fishes are at the bottom.}\label{fig:mikk-mean-speed}
+\end{figure}
+
+This figure shows that there are clear differences between some MIKK panel lines at the extremes, and that the lines differ in the amount of within-line variance observed. This figure acted as a guide to determine which lines to select as the parental strains in the F2 cross. To identify genetic variants directly associated with bold-shy behaviours, I sought to select lines that showed either high or low levels of movement, and preferably low within-line variance.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/line_mean_speed_variance_0.05_all} \caption{(ref:mikk-mean-speed-variance)}\label{fig:mikk-mean-speed-variance}
+\end{figure}
+
+\hypertarget{hmm-states}{%
+\section{HMM states}\label{hmm-states}}
+
+To examine these behaviours at a finer resolution, as for the pilot study described in \ref{Pilot-chap}, I again applied a hidden markov model (\textbf{HMM}) to classify the fishes' movements based on their distance and angle of travel between time intervals. I used the same method to select the best choice of time interval and number of states (\textbf{Figure \ref{mikk-param-comp}}). Here we observed the same phenomenon where the parameter combinations that performed the best showed an asymmetry between some states that would make interpretation difficult. For example, a time interval of 0.08 seconds combined with a state space of 17 caused state 4 to appear to get carved out of state 3 (\textbf{Figure \ref{fig:mikk-hmm-asym}}).
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/compare_params} \caption{(ref:mikk-param-comp)}\label{fig:mikk-param-comp}
+\end{figure}
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/0.08_17_polar_all_dge} \caption{The best apparent combination of parameters (0.08 time interval with a 17-state space) created an asymmetry between states 3 and 4, which would causes difficulties in interpreting their biological relevance.}\label{fig:mikk-hmm-asym}
+\end{figure}
+
+I therefore selected the best combination of parameters without this asymmetry, which in this case was a time interval of 0.05 seconds with a state space of 15 (\textbf{Figure \ref{fig:mikk-hmm-sym}}), and used these states for all downstream analysis.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/0.05_15_polar_all_dge} \caption{The HMM states used for the downstream analysis, with the model classified based on the distance of travel (log10 pixels, radial axis) and angle of travel (angle). A straight forward movement would sit around 0°, a left movement around 270°, and a right movement around 90°.}\label{fig:mikk-hmm-sym}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/line_mean_speed_0.05_selected} \caption{(ref:F0-line-mean-speed-select)}\label{fig:F0-line-mean-speed-select}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/line_mean_speed_variance_selected} \caption{(ref:F0-line-mean-speed-var-select)}\label{fig:F0-line-mean-speed-var-select}
+\end{figure}
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/select_0.05_15_dge_of} \caption{HMM states that significantly differed between}\label{fig:F2-time-dge-of}
+\end{figure}
+
+\hypertarget{genetic-loci-associated-with-somite-development-periodicity}{%
+\chapter{Genetic loci associated with somite development periodicity}\label{genetic-loci-associated-with-somite-development-periodicity}}
+
+\hypertarget{background}{%
+\section{Background}\label{background}}
+
+During the development of an embryo, somites are the earliest primitive segmental structures that form from presomatic mesoderm cells (\textbf{PSM}) (Kim et al. 2011). They later differentiate into vertebrae, ribs, and skeletal muscles, thereby establishing the body's anterior-posterior axis. \textbf{Figure \ref{fig:mouse-embryo}} depicts a number of formed somites in a 9.5-day-old mouse embryo.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/mouse_embryo_gridley} \caption{Image of a mouse embryo at day 9.5 from Gridley (2006), showing somites in darker colours.}\label{fig:mouse-embryo}
+\end{figure}
+
+Somite formation occurs rhythmically and sequentially, with the time between the formation of each pair of somites referred to as the ``period''. The period of somite formation varies greatly between species: \textasciitilde30 minutes for zebrafish, 90 minutes for chickens, 2-3 hours for mice, and 5-6 hours for humans (Hubaud and Pourqui'e 2014; Matsuda et al. 2020). \textbf{Figure \ref{fig:somite-seg-ali}} shows the a series of time-stamped images of somite segmentation in medaka fish, generated by Ali Seleit.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/ali_fish_seg_compiled} \caption{Time-stamped images of somite segmentation in medaka, generated by Ali Seleit.}\label{fig:somite-seg-ali}
+\end{figure}
+
+The period of somite formation is controlled by a molecular oscillator, known as the `segmentation clock', which drives waves of gene expression in the Notch, fibroblast growth factor (FGF), and Wnt pathways, forming a signalling gradient that regresses towards the tail in concert with axis elongation (Gomez et al. 2008). Over the course of elongation, the wave period increases (i.e.~each somite takes longer to form), and the PSM progressively shrinks until it is exhausted, eventually terminating somite formation (Gomez et al. 2008).
+
+It is not fully understood how the phase waves of the segmentation clock are intially established (Falk et al. 2022). Matsuda et al. (2020) found that period differences between mouse and human occur at the single-cell level (i.e.~not due to intercellular communication), and are driven by biochemical reaction speeds - specifically, mRNA and protein degradation rates, transcription and translation delays, and intron and splicing delays. To identify the genetic basis of these biochemical differences, our collaborators Ali Seleit and Alexander Aulehla at EMBL-Heidelberg used a CRISPR-Case9 knock-in approach (Seleit, Aulehla, and Paix 2021) to establish a medaka \emph{Cab} strain with an endogenous, fluorescing reporter gene (Her7-Venus) for the oscillation signalling pathway. This method allows them to image somite formation and extract quantitative measures for segmentation clock dynamics.
+
+In medaka, it is known that the southern Japanese \emph{Cab} strain and the northern Japanese \emph{Kaga} strain have divergent somite periodicity, where \emph{Kaga}'s tends to be faster, and \emph{Cab}'s slower (\textbf{Figure \ref{fig:F0-Cab-Kaga-HdrR}}).
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/ali_period_F0_Cab_Kaga} \caption{Comparison of period for three inbred medaka strains (\emph{Cab}, \emph{Kaga} and \emph{HdrR}). Kaga's period is lower, and therefore it takes less time to form each somite than \emph{Cab}. Figure generated by Ali Seleit.}\label{fig:F0-Cab-Kaga-HdrR}
+\end{figure}
+
+Our collaborators accordingly set up a one-way F2 cross experiment as described in Chapter \ref{MIKK-F2-cross}, using the reporter-carrying \emph{Cab} strain and the \emph{Kaga} strain as the parental F0 strains, in order to identify genetic loci associated with these differences in clock dynamics. They inter-crossed the hybrid F1 generation to create a sample of 622 F2 individuals, imaged the developing embryos of these F2 samples, and used pyBOAT (Schmal, Mönke, and Granada 2022) to extract the oscillation features during somite development. \textbf{Figure \ref{fig:somite-period-ali}} shows a series of raw images used by pyBOAT to track the elongation of a medaka tail during somitogenesis, with the identified posterior tip of the embryo labelled with a blue circle.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/ali_compiled_somite_elong} \caption{Screenshots of vertebral elongation in an F2 individual captured by Ali Seleit during imaging. The blue circle represents the point tracked by pyBOAT over time, generating the quantitative phenotype data on period development used in this study.}\label{fig:somite-period-ali}
+\end{figure}
+
+\hypertarget{somite-phenotype}{%
+\section{Phenotypes of interest}\label{somite-phenotype}}
+
+\hypertarget{somite-development-period}{%
+\subsection{Somite development period}\label{somite-development-period}}
+
+\textbf{Figure \ref{fig:ali-somite-period-lines}} shows the period data generated by pyBOAT for this study, for 100 illustrative F2 samples over 300 minutes. The same data can be represented by boxplots as shown in \textbf{Figure \ref{fig:ali-somite-period-box}}. I experimented with using the F2 individuals' mean period and period intercept as the phenotype of interest. The two measures are highly correlated (\(Pearson's~r =\) 0.84, \(p\) \textless{} 2.2x10-16), so after displaying the distributions for both measures in Figure \ref{fig:somite-phenos}, I proceed to only discuss the analysis of period intercept, as it would appear to potentially be more robust to the changes in slope that can be observed in Figure \ref{fig:ali-somite-period-lines}.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/ali_period_lines_100fish300mins} \caption{PyBOAT results for 100 illustrative F2 samples, showing the period length in minutes over the course of 300 minutes. Period tends to increase over time, meaning that as the embryo develops, each successive somite takes longer to form. Figure generated by Ali Seleit.}\label{fig:ali-somite-period-lines}
+\end{figure}
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/ali_F2_mean_period} \caption{Period measurements for 70 F2 individuals displayed as boxplots with each individual's median and interquartile range. Figure generated by Ali Seleit.}\label{fig:ali-somite-period-box}
+\end{figure}
+
+\hypertarget{psm-area}{%
+\subsection{PSM area}\label{psm-area}}
+
+In the proceeding analyses, I also included a second phenotype of interest: the total size of the PSM prior to the formation of any somite segments. As the measure is simply based on the total number of pixels covered by the embryo object, I considered it to be potentially more robust than the period measurements, and therefore included it as a type of positive control for the genetic association analyses on the period phenotype. The measurements for PSM area comparing F0 \emph{Cab} and \emph{Kaga} strains are set out in \textbf{Figure \ref{fig:ali-psm-F0}}.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/ali_PSM_Cab_Kaga} \caption{Measurements of unsegmented PSM area in pixels for the F0 individuals from the \emph{Cab} strain (\(N = 19\)) and \emph{Kaga} strain (\(N = 10\)). \emph{Kaga} tends to have a smaller PSM than \emph{Cab}. Figure generated by Ali Seleit.}\label{fig:ali-psm-F0}
+\end{figure}
+
+\hypertarget{comparisons-between-f0-f1-and-f2-generations}{%
+\subsection{Comparisons between F0, F1 and F2 generations}\label{comparisons-between-f0-f1-and-f2-generations}}
+
+The distributions across the F0, F1 and F2 generations are curious (\textbf{Figure \ref{fig:somite-phenos}}). I expected to observe an F2 distribution with a similar median to the F1, and a variance that spanned across the extremes of the F0 strains. Instead, I observed that for the period phenotypes, the F2 generation had a mean that was slightly higher than the median of the higher-period F0 \emph{Cab} strain, and many F2 samples exceed the period values in those F0 samples. Our collaborators assured me that these observations were unlikely to be caused by technical issues. The \emph{Cab} and \emph{Kaga} strains originate from different Japanese medaka populations (southern and northern respectively) that are understood to be at the point of speciation (see Chapter \ref{MIKK-genomes-chap}), so this slower period may be driven by a biological incompatibility between their genomes in cases where they do not have a complete chromosome from each parent (as the F1 generation does). I nevertheless proceeded with the genetic analysis with a view to potentially discovering the reason for this unusual distribution.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/phenotypes} \caption{Comparisons between the F0, F1 and F2 generations for the three phenotypes of interest. Here, the F0 only includes \emph{Cab} individuals. \textbf{A}: period intercept. \textbf{B}: period mean. \textbf{C}: unsegmented PSM area. \(P\)-values are derived from Kruskal-Wallis tests comparing the F2 individuals across microscopes.}\label{fig:somite-phenos}
+\end{figure}
+
+Another important issue to note is that the F2 individuals were sequenced using different microscopes, denoted as `AU' and `DB'. Our collaborators noticed that there was a difference between the microscopes in their temperatures of 0.7-0.8°C, translating to a 4-minute difference in the F2 means for the period intercept measure (Kruskal-Wallis = 177.97, \(p\) = 1.34x10-40), and a 3.5-minute difference in the F2 means for the period mean measure (Kruskal-Wallis = 141.79, \(p\) = 1.08x10-32). This difference would need to be accounted for in the downstream analysis through either adjusting the phenotype prior to running the genetic association model, or by including microscope as a covariate in the model. No significant was found for the PSM area. To resolve this difference between microscopes for the period intercept data, I elected to transform it for the F2 generation by inverse-normalising the period intercept within each microscope (\textbf{Figure \ref{fig:invnorm-intercept}}). I then used this transformed data in the downstream analysis.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/invnorm_intercept} \caption{Comparison of the period intercept phenotype data for the F2 generation before (\textbf{A}) and after (\textbf{B}) inverse-normalisation.}\label{fig:invnorm-intercept}
+\end{figure}
+
+\hypertarget{genetic-sequencing-data}{%
+\section{Genetic sequencing data}\label{genetic-sequencing-data}}
+
+Our collaborators extracted DNA from the F0, F1, and F2, and sequenced the F0 and F1 samples with the Illumina platform at high coverage (\textasciitilde26x for \emph{Cab} and \textasciitilde29x for \emph{Kaga}), as measured by samtools (Danecek et al. 2021). \textbf{Figure \ref{fig:F0-coverage}} sets out the mean sequencing depth within each chromosome and across the whole genome for the \emph{Cab} and \emph{Kaga} F0 samples. Our collaborators then sequenced the F2 samples at low coverage (\textasciitilde1x), which would be sufficient to map their genotypes back to the genotypes of their parental strains (see Chapter \ref{somite-f2-sequencing} for further details).
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/F0_coverage} \caption{(ref:F0-coverage)}\label{fig:F0-coverage}
+\end{figure}
+
+\hypertarget{f0-homozygosity-and-f1-heterozygosity}{%
+\section{F0 homozygosity and F1 heterozygosity}\label{f0-homozygosity-and-f1-heterozygosity}}
+
+Before proceeding to map the F2 sequences to the genotypes of the F0 generation, I first investigated the levels of homozygosity in the F0 \emph{Cab} and \emph{Kaga} strains, as this would have an effect on the resolution of our genetic mapping. That is to say, for regions where either parent is consistently heterozygous, it would be difficult to determine the parent from which a particular F2 individual derived its chromosomes at that locus. I therefore aligned the high-coverage sequencing data for the F0 \emph{Cab} and \emph{Kaga} strains to the medaka \emph{HdrR} reference (Ensembl release 104, build ASM223467v1) using BWA-MEM2, sorted the aligned .sam files, marked duplicate reads, and merged the paired reads with picard ({``Picard Toolkit''} 2019), and indexed the .bam files with Samtools (Li et al. 2009).
+
+To call variants, I followed the GATK best practices (to the extent they were applicable) (McKenna et al. 2010; DePristo et al. 2011; Van der Auwera and O'Connor 2020) with GATK's HaplotypeCaller and GenotypeGVCFs tools (Poplin et al. 2018), then merged all calls into a single .vcf file with picard ({``Picard Toolkit''} 2019). Finally, I extracted the biallelic calls for \emph{Cab} and \emph{Kaga} with bcftools (Danecek et al. 2021), counted the number of SNPs within non-overlapping, 5-kb bins, and calculated the proportion of SNPs within each bin that were homozgyous.
+
+\textbf{Figure \ref{fig:somite-f0-cab}} is a circos plot generated with circlize (Gu et al. 2014) for the \emph{Cab} F0 strain used in this experiment, featuring the proportion of homozygous SNPs per 5-kb bin (green), and the total number of SNPs in each bin (yellow). As expected for a strain that has been inbred for over 10 generations, the mean homozygosity for this strain is high, with a mean proportion of homozygosity across all bins of 83\%.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/Cab} \caption{Proportion of homozygous SNPs within 5 kb bins in the \emph{Cab} F0 generation genome (green), and number of SNPs in each bin (yellow).}\label{fig:somite-f0-cab}
+\end{figure}
+
+However, the levels of homozygosity in the \emph{Kaga} strain used in this experiment was far lower, with a mean homozygosity across all bins of only 31\%. This was a surprise, as it is an established strain of X generations, and we therefore expected the level of homozygosity to be commensurate with that observed in the \emph{Cab} strain.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/Kaga} \caption{Proportion of homozygous SNPs within 5 kb bins in the \emph{Kaga} F0 generation genome (red), and number of SNPs in each bin (yellow).}\label{fig:somite-f0-kaga}
+\end{figure}
+
+To determine whether the low levels of observed homozygosity in Kaga was affected by its alignments to the southern Japanese \emph{HdrR} reference, we also aligned the F0 samples to the northern Japanese \emph{HNI} reference (\textbf{Figure \ref{fig:somite-f0-kaga-hni}}. This did not make differences to the levels of observed homozygosity in either sample, which gave us confidence that the low homozygosity observed in \emph{Kaga} was not driven by reference bias.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/Kaga_HNI} \caption{Proportion of homozygous SNPs within 5 kb bins in the \emph{Kaga} F0 generation genome when aligned to the \emph{HNI} reference (red), and number of SNPs in each bin (yellow).}\label{fig:somite-f0-kaga-hni}
+\end{figure}
+
+\hypertarget{f1-homozygosity}{%
+\section{F1 homozygosity}\label{f1-homozygosity}}
+
+I next examined the level of heterozygosity in the F1 generation from the \emph{Cab}-\emph{Kaga} cross. \textbf{Figure \ref{fig:somite-f1}} shows the level of heterozygosity across the genome of the F1 hybrid in brown measured by the proportion of heterozygous SNPs within 5-kb bins (brown), and the number of SNPs in each bin (yellow). Approximately half the chromosomes show inconsistent heterozygosity, with a mean heterozygosity across all bins of 67\%. This lower level of heterozygosity than expected was likely caused by the low levels of heterozygosity in the \emph{Kaga} F0 parent.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/F1} \caption{Proportion of heterozygous SNPs within 5 kb bins in the \emph{Cab}-\emph{Kaga} F1 cross (brown), and number of SNPs in each bin (yellow).}\label{fig:somite-f1}
+\end{figure}
+
+For the purpose of mapping the F2 sample sequences to the genomes of their parental strains, I selected only biallelic SNPs that were homozygous-divergent in the F0 generation (i.e.~homozygous reference allele in \emph{Cab} and homozygous alternative allele in \emph{Kaga} or vice versa) \emph{and} heterozygous in the F1 generation. The number of SNPs that met these criteria per chromosome are set out in \textbf{Figure \ref{fig:snp-counts-per-chrom}}.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/snp_counts_per_chrom} \caption{Number of SNPs per chromosome that were homozygous-divergent in the F0 \emph{Cab} and \emph{Kaga} generations, and heterozygous in the F1 generation.}\label{fig:snp-counts-per-chrom}
+\end{figure}
+
+\hypertarget{somite-f2-sequencing}{%
+\section{F2 genotyping}\label{somite-f2-sequencing}}
+
+To maximise the efficiency of our sequencing runs, our collaborators ``shallow-sequenced'' the F2 generation with the short-read Illumina platform at a depth of \textasciitilde1x. We then aligned these sequences to the \emph{HdrR} reference with BWA-MEM2, sorted the reads and marked duplicates with Picard, then indexed the resulting BAM files with samtools. Genotyping these shallow sequences with the same method as used for the high-coverage sequences for the F0 and F1 generation would be inappropriate. We therefore used a different method whereby we used \emph{bam-readcount} to count the reads that supported either the \emph{Cab} or the \emph{Kaga} allele for all SNPs that met the criteria described above in section \ref{f1-homozygosity}, summed the read counts within 5 kb blocks, and calculated the frequency of reads within each bin that supported the \emph{Kaga} allele. This generated a value for each bin between 0 and 1, where 0 signified that all reads within that bin supported the \emph{Cab} allele, and 1 signified that all reads within that bin supported the \emph{Kaga} allele. Bins containing no reads were imputed with a value of 0.5.
+
+We then used these values for all F2 individuals as the input to a Hidden Markov Model (HMM) with the software package \emph{hmmlearn}, which we applied to classify each bin as one of three states, with state 0 corresponding to homozygous-\emph{Cab}, 1 corresponding to heterozygous, and 2 corresponding to homozygous-\emph{Kaga}.
+Across each chromosome of every sample, the output of the HMM was expected to produce a sequence of states. Based on previous biological knowledge that crossover events occur on average once per chromosome {[}CITE{]}, I expected to observe the same state persisting for long stretches of the chromosome, only changing to another state between 0 and 3 times, and rarely more.
+
+\textbf{Figure @\ref(fig:hmm-standard)} shows how adjusting the HMM parameters changed the called genotypes for 10 F2 samples on chromosome 18. Allowing the HMM to train itself for the transition probabilities and emission variances, the HMM produced an apparently noisy output (\textbf{Figure @\ref(fig:hmm-standard)A}). Fixing the transition probabilities to make it very likely for a state to transition back to itself rather than to another state.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/scatter_collage} \caption{HMM states called for each bin across chr18 for 10 F2 samples. States 0, 1, and 2 correspond to homozygous \emph{Cab}, heterozygous, and homozygous \emph{Kaga}. Each point represents a 5-kb bin. Y-axis is the proportion of reads within each bin that align to the \emph{Kaga} allele. X-axis is the bp location of the start of each bin. \textbf{A}: Standard HMM with all model parameters trained on the data. \textbf{B}. HMM with fixed transition probabilities of 0→0 or 1→1 or 2→2 = 0.999; 0→1 or 2→1 = 0.00066; 0→2 or 2→0 = 0.000333; 1→0 or 1→2 = 0.0005. \textbf{C}-\textbf{F} retain those transition probabilities but with different fixed emission variances of 0.01 (\textbf{C}), 0.33 (\textbf{D}), 0.8 (\textbf{E}), and 1 (\textbf{F}).}\label{fig:hmm-scatter-diagnoses}
+\end{figure}
+
+I used these genotype-block calls to generate the recombination karyoplots shown in \textbf{Figures \ref{fig:karyo-wi-missing}} and \textbf{\ref{fig:karyo-no-missing}}.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/karyoplot_wi_missing} \caption{Recombination blocks in 622 F2 samples based on the ratio of reads mapping to either the \emph{Cab} or \emph{Kaga} allele within 5-kb bins, with homozygous-\emph{Cab} blocks in green, heterozoygous blocks in navy blue, and homozygous \emph{Kaga} blocks in red. Most blocks show 0-2 crossover events, as expected, with some regions showing higher numbers of crossovers interpreted as noise. Unfilled regions are those with no state called by the HMM due to a lack of reads mapping to SNPs within those 5-kb bins.}\label{fig:karyo-wi-missing}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/karyoplot_no_missing} \caption{(ref:karyo-no-missing)}\label{fig:karyo-no-missing}
+\end{figure}
+
+\textbf{Figure \ref{fig:prop-sites-total}} shows the proportion of 5-kb bins called as either homozygous-\emph{Cab}, heterozygous, or homozygous-\emph{Kaga} within each F2 sample (points). The ordinary expectation for the ratios would be 0.25, 0.5, and 0.25 respectively. However, we observe a skew towards homozygous-\emph{Cab} and away from homozygous \emph{Kaga}. This may have been caused by the low homozygosity observed in \emph{Kaga}.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/prop_sites_total} \caption{Proportions of 5-kb blocks called as either homozygous-\emph{Cab}, heterozygous, or homozygous-\emph{Kaga}.}\label{fig:prop-sites-total}
+\end{figure}
+
+\hypertarget{genome-wide-linkage-anlaysis}{%
+\section{Genome-wide linkage anlaysis}\label{genome-wide-linkage-anlaysis}}
+
+Finally, I used the called recombination blocks as pseudo-SNPs in a genetic linkage analysis. To detect associations between the pseudo-SNPs and the three phenotypes of interest, I used a mixed linear model (\textbf{MLM}) as implemented in GCTA (Yang et al. 2011). That paper describes the model as follows:
+
+\[
+\textbf{y} = \textbf{X}\beta + \textbf{Wu} + \epsilon \\
+var(\textbf{y}) = \textbf{V} = \textbf{WW}'\sigma^2_{u} + \textbf{I}\sigma_{\epsilon}^2
+\]
+Where \(\textbf{y}\) is a \(n\) x 1 vector of phenotypes with \(n\) being the sample size, \(\textbf{W}\) is a standardised genotype matrix, \(\textbf{u}\) is a vector of SNP effects, and \(\epsilon\) is a vector of residual effects. I additionally used the leave-one-chromosome-out implementation of GCTA's MLM, with excludes the chromosome on which the candidate SNP is located when calculating the GRM.
+
+As described above in \ref{somite-phenotype}, the microscope used to image the embryos (either AU or DB) differed by several degrees in heat, which likely caused differences in the measurements observed. We accordingly experimented with including microscope as a covariate, either alone or together with the genotype for the reporter locus (either homozygous or heterozygous), or excluding it altogether. In an attempt to avoid complications resulting from its inclusion, we also tried inverse-normalising the period phenotype within each microscope group, transforming the phenotype to fit a normal distribution across both microscopes.
+
+To set the significance threshold, I permuted the phenotype across samples using 10 different random seeds, together with all covariates when included, and ran a separate linkage model for each permutation. I then set the lowest \(p\)-value from all 10 permutation as the significance threshold for the non-permuted model. I additionally applied a Bonferroni correction to our \(p\)-values by dividing \(\alpha\) (0.05) by the number of pseudo-SNPs in the model, and set this as a secondary threshold.
+
+\hypertarget{period-intercept}{%
+\subsection{Period intercept}\label{period-intercept}}
+
+\textbf{Figure \ref{fig:somite-manhattan}} is a Manhattan plot of the genetic linkage results for the period intercept phenotype, inverse-normalised across microscopes. The regions found to be significant based on the permutations' minimum \(p\)-value are set out in \textbf{Table \ref{tab:somite-sig-int-tbl}}.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/manhattan_intercept} \caption{Manhattan plot of the genetic linkage results for the period intercept phenotype, inverse-normalised across microscopes. Pseudo-SNPs with \(p\)-values lower than the permutation significance threshold are highlighted in red.}\label{fig:somite-manhattan}
+\end{figure}
+
+\begin{table}
+
+\caption{\label{tab:somite-sig-int-tbl}Significant 5-kb bin ranges for period intercept below the minimum p-value from 10 permutations.}
+\centering
+\begin{tabular}[t]{r|r|r|r}
+\hline
+Chromosome & Bin start & Bin end & Length (kb)\\
+\hline
+3 & 31880001 & 35420000 & 3540\\
+\hline
+4 & 18090001 & 18095000 & 5\\
+\hline
+10 & 2995001 & 3690000 & 695\\
+\hline
+\end{tabular}
+\end{table}
+
+These regions contained a total of 46,872 SNPs imputed from the genotype of the F0 parental strains.
+I ran Ensembl's Variant Effect Predictor (McLaren et al. 2016) over these SNPs to identify those that would be most likely to have functional consequences. The full counts of SNPs falling into each category of `consequence' are set out in \textbf{Table \ref{tab:int-consequence-tbl}}. From this process I identified 38 genes that included a missense variant, 1 that included a missense variant and a start lost (ENSORLG00000014616), ane 1 that included a missense variant and a stop lost (ENSORLG00000015149).
+
+\begin{table}
+
+\caption{\label{tab:int-consequence-tbl}Variant Effect Predictor results for SNPs in the bins.}
+\centering
+\begin{tabular}[t]{l|r}
+\hline
+Consequence & Count\\
+\hline
+intron variant & 47211\\
+\hline
+intergenic variant & 20045\\
+\hline
+upstream gene variant & 7304\\
+\hline
+downstream gene variant & 5229\\
+\hline
+3 prime UTR variant & 1082\\
+\hline
+synonymous variant & 694\\
+\hline
+missense variant & 383\\
+\hline
+5 prime UTR variant & 201\\
+\hline
+splice region variant,intron variant & 126\\
+\hline
+missense variant,splice region variant & 19\\
+\hline
+splice region variant,synonymous variant & 17\\
+\hline
+stop gained & 3\\
+\hline
+splice donor variant & 1\\
+\hline
+start lost & 1\\
+\hline
+stop lost & 1\\
+\hline
+stop lost,splice region variant & 1\\
+\hline
+\end{tabular}
+\end{table}
+
+Our collaborators then combined these results with bulk RNA-seq that they had performed on F0 \emph{Cab} and \emph{Kaga} individuals, to determine which of these genes are expressed in the tail during embryogenesis. This allowed them to reduce to the list to 29 genes, and a gene ontology analysis of this found that the list of genes was enriched for body axis, somitogenesis, and segmentation (\textbf{Table \ref{tab:psm-final-genes}}). For this list of genes, our collaborators are now in the process of knocking in the protein-altering \emph{Cab} allele into \emph{Kaga} embryos, and \emph{vice versa}, to functionally validate these variants.
+
+\begin{table}
+
+\caption{\label{tab:psm-final-genes}Target genes for functional validation expressed in the unsegmented PSM and containing protein alterations. Table generated by Ali Seleit.}
+\centering
+\begin{tabular}[t]{r|l|l|l}
+\hline
+chromosome\_name & ensembl\_gene\_id & description & Role\\
+\hline
+3 & ENSORLG00000014656 & mesoderm posterior protein 2-like & Somitogenesis\\
+\hline
+3 & ENSORLG00000014659 & mesp & Somitogenesis\\
+\hline
+10 & ENSORLG00000020474 & protocadherin 10b & Somitogenesis\\
+\hline
+3 & ENSORLG00000014616 & NA & Possible role in Somitogenesis (MAP-kinase)\\
+\hline
+10 & ENSORLG00000020551 & FAT atypical cadherin 4 & Possible role in Somitogenesis (PCP, Yap1 regulator)\\
+\hline
+10 & ENSORLG00000020531 & neurogenin 1 & Possible role in Somitogenesis (BHLH-TF regulation of Wnt)\\
+\hline
+3 & ENSORLG00000015149 & ADAM metallopeptidase with thrombospondin type 1 motif 18 & Extracellular matrix\\
+\hline
+3 & ENSORLG00000015418 & matrix metallopeptidase 15 & Extracellular matrix\\
+\hline
+10 & ENSORLG00000020488 & transforming growth factor beta induced & Extracellular matrix\\
+\hline
+3 & ENSORLG00000028055 & NA &  Signal trasduction (Rho)\\
+\hline
+10 & ENSORLG00000020481 & ArfGAP with RhoGAP domain, ankyrin repeat and PH domain 3 &  Signal transduction (GTPase activator RhoGap)\\
+\hline
+10 & ENSORLG00000020525 & TBC1 domain family member 2A-like & Signal transduction Gtpase activator, cadherin recycling\\
+\hline
+3 & ENSORLG00000015260 & synapse associated protein 1 & TOR acitivity\\
+\hline
+10 & ENSORLG00000028553 & NA & NA\\
+\hline
+3 & ENSORLG00000015460 & dpy-19 like C-mannosyltransferase 3 & glycosylation\\
+\hline
+10 & ENSORLG00000022010 & beta-1,4-galactosyltransferase 1 & glycosylation\\
+\hline
+10 & ENSORLG00000020498 & protein NipSnap homolog 3A & Mitochondria\\
+\hline
+10 & ENSORLG00000020494 & nitric oxide associated 1 & Mitochondria\\
+\hline
+10 & ENSORLG00000020504 & ATP-binding cassette sub-family A member 1 & Metabolism (cholestrol efflux)\\
+\hline
+3 & ENSORLG00000015118 & phosphorylase kinase regulatory subunit beta & Metabolism\\
+\hline
+10 & ENSORLG00000020493 & RE1 silencing transcription factor & RNA pol II (transcritpion regulation\\
+\hline
+3 & ENSORLG00000015365 & solute carrier family 7 member 6 opposite strand & RNA pol II (nuclear export)\\
+\hline
+10 & ENSORLG00000029052 & exosome component 3 & rRNA + RNA binding\\
+\hline
+3 & ENSORLG00000015278 & adhesion G protein-coupled receptor G3 & G-protein coupled receptor\\
+\hline
+3 & ENSORLG00000015287 & adhesion G-protein coupled receptor G5 & G-protein coupled receptor\\
+\hline
+10 & ENSORLG00000025674 & matrin-3 & inner nuclear protein (chromatin architecture\\
+\hline
+10 & ENSORLG00000023325 & matrin-3 & inner nuclear protein (chromatin architecture\\
+\hline
+10 & ENSORLG00000022388 & poly(A) binding protein interacting protein 2 & Translation repressor\\
+\hline
+3 & ENSORLG00000015096 & integrin alpha FG-GAP repeat containing 1 & NA possibly T cell activation\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{psm-area-1}{%
+\subsection{PSM area}\label{psm-area-1}}
+
+\textbf{Figure \ref{fig:psm-manhattan}} is a Manhattan plot of the genetic linkage results for the PSM area phenotype. The regions found to be significant based on the permutations' minimum \(p\)-value are set out in \textbf{Table \ref{tab:somite-sig-psm-tbl}}, although they exceed the Bonferroni correction threshold as well. I note that this \textasciitilde6 Mb significant region on chromosome 3 does not overlap at all with the significant region discovered for the period intercept phenotype.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/manhattan_psm_no-covariates} \caption{Manhattan plot of the genetic linkage results for the PSM area phenotype. Pseudo-SNPs with \(p\)-values lower than the permutation significance threshold are highlighted in yellow.}\label{fig:psm-manhattan}
+\end{figure}
+
+\begin{table}
+
+\caption{\label{tab:somite-sig-psm-tbl}Significant 5-kb bin range for PSM area below the minimum p-value from 10 permutations.}
+\centering
+\begin{tabular}[t]{r|r|r|r}
+\hline
+CHROM & Bin start & Bin end & Length (kb)\\
+\hline
+3 & 20375001 & 26285000 & 5910\\
+\hline
+\end{tabular}
+\end{table}
+
+This region contained a total of 29,096 SNPs imputed from the genotype of the F0 parental strains.
+I ran Ensembl's Variant Effect Predictor (McLaren et al. 2016) over these SNPs to identify those that would be most likely to have functional consequences. The full counts of SNPs falling into each category of `consequence' are set out in \textbf{Table \ref{tab:psm-consequence-tbl}}. From this process I identified 114 genes that included a missense variant, and 1 that included a both a missense variant and a start lost (ENSORLG00000010863, a centriole, cilia and spindle-associated protein).
+
+\begin{table}
+
+\caption{\label{tab:psm-consequence-tbl}Variant Effect Predictor results for SNPs in the bins.}
+\centering
+\begin{tabular}[t]{l|r}
+\hline
+Consequence & Count\\
+\hline
+intron variant & 23189\\
+\hline
+intergenic variant & 9171\\
+\hline
+downstream gene variant & 8894\\
+\hline
+upstream gene variant & 8491\\
+\hline
+3 prime UTR variant & 2104\\
+\hline
+synonymous variant & 1141\\
+\hline
+missense variant & 716\\
+\hline
+5 prime UTR variant & 433\\
+\hline
+splice region variant,intron variant & 184\\
+\hline
+splice region variant,synonymous variant & 18\\
+\hline
+missense variant,splice region variant & 7\\
+\hline
+stop gained & 2\\
+\hline
+splice donor variant & 1\\
+\hline
+start lost & 1\\
+\hline
+\end{tabular}
+\end{table}
+
+Our collaborators then combined these results with bulk RNA-seq that they had performed on F0 \emph{Cab} and \emph{Kaga} individuals, to determine which of these genes are expressed in the unsegmented tail during embryogenesis. This allowed them to reduce to the list to 96 genes, although they were not apparently associated with a specific gene ontology. As with the period intercept phenotype, our collaborators are now in the process of knocking in the \emph{Cab} allele into \emph{Kaga} embryos, and \emph{vice versa}, to functionally validate these variants.
 
 \hypertarget{Fst-chap}{%
 \chapter{Variation in the frequency of trait-associated alleles across global human populations}\label{Fst-chap}}
@@ -462,7 +1150,7 @@ A third limitation is the ``quality control'' step that is required during the G
 \hypertarget{differences-in-ld}{%
 \subsubsection{Differences in LD}\label{differences-in-ld}}
 
-Because GWAS SNP markers are often not the causal variants themselves, but merely in physical proximity to them, the estimated effect size of a SNP marker depends on the extent to which it is in LD with the causal variant (Mostafavi et al. 2020; Pritchard and Przeworski 2001). To illustrate the problem, if a SNP has an LD \(r^2\) with a causal variant of 0.8 in the discovery population and 0.6 in the target population, it would explain 25\% = (1 - 0.6/0.8) less trait variation in the target population, and would therefore be less predictive (Wang et al. 2020).
+Because GWAS SNP markers are often not the causal variants themselves, but merely in physical proximity to them, the estimated effect size of a SNP marker depends on the extent to which it is in LD with the causal variant (Mostafavi et al. 2020; Jonathan K. Pritchard and Przeworski 2001). To illustrate the problem, if a SNP has an LD \(r^2\) with a causal variant of 0.8 in the discovery population and 0.6 in the target population, it would explain 25\% = (1 - 0.6/0.8) less trait variation in the target population, and would therefore be less predictive (Wang et al. 2020).
 
 These differences in effect-size estimates may typically be small for most regions of the genome, but as PGS sum across all such effects, they aggregate these population differences (Alicia R. Martin et al. 2019; Jeremy J. Berg et al. 2019). Previous empirical and simulation studies have shown that accuracy of PGS scores decay with increased genetic differentiation (\(F_{ST}\) -- described below in \ref{Fst-descr}) and LD differences between populations (Habier et al. 2010; Pszczola et al. 2012; Scutari, Mackay, and Balding 2016; Wang et al. 2020). The issue may be addressed to a degree by using LD information from an external reference panel as a prior to infer the posterior mean effect size of a genetic variant -- Vilhjálmsson et al. (2015) demonstrated through simulations that this could improve PGS predictive accuracy. Yet the most appropriate means of deal with differences between populations in LD remains an active area of research (Duncan et al. 2019).
 
@@ -485,7 +1173,7 @@ Different environments are also often correlated with population structure (Jere
 \hypertarget{Fst-descr}{%
 \subsection{\texorpdfstring{\(F_{ST}\)}{F\_\{ST\}}}\label{Fst-descr}}
 
-The widely-used fixation index (\(F_{ST}\)) was introduced independently by Sewall Wright (Wright 1949) and Gustave Malécot (Mal'ecot 1948) as a metric for measuring the genetic diversity between populations.\footnote{In Wright's notation, \(F\) refers to ``fixation'' of an allele, and \(_{ST}\) refers to ``subpopulations within the total population''.} It quantifies the relative variance in allele frequency between groups compared to within groups, reflecting the combined effects of genetic drift, migration, mutation, and selection (Holsinger and Weir 2009). The metric ranges from 0 to 1, where loci with high \(F_{ST}\) values -- that is, loci with a large relative between-group variance in allele frequencies -- may have been subject to selection or different demographic processes (Holsinger and Weir 2009). The metric has customarily been used to identify regions of the genome have been subject to diversifying selection (Akey et al. 2002; Guo, Dey, and Holsinger 2009; Bruce S. Weir et al. 2005).
+The widely-used fixation index (\(F_{ST}\)) was introduced independently by Sewall Wright (S. Wright 1949) and Gustave Malécot (Mal'ecot 1948) as a metric for measuring the genetic diversity between populations.\footnote{In Wright's notation, \(F\) refers to ``fixation'' of an allele, and \(_{ST}\) refers to ``subpopulations within the total population''.} It quantifies the relative variance in allele frequency between groups compared to within groups, reflecting the combined effects of genetic drift, migration, mutation, and selection (Holsinger and Weir 2009). The metric ranges from 0 to 1, where loci with high \(F_{ST}\) values -- that is, loci with a large relative between-group variance in allele frequencies -- may have been subject to selection or different demographic processes (Holsinger and Weir 2009). The metric has customarily been used to identify regions of the genome have been subject to diversifying selection (Akey et al. 2002; Guo, Dey, and Holsinger 2009; Bruce S. Weir et al. 2005).
 
 I first sought to explore the distribution of \(F_{ST}\) for SNPs across the human genome. As the reference for human genomic variation across diverse populations, I used the New York Genome Center high-coverage, phased .vcf files({``Index of /Vol1/Ftp/Data\_collections/{1000g}\_2504\_high\_coverage/Working/20201028\_3202\_phased/''} n.d.) for the 2,504 individuals from 26 populations from across the globe, as described in the 1000 Genomes phase 3 release (Consortium et al. 2015). I then annotated those .vcf files with human SNP IDs from dbSNP release 9606 (Smigielski et al. 2000), and calculated \(F_{ST}\) for each of the \textasciitilde69M SNPs in that dataset with PLINK 1.9 (Chang et al. 2015; Purcell and Chang, n.d.). Figure \ref{fig:fst-circos} shows the location and \(F_{ST}\) value for all SNPs in the 1000 Genomes dataset, and Figure \ref{fig:fst-histo} shows their distribution across the range of \(F_{ST}\) values.
 
@@ -594,6 +1282,9 @@ The obvious solution to this issue of non-transferability of PGS scores to diver
 \leavevmode\vadjust pre{\hypertarget{ref-GlobalReferenceHuman2015}{}}%
 {``A Global Reference for Human Genetic Variation.''} 2015. \emph{Nature} 526 (7571): 68--74. \url{https://doi.org/10.1038/nature15393}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-abecasisGeneralTestAssociation2000}{}}%
+Abecasis, G. R., L. R. Cardon, and W. O. C. Cookson. 2000. {``A {General Test} of {Association} for {Quantitative Traits} in {Nuclear Families}.''} \emph{The American Journal of Human Genetics} 66 (1): 279--92. \url{https://doi.org/10.1086/302698}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-adhikariGWASLatinAmericans2019}{}}%
 Adhikari, Kaustubh, Javier Mendoza-Revilla, Anood Sohail, Macarena Fuentes-Guajardo, Jodie Lampert, Juan Camilo Chac'on-Duque, Malena Hurtado, et al. 2019. {``A {GWAS} in {Latin Americans} Highlights the Convergent Evolution of Lighter Skin Pigmentation in {Eurasia}.''} \emph{Nature Communications} 10 (1, 1): 358. \url{https://doi.org/10.1038/s41467-018-08147-0}.
 
@@ -621,6 +1312,18 @@ Bergelson, Joy, and Fabrice Roux. 2010. {``Towards Identifying Genes Underlying 
 \leavevmode\vadjust pre{\hypertarget{ref-bienFutureGenomicStudies2019}{}}%
 Bien, Stephanie A., Genevieve L. Wojcik, Chani J. Hodonsky, Christopher R. Gignoux, Iona Cheng, Tara C. Matise, Ulrike Peters, Eimear E. Kenny, and Kari E. North. 2019. {``The {Future} of {Genomic Studies Must Be Globally Representative}: {Perspectives} from {PAGE}.''} \emph{Annual Review of Genomics and Human Genetics} 20 (1): 181--200. \url{https://doi.org/10.1146/annurev-genom-091416-035517}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-brownCorrelationBoldnessBody2007}{}}%
+Brown, C., F. Jones, and V. A. Braithwaite. 2007. {``Correlation Between Boldness and Body Mass in Natural Populations of the Poeciliid {Brachyrhaphis} Episcopi.''} \emph{Journal of Fish Biology} 71 (6): 1590--1601. \url{https://doi.org/10.1111/j.1095-8649.2007.01627.x}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-brownHeritableExperientialEffects2007}{}}%
+Brown, Culum, Fiona Burgess, and Victoria A. Braithwaite. 2007. {``Heritable and Experiential Effects on Boldness in a Tropical Poeciliid.''} \emph{Behavioral Ecology and Sociobiology} 62 (2): 237--43. \url{https://doi.org/10.1007/s00265-007-0458-3}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-bussEvolutionaryPersonalityPsychology1991}{}}%
+Buss, David M. 1991. {``Evolutionary Personality Psychology.''} \emph{Annual Review of Psychology} 42: 459--91. \url{https://doi.org/10.1146/annurev.ps.42.020191.002331}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-carolaHiddenMarkovModel2011}{}}%
+Carola, Valeria, Olivier Mirabeau, and Cornelius T. Gross. 2011. {``Hidden {Markov Model Analysis} of {Maternal Behavior Patterns} in {Inbred} and {Reciprocal Hybrid Mice}.''} \emph{PLOS ONE} 6 (3): e14753. \url{https://doi.org/10.1371/journal.pone.0014753}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-changSecondgenerationPLINKRising2015}{}}%
 Chang, Christopher C, Carson C Chow, Laurent CAM Tellier, Shashaank Vattikuti, Shaun M Purcell, and James J Lee. 2015. {``Second-Generation {PLINK}: Rising to the Challenge of Larger and Richer Datasets.''} \emph{GigaScience} 4 (1): 7. \url{https://doi.org/10.1186/s13742-015-0047-8}.
 
@@ -632,6 +1335,18 @@ Conover, W. J. 1999. \emph{Practical {Nonparametric Statistics}}. {John Wiley \&
 
 \leavevmode\vadjust pre{\hypertarget{ref-10002015global}{}}%
 Consortium, 1000 Genomes Project et al. 2015. {``A Global Reference for Human Genetic Variation.''} \emph{Nature} 526 (7571): 68.
+
+\leavevmode\vadjust pre{\hypertarget{ref-danecekTwelveYearsSAMtools2021}{}}%
+Danecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, Martin O Pollard, Andrew Whitwham, et al. 2021. {``Twelve Years of {SAMtools} and {BCFtools}.''} \emph{GigaScience} 10 (2): giab008. \url{https://doi.org/10.1093/gigascience/giab008}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-darwinOriginSpeciesMeans1859}{}}%
+Darwin, Charles. 1859. \emph{On the {Origin} of {Species} by {Means} of {Natural Selection}, {Or}, {The Preservation} of {Favoured Races} in the {Struggle} for {Life}}. {J. Murray}. \url{https://books.google.com?id=gGUYt2PsDJcC}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-depristoFrameworkVariationDiscovery2011}{}}%
+DePristo, Mark A., Eric Banks, Ryan Poplin, Kiran V. Garimella, Jared R. Maguire, Christopher Hartl, Anthony A. Philippakis, et al. 2011. {``A Framework for Variation Discovery and Genotyping Using Next-Generation {DNA} Sequencing Data.''} \emph{Nature Genetics} 43 (5, 5): 491--98. \url{https://doi.org/10.1038/ng.806}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-devlinGenomicControlAssociation1999}{}}%
+Devlin, B., and Kathryn Roeder. 1999. {``Genomic {Control} for {Association Studies}.''} \emph{Biometrics} 55 (4): 997--1004. \url{https://doi.org/10.1111/j.0006-341X.1999.00997.x}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-domingueSocialGenomeFriends2018}{}}%
 Domingue, Benjamin W., Daniel W. Belsky, Jason M. Fletcher, Dalton Conley, Jason D. Boardman, and Kathleen Mullan Harris. 2018. {``The Social Genome of Friends and Schoolmates in the {National Longitudinal Study} of {Adolescent} to {Adult Health}.''} \emph{Proceedings of the National Academy of Sciences} 115 (4): 702--7. \url{https://doi.org/10.1073/pnas.1711803115}.
@@ -645,8 +1360,20 @@ Durbin, J. 1973. \emph{Distribution {Theory} for {Tests Based} on {Sample Distri
 \leavevmode\vadjust pre{\hypertarget{ref-edgeReconstructingHistoryPolygenic2019}{}}%
 Edge, Michael D, and Graham Coop. 2019. {``Reconstructing the {History} of {Polygenic Scores Using Coalescent Trees}.''} \emph{Genetics} 211 (1): 235--62. \url{https://doi.org/10.1534/genetics.118.301687}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-ellenProspectsSelectionSocial2014}{}}%
+Ellen, Esther D., T. Bas Rodenburg, Gerard A. A. Albers, J. Elizabeth Bolhuis, Irene Camerlink, Naomi Duijvesteijn, Egbert F. Knol, et al. 2014. {``The Prospects of Selection for Social Genetic Effects to Improve Welfare and Productivity in Livestock.''} \emph{Frontiers in Genetics} 5. \url{https://www.frontiersin.org/articles/10.3389/fgene.2014.00377}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-evansQTLGeneElegans2021}{}}%
 Evans, Kathryn S., Marijke H. van Wijk, Patrick T. McGrath, Erik C. Andersen, and Mark G. Sterken. 2021. {``From {QTL} to Gene: {C}. Elegans Facilitates Discoveries of the Genetic Mechanisms Underlying Natural Variation.''} \emph{Trends in Genetics} 37 (10): 933--47. \url{https://doi.org/10.1016/j.tig.2021.06.005}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-ewensTransmissionDisequilibriumTest1995}{}}%
+Ewens, W J, and R S Spielman. 1995. {``The Transmission/Disequilibrium Test: History, Subdivision, and Admixture.''} \emph{American Journal of Human Genetics} 57 (2): 455--64. \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1801556/}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-falkImagingOnsetOscillatory2022}{}}%
+Falk, Henning J, Takehito Tomita, Gregor Mönke, Katie McDole, and Alexander Aulehla. 2022. {``Imaging the Onset of Oscillatory Signaling Dynamics During Mouse Embryo Gastrulation.''} \emph{Development (Cambridge, England)} 149 (13): dev200083. \url{https://doi.org/10.1242/dev.200083}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-fisherXVCorrelationRelatives1919}{}}%
+Fisher, R. A. 1919. {``{XV}.---{The Correlation} Between {Relatives} on the {Supposition} of {Mendelian Inheritance}.''} January. \url{https://doi.org/10.1017/s0080456800012163}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-fitzgeraldMedakaInbredKiyosuKarlsruhe2022}{}}%
 Fitzgerald, Tomas, Ian Brettell, Adrien Leger, Nadeshda Wolf, Natalja Kusminski, Jack Monahan, Carl Barton, et al. 2022. {``The {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel.''} \emph{Genome Biology} 23 (1): 59. \url{https://doi.org/10.1186/s13059-022-02623-z}.
@@ -657,11 +1384,23 @@ Fredman, David, Stefan J. White, Susanna Potter, Evan E. Eichler, Johan T. Den D
 \leavevmode\vadjust pre{\hypertarget{ref-fryComparisonSociodemographicHealthRelated2017}{}}%
 Fry, Anna, Thomas J Littlejohns, Cathie Sudlow, Nicola Doherty, Ligia Adamska, Tim Sprosen, Rory Collins, and Naomi E Allen. 2017. {``Comparison of {Sociodemographic} and {Health-Related Characteristics} of {UK Biobank Participants With Those} of the {General Population}.''} \emph{American Journal of Epidemiology} 186 (9): 1026--34. \url{https://doi.org/10.1093/aje/kwx246}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-galtonMenScienceTheir1874}{}}%
+Galton, Francis, and S. Okamoto. 1874. {``On Men of Science, Their Nature and Their Nurture.''} In. {Royal Institution of Great Britain}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-gomezControlSegmentNumber2008}{}}%
+Gomez, C'eline, Ertuğrul M. Özbudak, Joshua Wunderlich, Diana Baumann, Julian Lewis, and Olivier Pourqui'e. 2008. {``Control of Segment Number in Vertebrate Embryos.''} \emph{Nature} 454 (7202, 7202): 335--39. \url{https://doi.org/10.1038/nature07020}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-gravel2011demographic}{}}%
 Gravel, Simon, Brenna M Henn, Ryan N Gutenkunst, Amit R Indap, Gabor T Marth, Andrew G Clark, Fuli Yu, et al. 2011. {``Demographic History and Rare Allele Sharing Among Human Populations.''} \emph{Proceedings of the National Academy of Sciences} 108 (29): 11983--88. \url{https://doi.org/10.1073/pnas.1019276108}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-gridleyLongShortIt2006}{}}%
+Gridley, Thomas. 2006. {``The Long and Short of It: {Somite} Formation in Mice.''} \emph{Developmental Dynamics} 235 (9): 2330--36. \url{https://doi.org/10.1002/dvdy.20850}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-grosEvolutionEpistasisIts2009}{}}%
 Gros, Pierre-Alexis, Herv'e Le Nagard, and Olivier Tenaillon. 2009. {``The {Evolution} of {Epistasis} and {Its Links With Genetic Robustness}, {Complexity} and {Drift} in a {Phenotypic Model} of {Adaptation}.''} \emph{Genetics} 182 (1): 277--93. \url{https://doi.org/10.1534/genetics.108.099127}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-guCirclizeImplementsEnhances2014}{}}%
+Gu, Zuguang, Lei Gu, Roland Eils, Matthias Schlesner, and Benedikt Brors. 2014. {``Circlize Implements and Enhances Circular Visualization in {R}.''} \emph{Bioinformatics} 30 (19): 2811--12. \url{https://doi.org/10.1093/bioinformatics/btu393}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-guoBayesianHierarchicalModel2009}{}}%
 Guo, Feng, Dipak K. Dey, and Kent E. Holsinger. 2009. {``A {Bayesian Hierarchical Model} for {Analysis} of {Single-Nucleotide Polymorphisms Diversity} in {Multilocus}, {Multipopulation Samples}.''} \emph{Journal of the American Statistical Association} 104 (485): 142--54. \url{https://doi.org/10.1198/jasa.2009.0010}.
@@ -675,11 +1414,17 @@ Harpak, Arbel, and Molly Przeworski. 2021. {``The Evolution of Group Differences
 \leavevmode\vadjust pre{\hypertarget{ref-hillLinkageDisequilibriumFinite1968}{}}%
 Hill, W. G., and Alan Robertson. 1968. {``Linkage Disequilibrium in Finite Populations.''} \emph{Theoretical and Applied Genetics} 38 (6): 226--31. \url{https://doi.org/10.1007/BF01245622}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-HmmlearnHmmlearn2022}{}}%
+\emph{Hmmlearn/Hmmlearn}. (2014) 2022. {hmmlearn}. \url{https://github.com/hmmlearn/hmmlearn}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-hoffmannChromosomalInversionPolymorphisms2004}{}}%
 Hoffmann, Ary A., Carla M. Sgr`o, and Andrew R. Weeks. 2004. {``Chromosomal Inversion Polymorphisms and Adaptation.''} \emph{Trends in Ecology \& Evolution} 19 (9): 482--88. \url{https://doi.org/10.1016/j.tree.2004.06.013}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-holsingerGeneticsGeographicallyStructured2009}{}}%
 Holsinger, Kent E., and Bruce S. Weir. 2009. {``Genetics in Geographically Structured Populations: Defining, Estimating and Interpreting {FST}.''} \emph{Nature Reviews Genetics} 10 (9, 9): 639--50. \url{https://doi.org/10.1038/nrg2611}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-hubaudSignallingDynamicsVertebrate2014}{}}%
+Hubaud, Alexis, and Olivier Pourqui'e. 2014. {``Signalling Dynamics in Vertebrate Segmentation.''} \emph{Nature Reviews Molecular Cell Biology} 15 (11, 11): 709--21. \url{https://doi.org/10.1038/nrm3891}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-IndexPubRelease102}{}}%
 {``Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple\_alignments/50\_fish.epo/.''} n.d. Accessed January 25, 2022. \url{https://ftp.ensembl.org/pub/release-102/emf/ensembl-compara/multiple_alignments/50_fish.epo/}.
@@ -699,6 +1444,15 @@ Kerminen, Sini, Alicia R. Martin, Jukka Koskela, Sanni E. Ruotsalainen, Aki S. H
 \leavevmode\vadjust pre{\hypertarget{ref-kheraGenomewidePolygenicScores2018}{}}%
 Khera, Amit V., Mark Chaffin, Krishna G. Aragam, Mary E. Haas, Carolina Roselli, Seung Hoan Choi, Pradeep Natarajan, et al. 2018. {``Genome-Wide Polygenic Scores for Common Diseases Identify Individuals with Risk Equivalent to Monogenic Mutations.''} \emph{Nature Genetics} 50 (9, 9): 1219--24. \url{https://doi.org/10.1038/s41588-018-0183-z}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-kimPeriodSomiteSegmentation2011}{}}%
+Kim, Woong, Takaaki Matsui, Masataka Yamao, Makoto Ishibashi, Kota Tamada, Toru Takumi, Kenji Kohno, et al. 2011. {``The Period of the Somite Segmentation Clock Is Sensitive to {Notch} Activity.''} \emph{Molecular Biology of the Cell} 22 (18): 3541--49. \url{https://doi.org/10.1091/mbc.e11-02-0139}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-kimuraGeneticAnalysisVertebral2012}{}}%
+Kimura, Tetsuaki, Minori Shinya, and Kiyosi Naruse. 2012. {``Genetic {Analysis} of {Vertebral Regionalization} and {Number} in {Medaka} ({Oryzias} Latipes) {Inbred Lines}.''} \emph{G3 Genes\textbar Genomes\textbar Genetics} 2 (11): 1317--23. \url{https://doi.org/10.1534/g3.112.003236}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-kirchmaierGenomicGeneticToolbox2015}{}}%
+Kirchmaier, Stephan, Kiyoshi Naruse, Joachim Wittbrodt, and Felix Loosli. 2015. {``The {Genomic} and {Genetic Toolbox} of the {Teleost Medaka} ({Oryzias} Latipes).''} \emph{Genetics} 199 (4): 905--18. \url{https://doi.org/10.1534/genetics.114.173849}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-kongNatureNurtureEffects2018}{}}%
 Kong, Augustine, Gudmar Thorleifsson, Michael L. Frigge, Bjarni J. Vilhjalmsson, Alexander I. Young, Thorgeir E. Thorgeirsson, Stefania Benonisdottir, et al. 2018. {``The Nature of Nurture: {Effects} of Parental Genotypes.''} \emph{Science} 359 (6374): 424--28. \url{https://doi.org/10.1126/science.aan6877}.
 
@@ -707,6 +1461,12 @@ Kremer, A., and V. Le Corre. 2012. {``Decoupling of Differentiation Between Trai
 
 \leavevmode\vadjust pre{\hypertarget{ref-kulloIncorporatingGeneticRisk2016}{}}%
 Kullo, Iftikhar J., Hayan Jouni, Erin E. Austin, Sherry-Ann Brown, Teresa M. Kruisselbrink, Iyad N. Isseh, Raad A. Haddad, et al. 2016. {``Incorporating a {Genetic Risk Score Into Coronary Heart Disease Risk Estimates}.''} \emph{Circulation} 133 (12): 1181--88. \url{https://doi.org/10.1161/CIRCULATIONAHA.115.020109}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-lopez-olmedaLongPhotoperiodImpairs2021}{}}%
+L'opez-Olmeda, Jose Fernando, Haiyu Zhao, Markus Reischl, Christian Pylatiuk, Tyrone Lucon-Xiccato, Felix Loosli, and Nicholas S. Foulkes. 2021. {``Long Photoperiod Impairs Learning in Male but Not Female Medaka.''} \emph{iScience} 24 (7): 102784. \url{https://doi.org/10.1016/j.isci.2021.102784}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-lalandFishCognitionBehavior2011}{}}%
+Laland, Kevin, Jens Krause, and Culum Brown. 2011. \emph{Fish {Cognition} and {Behavior}}. {John Wiley \& Sons}. \url{https://books.google.com?id=cI9gbVyH6lsC}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-lecorreGeneticDifferentiationQuantitative2012}{}}%
 Le Corre, Val'erie, and Antoine Kremer. 2012. {``The Genetic Differentiation at Quantitative Trait Loci Under Local Adaptation.''} \emph{Molecular Ecology} 21 (7): 1548--66. \url{https://doi.org/10.1111/j.1365-294X.2012.05479.x}.
@@ -717,8 +1477,23 @@ Leger, Adrien, Ian Brettell, Jack Monahan, Carl Barton, Nadeshda Wolf, Natalja K
 \leavevmode\vadjust pre{\hypertarget{ref-lekAnalysisProteincodingGenetic2016}{}}%
 Lek, Monkol, Konrad J. Karczewski, Eric V. Minikel, Kaitlin E. Samocha, Eric Banks, Timothy Fennell, Anne H. O'NADonnell-Luria, et al. 2016. {``Analysis of Protein-Coding Genetic Variation in 60,706 Humans.''} \emph{Nature} 536 (7616, 7616): 285--91. \url{https://doi.org/10.1038/nature19057}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-liSequenceAlignmentMap2009}{}}%
+Li, Heng, Bob Handsaker, Alec Wysoker, Tim Fennell, Jue Ruan, Nils Homer, Gabor Marth, Goncalo Abecasis, Richard Durbin, and 1000 Genome Project Data Processing Subgroup. 2009. {``The {Sequence} Alignment/Map ({SAM}) Format and {SAMtools}.''} \emph{Bioinformatics} 25 (16): 2078--79.
+
+\leavevmode\vadjust pre{\hypertarget{ref-limaBehavioralDecisionsMade1990}{}}%
+Lima, Steven L., and Lawrence M. Dill. 1990. {``Behavioral Decisions Made Under the Risk of Predation: A Review and Prospectus.''} \emph{Canadian Journal of Zoology} 68 (4): 619--40. \url{https://doi.org/10.1139/z90-092}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-limamiGeneticPhysiologicalAnalysis2002}{}}%
 Limami, Anis M., Clothilde Rouillon, Gaëlle Glevarec, Andr'e Gallais, and Bertrand Hirel. 2002. {``Genetic and {Physiological Analysis} of {Germination Efficiency} in {Maize} in {Relation} to {Nitrogen Metabolism Reveals} the {Importance} of {Cytosolic Glutamine Synthetase}.''} \emph{Plant Physiology} 130 (4): 1860--70. \url{https://doi.org/10.1104/pp.009647}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-lucon-xiccatoIndividualDifferencesCognition2017}{}}%
+Lucon-Xiccato, Tyrone, and Angelo Bisazza. 2017. {``Individual Differences in Cognition Among Teleost Fishes.''} \emph{Behavioural Processes}, The {Cognition} of {Fish}, 141 (August): 184--95. \url{https://doi.org/10.1016/j.beproc.2017.01.015}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-lucon-xiccatoDevelopmentOpenFieldBehaviour2020}{}}%
+Lucon-Xiccato, Tyrone, Francesca Conti, Felix Loosli, Nicholas S. Foulkes, and Cristiano Bertolucci. 2020. {``Development of {Open-Field Behaviour} in the {Medaka}, {Oryzias} Latipes.''} \emph{Biology} 9 (11, 11): 389. \url{https://doi.org/10.3390/biology9110389}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-lucon-xiccatoComparisonAnxietylikeSocial2022}{}}%
+Lucon-Xiccato, Tyrone, Felix Loosli, Francesca Conti, Nicholas S. Foulkes, and Cristiano Bertolucci. 2022. {``Comparison of Anxiety-Like and Social Behaviour in Medaka and Zebrafish.''} \emph{Scientific Reports} 12 (1, 1): 10926. \url{https://doi.org/10.1038/s41598-022-14978-1}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-maasBreastCancerRisk2016}{}}%
 Maas, Paige, Myrto Barrdahl, Amit D. Joshi, Paul L. Auer, Mia M. Gaudet, Roger L. Milne, Fredrick R. Schumacher, et al. 2016. {``Breast {Cancer Risk From Modifiable} and {Nonmodifiable Risk Factors Among White Women} in the {United States}.''} \emph{JAMA Oncology} 2 (10): 1295--1302. \url{https://doi.org/10.1001/jamaoncol.2016.1025}.
@@ -750,11 +1525,26 @@ martin, Simon. (2016) 2022. \emph{Simonhmartin/Genomics\_general}. \url{https://
 \leavevmode\vadjust pre{\hypertarget{ref-martinEvaluatingUseABBA2015}{}}%
 Martin, Simon H., John W. Davey, and Chris D. Jiggins. 2015. {``Evaluating the {Use} of {ABBA}--{BABA Statistics} to {Locate Introgressed Loci}.''} \emph{Molecular Biology and Evolution} 32 (1): 244--57. \url{https://doi.org/10.1093/molbev/msu269}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-matsudaSpeciesspecificSegmentationClock2020}{}}%
+Matsuda, Mitsuhiro, Hanako Hayashi, Jordi Garcia-Ojalvo, Kumiko Yoshioka-Kobayashi, Ryoichiro Kageyama, Yoshihiro Yamanaka, Makoto Ikeya, Junya Toguchida, Cantas Alev, and Miki Ebisuya. 2020. {``Species-Specific Segmentation Clock Periods Are Due to Differential Biochemical Reaction Speeds.''} \emph{Science} 369 (6510): 1450--55.
+
+\leavevmode\vadjust pre{\hypertarget{ref-matsunagaHabituationMedakaOryzias2010}{}}%
+Matsunaga, Wataru, and Eiji Watanabe. 2010. {``Habituation of Medaka ({Oryzias} Latipes) Demonstrated by Open-Field Testing.''} \emph{Behavioural Processes} 85 (2): 142--50. \url{https://doi.org/10.1016/j.beproc.2010.06.019}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-mccarthyReferencePanel642016}{}}%
 McCarthy, Shane, Sayantan Das, Warren Kretzschmar, Olivier Delaneau, Andrew R Wood, Alexander Teumer, Hyun Min Kang, et al. 2016. {``A Reference Panel of 64,976 Haplotypes for Genotype Imputation.''} \emph{Nature Genetics} 48 (10, 10): 1279--83. \url{https://doi.org/10.1038/ng.3643}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mckennaGenomeAnalysisToolkit2010}{}}%
 McKenna, Aaron, Matthew Hanna, Eric Banks, Andrey Sivachenko, Kristian Cibulskis, Andrew Kernytsky, Kiran Garimella, et al. 2010. {``The {Genome Analysis Toolkit}: {A MapReduce} Framework for Analyzing Next-Generation {DNA} Sequencing Data.''} \emph{Genome Research} 20 (9): 1297--1303. \url{https://doi.org/10.1101/gr.107524.110}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mclarenEnsemblVariantEffect2016}{}}%
+McLaren, William, Laurent Gil, Sarah E. Hunt, Harpreet Singh Riat, Graham R. S. Ritchie, Anja Thormann, Paul Flicek, and Fiona Cunningham. 2016. {``The {Ensembl Variant Effect Predictor}.''} \emph{Genome Biology} 17 (1): 122. \url{https://doi.org/10.1186/s13059-016-0974-4}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-membersofthecomplextraitconsortiumNatureIdentificationQuantitative2003}{}}%
+Members of the Complex Trait Consortium. 2003. {``The Nature and Identification of Quantitative Trait Loci: A Community's View.''} \emph{Nature Reviews Genetics} 4 (11, 11): 911--16. \url{https://doi.org/10.1038/nrg1206}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mitchellGeneticsBrainWiring2007}{}}%
+Mitchell, Kevin J. 2007. {``The {Genetics} of {Brain Wiring}: {From Molecule} to {Mind}.''} \emph{PLOS Biology} 5 (4): e113. \url{https://doi.org/10.1371/journal.pbio.0050113}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mostafaviVariablePredictionAccuracy2020}{}}%
 Mostafavi, Hakhamanesh, Arbel Harpak, Ipsita Agarwal, Dalton Conley, Jonathan K Pritchard, and Molly Przeworski. 2020. {``Variable Prediction Accuracy of Polygenic Scores Within an Ancestry Group.''} Edited by Ruth Loos, Michael B Eisen, and Paul O'Reilly. \emph{eLife} 9 (January): e48376. \url{https://doi.org/10.7554/eLife.48376}.
@@ -789,17 +1579,26 @@ Park, Ju-Hyun, Mitchell H. Gail, Clarice R. Weinberg, Raymond J. Carroll, Charle
 \leavevmode\vadjust pre{\hypertarget{ref-peirceNewSetBXD2004}{}}%
 Peirce, Jeremy L., Lu Lu, Jing Gu, Lee M. Silver, and Robert W. Williams. 2004. {``A New Set of {BXD} Recombinant Inbred Lines from Advanced Intercross Populations in Mice.''} \emph{BMC Genetics} 5 (1): 7. \url{https://doi.org/10.1186/1471-2156-5-7}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-Picard2019toolkit}{}}%
+{``Picard Toolkit.''} 2019. \emph{Broad Institute, GitHub Repository}. \url{https://broadinstitute.github.io/picard/}; Broad Institute.
+
 \leavevmode\vadjust pre{\hypertarget{ref-plominNatureNurtureGenetic2005}{}}%
 Plomin, Robert, and Kathryn Asbury. 2005. {``Nature and {Nurture}: {Genetic} and {Environmental Influences} on {Behavior}.''} \emph{The ANNALS of the American Academy of Political and Social Science} 600 (1): 86--98. \url{https://doi.org/10.1177/0002716205277184}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-popejoyGenomicsFailingDiversity2016}{}}%
 Popejoy, Alice B., and Stephanie M. Fullerton. 2016. {``Genomics Is Failing on Diversity.''} \emph{Nature} 538 (7624, 7624): 161--64. \url{https://doi.org/10.1038/538161a}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-poplinScalingAccurateGenetic2018}{}}%
+Poplin, Ryan, Valentin Ruano-Rubio, Mark A. DePristo, Tim J. Fennell, Mauricio O. Carneiro, Geraldine A. Van der Auwera, David E. Kling, et al. 2018. {``Scaling Accurate Genetic Variant Discovery to Tens of Thousands of Samples.''} {bioRxiv}. \url{https://doi.org/10.1101/201178}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-porcuGenotypeImputationGenomeWide2013}{}}%
 Porcu, Eleonora, Serena Sanna, Christian Fuchsberger, and Lars G. Fritsche. 2013. {``Genotype {Imputation} in {Genome-Wide Association Studies}.''} \emph{Current Protocols in Human Genetics} 78 (1): 1.25.1--14. \url{https://doi.org/10.1002/0471142905.hg0125s78}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-pritchardLinkageDisequilibriumHumans2001}{}}%
 Pritchard, Jonathan K., and Molly Przeworski. 2001. {``Linkage {Disequilibrium} in {Humans}: {Models} and {Data}.''} \emph{The American Journal of Human Genetics} 69 (1): 1--14. \url{https://doi.org/10.1086/321275}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-pritchardInferencePopulationStructure2000}{}}%
+Pritchard, Jonathan K, Matthew Stephens, and Peter Donnelly. 2000. {``Inference of {Population Structure Using Multilocus Genotype Data}.''} \emph{Genetics} 155 (2): 945--59. \url{https://doi.org/10.1093/genetics/155.2.945}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-pszczolaReliabilityDirectGenomic2012}{}}%
 Pszczola, M., T. Strabel, H. A. Mulder, and M. P. L. Calus. 2012. {``Reliability of Direct Genomic Values for Animals with Different Relationships Within and to the Reference Population.''} \emph{Journal of Dairy Science} 95 (1): 389--400. \url{https://doi.org/10.3168/jds.2011-4338}.
@@ -810,6 +1609,15 @@ Purcell, Shaun M, and Christopher C Chang. n.d. \emph{{PLINK} 1.9}. \href{https:
 \leavevmode\vadjust pre{\hypertarget{ref-racimoDetectingPolygenicAdaptation2018}{}}%
 Racimo, Fernando, Jeremy J Berg, and Joseph K Pickrell. 2018. {``Detecting {Polygenic Adaptation} in {Admixture Graphs}.''} \emph{Genetics} 208 (4): 1565--84. \url{https://doi.org/10.1534/genetics.117.300489}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-ratermanZebrafishModelsCraniofacial2020}{}}%
+Raterman, S. T., J. R. Metz, Frank A. D. T. G. Wagener, and Johannes W. Von den Hoff. 2020. {``Zebrafish {Models} of {Craniofacial Malformations}: {Interactions} of {Environmental Factors}.''} \emph{Frontiers in Cell and Developmental Biology} 8. \url{https://www.frontiersin.org/articles/10.3389/fcell.2020.600926}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-romero-ferreroIdtrackerAiTracking2019}{}}%
+Romero-Ferrero, Francisco, Mattia G. Bergomi, Robert C. Hinz, Francisco J. H. Heras, and Gonzalo G. de Polavieja. 2019. {``Idtracker.ai: Tracking All Individuals in Small or Large Collectives of Unmarked Animals.''} \emph{Nature Methods} 16 (2, 2): 179--82. \url{https://doi.org/10.1038/s41592-018-0295-5}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-ruzzanteBehaviouralGrowthResponses1990}{}}%
+Ruzzante, D. E., and R. W. Doyle. 1990. {``Behavioural and Growth Responses to the Intensity of Intraspecific Social Interaction Among Medaka, {Oryzias} Latipes ({Temminck} and {Schlegel}) ({Pisces}, {Cyprinodontidae}).''} \emph{Journal of Fish Biology} 37 (5): 663--73. \url{https://doi.org/10.1111/j.1095-8649.1990.tb02531.x}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-segurelEvolutionLactasePersistence2017a}{}}%
 S'egurel, Laure, and C'eline Bon. 2017. {``On the {Evolution} of {Lactase Persistence} in {Humans}.''} \emph{Annual Review of Genomics and Human Genetics} 18 (August): 297--319. \url{https://doi.org/10.1146/annurev-genom-091416-035340}.
 
@@ -819,6 +1627,15 @@ Saliba-Colombani, Vera, Mathilde Causse, Laurent Gervais, and Jacqueline Philouz
 \leavevmode\vadjust pre{\hypertarget{ref-saulHighDiversityMousePopulations2019}{}}%
 Saul, Michael C., Vivek M. Philip, Laura G. Reinholdt, and Elissa J. Chesler. 2019. {``High-{Diversity Mouse Populations} for {Complex Traits}.''} \emph{Trends in Genetics} 35 (7): 501--14. \url{https://doi.org/10.1016/j.tig.2019.04.003}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-schjoldenDoesIndividualVariation2005}{}}%
+Schjolden, Joachim, Argaudas Stoskhus, and Svante Winberg. 2005. {``Does {Individual Variation} in {Stress Responses} and {Agonistic Behavior Reflect Divergent Stress Coping Strategies} in {Juvenile Rainbow Trout}?''} \emph{Physiological and Biochemical Zoology} 78 (5): 715--23. \url{https://doi.org/10.1086/432153}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-schmalAnalysisComplexCircadian2022}{}}%
+Schmal, Christoph, Gregor Mönke, and Adri'an E. Granada. 2022. {``Analysis of {Complex Circadian Time Series Data Using Wavelets}.''} In \emph{Circadian {Regulation}: {Methods} and {Protocols}}, edited by Guiomar Solanas and Patrick -Simon Welz, 35--54. Methods in {Molecular Biology}. {New York, NY}: {Springer US}. \url{https://doi.org/10.1007/978-1-0716-2249-0_3}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-schneiderSocialStructureIndirect2017}{}}%
+Schneider, Jonathan, Jade Atallah, and Joel D. Levine. 2017. {``Social Structure and Indirect Genetic Effects: Genetics of Social Behaviour.''} \emph{Biological Reviews} 92 (2): 1027--38. \url{https://doi.org/10.1111/brv.12267}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-schumacherAssociationAnalysesMore2018}{}}%
 Schumacher, Fredrick R., Ali Amin Al Olama, Sonja I. Berndt, Sara Benlloch, Mahbubl Ahmed, Edward J. Saunders, Tokhir Dadaev, et al. 2018. {``Association Analyses of More Than 140,000 Men Identify 63 New Prostate Cancer Susceptibility Loci.''} \emph{Nature Genetics} 50 (7, 7): 928--36. \url{https://doi.org/10.1038/s41588-018-0142-8}.
 
@@ -827,6 +1644,9 @@ Schwarze, Katharina, James Buchanan, Jenny C. Taylor, and Sarah Wordsworth. 2018
 
 \leavevmode\vadjust pre{\hypertarget{ref-scutariUsingGeneticDistance2016}{}}%
 Scutari, Marco, Ian Mackay, and David Balding. 2016. {``Using {Genetic Distance} to {Infer} the {Accuracy} of {Genomic Prediction}.''} \emph{PLOS Genetics} 12 (9): e1006288. \url{https://doi.org/10.1371/journal.pgen.1006288}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-seleitEndogenousProteinTagging2021}{}}%
+Seleit, Ali, Alexander Aulehla, and Alexandre Paix. 2021. {``Endogenous Protein Tagging in Medaka Using a Simplified {CRISPR}/{Cas9} Knock-in Approach.''} \emph{eLife} 10 (December): e75050. \url{https://doi.org/10.7554/elife.75050}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-sellaThinkingEvolutionComplex2019}{}}%
 Sella, G., and N. Barton. 2019. {``Thinking {About} the {Evolution} of {Complex Traits} in the {Era} of {Genome-Wide Association Studies}.''} \emph{Annual Review of Genomics and Human Genetics}. \url{https://doi.org/10.1146/annurev-genom-083115-022316}.
@@ -840,14 +1660,23 @@ Sharp, Seth A., Stephen S. Rich, Andrew R. Wood, Samuel E. Jones, Robin N. Beaum
 \leavevmode\vadjust pre{\hypertarget{ref-sirugoMissingDiversityHuman2019}{}}%
 Sirugo, Giorgio, Scott M. Williams, and Sarah A. Tishkoff. 2019. {``The {Missing Diversity} in {Human Genetic Studies}.''} \emph{Cell} 177 (1): 26--31. \url{https://doi.org/10.1016/j.cell.2019.02.048}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-sloanwilsonShynessBoldnessHumans1994}{}}%
+Sloan Wilson, David, Anne B. Clark, Kristine Coleman, and Ted Dearstyne. 1994. {``Shyness and Boldness in Humans and Other Animals.''} \emph{Trends in Ecology \& Evolution} 9 (11): 442--46. \url{https://doi.org/10.1016/0169-5347(94)90134-1}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-smigielskiDbSNPDatabaseSingle2000}{}}%
 Smigielski, Elizabeth M., Karl Sirotkin, Minghong Ward, and Stephen T. Sherry. 2000. {``{dbSNP}: A Database of Single Nucleotide Polymorphisms.''} \emph{Nucleic Acids Research} 28 (1): 352--55. \url{https://doi.org/10.1093/nar/28.1.352}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-snoekMultiparentRecombinantInbred2019}{}}%
+Snoek, Basten L., Rita J. M. Volkers, Harm Nijveen, Carola Petersen, Philipp Dirksen, Mark G. Sterken, Rania Nakad, et al. 2019. {``A Multi-Parent Recombinant Inbred Line Population of {C}. Elegans Allows Identification of Novel {QTLs} for Complex Life History Traits.''} \emph{BMC Biology} 17 (1): 24. \url{https://doi.org/10.1186/s12915-019-0642-8}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-spivakovGenomicPhenotypicCharacterization2014}{}}%
 Spivakov, Mikhail, Thomas O Auer, Ravindra Peravali, Ian Dunham, Dirk Dolle, Asao Fujiyama, Atsushi Toyoda, et al. 2014. {``Genomic and {Phenotypic Characterization} of a {Wild Medaka Population}: {Towards} the {Establishment} of an {Isogenic Population Genetic Resource} in {Fish}.''} \emph{G3 Genes\textbar Genomes\textbar Genetics} 4 (3): 433--45. \url{https://doi.org/10.1534/g3.113.008722}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-sunPolygenicRiskScores2021}{}}%
 Sun, Luanluan, Lisa Pennells, Stephen Kaptoge, Christopher P. Nelson, Scott C. Ritchie, Gad Abraham, Matthew Arnold, et al. 2021. {``Polygenic Risk Scores in Cardiovascular Risk Prediction: {A} Cohort Study and Modelling Analyses.''} \emph{PLOS Medicine} 18 (1): e1003498. \url{https://doi.org/10.1371/journal.pmed.1003498}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-svartbergShynessBoldnessPredicts2002}{}}%
+Svartberg, Kenth. 2002. {``Shyness--Boldness Predicts Performance in Working Dogs.''} \emph{Applied Animal Behaviour Science} 79 (2): 157--74. \url{https://doi.org/10.1016/S0168-1591(02)00120-X}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-svensonHighResolutionGeneticMapping2012}{}}%
 Svenson, Karen L, Daniel M Gatti, William Valdar, Catherine E Welsh, Riyan Cheng, Elissa J Chesler, Abraham A Palmer, Leonard McMillan, and Gary A Churchill. 2012. {``High-{Resolution Genetic Mapping Using} the {Mouse Diversity Outbred Population}.''} \emph{Genetics} 190 (2): 437--47. \url{https://doi.org/10.1534/genetics.111.132597}.
@@ -864,6 +1693,9 @@ Tikkanen, Emmi, Aki S. Havulinna, Aarno Palotie, Veikko Salomaa, and Samuli Ripa
 \leavevmode\vadjust pre{\hypertarget{ref-uffelmannGenomewideAssociationStudies2021}{}}%
 Uffelmann, Emil, Qin Qin Huang, Nchangwi Syntia Munung, Jantina de Vries, Yukinori Okada, Alicia R. Martin, Hilary C. Martin, Tuuli Lappalainen, and Danielle Posthuma. 2021. {``Genome-Wide Association Studies.''} \emph{Nature Reviews Methods Primers} 1 (1, 1): 1--21. \url{https://doi.org/10.1038/s43586-021-00056-9}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-vanderauweraGenomicsCloudUsing2020}{}}%
+Van der Auwera, Geraldine A., and Brian D. O'Connor. 2020. \emph{Genomics in the Cloud: Using {Docker}, {GATK}, and {WDL} in {Terra}}. {O'Reilly Media}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-vilhjalmsson2015modeling}{}}%
 Vilhjálmsson, Bjarni J, Jian Yang, Hilary K Finucane, Alexander Gusev, Sara Lindström, Stephan Ripke, Giulio Genovese, et al. 2015. {``Modeling Linkage Disequilibrium Increases Accuracy of Polygenic Risk Scores.''} \emph{The American Journal of Human Genetics} 97 (4): 576--92.
 
@@ -879,6 +1711,9 @@ Weir, B. S., and C. Clark Cockerham. 1984. {``Estimating {F-Statistics} for the 
 \leavevmode\vadjust pre{\hypertarget{ref-weirMeasuresHumanPopulation2005}{}}%
 Weir, Bruce S., Lon R. Cardon, Amy D. Anderson, Dahlia M. Nielsen, and William G. Hill. 2005. {``Measures of Human Population Structure Show Heterogeneity Among Genomic Regions.''} \emph{Genome Research} 15 (11): 1468--76. \url{https://doi.org/10.1101/gr.4398405}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-wilsonShyboldContinuumPumpkinseed1993}{}}%
+Wilson, David S., Kristine Coleman, Anne B. Clark, and Laurence Biederman. 1993. {``Shy-Bold Continuum in Pumpkinseed Sunfish ({Lepomis} Gibbosus): {An} Ecological Study of a Psychological Trait.''} \emph{Journal of Comparative Psychology} 107 (3): 250--60. \url{https://doi.org/10.1037/0735-7036.107.3.250}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-wittbrodtMedakaModelOrganism2002}{}}%
 Wittbrodt, Joachim, Akihiro Shima, and Manfred Schartl. 2002. {``Medaka --- a Model Organism from the Far East.''} \emph{Nature Reviews Genetics} 3 (1, 1): 53--64. \url{https://doi.org/10.1038/nrg704}.
 
@@ -888,11 +1723,26 @@ Wojcik, Genevieve L., Mariaelisa Graff, Katherine K. Nishimura, Ran Tao, Jeffrey
 \leavevmode\vadjust pre{\hypertarget{ref-wrayPredictionIndividualGenetic2007}{}}%
 Wray, Naomi R., Michael E. Goddard, and Peter M. Visscher. 2007. {``Prediction of Individual Genetic Risk to Disease from Genome-Wide Association Studies.''} \emph{Genome Research} 17 (10): 1520--28. \url{https://doi.org/10.1101/gr.6665407}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-wrightEpistaticRegulationBehavioural2006}{}}%
+Wright, Dominic, Roger K. Butlin, and Örjan Carlborg. 2006. {``Epistatic Regulation of Behavioural and Morphological Traits in the Zebrafish ({Danio} Rerio).''} \emph{Behavior Genetics} 36 (6): 914--22. \url{https://doi.org/10.1007/s10519-006-9080-9}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-wrightInterIntrapopulationVariation2003}{}}%
+Wright, D., L. B. Rimmer, V. L. Pritchard, R. K. Butlin, and J. Krause. 2003. {``Inter and Intra-Population Variation in Shoaling and Boldness in the Zebrafish ({Danio} Rerio).''} \emph{Journal of Fish Biology} 63 (s1): 258--59. \url{https://doi.org/10.1111/j.1095-8649.2003.216bw.x}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-wrightGeneticalStructurePopulations1949}{}}%
 Wright, Sewall. 1949. {``The {Genetical Structure} of {Populations}.''} \emph{Annals of Eugenics} 15 (1): 323--54. \url{https://doi.org/10.1111/j.1469-1809.1949.tb02451.x}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-yangGCTAToolGenomewide2011}{}}%
+Yang, Jian, S. Hong Lee, Michael E. Goddard, and Peter M. Visscher. 2011. {``{GCTA}: {A Tool} for {Genome-wide Complex Trait Analysis}.''} \emph{The American Journal of Human Genetics} 88 (1): 76--82. \url{https://doi.org/10.1016/j.ajhg.2010.11.011}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-yengoMetaanalysisGenomewideAssociation2018}{}}%
-Yengo, Loic, Julia Sidorenko, Kathryn E Kemper, Zhili Zheng, Andrew R Wood, Michael N Weedon, Timothy M Frayling, et al. 2018. {``Meta-Analysis of Genome-Wide Association Studies for Height and Body Mass Index in ∼700000 Individuals of {European} Ancestry.''} \emph{Human Molecular Genetics} 27 (20): 3641--49. \url{https://doi.org/10.1093/hmg/ddy271}.
+Yengo, Loic, Julia Sidorenko, Kathryn E Kemper, Zhili Zheng, Andrew R Wood, Michael N Weedon, Timothy M Frayling, et al. 2018. {``Meta-Analysis of Genome-Wide Association Studies for Height and Body Mass Index in ~700000 Individuals of {European} Ancestry.''} \emph{Human Molecular Genetics} 27 (20): 3641--49. \url{https://doi.org/10.1093/hmg/ddy271}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-youngNeurobiologyHumanSocial2008}{}}%
+Young, Simon N. 2008. {``The Neurobiology of Human Social Behaviour: An Important but Neglected Topic.''} \emph{Journal of Psychiatry and Neuroscience} 33 (5): 391--92. \url{https://www.jpn.ca/content/33/5/391}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhangMixedLinearModel2010}{}}%
+Zhang, Zhiwu, Elhan Ersoz, Chao-Qiang Lai, Rory J. Todhunter, Hemant K. Tiwari, Michael A. Gore, Peter J. Bradbury, et al. 2010. {``Mixed Linear Model Approach Adapted for Genome-Wide Association Studies.''} \emph{Nature Genetics} 42 (4, 4): 355--60. \url{https://doi.org/10.1038/ng.546}.
 
 \end{CSLReferences}
 
@@ -907,6 +1757,51 @@ Yengo, Loic, Julia Sidorenko, Kathryn E Kemper, Zhili Zheng, Andrew R Wood, Mich
 
 \begin{figure}
 \includegraphics[width=1\linewidth]{figs/fst/0.1_1000_20220314_ecdf_all_faceted_with_controls_d_rank_long} \caption{587 traits from the GWAS Catalog that passed our filters for polygenic traits, ranked by \({D_t^S}\).}\label{fig:eCDFall}
+\end{figure}
+
+\hypertarget{hmm-state-time-dependence-for-all-mikk-panel-lines}{%
+\chapter{HMM state time dependence for all MIKK panel lines}\label{hmm-state-time-dependence-for-all-mikk-panel-lines}}
+
+\hypertarget{direct-genetic-effects-1}{%
+\section{Direct genetic effects}\label{direct-genetic-effects-1}}
+
+\hypertarget{tile-plot}{%
+\subsection{Tile plot}\label{tile-plot}}
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/all_0.05_15_tile_dge} \caption{Tile plot for all 1610 test fishes included in the MIKK panel behaviour analysis, ordered by each line's group median for individual mean speed over the course of the 20-minute video (open field and novel object combined). The order of lines is identical to that shown in \textbf{Figure \ref{fig:mikk-mean-speed}}.}\label{fig:mikk-all-tile-dge}
+\end{figure}
+
+\hypertarget{density-plot}{%
+\subsection{Density plot}\label{density-plot}}
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/all_0.05_15_dens_dge} \caption{Tile plot for all 1610 test fishes included in the MIKK panel behaviour analysis, ordered by each line's group median for individual mean speed over the course of the 20-minute video (open field and novel object combined). The order of lines is identical to that shown in \textbf{Figure \ref{fig:mikk-mean-speed}}.}\label{fig:mikk-all-dens-dge}
+\end{figure}
+
+\hypertarget{social-genetic-effects-2}{%
+\section{Social genetic effects}\label{social-genetic-effects-2}}
+
+\hypertarget{tile-plot-1}{%
+\subsection{Tile plot}\label{tile-plot-1}}
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/all_0.05_15_tile_sge} \caption{Tile plot for all 1610 reference fishes included in the MIKK panel behaviour analysis, ordered by each line's group median for individual mean speed over the course of the 20-minute video (open field and novel object combined). The order of lines is identical to that shown in \textbf{Figure \ref{fig:mikk-mean-speed}}.}\label{fig:mikk-all-tile-sge}
+\end{figure}
+
+\hypertarget{density-plot-1}{%
+\subsection{Density plot}\label{density-plot-1}}
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/all_0.05_15_dens_sge} \caption{Tile plot for all 1610 reference fishes included in the MIKK panel behaviour analysis, ordered by each line's group median for individual mean speed over the course of the 20-minute video (open field and novel object combined). The order of lines is identical to that shown in \textbf{Figure \ref{fig:mikk-mean-speed}}.}\label{fig:mikk-all-dens-sge}
 \end{figure}
 
 \end{document}

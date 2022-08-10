@@ -25,7 +25,8 @@ In medieval times, the prevailing theory was that a tiny human -- a homunculus -
 
 In 1831, Charles Darwin boarded the 
 
-<img src="figs/introduction/homunculus.png" width="50%" />
+
+\includegraphics[width=0.5\linewidth]{figs/introduction/homunculus} 
 
 ### Charles Darwin and Gregor Mendel
 
@@ -52,3 +53,7 @@ Three methods were formerly used [@zhangMixedLinearModel2010]:
 1. Family-based tests of association [@abecasisGeneralTestAssociation2000]
 
 "Ronald fished introduced random effects models to study the correlations of trait values between relatives" [@fisherXVCorrelationRelatives1919].
+
+## Somites
+
+Vertebral number is precisely defined for a given species [@gomezControlSegmentNumber2008], but is the most variable physical trait across species [@kimuraGeneticAnalysisVertebral2012]; for example, frogs have 6-10, humans have 33, and snakes can have more than 300 [@gomezControlSegmentNumber2008; @kimuraGeneticAnalysisVertebral2012]. The total number of vertebrae is a function of both how long the somite segmentation process persists for, and the  

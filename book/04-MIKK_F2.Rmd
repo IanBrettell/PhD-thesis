@@ -58,7 +58,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.05_15_polar_all_d
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/line_mean_speed_0.05_selected.png"), auto_pdf = T)
 ```
 
-```{r F0-line-mean-speed-var_select, echo = F, fig.cap = '(ref:F0-line-mean-speed-var_select)', out.width='100%'}
+```{r F0-line-mean-speed-var-select, echo = F, fig.cap = '(ref:F0-line-mean-speed-var-select)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/line_mean_speed_variance_selected.png"), auto_pdf = T)
 ```
 

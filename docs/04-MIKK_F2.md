@@ -8,10 +8,9 @@ The F2 cross is a traditional method for mapping genetic variants associated wit
 
 (ref:F2-cross-schema) Schema of the F2-cross experimental setup. The F0 generation comprises two medaka strains that have extreme, opposing values for a trait of interest, represented by the colours red and blue. Below them is an illustrative single pair of chromosomes. The chromosomes within each pair are depicted as the same colour, as the strains are homozygous through successive generations of inbreeding. Their F1 offspring is heterozygous for each pair of their 24 chromosomes, and all F1 individuals are therefore almost genetically identical to one another (with the exception of somatic mutations and the regions of the genome that were not homozygous in the parental generations). The F1 individuals are then inter-crossed with one another to produce the F2 generation, which, due to recombination events during gamete formation, have unqiue combinations of the parental strains' genotypes, and tend to span the phenotypic spectrum between the extremes of their F0 parental strains, represented by their colours.
 
-<div class="figure">
-<img src="figs/mikk_behaviour/F2-cross-schema.png" alt="(ref:F2-cross-schema)" width="100%" />
-<p class="caption">(\#fig:F2-cross-schema)(ref:F2-cross-schema)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/F2-cross-schema} \caption{(ref:F2-cross-schema)}(\#fig:F2-cross-schema)
+\end{figure}
 
 ## Data collection - F0 generation
 
@@ -23,58 +22,50 @@ I again used the software *idtrackerai* [@romero-ferreroIdtrackerAiTracking2019]
 
 ## Mean speed for all MIKK lines
 
-<div class="figure">
-<img src="figs/mikk_behaviour/F0_line_mean_speed_0.08.png" alt="(ref:mikk-mean-speed)" width="100%" />
-<p class="caption">(\#fig:mikk-mean-speed)(ref:mikk-mean-speed)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/F0_line_mean_speed_0.08} \caption{(ref:mikk-mean-speed)}(\#fig:mikk-mean-speed)
+\end{figure}
 
 This figure shows that there are clear differences between some MIKK panel lines at the extremes, and that the lines differ in the amount of within-line variance observed. This figure acted as a guide to determine which lines to select as the parental strains in the F2 cross. To identify genetic variants directly associated with bold-shy behaviours, I sought to select lines that showed either high or low levels of movement, and preferably low within-line variance. 
 
-<div class="figure">
-<img src="figs/mikk_behaviour/line_mean_speed_variance_0.05_all.png" alt="(ref:mikk-mean-speed-variance)" width="100%" />
-<p class="caption">(\#fig:mikk-mean-speed-variance)(ref:mikk-mean-speed-variance)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/line_mean_speed_variance_0.05_all} \caption{(ref:mikk-mean-speed-variance)}(\#fig:mikk-mean-speed-variance)
+\end{figure}
 
 ## HMM states
 
 To examine these behaviours at a finer resolution, as for the pilot study described in \@ref(Pilot-chap), I again applied a hidden markov model (**HMM**) to classify the fishes' movements based on their distance and angle of travel between time intervals. I used the same method to select the best choice of time interval and number of states (**Figure \@ref(mikk-param-comp)**). Here we observed the same phenomenon where the parameter combinations that performed the best showed an asymmetry between some states that would make interpretation difficult. For example, a time interval of 0.08 seconds combined with a state space of 17 caused state 4 to appear to get carved out of state 3 (**Figure \@ref(fig:mikk-hmm-asym)**).
 
-<div class="figure">
-<img src="figs/mikk_behaviour/compare_params.png" alt="(ref:mikk-param-comp)" width="100%" />
-<p class="caption">(\#fig:mikk-param-comp)(ref:mikk-param-comp)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/compare_params} \caption{(ref:mikk-param-comp)}(\#fig:mikk-param-comp)
+\end{figure}
 
 (ref:mikk-hmm-asym) The best apparent combination of parameters (0.08 time interval with a 17-state space) created an asymmetry between states 3 and 4, which would causes difficulties in interpreting their biological relevance. 
 
-<div class="figure">
-<img src="figs/mikk_behaviour/0.08_17_polar_all_dge.png" alt="(ref:mikk-hmm-asym)" width="100%" />
-<p class="caption">(\#fig:mikk-hmm-asym)(ref:mikk-hmm-asym)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/0.08_17_polar_all_dge} \caption{(ref:mikk-hmm-asym)}(\#fig:mikk-hmm-asym)
+\end{figure}
 
 I therefore selected the best combination of parameters without this asymmetry, which in this case was a time interval of 0.05 seconds with a state space of 15 (**Figure \@ref(fig:mikk-hmm-sym)**), and used these states for all downstream analysis.
 
 (ref:mikk-hmm-sym) The HMM states used for the downstream analysis, with the model classified based on the distance of travel (log<sub>10</sub> pixels, radial axis) and angle of travel (angle). A straight forward movement would sit around 0°, a left movement around 270°, and a right movement around 90°. 
 
-<div class="figure">
-<img src="figs/mikk_behaviour/0.05_15_polar_all_dge.png" alt="(ref:mikk-hmm-sym)" width="100%" />
-<p class="caption">(\#fig:mikk-hmm-sym)(ref:mikk-hmm-sym)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/0.05_15_polar_all_dge} \caption{(ref:mikk-hmm-sym)}(\#fig:mikk-hmm-sym)
+\end{figure}
 
-<div class="figure">
-<img src="figs/mikk_behaviour/line_mean_speed_0.05_selected.png" alt="(ref:F0-line-mean-speed-select)" width="100%" />
-<p class="caption">(\#fig:F0-line-mean-speed-select)(ref:F0-line-mean-speed-select)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/line_mean_speed_0.05_selected} \caption{(ref:F0-line-mean-speed-select)}(\#fig:F0-line-mean-speed-select)
+\end{figure}
 
-<div class="figure">
-<img src="figs/mikk_behaviour/line_mean_speed_variance_selected.png" alt="(ref:F0-line-mean-speed-var_select)" width="100%" />
-<p class="caption">(\#fig:F0-line-mean-speed-var_select)(ref:F0-line-mean-speed-var_select)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/line_mean_speed_variance_selected} \caption{(ref:F0-line-mean-speed-var-select)}(\#fig:F0-line-mean-speed-var-select)
+\end{figure}
 
 (ref:F2-time-dge-of) HMM states that significantly differed between 
 
-<div class="figure">
-<img src="figs/mikk_behaviour/select_0.05_15_dge_of.png" alt="(ref:F2-time-dge-of)" width="100%" />
-<p class="caption">(\#fig:F2-time-dge-of)(ref:F2-time-dge-of)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/select_0.05_15_dge_of} \caption{(ref:F2-time-dge-of)}(\#fig:F2-time-dge-of)
+\end{figure}
 
 
