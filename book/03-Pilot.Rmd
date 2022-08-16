@@ -130,7 +130,7 @@ knitr::kable(
 knitr::include_graphics(here::here("book/figs/pilot/0.08_14_dge.png"), auto_pdf = T)
 ```
 
-#### Social genetic effects
+#### Social genetic effects {#pilot-sge}
 
 To determine whether the iCab reference fishes altered their behaviour depending on the inbred strain of their tank partner, we carried out the same analysis and model as above using only data from the iCab reference fishes. The states that showed a significant difference across any of the variables included in the model are set out in **Table \@ref(tab:pilot-sge-tbl)**. The iCab reference fishes differed significantly in the proportion of time they spent in a given state depending on the strain of their tank partner ($p$ < 0.05, FDR-adjusted) for 5 out of 14 states in the open field assay (2.04x10<sup>-6</sup> < $p$ < 2.11x10<sup>-2</sup>), and 7 out of 14 states for the novel object assay (4.76x10<sup>-7</sup> < $p$ < 4.06x10<sup>-2</sup>). The strain of the tank partner explained up to ~9% of the variance in the proportion of time the *iCab* reference spent in a given state. Full tables for all states and variables are provided in the Supplementary Material. 
 
