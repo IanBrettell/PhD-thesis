@@ -1,4 +1,4 @@
-# Genetic loci associated with somite development periodicity
+# Genetic loci associated with somite development periodicity {#Somite-chap}
 
 ```{r, include=FALSE}
 library(tidyverse)

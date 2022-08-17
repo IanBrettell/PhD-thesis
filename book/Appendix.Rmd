@@ -10,6 +10,8 @@ knitr::include_graphics(here::here("book/figs/fst/0.1_1000_20220314_ecdf_all_fac
 
 # 15 HMM states with 0.05 second interval
 
+(ref:hmm-states-0.05) HMM states predicted for the F0 dataset, using the combination of a 0.05-second interval between which the distance and angle variables were calculated.
+
 ```{r hmm-states-0.05, echo = F, fig.cap = '(ref:hmm-states-0.05)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.05_15_polar_all_dge.png"), auto_pdf = T)
 ```
@@ -49,5 +51,5 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_tile_sge.pn
 (ref:mikk-all-dens-sge) Density plot for all 1610 test fishes included in the MIKK panel behaviour analysis, ordered by each line's group median for individual mean speed over the course of the 20-minute video (open field and novel object combined). The order of lines is identical to that shown in **Figure \@ref(fig:mikk-mean-speed)**. 
 
 ```{r mikk-all-dens-sge, echo = F, fig.cap = '(ref:mikk-all-tile-sge)', out.width='100%'}
-knitr::include_graphics(here::here("book/figs/mikk_behaviour/all_0.08_15_dens_sge.png"), auto_pdf = T)
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_dens_sge.png"), auto_pdf = T)
 ```

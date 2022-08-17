@@ -25,8 +25,7 @@ In medieval times, the prevailing theory was that a tiny human -- a homunculus -
 
 In 1831, Charles Darwin boarded the 
 
-
-\includegraphics[width=0.5\linewidth]{figs/introduction/homunculus} 
+<img src="figs/introduction/homunculus.png" width="50%" />
 
 ### Charles Darwin and Gregor Mendel
 

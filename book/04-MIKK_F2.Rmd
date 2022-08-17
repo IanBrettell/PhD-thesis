@@ -1,5 +1,9 @@
 # Genetic linkage study of bold/shy behaviours in the MIKK panel {#MIKK-F2-chap}
 
+```{r, include = F}
+library(tidyverse)
+```
+
 The purpose of the study described in this chapter was to run the behavioural analysis described in Chapter  \@ref(Pilot-chap) over the MIKK panel described in Chapter \@ref(MIKK-genomes-chap), identify the lines that diverged in both their behaviour, and the level of transmission of their behaviour onto their *iCab* reference tank partner, and then use them as the parental strains in an F2 cross to attempt to identify the genetic variants associated with those differences.
 
 ## The F2 cross experimental setup {#MIKK-F2-cross}
@@ -26,7 +30,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/F0_line_mean_speed_
 
 This figure shows that there are clear differences between some MIKK panel lines at the extremes, and that the lines differ in the amount of within-line variance observed. This figure acted as a guide to determine which lines to select as the parental strains in the F2 cross. To identify genetic variants directly associated with bold-shy behaviours, I sought to select lines that showed either high or low levels of movement, and preferably low within-line variance. 
 
-(ref:mikk-mean-speed-variance) 
+(ref:mikk-mean-speed-variance) Line median (vertical axis) and line variance (horizontal axis) for individual mean speed across the full 20-minute video (i.e. both the open field and novel object assay components).
 
 ```{r mikk-mean-speed-variance, echo = F, fig.cap = '(ref:mikk-mean-speed-variance)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/line_mean_speed_variance_0.05_all.png"), auto_pdf = T)
@@ -54,13 +58,14 @@ The best combination of parameters without this asymmetry was a time interval of
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_polar_all_dge.png"), auto_pdf = T)
 ```
 
+
 ## Social genetic effects
 
 As discussed above, in this project our traits of interest include not only direct genetic behaviours, but also social genetic behaviours. We therefore sought to identify the MIKK panel lines that transmitted their behaviour onto the reference *iCab* tank partners either to the largest or smallest degrees. I formulated two methods to measure this, referred to as a) HMM state co-occupancy; and b) reference deviation. The first, HMM state co-occupancy, measured the proportions of time that the *iCab* reference fish spent in the same HMM state as its tank partner. The second, deviation of the reference fishes' deviation from the behaviour exhibited in the control condition, seeks to quantify the extent to which the *iCab*'s behaviour changes when partnered with 
 
 ### State co-occupancy
 
-**Figure \@ref(fig:F0-sge-cooc-box)** sets out the proportions of total time for each assay sub-component that each pair of individual fish spent in the same HMM state, grouped by line and ranked in the same order as their group median for individual mean speed as shown above in **Figure \@ref(fig:mikk-mean-speed)**. **Figure \@ref(fig:F0-sge-cooc-box)A** shows the data as boxplots, with $p$-values from the Kruskal-Wallis test comparing all groups. **Figure \@ref(fig:F0-sge-cooc-box)B** shows the same data but with each group's median represented by columns to make it easier to compare group medians. Of the slower-moving lines, <span style="color:#FF699C">8-2</span> and 18-2 tend to show relatively higher state co-occupancy in the open field component, but during the novel object component, the slow-moving line 139-4 has the highest median co-occupancy of all lines. Of the faster-moving lines, 43-2 and 13-2 showed the highest state co-occupancy during the open field assay component. However, the moderate-to-fast line 21-2 had relatively high state co-occupancy during both assay components.
+**Figure \@ref(fig:F0-sge-cooc-box)** sets out the proportions of total time for each assay sub-component that each pair of individual fish spent in the same HMM state, grouped by line and ranked in the same order as their group median for individual mean speed as shown above in **Figure \@ref(fig:mikk-mean-speed)**. **\@ref(fig:F0-sge-cooc-box)A** shows the data as boxplots, with $p$-values from the Kruskal-Wallis test comparing all groups. **Figure \@ref(fig:F0-sge-cooc-box)B** shows the same data but with each group's median represented by columns to make it easier to compare group medians. Of the slower-moving lines, <span style="color:#FF699C">8-2</span> and 18-2 tend to show relatively higher state co-occupancy in the open field component, but during the novel object component, the slow-moving line 139-4 has the highest median co-occupancy of all lines. Of the faster-moving lines, 43-2 and 13-2 showed the highest state co-occupancy during the open field assay component. However, the moderate-to-fast line 21-2 had relatively high state co-occupancy during both assay components.
 
 (ref:F0-sge-cooc-box) Frequency of HMM state co-occupancy
 
@@ -70,6 +75,8 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_cooc_box_al
 
 To visualise which states are driving the higher co-occupancy measures, for a selection of lines I generated a heatmap of the states occupied simultaneously by the *iCab* reference and MIKK test fishes, combining the observations for all individuals within each test fish group (**Figure \@ref(F0-sge-cooc-heat)**). When *iCab* is paired with 18-2 or 8-2, the fishes most frequently occupy states 3 or 1 in both open field and novel object components. In pairings with line 139-4, while the test fishes remain in the still states 1 or 3 during the open field assay, *iCab* tends to be moving much faster in states 11 and 13. However, during the novel object component, they co-occupy state 3 more than in any other combination. This general pattern is observed with line 14-2 as well, albeit to a lesser extent. For 38-2, the fishes tend not to show a strong preference for co-occupying a particular state for either assay component, but the diagonal spread indicates that they tend to move at similar speeds. When paired with the faster moving 21-2, the novel object component appears to accentuate the co-occupancy of state 3 that is also observed in the open field component. Finally, when paired with line 40-1, in both assay components, both fishes show a strong preference for the faster-moving states.
 
+(ref:F0-sge-cooc-heat) Heatmaps for a selection of MIKK panel lines (including those ultimately selected as the parental strains in the F2 cross) showing the frequency of HMM states simultaneously occupied by the reference (x-axis) and test (y-axis) fishes, aggregated over all replicates in each line. 
+
 ```{r F0-sge-cooc-heat, echo = F, fig.cap = '(ref:F0-sge-cooc-heat)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_cooc_heatmap.png"), auto_pdf = T)
 ```
@@ -78,39 +85,82 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_cooc_heatma
 
 ### Deviation of *iCab* from its control condition
 
-The second method for quantifying the level of behavioural transmission from test fish to *iCab* reference fish was to determine the proportion of time that the *iCab* spent in a particular state when paired with another *iCab*, and then quantify the degree to which those proportions change when in the presence of a fish from another line (**Figure \@ref(fig:F0-sge-deviation)**). **Figure \@ref(fig:F0-sge-deviation)A** presents boxplots for state frequencies for all *iCab* individuals in *iCab*-*iCab* pairings. For each other test line pairing with the MIKK panel, I   
+The second method for quantifying the level of behavioural transmission from test fish to *iCab* reference fish was to determine the proportion of time that the *iCab* spent in a particular state when paired with another *iCab*, and then quantify the degree to which those proportions change when in the presence of a fish from another line (**Figure \@ref(fig:F0-sge-deviation)**). **Figure \@ref(fig:F0-sge-deviation)A** presents boxplots for state frequencies for all *iCab* individuals in *iCab*-*iCab* pairings. I further calculated the state frequencies for all *iCab* reference fishes for all other MIKK line pairings. For each combination of assay component, line-pairing, and HMM state, I then ran Welch's t-test [@ruxtonUnequalVarianceTtest2006] comparing the proportions of time the *iCab* individuals spent in that state when paired with another *iCab*, against the proportions of time the *iCab* reference individuals spent in that state when paired with a different MIKK line. I then summed the t-statistics across states to generate a single metric for each combination of line and assay component, and plotted the results in **Figure \@ref(fig:F0-sge-deviation)B**.
+
+(ref:F0-sge-deviation) Deviation of state frequency for *iCab* reference fishes when paired with MIKK panel lines relative to when paired with another *iCab*. **A**: Boxplots of HMM state frequency for *iCab* individuals when paired with another *iCab*. **B**: 
 
 ```{r F0-sge-deviation, echo = F, fig.cap = '(ref:F0-sge-deviation)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_deviation.png"), auto_pdf = T)
 ```
 
+The first thing to note in this Figure is that *iCab*'s deviations from its behaviour exhibited in the control condition tend to be smaller when paired with faster-moving fishes. This was expected given *iCab* is also a faster-moving fish, but it strengthens the observation that when paired with slower-moving fishes, those tank partners are causing the *iCab* reference fish to move slower than they would otherwise. Of the slower-moving MIKK lines, 4-2 and 14-2 causing the largest deviations of the *iCab* reference fishes' behaviours from their control condition behaviour in the open field and novel object components respectively. I also observe large deviations for the moderately-moving 106-2 and 71-1 during the novel object components. There are no clear outliers for either assay component for any of the faster moving lines.
+
 ## Selection of lines for the F2 cross
 
-On the basis of the above findings, I selected the following MIKK panel lines as the parental lines for the F2 cross. Conceptually, I sought to select lines that diverged on two measures: a) bold-shy behaviours; and b) the extent to which the lines transmitted their behaviours onto their tank partners. I chose two lines for low movement and high charismaines 18-2 and 8-2 were selected
+On the basis of the above findings, I selected 6 MIKK panel lines as the parental lines for the F2 cross (**Figure \@ref(F0-line-mean-speed-select**). Conceptually, I sought to select lines that diverged on two measures: a) bold-shy behaviours; and b) the extent to which the lines transmitted their behaviours onto their tank partners. As *iCab* is a fast-moving line, it was more difficult to detect instances where fast-moving MIKK panel lines were influencing its behaviour. I was therefore more confident of identifying slow-movement/high-charisma lines, and so to increase the likelihood of identifying genetic variants that are responsible for a stronger transmission of slow-moving behaviours, I chose two slow-movement/high-charisma lines for the F2 cross: 18-2 and 8-2. In the event that both lines possessed the same genetic variants that influence this behavioural transmission trait, it would vastly increase the power of detecting it during the genetic linkage analysis. Both these lines were one of the most slow-moving lines, had high levels of state co-occupancy during both assay components, and 18-2 caused a high level of deviation from the *iCab* control condition.
 
 ```{r F0-line-mean-speed-select, echo = F, fig.cap = '(ref:F0-line-mean-speed-select)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/line_mean_speed_0.05_selected.png"), auto_pdf = T)
 ```
 
+For the slow-movement/low-charisma line, I selected 50-2 which exhibited a moderately slow level of movement, low within-line variance for mean speed, and low measures for both state co-occupancy and *iCab* deviation. For the high-movement/high-charisma line, I selected 22-1. Despite its high within line variance (**Figure \@ref(fig:F2-time-dge-of)**), this potentially made it easier to detect its social genetic effects, as the slower-moving individuals appeared to transmit those behaviours strongly to their *iCab* tank partners, giving it a high score among fast-moving lines for state co-occupancy across both assay components. For the high-movement/low-charisma line I selected 40-1, as it has low within-line variance, and low-to-moderate metrics for state co-occupancy and *iCab* deviation. However, I note that these measures may be confounded by the possibility that 40-1 behaves in a similar way to *iCab*, which would be difficult to determine whether it was behaving differently. 
+
+In addition to these extreme lines, I also selected a line that was intermediate for both traits in an attempt to avoid breeding incompatibilities that might arise from attempting to cross lines with such divergent behavioural traits. For this purpose I selected line 38-2 for its intermediate speed, low within-line variance for mean speed, and intermediate measures for HMM state co-occupancy and *iCab* deviation.
+
+(ref:F0-line-mean-speed-var-select) Line median (vertical axis) and line variance (horizontal axis) for individual mean speed across the full 20-minute video (i.e. both the open field and novel object assay components), coloured for the lines selected as the parental strains for the F2 cross.
+
 ```{r F0-line-mean-speed-var-select, echo = F, fig.cap = '(ref:F0-line-mean-speed-var-select)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/line_mean_speed_variance_selected.png"), auto_pdf = T)
 ```
 
-(ref:F2-time-dge-of) HMM states that significantly differed between 
+
+## Direct genetic effects
+
+With these lines selected, I ran a similar analysis to what I described in \@ref(Pilot-chap), where I ran multi-way ANOVAs to determine whether certain lines differed in the proportions of time they spent in these HMM states, while including the date of assay, time of assay, tank quadrant and tank side as covariates. **Table \@ref(tab:mikk-dge-F0)** sets out the states which showed a significant difference between these 6 lines, with p-values adjusted for the False Discovery Rate (**FDR**).
+
+```{r mikk-dge-F0, echo = F, message = F, warning = F, out.width='100%'}
+knitr::kable(
+  googlesheets4::read_sheet(ss = "1kD2ndgmTvGlQw8YZFMztO3YoYfOdSw0SI5_BtomDuaI",
+                            sheet = "DGE_FINAL"),
+  caption = 'Significant differences in the proportion of time spent in each HMM state across test fish lines selected for the F2 cross for the open field and novel object assay components.'
+)
+```
+
+**Figures \@ref(fig:F2-time-dge-of)** and **\@ref(fig:F2-time-dge-no)** highlight the states that showed significant differences in the proportions of time that these lines spent in those states for the open field and novel object assay components respectively. In both figures, **A** highlights the significant states, **B** shows how the individuals moved through those states over the course of the 10-minute assay component, and **C** shows the densities of the significant states within each line. For the open field component, although the tile plots show a notable level of variance within each line, the density plots clarify how the three slow-moving lines (8-2, 18-2 and 50-2) spent little time in the fast-moving states 10, 12 and 14 relative to the fast-moving lines. Interestingly, the intermediate line 38-2 tended to transition into these states around the middle of the video, presumably a period of habituating to the new environment.
+
+(ref:F2-time-dge-of) Differences between MIKK F0 lines in the HMM states they occupied during the open field assay component. **A**: 15 HMM states with panels coloured red to indicate significant differences between MIKK F0 lines in the proportion of time spent in those states. **B**: Transitions between HMM states across time for each individual test fish, grouped by MIKK line Tiles are coloured by the state most frequently occupied by each fish within 2-second intervals. **C**: Densities within each MIKK line for the occupation of states that significantly differed between strains (colour), with other states consolidated (grey).
 
 ```{r F2-time-dge-of, echo = F, fig.cap = '(ref:F2-time-dge-of)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/select_0.08_15_dge_of.png"), auto_pdf = T)
 ```
 
+During the novel object component the HMM states that showed significant differences between lines were mostly restricted to the slow-moving states with the exception of state 10, which most clearly distinguishes the slow-moving lines from the intermediate- and fast-moving lines. Again, the intermediate line 38-2 shows a sharp drop in the occupation of the slow moving states after a period of habituation.
+
+(ref:F2-time-dge-no) Differences between MIKK F0 lines in the HMM states they occupied during the novel object assay component. **A**: 15 HMM states with panels coloured red to indicate significant differences between MIKK F0 lines in the proportion of time spent in those states. **B**: Transitions between HMM states across time for each individual test fish, grouped by MIKK line Tiles are coloured by the state most frequently occupied by each fish within 2-second intervals. **C**: Densities within each MIKK line for the occupation of states that significantly differed between strains (colour), with other states consolidated (grey).
+
 ```{r F2-time-dge-no, echo = F, fig.cap = '(ref:F2-time-dge-no)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/select_0.08_15_dge_no.png"), auto_pdf = T)
 ```
+
+### Social genetic effects
+
+To confirm whether the *iCab* reference fishes altered their behaviour depending on the MIKK F0 line of their tank partner, we carried out the same analysis and model as above using only data from the *iCab* reference fishes. The states that showed a significant difference across any of the variables included in the model are set out in **Table \@ref(tab:mikk-sge-F0)**. The iCab reference fishes differed significantly in the proportion of time they spent in a given state depending on the strain of their tank partner ($p$ < 0.05, FDR-adjusted) for 4 out of 15 states in the open field assay (1.26x10<sup>-2</sup> < $p$ < 4x10<sup>-2</sup>), and 4 out of 15 states for the novel object assay (7.71x10<sup>-3</sup> < $p$ < 1.34x10<sup>-2</sup>). The line of the tank partner explained up to ~29% of the variance in the proportion of time the *iCab* reference spent in a given state. Full tables for all states and variables are provided in the Supplementary Material. 
+
+```{r mikk-sge-F0, echo = F, message = F, warning = F, out.width='100%'}
+knitr::kable(
+  googlesheets4::read_sheet(ss = "1kD2ndgmTvGlQw8YZFMztO3YoYfOdSw0SI5_BtomDuaI",
+                            sheet = "SGE_FINAL"),
+  caption = 'Significant differences in the proportion of time spent in each HMM state by iCab reference fishes depending on the MIKK F0 line of their tank partner during the open field and novel object assay components.'
+)
+```
+
+(ref:F2-time-sge-of) Differences between HMM states occupied by the reference fish when paired with different MIKK F0 lines during the open field assay component. **A**: 15 HMM states with panels coloured red to indicate significant differences between the reference fishes under different line-pairings in the proportion of time spent in those states. The HMM states are the same as those in **Figure \@ref(fig:F2-time-dge-of)** above, but coloured with a different palette. **B**: Transitions between HMM states across time for each individual *iCab* reference fish, grouped by the strain of its tank partner. Tiles are coloured by the state most frequently occupied by each fish within 2-second intervals. **C**: Densities within each strain-pairing for the occupation of states that significantly differed between strain-pairings (colour), with other states consolidated (grey).
 
 ```{r F2-time-sge-of, echo = F, fig.cap = '(ref:F2-time-dge-of)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/select_0.08_15_sge_of.png"), auto_pdf = T)
 ```
 
-
+(ref:F2-time-sge-no) Same layout as **Figure \@ref(fig:F2-time-sge-of)** above, but for the novel object assay.
 
 ```{r F2-time-sge-no, echo = F, fig.cap = '(ref:F2-time-dge-no)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/select_0.08_15_sge_no.png"), auto_pdf = T)
@@ -118,10 +168,40 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/select_0.08_15_sge_
 
 ## F2 generation
 
+### Behavioural data collection
+
+Around August 2019, our collaborators in the Loosli Group at KIT commenced the breeding program for this experiment with the 6 MIKK panel lines I had selected above.^[Although the breeding program began in 2019, I understand from our collaborators that from around mid-2020 the F1 generation was producing poorly. After lengthy investigations, they discovered that the Covid pandemic had caused disruptions to the supply chains of their fish food manufacturer, which had compelled them to change the recipe. This change in the fish food recipe was the cause of the poor breeding. While the issue has since been resolved, it has resulted in a much smaller number of F2 individuals than anticipated.] From 17 November 2021 to 5 May 2022, a Research Assistant in Prof. Loosli's lab, Alicia Günthel, collected 69 movies with F2 individuals from the 12 crosses they had bred. The total number of crosses for which we have data are set out in **Table \@ref(tab:F2-cross-counts)**.
+
+```{r F2-cross-counts, echo = F, message = F, warning = F, out.width='100%'}
+knitr::kable(
+  readr::read_csv(here::here("results/MIKK_F2/F2_cross_counts.csv")) %>% 
+    dplyr::select(`paternal line` = pat_line,
+                  `maternal line` = mat_line,
+                  count = n) %>% 
+    dplyr::arrange(desc(count)),
+  caption = 'Significant differences in the proportion of time spent in each HMM state by iCab reference fishes depending on the MIKK F0 line of their tank partner during the open field and novel object assay components.'
+)
+```
+
+### Genotyping
+
+Using a similar method to what I described in Chapter \@ref(Somite-chap), I 
+
+### Genetic linkage analysis
+
+### Candidate SNPs for CRISPR-knockouts
+
+## Discussion
+
 ## Future directions
 
 ## Lessons
 
+
+* Describe using a different MIKK panel line as the reference, preferring a moderate-moving line to enable easier detection of social genetic effects from fast-moving lines, i.e. which lines cause *iCab* to move more boldly? 
+
 * Chosen different strains for the F2 cross. 139-4 had low within-line variance for mean speed, and the highest median state co-occupancy in the novel object component. From the conclusions of Chapter \@ref(Pilot-chap), which were carried out after the F2 cross lines were already selected, it became apparent that the novel object assay was particularly useful for revealing social genetic effected. I hypothesise that at times of higher stress or predation threat, the individual fish take more behavioural cues from their tank partners. It therefore would have been a good candidate for the slow-moving, high-charisma line. 
+
+* Explain why I didn't choose 22-1 or 10-1.
 
 
