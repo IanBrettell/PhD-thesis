@@ -75,13 +75,12 @@
 <li><a class="" href="MIKK-genomes-chap.html"><span class="header-section-number">2</span> Genomic variations in the MIKK panel</a></li>
 <li><a class="active" href="Pilot-chap.html"><span class="header-section-number">3</span> Classification of bold/shy behaviours in 5 inbred medaka lines</a></li>
 <li><a class="" href="MIKK-F2-chap.html"><span class="header-section-number">4</span> Genetic linkage study of bold/shy behaviours in the MIKK panel</a></li>
-<li><a class="" href="genetic-loci-associated-with-somite-development-periodicity.html"><span class="header-section-number">5</span> Genetic loci associated with somite development periodicity</a></li>
+<li><a class="" href="Somite-chap.html"><span class="header-section-number">5</span> Genetic loci associated with somite development periodicity</a></li>
 <li><a class="" href="Fst-chap.html"><span class="header-section-number">6</span> Variation in the frequency of trait-associated alleles across global human populations</a></li>
 <li><a class="" href="references.html">References</a></li>
 <li class="book-part">Appendix</li>
-<li><a class="" href="ecdf-of-all-polygenic-traits-in-the-gwas-catalog-ranked-by-d_ts.html"><span class="header-section-number">A</span> eCDF of all polygenic traits in the GWAS Catalog ranked by \({D_t^S}\)</a></li>
-<li><a class="" href="hmm-states-with-0.05-second-interval.html"><span class="header-section-number">B</span> 15 HMM states with 0.05 second interval</a></li>
-<li><a class="" href="hmm-state-time-dependence-for-all-mikk-panel-lines.html"><span class="header-section-number">C</span> HMM state time dependence for all MIKK panel lines</a></li>
+<li><a class="" href="chapter-refmikk-f2-chap-supplementary-information.html"><span class="header-section-number">A</span> Chapter @ref(MIKK-F2-chap): supplementary information</a></li>
+<li><a class="" href="supplmentary-information-for-chapter-reffst-chap.html"><span class="header-section-number">B</span> Supplmentary information for Chapter @ref(Fst-chap)</a></li>
 </ul>
 
         <div class="book-extra">
@@ -210,7 +209,7 @@ Figure 3.6: Classification of movements by the 14-state HMM, based on distance (
 frequency_{assay component,state} = \beta_{1}(test fish strain) + \beta_{2}(date) + \beta_{3}(time) + \beta_{4}(quadrant) + \beta_{5}(tank side)
 \]</span></p>
 <p>The proportion of time each individual spent within a state was first inverse-normalised within each combination of assay and state, and the date of assay, time of assay, tank quadrant, and tank side were included as covariates. P-values were then adjusted for the False Discovery Rate (<strong>FDR</strong>).</p>
-<p>The states that showed a significant difference across any of the variables included in the model are set out in <strong>Table <a href="Pilot-chap.html#tab:pilot-dge-tbl">3.1</a></strong>. The test fish strains differed significantly in the proportion of time spent in a given state (p &lt; 0.05, FDR-adjusted) for 11 out of 14 states in the open field assay (4.45x10<sup>-24</sup> &lt; p &lt; 1.06x10-2), and 7 out of 14 states for the novel object assay (5.53x10<sup>-16</sup> &lt; p &lt; 4.2x10-3), with the strain of the test fish explaining up to ~28% of the variance in the proportion of time spent in a given state. For some states, there was also a significant difference between quadrants, date of assay, and tank side (open field: 1.03e-09 &lt; p &lt; 1.18x10-2; novel object: 1.75x10-8 &lt; p &lt; 4.9x10-2). Full tables for all states and variables are provided in the Supplementary Material.</p>
+<p>The states that showed a significant difference are set out in <strong>Table <a href="Pilot-chap.html#tab:pilot-dge-tbl">3.1</a></strong>. The test fish strains differed significantly in the proportion of time spent in a given state (p &lt; 0.05, FDR-adjusted) for 11 out of 14 states in the open field assay (4.45x10<sup>-24</sup> &lt; p &lt; 1.06x10-2), and 7 out of 14 states for the novel object assay (5.53x10<sup>-16</sup> &lt; p &lt; 4.2x10-3), with the strain of the test fish explaining up to ~28% of the variance in the proportion of time spent in a given state. For some states, there was also a significant difference between quadrants, date of assay, and tank side (open field: 1.03e-09 &lt; p &lt; 1.18x10-2; novel object: 1.75x10-8 &lt; p &lt; 4.9x10-2). Full tables for all states and variables are provided in the Supplementary Material.</p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
 <span id="tab:pilot-dge-tbl">Table 3.1: </span>Significant differences in the proportion of time spent in each HMM state across test fish strains for the open field and novel object assay components.</caption>
@@ -344,7 +343,7 @@ Figure 3.7: Differences between test fish strains in the HMM states they occupie
 <h4>
 <span class="header-section-number">3.4.5.2</span> Social genetic effects<a class="anchor" aria-label="anchor" href="#pilot-sge"><i class="fas fa-link"></i></a>
 </h4>
-<p>To determine whether the iCab reference fishes altered their behaviour depending on the inbred strain of their tank partner, we carried out the same analysis and model as above using only data from the iCab reference fishes. The states that showed a significant difference across any of the variables included in the model are set out in <strong>Table <a href="Pilot-chap.html#tab:pilot-sge-tbl">3.2</a></strong>. The iCab reference fishes differed significantly in the proportion of time they spent in a given state depending on the strain of their tank partner (<span class="math inline">\(p\)</span> &lt; 0.05, FDR-adjusted) for 5 out of 14 states in the open field assay (2.04x10<sup>-6</sup> &lt; <span class="math inline">\(p\)</span> &lt; 2.11x10<sup>-2</sup>), and 7 out of 14 states for the novel object assay (4.76x10<sup>-7</sup> &lt; <span class="math inline">\(p\)</span> &lt; 4.06x10<sup>-2</sup>). The strain of the tank partner explained up to ~9% of the variance in the proportion of time the <em>iCab</em> reference spent in a given state. Full tables for all states and variables are provided in the Supplementary Material.</p>
+<p>To determine whether the <em>iCab</em> reference fishes altered their behaviour depending on the inbred strain of their tank partner, we carried out the same analysis and model as above using only data from the <em>iCab</em> reference fishes. The states that showed a significant difference are set out in <strong>Table <a href="Pilot-chap.html#tab:pilot-sge-tbl">3.2</a></strong>. The <em>iCab</em> reference fishes differed significantly in the proportion of time they spent in a given state depending on the strain of their tank partner (<span class="math inline">\(p\)</span> &lt; 0.05, FDR-adjusted) for 5 out of 14 states in the open field assay (2.04x10<sup>-6</sup> &lt; <span class="math inline">\(p\)</span> &lt; 2.11x10<sup>-2</sup>), and 7 out of 14 states for the novel object assay (4.76x10<sup>-7</sup> &lt; <span class="math inline">\(p\)</span> &lt; 4.06x10<sup>-2</sup>). The strain of the tank partner explained up to ~9% of the variance in the proportion of time the <em>iCab</em> reference spent in a given state. Full tables for all states and variables are provided in the Supplementary Material.</p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
 <span id="tab:pilot-sge-tbl">Table 3.2: </span>Significant differences in the proportion of time spent in each HMM state by iCab reference fishes depending on the strain of their tank partner during the open field and novel object assay components.</caption>
@@ -497,7 +496,7 @@ Figure 3.9: Frequency of HMM state co-occupancy between pairs of fish, calculate
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Japanese courage: a genetic analysis of complex traits in medaka fish and humans</strong>" was written by Ian Brettell. It was last built on 2022-08-16.</p>
+    <p>"<strong>Japanese courage: a genetic analysis of complex traits in medaka fish and humans</strong>" was written by Ian Brettell. It was last built on 2022-08-17.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
