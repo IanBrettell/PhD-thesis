@@ -295,9 +295,9 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/manhattans/sge_of_1
 ```
 
 
-
-
 ### Candidate SNPs for CRISPR-knockouts
+
+The next goal was to attempt to identify the SNPs that are mostly likely to be causing differences in the phenotypes of interest. I therefore proceeded to extract the significant SNPs and use Ensembl's Variant Effect Predictor (**VEP**) [@mclarenEnsemblVariantEffect2016] to identify the SNPs that are most likely to have a functional consequence, and determine whether the genes they reside in have already been identified as being involved in biological pathways that could be related to behaviour.
 
 
 
