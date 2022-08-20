@@ -155,14 +155,14 @@ Across each chromosome of every sample, the output of the HMM was expected to pr
 # Data from S4, haenelMetaanalysisChromosomescaleCrossover2018
 
 ## Which species have a genome length of nearly 800 Mb?
-readr::read_tsv("https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Fmec.14699&file=mec14699-sup-0004-AppendixS4.txt",
+readr::read_tsv(here::here("results/somites/haenel_2018_S4.txt"),
                        comment = "#") %>% 
   dplyr::group_by(Species) %>% 
   dplyr::summarise(TOT_LEN = sum(Physical.map.length.Mb)) %>% 
   dplyr::arrange(desc(TOT_LEN))
 
 # Cyprinus carpio (common carp) has a total genome length of 847.66 Mb (similar to 800 Mb in medaka)
-df = readr::read_tsv("https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Fmec.14699&file=mec14699-sup-0004-AppendixS4.txt",
+df = readr::read_tsv(here::here("results/somites/haenel_2018_S4.txt"),
                        comment = "#") %>% 
   dplyr::filter(Species %in% c("Danio.renio")) %>%
   dplyr::mutate(Species = dplyr::recode(Species,

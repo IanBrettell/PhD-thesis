@@ -4,11 +4,11 @@
 
 ## 15 HMM states with 0.05 second interval
 
-(ref:hmm-states-0.05) HMM states predicted for the F0 dataset, using the combination of a 0.05-second interval between which the distance and angle variables were calculated.
+(ref:hmm-states-05) HMM states predicted for the F0 dataset, using the combination of a 0.05-second interval between which the distance and angle variables were calculated.
 
 <div class="figure">
-<img src="figs/mikk_behaviour/0.05_15_polar_all_dge.png" alt="(ref:hmm-states-0.05)" width="100%" />
-<p class="caption">(\#fig:hmm-states-0.05)(ref:hmm-states-0.05)</p>
+<img src="figs/mikk_behaviour/0.05_15_polar_all_dge.png" alt="(ref:hmm-states-05)" width="100%" />
+<p class="caption">(\#fig:hmm-states-05)(ref:hmm-states-05)</p>
 </div>
 
 ## HMM state time dependence for all MIKK panel lines

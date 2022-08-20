@@ -4,9 +4,9 @@
 
 ## 15 HMM states with 0.05 second interval
 
-(ref:hmm-states-0.05) HMM states predicted for the F0 dataset, using the combination of a 0.05-second interval between which the distance and angle variables were calculated.
+(ref:hmm-states-05) HMM states predicted for the F0 dataset, using the combination of a 0.05-second interval between which the distance and angle variables were calculated.
 
-```{r hmm-states-0.05, echo = F, fig.cap = '(ref:hmm-states-0.05)', out.width='100%'}
+```{r hmm-states-05, echo = F, fig.cap = '(ref:hmm-states-05)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.05_15_polar_all_dge.png"), auto_pdf = T)
 ```
 

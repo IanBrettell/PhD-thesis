@@ -1,3 +1,4 @@
+fig:megatherium
 fig:InbreedingFigure
 fig:ABBABABA
 fig:NucleotideDiversity
@@ -40,6 +41,14 @@ fig:F2-recomb-blocks
 fig:F2-grm
 fig:F2-man-dge-no-3
 fig:F2-man-sge-of-13
+tab:F2-sig-snps-consq-counts
+tab:F2-sig-snps-missense
+fig:sig-snp-10-15mb
+fig:sig-snp-12-5mb
+tab:tbl-sig-snp-chr-9-10
+fig:sig-snp-9-9mb
+fig:sig-snp-10-18mb
+fig:F2-coverage
 fig:mouse-embryo
 fig:somite-seg-ali
 fig:F0-Cab-Kaga-HdrR
@@ -72,6 +81,7 @@ fig:fst-histo
 fig:FstSnpCount
 fig:FstMain
 fig:fst-n-indivs
+fig:hmm-states-05
 fig:mikk-all-tile-dge
 fig:mikk-all-dens-dge
 fig:mikk-all-tile-sge
@@ -84,7 +94,7 @@ Introduction
 a-brief-history-of-genetics
 ancient-greece
 medieval-times
-mendel
+darwin
 charles-darwin-and-gregor-mendel
 breeding-programs-in-agriculture
 mixed-models-for-genetic-association-analysis
@@ -127,9 +137,13 @@ behavioural-data-collection
 behavioural-phenotyping
 genotyping
 genetic-linkage-analysis
+direct-genetic-effects-2
+social-genetic-effects-3
 candidate-snps-for-crispr-knockouts
 discussion-1
 future-directions
+discussion-2
+future-directions-1
 lessons
 Somite-chap
 background
@@ -166,10 +180,10 @@ the-importance-of-environment-and-a-push-for-diversity-in-genetic-studies
 chapter-refmikk-f2-chap-supplementary-information
 hmm-states-with-0.05-second-interval
 hmm-state-time-dependence-for-all-mikk-panel-lines
-direct-genetic-effects-2
+direct-genetic-effects-3
 tile-plot
 density-plot
-social-genetic-effects-3
+social-genetic-effects-4
 tile-plot-1
 density-plot-1
 f2-recombination-karyoplot-with-missing-calls

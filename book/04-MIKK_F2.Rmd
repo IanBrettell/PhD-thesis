@@ -129,6 +129,8 @@ The first thing to note in this Figure is that *`r colour_line("iCab")`*'s devia
 
 On the basis of the above findings, I selected 6 MIKK panel lines as the parental lines for the F2 cross (**Figure \@ref(F0-line-mean-speed-select**). Conceptually, I sought to select lines that diverged on two measures: a) bold-shy behaviours; and b) the extent to which the lines transmitted their behaviours onto their tank partners. As *`r colour_line("iCab")`* is a fast-moving line, it was more difficult to detect instances where fast-moving MIKK panel lines were influencing its behaviour. I was therefore more confident of identifying slow-movement/high-charisma lines, and so to increase the likelihood of identifying genetic variants that are responsible for a stronger transmission of slow-moving behaviours, I chose two slow-movement/high-charisma lines for the F2 cross: `r colour_line("18-2")` and `r colour_line("8-2")`. In the event that both lines possessed the same genetic variants that influence this behavioural transmission trait, it would vastly increase the power of detecting it during the genetic linkage analysis. Both these lines were one of the most slow-moving lines, had high levels of state co-occupancy during both assay components, and `r colour_line("18-2")` caused a high level of deviation from the *`r colour_line("iCab")`* control condition.
 
+(ref:F0-line-mean-speed-select) Mean speed of the MIKK panel and other strains over the course of the entire 20-minute video (measured as the distance traveled in pixels per 0.05 seconds), as shown above in Figure \@ref(fig:mikk-mean-speed) but now higlighting the MIKK lines that were selected for the F2 cross.
+
 ```{r F0-line-mean-speed-select, echo = F, fig.cap = '(ref:F0-line-mean-speed-select)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/line_mean_speed_0.05_selected.png"), auto_pdf = T)
 ```
@@ -137,7 +139,7 @@ For the slow-movement/low-charisma line, I selected `r colour_line("50-2")` whic
 
 In addition to these extreme lines, I also selected a line that was intermediate for both traits in an attempt to avoid breeding incompatibilities that might arise from attempting to cross lines with such divergent behavioural traits. For this purpose I selected line `r colour_line("38-2")` for its intermediate speed, low within-line variance for mean speed, and intermediate measures for HMM state co-occupancy and *`r colour_line("iCab")`* deviation.
 
-(ref:F0-line-mean-speed-var-select) Line median (vertical axis) and line variance (horizontal axis) for individual mean speed across the full 20-minute video (i.e. both the open field and novel object assay components), coloured for the lines selected as the parental strains for the F2 cross.
+(ref:F0-line-mean-speed-var-select) Line median (vertical axis) and line variance (horizontal axis) for individual mean speed across the full 20-minute video (i.e. both the open field and novel object assay components) as shown above in Figure \@ref(fig:mikk-mean-speed-variance), now coloured only for the lines selected as the parental strains for the F2 cross.
 
 ```{r F0-line-mean-speed-var-select, echo = F, fig.cap = '(ref:F0-line-mean-speed-var-select)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/line_mean_speed_variance_selected.png"), auto_pdf = T)
@@ -274,11 +276,13 @@ $$
 y = a + bx + g + e
 $$
 
-$y$ was the phenotype, $a$ was the mean term, $b$ was the additive effect (fixed effect) of the candidate SNP tested for association, $x$ was the SNP genotype indicator variable coded as 0, 1 or 2, $g$ was the polygenic effect (random effect) i.e. the accumulated effect of all SNPs (as captured by the GRM calculated using all SNPs) and $e$ was the residual [@yangGCTAToolGenomewide2011]. For $y$, I used the inverse-normalised state frequencies described above, and the LOCO-GRM as $g$ for all SNPs on the focal chromosome. For example, for all SNPs on chr18, I used the LOCO-GRM that excluded all SNPs from that chromosome. In addition, I included the time of assay and the tank quadrant as covariates, which the software regresses out from the phenotype prior to running the MLMA. I excluded the date of assay and the tank side as covariates because individuals from the same cross tended to be assayed in the same test tank on the same day, and are therefore confounded with the genetics. 
+$y$ was the phenotype, $a$ was the mean term, $b$ was the additive effect (fixed effect) of the candidate SNP tested for association, $x$ was the SNP genotype indicator variable coded as 0, 1 or 2, $g$ was the polygenic effect (random effect) i.e. the accumulated effect of all SNPs (as captured by the GRM calculated using all SNPs) and $e$ was the residual [@yangGCTAToolGenomewide2011]. For $y$, I used the inverse-normalised state frequencies described above, and the LOCO-GRM as $g$ for all SNPs on the focal chromosome. For example, for all SNPs on chr18, I used the LOCO-GRM that excluded all SNPs from that chromosome. In addition, I included the time of assay and the tank quadrant as covariates, which the software regresses out from the phenotype prior to running the MLMA. I excluded the date of assay and the tank side as covariates because individuals from the same cross tended to be assayed in the same test tank on the same day, and are therefore confounded with their genetics. 
 
-To set a significance threshold, for each combination of HMM state and assay, I ran 10 MLMA tests over the same dataset where I had permuted the phenotype and covariates using a different random seed. The logic behind this method is to determine the lowest p-value that one could expect when there is no true relationship between the indviduals' genetics and their phenotype. I then extracted the smallest p-value from all 10 results, and used this as the significance threshold. I additionally calculated the Bonferroni threshold as $\alpha / M$ where alpha is 0.05 and $M$ is the total number of SNPs in the dataset (2,726,797) = 1.83x10^-8^.
+To set a significance threshold, for each combination of HMM state and assay, I ran 10 MLMA tests over the same dataset where I had permuted the phenotype and covariates using a different random seed. The logic behind this method is to determine the lowest p-value that one could expect when there is no true relationship between the indviduals' genetics and their phenotype. I then extracted the smallest p-value from all 10 results, and used this as the significance threshold. I additionally calculated the Bonferroni threshold as $\alpha / M$, where $\alpha$ is set to 0.05 and $M$ is the total number of SNPs in the dataset (2,726,797) = 1.83x10^-8^.
 
-For the DGE phenotypes, I sought to identify the genetic loci in the F2 individuals that were associated with differences in their own behaviour. For neither the open field nor novel object component did the p-values exceed the Bonferroni threshold, however a number of loci across several chromosomes exceeded the thresholds set by the permutations. I plotted the p-values in Manhattan plots for each combination of state and assay component, and provide them all in the Appendix. Here I showcase the Manhattan plot for state 3, containing a number of signficant loci that I investigate below.
+#### Direct genetic effects
+
+For the DGE phenotypes (comparing the state frequencies across test fishes), I sought to identify the genetic loci in the F2 individuals that were associated with differences in their own behaviour. For neither the open field nor novel object component did the p-values exceed the Bonferroni threshold, however a number of loci across several chromosomes exceeded the thresholds set by the permutations. I plotted the p-values in Manhattan plots for each combination of state and assay component, and provide them all in the Appendix. Here I showcase the Manhattan plot for state 3, containing a number of significant loci that I discuss further below.
 
 (ref:F2-man-dge-no-3) Manhattan plot for inverse-normalised HMM state 3 frequency of F2 test fishes during the novel object assay.
 
@@ -286,9 +290,11 @@ For the DGE phenotypes, I sought to identify the genetic loci in the F2 individu
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/manhattans/dge_no_3_time-quadrant.png"), auto_pdf = T)
 ```
 
+#### Social genetic effects
+
 For social genetic effects, I was attempting to discover genetic variants in the F2 individuals that caused differences in the behaviour of their *`r colour_line("iCab")`* tank partners. As expected, fewer loci reached significance for this transmitted indirect genetic effect than for the direct genetic effects, however I still found several significant loci based on the permutations threshold for states 4 (chr4), 7 (chr1), 12 (chr11), and 13 (chr12) during the open field assay component; but only one, barely significant SNP for state 5 (chr 13) during the novel object assay. This difference was somewhat surprising given our previous suppositions (DISCUSS) that the novel object component drew out stronger social genetic effects.
 
-(ref:F2-man-sge-of-13) Manhattan plot for inverse-normalised HMM state 3 frequency of *iCab* reference fishes during the novel object assay component.
+(ref:F2-man-sge-of-13) Manhattan plot for inverse-normalised HMM state 3 frequency of *`r colour_line("iCab")`* reference fishes during the novel object assay component.
 
 ```{r F2-man-sge-of-13, echo = F, fig.cap = '(ref:F2-man-sge-of-13)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/manhattans/sge_of_13_time-quadrant.png"), auto_pdf = T)
@@ -297,9 +303,31 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/manhattans/sge_of_1
 
 ### Candidate SNPs for CRISPR-knockouts
 
-The next goal was to attempt to identify the SNPs that are mostly likely to be causing differences in the phenotypes of interest. I therefore proceeded to extract the significant SNPs and use Ensembl's Variant Effect Predictor (**VEP**) [@mclarenEnsemblVariantEffect2016] to identify the SNPs that are most likely to have a functional consequence, and determine whether the genes they reside in have already been identified as being involved in biological pathways that could be related to behaviour.
+```{r, include = F, message = F, warning = F}
+# Get biomaRt annotations
+library(biomaRt)
+olat_mart = biomaRt::useEnsembl(biomart = "ensembl", dataset = "olatipes_gene_ensembl", mirror = "uswest")
 
-```{r F2-sig-snps-consq-counts, echo = F}
+olat_attr = biomaRt::listAttributes(olat_mart)
+
+olat_genes = biomaRt::getBM(attributes = c("ensembl_gene_id",
+                                           "hgnc_symbol",
+                                           "description"),
+                            mart = olat_mart) 
+
+olat_homs = biomaRt::getBM(attributes = c("ensembl_gene_id",
+                                          "hsapiens_homolog_associated_gene_name"),
+                           mart = olat_mart) 
+
+biom_df = dplyr::left_join(olat_genes,
+                           olat_homs,
+                           by = "ensembl_gene_id")
+```
+
+
+The next goal was to attempt to identify the SNPs that are mostly likely to be the causal variants, or closest in proximity to the causal variants, responsible for differences in the phenotypes of interest. I therefore proceeded to extract the significant SNPs and use Ensembl's Variant Effect Predictor (**VEP**) [@mclarenEnsemblVariantEffect2016] to identify the SNPs that are most likely to have a functional consequence, and determine whether the genes they reside in have already been identified as being involved in biological pathways that could be related to behaviour. **Table \@ref(tab:F2-sig-snps-consq-counts)** shows the counts for the different potential consequences of the unique significant SNPs, based on Ensembl's annotation of the *HdrR* reference. I note that as multiple genes can overlap the same locus (including those transcribed from opposing strands), one SNP may map to multiple genes and therefore be counted as having more than one type of consequence.
+
+```{r F2-sig-snps-consq-counts, echo = F, message = F, warning = F}
 sig = readr::read_csv(here::here("results/MIKK_F2/sigs.csv"))
 vep = readr::read_tsv(here::here("results/MIKK_F2/0.08_vep_out.txt"),comment = "##") %>% 
   tidyr::separate(col = "#Uploaded_variation",into = c("CHROM", "POS", "REF_ALT"),sep = "_") %>% 
@@ -314,7 +342,9 @@ df = dplyr::left_join(sig,
 
 # Pull out missense SNPs
 out_tbl = df %>% 
-  dplyr::count(Consequence,name = "count") %>% 
+  # Get only distinct SNP/Gene/Consequence combinations
+  dplyr::distinct(SNP, Consequence) %>% 
+  dplyr::count(Consequence, name = "count") %>% 
   dplyr::arrange(desc(count)) %>% 
   dplyr::rename(consequence = "Consequence") %>% 
   tidyr::drop_na()
@@ -325,7 +355,9 @@ knitr::kable(
 )
 ```
 
-```{r F2-sig-snps-consq-counts, echo = F}
+As expected, most variants reside in non-coding regions [CITE], but in an attempt to isolate the most likely causative SNPs, I extracted those that are predicted to cause a missense mutation and therefore most likely to have a functional consequence (**Table \@ref(tab:F2-sig-snps-missense**). 
+
+```{r F2-sig-snps-missense, echo = F, message = F, warning = F}
 sig = readr::read_csv(here::here("results/MIKK_F2/sigs.csv"))
 vep = readr::read_tsv(here::here("results/MIKK_F2/0.08_vep_out.txt"),comment = "##") %>% 
   tidyr::separate(col = "#Uploaded_variation",into = c("CHROM", "POS", "REF_ALT"),sep = "_") %>% 
@@ -333,15 +365,21 @@ vep = readr::read_tsv(here::here("results/MIKK_F2/0.08_vep_out.txt"),comment = "
   tidyr::unite(col = "SNP", CHROM, POS, sep = ":")
 
 # Bind
-df = dplyr::left_join(sig,
+uniq_df = dplyr::left_join(sig,
                       vep %>% 
                         dplyr::select(SNP, Allele, Gene, Consequence),
                       by = "SNP") %>% 
+  # left join to biomart output
+  dplyr::left_join(biom_df %>% 
+                     dplyr::select(ensembl_gene_id,
+                                   description),
+                   by = c("Gene" = "ensembl_gene_id")) %>% 
   # get unique SNPs and consequences
-  dplyr::distinct(DGE_SGE, ASSAY, STATE, SNP, Gene, Consequence, .keep_all = T)
+  dplyr::distinct(DGE_SGE, ASSAY, STATE, SNP, Gene, Consequence, .keep_all = T) 
+
 
 # Pull out missense SNPs
-out_tbl = df %>% 
+missense_tbl = uniq_df %>% 
   dplyr::filter(Consequence == "missense_variant") %>% 
   dplyr::mutate(DGE_SGE = toupper(DGE_SGE),
                 ASSAY = stringr::str_replace(ASSAY, "_", " ")) %>% 
@@ -353,27 +391,46 @@ out_tbl = df %>%
                 "Ref" = REF,
                 "Alt" = ALT,
                 Allele,
-                Gene)
+                Gene,
+                Description = description) %>% 
+  # remove [Source:xxx] from descriptions
+  dplyr::mutate(Description = stringr::str_remove_all(Description,
+                                                  "\\[.*\\]"))
 
 knitr::kable(
-  out_tbl,
+  missense_tbl,
   caption = 'Missense SNPs.'
 )
 ```
 
-ENSORLG00000009385 is *VAV1*: vav guanine nucleotide exchange factor 1. Cancer phenotypes in human, immune system phenotypes in mouse.
-ENSORLG00000028050 is a novel gene.
-ENSORLG00000024879 is a novel gene. Phenotypes: bone mineral density in human, and PR interval (cardiovascular) in mouse.
-ENSORLG00000013962 is echo-ADP-ribosyltransferase 5-like. No phenotypes.
-ENSORLG00000029574 is a novel gene. No phenotypes.
-ENSORLG00000002961 is c9 (projected ZFIN). Phenotypes include reduced prepulse inhibition and heart phenotypes in mice, and neurodevelopmental disorders in rats.
+One SNP, 10:15,319,434, was significant for DGE for frequencies in both state 3 (**Figure \@ref(fig:sig-snp-10-15mb)**) and 10 during the novel object assay (see **Figure \@ref(fig:F2-man-dge-no-3)** above for state 3), and maps to two genes: ENSORLG00000029574 and ENSORLG00000024866. ENSORLG00000029574 is a novel gene on the forward strand with no recorded phenotypes. However, ENSORLG00000024866 is a gene on the reverse strand for protocadherin alpha-C2-like, a well-known protein involved in mammalian synapse formation [@junghansPostsynapticDifferentialLocalization2008; @phillipsGProtocadherinsAreTargeted2003].
 
-### Identified by Ewan
+(ref:sig-snp-10-15mb) State 3 frequency during the novel object assay for counts of the alternative allele (T) at SNP 10:15,319,434. The boxes are coloured on the left by the paternal line, and on the right by the maternal line.
 
-```{r}
-TARGET_SNPS = c("9:9802754", "9:9804733", "10:15319434", "10:15319435")
+```{r sig-snp-10-15mb, echo = F, fig.cap = '(ref:sig-snp-10-15mb)', out.width='50%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/sig_snps_boxplots/3-10:15319434.png"), auto_pdf = T)
+```
 
-df %>% dplyr::filter(SNP %in% TARGET_SNPS) %>% 
+The second predicted missense variant of note was detected for SGE in the open field assay for frequencies in state 13. The locus 12:5,136,828 maps to gene ENSORLG00000002961, which is described as a complement *C9*. Discovered phenotypes for species orthologues include reduced prepulse inhibition and heart phenotypes in mice [Mouse Genome Database, @blakeMouseGenomeDatabase2021], and neurodevelopmental disorders in rats [Rat Genome Database, @smithYearRatRat2020]. Here, in the F2 individuals, it appears to have an inconsistent effect in the behaviour of the test fishes, but apparently causes the reference fish to increase the proportion of time it spends in the fast-moving state 13 (**Figure \@ref(fig:F2-man-sge-of-13)**).
+
+(ref:sig-snp-12-5mb) State 13 frequency during the open field assay for counts of the alternative allele (A) at SNP 12:5,136,828. The boxes are coloured on the left by the paternal line, and on the right by the maternal line.
+
+```{r sig-snp-12-5mb, echo = F, fig.cap = '(ref:sig-snp-12-5mb)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/sig_snps_boxplots/13-12:5136828.png"), auto_pdf = T)
+```
+
+There are additional significant loci of note shown in **Figure \@ref(fig:F2-man-dge-no-3)** above that are not predicted to alter proteins, but nevertheless appear to affect genes related to neurological development (**Table \@ref(tab:tbl-sig-snp-chr-9-10)**). 
+
+```{r tbl-sig-snp-chr-9-10, echo = F, message = F, warning = F}
+TARGET_SNPS = c("9:9802754", "10:18537719")
+
+chr9_sigs = df %>% dplyr::filter(SNP %in% TARGET_SNPS) %>% 
+  dplyr::left_join(biom_df %>% 
+                     dplyr::select(ensembl_gene_id,
+                                   description,
+                                   hsapiens_homolog_associated_gene_name),
+                   by = c("Gene" = "ensembl_gene_id")) %>% 
+  dplyr::distinct(CHROM, POS, .keep_all = T) %>% 
   dplyr::mutate(DGE_SGE = toupper(DGE_SGE),
                 ASSAY = stringr::str_replace(ASSAY, "_", " ")) %>% 
   dplyr::select("Genetic effect" = DGE_SGE,
@@ -384,34 +441,76 @@ df %>% dplyr::filter(SNP %in% TARGET_SNPS) %>%
                 "Ref" = REF,
                 "Alt" = ALT,
                 Allele,
-                Gene)
+                Gene,
+                Description = description,
+                "Human homologue" = hsapiens_homolog_associated_gene_name) %>% 
+  # remove [Source:xxx] from descriptions
+  dplyr::mutate(Description = stringr::str_remove_all(Description,
+                                                  "\\[.*\\]"))
+
+knitr::kable(
+  chr9_sigs,
+  caption = 'Significant loci on chromosome 9 for direct genetic effects on state 3 frequency during the novel object assay.'
+)
 ```
-9:9802754: ENSORLG00000024663: grid2 (Projected ZFIN): glutamate ionotropic receptor delta type subunit 2. Phenotypes include ataxia in humans, and neurological defects in mouse.
 
-10:15319434: ENSORLG00000024866: protocadherin alpha-C2-like, axon branching receptor (famous).
+The first is located around 9:9,802,754 (**Figure \@ref(fig:sig-snp-9-9mb)**), and maps to a gene for glutamate ionotropic receptor delta type subunit 2, an orthologue of the human gene *GRID2*. Deletions in this gene have been found to cause ataxia in humans [@hillsDeletionsGRID2Lead2013; @utineHomozygousDeletionGRID22013], and other mutations in this gene have been found to cause various neurological disorders in mice [Mouse Genome Database, @blakeMouseGenomeDatabase2021]. 
 
-10:18537719: ENSORLG00000006464: nlgn3a (neuroligin 3a). synapse related protein involved in Autism. Phenotypes include autism in human, and extensive neurological phenotypes in mouse. 
+(ref:sig-snp-9-9mb) State 3 frequency during the novel object assay for counts of the alternative allele (A) at SNP 9:9,802,754. The boxes are coloured on the left by the paternal line, and on the right by the maternal line.
 
-## Discussion
+```{r sig-snp-9-9mb, echo = F, fig.cap = '(ref:sig-snp-9-9mb)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/sig_snps_boxplots/3-9:9802754.png"), auto_pdf = T)
+```
+
+The second locus resides around 10:18,537,719 (**Figure \@ref(fig:sig-snp-10-18mb)**) within the neuroligin 3 gene, an orthologue of the human gene *NLGN3*, which has been linked with autism in humans [@jamainMutationsXlinkedGenes2003], and various neurological in mice and rats [@blakeMouseGenomeDatabase2021; @smithYearRatRat2020].
+
+(ref:sig-snp-10-18mb) State 3 frequency during the novel object assay for counts of the alternative allele (A) at SNP 10:18,537,719. The boxes are coloured on the left by the paternal line, and on the right by the maternal line.
+
+```{r sig-snp-10-18mb, echo = F, fig.cap = '(ref:sig-snp-10-18mb)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/sig_snps_boxplots/3-10:18537719.png"), auto_pdf = T)
+```
+
+These results provide promising evidence that the assay and methods described above can identify genetic loci associated with differences in behaviours - and potentially difference in the transmission of behaviour onto social companions - with functional relevance to humans. However, before seeking to functionally validate these variants, there are a number of steps that we seek to take to refine the analysis and thereby increase our confidence in the variants we ultimately select for validation.
+
+## Discussion 
+
+With the benefit of hindsight, there are a several aspects of this analysis that I would have performed differently. The first relates to the choices of certain parental lines for the F2 cross, which were too heavily reliant on the aggregate measures of speed and charisma, without due regard to the level of behavioural variance observed within each line. As evident in **Figures \@ref(fig:F2-time-dge-of)** and **\@ref(fig:F2-time-dge-no)**, lines `r colour_line("8-2")` and `r colour_line("21-2")` showed large within-line variances. For `r colour_line("8-2")` in particular, the differences appear to correspond to the date on which they were assayed - that is to say, in the first run the four `r colour_line("8-2")` individuals showed almost no movement, whereas in the second run they showed much higher levels of movement. Although the different within-line variances are an interesting phenotype to explore further, as they suggest that different lines show different degrees of sensitivity to environmental changes, high within-line variances make it difficult to ascertain the line's "true" phenotype, and therefore make them insuitable for selection based on our axes of interest for this study (bold vs shy; high vs low behavioural transmission). 
+
+An appropriate substitute for `r colour_line("8-2")` may be line `r colour_line("139-4")`, which had low within-line variance for mean speed, and the highest median state co-occupancy in the novel object assay component. From the analysis of Chapter \@ref(Pilot-chap), which concluded after the F2 cross lines were already selected, it became apparent that the novel object assay was particularly useful for revealing social genetic effects. I hypothesise that at times of higher stress or predation threat, the individual fish take more behavioural cues from their tank partners. Line `r colour_line("139-4")` therefore would have been a good candidate for the slow-moving, high-charisma line. 
+
+Similarly, lines `r colour_line("13-2")` or `r colour_line("94-1")` would be preferred substitutes for line `r colour_line("21-2")` as the fast-moving, high charisma line. They are faster than `r colour_line("21-2")`, but unlike the fastest line `r colour_line("10-1")`, they show a degree of habituation (where most individuals moved slowly at the beginning of the assay before eventually speeding up). They also showed lower within-line variance than `r colour_line("21-2")`, but comparable measures for the SGE measures of state co-occupancy and reference deviation. 
+
+One way of avoiding these issues would have been to used a more quantitative, objective approach to selecting the lines. For example, I could have used Mann-Whitney tests to quantify the levels of differences between pairs of lines for a trait of interest (as I did for **Figure \@ref(fig:mikk-param-comp)**), and then select the lines that maximised that statistic. Such metrics would still perhaps need to be qualitatively weighted against other relevant traits, such as within-line variance. Nevertheless, my downstream analyses show that despite not having potentially selected the ideal lines for the F2 cross, the differences observed were sufficient to identify genetic loci associated with our phenotypes of interest, even with a relatively small sample size of 271 F2 individuals.
 
 ## Future directions
+
+Our collaborators are in the process of breeding more F2 individuals to increase the sample size for this analysis. I have suggested that we replace line 21-2 with either 13-2 or 23-1, which both show lower within-line variance in mean speed, with similarly high levels of speed and behavioural transmission (as measured by state co-occupancy and *iCab* reference deviation). Any additional F2 individuals will still need to be phenotyped and sequenced, and the phenotype data collection (i.e. video recording the behavioural assay) can be relatively laborious, so this process will likely take some time.
+
+In the meantime, I have 96 Kiyosu CC individuals whose videos have already been processed, and whose DNA is already shallow-sequenced (~1x). However, it was not feasible to include that data in this analysis due to time constraints. As they have been allowed to breed freely from the same Kiyosu population as the MIKK panel, they are not strongly homozygous, and they are likely to possess many additional genetic variants that are not represented in the MIKK panel. I am therefore not able to impute their genotypes from high-coverage parental strains, as I did with the F2 individuals. The alignments to the reference are likely to include more mapping errors due to the lack of sufficient coverage. The additional information they provide will therefore not be as useful as additional F2 individuals, but it should nevertheless improve the power to detect casual variants. The level of information we obtain from the Kiyosu CC individuals will also inform whether we include them in this way in future F2 crosses.
+
+A second issue I plan to address is the failure of F2 reads to align to chromosomes 22 and 23 (see **Figure \@ref(fig:F2-recomb-blocks)** above). As the issue occurs across most of the sample, and the coverage does not look skewed for those chromosomes (**Figure \@ref(fig:F2-coverage)**), there is likely to a be an error in the bioinformatic pipeline that I constructed.
+
+(ref:F2-coverage) Mean depth of sequencing coverage per chromosome for the 271 F2 samples used in this analysis.
+
+```{r F2-coverage, echo = F, fig.cap = '(ref:F2-coverage)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/coverage_F2.png"), auto_pdf = T)
+```
+
+A third issue is the matter of selecting the optimal HMM parameters for calling the recombination blocks, as described in Chapter \@ref(Somite-chap). For the analysis in this current Chapter I used the same HMM parameters as I had used there. In that Chapter, I used the p-values from the resulting genetic linkage analysis as a rough measure of genotyping quality (assuming that lower p-values were driving by more accurate genotypes), together with a qualitative assessment of how many crossovers I expected to observe in a particular chromosome for a subset of the sample. The issue can be resolved by obtaining "ground truth" genotype calls through high-coverage sequence data for a set of samples that have also been shallow-sequenced. This would allow one to compare the HMM recombination block calls with the ground truth genotypes, and thereby train the model to optimise the accuracy of its predictions for the locations of the recombination sites (while validating the trained parameters with a test dataset). I expect the improved genotype calls will further improve the power to detect genetic variants.
+
+With respect to the genetic linkage analysis, due to the method I used to calculate the genetic relationship matrix (**GRM**), I was compelled to exclude all SNPs that were missing calls in any of the samples, reducing the number of SNPs to merely ~40K out of the ~20M in the full dataset. Not only does this reduce the accuracy of the GRM as a means of capturing the relative relatedness between samples, but the problem will only be exacerbated with the inclusion of additional samples (as the likelihood of a SNP having at least one sample with a missing call will increase with the number of samples). I will therefore adapt my method to include SNPs with missing calls, which should further increase statistical power.
+
+Finally, I applied a separate genetic linkage association test for the state frequency of each HMM state, where it may be beneficial to apply a method that can combine the information across all states into a single phenotype (if not fewer phenotypes), and then run an association test on that reduced phenotype. There are a number of alternatives to consider, including principal components analysis (PCA) or MTAG (Multi-Trait Analysis of Genome-wide summary statistics) [@turleyMultitraitAnalysisGenomewide2018]. Ultimately the hope is that by leveraging the information about the frequencies in which the fishes occupy each state, combined across *all* states, while appropriately taking into account the interdependence of those frequencies (e.g. the more time a fish spends in state 3, the less time it is likely to spend in state 13), it will further strengthen these results.
 
 ## Lessons
 
 * Describe using a different MIKK panel line as the reference, preferring a moderate-moving line to enable easier detection of social genetic effects from fast-moving lines, i.e. which lines cause *`r colour_line("iCab")`* to move more boldly? 
 
-* Chosen different strains for the F2 cross. 139-4 had low within-line variance for mean speed, and the highest median state co-occupancy in the novel object component. From the conclusions of Chapter \@ref(Pilot-chap), which were carried out after the F2 cross lines were already selected, it became apparent that the novel object assay was particularly useful for revealing social genetic effected. I hypothesise that at times of higher stress or predation threat, the individual fish take more behavioural cues from their tank partners. It therefore would have been a good candidate for the slow-moving, high-charisma line. 
+
 
 * Explain why I didn't choose 22-1 or 10-1.
 
-* Instead of using the semi-qualitative approach to select lines, would have quantified the differences between lines on the measures of interest and chosen those that maximised those differences.
-
-* Use high-coverage F2 sequences to obtain the genotyping ground truth to refine the HMM parameters used to call the shallow-sequenced F2 individuals.
-
-* Include more SNPs in the GRM.
-
 * Add path plots for interesting lines
 
-* Add coverage plot to explain poor calls for chr22-24
 
 
