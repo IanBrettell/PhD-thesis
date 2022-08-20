@@ -299,7 +299,98 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/manhattans/sge_of_1
 
 The next goal was to attempt to identify the SNPs that are mostly likely to be causing differences in the phenotypes of interest. I therefore proceeded to extract the significant SNPs and use Ensembl's Variant Effect Predictor (**VEP**) [@mclarenEnsemblVariantEffect2016] to identify the SNPs that are most likely to have a functional consequence, and determine whether the genes they reside in have already been identified as being involved in biological pathways that could be related to behaviour.
 
+```{r F2-sig-snps-consq-counts, echo = F}
+sig = readr::read_csv(here::here("results/MIKK_F2/sigs.csv"))
+vep = readr::read_tsv(here::here("results/MIKK_F2/0.08_vep_out.txt"),comment = "##") %>% 
+  tidyr::separate(col = "#Uploaded_variation",into = c("CHROM", "POS", "REF_ALT"),sep = "_") %>% 
+  tidyr::separate(col = "REF_ALT", into = c("REF", "ALT"), sep = "/") %>% 
+  tidyr::unite(col = "SNP", CHROM, POS, sep = ":")
 
+# Bind
+df = dplyr::left_join(sig,
+                      vep %>% 
+                        dplyr::select(SNP, Allele, Gene, Consequence),
+                      by = "SNP") 
+
+# Pull out missense SNPs
+out_tbl = df %>% 
+  dplyr::count(Consequence,name = "count") %>% 
+  dplyr::arrange(desc(count)) %>% 
+  dplyr::rename(consequence = "Consequence") %>% 
+  tidyr::drop_na()
+
+knitr::kable(
+  out_tbl,
+  caption = 'Counts for consequences of significant SNPs.'
+)
+```
+
+```{r F2-sig-snps-consq-counts, echo = F}
+sig = readr::read_csv(here::here("results/MIKK_F2/sigs.csv"))
+vep = readr::read_tsv(here::here("results/MIKK_F2/0.08_vep_out.txt"),comment = "##") %>% 
+  tidyr::separate(col = "#Uploaded_variation",into = c("CHROM", "POS", "REF_ALT"),sep = "_") %>% 
+  tidyr::separate(col = "REF_ALT", into = c("REF", "ALT"), sep = "/") %>% 
+  tidyr::unite(col = "SNP", CHROM, POS, sep = ":")
+
+# Bind
+df = dplyr::left_join(sig,
+                      vep %>% 
+                        dplyr::select(SNP, Allele, Gene, Consequence),
+                      by = "SNP") %>% 
+  # get unique SNPs and consequences
+  dplyr::distinct(DGE_SGE, ASSAY, STATE, SNP, Gene, Consequence, .keep_all = T)
+
+# Pull out missense SNPs
+out_tbl = df %>% 
+  dplyr::filter(Consequence == "missense_variant") %>% 
+  dplyr::mutate(DGE_SGE = toupper(DGE_SGE),
+                ASSAY = stringr::str_replace(ASSAY, "_", " ")) %>% 
+  dplyr::select("Genetic effect" = DGE_SGE,
+                "Assay" = ASSAY,
+                "State" = STATE, 
+                "Chr" = CHROM,
+                "Pos" = POS,
+                "Ref" = REF,
+                "Alt" = ALT,
+                Allele,
+                Gene)
+
+knitr::kable(
+  out_tbl,
+  caption = 'Missense SNPs.'
+)
+```
+
+ENSORLG00000009385 is *VAV1*: vav guanine nucleotide exchange factor 1. Cancer phenotypes in human, immune system phenotypes in mouse.
+ENSORLG00000028050 is a novel gene.
+ENSORLG00000024879 is a novel gene. Phenotypes: bone mineral density in human, and PR interval (cardiovascular) in mouse.
+ENSORLG00000013962 is echo-ADP-ribosyltransferase 5-like. No phenotypes.
+ENSORLG00000029574 is a novel gene. No phenotypes.
+ENSORLG00000002961 is c9 (projected ZFIN). Phenotypes include reduced prepulse inhibition and heart phenotypes in mice, and neurodevelopmental disorders in rats.
+
+### Identified by Ewan
+
+```{r}
+TARGET_SNPS = c("9:9802754", "9:9804733", "10:15319434", "10:15319435")
+
+df %>% dplyr::filter(SNP %in% TARGET_SNPS) %>% 
+  dplyr::mutate(DGE_SGE = toupper(DGE_SGE),
+                ASSAY = stringr::str_replace(ASSAY, "_", " ")) %>% 
+  dplyr::select("Genetic effect" = DGE_SGE,
+                "Assay" = ASSAY,
+                "State" = STATE, 
+                "Chr" = CHROM,
+                "Pos" = POS,
+                "Ref" = REF,
+                "Alt" = ALT,
+                Allele,
+                Gene)
+```
+9:9802754: ENSORLG00000024663: grid2 (Projected ZFIN): glutamate ionotropic receptor delta type subunit 2. Phenotypes include ataxia in humans, and neurological defects in mouse.
+
+10:15319434: ENSORLG00000024866: protocadherin alpha-C2-like, axon branching receptor (famous).
+
+10:18537719: ENSORLG00000006464: nlgn3a (neuroligin 3a). synapse related protein involved in Autism. Phenotypes include autism in human, and extensive neurological phenotypes in mouse. 
 
 ## Discussion
 
@@ -312,6 +403,8 @@ The next goal was to attempt to identify the SNPs that are mostly likely to be c
 * Chosen different strains for the F2 cross. 139-4 had low within-line variance for mean speed, and the highest median state co-occupancy in the novel object component. From the conclusions of Chapter \@ref(Pilot-chap), which were carried out after the F2 cross lines were already selected, it became apparent that the novel object assay was particularly useful for revealing social genetic effected. I hypothesise that at times of higher stress or predation threat, the individual fish take more behavioural cues from their tank partners. It therefore would have been a good candidate for the slow-moving, high-charisma line. 
 
 * Explain why I didn't choose 22-1 or 10-1.
+
+* Instead of using the semi-qualitative approach to select lines, would have quantified the differences between lines on the measures of interest and chosen those that maximised those differences.
 
 * Use high-coverage F2 sequences to obtain the genotyping ground truth to refine the HMM parameters used to call the shallow-sequenced F2 individuals.
 
