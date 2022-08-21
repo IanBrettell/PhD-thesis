@@ -180,7 +180,7 @@ mean_crossovers = mean(df$`crossovers per chromosome`)
 
 ```
 
-(ref:zebrafish-co-per-chrom) Crossovers per chromosome based on data provided in @haenelMetaanalysisChromosomescaleCrossover2018, where "crossovers per chromosome" for each chromosome $c$ was calculated by $\frac{crossover~rate_{c}(cM / Mb) \times length_{c}(Mb)} {100}$. The medaka genome is shorter in length than zebrafish genome (~800 Mb compared to ~1,300 Mb), which according to the authors would suggest that medaka likely has a higher average crossover rate than what is displayed here.
+(ref:zebrafish-co-per-chrom) Crossovers per chromosome based on data provided in @haenelMetaanalysisChromosomescaleCrossover2018, where "crossovers per chromosome" for each chromosome $c$ was calculated by $\frac{crossover~rate_{c}(cM / Mb) \times length_{c}(Mb)} {100}$. The medaka genome is shorter in length than zebrafish genome (~800 Mb compared to ~1,300 Mb), which according to the authors would suggest that medaka likely has a higher average crossover rate than what is presented in this figure.
 
 ```{r zebrafish-co-per-chrom, echo=F, fig.cap = '(ref:zebrafish-co-per-chrom)', out.width='100%'}
 # Plot

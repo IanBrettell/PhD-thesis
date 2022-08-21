@@ -21,7 +21,8 @@ Aristotle joined the discussion with his treatise *Generation of Animals*, where
 
 In medieval times, the prevailing theory was that a tiny human -- a homunculus -- sat within the sperm, waiting to be inflated upon its introduction to a woman's uterus. However, this would require a homunculus to sit within another homunculus, *ad infinitum*, like Matryoshka dolls, all the way back to the Biblical first man, Adam. Even the inventor of the microscope, Nicolaas Hartsoeker, thought he saw one in a sperm he was studying. But what then triggered the expansion of the human form, involving the development of new parts from embryo to fetus? The answer could only have been some instruction, blueprint, or code, but any specifics were out of reach.
 
-<img src="figs/introduction/homunculus.png" width="50%" />
+
+\includegraphics[width=0.5\linewidth]{figs/introduction/homunculus} 
 
 ### Darwin
 
@@ -34,10 +35,9 @@ Two months after Darwin graduated from Cambridge, he received a letter from Hens
 
 (ref:megatherium) Megatherium fossil collected by Charles Darwin, housed in the Natural History Museum, London. Photograph from @WhatWasMegatherium.
 
-<div class="figure">
-<img src="figs/introduction/megatherium.png" alt="(ref:megatherium)" width="100%" />
-<p class="caption">(\#fig:megatherium)(ref:megatherium)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/introduction/megatherium} \caption{(ref:megatherium)}(\#fig:megatherium)
+\end{figure}
 
 The *Beagle* eventually reached the Galápagos Islands on the coast of Peru, and archipelago of 18 islands formed from volcanic lava. They stayed there for five weeks, during which period Darwin collected carcasses of birds, lizards, and plants. Upon his return to England, Darwin was hailed as a minor celebrity among natural historians due to the collections of specimens he had gathered and shipped back. John Gould 
 

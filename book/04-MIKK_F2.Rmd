@@ -66,7 +66,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/line_mean_speed_var
 
 ## HMM states
 
-To examine these behaviours at a finer resolution, as for the pilot study described in \@ref(Pilot-chap), I again applied a hidden markov model (**HMM**) to classify the fishes' movements based on their distance and angle of travel between time intervals. I used the same method to select the best choice of time interval and number of states (**Figure \@ref(fig:mikk-param-comp)**). Here I observed the same phenomenon where the parameter combinations that performed the best showed an asymmetry between some states that would make interpretation difficult. For example, a time interval of 0.08 seconds combined with a state space of 17 caused state 4 to appear to get carved out of state 3 (**Figure \@ref(fig:mikk-hmm-asym)**).
+To examine these behaviours at a finer resolution, as for the pilot study described in \@ref(Pilot-chap), I again applied a hidden markov model (**HMM**) to classify the fishes' movements based on their distance and angle of travel between time intervals. I used the same method to select the best choice of time interval and number of states (**Figure \@ref(fig:mikk-param-comp)**). 
 
 (ref:mikk-param-comp) Comparison between HMM parameters. Horizontal axis: Mean concordance between states assigned by HMMs through a 2-fold cross-validation process. Vertical axis: Kruskal-Wallis statistic comparing strains based on the proportion of time spent in each HMM state, summed across all states. Size of points correspond to the interval, in seconds, between which the distance and angle of travel was calculated (Methods).
 
@@ -74,13 +74,15 @@ To examine these behaviours at a finer resolution, as for the pilot study descri
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/compare_params.png"), auto_pdf = T)
 ```
 
+Here I observed the same phenomenon where the parameter combinations that performed the best showed an asymmetry between some states that would make interpretation difficult. For example, a time interval of 0.08 seconds combined with a state space of 17 caused state 4 to appear to get carved out of state 3 (**Figure \@ref(fig:mikk-hmm-asym)**).
+
 (ref:mikk-hmm-asym) The best apparent combination of parameters (0.08 time interval with a 17-state space) created an asymmetry between states 3 and 4, which would causes difficulties in interpreting their biological relevance. 
 
 ```{r mikk-hmm-asym, echo = F, fig.cap = '(ref:mikk-hmm-asym)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_17_polar_all_dge.png"), auto_pdf = T)
 ```
 
-The best combination of parameters without this asymmetry was a time interval of 0.05 seconds with a state space of 15 (see the polar plots for the states in **Appendix \@ref(fig:hmm-states-0.05)**). However, due to a glitch in the video recording software, several videos recorded on 13 November 2019 were incorrectly recorded with a frame rate of 14 instead of the desired 30. The insufficient number of frames for those videos meant that it was impossible to measure the distance and angle of travel between a time interval as low as 0.05 seconds. So that these videos could be included in the dataset, I accordingly selected the combination of 15 states and a 0.08-second interval for all downstream analyses.
+The best combination of parameters without this asymmetry was a time interval of 0.05 seconds with a state space of 15 (see the polar plots for the states in **Appendix \@ref(fig:hmm-states-05)**). However, due to a glitch in the video recording software, several videos recorded on 13 November 2019 were incorrectly recorded with a frame rate of 14 instead of the desired 30. The insufficient number of frames for those videos meant that it was impossible to measure the distance and angle of travel between a time interval as low as 0.05 seconds. So that these videos could be included in the dataset, I accordingly selected the combination of 15 states and a 0.08-second interval for all downstream analyses.
 
 (ref:mikk-hmm-sym) The HMM states used for the downstream analysis, with the model classified based on the distance of travel (log~10~ pixels, radial axis) and angle of travel (angle). A straight forward movement would sit around 0°, a left movement around 270°, and a right movement around 90°. 
 
@@ -91,7 +93,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_polar_all_d
 
 ## Social genetic effects
 
-As discussed above, in this project our traits of interest include not only direct genetic behaviours, but also social genetic behaviours. We therefore sought to identify the MIKK panel lines that transmitted their behaviour onto the reference *`r colour_line("iCab")`* tank partners either to the largest or smallest degrees. I formulated two methods to measure this, referred to as a) HMM state co-occupancy; and b) reference deviation. The first, HMM state co-occupancy, measured the proportions of time that the *`r colour_line("iCab")`* reference fish spent in the same HMM state as its tank partner. The second, deviation of the reference fishes' deviation from the behaviour exhibited in the control condition, seeks to quantify the extent to which the *`r colour_line("iCab")`*'s behaviour changes when partnered with 
+As discussed above, in this project our traits of interest include not only direct genetic behaviours, but also social genetic behaviours. I therefore sought to identify the MIKK panel lines that transmitted their behaviour onto the reference *`r colour_line("iCab")`* tank partners either to the greatest or least extent. I formulated two methods to measure this, referred to as a) HMM state co-occupancy; and b) reference deviation. The first, HMM state co-occupancy, measured the proportions of time that the *`r colour_line("iCab")`* reference fish spent in the same HMM state as its tank partner. The second, deviation of the reference fishes' deviation from the behaviour exhibited in the control condition, seeks to quantify the extent to which the *`r colour_line("iCab")`*'s behaviour changes when partnered with 
 
 ### State co-occupancy
 
@@ -127,7 +129,7 @@ The first thing to note in this Figure is that *`r colour_line("iCab")`*'s devia
 
 ## Selection of lines for the F2 cross
 
-On the basis of the above findings, I selected 6 MIKK panel lines as the parental lines for the F2 cross (**Figure \@ref(F0-line-mean-speed-select**). Conceptually, I sought to select lines that diverged on two measures: a) bold-shy behaviours; and b) the extent to which the lines transmitted their behaviours onto their tank partners. As *`r colour_line("iCab")`* is a fast-moving line, it was more difficult to detect instances where fast-moving MIKK panel lines were influencing its behaviour. I was therefore more confident of identifying slow-movement/high-charisma lines, and so to increase the likelihood of identifying genetic variants that are responsible for a stronger transmission of slow-moving behaviours, I chose two slow-movement/high-charisma lines for the F2 cross: `r colour_line("18-2")` and `r colour_line("8-2")`. In the event that both lines possessed the same genetic variants that influence this behavioural transmission trait, it would vastly increase the power of detecting it during the genetic linkage analysis. Both these lines were one of the most slow-moving lines, had high levels of state co-occupancy during both assay components, and `r colour_line("18-2")` caused a high level of deviation from the *`r colour_line("iCab")`* control condition.
+On the basis of the above findings, I selected 6 MIKK panel lines as the parental lines for the F2 cross (**Figure \@ref(fig:F0-line-mean-speed-select**). Conceptually, I sought to select lines that diverged on two measures: a) bold-shy behaviours; and b) the extent to which the lines transmitted their behaviours onto their tank partners. As *`r colour_line("iCab")`* is a fast-moving line, it was more difficult to detect instances where fast-moving MIKK panel lines were influencing its behaviour. I was therefore more confident of identifying slow-movement/high-charisma lines, and so to increase the likelihood of identifying genetic variants that are responsible for a stronger transmission of slow-moving behaviours, I chose two slow-movement/high-charisma lines for the F2 cross: `r colour_line("18-2")` and `r colour_line("8-2")`. In the event that both lines possessed the same genetic variants that influence this behavioural transmission trait, it would vastly increase the power of detecting it during the genetic linkage analysis. Both these lines were one of the most slow-moving lines, had high levels of state co-occupancy during both assay components, and `r colour_line("18-2")` caused a high level of deviation from the *`r colour_line("iCab")`* control condition.
 
 (ref:F0-line-mean-speed-select) Mean speed of the MIKK panel and other strains over the course of the entire 20-minute video (measured as the distance traveled in pixels per 0.05 seconds), as shown above in Figure \@ref(fig:mikk-mean-speed) but now higlighting the MIKK lines that were selected for the F2 cross.
 
@@ -492,7 +494,7 @@ A second issue I plan to address is the failure of F2 reads to align to chromoso
 
 (ref:F2-coverage) Mean depth of sequencing coverage per chromosome for the 271 F2 samples used in this analysis.
 
-```{r F2-coverage, echo = F, fig.cap = '(ref:F2-coverage)', out.width='100%'}
+```{r F2-coverage, echo = F, fig.cap = '(ref:F2-coverage)', out.width='80%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/coverage_F2.png"), auto_pdf = T)
 ```
 
@@ -502,15 +504,17 @@ With respect to the genetic linkage analysis, due to the method I used to calcul
 
 Finally, I applied a separate genetic linkage association test for the state frequency of each HMM state, where it may be beneficial to apply a method that can combine the information across all states into a single phenotype (if not fewer phenotypes), and then run an association test on that reduced phenotype. There are a number of alternatives to consider, including principal components analysis (PCA) or MTAG (Multi-Trait Analysis of Genome-wide summary statistics) [@turleyMultitraitAnalysisGenomewide2018]. Ultimately the hope is that by leveraging the information about the frequencies in which the fishes occupy each state, combined across *all* states, while appropriately taking into account the interdependence of those frequencies (e.g. the more time a fish spends in state 3, the less time it is likely to spend in state 13), it will further strengthen these results.
 
-## Lessons
+## To do
 
 * Describe using a different MIKK panel line as the reference, preferring a moderate-moving line to enable easier detection of social genetic effects from fast-moving lines, i.e. which lines cause *`r colour_line("iCab")`* to move more boldly? 
-
-
 
 * Explain why I didn't choose 22-1 or 10-1.
 
 * Add path plots for interesting lines
+
+* Figure showing choices of crosses
+
+* Mention more interesting phenotypes like shoaling behaviours
 
 
 
