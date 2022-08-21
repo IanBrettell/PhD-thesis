@@ -2,7 +2,7 @@
 
 
 
-The purpose of the study described in this chapter was to run the behavioural analysis described in Chapter \@ref(Pilot-chap) over the MIKK panel described in Chapter \@ref(MIKK-genomes-chap), identify the lines that diverged in both their behaviour, and the level of transmission of their behaviour onto their *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* reference tank partner, and then use them as the parental strains in an F2 cross to attempt to identify the genetic variants associated with those differences.
+The purpose of the study described in this chapter was to run the behavioural analysis described in Chapter \@ref(Pilot-chap) over the MIKK panel described in Chapter \@ref(MIKK-genomes-chap), identify the lines that diverged in both (a) their own behaviour; and (b) the level of transmission of their behaviour onto their *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* reference tank partner, and then use them as the parental strains in an F2 cross to attempt to identify the genetic variants associated with those differences.
 
 ## The F2 cross experimental setup {#MIKK-F2-cross}
 
@@ -34,9 +34,23 @@ This figure shows that there are clear differences between some MIKK panel lines
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/line_mean_speed_variance_0.05_all} \caption{(ref:mikk-mean-speed-variance)}(\#fig:mikk-mean-speed-variance)
 \end{figure}
 
+To illustrate the differences between certain lines in terms of both direct and social genetic effects, in **Figure \@ref(fig:extreme-paths)** I have plotted the tracked paths for 3 lines 5 minutes into the 10-minute open field assay component: the slowest line \definecolor{22-1_FB737A}{HTML}{FB737A}\textcolor{22-1_FB737A}{22-1}, one of the other slowest lines \definecolor{18-2_FF66A6}{HTML}{FF66A6}\textcolor{18-2_FF66A6}{18-2}, and the fastest line \definecolor{10-1_F8766D}{HTML}{F8766D}\textcolor{10-1_F8766D}{10-1}. The fishes are coloured by their line, with \definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab} in dark grey. There appears to be a social genetic effect when comparing the behaviour of \definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab} when paired with the similarly slow-moving lines \definecolor{22-1_FB737A}{HTML}{FB737A}\textcolor{22-1_FB737A}{22-1} and \definecolor{18-2_FF66A6}{HTML}{FF66A6}\textcolor{18-2_FF66A6}{18-2}. At the other extreme, line \definecolor{10-1_F8766D}{HTML}{F8766D}\textcolor{10-1_F8766D}{10-1} has moved extremely quickly, spending much of its time moving along the boundaries of their test tanks. I understand from our collaborator Felix Loosli, a fish behaviour expert, that this movement along the boundaries of a tank is typical of medaka when introduced to a novel environment, and we observe it too with \definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab} when it is paired with line \definecolor{22-1_FB737A}{HTML}{FB737A}\textcolor{22-1_FB737A}{22-1}. 
+
+(ref:extreme-paths) Path plots for lines 22-1 (**A**), 18-2 (**B**) and 10-2 (**C**) 5 minutes into the open field assay for the first (left) and second (right) run with each line.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/path_plot_22-1_18-2_10-1_300} \caption{(ref:extreme-paths)}(\#fig:extreme-paths)
+\end{figure}
+
+Although lines \definecolor{22-1_FB737A}{HTML}{FB737A}\textcolor{22-1_FB737A}{22-1} and \definecolor{10-1_F8766D}{HTML}{F8766D}\textcolor{10-1_F8766D}{10-1} were the most extreme in terms of mean speed, I ruled them out of selection for the F2 cross for the following reasons. Our collaborators informed us that through a separate analysis on heartbeat phenotypes across the MIKK panel, they discovered that the heart of line \definecolor{22-1_FB737A}{HTML}{FB737A}\textcolor{22-1_FB737A}{22-1} often stops beating for up to minutes at a time. This may explain the lack of movement observed during our assay. The behaviours they exhibit may therefore not represent a phenotype related to the boldness-shyness axis, but rather an organ failure.
+
+On the other hand, line \definecolor{10-1_F8766D}{HTML}{F8766D}\textcolor{10-1_F8766D}{10-1} appeared to habituate to the assay by slowing down, rather than speeding up. That is to say, as the assay progressed, they slowed down their movement, and this suggests that their typical response to stress is to move faster rather than slower. However, as I am using speed as a proxy for boldness (where a quicker habituation to the assay, indicated by an increase in movement, suggests greater boldness), this would create difficulties in attributing a functional interpretation of behaviours in the F2 individuals, and for this reason I excluded line \definecolor{10-1_F8766D}{HTML}{F8766D}\textcolor{10-1_F8766D}{10-1}.
+
+
+
 ## HMM states
 
-To examine these behaviours at a finer resolution, as for the pilot study described in \@ref(Pilot-chap), I again applied a hidden markov model (**HMM**) to classify the fishes' movements based on their distance and angle of travel between time intervals. I used the same method to select the best choice of time interval and number of states (**Figure \@ref(fig:mikk-param-comp)**). Here I observed the same phenomenon where the parameter combinations that performed the best showed an asymmetry between some states that would make interpretation difficult. For example, a time interval of 0.08 seconds combined with a state space of 17 caused state 4 to appear to get carved out of state 3 (**Figure \@ref(fig:mikk-hmm-asym)**).
+To explore the behaviours of the MIKK panel at a finer resolution, as for the pilot study described in \@ref(Pilot-chap), I again applied a hidden markov model (**HMM**) to classify the fishes' movements based on their distance and angle of travel between time intervals. I used the same method to select the best choice of time interval and number of states (**Figure \@ref(fig:mikk-param-comp)**). 
 
 (ref:mikk-param-comp) Comparison between HMM parameters. Horizontal axis: Mean concordance between states assigned by HMMs through a 2-fold cross-validation process. Vertical axis: Kruskal-Wallis statistic comparing strains based on the proportion of time spent in each HMM state, summed across all states. Size of points correspond to the interval, in seconds, between which the distance and angle of travel was calculated (Methods).
 
@@ -44,13 +58,15 @@ To examine these behaviours at a finer resolution, as for the pilot study descri
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/compare_params} \caption{(ref:mikk-param-comp)}(\#fig:mikk-param-comp)
 \end{figure}
 
+Here I observed the same phenomenon where the parameter combinations that performed the best showed an asymmetry between some states that would make interpretation difficult. For example, a time interval of 0.08 seconds combined with a state space of 17 caused state 4 to appear to get carved out of state 3 (**Figure \@ref(fig:mikk-hmm-asym)**).
+
 (ref:mikk-hmm-asym) The best apparent combination of parameters (0.08 time interval with a 17-state space) created an asymmetry between states 3 and 4, which would causes difficulties in interpreting their biological relevance. 
 
 \begin{figure}
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/0.08_17_polar_all_dge} \caption{(ref:mikk-hmm-asym)}(\#fig:mikk-hmm-asym)
 \end{figure}
 
-The best combination of parameters without this asymmetry was a time interval of 0.05 seconds with a state space of 15 (see the polar plots for the states in **Appendix \@ref(fig:hmm-states-0.05)**). However, due to a glitch in the video recording software, several videos recorded on 13 November 2019 were incorrectly recorded with a frame rate of 14 instead of the desired 30. The insufficient number of frames for those videos meant that it was impossible to measure the distance and angle of travel between a time interval as low as 0.05 seconds. So that these videos could be included in the dataset, I accordingly selected the combination of 15 states and a 0.08-second interval for all downstream analyses.
+The best combination of parameters without this asymmetry was a time interval of 0.05 seconds with a state space of 15 (see the polar plots for the states in **Appendix \@ref(fig:hmm-states-05)**). However, due to a glitch in the video recording software, several videos recorded on 13 November 2019 were incorrectly recorded with a frame rate of 14 instead of the desired 30. The insufficient number of frames for those videos meant that it was impossible to measure the distance and angle of travel between a time interval as low as 0.05 seconds. So that these videos could be included in the dataset, I accordingly selected the combination of 15 states and a 0.08-second interval for all downstream analyses.
 
 (ref:mikk-hmm-sym) The HMM states used for the downstream analysis, with the model classified based on the distance of travel (log~10~ pixels, radial axis) and angle of travel (angle). A straight forward movement would sit around 0°, a left movement around 270°, and a right movement around 90°. 
 
@@ -61,7 +77,7 @@ The best combination of parameters without this asymmetry was a time interval of
 
 ## Social genetic effects
 
-As discussed above, in this project our traits of interest include not only direct genetic behaviours, but also social genetic behaviours. We therefore sought to identify the MIKK panel lines that transmitted their behaviour onto the reference *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* tank partners either to the largest or smallest degrees. I formulated two methods to measure this, referred to as a) HMM state co-occupancy; and b) reference deviation. The first, HMM state co-occupancy, measured the proportions of time that the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* reference fish spent in the same HMM state as its tank partner. The second, deviation of the reference fishes' deviation from the behaviour exhibited in the control condition, seeks to quantify the extent to which the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}*'s behaviour changes when partnered with 
+As discussed above, in this project our traits of interest include not only direct genetic behaviours, but also social genetic behaviours. I therefore sought to identify the MIKK panel lines that transmitted their behaviour onto the reference *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* tank partners either to the greatest or least extent. I formulated two methods to measure this, referred to as a) HMM state co-occupancy; and b) reference deviation. The first, HMM state co-occupancy, measured the proportions of time that the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* reference fish spent in the same HMM state as its tank partner. The second, deviation of the reference fishes' deviation from the behaviour exhibited in the control condition, seeks to quantify the extent to which the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}*'s behaviour changes when partnered with 
 
 ### State co-occupancy
 
@@ -97,7 +113,9 @@ The first thing to note in this Figure is that *\definecolor{iCab_424B4D}{HTML}{
 
 ## Selection of lines for the F2 cross
 
-On the basis of the above findings, I selected 6 MIKK panel lines as the parental lines for the F2 cross (**Figure \@ref(F0-line-mean-speed-select**). Conceptually, I sought to select lines that diverged on two measures: a) bold-shy behaviours; and b) the extent to which the lines transmitted their behaviours onto their tank partners. As *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* is a fast-moving line, it was more difficult to detect instances where fast-moving MIKK panel lines were influencing its behaviour. I was therefore more confident of identifying slow-movement/high-charisma lines, and so to increase the likelihood of identifying genetic variants that are responsible for a stronger transmission of slow-moving behaviours, I chose two slow-movement/high-charisma lines for the F2 cross: \definecolor{18-2_FF66A6}{HTML}{FF66A6}\textcolor{18-2_FF66A6}{18-2} and \definecolor{8-2_FF699C}{HTML}{FF699C}\textcolor{8-2_FF699C}{8-2}. In the event that both lines possessed the same genetic variants that influence this behavioural transmission trait, it would vastly increase the power of detecting it during the genetic linkage analysis. Both these lines were one of the most slow-moving lines, had high levels of state co-occupancy during both assay components, and \definecolor{18-2_FF66A6}{HTML}{FF66A6}\textcolor{18-2_FF66A6}{18-2} caused a high level of deviation from the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* control condition.
+On the basis of the above findings, I selected 6 MIKK panel lines as the parental lines for the F2 cross (**Figure \@ref(fig:F0-line-mean-speed-select)**). Conceptually, I sought to select lines that diverged on two measures: a) bold-shy behaviours; and b) the extent to which the lines transmitted their behaviours onto their tank partners. 
+
+As *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* is a fast-moving line, it was more difficult to detect instances where fast-moving MIKK panel lines were influencing its behaviour. I was therefore more confident of identifying slow-movement/high-charisma lines, and so to increase the likelihood of identifying genetic variants that are responsible for a stronger transmission of slow-moving behaviours, I chose two slow-movement/high-charisma lines for the F2 cross: \definecolor{18-2_FF66A6}{HTML}{FF66A6}\textcolor{18-2_FF66A6}{18-2} and \definecolor{8-2_FF699C}{HTML}{FF699C}\textcolor{8-2_FF699C}{8-2}. In the event that both lines possessed the same genetic variants that influence this behavioural transmission trait, it would vastly increase the power of detecting it during the genetic linkage analysis. Both these lines were one of the most slow-moving lines, had high levels of state co-occupancy during both assay components, and \definecolor{18-2_FF66A6}{HTML}{FF66A6}\textcolor{18-2_FF66A6}{18-2} caused a high level of deviation from the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* control condition.
 
 (ref:F0-line-mean-speed-select) Mean speed of the MIKK panel and other strains over the course of the entire 20-minute video (measured as the distance traveled in pixels per 0.05 seconds), as shown above in Figure \@ref(fig:mikk-mean-speed) but now higlighting the MIKK lines that were selected for the F2 cross.
 
@@ -115,6 +133,13 @@ In addition to these extreme lines, I also selected a line that was intermediate
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/line_mean_speed_variance_selected} \caption{(ref:F0-line-mean-speed-var-select)}(\#fig:F0-line-mean-speed-var-select)
 \end{figure}
 
+The selection of parental lines for the F2 cross indicating their putative position across the two axes of interest (movement, and behavioural transmission or 'charisma') are set out below in **Figure \@ref(fig:F0-line-select-schema)**.
+
+(ref:F0-line-select-schema) Schema of the MIKK panel lines selected as the parental strains for the multi-way F2 cross, indicating their intended position across the two axes of interest (movement, and behavioural transmission or 'charisma').
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/line_selection_schema} \caption{(ref:F0-line-select-schema)}(\#fig:F0-line-select-schema)
+\end{figure}
 
 ## Direct genetic effects
 
@@ -212,6 +237,8 @@ novel object & 11 & 28.77 & 7.71e-03\\
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/select_0.08_15_sge_no} \caption{(ref:F2-time-dge-no)}(\#fig:F2-time-sge-no)
 \end{figure}
 
+To assist with interpretation of the relationships between the HMM states and the types of behaviours exhibited, I have provided in **Appendix \@ref(four-panel-app)** four-panel plots showing a) a frame grab from the raw four-quadrant video; b) path plots for both fishes; c) path plots for the test fishes coloured by HMM state; and d) path plots for the reference fishes coloured by HMM state, all taken at the 300-second mark (5 minutes) of each 10-minute assay component. 
+
 ## F2 generation
 
 ### Behavioural data collection
@@ -263,7 +290,8 @@ To ensure that the predicted HMM states for behaviour were consistent across bot
 ```r
 invnorm = function(x) {
   res = rank(x)
-  # The arbitrary 0.5 value is added to the denominator below to avoid `qnorm()` returning 'Inf' for the last-ranked value
+  # The arbitrary 0.5 value is added to the denominator below 
+  # to avoid `qnorm()` returning 'Inf' for the last-ranked value
   res = qnorm(res/(length(res)+0.5))
   return(res)
 }
@@ -301,7 +329,7 @@ I then took these HMM-generated haplotype block calls and used them to impute ea
 
 For the purpose of using the *GCTA* software package [@yangGCTAToolGenomewide2011] for the genetic linkage analysis,  That software requires the construction of a genetic relationship matrix (**GRM**) $\textbf{A} = \textbf{WW}'/N$. $\textbf{W}$ is a standardised genotype matrix with the $ij^{th}$ element $w_{ij} = (x_{ij} - 2p_i) / \sqrt{(2p_i(1-p_i)}$, where $x_{ij}$ is the number of copies of the reference allele for the $i^{th}$ SNP of the $j^{th}$ individual and $p_i$ is the frequency of the reference allele [@yangGCTAToolGenomewide2011].
 
-For the GRM, I first filtered the .bed for SNPs that had no missing calls for any samples ($M_{SNPs}$ = 44,360). I then used these SNPs to construct a "leave-one-chromosome-out" (**LOCO**) genetic relationship matrix for each chromosome -- that is, if the "focal" chromosome was chr1, I would exclude the SNPs on that chromosome before constructing the GRM. To illustrate, **Figure \@ref(fig:F2-grm)** is a GRM constructed using all 44,360 non-missing SNPs. However, given the relatively small amount of non-missing SNPs on each chromosome, the number of SNPs on the focal chromosome that were excluded was small, resulting in GRMs that appear almost identical by eye. See the LOCO-GRM for chromosome 1 in **Appendix \@ref(fig:loco-grm-chr1)**. The individuals from each cross neatly cluster together, and the individuals that share one parental strain cluster nearby.
+For the GRM, I first filtered the .bed for SNPs that had no missing calls for any samples ($M_{SNPs}$ = 44,360). I then used these SNPs to construct a "leave-one-chromosome-out" (**LOCO**) genetic relationship matrix for each chromosome -- that is, if the "focal" chromosome was chr1, I would exclude the SNPs on that chromosome before constructing the GRM. To illustrate, **Figure \@ref(fig:F2-grm)** is a GRM constructed using all 44,360 non-missing SNPs. However, given the relatively small amount of non-missing SNPs on each chromosome, the number of SNPs on the focal chromosome that were excluded was small, resulting in GRMs that appear almost identical by eye -- see the LOCO-GRM for chromosome 1 in **Appendix \@ref(fig:loco-grm-chr1)**. The individuals from each cross neatly cluster together, and the individuals that share one parental strain cluster nearby.
 
 (ref:F2-grm) Genetic relationship matrix for 271 F2 samples based on 44,360 non-missing SNPs.
 
@@ -418,7 +446,7 @@ One SNP, 10:15,319,434, was significant for DGE for frequencies in both state 3 
 (ref:sig-snp-10-15mb) State 3 frequency during the novel object assay for counts of the alternative allele (T) at SNP 10:15,319,434. The boxes are coloured on the left by the paternal line, and on the right by the maternal line.
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{figs/mikk_behaviour/sig_snps_boxplots/3-10:15319434} \caption{(ref:sig-snp-10-15mb)}(\#fig:sig-snp-10-15mb)
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/sig_snps_boxplots/3-10:15319434} \caption{(ref:sig-snp-10-15mb)}(\#fig:sig-snp-10-15mb)
 \end{figure}
 
 The second predicted missense variant of note was detected for SGE in the open field assay for frequencies in state 13. The locus 12:5,136,828 maps to gene ENSORLG00000002961, which is described as a complement *C9*. Discovered phenotypes for species orthologues include reduced prepulse inhibition and heart phenotypes in mice [Mouse Genome Database, @blakeMouseGenomeDatabase2021], and neurodevelopmental disorders in rats [Rat Genome Database, @smithYearRatRat2020]. Here, in the F2 individuals, it appears to have an inconsistent effect in the behaviour of the test fishes, but apparently causes the reference fish to increase the proportion of time it spends in the fast-moving state 13 (**Figure \@ref(fig:F2-man-sge-of-13)**).
@@ -474,6 +502,10 @@ Similarly, lines \definecolor{13-2_F57A5F}{HTML}{F57A5F}\textcolor{13-2_F57A5F}{
 
 One way of avoiding these issues would have been to used a more quantitative, objective approach to selecting the lines. For example, I could have used Mann-Whitney tests to quantify the levels of differences between pairs of lines for a trait of interest (as I did for **Figure \@ref(fig:mikk-param-comp)**), and then select the lines that maximised that statistic. Such metrics would still perhaps need to be qualitatively weighted against other relevant traits, such as within-line variance. Nevertheless, my downstream analyses show that despite not having potentially selected the ideal lines for the F2 cross, the differences observed were sufficient to identify genetic loci associated with our phenotypes of interest, even with a relatively small sample size of 271 F2 individuals.
 
+Another aspect of the analysis that could have been improved was to use one or more MIKK panel lines as the reference line instead of \definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}. As previously mentioned, \definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab} is a relatively fast line, which made it difficult to detect social genetic effects from similarly fast-moving lines. Instead, we could have made use of the behavioural variance across the MIKK panel to choose a reference line that exhibits moderate levels of movement. However, we would not be able to assess the levels of movement across the MIKK panel without first assaying the panel with a different strain, and we chose \definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab} because we not only had a good understanding of its behavioural traits based on our findings from Chapter \@ref(Pilot-chap), but also because it has high fecundity, which made many replicates available and in turn allowed us to avoid using the same reference fish more than once within 24 hours. Now that we have carried out this analysis, we would be able to select a more appropriate line as the reference in any future analyses.
+
+The other benefit from using a MIKK panel line as the reference fish would be that it would open up the possibility of exploring social genetic effect interactions. For example, if we used two different MIKK lines as the reference, we could explore how those lines differ in the degree to which they are influenced by their tank partner. To state the issue inversely, it would reveal differences in the extent to which different lines transmit their behaviour onto their (reference) tank partner, depending on both of their genetics. A question for further studies could therefore be framed as, 'given line \definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab} appears to possess a high level of charisma, is that level consistent when they are paired with different MIKK panel lines, and if it differs across lines, then why?' Due to the relative onerousness of running this behavioural assay, such experiments would involve a substantial time-commitment, but in light of the findings presented here, the investigations could be restricted to a subset of the MIKK panel that display interesting behavioural phenotypes. 
+
 ## Future directions
 
 Our collaborators are in the process of breeding more F2 individuals to increase the sample size for this analysis. I have suggested that we replace line 21-2 with either 13-2 or 23-1, which both show lower within-line variance in mean speed, with similarly high levels of speed and behavioural transmission (as measured by state co-occupancy and *iCab* reference deviation). Any additional F2 individuals will still need to be phenotyped and sequenced, and the phenotype data collection (i.e. video recording the behavioural assay) can be relatively laborious, so this process will likely take some time.
@@ -485,24 +517,14 @@ A second issue I plan to address is the failure of F2 reads to align to chromoso
 (ref:F2-coverage) Mean depth of sequencing coverage per chromosome for the 271 F2 samples used in this analysis.
 
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{figs/mikk_behaviour/coverage_F2} \caption{(ref:F2-coverage)}(\#fig:F2-coverage)
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/coverage_F2} \caption{(ref:F2-coverage)}(\#fig:F2-coverage)
 \end{figure}
 
-A third issue is the matter of selecting the optimal HMM parameters for calling the recombination blocks, as described in Chapter \@ref(Somite-chap). For the analysis in this current Chapter I used the same HMM parameters as I had used there. In that Chapter, I used the p-values from the resulting genetic linkage analysis as a rough measure of genotyping quality (assuming that lower p-values were driving by more accurate genotypes), together with a qualitative assessment of how many crossovers I expected to observe in a particular chromosome for a subset of the sample. The issue can be resolved by obtaining "ground truth" genotype calls through high-coverage sequence data for a set of samples that have also been shallow-sequenced. This would allow one to compare the HMM recombination block calls with the ground truth genotypes, and thereby train the model to optimise the accuracy of its predictions for the locations of the recombination sites (while validating the trained parameters with a test dataset). I expect the improved genotype calls will further improve the power to detect genetic variants.
+A third issue is the matter of selecting the optimal HMM parameters for calling the recombination blocks, as described in Chapter \@ref(Somite-chap). For the analysis in this current Chapter I used the same HMM parameters as I had used there. In that Chapter, I used the p-values from the resulting genetic linkage analysis as a rough measure of genotyping quality (assuming that lower p-values were driving by more accurate genotypes), together with a qualitative assessment of how many crossovers I expected to observe in a particular chromosome for a subset of the sample. The issue can be resolved by obtaining "ground truth" genotype calls through high-coverage sequence data for a set of samples that have also been shallow-sequenced. This would allow one to compare the HMM recombination block calls with the ground truth genotypes, and thereby train the model to optimise the accuracy of its predictions for the locations of the recombination sites (using a test dataset to validate the parameters). I expect the improved genotype calls will further improve the power to detect genetic variants.
 
 With respect to the genetic linkage analysis, due to the method I used to calculate the genetic relationship matrix (**GRM**), I was compelled to exclude all SNPs that were missing calls in any of the samples, reducing the number of SNPs to merely ~40K out of the ~20M in the full dataset. Not only does this reduce the accuracy of the GRM as a means of capturing the relative relatedness between samples, but the problem will only be exacerbated with the inclusion of additional samples (as the likelihood of a SNP having at least one sample with a missing call will increase with the number of samples). I will therefore adapt my method to include SNPs with missing calls, which should further increase statistical power.
 
-Finally, I applied a separate genetic linkage association test for the state frequency of each HMM state, where it may be beneficial to apply a method that can combine the information across all states into a single phenotype (if not fewer phenotypes), and then run an association test on that reduced phenotype. There are a number of alternatives to consider, including principal components analysis (PCA) or MTAG (Multi-Trait Analysis of Genome-wide summary statistics) [@turleyMultitraitAnalysisGenomewide2018]. Ultimately the hope is that by leveraging the information about the frequencies in which the fishes occupy each state, combined across *all* states, while appropriately taking into account the interdependence of those frequencies (e.g. the more time a fish spends in state 3, the less time it is likely to spend in state 13), it will further strengthen these results.
+Finally, I applied a separate genetic linkage association test for the state frequency of each HMM state, where it may be beneficial to apply a method that can combine the information across all states into a single phenotype (if not fewer phenotypes), and then run an association test on that reduced phenotype. There are a number of alternatives to consider, including principal components analysis (PCA) of the state frequencies, or the software MTAG (Multi-Trait Analysis of Genome-wide summary statistics) [@turleyMultitraitAnalysisGenomewide2018] which can combine the summary statistics from multiple genetic association tests. Ultimately, the hope is that by leveraging the information about the frequencies in which the fishes occupy each state, combined across *all* states, while appropriately taking into account the interdependence of those frequencies (e.g. the more time a fish spends in state 3, the less time it is likely to spend in state 13), it will further strengthen these results.
 
-## Lessons
-
-* Describe using a different MIKK panel line as the reference, preferring a moderate-moving line to enable easier detection of social genetic effects from fast-moving lines, i.e. which lines cause *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* to move more boldly? 
-
-* Explain why I didn't choose 22-1 or 10-1.
-
-* Add path plots for interesting lines
-
-* Figure showing choices of crosses
-
-
+Aside from modifications that are designed to increase statistical power, there is also capacity to improve the way that I phenotype the individuals, and in particular how I characterise social genetic effects. In this analysis I have only used two behavioural variables: distance and angle of travel. This behavioural dataset is extremely rich, in that there are myriad variables that could be extracted from the videos. Shoaling traits would have special relevance to the study of social genetic effects. For instance, one could extract three variables that would be associated with shoaling behaviours: a) distance between tank partners; b) synchrony in speed; and c) parallelism in direction of travel. These three variables could then be reduced down to two with an HMM (i.e. one state representing "shoaling", and another representing "not shoaling"). The frequencies that the different MIKK lines spend in these states would allow one to rank them by the degree of shoaling behaviour they exhibit, and this would likely be a far more accurate representation of social genetics than what I have shown here. 
 

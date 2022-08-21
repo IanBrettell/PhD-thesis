@@ -1,6 +1,6 @@
 # (APPENDIX) Appendix {-}
 
-# Chapter \@ref(MIKK-F2-chap): supplementary information
+# MIKK behaviour supplementary information
 
 ## 15 HMM states with 0.05 second interval
 
@@ -8,6 +8,206 @@
 
 \begin{figure}
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/0.05_15_polar_all_dge} \caption{(ref:hmm-states-05)}(\#fig:hmm-states-05)
+\end{figure}
+
+## Four-panel plots for MIKK lines selected for the F2 cross {#four-panel-app}
+
+All frame grabs were taken at the 300th second (5-minute mark) of each 10-minute assay component.
+
+### Open field
+
+#### 8-2
+
+(ref:4p-8-2-of-A) Line 8-2, open field, run A.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191114_1040_8-2_L_A_300} \caption{(ref:4p-8-2-of-A)}(\#fig:4p-8-2-of-A)
+\end{figure}
+
+(ref:4p-8-2-of-B) Line 8-2, open field, run B.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191118_1224_8-2_R_B_300} \caption{(ref:4p-8-2-of-B)}(\#fig:4p-8-2-of-B)
+\end{figure}
+
+#### 18-2
+
+(ref:4p-18-2-of-A) Line 18-2, open field, run A.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191112_1236_18-2_L_A_300} \caption{(ref:4p-18-2-of-A)}(\#fig:4p-18-2-of-A)
+\end{figure}
+
+(ref:4p-18-2-of-B) Line 18-2, open field, run B.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191116_1039_18-2_L_B_300} \caption{(ref:4p-18-2-of-B)}(\#fig:4p-18-2-of-B)
+\end{figure}
+
+(ref:4p-18-2-of-C) Line 18-2, open field, run C.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191119_1459_18-2_R_C_300} \caption{(ref:4p-18-2-of-C)}(\#fig:4p-18-2-of-C)
+\end{figure}
+
+#### 50-2
+
+(ref:4p-50-2-of-A) Line 50-2, open field, run A.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191114_1305_50-2_R_A_300} \caption{(ref:4p-50-2-of-A)}(\#fig:4p-50-2-of-A)
+\end{figure}
+
+(ref:4p-50-2-of-B) Line 50-2, open field, run B.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191116_1438_50-2_R_B_300} \caption{(ref:4p-50-2-of-B)}(\#fig:4p-50-2-of-B)
+\end{figure}
+
+(ref:4p-50-2-of-C) Line 50-2, open field, run C.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191120_1150_50-2_R_C_300} \caption{(ref:4p-50-2-of-C)}(\#fig:4p-50-2-of-C)
+\end{figure}
+
+#### 38-2
+
+(ref:4p-38-2-of-A) Line 38-2, open field, run A.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191112_1456_38-2_L_A_300} \caption{(ref:4p-38-2-of-A)}(\#fig:4p-38-2-of-A)
+\end{figure}
+
+(ref:4p-38-2-of-B) Line 38-2, open field, run B.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191116_1203_38-2_L_B_300} \caption{(ref:4p-38-2-of-B)}(\#fig:4p-38-2-of-B)
+\end{figure}
+
+#### 21-2
+
+(ref:4p-21-2-of-A) Line 38-2, open field, run A.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191113_1527_21-2_L_A_300} \caption{(ref:4p-21-2-of-A)}(\#fig:4p-21-2-of-A)
+\end{figure}
+
+(ref:4p-21-2-of-B) Line 38-2, open field, run B.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191116_1309_21-2_R_B_300} \caption{(ref:4p-21-2-of-B)}(\#fig:4p-21-2-of-B)
+\end{figure}
+
+#### 40-1
+
+(ref:4p-40-1-of-A) Line 40-1, open field, run A.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191114_1217_40-1_L_A_300} \caption{(ref:4p-40-1-of-A)}(\#fig:4p-40-1-of-A)
+\end{figure}
+
+(ref:4p-40-1-of-B) Line 40-1, open field, run B.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191118_1129_40-1_R_B_300} \caption{(ref:4p-40-1-of-B)}(\#fig:4p-40-1-of-B)
+\end{figure}
+
+### Novel object
+
+#### 8-2
+
+(ref:4p-8-2-no-A) Line 8-2, novel object, run A.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191114_1040_8-2_L_A_300} \caption{(ref:4p-8-2-no-A)}(\#fig:4p-8-2-no-A)
+\end{figure}
+
+(ref:4p-8-2-no-B) Line 8-2, novel object, run B.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191118_1224_8-2_R_B_300} \caption{(ref:4p-8-2-no-B)}(\#fig:4p-8-2-no-B)
+\end{figure}
+
+#### 18-2
+
+(ref:4p-18-2-no-A) Line 18-2, novel object, run A.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191112_1236_18-2_L_A_300} \caption{(ref:4p-18-2-no-A)}(\#fig:4p-18-2-no-A)
+\end{figure}
+
+(ref:4p-18-2-no-B) Line 18-2, novel object, run B.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1039_18-2_L_B_300} \caption{(ref:4p-18-2-no-B)}(\#fig:4p-18-2-no-B)
+\end{figure}
+
+(ref:4p-18-2-no-C) Line 18-2, novel object, run C.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191119_1459_18-2_R_C_300} \caption{(ref:4p-18-2-no-C)}(\#fig:4p-18-2-no-C)
+\end{figure}
+
+#### 50-2
+
+(ref:4p-50-2-no-A) Line 50-2, novel object, run A.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191114_1305_50-2_R_A_300} \caption{(ref:4p-50-2-no-A)}(\#fig:4p-50-2-no-A)
+\end{figure}
+
+(ref:4p-50-2-no-B) Line 50-2, novel object, run B.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1438_50-2_R_B_300} \caption{(ref:4p-50-2-no-B)}(\#fig:4p-50-2-no-B)
+\end{figure}
+
+(ref:4p-50-2-no-C) Line 50-2, novel object, run C.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191120_1150_50-2_R_C_300} \caption{(ref:4p-50-2-no-C)}(\#fig:4p-50-2-no-C)
+\end{figure}
+
+#### 38-2
+
+(ref:4p-38-2-no-A) Line 38-2, novel object, run A.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191112_1456_38-2_L_A_300} \caption{(ref:4p-38-2-no-A)}(\#fig:4p-38-2-no-A)
+\end{figure}
+
+(ref:4p-38-2-no-B) Line 38-2, novel object, run B.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1203_38-2_L_B_300} \caption{(ref:4p-38-2-no-B)}(\#fig:4p-38-2-no-B)
+\end{figure}
+
+#### 21-2
+
+(ref:4p-21-2-no-A) Line 38-2, novel object, run A.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191113_1527_21-2_L_A_300} \caption{(ref:4p-21-2-no-A)}(\#fig:4p-21-2-no-A)
+\end{figure}
+
+(ref:4p-21-2-no-B) Line 38-2, novel object, run B.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1309_21-2_R_B_300} \caption{(ref:4p-21-2-no-B)}(\#fig:4p-21-2-no-B)
+\end{figure}
+
+#### 40-1
+
+(ref:4p-40-1-no-A) Line 40-1, novel object, run A.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191114_1217_40-1_L_A_300} \caption{(ref:4p-40-1-no-A)}(\#fig:4p-40-1-no-A)
+\end{figure}
+
+(ref:4p-40-1-no-B) Line 40-1, novel object, run B.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191118_1129_40-1_R_B_300} \caption{(ref:4p-40-1-no-B)}(\#fig:4p-40-1-no-B)
 \end{figure}
 
 ## HMM state time dependence for all MIKK panel lines
@@ -64,7 +264,7 @@
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/grm_loco_man_chr1} \caption{(ref:loco-grm-chr1)}(\#fig:loco-grm-chr1)
 \end{figure}
 
-# Supplmentary information for Chapter \@ref(Fst-chap)
+# Human Fst supplmentary information
 
 ## eCDF of all polygenic traits in the GWAS Catalog ranked by ${D_t^S}$ 
 

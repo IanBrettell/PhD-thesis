@@ -1,7 +1,7 @@
 ---
 title: "Japanese courage: a genetic analysis of complex traits in medaka fish and humans"
 author: "Ian Brettell"
-date: "2022-08-20"
+date: "2022-08-21"
 site: bookdown::bookdown_site
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
@@ -10,7 +10,7 @@ description: |
 documentclass: book
 bibliography: [book.bib, packages.bib]
 #csl: chicago-fullnote-bibliography.csl
-mainfont: Libre Baskerville
+#mainfont: Libre Baskerville
 ---
 
 # About {-}
