@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.9)  21 AUG 2022 17:06
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.9)  21 AUG 2022 19:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -412,8 +412,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip64
-)
-No file PhD-thesis.aux.
+) (./PhD-thesis.aux)
 \openout1 = `PhD-thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
@@ -670,11 +669,9 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 110.
 \c@lstlisting=\count320
 Package hyperref Info: Link coloring OFF on input line 110.
+(./PhD-thesis.out) (./PhD-thesis.out)
 \@outlinefile=\write3
 \openout3 = `PhD-thesis.out'.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 112.
@@ -710,16 +707,32 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [2
 
-]
-No file PhD-thesis.toc.
+] (./PhD-thesis.toc
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00092pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.00064pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.00046pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 2.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 2.
+[3] [4])
 \tf@toc=\write4
 \openout4 = `PhD-thesis.toc'.
 
-[3] [4
+[5] [6
 
-] [5] [6]
+] [7] [8]
 Chapter 1.
-[7
+[9
 
 ]
 File: figs/introduction/homunculus.png Graphic file (type bmp)
@@ -727,16 +740,16 @@ File: figs/introduction/homunculus.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[8]
+[10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[9]
+[11]
 File: figs/introduction/megatherium.pdf Graphic file (type pdf)
 <use figs/introduction/megatherium.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[10] [11] [12] [13] [14
+[12] [13] [14] [15] [16
 
 ]
 Chapter 2.
@@ -745,60 +758,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--232
 []\TU/lmr/bx/n/14.4 The Medaka Inbred Kiyosu-Karlruhe
  []
 
-
-LaTeX Warning: Reference `Pilot-chap' on page 15 undefined on input line 234.
-
-
-LaTeX Warning: Reference `MIKK-F2-chap' on page 15 undefined on input line 234.
-
-[15] [16]
-
-LaTeX Warning: Reference `inbreeding-sec' on page 17 undefined on input line 244.
-
-
-LaTeX Warning: Reference `introgression-sec' on page 17 undefined on input line 245.
-
-
-LaTeX Warning: Reference `nuc-div' on page 17 undefined on input line 245.
-
-
-LaTeX Warning: Reference `ld-decay-sec' on page 17 undefined on input line 245.
-
-
-LaTeX Warning: Reference `mikksv-sec' on page 17 undefined on input line 245.
-
-
+[17] [18]
 Underfull \hbox (badness 2351) in paragraph at lines 248--248
 []\TU/lmr/bx/n/14.4 Genomic characterisation of the MIKK
  []
 
-
-LaTeX Warning: Reference `inbreeding-sec' on page 17 undefined on input line 253.
-
-
-LaTeX Warning: Reference `nuc-div' on page 17 undefined on input line 253.
-
-
-LaTeX Warning: Reference `ld-decay-sec' on page 17 undefined on input line 253.
-
-[17]
-
-LaTeX Warning: Reference `fig:InbreedingFigure' on page 18 undefined on input line 260.
-
-
-LaTeX Warning: Reference `fig:InbreedingFigure' on page 18 undefined on input line 260.
-
-
-LaTeX Warning: Reference `fig:InbreedingFigure' on page 18 undefined on input line 260.
-
-
-LaTeX Warning: Reference `fig:InbreedingFigure' on page 18 undefined on input line 260.
-
+[19]
 File: figs/mikk_genome/20211213_final_figure.png Graphic file (type bmp)
 <figs/mikk_genome/20211213_final_figure.png>
-
-LaTeX Warning: Reference `non-sib-calls' on page 18 undefined on input line 271.
-
 
 Underfull \hbox (badness 2197) in paragraph at lines 271--272
 \TU/lmr/m/n/10 for the established medaka inbred lines \TU/lmr/m/it/10 HdrR \TU/lmr/m/n/10 (southern Japan), \TU/lmr/m/it/10 HNI
@@ -809,110 +776,41 @@ Underfull \hbox (badness 2126) in paragraph at lines 271--272
 \TU/lmr/m/n/10 ancestor of all three strains.(“Index of /Pub/Release-102/Emf/Ensembl-
  []
 
-[18] [19]
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 273.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 273.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 273.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 273.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 273.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 273.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 273.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 273.
-
-LaTeX Warning: Reference `fig:ABBABABA' on page 20 undefined on input line 273.
-
+[20] [21]
 File: figs/mikk_genome/07_introgression.png Graphic file (type bmp)
 <figs/mikk_genome/07_introgression.png>
-
-LaTeX Warning: Reference `non-sib-calls' on page 20 undefined on input line 286.
-
-
-LaTeX Warning: Reference `fig:NucleotideDiversity' on page 20 undefined on input line 286.
-
-[20] [21]
+[22] [23]
 File: figs/mikk_genome/supp_01_pi_circos.png Graphic file (type bmp)
 <figs/mikk_genome/supp_01_pi_circos.png>
-
-LaTeX Warning: Reference `fig:SVInvs' on page 22 undefined on input line 294.
-
 File: figs/mikk_genome/20210224_sv_invs_lines.png Graphic file (type bmp)
 <figs/mikk_genome/20210224_sv_invs_lines.png>
-
-LaTeX Warning: Reference `mikksv-sec' on page 22 undefined on input line 301.
-
-
-LaTeX Warning: Reference `mikksv-sec' on page 22 undefined on input line 301.
-
-
-LaTeX Warning: Reference `non-sib-calls' on page 22 undefined on input line 307.
-
-
-LaTeX Warning: Reference `fig:LDdecay' on page 22 undefined on input line 309.
-
-[22] [23] [24]
-
-LaTeX Warning: Reference `fig:LDdecay' on page 25 undefined on input line 311.
-
+[24] [25] [26]
 File: figs/mikk_genome/08_ld_decay.png Graphic file (type bmp)
 <figs/mikk_genome/08_ld_decay.png>
-
-LaTeX Warning: Reference `fig:repeats' on page 25 undefined on input line 319.
-
 File: figs/mikk_genome/20210401_hdrr_repeats_final.png Graphic file (type bmp)
 <figs/mikk_genome/20210401_hdrr_repeats_final.png>
 
 LaTeX Warning: Float too large for page by 17.49763pt on input line 325.
 
-[25] [26] [27]
 
-LaTeX Warning: Reference `fig:SV-main' on page 28 undefined on input line 332.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-LaTeX Warning: Reference `fig:SV-main' on page 28 undefined on input line 332.
-
-
-LaTeX Warning: Reference `fig:SV-main' on page 28 undefined on input line 332.
-
-
-LaTeX Warning: Reference `fig:repeats' on page 28 undefined on input line 332.
-
-
-LaTeX Warning: Reference `fig:SV-main' on page 28 undefined on input line 334.
-
-
-LaTeX Warning: Reference `fig:SV-main' on page 28 undefined on input line 334.
-
-[28]
+[27] [28] [29] [30]
 File: figs/mikk_genome/20210408_sv_main.png Graphic file (type bmp)
 <figs/mikk_genome/20210408_sv_main.png>
 
 LaTeX Warning: Float too large for page by 29.05763pt on input line 340.
 
-
-LaTeX Warning: Reference `MIKK-F2-chap' on page 29 undefined on input line 349.
-
-[29] [30] [31] [32
+[31] [32] [33] [34
 
 ]
 Chapter 3.
-[33]
+[35]
 Overfull \hbox (102.9723pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 34 \TU/lmr/m/sl/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
+\TU/lmr/m/n/10 36 \TU/lmr/m/sl/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
  []
 
-[34]
-
-LaTeX Warning: Reference `fig:behavioural-schema' on page 35 undefined on input line 376.
-
-[35]
+[36] [37]
 File: figs/pilot/experimental_schema.png Graphic file (type bmp)
 <figs/pilot/experimental_schema.png>
 
@@ -920,76 +818,929 @@ Underfull \vbox (badness 1902) has occurred while \output is active []
 
 
 Overfull \hbox (102.9723pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 36 \TU/lmr/m/sl/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
- []
-
-[36]
-
-LaTeX Warning: Reference `fig:assay-setup' on page 37 undefined on input line 396.
-
-File: figs/pilot/setup_pic_with_frame_110.png Graphic file (type bmp)
-<figs/pilot/setup_pic_with_frame_110.png>
-
-LaTeX Warning: Reference `fig:line-locations' on page 37 undefined on input line 404.
-
-File: figs/pilot/line_locations.png Graphic file (type bmp)
-<figs/pilot/line_locations.png>
-[37]
-Overfull \hbox (102.9723pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 38 \TU/lmr/m/sl/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
  []
 
-[38] [39]
-
-LaTeX Warning: Reference `fig:covariate-effects' on page 40 undefined on input line 424.
-
-
-LaTeX Warning: Reference `fig:assay-setup' on page 40 undefined on input line 424.
-
-File: figs/pilot/covariate_effects_no-split-by-assay.png Graphic file (type bmp)
-<figs/pilot/covariate_effects_no-split-by-assay.png>
-
+[38]
+File: figs/pilot/setup_pic_with_frame_110.png Graphic file (type bmp)
+<figs/pilot/setup_pic_with_frame_110.png>
+File: figs/pilot/line_locations.png Graphic file (type bmp)
+<figs/pilot/line_locations.png>
+[39]
 Overfull \hbox (102.9723pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 40 \TU/lmr/m/sl/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
  []
 
-[40]
+[40] [41]
+File: figs/pilot/covariate_effects_no-split-by-assay.png Graphic file (type bmp)
+<figs/pilot/covariate_effects_no-split-by-assay.png>
 
-LaTeX Warning: Reference `fig:compare-params' on page 41 undefined on input line 437.
-
-File: figs/pilot/compare_params.png Graphic file (type bmp)
-<figs/pilot/compare_params.png>
-[41]
 Overfull \hbox (102.9723pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 42 \TU/lmr/m/sl/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
  []
 
 [42]
+File: figs/pilot/compare_params.png Graphic file (type bmp)
+<figs/pilot/compare_params.png>
+[43]
+Overfull \hbox (102.9723pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 44 \TU/lmr/m/sl/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
+ []
+
+[44]
 File: figs/pilot/polar_all_dge.png Graphic file (type bmp)
 <figs/pilot/polar_all_dge.png>
 
 Underfull \vbox (badness 2556) has occurred while \output is active []
 
-[43]
+[45]
 Overfull \hbox (98.22101pt too wide) detected at line 467
 [][][][][][][][][][] [] [][][][][][][][][][][][][][][][][][] [] [][][][][][][][] [] [][][][][][][][] [] [][][][][][][][][][][][] [] [][][][][][][][][][][][]
  []
 
 
-LaTeX Warning: Reference `tab:pilot-dge-tbl' on page 44 undefined on input line 471.
+Overfull \hbox (102.9723pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 46 \TU/lmr/m/sl/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
+ []
 
+[46] [47]
+File: figs/pilot/0.08_14_dge.png Graphic file (type bmp)
+<figs/pilot/0.08_14_dge.png>
 
-LaTeX Warning: Reference `fig:pilot-dge-time' on page 44 undefined on input line 520.
+Overfull \hbox (102.9723pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 48 \TU/lmr/m/sl/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
+ []
 
+[48] [49]
+File: figs/pilot/0.08_14_sge.png Graphic file (type bmp)
+<figs/pilot/0.08_14_sge.png>
 
-LaTeX Warning: Reference `fig:pilot-dge-time' on page 44 undefined on input line 520.
-
-
-LaTeX Warning: Reference `fig:pilot-dge-time' on page 44 undefined on input line 520.
-
-
-LaTeX Warning: Reference `fig:pilot-dge-time' on page 44 undefined on input line 520.
+Underfull \vbox (badness 2799) has occurred while \output is active []
 
 
 Overfull \hbox (102.9723pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 44 \TU/lmr/m/sl/10 CHAPTER 3.  CLASSIFI
+\TU/lmr/m/n/10 50 \TU/lmr/m/sl/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
+ []
+
+[50] [51]
+File: figs/pilot/0.08_14_cooc_heatmap.png Graphic file (type bmp)
+<figs/pilot/0.08_14_cooc_heatmap.png>
+
+Overfull \hbox (102.9723pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 52 \TU/lmr/m/sl/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
+ []
+
+[52] [53]
+Overfull \hbox (102.9723pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 54 \TU/lmr/m/sl/10 CHAPTER 3.  CLASSIFICATION OF BOLD/SHY BEHAVIOURS IN 5 INBRED MEDAKA LINES
+ []
+
+[54]
+Chapter 4.
+[55
+
+]
+File: figs/mikk_behaviour/F2-cross-schema.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/F2-cross-schema.pdf>
+
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 56 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[56]
+File: figs/mikk_behaviour/F0_line_mean_speed_0.08.png Graphic file (type bmp)
+<figs/mikk_behaviour/F0_line_mean_speed_0.08.png>
+File: figs/mikk_behaviour/line_mean_speed_variance_0.05_all.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/line_mean_speed_variance_0.05_all.pdf>
+[57]
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 58 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[58] [59]
+File: figs/mikk_behaviour/path_plot_22-1_18-2_10-1_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/path_plot_22-1_18-2_10-1_300.pdf>
+
+LaTeX Warning: Float too large for page by 11.7706pt on input line 648.
+
+File: figs/mikk_behaviour/select_0.08_15_10-1_dge.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/select_0.08_15_10-1_dge.pdf>
+File: figs/mikk_behaviour/compare_params.png Graphic file (type bmp)
+<figs/mikk_behaviour/compare_params.png>
+File: figs/mikk_behaviour/0.08_17_polar_all_dge.png Graphic file (type bmp)
+<figs/mikk_behaviour/0.08_17_polar_all_dge.png>
+
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 60 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[60] [61]
+File: figs/mikk_behaviour/0.08_15_polar_all_dge.png Graphic file (type bmp)
+<figs/mikk_behaviour/0.08_15_polar_all_dge.png>
+
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 62 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[62] [63]
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 64 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[64] [65]
+File: figs/mikk_behaviour/0.08_15_cooc_box_all.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/0.08_15_cooc_box_all.pdf>
+
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 66 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[66] [67]
+File: figs/mikk_behaviour/0.08_15_cooc_heatmap.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/0.08_15_cooc_heatmap.pdf>
+
+LaTeX Warning: Float too large for page by 60.49048pt on input line 709.
+
+File: figs/mikk_behaviour/0.08_15_deviation.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/0.08_15_deviation.pdf>
+
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 68 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[68] [69]
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 70 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[70]
+File: figs/mikk_behaviour/line_mean_speed_0.05_selected.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/line_mean_speed_0.05_selected.pdf>
+File: figs/mikk_behaviour/line_mean_speed_variance_selected.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/line_mean_speed_variance_selected.pdf>
+File: figs/mikk_behaviour/line_selection_schema.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/line_selection_schema.pdf>
+[71]
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 72 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[72] [73]
+File: figs/mikk_behaviour/select_0.08_15_dge_of.png Graphic file (type bmp)
+<figs/mikk_behaviour/select_0.08_15_dge_of.png>
+
+LaTeX Warning: Float too large for page by 75.994pt on input line 799.
+
+
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 74 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[74]
+File: figs/mikk_behaviour/select_0.08_15_dge_no.png Graphic file (type bmp)
+<figs/mikk_behaviour/select_0.08_15_dge_no.png>
+
+LaTeX Warning: Float too large for page by 75.994pt on input line 807.
+
+[75]
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 76 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[76] [77]
+File: figs/mikk_behaviour/select_0.08_15_sge_of.png Graphic file (type bmp)
+<figs/mikk_behaviour/select_0.08_15_sge_of.png>
+
+LaTeX Warning: Float too large for page by 75.994pt on input line 845.
+
+File: figs/mikk_behaviour/select_0.08_15_sge_no.png Graphic file (type bmp)
+<figs/mikk_behaviour/select_0.08_15_sge_no.png>
+
+LaTeX Warning: Float too large for page by 75.994pt on input line 851.
+
+
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 78 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[78] [79]
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 80 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[80] (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+) (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+) [81]
+Overfull \hbox (21.00372pt too wide) in paragraph at lines 908--909
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (39.0039pt too wide) in paragraph at lines 909--910
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+File: figs/mikk_behaviour/0.08_15_state_freq_F2_dge.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/0.08_15_state_freq_F2_dge.pdf>
+File: figs/mikk_behaviour/0.08_15_state_freq_F2_sge.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/0.08_15_state_freq_F2_sge.pdf>
+
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 82 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[82] [83]
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 84 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[84]
+File: figs/mikk_behaviour/karyoplot_no_missing.png Graphic file (type bmp)
+<figs/mikk_behaviour/karyoplot_no_missing.png>
+[85]
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 86 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[86]
+File: figs/mikk_behaviour/grm_man_0.8.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/grm_man_0.8.pdf>
+[87]
+File: figs/mikk_behaviour/manhattans/dge_no_3_time-quadrant.png Graphic file (type bmp)
+<figs/mikk_behaviour/manhattans/dge_no_3_time-quadrant.png>
+
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 88 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[88]
+File: figs/mikk_behaviour/manhattans/sge_of_13_time-quadrant.png Graphic file (type bmp)
+<figs/mikk_behaviour/manhattans/sge_of_13_time-quadrant.png>
+[89]
+Overfull \hbox (307.40013pt too wide) in paragraph at lines 1035--1058
+ [][] 
+ []
+
+
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 90 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[90] [91]
+File: figs/mikk_behaviour/sig_snps_boxplots/3-10:15319434.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/sig_snps_boxplots/3-10:15319434.pdf>
+
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 92 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[92]
+File: figs/mikk_behaviour/sig_snps_boxplots/13-12:5136828.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/sig_snps_boxplots/13-12:5136828.pdf>
+
+Overfull \hbox (444.66014pt too wide) in paragraph at lines 1082--1091
+ [][] 
+ []
+
+File: figs/mikk_behaviour/sig_snps_boxplots/3-9:9802754.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/sig_snps_boxplots/3-9:9802754.pdf>
+[93]
+File: figs/mikk_behaviour/sig_snps_boxplots/3-10:18537719.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/sig_snps_boxplots/3-10:18537719.pdf>
+
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 94 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[94] [95]
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 96 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[96]
+File: figs/mikk_behaviour/coverage_F2.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/coverage_F2.pdf>
+[97]
+Overfull \hbox (111.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 98 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[98] [99]
+Overfull \hbox (116.59013pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 100 \TU/lmr/m/sl/10 CHAPTER 4.  GENETIC LINKAGE STUDY OF BOLD/SHY BEHAVIOURS IN THE MIKK PANEL
+ []
+
+[100]
+Chapter 5.
+File: figs/somites/mouse_embryo_gridley.pdf Graphic file (type pdf)
+<use figs/somites/mouse_embryo_gridley.pdf>
+File: figs/somites/ali_fish_seg_compiled.pdf Graphic file (type pdf)
+<use figs/somites/ali_fish_seg_compiled.pdf>
+[101
+
+]
+File: figs/somites/ali_period_F0_Cab_Kaga.png Graphic file (type bmp)
+<figs/somites/ali_period_F0_Cab_Kaga.png>
+
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 102 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[102] [103]
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 104 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[104]
+File: figs/somites/ali_compiled_somite_elong.png Graphic file (type bmp)
+<figs/somites/ali_compiled_somite_elong.png>
+
+LaTeX Warning: Float too large for page by 60.05757pt on input line 1191.
+
+File: figs/somites/ali_period_lines_100fish300mins.png Graphic file (type bmp)
+<figs/somites/ali_period_lines_100fish300mins.png>
+File: figs/somites/ali_F2_mean_period.pdf Graphic file (type pdf)
+<use figs/somites/ali_F2_mean_period.pdf>
+File: figs/somites/ali_PSM_Cab_Kaga.png Graphic file (type bmp)
+<figs/somites/ali_PSM_Cab_Kaga.png>
+[105]
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 106 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[106] [107]
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 108 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[108]
+File: figs/somites/phenotypes.pdf Graphic file (type pdf)
+<use figs/somites/phenotypes.pdf>
+File: figs/somites/invnorm_intercept.pdf Graphic file (type pdf)
+<use figs/somites/invnorm_intercept.pdf>
+File: figs/somites/F0_coverage.pdf Graphic file (type pdf)
+<use figs/somites/F0_coverage.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[109]
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 110 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[110] [111]
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 112 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[112]
+File: figs/somites/Cab.png Graphic file (type bmp)
+<figs/somites/Cab.png>
+[113]
+File: figs/somites/Kaga.png Graphic file (type bmp)
+<figs/somites/Kaga.png>
+File: figs/somites/Kaga_HNI.png Graphic file (type bmp)
+<figs/somites/Kaga_HNI.png>
+
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 114 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[114] [115]
+File: figs/somites/F1.png Graphic file (type bmp)
+<figs/somites/F1.png>
+File: figs/somites/snp_counts_per_chrom.png Graphic file (type bmp)
+<figs/somites/snp_counts_per_chrom.png>
+
+Underfull \vbox (badness 4739) has occurred while \output is active []
+
+
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 116 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[116]
+Underfull \vbox (badness 1655) has occurred while \output is active []
+
+[117]
+File: 05-somites_files/figure-latex/zebrafish-co-per-chrom-1.pdf Graphic file (type pdf)
+<use 05-somites_files/figure-latex/zebrafish-co-per-chrom-1.pdf>
+
+LaTeX Warning: Reference `(' on page 118 undefined on input line 1316.
+
+
+LaTeX Warning: Reference `(' on page 118 undefined on input line 1316.
+
+
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 118 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[118]
+File: figs/somites/scatter_collage.pdf Graphic file (type pdf)
+<use figs/somites/scatter_collage.pdf>
+
+LaTeX Warning: Float too large for page by 1.7414pt on input line 1322.
+
+File: figs/somites/karyoplot_wi_missing.png Graphic file (type bmp)
+<figs/somites/karyoplot_wi_missing.png>
+
+LaTeX Warning: Float too large for page by 94.19313pt on input line 1330.
+
+File: figs/somites/karyoplot_no_missing.png Graphic file (type bmp)
+<figs/somites/karyoplot_no_missing.png>
+
+LaTeX Warning: Float too large for page by 24.47313pt on input line 1334.
+
+File: figs/somites/prop_sites_total.png Graphic file (type bmp)
+<figs/somites/prop_sites_total.png>
+[119]
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 120 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[120] [121]
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 122 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[122]
+File: figs/somites/manhattan_intercept.png Graphic file (type bmp)
+<figs/somites/manhattan_intercept.png>
+[123]
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 124 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[124]
+Overfull \hbox (449.76007pt too wide) in paragraph at lines 1439--1502
+ [][] 
+ []
+
+File: figs/somites/manhattan_psm_no-covariates.png Graphic file (type bmp)
+<figs/somites/manhattan_psm_no-covariates.png>
+[125]
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 126 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[126] [127]
+Overfull \hbox (105.70345pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 128 \TU/lmr/m/sl/10 CHAPTER 5.  GENETIC LOCI ASSOCIATED WITH SOMITE DEVELOPMENT PERIODICITY
+ []
+
+[128]
+Chapter 6.
+[129
+
+]
+Underfull \vbox (badness 1424) has occurred while \output is active []
+
+
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 130 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[130]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[131]
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 132 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[132] [133]
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 134 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[134] [135]
+Overfull \hbox (131.92001pt too wide) in paragraph at lines 1665--1666
+\TU/lmr/m/n/10 files(“Index of /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/”
+ []
+
+
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 136 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[136]
+File: figs/fst/circos_all_fst.png Graphic file (type bmp)
+<figs/fst/circos_all_fst.png>
+File: figs/fst/histo_fst_all.png Graphic file (type bmp)
+<figs/fst/histo_fst_all.png>
+[137]
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 138 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[138] [139]
+File: figs/fst/0.1_1000_20220314_snp_counts.pdf Graphic file (type pdf)
+<use figs/fst/0.1_1000_20220314_snp_counts.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 140 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[140]
+Underfull \hbox (badness 1400) in paragraph at lines 1704--1704
+[]$[][]$ \TU/lmr/bx/n/12 and ranking traits by signed Kolmogorov-
+ []
+
+[141]
+File: figs/fst/0.1_1000_20220314_final.pdf Graphic file (type pdf)
+<use figs/fst/0.1_1000_20220314_final.pdf>
+
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 142 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[142] [143]
+File: figs/fst/20220324_n_individuals.pdf Graphic file (type pdf)
+<use figs/fst/20220324_n_individuals.pdf>
+
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 144 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[144] [145]
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 146 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[146] [147
+
+]
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 148 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[148] [149]
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 150 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[150] [151]
+Underfull \hbox (badness 1708) in paragraph at lines 1913--1915
+[]\TU/lmr/m/it/10 Hmmlearn/Hmmlearn\TU/lmr/m/n/10 . (2014) 2022. hmmlearn. []$[][][][][] [] [] [] [][][][][][] [] [][][] []
+ []
+
+
+Overfull \hbox (47.21999pt too wide) in paragraph at lines 1925--1927
+[]\TU/lmr/m/n/10 “Index of /Pub/Release-102/Emf/Ensembl-Compara/Multiple_alignments/50_fish.epo/.”
+ []
+
+
+Overfull \hbox (112.7pt too wide) in paragraph at lines 1928--1930
+[]\TU/lmr/m/n/10 “Index of /Vol1/Ftp/Data_collections/1000g_2504_high_coverage/Working/20201028_3202_phased/.”
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1928--1930
+[][][][] [] [][][][][][][][][][][] [] [][][][][] [] [][][][] [] [][][][] [] [][][][][][][][] [] [][][][][][][] [] [][][][][][][][] [] [][][][] []
+ []
+
+
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 152 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[152] [153]
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 154 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[154]
+Underfull \hbox (badness 4765) in paragraph at lines 2009--2011
+\TU/lmr/m/n/10 Phenotype Map: Lessons from the Drosophila Melanogaster Ge-
+ []
+
+[155]
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 156 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[156]
+Underfull \hbox (badness 1478) in paragraph at lines 2072--2074
+\TU/lmr/m/n/10 dicts Prevalence of Cardiovascular Disease in Patients with Familial
+ []
+
+[157]
+Underfull \hbox (badness 1325) in paragraph at lines 2090--2092
+[]\TU/lmr/m/n/10 “Picard Toolkit.” 2019. \TU/lmr/m/it/10 Broad Institute, GitHub Repository\TU/lmr/m/n/10 . []$[][][][][] []
+ []
+
+
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 158 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[158] [159]
+Underfull \hbox (badness 3229) in paragraph at lines 2153--2155
+[]\TU/lmr/m/n/10 Schwarze, Katharina, James Buchanan, Jenny C. Taylor, and Sarah
+ []
+
+
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 160 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[160]
+Underfull \hbox (badness 2142) in paragraph at lines 2186--2188
+[]\TU/lmr/m/n/10 Spivakov, Mikhail, Thomas O Auer, Ravindra Peravali, Ian Dunham,
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 2186--2188
+\TU/lmr/m/n/10 Dirk Dolle, Asao Fujiyama, Atsushi Toyoda, et al. 2014. “Ge-
+ []
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 2186--2188
+\TU/lmr/m/n/10 nomic and Phenotypic Characterization of a Wild Medaka Popu-
+ []
+
+
+Underfull \hbox (badness 2744) in paragraph at lines 2186--2188
+\TU/lmr/m/n/10 lation: Towards the Establishment of an Isogenic Population Ge-
+ []
+
+[161]
+Underfull \hbox (badness 10000) in paragraph at lines 2198--2200
+[]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][] [] [][][] [] [][][][] [] [][][][] [] [][][][][][][][][][][][][][] [] [][] [] [][][] [][] [][] [] [] [][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2198--2200
+[][][][][][][][] [][] [][][][][][] [][] [][][][][][][][][][] [][] [][][][][][] [][] [][][] [][] [][][][][][][][][][][][][] [][] [][][][][][][][][][] [][] [][][][] [][]
+ []
+
+
+Underfull \hbox (badness 1028) in paragraph at lines 2213--2215
+\TU/lmr/m/n/10 Phenotype With Cerebellar Ataxia and Atrophy.” \TU/lmr/m/it/10 Journal of Child
+ []
+
+
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 162 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[162] [163]
+Overfull \hbox (271.52905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 164 \TU/lmr/m/sl/10 CHAPTER 6.  VARIATION IN THE FREQUENCY OF TRAIT-ASSOCIATED ALLELES ACROSS GLOBAL HUMAN POPULATIONS
+ []
+
+[164]
+Appendix A.
+File: figs/mikk_behaviour/0.05_15_polar_all_dge.png Graphic file (type bmp)
+<figs/mikk_behaviour/0.05_15_polar_all_dge.png>
+[165
+
+] [166]
+Appendix B.
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191114_1040_8-2_L_A_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191114_1040_8-2_L_A_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191118_1224_8-2_R_B_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191118_1224_8-2_R_B_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191112_1236_18-2_L_A_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191112_1236_18-2_L_A_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191116_1039_18-2_L_B_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191116_1039_18-2_L_B_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191119_1459_18-2_R_C_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191119_1459_18-2_R_C_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191114_1305_50-2_R_A_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191114_1305_50-2_R_A_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191116_1438_50-2_R_B_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191116_1438_50-2_R_B_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191120_1150_50-2_R_C_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191120_1150_50-2_R_C_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191112_1456_38-2_L_A_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191112_1456_38-2_L_A_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191116_1203_38-2_L_B_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191116_1203_38-2_L_B_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191113_1527_21-2_L_A_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191113_1527_21-2_L_A_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191116_1309_21-2_R_B_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191116_1309_21-2_R_B_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191114_1217_40-1_L_A_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191114_1217_40-1_L_A_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/open_field_20191118_1129_40-1_R_B_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/open_field_20191118_1129_40-1_R_B_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191114_1040_8-2_L_A_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191114_1040_8-2_L_A_300.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[167
+
+]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 168 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[168] [169]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 170 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[170] [171]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 172 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[172] [173]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 174 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[174] [175]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 176 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[176] [177]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 178 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[178] [179]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 180 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[180] [181]
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191118_1224_8-2_R_B_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191118_1224_8-2_R_B_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191112_1236_18-2_L_A_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191112_1236_18-2_L_A_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1039_18-2_L_B_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1039_18-2_L_B_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191119_1459_18-2_R_C_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191119_1459_18-2_R_C_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191114_1305_50-2_R_A_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191114_1305_50-2_R_A_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1438_50-2_R_B_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1438_50-2_R_B_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191120_1150_50-2_R_C_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191120_1150_50-2_R_C_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191112_1456_38-2_L_A_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191112_1456_38-2_L_A_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1203_38-2_L_B_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1203_38-2_L_B_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191113_1527_21-2_L_A_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191113_1527_21-2_L_A_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1309_21-2_R_B_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1309_21-2_R_B_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191114_1217_40-1_L_A_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191114_1217_40-1_L_A_300.pdf>
+File: figs/mikk_behaviour/four_panel_plots/novel_object_20191118_1129_40-1_R_B_300.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/four_panel_plots/novel_object_20191118_1129_40-1_R_B_300.pdf>
+
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 182 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[182] [183]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 184 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[184] [185]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 186 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[186] [187]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 188 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[188] [189]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 190 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[190] [191]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 192 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[192] [193]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 194 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[194] [195]
+Overfull \hbox (81.98123pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 196 \TU/lmr/m/sl/10 APPENDIX B.  FOUR-PANEL PLOTS FOR MIKK LINES SELECTED FOR THE F2 CROSS
+ []
+
+[196]
+Appendix C.
+File: figs/mikk_behaviour/0.08_15_tile_dge.png Graphic file (type bmp)
+<figs/mikk_behaviour/0.08_15_tile_dge.png>
+
+LaTeX Warning: Float too large for page by 59.99663pt on input line 2519.
+
+File: figs/mikk_behaviour/0.08_15_dens_dge.png Graphic file (type bmp)
+<figs/mikk_behaviour/0.08_15_dens_dge.png>
+
+LaTeX Warning: Float too large for page by 59.99663pt on input line 2528.
+
+File: figs/mikk_behaviour/0.08_15_tile_sge.png Graphic file (type bmp)
+<figs/mikk_behaviour/0.08_15_tile_sge.png>
+
+LaTeX Warning: Float too large for page by 59.99663pt on input line 2540.
+
+File: figs/mikk_behaviour/0.08_15_dens_sge.png Graphic file (type bmp)
+<figs/mikk_behaviour/0.08_15_dens_sge.png>
+
+LaTeX Warning: Float too large for page by 59.99663pt on input line 2549.
+
+[197
+
+]
+Overfull \hbox (48.94124pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 198 \TU/lmr/m/sl/10 APPENDIX C.  HMM STATE TIME DEPENDENCE FOR ALL MIKK PANEL LINES
+ []
+
+[198] [199]
+Overfull \hbox (48.94124pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 200 \TU/lmr/m/sl/10 APPENDIX C.  HMM STATE TIME DEPENDENCE FOR ALL MIKK PANEL LINES
+ []
+
+[200] [201]
+Overfull \hbox (48.94124pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 202 \TU/lmr/m/sl/10 APPENDIX C.  HMM STATE TIME DEPENDENCE FOR ALL MIKK PANEL LINES
+ []
+
+[202
+
+]
+Appendix D.
+File: figs/mikk_behaviour/karyoplot_wi_missing.png Graphic file (type bmp)
+<figs/mikk_behaviour/karyoplot_wi_missing.png>
+[203]
+Overfull \hbox (22.59563pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 204 \TU/lmr/m/sl/10 APPENDIX D.  F2 RECOMBINATION KARYOPLOT WITH MISSING CALLS
+ []
+
+[204]
+Appendix E.
+File: figs/mikk_behaviour/grm_loco_man_chr1.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/grm_loco_man_chr1.pdf>
+[205
+
+] [206]
+Appendix F.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 24.88pt on input line 2570.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 20.74pt on input line 2570.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 17.28pt on input line 2570.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 24.88228pt on input line 2570.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 20.7419pt on input line 2570.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 17.28157pt on input line 2570.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 24.87733pt on input line 2570.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 20.73778pt on input line 2570.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 17.27815pt on input line 2570.
+File: figs/fst/0.1_1000_20220314_ecdf_all_faceted_with_controls_d_rank_long.pdf Graphic file (type pdf)
+<use figs/fst/0.1_1000_20220314_ecdf_all_faceted_with_controls_d_rank_long.pdf>
+[207
+
+]
+Overfull \hbox (111.57393pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 208 \TU/lmr/m/sl/10 APPENDIX F.  ECDF OF ALL POLYGENIC TRAITS IN THE GWAS CATALOG RANKED BY $[]$
+ []
+
+[208] (./PhD-thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `PhD-thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 6D9AF7996A1CC653549062CD29748489;9751.
+ ) 
+Here is how much of TeX's memory you used:
+ 20391 strings out of 477855
+ 416905 string characters out of 5845700
+ 1008451 words of memory out of 5000000
+ 40913 multiletter control sequences out of 15000+600000
+ 478649 words of font info for 106 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 86i,8n,121p,2302b,1658s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on PhD-thesis.pdf (208 pages).
