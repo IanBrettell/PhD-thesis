@@ -25,12 +25,17 @@ In medieval times, the prevailing theory was that a tiny human -- a homunculus -
 knitr::include_graphics(here::here("book/figs/introduction/homunculus.png"))
 ```
 
-### Darwin
+### Charles Darwin
 
 In 1831, a 22-year-old English Clergyman named Charles Darwin boarded the HMS Beagle to commence what would turn out to be a XX-year-long voyage around PLACES. He had previously studied medicine and theology, although he was drawn to study the natural world, and had apprenticed with his fellow clergyman John Henslow, a botanist and geologist who curated the Cambridge Botanic Garden. At the time, natural historians were subject to their enquiries being restricted by the prevailing doctrine of the time, namely that of Creationism. A mechanistic description of how species -- and individuals within the same species -- differed from one another was a dangerous idea, as it was thought to threaten the doctrine of creation. 
 
-In 1831, a young Charles Darwin boarded the HMS *Beagle* to embark on an expedition to collect specimens from South America. After collecting a huge number of fossils from the along the eastern coast and shipping them back to England, the *Beagle* spent 5 weeks touring through the 18 volcanic islands of the Galàpagos, where Darwin collected 
+(ref:charles-darwin-young-portrait) Portrait of Charles Darwin from the late 1830s by George Richmond [@charlesDarwinYoung].
 
+```{r charles-darwin-young-portrait, echo = F, fig.cap = '(ref:charles-darwin-young-portrait)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/introduction/Charles_Darwin_by_G._Richmond.png"), auto_pdf = T)
+```
+
+In 1831, a young Charles Darwin boarded the HMS *Beagle* to embark on an expedition to collect specimens from South America. After collecting a huge number of fossils from the along the eastern coast and shipping them back to England, the *Beagle* spent 5 weeks touring through the 18 volcanic islands of the Galàpagos, where Darwin collected 
 
 Two months after Darwin graduated from Cambridge, he received a letter from Henslow suggesting that he join the *Beagle*'s exploratory survey of South America as the "gentleman scientist" they were seeking to assist with the collection of specimens. As the *Beagle* travelled down the eastern coast of South America, Darwin collected a vast amount of living specimens and ancient fossils, including large extinct mammals such as the megatherium, near Punta Alta.
 
@@ -40,10 +45,86 @@ Two months after Darwin graduated from Cambridge, he received a letter from Hens
 knitr::include_graphics(here::here("book/figs/introduction/megatherium.png"), auto_pdf = T)
 ```
 
-The *Beagle* eventually reached the Galápagos Islands on the coast of Peru, and archipelago of 18 islands formed from volcanic lava. They stayed there for five weeks, during which period Darwin collected carcasses of birds, lizards, and plants. Upon his return to England, Darwin was hailed as a minor celebrity among natural historians due to the collections of specimens he had gathered and shipped back. John Gould 
+The *Beagle* eventually reached the Galápagos Islands on the coast of Peru, and archipelago of 18 islands formed from volcanic lava. They stayed there for five weeks, during which period Darwin collected carcasses of birds, lizards, and plants. Upon his return to England, Darwin was hailed as a minor celebrity among natural historians due to the collections of specimens he had gathered and shipped back. John Gould -- the ornithologist after whom the Gouldian finch (**Figure \@ref(fig:gouldian-finch)**) is named -- told him that the various birds that Darwin thought were a vareity of wrens, warblers, blackbirds, and "Gross-beaks" were in fact all 13 different species of finches.
 
-### Charles Darwin and Gregor Mendel
+(ref:gouldian-finch) The Gouldian Finch, an Australian native bird described by British ornithological artist John Gould in 1844 and named after his deceased wife Elizabeth [@bancroftPartIntroductionGouldian]. Photograph by Sarah R. Pryke, published in @prykeRedDominatesBlack2006.
 
+```{r gouldian-finch, echo = F, fig.cap = '(ref:gouldian-finch)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/introduction/gouldian_finch.png"), auto_pdf = T)
+```
+
+
+Each site had produced its own variant, and this caused Darwin to consider whether they had all arisen from a common ancestral finch, branching off like the boughs of a tree over time. He understood that animal breeders took advantage of the natural variation in populations to select for desired traits, but he questioned what force had guided the development of these different varieties of finches in the wild.
+
+In 1798, Thomas Malthus, a curate and amateur economist, had published a paper titled *An Essay on the Principle of Population*, in which he argued that the human population was in constant struggle with its limited resource pool, which in turn was affected by droughts, floods, epidemics, and diseases [@mukherjeeGeneIntimateHistory2016]. Darwin read the paper and identified this struggle for resources as the natural hand that selected those who possessed traits that would allow them to be more likely to survive. 
+
+In 1855, Alfred Russel Wallace (**Figure \@ref(fig:alfred-wallace)**) published a paper in the *Annals and Magazine of Natural History*. Like Darwin, he had set off on a voyage to distant lands, and had observed the stunning variation across the Malay Archipelago in populations separated by channels of water. And like Darwin, he also derived his theory on the basis of this variation from Malthus's paper. In June 1858, he sent a draft paper to Darwin outlining his general theory of evolution and natural selection. Darwin panicked and sent both papers to Lyell, who advised Darwin to have both papers presented simultaneously at the meeting of the Linnean Society so that they could both be credited for the discovery. 
+
+(ref:alfred-wallace) Alfred Russel Wallace, taken around 1895. Image from @alfredWallace1895.
+
+```{r alfred-wallace, echo = F, fig.cap = '(ref:alfred-wallace)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/introduction/Alfred-Russel-Wallace.png"), auto_pdf = T)
+```
+
+The presentation made few waves at the time, but Darwin proceeded to complete his opus, *On the Origin of Species by Means of Natural Selection*, published in 1859. The book was met with ecstatic reviews.
+
+Two crucial questions yet remained: how was the variation within species generated in the first place, and how were the traits transmitted to future generations? 
+
+### Gregor Mendel
+
+The prevailing theory of heredity around this time was promoted by the French biologist Jean-Baptiste de Lamarck (**Figure \@ref(fig:lamarck)**). His theory involved the tranmission of traits that were strengthened or weakened by environmental pressures in one generation -- such as a giraffe having to stretch its neck to reach the leaves on a canopy -- which was then passed down to subsequent generations as a form of pre-adaptation. 
+
+(ref:lamarck) Portrait of Jean Baptiste de Lamarck from 1802-1803 by Charles Thévenin [@lamarck1802].
+
+```{r lamarck, echo = F, fig.cap = '(ref:lamarck)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/introduction/Jean-Baptiste_de_Lamarck.png"), auto_pdf = T)
+```
+
+But by that logic, if a human had their arm amputated, their children would be born with shortened arms.^[This theory was experimentally tested by the German embryologist August Weismann, who amputated the tails of mice to determine whether the offspring would be born tailless. The offspring were all born with tails intact.] Darwin was convinced that selection acted upon pre-existing variation in a population, and proposed that that variation was transmitted by hereditary particles called *gemmules*. During conception, he posited that the gemmules of each parent were blended, like paints. But such blending would result in a monochrome population, preventing the creation of the unique, outlying traits required to drive the variation he observed. Around this time Darwin had recorded notes on an obscure paper titled *Experiments in Plant Hybridization*, but he appeared to have inadvertently skipped the page containing the Brno paper on pea hybrids. The author of that paper was an Augustine monk called Gregor Mendel (**Figure \@ref(fig:mendel)**).
+
+(ref:mendel) Photograph from @mendelPhoto.
+
+```{r mendel, echo = F, fig.cap = '(ref:mendel)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/introduction/Gregor_Mendel_2.png"), auto_pdf = T)
+```
+
+Mendel was an aspiring teacher, but had failed the teacher's exam multiple times, so in 1853 he had returned to the monastery in Brno, Morvia (present day Czech Republic), and planted a crop of peas which he had been breeding for about three years. He had collected 34 strains that bred "true", meaning that the offspring were identical to the parents in seven traits:
+
+1. the texture of the seed (smooth versus wrinkled)
+
+1. the colour of seeds (yellow versus green)
+
+1. the colour of the flower (white versus violet)
+
+1. the position of the flower (at the tip of the plant versus the branches)
+
+1. the colour of the pea pod (green versus yellow)
+
+1. the shape of the pea pod (smooth versus crumpled)
+
+1. the height of the plant (tall versus short)
+
+Mendel referred to these alternative versions of a trait as *forms* -- biologists in the 1900s would later refer to them as *alleles*, from the Greek *allos*, referring to different subtypes of the same thing. Mendel produced hybrids of plants with different alleles (known as the F0 generation) to determine which allele the consequent offspring would possess. For eight years (1857-1864), he created these hybrid crosses (known as the F1 generation), and crossed those with each other too (known as the F2 generation), recording their values for the above traits as we went. He could soon identify patterns in the reams of data he generated:^[Based around 28,000 plants, 40,000 flowers, and almost 400,000 seeds.] for all of the above 7 traits, the F1 generation expressed only a single allele, which he referred to as the *dominant*; the hidden allele he referred to as *recessive*. However, in the F2 generation the recessive allele reappeared at a ratio of 1:3. 
+
+From these results, Mendel inferred that the F1 hybrids must retain the information from both parents, while only expressing one version of them. Then when the F1 generation was inter-crossed to produce the F2 generation, the recessive allele would only be expressed when inherited with another recessive allele. In 1865, Mendel presented his paper to a group of farmers, botanists and biologists at the Natural Science Society in Brno, and it was later published in the annual *Proceedings of the Brno Natural Science Society*. He mailed out 40 copies of the paper to various scientific societies, but was only cited four times between 1866 and 1900, and virtually disappeared from scientific literature. 
+
+In 1900, a Dutch botanist named Hugo de Vries chanced upon Mendel's paper while working on plant hybrids. Likely driven by self-interest in being credited for the discovery, he proceeded to publish his own findings without mentioning the work of Mendel. He noted a patch of primroses named *Oenothera lamarckiana*^[An ironic twist given the plant was named after Lamarck.], which spontaneously generated variants, which he termed *mutants*. It became clear to de Vries that variation in populations arose spontaneously, at random, rather than in the Lamarckian mode of contemporaneous reaction to environmental pressures. De Vries's paper was read by Carl Correns, a botanist in Tübingen, Germany, who had also come across the work of Mendel, and pressured de Vries into acknowledging Mendel's work in the subsequent version of his publlication.
+
+Later that year, while on a train from Cambridge to London, the English botanist William Bateson (**Figure \@ref(fig:bateson)**) read this second version of de Vries's paper, and was immediately struck by the significance of Mendel's original study. He independently confirmed Mendel's work, and began promoting Mendel's work. In 1905, he coined a word for the study of these units of inheritance: *genetics*, from the Greek *genno*, meaning "to give birth". A few years later, in 1909, the botanist Wilhelm Johannsen coined a distinct word to denote the unit of inheritance: the *gene*.
+
+(ref:bateson) Portrait of William Bateson, date and author unknown [@batesonPhoto].
+
+```{r bateson, echo = F, fig.cap = '(ref:bateson)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/introduction/Bateson2.png"), auto_pdf = T)
+```
+
+### Eugenics: Francis Galton, Ronald Fisher, Karl Pearson
+
+Francis Galton was the cousin of Charles Darwin, born in the same year as Mendel (1822), and travelled to Egypt and Sudan in 1844, spurring his lifelong obsession with the differences between human races. His reading of Darwin's *Origin of Species* in 1859 galvanised him, and he set out to explore the measurement and variance of heredity in humans, with an emphasis on intelligence, temperament, physical prowess, and height.^[Galton would stroll through England and Scotland secretly tabulating beauty by ranking the women he met as "attractive", "indifferent," or "repellent" using pinpricks on a card in his pocket. He coined the phrase *nature versus nurture* to distinguish between hereditary and environmental influences.]
+
+Through surveys he sent out to men and women in the mid-1880s, he requested they mail him detailed measurements on the height, weight, eye colour, intelligence, and artistic abilities of parents, grandparents, and children in return for a substantial fee. With this data he discovered that tall parents indeed tend to have tall children, albeit on average, although the distribution of heights within a generation fit the shape of a normal distribution, or 'bell-curve'. In a surprising twist, he also discovered that the mean height of the sons of the tallest fathers tended to be slightly lower than the father's height, and closer to the population's average -- a phenomenon he described as *regression to the mean*. The *ancestral law of heredity* sparked an intellectual war with Bateson, through which they attempted to reconcile the dominant/recessive theory with the quantitative theory proposed by Galton. 
+
+In 1883, Galton coined a term *eugenics* for his project to improve the human population through selective breeding [@watsonDNASecretLife2009].
 
 
 ### Breeding programs in agriculture
