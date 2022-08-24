@@ -104,7 +104,7 @@ Mendel was an aspiring teacher, but had failed the teacher's exam multiple times
 
 1. the height of the plant (tall versus short)
 
-Mendel referred to these alternative versions of a trait as *forms* -- biologists in the 1900s would later refer to them as *alleles*, from the Greek *allos*, referring to different subtypes of the same thing. Mendel produced hybrids of plants with different alleles (known as the F0 generation) to determine which allele the consequent offspring would possess. For eight years (1857-1864), he created these hybrid crosses (known as the F1 generation), and crossed those with each other too (known as the F2 generation), recording their values for the above traits as we went. He could soon identify patterns in the reams of data he generated:^[Based around 28,000 plants, 40,000 flowers, and almost 400,000 seeds.] for all of the above 7 traits, the F1 generation expressed only a single allele, which he referred to as the *dominant*; the hidden allele he referred to as *recessive*. However, in the F2 generation the recessive allele reappeared at a ratio of 1:3. 
+Mendel referred to these alternative versions of a trait as *forms* -- biologists in the 1900s would later refer to them as *alleles*, from the Greek *allos*, referring to different subtypes of the same thing. Mendel produced hybrids of plants with different alleles (known as the F0 generation) to determine which allele the consequent offspring would possess. For eight years (1857-1864), he created these hybrid crosses (known as the F1 generation), and crossed those with each other too (known as the F2 generation), recording their values for the above traits as we went. He could soon identify patterns in the reams of data he generated:^[Based around 28,000 plants, 40,000 flowers, and almost 400,000 seeds.] for all of the above 7 traits, the filial 1 hybrid (**F1**) generation expressed only a single allele, which he referred to as the *dominant*; the hidden allele he referred to as *recessive*. However, in the F2 generation the recessive allele reappeared at a ratio of 1:3. 
 
 From these results, Mendel inferred that the F1 hybrids must retain the information from both parents, while only expressing one version of them. Then when the F1 generation was inter-crossed to produce the F2 generation, the recessive allele would only be expressed when inherited with another recessive allele. In 1865, Mendel presented his paper to a group of farmers, botanists and biologists at the Natural Science Society in Brno, and it was later published in the annual *Proceedings of the Brno Natural Science Society*. He mailed out 40 copies of the paper to various scientific societies, but was only cited four times between 1866 and 1900, and virtually disappeared from scientific literature. 
 
@@ -120,7 +120,7 @@ knitr::include_graphics(here::here("book/figs/introduction/Bateson2.png"), auto_
 
 ### The quantitative method and eugenics: Francis Galton, Ronald Fisher, Karl Pearson
 
-Francis Galton was the cousin of Charles Darwin, born in the same year as Mendel (1822), and travelled to Egypt and Sudan in 1844, spurring his lifelong obsession with the differences between human races. His reading of Darwin's *Origin of Species* in 1859 galvanised him, and he set out to explore the measurement and variance of heredity in humans, with an emphasis on intelligence, temperament, physical prowess, and height.^[Galton would stroll through England and Scotland secretly tabulating beauty by ranking the women he met as "attractive", "indifferent," or "repellent" using pinpricks on a card in his pocket. He coined the phrase *nature versus nurture* to distinguish between hereditary and environmental influences.]
+Francis Galton was the cousin of Charles Darwin, born in the same year as Mendel (1822), and travelled to Egypt and Sudan in 1844, spurring his lifelong obsession with the differences between human races. His reading of Darwin's *Origin of Species* in 1859 galvanised him, and he set out to explore the measurement and variance of heredity in humans, with an emphasis on intelligence, temperament, physical prowess, and height.^[Galton would stroll through England and Scotland secretly tabulating beauty by ranking the women he met as "attractive", "indifferent," or "repellent" using pinpricks on a card in his pocket. He coined the phrase *nature versus nurture* to distinguish between hereditary and environmental influences [@galtonMenScienceTheir1874a].]
 
 Through surveys he sent out to men and women in the mid-1880s, he requested they mail him detailed measurements on the height, weight, eye colour, intelligence, and artistic abilities of parents, grandparents, and children in return for a substantial fee. With this data he discovered that tall parents indeed tend to have tall children, albeit on average, although the distribution of heights within a generation fit the shape of a normal distribution, or 'bell-curve'. In a surprising twist, he also discovered that the mean height of the sons of the tallest fathers tended to be slightly lower than the father's height, and closer to the population's average -- a phenomenon he described as *regression to the mean*. The *ancestral law of heredity* sparked an intellectual war with Bateson, through which they attempted to reconcile the dominant/recessive theory with the quantitative theory proposed by Galton. 
 
@@ -132,6 +132,8 @@ In 1883, Galton coined a term *eugenics* for his project to improve the human po
 
 <!--In the 1890s, in an attempt to disentangle the respective contributions of nature and nurture, Galton began to study human twins. Since identical twins were assumed to be genetically identical, one could compare their phenotypes with non-identical twins (who were assumed to share the same amount of genetic information as ordinary siblings)....
 -->
+
+Eugenics policies were implemented in the United States, Sweden, Nazi Germany, and other countries, which resulted in the forced sterilisations and deaths of millions [@rutherfordHowArgueRacist2020].
 
 Ultimately, eugenics was adopted as a policy by the Nazi regime, resulting in the genocide of around a million Jews, Poles, and Gypsies. The association between eugenics and the horrors of World War II became inextricable, and the eugenics movement was all but finished. 
 
@@ -146,7 +148,7 @@ In 1907, on a trip to the United States to give talks on Mendel's discovery, he 
 
 ### Ronald Fisher
 
-The mathematician Ronald Fisher (**Figure \@ref(fig:fisher)**) at Caius College in Cambridge began to apply his skills to elucidating how continuous traits, like height, could be driven by genetic variation. In 1918, Fisher published his analysis in a paper entitled "The Correlation between Relatives on the Supposition of Mendelian Inheritance" [@fisherXVCorrelationRelatives1919], where he described how the combination of a large number of Mendelian alleles acting on the same trait would result in a continuous distribution.
+The mathematician Ronald Fisher (**Figure \@ref(fig:fisher)**) at Caius College in Cambridge began to apply his skills to elucidating how continuous traits, like height, could be driven by genetic variation. In 1918, Fisher published his analysis in a paper entitled "The Correlation between Relatives on the Supposition of Mendelian Inheritance" [@fisherXVCorrelationRelatives1919], where he described how the combination of a large number of Mendelian alleles acting on the same trait would result in a normal distribution.
 
 ```{r fisher, echo = F, fig.cap = '(ref:fisher)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/introduction/Youngronaldfisher2.png"), auto_pdf = T)
@@ -158,9 +160,90 @@ In the 1930s, Theodosius Dobzhansky, a Ukrainian biologist who had trained with 
 
 By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that formed chromosomes. After some flirtation with proteins as the molecule of inheritance, Oswald Avery finally proved that it was in fact deoxyribonucleic acid (**DNA**) that was "the material substance of the gene" -- the "cloth from which genes were cut." After Rosalind Franklin, James Watson, and Francis Crick had discovered the structure of DNA using X-ray crystallography in 1953. The double helix also suggested a copying mechanism. 
 
-Frederick Sanger, a biochemist in Cambridge, applied a similar methodology as the one he used to decode the sequence of a protein to determine the sequence of a gene. But rather than breaking the molecule down into its components, he reversed the process by identifying each base as it was added to the strand during DNA replication. He used radio-labelled nucleic acids to identify 
+Frederick Sanger, a biochemist in Cambridge, applied a similar methodology as the one he used to decode the sequence of a protein to determine the sequence of a gene. But rather than breaking the molecule down into its components, he reversed the process by identifying each base as it was added to the strand during DNA replication. He used radio-labelled nucleic acids to identify.
 
-### Breeding programs in agriculture
+## Genetic causes of traits
+
+* Individual differences in human traits have been studied for more than a century, yet the causes of variation in human traits remain uncertain and controversial [@poldermanMetaanalysisHeritabilityHuman2015].
+
+* Specifically, the partitioning of observed variability into underlying genetic and environmental sources and the relative importance of additive and non-additive genetic variation are continually debated [@poldermanMetaanalysisHeritabilityHuman2015].
+
+### Heritability 
+
+* It is understood that an individual's phenotype is determined by genetic factors interacting with environmental factors and chance. 
+The measure of broad-sense heritability measures the proportion of phenotypic variance that is attributable to genetic factors [@falconerIntroductionQuantitativeGenetics1996]:
+
+$$
+\frac{V_G}{V_P}
+$$
+
+This is commonly known as *broad-sense heritability* ($H^2$), whereas *narrow-sense heritability* ($h^2$) measures the proportion of phenotypic variance attributable to *additive* genetic variance, or the extent to which phenotypes are determined by the genes transmitted from the parents [@falconerIntroductionQuantitativeGenetics1996]:
+
+$$
+\frac{V_A}{V_P}
+$$
+
+* Neither $V_G$ nor $V_E$ can be estimate directly from observations of a single population, but can be estimated from experimental populations [@falconerIntroductionQuantitativeGenetics1996]. Environmental variance cannot be removed because it includes by definition all non-genetic variance, and much of this is beyond experimental control. However, elimination of genotypic variance can be achieved experimentally [@falconerIntroductionQuantitativeGenetics1996], for example through creating highly inbred lines, or by using human or animal identical twins.
+
+* If a group of such individuals is raised under the normal range of environmental circumstances, their phenotypic variance provides an estimate of the environmental variance $V_E$. Subtraction of this from the phenotypic variance $V_P$ of a genetically mixed population then gives an estimate of the genotypic variance of this population [@falconerIntroductionQuantitativeGenetics1996]. 
+
+* Estimation of the additive variance rests on observation of the degree of resemblance between relatives, with the other genetic variance components being dominance $V_D$ and interaction $V_I$. Also not that $V_A$ does not carry with it the assumption of additive gene action; and the existence of additive variance is not an indication that any of the genes act additively (i.e. show neither dominance nor epistasis). 
+
+#### Humans
+
+* The twin study design has been used widely to disentangle the relative contributions of genes and environment, across a variety of human traits. The classical twin design is based on contrasting the trait resemblance of monozygotic (**MZ**) and dizygotic (**DZ**) twin pairs [@poldermanMetaanalysisHeritabilityHuman2015].
+
+* A rough estimate of heritability can be obtained by comparing the respective correlations of MZ twins and DZ twins with the phenotype of interest. Falconer's formula is:
+
+$$
+r_{MZ} = A + C \\
+r_{DZ} = \tfrac{1}{2}A + C \\
+\tfrac{1}{2}A = r_{MZ} - r_{DZ} \\
+\mathrm{Therefore}: \\
+A = 2(r_{MZ} - r_{DZ})
+$$
+Where $A$ = $h^2$ = additive genetic, $C$ = common environmental, and $E$ error or non-shared environmental influences.
+
+A 2015 meta-analysis of human twin studies, including 2,748 twin studies assessing ~18,000 traits and ~14.5M twin pairs, showed that across all traits, the mean heritability is 49% [@poldermanMetaanalysisHeritabilityHuman2015]. Moreover, in 69% of studies $2r_{DZ} = r_{MZ}$, with is inconsistent with the hypothesis that a substantial part of variation is due to shared environmental or non-additive genetic variation. For most of the 1/3 of traits for which an additive model cannot be assumed, $r_{DZ} > \tfrac{1}{2}r_{MZ}$, suggesting that the shared environmental effects are causing the deviation from a simple additive genetic model.
+
+#### Inbred strains and the F2 cross
+
+* Mendel used self-feritilising plants, which without sexual reproduction are effectively inbred strains. At that time, inbred strains of mammals were unknown. 
+
+* In 1906, an inbreeding experiment involving guinea-pigs was started by George M. Rommel of the Animal Husbandry Division of the United States Department of Agriculture [@eatonQuartercenturyInbreedingGuineapigs1932]. The experiment was taken over in 1915 by Sewall Wright, who used them to develop his mathematical tehory of inbreeding, eventually introducing the inbreeding coefficient $F$ as the correlation between uniting gametes in 1922 [@wrightCoefficientsInbreedingRelationship1922].
+
+  - The inheritance of coat colour in guinea pigs stubbornly refused to play by Mendelian rules. It proved virtually impossible to breed an all-white or all-coloured guinea pig, and even the most inbred families (after multiple generations of brother-sister mating) still had pronounced variation. This contradicted the prediction of Mendelian genetics that a particular trait should become "fixed" by multiple generations of inbreeding [@pearlBookWhyNew2018].
+  
+* The Harvard undergraduate Clarence Cook Little and his supervisor William Ernest Little collaborated with Abbie Lathrop, a breeder of fancy mice and rats which she marketed to rodent hobbyists and keepers of exotic pets, and later began selling in large numbers to scientific researchers [@steensmaAbbieLathropMouse2010]. In 1902, Castle bought some of Lathrop's mice for his laboratory [@steensmaAbbieLathropMouse2010].
+
+  - The most frequently used laboratory mouse strain for the past 80 years, C57BL/6J ("Black J"), is derived from one of Lathrop's animals -- mouse number 57 -- bred by Little [@steensmaAbbieLathropMouse2010].
+
+The F2 cross is a traditional method for mapping genetic variants associated with traits of interest. A schema for the method is presented in **Figure \@ref(fig:F2-cross-schema)**. In essence, it involves starting with two inbred strains that diverge for the trait of interest (the 'parental strains', or F0 generation F0). One then crosses the parental strains to create a generation of F1 hybrid individuals who each possess, for every pair of their chromosomes, one chromosome from each of their parents. The individuals in this F1 generation are genetically identical to their parents with respect to their germ line. Finally, one inter-crosses the F1 generation to create a set of F2 individuals that share unique combinations of the original F0 strains' genotypes, and tend to display values for the trait of interest that span across the spectrum between the extreme values of their parents.
+
+(ref:F2-cross-schema) Schema of the F2-cross experimental setup. The F0 generation comprises two medaka strains that have extreme, opposing values for a trait of interest, represented by the colours red and blue. Below them is an illustrative single pair of chromosomes. The chromosomes within each pair are depicted as the same colour, as the strains are homozygous through successive generations of inbreeding. Their F1 offspring is heterozygous for each pair of their 24 chromosomes, and all F1 individuals are therefore almost genetically identical to one another (with the exception of somatic mutations and the regions of the genome that were not homozygous in the parental generations). The F1 individuals are then inter-crossed with one another to produce the F2 generation, which, due to recombination events during gamete formation, have unique combinations of the parental strains' genotypes, and tend to span the phenotypic spectrum between the extremes of their F0 parental strains, represented by their colours.
+
+```{r F2-cross-schema, echo = F, fig.cap = '(ref:F2-cross-schema)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/F2-cross-schema.png"), auto_pdf = T)
+```
+
+## Medaka fish
+
+* Biological traits are the product of an interaction between an organism’s genes and its environment, often described as the relationship between "nature and nurture".[@plominNatureNurtureGenetic2005]
+
+* It is unfeasible to explore the relationship between genes and environment experimentally in humans due to the insufficient ability to manipulate either set of variables. Researchers accordingly resort to using model organisms, with which it is possible to control for both. 
+
+* The genetics of model organisms may be controlled to a degree by establishing inbred strains through the repeated mating of siblings over successive generations. Eventually, as the individuals within each line inherit the same same haplotype from their related parents, they become almost genetically identical to one another, with the added benefit that their genotypes can be replicated across time in subsequent generations. 
+
+* This utility has led to the establishment of "panels" of inbred strains for several model organisms including the thale cress (*Arabidopsis thaliana*),[@bergelsonIdentifyingGenesUnderlying2010] common bean (*Phaseolus vulgaris L*),[@johnsonSegregationPerformanceRecombinant1999] tomato (*Lycopersicon esculentum*),[@saliba-colombaniEfficiencyRFLPRAPD2000] maize (*Zea mays*),[@limamiGeneticPhysiologicalAnalysis2002] nematode (*Caenorhabditis elegans*),[@evansQTLGeneElegans2021] fruit fly (*Drosophila melanogaster*) [@mackayChartingGenotypePhenotype2018], and mouse (*Mus musculus*) [@saulHighDiversityMousePopulations2019].
+
+Although the mouse is an appropriate model for humans due to their orthologous mammalian organ systems and cell types, inbred strains of this organism descend from individuals that had already been domesticated, and therefore do not represent the genetic variation present in wild populations. Furthermore, the large panels of inbred mice such as the Collaborative Cross (**CC**) [@threadgillCollaborativeCrossRecombinant2011], Diversity Outcross (**DO**)[@svensonHighResolutionGeneticMapping2012] and B6-by-D2 (**BXD**)[@peirceNewSetBXD2004] are derived from only a small number of individuals. As gene-environment studies seek to ultimately understand their effects on traits "in the wild" (such as with humans), there is accordingly a need for a panel of inbred vertebrates that represents the genetic variation present in natural populations.
+
+The medaka fish (*Oryzias latipes*) has been studied as a model organism in Japan for over a century,[@wittbrodtMedakaModelOrganism2002] and is gaining recognition elsewhere as a powerful genetic model for vertebrates.[@spivakovGenomicPhenotypicCharacterization2014] In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, and high fertility), medaka are also – uniquely among vertebrates – resilient to inbreeding from the wild. 
+
+Since 2010, the Birney Group at EMBL-EBI, in collaboration with the Wittbrodt Group at COS, University of Heidelberg and the Loosli Group at the Karlsruhe Institute of Technology (KIT), have been working to establish the world’s first panel of vertebrate inbred strains – now known as the Medaka Inbred Kiyosu-Karlsruhe Panel (**MIKK panel**). The MIKK Panel was bred from a wild population caught near Kiyosu in Southern Japan, and now comprises 80 inbred, near-isogenic "lines".[@fitzgeraldMedakaInbredKiyosuKarlsruhe2022] 
+
+The MIKK Panel was created to map genetic variants associated with quantitative traits at a high resolution, and to explore the interactions between those variants and any environmental variables of interest. The purpose of the companion papers @fitzgeraldMedakaInbredKiyosuKarlsruhe2022 and @legerGenomicVariationsEpigenomic2022 was to introduce the MIKK panel to the scientific community, and describe the genetic characteristics of the MIKK panel that would make it a useful resource for other researchers who wish to explore the genetics of quantitative traits in vertebrates. My contributions to these papers involved visualising the inbreeding trajectory of the panel (Chapter \@ref(inbreeding-sec)), 
+exploring the evolutionary history of the MIKK panel's founding population (Chapter \@ref(introgression-sec)), measuring the levels of homozygosity across the panel (Chapter \@ref(nuc-div)), assessing its allele-frequency distribution and rate of linkage disequilibrium (LD) decay (Chapter \@ref(ld-decay-sec)), and characterising the structural variants present in a smaller sample of lines using Oxford Nanopore long-read sequencing data (Chapter \@ref(mikksv-sec)).
 
 ## Mixed models for genetic association analysis
 
@@ -182,6 +265,53 @@ Three methods were formerly used [@zhangMixedLinearModel2010]:
 
 "Ronald fished introduced random effects models to study the correlations of trait values between relatives" [@fisherXVCorrelationRelatives1919].
 
-## Somites
+## Introduction
 
-Vertebral number is precisely defined for a given species [@gomezControlSegmentNumber2008], but is the most variable physical trait across species [@kimuraGeneticAnalysisVertebral2012]; for example, frogs have 6-10, humans have 33, and snakes can have more than 300 [@gomezControlSegmentNumber2008; @kimuraGeneticAnalysisVertebral2012]. The total number of vertebrae is a function of both how long the somite segmentation process persists for, and the  
+Humankind has long sought to understand what causes differences between the minds of individuals, and the behaviours they manifest. The origin of these differences resides in our genomes, as genetic differences between individuals are what set them on their unique developmental trajectories [@mitchellGeneticsBrainWiring2007]. During the course of an organism’s development, and ongoing throughout its lifespan, their genes interact with each other and the environment, leading to the creation of measurable traits, or phenotypes [@plominNatureNurtureGenetic2005]. A core domain of biological inquiry concerns the extent to which an individual’s value for a trait is determined by their genes (**G**), their environment (**E**), or an interaction between the two (**GxE**), commonly referred to as the interplay between ‘nature and nurture’ [@galtonMenScienceTheir1874; @plominNatureNurtureGenetic2005].
+
+Experimental investigations of GxE in humans are hampered by the difficulties in sufficiently controlling for either genes or environment. To explore this fundamental question, researchers accordingly turned to model organisms, including the nematode (*Caenorhabditis elegans*) [@snoekMultiparentRecombinantInbred2019], fruit fly (*Drosophila melanogaster*) [@schneiderSocialStructureIndirect2017], mouse (*Mus musculus*) [@baudGeneticVariationSocial2017], and teleost species such as zebrafish (*Danio rerio*) [@ratermanZebrafishModelsCraniofacial2020] and medaka (*Oryzias latipes*). Medaka is an established model organism which has been studied in Japan for over a century[@wittbrodtMedakaModelOrganism2002]. In addition to possessing many favourable traits including ease of handling, a rapid reproduction cycle, a short lifespan, and a well-annotated genome, medaka has a trait that is singular among vertebrates – they have a high tolerance to inbreeding from the wild, allowing one to establish near-isogenic inbred strains with relative ease [@fitzgeraldMedakaInbredKiyosuKarlsruhe2022; @kirchmaierGenomicGeneticToolbox2015].
+
+Inbred strains permit experimental quantification of complex trait parameters with sufficient replication under controlled assay conditions. By comparing individuals from different strains, one can measure the strength of genetic effects on a trait of interest. Furthermore, the low degree of genetic variance between individuals of an inbred strain allows one to measure the strength of environmental effects on a given trait by controlled variation of the environment.
+
+## Boldness-shyness
+
+Behaviour is a complex trait that is affected by both genes and environment, and for social animals such as humans and medaka, one’s social environment is considered likely to constitute a large component of the environmental effect [@ruzzanteBehaviouralGrowthResponses1990; @youngNeurobiologyHumanSocial2008]. Apart from social aspects, an organism must face many “hostile forces of nature” throughout its life [@bussEvolutionaryPersonalityPsychology1991; @darwinOriginSpeciesMeans1859], such as food shortages, predation, harsh climate, and diseases. Adaptive behaviours allow individuals to navigate such dangers and maximise the likelihood of their survival at both the individual and population level [@limaBehavioralDecisionsMade1990].
+
+Boldness-shyness is thought to be a fundamental axis of behavioural variation in many species, with an obvious causal relationship to an individual’s likelihood of survival, and consequently with natural selection at the population level [@sloanwilsonShynessBoldnessHumans1994]. It represents an evolutionary trade-off between acquiring benefits (in terms of food or mates) and avoiding harms (in terms of predators or conspecific competitors), with each situation accompanied by its own optimal degree of risk [@limaBehavioralDecisionsMade1990]. It is both heritable [@svartbergShynessBoldnessPredicts2002; @brownHeritableExperientialEffects2007], and subject to change following different life experiences or under different environmental conditions [@brownHeritableExperientialEffects2007].
+Boldness-shyness has been studied extensively with fish. Shy individuals tend to react to novelty by reducing their activity and becoming more vigilant, whereas bold individuals show higher levels of activity and exploratory behaviour [@brownCorrelationBoldnessBody2007]. One assay commonly used to measure this behavioural domain is referred to as the ‘open field’ assay, where fishes are observed while swimming freely in an experimental setting [@brownCorrelationBoldnessBody2007; @lalandFishCognitionBehavior2011; @lucon-xiccatoComparisonAnxietylikeSocial2022; @lucon-xiccatoDevelopmentOpenFieldBehaviour2020; @lucon-xiccatoIndividualDifferencesCognition2017; @matsunagaHabituationMedakaOryzias2010]. Another is the ‘novel object’ assay, where a novel object is introduced to the fishes’ environment to simulate a threat [@brownCorrelationBoldnessBody2007; @schjoldenDoesIndividualVariation2005; @wilsonShyboldContinuumPumpkinseed1993; @wrightEpistaticRegulationBehavioural2006; @wrightInterIntrapopulationVariation2003]. Where both assays were performed on the same fish, the behaviours exhibited were found to be correlated across assays, indicating that both were measuring the same boldness-shyness axis [@brownCorrelationBoldnessBody2007]. [**there is also an aspect of habituation in both parts of the test that should be mentioned**]
+
+## Social genetic effects
+
+The specific environmental factor is the so-called indirect or social genetic effect, which describes the indirect interactions between an individual’s genes and the genes of their companions [@baudGeneticVariationSocial2017]. Social genetic effects have been shown to exert influence on various traits in mice including anxiety, wound healing, immune function, and body weight [@baudGeneticVariationSocial2017], and various traits related to development and survival in many species of livestock [@ellenProspectsSelectionSocial2014]. However, in those studies the social interactions were maintained throughout development, and it is unclear whether social genetic effects can still exert influence on adaptive behaviours during discrete, time-limited interactions.
+
+* [@kongNatureNurtureEffects2018] showed that parents' non-transmitted alleles can affect a child through their impacts on the parents and other relatives, a phenomenon the authors call "genetic nurture", comprising 29.9% of the transmitted polygenic score.
+
+* @hwangEstimatingIndirectParental2020 discovered that indirect parental genetic effects could influence offspring phenotypes, through the alleles that they *do not* pass on to their children, but which drive the parents' own behaviour, which ultimately influences the child's outcomes. Their strategy involved creating "virtual" mothers and fathers by estimating the genotypic dosages of parental genotypes using physically genotyped data from relative pairs. They applied the approach to 19,066 sibling pairs from the UK Biobank and showed a polygenic score consisting of imputed parental educational attainment SNP dosages is strongly related to offspring educational attainment even after correcting for offspring genotype at the same loci. 
+
+
+## Genetic control of somite period development
+
+During the development of an embryo, somites are the earliest primitive segmental structures that form from  presomatic mesoderm cells (**PSM**) [@kimPeriodSomiteSegmentation2011]. They later differentiate into vertebrae, ribs, and skeletal muscles, thereby establishing the body's anterior-posterior axis. **Figure \@ref(fig:mouse-embryo)** depicts a number of formed somites in a 9.5-day-old mouse embryo. 
+
+(ref:mouse-embryo) Image of a mouse embryo at day 9.5 from @gridleyLongShortIt2006, showing somites in darker colours. 
+
+```{r mouse-embryo, echo = F, fig.cap = '(ref:mouse-embryo)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/mouse_embryo_gridley.png"), auto_pdf = T)
+```
+
+Somite formation occurs rhythmically and sequentially, with the time between the formation of each pair of somites referred to as the "period". The period of somite formation varies greatly between species: ~30 minutes for zebrafish, 90 minutes for chickens, 2-3 hours for mice, and 5-6 hours for humans [@hubaudSignallingDynamicsVertebrate2014; @matsudaSpeciesspecificSegmentationClock2020]. **Figure \@ref(fig:somite-seg-ali)** shows the a series of time-stamped images of somite segmentation in medaka fish, generated by Ali Seleit. 
+
+(ref:somite-seg-ali) Time-stamped images of somite segmentation in medaka, generated by Ali Seleit.
+
+```{r somite-seg-ali, echo = F, fig.cap = '(ref:somite-seg-ali)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/ali_fish_seg_compiled.png"), auto_pdf = T)
+```
+
+The period of somite formation is controlled by a molecular oscillator, known as the 'segmentation clock', which drives waves of gene expression in the Notch, fibroblast growth factor (FGF), and Wnt pathways, forming a signalling gradient that regresses towards the tail in concert with axis elongation [@gomezControlSegmentNumber2008]. Over the course of elongation, the wave period increases (i.e. each somite takes longer to form), and the PSM progressively shrinks until it is exhausted, eventually terminating somite formation [@gomezControlSegmentNumber2008]. 
+
+It is not fully understood how the phase waves of the segmentation clock are intially established [@falkImagingOnsetOscillatory2022]. @matsudaSpeciesspecificSegmentationClock2020 found that period differences between mouse and human occur at the single-cell level (i.e. not due to intercellular communication), and are driven by biochemical reaction speeds - specifically, mRNA and protein degradation rates, transcription and translation delays, and intron and splicing delays. To identify the genetic basis of these biochemical differences, our collaborators Ali Seleit and Alexander Aulehla at EMBL-Heidelberg used a CRISPR-Case9 knock-in approach [@seleitEndogenousProteinTagging2021] to establish a medaka *Cab* strain with an endogenous, fluorescing reporter gene (Her7-Venus) for the oscillation signalling pathway. This method allows them to image somite formation and extract quantitative measures for segmentation clock dynamics. 
+
+In medaka, it is known that the southern Japanese *Cab* strain and the northern Japanese *Kaga* strain have divergent somite periodicity, where *Kaga*'s tends to be faster, and *Cab*'s slower (**Figure \@ref(fig:F0-Cab-Kaga-HdrR)**). 
+
+## Genetic control of behaviour
+
