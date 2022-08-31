@@ -15,6 +15,8 @@ fig:aida-fig
 fig:dobzhansky
 fig:all-four
 fig:sanger
+fig:pheno-causal-model
+fig:line-locations
 fig:F2-cross-schema
 fig:mouse-embryo
 fig:somite-seg-ali
@@ -27,7 +29,6 @@ fig:repeats
 fig:SV-main
 fig:behavioural-schema
 fig:assay-setup
-fig:line-locations
 fig:covariate-effects
 fig:compare-params
 fig:pilot-polar
@@ -147,12 +148,13 @@ statistical-genetics-francis-galton-karl-pearson-and-ronald-fisher
 genetic-mapping-thomas-morgan-tetsuo-aida-and-theodosius-dobzhansky
 the-discovery-of-the-structure-of-dna
 the-development-of-dna-sequencing
-genetic-causes-of-variation-in-traits
-humans-and-the-concept-of-heritability
+genetic-and-environmental-causes-of-variation-in-complex-traits
+heritability
+genome-wide-association-analysis-gwas
 animal-models
 the-medaka-inbred-kiyosu-karlsruhe-mikk-panel
 the-f2-cross
-genome-wide-association-analysis
+studied-phenotypes
 genetic-control-of-somite-period-development
 behaviour
 social-genetic-effects

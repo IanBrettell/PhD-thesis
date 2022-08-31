@@ -237,7 +237,7 @@ There remained the question of where the gene resides. In the 1890s, Theodor Bov
 
 Around 1905 Morgan began to breed *Drosophila*, identifying visible variants that he could track over generations, including white versus red eyes, forked versus straight bristles, sable-coloured bodies, curved legs; bent, bat-like wings; disjointed abdomens, and deformed eyes [@mukherjeeGeneIntimateHistory2016]. Through repeated crossing experiments, Morgan discovered that some genes were transmitted together at a higher rate than chance alone. He proposed that these genes were physically "linked" to one another, implying that they were situated on some string within the chromosome [@mukherjeeGeneIntimateHistory2016]. This advanced the understanding of a gene from a purely theoretical unit of inheritance to a physical unit [@mukherjeeGeneIntimateHistory2016]. He further discovered that, occasionally, a gene that was otherwise linked to another could "cross over" from one parental strand to the other, generating offspring with a mixture of parental alleles [@mukherjeeGeneIntimateHistory2016].
 
-While Morgan was carrying out his experiments with *Drosophila*, Japanese researchers were also studying Mendelian inheritance with the Japanese medaka fish, *Oryzias latipes*. Following three articles published by three separate professors in Japanese on the recessive inheritance of medaka colour variants [@fukamachi100YearsMedaka2021], a teacher named Tatsuo Aida (**Figure \@ref(fig:aida)**) published the first article in English about medaka in 1921 [@aidaInheritanceColorFreshWater1921]. The study involved a total of 22 crosses of two generations, and among other findings discovered recombination between the X and Y chromosome. The editor, William Castle, was so impressed by this last finding that he added the following footnote to the paper:
+While Morgan was carrying out his experiments with *Drosophila*, Japanese researchers were also studying Mendelian inheritance with the Japanese medaka fish, *Oryzias latipes*. Following three articles published by three separate professors in Japanese on the recessive inheritance of medaka colour variants [@fukamachi100YearsMedaka2021], a teacher named Tatsuo Aida (**Figure \@ref(fig:aida)**) published the first article in English about medaka in 1921 [@aidaInheritanceColorFreshWater1921]. The study involved a total of 22 crosses of two generations, and among other findings discovered recombination between the X and Y chromosome -- the world's first demonstration in any species of Y-linked inheritance [@naruseMedakaModelOrganogenesis2011a]. The editor, William Castle, was so impressed by this last finding that he added the following footnote to the paper:
 
 > It should be pointed out, in justice to the author, that his observations go beyond those of Schmidt in the important respect of showing the occurrence of crossing over between the X and the Y chromosome.
 
@@ -286,49 +286,79 @@ Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University 
 
 These technological breakthroughs eventually led to the first draft of the human genome being published in 2001 by a large international consortium [@internationalhumangenomesequencingconsortiumInitialSequencingAnalysis2001a], while the full sequence (including heterochromatic regions) was only completed in 2022 [@nurkCompleteSequenceHuman2022]. The improvement in sequencing technologies has continued to progess to the stage where a $100 human genome is on the horizon [@pennisi100GenomeNew2022], and long-read technologies developed by Pacific Biosciences and Oxford Nanopore Technologies are allowing for single reads of over 2 megabases in length [@payneBulkVisGraphicalViewer2019] and the direct sequencing of DNA modifications [@wangNanoporeSequencingTechnology2021]. These developments are making genetic technologies ever more accessible and informative, paving the way for greater insights into the genetic basis of phenotypic differences. Yet despite these technological advances, the relative contribution of genetics and environment to differences in complex traits remains unclear -- especially in humans -- and is therefore an active area of research.
 
-## Genetic causes of variation in traits
+## Genetic and environmental causes of variation in complex traits
 
 Individual differences in human traits have now been studied for more than a century, yet the causes of variation in human traits remain uncertain and controversial [@poldermanMetaanalysisHeritabilityHuman2015]. Specifically, the partitioning of observed variability into underlying genetic and environmental sources and the relative importance of additive and non-additive genetic variation continue to be debated [@poldermanMetaanalysisHeritabilityHuman2015].
 
-### Humans and the concept of heritability
+A simplified causal model for the inheritance of traits from one's parents is presented in **Figure \@ref(fig:pheno-causal-model)**, adapted from @morrisPopulationPhenomenaInflate2020. The ancestry of each parent determines both their genotypes and phenotypes (yellow lines). The parents' genotypes directly affect their own phenotypes (black arrows genotype → phenotype). The parents then transmit half of each of their alleles *directly* to their offspring (black arrows from genotype → genotype), while the non-transmitted alleles also affect their offspring *indirectly* through their effect on the parents' phenotypes (red lines), a phenomenon known as "**dynastic effects**" [@kongNatureNurtureEffects2018]. In addition, the parents' phenotypes can be correlated through "**assortative mating**" (green line), which also has the consequence of creating correlations between the genotypes that affect those phenotypes [@howeGeneticEvidenceAssortative2019]. 
 
-It is understood that an individual's phenotype is determined by genetic factors ("nature") interacting with environmental factors ("nurture") and chance [@plominNatureNurtureGenetic2005]. Fisher's analysis of variance methodology has allowed for the partitioning of variance into components of interest. If the total observed phenotypic variation is represented by $V_{P}$, then it can be decomposed as follows:
+(ref:pheno-causal-model) Causal model of offspring phenotypes. Ancestry causes differences in both genotypes and phenotypes of the parents (yellow lines). Dynastic effects are transmitted through parental parental phenotypes (red lines). Assortative mating creates associations between the phenotypes of the parents (green line), which will also lead to genotypic correlations. Arrows represent direction of effect. Figure adapted from @morrisPopulationPhenomenaInflate2020.
 
-$$
-V_{P} = V_{G} + V_{E} + V_{G \times E}
-$$
-Where $V_{G}$ is the total proportion of phenotypic variance attributable to genetic factors, $V_{E}$ is that attributable to environmental factors (i.e. all non-genetic factors), and $V_{G \times E}$ is that attributable to an interaction between genes and environment. The measure of *broad-sense heritability* ($H^2$) measures the proportion of phenotypic variance that is attributable to genetic factors [@falconerIntroductionQuantitativeGenetics1996]:
+<div class="figure">
+<img src="figs/introduction/pheno_causal_model.png" alt="(ref:pheno-causal-model)" width="100%" />
+<p class="caption">(\#fig:pheno-causal-model)(ref:pheno-causal-model)</p>
+</div>
 
-$$
-\frac{V_G}{V_P}
-$$
+This model only includes environmental factors related to the parents' phenotypes, yet the phenotype of an individual is continuously affected by all other environmental influences it is exposed to throughout its lifetime [@plominNatureNurtureGenetic2005]. It is impossible to parse out the respective contributions of each of these factors at the individual level, but the problem becomes tractable by examining genotypic and phenotypic variation within groups of individuals.
 
-*Narrow-sense heritability* ($h^2$) measures the proportion of phenotypic variance attributable to *additive* genetic variance, or the extent to which phenotypes are determined by the genes transmitted from the parents [@falconerIntroductionQuantitativeGenetics1996]:
+### Heritability
 
-$$
-\frac{V_A}{V_P}
-$$
-
-Environmental variance cannot be removed because it includes by definition all non-genetic variance, and much of this is beyond experimental control. However, elimination of genotypic variance can be achieved experimentally [@falconerIntroductionQuantitativeGenetics1996], for example through creating highly inbred lines, or by using human or animal identical twins.
-
-* If a group of such individuals is raised under the normal range of environmental circumstances, their phenotypic variance provides an estimate of the environmental variance $V_E$. Subtraction of this from the phenotypic variance $V_P$ of a genetically mixed population then gives an estimate of the genotypic variance of this population [@falconerIntroductionQuantitativeGenetics1996].
-
-* The twin study design has been used widely to disentangle the relative contributions of genes and environment, across a variety of human traits. The classical twin design is based on contrasting the trait resemblance of monozygotic (**MZ**) and dizygotic (**DZ**) twin pairs [@poldermanMetaanalysisHeritabilityHuman2015].
-
-* A rough estimate of heritability can be obtained by comparing the respective correlations of MZ twins and DZ twins with the phenotype of interest. Falconer's formula is:
+Fisher's analysis of variance methodology allowed for the partitioning of variance into components that are attributable to different factors. If the total observed phenotypic variation within a population is represented by $V_{P}$, then it can be decomposed as follows with respect to genetic and environmental factors:
 
 $$
-r_{MZ} = A + C \\
-r_{DZ} = \tfrac{1}{2}A + C \\
-\tfrac{1}{2}A = r_{MZ} - r_{DZ} \\
+V_{P} = V_{G} + V_{E}
+$$
+$V_{G}$ is the total proportion of phenotypic variance attributable to genetic factors, $V_{E}$ is that attributable to environmental factors (i.e. all non-genetic factors). *Broad-sense heritability* ($H^2$) measures the proportion of phenotypic variance that is attributable to genetic factors [@falconerIntroductionQuantitativeGenetics1996]:
+
+$$
+H^2 = \frac{V_G}{V_P}
+$$
+
+*Narrow-sense heritability* ($h^2$) measures the proportion of phenotypic variance attributable to *additive* genetic variance, excluding variance caused by Mendelian dominant/recessive phenomena, and epistasis (the interaction of alleles at different loci) [@batesonMendelPrinciplesHeredity1909; @falconerIntroductionQuantitativeGenetics1996; @posthumaTheoryPracticeQuantitative2003]:
+
+$$
+h^2 = \frac{V_A}{V_P}
+$$
+
+As heritability is measured as a fraction of total phenotypic variance, it is liable to change depending on the level of environmental variation present in the study population [@visscherHeritabilityGenomicsEra2008]. However, for a given study population, and assuming they individuals are raised under the "normal" range of environmental circumstances, one can subtract the environmental variance ($V_E$) from the total phenotypic variance ($V_P$) to give an estimate of the trait's heritability $V_G$ [@falconerIntroductionQuantitativeGenetics1996].
+
+Environmental variance cannot be removed experimentally because it includes by definition all non-genetic variance, and much of this is beyond experimental control. However, elimination of genotypic variance can be achieved experimentally [@falconerIntroductionQuantitativeGenetics1996] by either using human or animal identical twins, or by creating highly inbred lines.
+
+In humans, the twin study design has been used widely to disentangle the relative contributions of genes and environment for a variety of traits. The classical twin design is based on contrasting the trait resemblance of monozygotic (**MZ**) and dizygotic (**DZ**) twin pairs [@poldermanMetaanalysisHeritabilityHuman2015]. MZ twins share approximately 100% of genotypes, whereas DZ twins, like siblings, share on average 50% of their genotypes [@knopikBehavioralGenetics2019]. Assuming they share the same environment (an point I return to below), a rough estimate of heritability can be obtained by comparing the respective correlations of MZ twins and DZ twins with the phenotype of interest. If $r_{MZ}$ and $r_{DZ}$ are the correlation coefficients observed between pairs of MZ and DZ twins for a trait of interest, $h^2$ = additive genetic influences, and $C$ = common environmental influences, then Falconer's formula tells us:
+
+$$
+r_{MZ} = h^2 + C \\
+r_{DZ} = \tfrac{1}{2}h^2 + C \\
+\tfrac{1}{2}h^2 = r_{MZ} - r_{DZ} \\
 \mathrm{Therefore}: \\
-A = 2(r_{MZ} - r_{DZ})
+h^2 = 2\times(r_{MZ} - r_{DZ})
 $$
-Where $A$ = $h^2$ = additive genetic, $C$ = common environmental, and $E$ error or non-shared environmental influences. Assuming both MZ and DZ twins share a common environment (which is less likely due to genetic feedback effects) [RESEARCH], when subtracting $r_{DZ}$ from $r_{MZ}$, $C$ disappears, leaving $\tfrac{1}{2}A$. 
+Narrow-sense heritability $h^2$ can therefore be estimated by doubling the difference between the correlation coefficients of MZ versus DZ twins. A 2015 meta-analysis of virtually all human twin studies that had been performed to that date included 2,748 twin studies assessing ~18,000 traits and ~14.5M twin pairs. The results showed that across all traits, $h^2$ is 0.488 and $C$ is 0.174 [@poldermanMetaanalysisHeritabilityHuman2015]. Moreover, in 69% of studies $2r_{DZ} = r_{MZ}$ (implying that the shared environment $C$ is equivalent across both MZ and DZ twin pairs). This suggests that for most traits, shared environmental or non-additive genetic variation do not make a substantial contribution to phenotypic variation. 
 
-A 2015 meta-analysis of human twin studies, including 2,748 twin studies assessing ~18,000 traits and ~14.5M twin pairs, showed that across all traits, the mean heritability is 49% [@poldermanMetaanalysisHeritabilityHuman2015]. Moreover, in 69% of studies $2r_{DZ} = r_{MZ}$, which is inconsistent with the hypothesis that a substantial part of variation is due to shared environmental or non-additive genetic variation. The authors found that for most of the 1/3 of traits for which an additive model cannot be assumed, $r_{DZ} > \tfrac{1}{2}r_{MZ}$, suggesting that shared environmental effects are causing the deviation from a simple additive genetic model.
+However, that study found that several behavioural traits were inconsistent with this model. These traits included conduct disorder, higher-level cognitive functions, mental and behavioural disorders due to the use of alcohol or tobacco, anxiety disorder, and weight maintenance. For these traits, either or both non-additive genetic influences or shared environmental influences are therefore needed to explain the observed patterns of twin correlations [@poldermanMetaanalysisHeritabilityHuman2015]. Indeed, @kongNatureNurtureEffects2018 showed that parents' non-transmitted alleles can affect a child through their impacts on the parents and other relatives, a phenomenon the authors call "genetic nurture", comprising 29.9% of the transmitted polygenic score.
 
-* Indeed, @kongNatureNurtureEffects2018 showed that parents' non-transmitted alleles can affect a child through their impacts on the parents and other relatives, a phenomenon the authors call "genetic nurture", comprising 29.9% of the transmitted polygenic score.
+Beyond twin-studies, the advent of next-generation sequencing technologies has enabled the dense genotyping of large samples of individuals, leading to the development of new methods for analysing the genetic influences on human traits. The most widespread of these methods is known as the Genome-Wide Association Analysis (**GWAS**).
+
+### Genome-Wide Association Analysis (GWAS)
+
+GWAS aim to identify genetic variants associated with traits by comparing the allele frequencies of individuals who share similar ancestries, but differ in values for the trait in question [@uffelmannGenomewideAssociationStudies2021]. As of 2021, over 5,700 GWAS have been performed for more than 3,330 human traits [@uffelmannGenomewideAssociationStudies2021]. 
+
+The standard GWAS process involves first genotyping individuals using SNP microarrays, which target common genetic variants, or by sequencing their full exomes or genomes, respectively referred to as Whole Exome Sequencing (**WES**) and Whole-Genome Sequencing (**WGS**). One then uses principal components analysis (**PCA**) to restrict the analysis individuals who share common ancestry, in order to avoid population stratification effects [@uffelmannGenomewideAssociationStudies2021]. Missing genotypes can be imputed using a genetic reference panel such as the 1000 Genomes Project [@10002015global]. Finally, an association test can be run, which includes an individual-specific random effect term to account for genetic relatedness among individuals.
+
+Since it became possible to sequence the genotypes of individuals at scale, it has been an ongoing point of debate as to how best to model the effects that genetic variants have on a trait of interest. The standard linear regression model now used for GWAS can be written as follows:
+
+$$
+\textbf{Y} \sim \textbf{W} \alpha ~+~{X_s}{\beta_s} + g + e \\
+g \sim N(0,\sigma^2_A\psi) \\
+e \sim N(0,\sigma^2_e \textbf{I})
+$$
+where, for each individual, $\textbf{Y}$ is a vector of phenotype values, $\textbf{W}$ is a matrix of covariates including an intercept term, $\alpha$ is a corresponding vector of effect sizes, $X_s$ is a vector of genotype values for all individuals at SNP $s$, $\beta_s$ is the corresponding fixed effect size of genetic variant $s$ (also known as the SNP effect size), $g$ is a random effect that captures the polygenic effect of other SNPs, $e$ is a random effect of residual errors, $\sigma^2_{A}$ measures additive genetic variation of the phenotype, $\psi$ is the standard genetic relationship matrix, $\sigma^2_e$ measures residual variance, and $\textbf{I}$ is an identity matrix [@uffelmannGenomewideAssociationStudies2021]. 
+
+Population structure and unequal relatedness among individuals in a given cohort can lead to false discoveries [@ewensTransmissionDisequilibriumTest1995; @membersofthecomplextraitconsortiumNatureIdentificationQuantitative2003]. This is because individuals who share common ancestries will share both variants that do affect the trait of interest, and variants that do not, and these variants will be correlated with one other due to that shared ancestry. Therefore, if an association is found between the causal variants and a trait of interest, the non-causal variants that are correlated with the causal variants will also be found to be statistically associated with the trait.
+
+GWAS output a $p$-value and directional effect size (commonly denoted as $\beta$) for each tested SNP. Significance of SNPs are determined by either Bonferroni correction ($\alpha / M_{SNPs}$, commonly set as $p < 5 \times 10^{-8}$ for human studies), or by running permutations of the phenotype (and covariates) and selecting the lowest $p$-value from those permutations as the significance threshold.
+
+The summed effect sizes of significant SNPs should theoretically reach the heritability estimates from twin studies, however until recently they fell far short, leading to a discussion on the sources of this "missing heritability" [@manolioFindingMissingHeritability2009]. GWAS are limited by sample size, as extremely large samples are required to detect rare variants, and variants with small effect sizes. Short-read sequencing technologies are also unable to detect large "structural" variants, which may have large effects on the phenotype of interest. However, this issue has largely been resolved through improvements in genotyping [@yangCommonSNPsExplain2010], and tools such as GCTA which estimates the variance explained by *all* SNPs in the genome, rather than testing the association of individual SNPs that may be in linkage disequilibrium with each other [@yangGCTAToolGenomewide2011].
 
 ### Animal models
 
@@ -336,21 +366,26 @@ It is unfeasible to explore the relationship between genes and environment exper
 
 The genetics of model organisms may be controlled to a degree by establishing inbred strains. Mendel used self-fertilising plants, which without sexual reproduction are effectively inbred strains. At that time, inbred strains of mammals were unknown. But through the repeated mating of siblings over successive generations, as the individuals within each line inherit the same same haplotype from their related parents, they become almost genetically identical to one another, with the added benefit that their genotypes can be replicated across time in subsequent generations. 
 
-* In 1906, an inbreeding experiment involving guinea-pigs was started by George M. Rommel of the Animal Husbandry Division of the United States Department of Agriculture [@eatonQuartercenturyInbreedingGuineapigs1932]. The experiment was taken over in 1915 by Sewall Wright, who used them to develop his mathematical theory of inbreeding, eventually introducing the inbreeding coefficient $F$ as the correlation between uniting gametes in 1922 [@wrightCoefficientsInbreedingRelationship1922].
-
-* The inheritance of coat colour in guinea pigs stubbornly refused to play by Mendelian rules. It proved virtually impossible to breed an all-white or all-coloured guinea pig, and even the most inbred families (after multiple generations of brother-sister mating) still had pronounced variation. This contradicted the prediction of Mendelian genetics that a particular trait should become "fixed" by multiple generations of inbreeding [@pearlBookWhyNew2018].
+In the early 1900s, researcher began to develop inbred lines of guinea pigs and mice for the purpose of genetic research. In 1906, an inbreeding experiment involving guinea-pigs was started by George M. Rommel of the Animal Husbandry Division of the United States Department of Agriculture [@eatonQuartercenturyInbreedingGuineapigs1932]. The experiment was taken over in 1915 by Sewall Wright, who used them to develop his mathematical theory of inbreeding, eventually introducing the inbreeding coefficient $F$ as the correlation between uniting gametes in 1922 [@wrightCoefficientsInbreedingRelationship1922].
   
-* The Harvard undergraduate Clarence Cook Little and his supervisor William Ernest Little collaborated with Abbie Lathrop, a breeder of fancy mice and rats which she marketed to rodent hobbyists and keepers of exotic pets, and later began selling in large numbers to scientific researchers [@steensmaAbbieLathropMouse2010]. In 1902, Castle bought some of Lathrop's mice for his laboratory [@steensmaAbbieLathropMouse2010].
+Contemporaneously, the Harvard undergraduate Clarence Cook Little and his supervisor William Ernest Little collaborated with Abbie Lathrop, a breeder of fancy mice and rats which she marketed to rodent hobbyists and keepers of exotic pets, and later began selling in large numbers to scientific researchers [@steensmaAbbieLathropMouse2010]. In 1902, Castle bought some of Lathrop's mice for his laboratory [@steensmaAbbieLathropMouse2010]. The most frequently used laboratory mouse strain for the past 80 years, C57BL/6J ("Black J"), is derived from one of Lathrop's animals -- mouse number 57 -- bred by Little [@steensmaAbbieLathropMouse2010].
 
-  - The most frequently used laboratory mouse strain for the past 80 years, C57BL/6J ("Black J"), is derived from one of Lathrop's animals -- mouse number 57 -- bred by Little [@steensmaAbbieLathropMouse2010].
-
-* The utility of inbred strains eventually led to the establishment of "panels" of inbred strains for several model organisms including the thale cress (*Arabidopsis thaliana*) [@bergelsonIdentifyingGenesUnderlying2010], common bean (*Phaseolus vulgaris L*) [@johnsonSegregationPerformanceRecombinant1999], tomato (*Lycopersicon esculentum*) [@saliba-colombaniEfficiencyRFLPRAPD2000], maize (*Zea mays*) [@limamiGeneticPhysiologicalAnalysis2002], nematode (*Caenorhabditis elegans*) [@evansQTLGeneElegans2021], fruit fly (*Drosophila melanogaster*) [@mackayChartingGenotypePhenotype2018], and mouse (*Mus musculus*) [@saulHighDiversityMousePopulations2019].
+The utility of inbred strains eventually led to the establishment of "panels" of inbred strains for several model organisms including the thale cress (*Arabidopsis thaliana*) [@bergelsonIdentifyingGenesUnderlying2010], common bean (*Phaseolus vulgaris L*) [@johnsonSegregationPerformanceRecombinant1999], tomato (*Lycopersicon esculentum*) [@saliba-colombaniEfficiencyRFLPRAPD2000], maize (*Zea mays*) [@limamiGeneticPhysiologicalAnalysis2002], nematode (*Caenorhabditis elegans*) [@evansQTLGeneElegans2021], fruit fly (*Drosophila melanogaster*) [@mackayChartingGenotypePhenotype2018], and mouse (*Mus musculus*) [@saulHighDiversityMousePopulations2019].
 
 Although the mouse is an appropriate model for humans due to their orthologous mammalian organ systems and cell types, inbred strains of this organism descend from individuals that had already been domesticated, and therefore do not represent the genetic variation present in wild populations. Furthermore, the large panels of inbred mice such as the Collaborative Cross (**CC**) [@threadgillCollaborativeCrossRecombinant2011], Diversity Outcross (**DO**)[@svensonHighResolutionGeneticMapping2012] and B6-by-D2 (**BXD**)[@peirceNewSetBXD2004] are derived from only a small number of individuals. As gene-environment studies seek to ultimately understand their effects on traits "in the wild" (such as with humans), there is accordingly a need for a panel of inbred vertebrates that represents the genetic variation present in natural populations.
 
 ### The Medaka Inbred Kiyosu-Karlsruhe (MIKK) panel
 
 The medaka fish (*Oryzias latipes*) has been studied as a model organism in Japan for over a century [@wittbrodtMedakaModelOrganism2002], and is gaining recognition elsewhere as a powerful genetic model for vertebrates [@spivakovGenomicPhenotypicCharacterization2014]. In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, and high fertility), medaka are also – uniquely among vertebrates – resilient to inbreeding from the wild. 
+
+This resilience to inbreeding has allowed (predominantly Japanese) researchers to develop several inbred strains that have been maintained for over 100 generations. One of the most famous inbred medaka strains, *HdrR*, was derived from Tatsuo Aida's collection of southern Japanese medaka fish [@fukamachi100YearsMedaka2021]. Other prominent strains include *HO5* and *iCab* from southern Japan, and *Kaga* and *HNI* from northern Japan. The locations of the originating populations of these strains are set out in **Figure \@ref(fig:line-locations)**. 
+
+(ref:line-locations) Image adapted from [@spivakovGenomicPhenotypicCharacterization2014], showing the locations of the originating populations of the 5 inbred medaka lines used in this study. 
+
+<div class="figure">
+<img src="figs/pilot/line_locations.png" alt="(ref:line-locations)" width="100%" />
+<p class="caption">(\#fig:line-locations)(ref:line-locations)</p>
+</div>
 
 Since 2010, the Birney Group at EMBL-EBI, in collaboration with the Wittbrodt Group at COS, University of Heidelberg and the Loosli Group at the Karlsruhe Institute of Technology (KIT), have been working to establish the world’s first panel of vertebrate inbred strains – now known as the Medaka Inbred Kiyosu-Karlsruhe Panel (**MIKK panel**). The MIKK Panel was bred from a wild population caught near Kiyosu in Southern Japan, and now comprises 80 inbred, near-isogenic "lines" [@fitzgeraldMedakaInbredKiyosuKarlsruhe2022].
 
@@ -360,7 +395,7 @@ The fundamental utility of the MIKK panel arises from:
 
   a. its representation of the genetic variation that exists in a wild population. 
   
-  a. the ability to replicate individuals with near-identical genotypes, allowing one to modify environmental variables to determine the strength of those environmental effects.
+  a. the ability to replicate individuals with near-identical genotypes, allowing one to modify environmental variables while keeping the genetics constant to determine the strength of those environmental effects.
   
   a. the presence of numerous inbred lines that can by placed in the same environment, allowing one to infer the strength of the genetic effect
   
@@ -379,33 +414,9 @@ The F2 cross is a traditional method for mapping genetic variants associated wit
 
 By combining this traditional genetic mapping method with modern sequencing technologies, researchers are not only able to map genetic variants associated with a phenotype of interest at a higher resolution than in humans, but also functionally validate those variants by "knocking in" (or out) a discovered allele in an embryo to confirm that it has the effect predicted. Many studies have already made use of this combined method (CITE), known as a "Genome-Wide Linkage Analysis", which applies modern genetic association statistical methods that have been refined over the last decade in humans, known as *Genome-Wide Association Analysis*, or **GWAS**.
 
-### Genome-Wide Association Analysis
+## Studied phenotypes
 
-GWAS aim to identify genetic variants associated with traits by comparing the allele frequencies of individuals who share similar ancestries, but differ in values for the trait in question [@uffelmannGenomewideAssociationStudies2021]. As of 2021, over 5,700 GWAS have been performed for more than 3,330 human traits [@uffelmannGenomewideAssociationStudies2021]. 
-
-[GWAS METHODOLOGY]
-
-"The distinction between Mendelian loci and QTLs is artificial, as the same mapping techniques can be applied to both. In fact, the classification of genetic (and allelic) effects should be considered as a continuum. At one end of the spectrum is the dichotomous Mendelian trait with only two detectable and distinct phenotypes, which are governed by a single gene. At the other end are traits, such as growth, which are likely to be affected by many genes that each contribute a small portion to the overall phenotype." [@membersofthecomplextraitconsortiumNatureIdentificationQuantitative2003]
-
-Since it became possible to sequence the genotypes of individuals at scale, it has been an ongoing point of debate as to how best to model the effects that genetic variants have on a trait of interest.
-
-Population structure and unequal relatedness among individuals in a given cohort can lead to false discoveries [@ewensTransmissionDisequilibriumTest1995; @membersofthecomplextraitconsortiumNatureIdentificationQuantitative2003]. This is because individuals who share common ancestries will share both variants that do affect the trait of interest, and variants that do not, and these variants will be correlated with one other due to that shared ancestry. Therefore, if an association is found between the causal variants and a trait of interest, the non-causal variants that are correlated with the causal variants will also be found to be statistically associated with the trait.
-
-How then does one control for population structure? 
-
-Three methods were formerly used [@zhangMixedLinearModel2010]: 
-
-1. Structured association [@pritchardInferencePopulationStructure2000]
-
-1. Genomic control [@devlinGenomicControlAssociation1999]
-
-1. Family-based tests of association [@abecasisGeneralTestAssociation2000]
-
-"Ronald fished introduced random effects models to study the correlations of trait values between relatives" [@fisherXVCorrelationRelatives1919].
-
-In \@ref()
-
-## Genetic control of somite period development
+### Genetic control of somite period development
 
 During the development of an embryo, somites are the earliest primitive segmental structures that form from  presomatic mesoderm cells (**PSM**) [@kimPeriodSomiteSegmentation2011]. They later differentiate into vertebrae, ribs, and skeletal muscles, thereby establishing the body's anterior-posterior axis. **Figure \@ref(fig:mouse-embryo)** depicts a number of formed somites in a 9.5-day-old mouse embryo. 
 
@@ -431,7 +442,7 @@ It is not fully understood how the phase waves of the segmentation clock are ini
 
 In medaka, it is known that the southern Japanese *Cab* strain and the northern Japanese *Kaga* strain have divergent somite periodicity, where *Kaga*'s tends to be faster, and *Cab*'s slower (**Figure \@ref(fig:F0-Cab-Kaga-HdrR)**). 
 
-## Behaviour
+### Behaviour
 
 Behaviour is a complex trait that is affected by both genes and environment, and for social animals such as humans and medaka, one’s social environment is considered likely to constitute a large component of the environmental effect [@ruzzanteBehaviouralGrowthResponses1990; @youngNeurobiologyHumanSocial2008]. Apart from social aspects, an organism must face many “hostile forces of nature” throughout its life [@bussEvolutionaryPersonalityPsychology1991; @darwinOriginSpeciesMeans1859], such as food shortages, predation, harsh climate, and diseases. Adaptive behaviours allow individuals to navigate such dangers and maximise the likelihood of their survival at both the individual and population level [@limaBehavioralDecisionsMade1990].
 
@@ -441,7 +452,7 @@ Boldness-shyness has been studied extensively with fish. Shy individuals tend to
 
 Another is the ‘novel object’ assay, where a novel object is introduced to the fishes’ environment to simulate a threat [@brownCorrelationBoldnessBody2007; @schjoldenDoesIndividualVariation2005; @wilsonShyboldContinuumPumpkinseed1993; @wrightEpistaticRegulationBehavioural2006; @wrightInterIntrapopulationVariation2003]. Where both assays were performed on the same fish, the behaviours exhibited were found to be correlated across assays, indicating that both were measuring the same boldness-shyness axis [@brownCorrelationBoldnessBody2007]. [**there is also an aspect of habituation in both parts of the test that should be mentioned**]
 
-### Social genetic effects
+#### Social genetic effects
 
 The specific environmental factor is the so-called indirect or social genetic effect, which describes the indirect interactions between an individual’s genes and the genes of their companions [@baudGeneticVariationSocial2017]. Social genetic effects have been shown to exert influence on various traits in mice including anxiety, wound healing, immune function, and body weight [@baudGeneticVariationSocial2017], and various traits related to development and survival in many species of livestock [@ellenProspectsSelectionSocial2014]. However, in those studies the social interactions were maintained throughout development, and it is unclear whether social genetic effects can still exert influence on adaptive behaviours during discrete, time-limited interactions.
 
