@@ -312,6 +312,12 @@ It is therefore unsurprising that PGS scores are far better at predicting diseas
 
 Compared to PGS scores for those of European ancestry, PGS scores across multiple traits are ~64-78% less accurate for individuals of African ancestry, [@duncanAnalysisPolygenicRisk2019; @martinClinicalUseCurrent2019], ~50% less accurate for individuals of East-Asian ancestry, and ~37% less accurate for individuals of South-Asian ancestry [@martinClinicalUseCurrent2019].
 
+### Population stratification
+
+An oft-repeated example is that SNPs that have different frequencies in East Asian and european populations will be associated with chopstick use, although the reasons underlying chopstick use are cultural rather than genetic [@hamerBewareChopsticksGene2000; @morrisPopulationPhenomenaInflate2020].
+
+A recent study, however, demonstrated that geographical structure remains even after controlling for the first 100 principal components in large-scale biobanks, far in excess of the 10 or 20 components commonly controlled for [@haworthApparentLatentStructure2019; @morrisPopulationPhenomenaInflate2020].
+
 ## Mixed models for genetic association analysis
 
 "The distinction between Mendelian loci and QTLs is artificial, as the same mapping techniques can be applied to both. In fact, the classification of genetic (and allelic) effects should be considered as a continuum. At one end of the spectrum is the dichotomous Mendelian trait with only two detectable and distinct phenotypes, which are governed by a single gene. At the other end are traits, such as growth, which are likely to be affected by many genes that each contribute a small portion to the overall phenotype." [@membersofthecomplextraitconsortiumNatureIdentificationQuantitative2003]

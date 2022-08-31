@@ -210,7 +210,7 @@ In the 1930s, Theodosius Dobzhansky (**Figure \@ref(fig:dobzhansky)**), a Ukrain
 knitr::include_graphics(here::here("book/figs/introduction/Dobzhansky.png"), auto_pdf = T)
 ```
 
-### The structure of DNA and development of DNA sequencing
+### The discovery of the structure of DNA
 
 By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that compose chromosomes. After some flirtation with proteins as the molecule of inheritance, Oswald Avery finally proved that it was in fact deoxyribonucleic acid (**DNA**) that was "the material substance of the gene" -- the "cloth from which genes were cut" [@mukherjeeGeneIntimateHistory2016].  After Rosalind Franklin, James Watson, and Francis Crick, and Maurice Wilkins (**Figure \@ref(fig:all-four)**) had discovered the structure of DNA using X-ray crystallography in 1953 [@mukherjeeGeneIntimateHistory2016]. The double helix also suggested a copying mechanism [@mukherjeeGeneIntimateHistory2016]. 
 
@@ -220,6 +220,8 @@ By the early 1940s, it was known that genes resided in chromatin, the mixture of
 knitr::include_graphics(here::here("book/figs/introduction/all_four.png"), auto_pdf = T)
 ```
 
+### The development of DNA sequencing
+
 Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University of Cambridge, applied a similar methodology as the one he used to decode the sequence of a protein to determine the sequence of a gene [@mukherjeeGeneIntimateHistory2016]. But rather than breaking the molecule down into its components, he reversed the process by identifying each base as it was added to the strand during DNA replication [@mukherjeeGeneIntimateHistory2016]. In 1977 he published what became known as the "Sanger method", using radio-labelled nucleic acids to identify the precise order and type of nucleotides that made up a DNA sequence [@sangerDNASequencingChainterminating1977], earning him a second Nobel prize in Chemistry in 1980 [@NobelPrizeChemistry].
 
 (ref:sanger) Undated photo of Frederick Sanger from @sanger.
@@ -228,55 +230,61 @@ Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University 
 knitr::include_graphics(here::here("book/figs/introduction/Frederick_Sanger2.png"), auto_pdf = T)
 ```
 
-These technological breakthroughs eventually led to the first draft of the human genome being published in 2001 by a large international consortium [@landerInitialSequencingAnalysis2001], while the full sequence (including heterochromatic regions) was only completed in 2022 [@nurkCompleteSequenceHuman2022]. The improvement in sequencing technologies has continued to progess to the stage where a $100 human genome is on the horizon [@pennisi100GenomeNew2022], and long-read technologies developed by Pacific Biosciences and Oxford Nanopore Technologies are allowing for single reads of over 2 megabases in length [@payneBulkVisGraphicalViewer2019] and the direct sequencing of DNA modifications [@wangNanoporeSequencingTechnology2021]. These developments are making genetic technologies ever more accessible and informative, paving the way for greater insights into the genetic basis of phenotypic differences. Yet despite these technological advances, the relative contribution of genetics and environment to differences in complex traits remains unclear -- especially in humans -- and is therefore an active area of research.
+These technological breakthroughs eventually led to the first draft of the human genome being published in 2001 by a large international consortium [@internationalhumangenomesequencingconsortiumInitialSequencingAnalysis2001a], while the full sequence (including heterochromatic regions) was only completed in 2022 [@nurkCompleteSequenceHuman2022]. The improvement in sequencing technologies has continued to progess to the stage where a $100 human genome is on the horizon [@pennisi100GenomeNew2022], and long-read technologies developed by Pacific Biosciences and Oxford Nanopore Technologies are allowing for single reads of over 2 megabases in length [@payneBulkVisGraphicalViewer2019] and the direct sequencing of DNA modifications [@wangNanoporeSequencingTechnology2021]. These developments are making genetic technologies ever more accessible and informative, paving the way for greater insights into the genetic basis of phenotypic differences. Yet despite these technological advances, the relative contribution of genetics and environment to differences in complex traits remains unclear -- especially in humans -- and is therefore an active area of research.
 
 ## Genetic causes of variation in traits
 
 Individual differences in human traits have now been studied for more than a century, yet the causes of variation in human traits remain uncertain and controversial [@poldermanMetaanalysisHeritabilityHuman2015]. Specifically, the partitioning of observed variability into underlying genetic and environmental sources and the relative importance of additive and non-additive genetic variation continue to be debated [@poldermanMetaanalysisHeritabilityHuman2015].
 
-### Humans and the concept of heritability
+A simplified causal model for the inheritance of traits from one's parents is presented in **Figure \@ref(fig:pheno-causal-model)**, adapted from @morrisPopulationPhenomenaInflate2020. The ancestry of each parent determines both their genotypes and phenotypes (yellow lines). The parents' genotypes directly affect their own phenotypes (black arrows genotype → phenotype). The parents then transmit half of each of their alleles *directly* to their offspring (black arrows from genotype → genotype), while the non-transmitted alleles also affect their offspring *indirectly* through their effect on the parents' phenotypes (red lines), a phenomenon known as "**dynastic effects**" [@kongNatureNurtureEffects2018]. In addition, the parents' phenotypes can be correlated through "**assortative mating**" (green line), which also has the consequence of creating correlations between the genotypes that affect those phenotypes [@howeGeneticEvidenceAssortative2019]. 
 
-It is understood that an individual's phenotype is determined by genetic factors ("nature") interacting with environmental factors ("nurture") and chance [@plominNatureNurtureGenetic2005]. Fisher's analysis of variance methodology has allowed for the partitioning of variance into components of interest. If the total observed phenotypic variation is represented by $V_{P}$, then it can be decomposed as follows:
+(ref:pheno-causal-model) Causal model of offspring phenotypes. Ancestry causes differences in both genotypes and phenotypes of the parents (yellow lines). Dynastic effects are transmitted through parental parental phenotypes (red lines). Assortative mating creates associations between the phenotypes of the parents (green line), which will also lead to genotypic correlations. Arrows represent direction of effect. Figure adapted from @morrisPopulationPhenomenaInflate2020.
+
+```{r pheno-causal-model, echo = F, fig.cap = '(ref:pheno-causal-model)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/introduction/pheno_causal_model.png"), auto_pdf = T)
+```
+
+This model only includes environmental factors related to the parents' phenotypes, yet the phenotype of an individual is continuously affected by all other environmental influences it is exposed to throughout its lifetime [@plominNatureNurtureGenetic2005]. It is impossible to parse out the respective contributions of each of these factors at the individual level, but the problem becomes tractable by examining genotypic and phenotypic variation within groups of individuals.
+
+### Heritability
+
+Fisher's analysis of variance methodology allowed for the partitioning of variance into components that are attributable to different factors. If the total observed phenotypic variation within a population is represented by $V_{P}$, then it can be decomposed as follows with respect to genetic and environmental factors:
 
 $$
-V_{P} = V_{G} + V_{E} + V_{G \times E}
+V_{P} = V_{G} + V_{E}
 $$
-Where $V_{G}$ is the total proportion of phenotypic variance attributable to genetic factors, $V_{E}$ is that attributable to environmental factors (i.e. all non-genetic factors), and $V_{G \times E}$ is that attributable to an interaction between genes and environment. The measure of *broad-sense heritability* ($H^2$) measures the proportion of phenotypic variance that is attributable to genetic factors [@falconerIntroductionQuantitativeGenetics1996]:
+$V_{G}$ is the total proportion of phenotypic variance attributable to genetic factors, $V_{E}$ is that attributable to environmental factors (i.e. all non-genetic factors). The measure of *broad-sense heritability* ($H^2$) measures the proportion of phenotypic variance that is attributable to genetic factors [@falconerIntroductionQuantitativeGenetics1996]:
 
 $$
-\frac{V_G}{V_P}
+H^2 = \frac{V_G}{V_P}
 $$
 
 *Narrow-sense heritability* ($h^2$) measures the proportion of phenotypic variance attributable to *additive* genetic variance, or the extent to which phenotypes are determined by the genes transmitted from the parents [@falconerIntroductionQuantitativeGenetics1996]:
 
 $$
-\frac{V_A}{V_P}
+h^2 = \frac{V_A}{V_P}
 $$
 
 Environmental variance cannot be removed because it includes by definition all non-genetic variance, and much of this is beyond experimental control. However, elimination of genotypic variance can be achieved experimentally [@falconerIntroductionQuantitativeGenetics1996], for example through creating highly inbred lines, or by using human or animal identical twins.
 
-* If a group of such individuals is raised under the normal range of environmental circumstances, their phenotypic variance provides an estimate of the environmental variance $V_E$. Subtraction of this from the phenotypic variance $V_P$ of a genetically mixed population then gives an estimate of the genotypic variance of this population [@falconerIntroductionQuantitativeGenetics1996].
+As heritability is measured as a fraction of total phenotypic variance, it is liable to change depending on the level of environmental variation present in the study population [@visscherHeritabilityGenomicsEra2008]. However, for a given study population, and assuming they individuals are raised under the "normal" range of environmental circumstances, one can subtract the environmental variance ($V_E$) from the total phenotypic variance ($V_P$) to give an estimate of the trait's heritability $V_G$ [@falconerIntroductionQuantitativeGenetics1996]. However, this requires controlling for genotypic variation.
 
-* The twin study design has been used widely to disentangle the relative contributions of genes and environment, across a variety of human traits. The classical twin design is based on contrasting the trait resemblance of monozygotic (**MZ**) and dizygotic (**DZ**) twin pairs [@poldermanMetaanalysisHeritabilityHuman2015].
-
-* A rough estimate of heritability can be obtained by comparing the respective correlations of MZ twins and DZ twins with the phenotype of interest. Falconer's formula is:
+In humans, the twin study design has been used widely to disentangle the relative contributions of genes and environment for a variety of traits. The classical twin design is based on contrasting the trait resemblance of monozygotic (**MZ**) and dizygotic (**DZ**) twin pairs [@poldermanMetaanalysisHeritabilityHuman2015]. MZ twins share approximately 100% of genotypes, whereas DZ twins, like siblings, share on average 50% of their genotypes [@knopikBehavioralGenetics2019]. Assuming they share the same environment (an point I return to below), a rough estimate of heritability can be obtained by comparing the respective correlations of MZ twins and DZ twins with the phenotype of interest. If $r_{MZ}$ and $r_{DZ}$ are the correlation coefficients observed between pairs of MZ and DZ twins for a trait of interest, $h^2$ = additive genetic influences, and $C$ = common environmental influences, then Falconer's formula tells us:
 
 $$
-r_{MZ} = A + C \\
-r_{DZ} = \tfrac{1}{2}A + C \\
-\tfrac{1}{2}A = r_{MZ} - r_{DZ} \\
+r_{MZ} = h^2 + C \\
+r_{DZ} = \tfrac{1}{2}h^2 + C \\
+\tfrac{1}{2}h^2 = r_{MZ} - r_{DZ} \\
 \mathrm{Therefore}: \\
-A = 2(r_{MZ} - r_{DZ})
+h^2 = 2\times(r_{MZ} - r_{DZ})
 $$
-Where $A$ = $h^2$ = additive genetic, $C$ = common environmental, and $E$ error or non-shared environmental influences. Assuming both MZ and DZ twins share a common environment (which is less likely due to genetic feedback effects) [RESEARCH], when subtracting $r_{DZ}$ from $r_{MZ}$, $C$ disappears, leaving $\tfrac{1}{2}A$. 
-
-A 2015 meta-analysis of human twin studies, including 2,748 twin studies assessing ~18,000 traits and ~14.5M twin pairs, showed that across all traits, the mean heritability is 49% [@poldermanMetaanalysisHeritabilityHuman2015]. Moreover, in 69% of studies $2r_{DZ} = r_{MZ}$, which is inconsistent with the hypothesis that a substantial part of variation is due to shared environmental or non-additive genetic variation. The authors found that for most of the 1/3 of traits for which an additive model cannot be assumed, $r_{DZ} > \tfrac{1}{2}r_{MZ}$, suggesting that shared environmental effects are causing the deviation from a simple additive genetic model.
+Narrow-sense heritability $h^2$ can therefore be estimated by doubling the difference between the correlation coefficients of MZ versus DZ twins. A 2015 meta-analysis of human twin studies, including 2,748 twin studies assessing ~18,000 traits and ~14.5M twin pairs, showed that across all traits, the mean heritability is 49% [@poldermanMetaanalysisHeritabilityHuman2015]. Moreover, in 69% of studies $2r_{DZ} = r_{MZ}$, which suggests that for most traits, shared environmental or non-additive genetic variation do not make a substantial contribution to phenotypic variation. The authors found that for most of the $\tfrac{1}{3}$ of traits for which an additive model cannot be assumed, $r_{DZ} > \tfrac{1}{2}r_{MZ}$, suggesting that shared environmental effects are causing the deviation from a simple additive genetic model.
 
 * Indeed, @kongNatureNurtureEffects2018 showed that parents' non-transmitted alleles can affect a child through their impacts on the parents and other relatives, a phenomenon the authors call "genetic nurture", comprising 29.9% of the transmitted polygenic score.
 
 ### Animal models
 
-It is unfeasible to explore the relationship between genes and environment experimentally in humans due to the insufficient ability to manipulate either class of variables. Since the rediscovery of Mendel's work, researchers have accordingly resorted to using model organisms, with which it is possible to control for both. 
+It is unfeasible to explore the relationship between genes and environment experimentally in humans due to the insufficient ability to manipulate either class of variables. Since the rediscovery of Mendel's work, researchers have resorted to using model organisms, with which it is possible to control for both. 
 
 The genetics of model organisms may be controlled to a degree by establishing inbred strains. Mendel used self-fertilising plants, which without sexual reproduction are effectively inbred strains. At that time, inbred strains of mammals were unknown. But through the repeated mating of siblings over successive generations, as the individuals within each line inherit the same same haplotype from their related parents, they become almost genetically identical to one another, with the added benefit that their genotypes can be replicated across time in subsequent generations. 
 
@@ -304,11 +312,11 @@ The fundamental utility of the MIKK panel arises from:
 
   a. its representation of the genetic variation that exists in a wild population. 
   
-  a. the ability to replicate individuals with near-identical genotypes, allowing one to modify environmental variables to determine the strength of those environmental effects.
+  a. the ability to replicate individuals with near-identical genotypes, allowing one to modify environmental variables while keeping the genetics constant to determine the strength of those environmental effects.
   
   a. the presence of numerous inbred lines that can by placed in the same environment, allowing one to infer the strength of the genetic effect
   
-  a. the enrichment of rare variants, which are likely to have a larger effect size [@parkDistributionAlleleFrequencies2011; @walterUK10KProjectIdentifies2015], and are therefore more more likely to be discovered.
+  a. the enrichment of rare variants, which are likely to have a larger effect size [@parkDistributionAlleleFrequencies2011; @theuk10kconsortiumUK10KProjectIdentifies2015], and are therefore more more likely to be discovered.
 
 ### The F2 cross
 

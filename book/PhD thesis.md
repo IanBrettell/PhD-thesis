@@ -1,7 +1,7 @@
 ---
 title: "Japanese courage: a genetic analysis of complex traits in medaka fish and humans"
 author: "Ian Brettell"
-date: "2022-08-30"
+date: "2022-08-31"
 site: bookdown::bookdown_site
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
@@ -200,7 +200,11 @@ In Galton's later years, he adopted the English mathematician Karl Pearson (**Fi
 
 When Galton died in 1911, he bequeathed money to University College London for a Galton Eugenics Professorship, a position that was given to his protégé and biographer, the London-born Karl Pearson, who was also the head of the newly created Department of Applied Statistics [@kevlesNameEugenicsGenetics1995; @hardenGeneticLotteryWhy2021], the world's first university statistics department.
 
-The mathematician Ronald Fisher (**Figure \@ref(fig:fisher)**) at Caius College in Cambridge began to apply his skills to elucidating how continuous traits, like height, could be driven by genetic variation [@mukherjeeGeneIntimateHistory2016]. In 1918, Fisher published his analysis in a paper entitled "The Correlation between Relatives on the Supposition of Mendelian Inheritance" [@fisherXVCorrelationRelatives1919], where he described how the combination of a large number of Mendelian alleles acting on the same trait would result in a normal distribution. In doing so, he also developed the concept of *variance*, as the square of the standard deviation. 
+The mathematician Ronald Fisher (**Figure \@ref(fig:fisher)**) at Caius College in Cambridge began to apply his skills to elucidating how continuous traits, like height, could be driven by genetic variation [@mukherjeeGeneIntimateHistory2016]. In 1918, Fisher published his analysis in a paper entitled "The Correlation between Relatives on the Supposition of Mendelian Inheritance" [@fisherXVCorrelationRelatives1919], where he described how the combination of a large number of Mendelian alleles acting on the same trait would result in a normal distribution, and thereby sparked the field now known as *quantitative genetics*. This reconciliation between Mendelian inheritance and observed continuous traits was later referred to by Julian Huxley as the "modern evolutionary synthesis" [@huxleyEvolutionModernSynthesis1942; @taberyStruggleUnderstandInteraction2014].
+
+* Fisher's work was also later supplemented by that of J. B. S. Haldane and Sewall Wright, who collectively created the field of population genetics [@provineOriginsTheoreticalPopulation2001; @taberyStruggleUnderstandInteraction2014].
+
+* In @fisherXVCorrelationRelatives1919 he also developed the concept of *variance*, as the square of the standard deviation developed by Pearson.
 
 <div class="figure">
 <img src="figs/introduction/Youngronaldfisher2.png" alt="(ref:fisher)" width="100%" />
@@ -258,7 +262,7 @@ In the 1930s, Theodosius Dobzhansky (**Figure \@ref(fig:dobzhansky)**), a Ukrain
 <p class="caption">(\#fig:dobzhansky)(ref:dobzhansky)</p>
 </div>
 
-### The structure of DNA and the advent of DNA sequencing
+### The discovery of the structure of DNA
 
 By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that compose chromosomes. After some flirtation with proteins as the molecule of inheritance, Oswald Avery finally proved that it was in fact deoxyribonucleic acid (**DNA**) that was "the material substance of the gene" -- the "cloth from which genes were cut" [@mukherjeeGeneIntimateHistory2016].  After Rosalind Franklin, James Watson, and Francis Crick, and Maurice Wilkins (**Figure \@ref(fig:all-four)**) had discovered the structure of DNA using X-ray crystallography in 1953 [@mukherjeeGeneIntimateHistory2016]. The double helix also suggested a copying mechanism [@mukherjeeGeneIntimateHistory2016]. 
 
@@ -269,6 +273,8 @@ By the early 1940s, it was known that genes resided in chromatin, the mixture of
 <p class="caption">(\#fig:all-four)(ref:all-four)</p>
 </div>
 
+### The development of DNA sequencing
+
 Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University of Cambridge, applied a similar methodology as the one he used to decode the sequence of a protein to determine the sequence of a gene [@mukherjeeGeneIntimateHistory2016]. But rather than breaking the molecule down into its components, he reversed the process by identifying each base as it was added to the strand during DNA replication [@mukherjeeGeneIntimateHistory2016]. In 1977 he published what became known as the "Sanger method", using radio-labelled nucleic acids to identify the precise order and type of nucleotides that made up a DNA sequence [@sangerDNASequencingChainterminating1977], earning him a second Nobel prize in Chemistry in 1980 [@NobelPrizeChemistry].
 
 (ref:sanger) Undated photo of Frederick Sanger from @sanger.
@@ -278,34 +284,34 @@ Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University 
 <p class="caption">(\#fig:sanger)(ref:sanger)</p>
 </div>
 
-## Genetic causes of traits
+These technological breakthroughs eventually led to the first draft of the human genome being published in 2001 by a large international consortium [@internationalhumangenomesequencingconsortiumInitialSequencingAnalysis2001a], while the full sequence (including heterochromatic regions) was only completed in 2022 [@nurkCompleteSequenceHuman2022]. The improvement in sequencing technologies has continued to progess to the stage where a $100 human genome is on the horizon [@pennisi100GenomeNew2022], and long-read technologies developed by Pacific Biosciences and Oxford Nanopore Technologies are allowing for single reads of over 2 megabases in length [@payneBulkVisGraphicalViewer2019] and the direct sequencing of DNA modifications [@wangNanoporeSequencingTechnology2021]. These developments are making genetic technologies ever more accessible and informative, paving the way for greater insights into the genetic basis of phenotypic differences. Yet despite these technological advances, the relative contribution of genetics and environment to differences in complex traits remains unclear -- especially in humans -- and is therefore an active area of research.
 
-### Studies with humans
+## Genetic causes of variation in traits
 
-* Individual differences in human traits have been studied for more than a century, yet the causes of variation in human traits remain uncertain and controversial [@poldermanMetaanalysisHeritabilityHuman2015].
+Individual differences in human traits have now been studied for more than a century, yet the causes of variation in human traits remain uncertain and controversial [@poldermanMetaanalysisHeritabilityHuman2015]. Specifically, the partitioning of observed variability into underlying genetic and environmental sources and the relative importance of additive and non-additive genetic variation continue to be debated [@poldermanMetaanalysisHeritabilityHuman2015].
 
-* Specifically, the partitioning of observed variability into underlying genetic and environmental sources and the relative importance of additive and non-additive genetic variation are continually debated [@poldermanMetaanalysisHeritabilityHuman2015].
+### Humans and the concept of heritability
 
-### Heritability 
+It is understood that an individual's phenotype is determined by genetic factors ("nature") interacting with environmental factors ("nurture") and chance [@plominNatureNurtureGenetic2005]. Fisher's analysis of variance methodology has allowed for the partitioning of variance into components of interest. If the total observed phenotypic variation is represented by $V_{P}$, then it can be decomposed as follows:
 
-* It is understood that an individual's phenotype is determined by genetic factors interacting with environmental factors and chance. 
-The measure of broad-sense heritability measures the proportion of phenotypic variance that is attributable to genetic factors [@falconerIntroductionQuantitativeGenetics1996]:
+$$
+V_{P} = V_{G} + V_{E} + V_{G \times E}
+$$
+Where $V_{G}$ is the total proportion of phenotypic variance attributable to genetic factors, $V_{E}$ is that attributable to environmental factors (i.e. all non-genetic factors), and $V_{G \times E}$ is that attributable to an interaction between genes and environment. The measure of *broad-sense heritability* ($H^2$) measures the proportion of phenotypic variance that is attributable to genetic factors [@falconerIntroductionQuantitativeGenetics1996]:
 
 $$
 \frac{V_G}{V_P}
 $$
 
-This is commonly known as *broad-sense heritability* ($H^2$), whereas *narrow-sense heritability* ($h^2$) measures the proportion of phenotypic variance attributable to *additive* genetic variance, or the extent to which phenotypes are determined by the genes transmitted from the parents [@falconerIntroductionQuantitativeGenetics1996]:
+*Narrow-sense heritability* ($h^2$) measures the proportion of phenotypic variance attributable to *additive* genetic variance, or the extent to which phenotypes are determined by the genes transmitted from the parents [@falconerIntroductionQuantitativeGenetics1996]:
 
 $$
 \frac{V_A}{V_P}
 $$
 
-* Neither $V_G$ nor $V_E$ can be estimate directly from observations of a single population, but can be estimated from experimental populations [@falconerIntroductionQuantitativeGenetics1996]. Environmental variance cannot be removed because it includes by definition all non-genetic variance, and much of this is beyond experimental control. However, elimination of genotypic variance can be achieved experimentally [@falconerIntroductionQuantitativeGenetics1996], for example through creating highly inbred lines, or by using human or animal identical twins.
+Environmental variance cannot be removed because it includes by definition all non-genetic variance, and much of this is beyond experimental control. However, elimination of genotypic variance can be achieved experimentally [@falconerIntroductionQuantitativeGenetics1996], for example through creating highly inbred lines, or by using human or animal identical twins.
 
-* If a group of such individuals is raised under the normal range of environmental circumstances, their phenotypic variance provides an estimate of the environmental variance $V_E$. Subtraction of this from the phenotypic variance $V_P$ of a genetically mixed population then gives an estimate of the genotypic variance of this population [@falconerIntroductionQuantitativeGenetics1996]. 
-
-* Estimation of the additive variance rests on observation of the degree of resemblance between relatives, with the other genetic variance components being dominance $V_D$ and interaction $V_I$. Also not that $V_A$ does not carry with it the assumption of additive gene action; and the existence of additive variance is not an indication that any of the genes act additively (i.e. show neither dominance nor epistasis). 
+* If a group of such individuals is raised under the normal range of environmental circumstances, their phenotypic variance provides an estimate of the environmental variance $V_E$. Subtraction of this from the phenotypic variance $V_P$ of a genetically mixed population then gives an estimate of the genotypic variance of this population [@falconerIntroductionQuantitativeGenetics1996].
 
 * The twin study design has been used widely to disentangle the relative contributions of genes and environment, across a variety of human traits. The classical twin design is based on contrasting the trait resemblance of monozygotic (**MZ**) and dizygotic (**DZ**) twin pairs [@poldermanMetaanalysisHeritabilityHuman2015].
 
@@ -318,31 +324,49 @@ r_{DZ} = \tfrac{1}{2}A + C \\
 \mathrm{Therefore}: \\
 A = 2(r_{MZ} - r_{DZ})
 $$
-Where $A$ = $h^2$ = additive genetic, $C$ = common environmental, and $E$ error or non-shared environmental influences.
+Where $A$ = $h^2$ = additive genetic, $C$ = common environmental, and $E$ error or non-shared environmental influences. Assuming both MZ and DZ twins share a common environment (which is less likely due to genetic feedback effects) [RESEARCH], when subtracting $r_{DZ}$ from $r_{MZ}$, $C$ disappears, leaving $\tfrac{1}{2}A$. 
 
-A 2015 meta-analysis of human twin studies, including 2,748 twin studies assessing ~18,000 traits and ~14.5M twin pairs, showed that across all traits, the mean heritability is 49% [@poldermanMetaanalysisHeritabilityHuman2015]. Moreover, in 69% of studies $2r_{DZ} = r_{MZ}$, with is inconsistent with the hypothesis that a substantial part of variation is due to shared environmental or non-additive genetic variation. For most of the 1/3 of traits for which an additive model cannot be assumed, $r_{DZ} > \tfrac{1}{2}r_{MZ}$, suggesting that the shared environmental effects are causing the deviation from a simple additive genetic model.
+A 2015 meta-analysis of human twin studies, including 2,748 twin studies assessing ~18,000 traits and ~14.5M twin pairs, showed that across all traits, the mean heritability is 49% [@poldermanMetaanalysisHeritabilityHuman2015]. Moreover, in 69% of studies $2r_{DZ} = r_{MZ}$, which is inconsistent with the hypothesis that a substantial part of variation is due to shared environmental or non-additive genetic variation. The authors found that for most of the 1/3 of traits for which an additive model cannot be assumed, $r_{DZ} > \tfrac{1}{2}r_{MZ}$, suggesting that shared environmental effects are causing the deviation from a simple additive genetic model.
 
-### Studies with model organisms
+* Indeed, @kongNatureNurtureEffects2018 showed that parents' non-transmitted alleles can affect a child through their impacts on the parents and other relatives, a phenomenon the authors call "genetic nurture", comprising 29.9% of the transmitted polygenic score.
 
-* Biological traits are the product of an interaction between an organism’s genes and its environment, often described as the relationship between "nature and nurture".[@plominNatureNurtureGenetic2005]
+### Animal models
 
-* It is unfeasible to explore the relationship between genes and environment experimentally in humans due to the insufficient ability to manipulate either set of variables. Researchers accordingly resort to using model organisms, with which it is possible to control for both. 
+It is unfeasible to explore the relationship between genes and environment experimentally in humans due to the insufficient ability to manipulate either class of variables. Since the rediscovery of Mendel's work, researchers have resorted to using model organisms, with which it is possible to control for both. 
 
-* The genetics of model organisms may be controlled to a degree by establishing inbred strains through the repeated mating of siblings over successive generations. Eventually, as the individuals within each line inherit the same same haplotype from their related parents, they become almost genetically identical to one another, with the added benefit that their genotypes can be replicated across time in subsequent generations. 
-
-* This utility has led to the establishment of "panels" of inbred strains for several model organisms including the thale cress (*Arabidopsis thaliana*),[@bergelsonIdentifyingGenesUnderlying2010] common bean (*Phaseolus vulgaris L*),[@johnsonSegregationPerformanceRecombinant1999] tomato (*Lycopersicon esculentum*),[@saliba-colombaniEfficiencyRFLPRAPD2000] maize (*Zea mays*),[@limamiGeneticPhysiologicalAnalysis2002] nematode (*Caenorhabditis elegans*),[@evansQTLGeneElegans2021] fruit fly (*Drosophila melanogaster*) [@mackayChartingGenotypePhenotype2018], and mouse (*Mus musculus*) [@saulHighDiversityMousePopulations2019].
-
-Although the mouse is an appropriate model for humans due to their orthologous mammalian organ systems and cell types, inbred strains of this organism descend from individuals that had already been domesticated, and therefore do not represent the genetic variation present in wild populations. Furthermore, the large panels of inbred mice such as the Collaborative Cross (**CC**) [@threadgillCollaborativeCrossRecombinant2011], Diversity Outcross (**DO**)[@svensonHighResolutionGeneticMapping2012] and B6-by-D2 (**BXD**)[@peirceNewSetBXD2004] are derived from only a small number of individuals. As gene-environment studies seek to ultimately understand their effects on traits "in the wild" (such as with humans), there is accordingly a need for a panel of inbred vertebrates that represents the genetic variation present in natural populations.
-
-* Mendel used self-feritilising plants, which without sexual reproduction are effectively inbred strains. At that time, inbred strains of mammals were unknown.
+The genetics of model organisms may be controlled to a degree by establishing inbred strains. Mendel used self-fertilising plants, which without sexual reproduction are effectively inbred strains. At that time, inbred strains of mammals were unknown. But through the repeated mating of siblings over successive generations, as the individuals within each line inherit the same same haplotype from their related parents, they become almost genetically identical to one another, with the added benefit that their genotypes can be replicated across time in subsequent generations. 
 
 * In 1906, an inbreeding experiment involving guinea-pigs was started by George M. Rommel of the Animal Husbandry Division of the United States Department of Agriculture [@eatonQuartercenturyInbreedingGuineapigs1932]. The experiment was taken over in 1915 by Sewall Wright, who used them to develop his mathematical theory of inbreeding, eventually introducing the inbreeding coefficient $F$ as the correlation between uniting gametes in 1922 [@wrightCoefficientsInbreedingRelationship1922].
 
-  - The inheritance of coat colour in guinea pigs stubbornly refused to play by Mendelian rules. It proved virtually impossible to breed an all-white or all-coloured guinea pig, and even the most inbred families (after multiple generations of brother-sister mating) still had pronounced variation. This contradicted the prediction of Mendelian genetics that a particular trait should become "fixed" by multiple generations of inbreeding [@pearlBookWhyNew2018].
+* The inheritance of coat colour in guinea pigs stubbornly refused to play by Mendelian rules. It proved virtually impossible to breed an all-white or all-coloured guinea pig, and even the most inbred families (after multiple generations of brother-sister mating) still had pronounced variation. This contradicted the prediction of Mendelian genetics that a particular trait should become "fixed" by multiple generations of inbreeding [@pearlBookWhyNew2018].
   
 * The Harvard undergraduate Clarence Cook Little and his supervisor William Ernest Little collaborated with Abbie Lathrop, a breeder of fancy mice and rats which she marketed to rodent hobbyists and keepers of exotic pets, and later began selling in large numbers to scientific researchers [@steensmaAbbieLathropMouse2010]. In 1902, Castle bought some of Lathrop's mice for his laboratory [@steensmaAbbieLathropMouse2010].
 
   - The most frequently used laboratory mouse strain for the past 80 years, C57BL/6J ("Black J"), is derived from one of Lathrop's animals -- mouse number 57 -- bred by Little [@steensmaAbbieLathropMouse2010].
+
+* The utility of inbred strains eventually led to the establishment of "panels" of inbred strains for several model organisms including the thale cress (*Arabidopsis thaliana*) [@bergelsonIdentifyingGenesUnderlying2010], common bean (*Phaseolus vulgaris L*) [@johnsonSegregationPerformanceRecombinant1999], tomato (*Lycopersicon esculentum*) [@saliba-colombaniEfficiencyRFLPRAPD2000], maize (*Zea mays*) [@limamiGeneticPhysiologicalAnalysis2002], nematode (*Caenorhabditis elegans*) [@evansQTLGeneElegans2021], fruit fly (*Drosophila melanogaster*) [@mackayChartingGenotypePhenotype2018], and mouse (*Mus musculus*) [@saulHighDiversityMousePopulations2019].
+
+Although the mouse is an appropriate model for humans due to their orthologous mammalian organ systems and cell types, inbred strains of this organism descend from individuals that had already been domesticated, and therefore do not represent the genetic variation present in wild populations. Furthermore, the large panels of inbred mice such as the Collaborative Cross (**CC**) [@threadgillCollaborativeCrossRecombinant2011], Diversity Outcross (**DO**)[@svensonHighResolutionGeneticMapping2012] and B6-by-D2 (**BXD**)[@peirceNewSetBXD2004] are derived from only a small number of individuals. As gene-environment studies seek to ultimately understand their effects on traits "in the wild" (such as with humans), there is accordingly a need for a panel of inbred vertebrates that represents the genetic variation present in natural populations.
+
+### The Medaka Inbred Kiyosu-Karlsruhe (MIKK) panel
+
+The medaka fish (*Oryzias latipes*) has been studied as a model organism in Japan for over a century [@wittbrodtMedakaModelOrganism2002], and is gaining recognition elsewhere as a powerful genetic model for vertebrates [@spivakovGenomicPhenotypicCharacterization2014]. In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, and high fertility), medaka are also – uniquely among vertebrates – resilient to inbreeding from the wild. 
+
+Since 2010, the Birney Group at EMBL-EBI, in collaboration with the Wittbrodt Group at COS, University of Heidelberg and the Loosli Group at the Karlsruhe Institute of Technology (KIT), have been working to establish the world’s first panel of vertebrate inbred strains – now known as the Medaka Inbred Kiyosu-Karlsruhe Panel (**MIKK panel**). The MIKK Panel was bred from a wild population caught near Kiyosu in Southern Japan, and now comprises 80 inbred, near-isogenic "lines" [@fitzgeraldMedakaInbredKiyosuKarlsruhe2022].
+
+The MIKK Panel was created to map genetic variants associated with quantitative traits at a high resolution, and to explore the interactions between those variants and any environmental variables of interest. The purpose of the companion papers @fitzgeraldMedakaInbredKiyosuKarlsruhe2022 and @legerGenomicVariationsEpigenomic2022 was to introduce the MIKK panel to the scientific community, and describe the genetic characteristics of the MIKK panel that would make it a useful resource for other researchers who wish to explore the genetics of quantitative traits in vertebrates. My contributions to these papers involved visualising the inbreeding trajectory of the panel (Chapter \@ref(inbreeding-sec)), exploring the evolutionary history of the MIKK panel's founding population (Chapter \@ref(introgression-sec)), measuring the levels of homozygosity across the panel (Chapter \@ref(nuc-div)), assessing its allele-frequency distribution and rate of linkage disequilibrium (LD) decay (Chapter \@ref(ld-decay-sec)), and characterising the structural variants present in a smaller sample of lines using Oxford Nanopore long-read sequencing data (Chapter \@ref(mikksv-sec)).
+
+The fundamental utility of the MIKK panel arises from:
+
+  a. its representation of the genetic variation that exists in a wild population. 
+  
+  a. the ability to replicate individuals with near-identical genotypes, allowing one to modify environmental variables to determine the strength of those environmental effects.
+  
+  a. the presence of numerous inbred lines that can by placed in the same environment, allowing one to infer the strength of the genetic effect
+  
+  a. the enrichment of rare variants, which are likely to have a larger effect size [@parkDistributionAlleleFrequencies2011; @theuk10kconsortiumUK10KProjectIdentifies2015], and are therefore more more likely to be discovered.
+
+### The F2 cross
 
 The F2 cross is a traditional method for mapping genetic variants associated with traits of interest. A schema for the method is presented in **Figure \@ref(fig:F2-cross-schema)**. In essence, it involves starting with two inbred strains that diverge for the trait of interest (the 'parental strains', or F0 generation F0). One then crosses the parental strains to create a generation of F1 hybrid individuals who each possess, for every pair of their chromosomes, one chromosome from each of their parents. The individuals in this F1 generation are genetically identical to their parents with respect to their germ line. Finally, one inter-crosses the F1 generation to create a set of F2 individuals that share unique combinations of the original F0 strains' genotypes, and tend to display values for the trait of interest that span across the spectrum between the extreme values of their parents.
 
@@ -353,25 +377,13 @@ The F2 cross is a traditional method for mapping genetic variants associated wit
 <p class="caption">(\#fig:F2-cross-schema)(ref:F2-cross-schema)</p>
 </div>
 
+By combining this traditional genetic mapping method with modern sequencing technologies, researchers are not only able to map genetic variants associated with a phenotype of interest at a higher resolution than in humans, but also functionally validate those variants by "knocking in" (or out) a discovered allele in an embryo to confirm that it has the effect predicted. Many studies have already made use of this combined method (CITE), known as a "Genome-Wide Linkage Analysis", which applies modern genetic association statistical methods that have been refined over the last decade in humans, known as *Genome-Wide Association Analysis*, or **GWAS**.
 
-The medaka fish (*Oryzias latipes*) has been studied as a model organism in Japan for over a century,[@wittbrodtMedakaModelOrganism2002] and is gaining recognition elsewhere as a powerful genetic model for vertebrates.[@spivakovGenomicPhenotypicCharacterization2014] In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, and high fertility), medaka are also – uniquely among vertebrates – resilient to inbreeding from the wild. 
+### Genome-Wide Association Analysis
 
-Since 2010, the Birney Group at EMBL-EBI, in collaboration with the Wittbrodt Group at COS, University of Heidelberg and the Loosli Group at the Karlsruhe Institute of Technology (KIT), have been working to establish the world’s first panel of vertebrate inbred strains – now known as the Medaka Inbred Kiyosu-Karlsruhe Panel (**MIKK panel**). The MIKK Panel was bred from a wild population caught near Kiyosu in Southern Japan, and now comprises 80 inbred, near-isogenic "lines".[@fitzgeraldMedakaInbredKiyosuKarlsruhe2022] 
+GWAS aim to identify genetic variants associated with traits by comparing the allele frequencies of individuals who share similar ancestries, but differ in values for the trait in question [@uffelmannGenomewideAssociationStudies2021]. As of 2021, over 5,700 GWAS have been performed for more than 3,330 human traits [@uffelmannGenomewideAssociationStudies2021]. 
 
-The MIKK Panel was created to map genetic variants associated with quantitative traits at a high resolution, and to explore the interactions between those variants and any environmental variables of interest. The purpose of the companion papers @fitzgeraldMedakaInbredKiyosuKarlsruhe2022 and @legerGenomicVariationsEpigenomic2022 was to introduce the MIKK panel to the scientific community, and describe the genetic characteristics of the MIKK panel that would make it a useful resource for other researchers who wish to explore the genetics of quantitative traits in vertebrates. My contributions to these papers involved visualising the inbreeding trajectory of the panel (Chapter \@ref(inbreeding-sec)), 
-exploring the evolutionary history of the MIKK panel's founding population (Chapter \@ref(introgression-sec)), measuring the levels of homozygosity across the panel (Chapter \@ref(nuc-div)), assessing its allele-frequency distribution and rate of linkage disequilibrium (LD) decay (Chapter \@ref(ld-decay-sec)), and characterising the structural variants present in a smaller sample of lines using Oxford Nanopore long-read sequencing data (Chapter \@ref(mikksv-sec)).
-
-## GWAS
-
-GWAS aim to identify genetic variants associated with traits by comparing the allele frequencies of individuals who share similar ancestries, but differ in values for the trait in question [@uffelmannGenomewideAssociationStudies2021]. As of 2021, over 5,700 GWAS have been performed for more than 3,330 traits [@uffelmannGenomewideAssociationStudies2021]. 
-
-However, most GWAS have been performed with individuals of European ancestry, despite only constituting around 16% of the present global population. Although the proportion of participants in GWAS from a non-European background increased from 4% in 2009 to 16% in 2016 [@popejoyGenomicsFailingDiversity2016]), as of 2019, 79% of all GWAS participants recorded in the GWAS Catalog were of European ancestry, and the proportion of non-European individuals has remained the same or reduced since late 2014 [@martinClinicalUseCurrent2019]. This bias extends to PGS studies, where as of 2019, only 67% of them included only participants of European ancestry, with another 19% including only East Asian ancestry participants, and only 3.8% with cohorts of African, Hispanic, or Indigenous ancestry [@duncanAnalysisPolygenicRisk2019]. 
-
-It is therefore unsurprising that PGS scores are far better at predicting disease risk in individuals of European ancestry than in those of non-European ancestry [@martinHumanDemographicHistory2017; @martinClinicalUseCurrent2019]. Indeed, the predictive accuracy of PGS scores decays with genetic divergence of the GWAS "independent" or "test" sample, from the  "discovery" or "training" sample, as established in both humans [@martinHumanDemographicHistory2017; @martinClinicalUseCurrent2019], and livestock [@clarkImportanceInformationRelatives2012; @habierImpactGeneticRelationship2010; @pszczolaReliabilityDirectGenomic2012]. 
-
-Compared to PGS scores for those of European ancestry, PGS scores across multiple traits are ~64-78% less accurate for individuals of African ancestry, [@duncanAnalysisPolygenicRisk2019; @martinClinicalUseCurrent2019], ~50% less accurate for individuals of East-Asian ancestry, and ~37% less accurate for individuals of South-Asian ancestry [@martinClinicalUseCurrent2019].
-
-### Mixed models for genetic association analysis
+[GWAS METHODOLOGY]
 
 "The distinction between Mendelian loci and QTLs is artificial, as the same mapping techniques can be applied to both. In fact, the classification of genetic (and allelic) effects should be considered as a continuum. At one end of the spectrum is the dichotomous Mendelian trait with only two detectable and distinct phenotypes, which are governed by a single gene. At the other end are traits, such as growth, which are likely to be affected by many genes that each contribute a small portion to the overall phenotype." [@membersofthecomplextraitconsortiumNatureIdentificationQuantitative2003]
 
@@ -391,7 +403,9 @@ Three methods were formerly used [@zhangMixedLinearModel2010]:
 
 "Ronald fished introduced random effects models to study the correlations of trait values between relatives" [@fisherXVCorrelationRelatives1919].
 
-### Genetic control of somite period development
+In \@ref()
+
+## Genetic control of somite period development
 
 During the development of an embryo, somites are the earliest primitive segmental structures that form from  presomatic mesoderm cells (**PSM**) [@kimPeriodSomiteSegmentation2011]. They later differentiate into vertebrae, ribs, and skeletal muscles, thereby establishing the body's anterior-posterior axis. **Figure \@ref(fig:mouse-embryo)** depicts a number of formed somites in a 9.5-day-old mouse embryo. 
 
@@ -1659,7 +1673,6 @@ I will discuss each of these factors in turn before addressing point (3) in this
 #### Technological and methodological limitations of GWAS {#fst-discovery-sec}
 
 The power to discover a causal variant through GWAS depends on the variant's effect size and frequency in the study population [@martinClinicalUseCurrent2019; @shamPowerLinkageAssociation2000]. That is to say, the stronger the variant's effect, or the more common it is, the more likely it is to be discovered. Rare variants tend to have stronger effect sizes [@watanabeGlobalOverviewPleiotropy2019], likely due to purifying selection [@parkDistributionAlleleFrequencies2011], and tend not to be shared across populations [@gravel2011demographic; @10002015global]. This is particularly relevant for African populations, as they have a much greater level of genetic variance than other populations due to the human species having originated on that continent [@10002015global]. Therefore, if GWAS aren't performed on diverse populations, PGS can't take into account the rare variants present in non-European populations that are likely to exert stronger effects on the trait of interest. There are also several other issues that can affect the discoverability of causal variants through GWAS, including the technology used for genotyping, the selection of the cohort, and the necessary exclusion of genotypic outliers. 
-
 With respect to genotyping technologies, GWAS often use data from SNP microarrays. These do not sequence the whole genome, but rather a selection (from several hundred thousand to millions) of genetic markers intended to present *common* genetic variation [@porcuGenotypeImputationGenomeWide2013], which accordingly tend to neglect rare genetic variants [@uffelmannGenomewideAssociationStudies2021]. To increase the density of genotypes, which would increase the likelihood of refining the association signal and identifying causal variants, researchers often "impute" variants that aren't sequenced directly [@porcuGenotypeImputationGenomeWide2013]. The imputation process involves "phasing" the study genotypes onto the genotypes of a "reference panel" [@mccarthyReferencePanel642016]. However, if the reference panel does not sufficiently represent the population in the study sample, they are likely to miss or incorrectly impute those genotypes [@martinClinicalUseCurrent2019]. Again, this is particularly problematic for African populations. 
 
 The lack of representation of rare variants in SNP microarrays can be overcome by using next-generation sequencing technologies such as whole-genome sequencing (**WGS**) and whole-exome sequencing (**WES**). (The former seeks to sequence the full genome, and the latter of only targets the coding regions of the genome.) These methods are more expensive than SNP microarrays, which hinders their widespread use at scale, and although their costs are continuing to decrease rapidly, there is a question as to whether they return a proportionate benefit in all use cases [@schwarzeAreWholeexomeWholegenome2018]. 
