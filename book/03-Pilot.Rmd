@@ -99,7 +99,8 @@ The states that showed a significant difference are set out in **Table \@ref(tab
 knitr::kable(
   googlesheets4::read_sheet(ss = "1_l72BZkmWyNAOfCUI8WGP4UfQuIPQtPZZmlRjQffvEs",
                             sheet = "DGE_FINAL"),
-  caption = 'Significant differences in the proportion of time spent in each HMM state across test fish strains for the open field and novel object assay components.'
+  caption = 'Significant differences in the proportion of time spent in each HMM state across test fish strains for the open field and novel object assay components.',
+  booktabs = TRUE
 )
 ```
 
@@ -119,7 +120,8 @@ To determine whether the *iCab* reference fishes altered their behaviour dependi
 knitr::kable(
   googlesheets4::read_sheet(ss = "1_l72BZkmWyNAOfCUI8WGP4UfQuIPQtPZZmlRjQffvEs",
                             sheet = "SGE_FINAL"),
-  caption = 'Significant differences in the proportion of time spent in each HMM state by iCab reference fishes depending on the strain of their tank partner during the open field and novel object assay components.'
+  caption = 'Significant differences in the proportion of time spent in each HMM state by iCab reference fishes depending on the strain of their tank partner during the open field and novel object assay components.',
+  booktabs = TRUE
 )
 ```
 

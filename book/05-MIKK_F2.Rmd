@@ -183,7 +183,8 @@ With these lines selected, I ran a similar analysis to what I described in \@ref
 knitr::kable(
   googlesheets4::read_sheet(ss = "1kD2ndgmTvGlQw8YZFMztO3YoYfOdSw0SI5_BtomDuaI",
                             sheet = "DGE_FINAL"),
-  caption = 'Significant differences in the proportion of time spent in each HMM state across test fish lines selected for the F2 cross for the open field and novel object assay components.'
+  caption = 'Significant differences in the proportion of time spent in each HMM state across test fish lines selected for the F2 cross for the open field and novel object assay components.',
+  booktabs = TRUE
 )
 ```
 
@@ -211,7 +212,8 @@ To confirm whether the *`r colour_line("iCab")`* reference fishes altered their 
 knitr::kable(
   googlesheets4::read_sheet(ss = "1kD2ndgmTvGlQw8YZFMztO3YoYfOdSw0SI5_BtomDuaI",
                             sheet = "SGE_FINAL"),
-  caption = 'Significant differences in the proportion of time spent in each HMM state by iCab reference fishes depending on the MIKK F0 line of their tank partner during the open field and novel object assay components.'
+  caption = 'Significant differences in the proportion of time spent in each HMM state by iCab reference fishes depending on the MIKK F0 line of their tank partner during the open field and novel object assay components.',
+  booktabs = TRUE
 )
 ```
 
@@ -242,7 +244,8 @@ knitr::kable(
                   `maternal line` = mat_line,
                   count = n) %>% 
     dplyr::arrange(desc(count)),
-  caption = 'Significant differences in the proportion of time spent in each HMM state by iCab reference fishes depending on the MIKK F0 line of their tank partner during the open field and novel object assay components.'
+  caption = 'Significant differences in the proportion of time spent in each HMM state by iCab reference fishes depending on the MIKK F0 line of their tank partner during the open field and novel object assay components.',
+  booktabs = TRUE
 )
 ```
 
@@ -383,7 +386,8 @@ out_tbl = df %>%
 
 knitr::kable(
   out_tbl,
-  caption = 'Counts for consequences of significant SNPs.'
+  caption = 'Counts for consequences of significant SNPs.',
+  booktabs = TRUE
 )
 ```
 
@@ -431,7 +435,8 @@ missense_tbl = uniq_df %>%
 
 knitr::kable(
   missense_tbl,
-  caption = 'Missense SNPs.'
+  caption = 'Missense SNPs.',
+  booktabs = TRUE
 )
 ```
 
@@ -482,7 +487,8 @@ chr9_sigs = df %>% dplyr::filter(SNP %in% TARGET_SNPS) %>%
 
 knitr::kable(
   chr9_sigs,
-  caption = 'Significant loci on chromosome 9 for direct genetic effects on state 3 frequency during the novel object assay.'
+  caption = 'Significant loci on chromosome 9 for direct genetic effects on state 3 frequency during the novel object assay.',
+  booktabs = TRUE
 )
 ```
 
