@@ -51,17 +51,6 @@ It was in this context that a 22-year-old English clergyman named Charles Darwin
 \caption{(ref:charles-darwin-young-portrait)}(\#fig:charles-darwin-young-portrait)
 \end{figure}
 
-As the *Beagle* travelled down the eastern coast of South America, Darwin collected a vast amount of living specimens and ancient fossils -- including large extinct mammals such as the megatherium (**Figure \@ref(fig:megatherium)**) -- and shipped them back to England [@mukherjeeGeneIntimateHistory2016]. 
-
-(ref:megatherium) Megatherium fossil collected by Charles Darwin, housed in the Natural History Museum, London. Photograph from @WhatWasMegatherium.
-
-\begin{wrapfigure}{R}{0.4\textwidth}
-
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/megatherium} 
-
-\caption{(ref:megatherium)}(\#fig:megatherium)
-\end{wrapfigure}
-
 After rounding Cape Horn and moving northward along the western coast of South America, the *HMS Beagle* eventually reached the Galápagos Islands on the coast of Peru, an archipelago of 18 islands formed from volcanic lava [@mukherjeeGeneIntimateHistory2016]. Over the course of five weeks, Darwin collected carcasses of birds, lizards, and plants [@mukherjeeGeneIntimateHistory2016]. Upon his return to England, he was hailed as a minor celebrity among natural historians due to the collections of specimens he had gathered and shipped back [@mukherjeeGeneIntimateHistory2016]. John Gould -- the ornithologist who lent his (wife's) name to the Gouldian finch (**Figure \@ref(fig:gouldian-finch)**) -- told him that the various birds that Darwin thought were a variety of wrens, warblers, blackbirds, and "gros-beaks" were in fact all 13 different species of finches [@mukherjeeGeneIntimateHistory2016].
 
 (ref:gouldian-finch) The Gouldian Finch, an Australian native bird described by British ornithological artist John Gould in 1844 and named after his deceased wife Elizabeth [@bancroftPartIntroductionGouldian]. Photograph by Sarah R. Pryke, published in @prykeRedDominatesBlack2006.
@@ -73,7 +62,7 @@ After rounding Cape Horn and moving northward along the western coast of South A
 \caption{(ref:gouldian-finch)}(\#fig:gouldian-finch)
 \end{wrapfigure}
 
-Each island had produced its own variant, and this caused Darwin to consider whether they had all arisen from a common ancestral finch, branching off like the boughs of a tree over time [@mukherjeeGeneIntimateHistory2016]. He understood that animal breeders took advantage of the natural variation in populations to select for desired traits, but he questioned what force had guided the development of these different varieties of finches in the wild [@mukherjeeGeneIntimateHistory2016].
+Each island had produced its own variant (**Figure \@ref(fig:darwin-finches)**), and this caused Darwin to consider whether they had all arisen from a common ancestral finch, branching off like the boughs of a tree over time [@mukherjeeGeneIntimateHistory2016]. He understood that animal breeders took advantage of the natural variation in populations to select for desired traits, but he questioned what force had guided the development of these different varieties of finches in the wild [@mukherjeeGeneIntimateHistory2016].
 
 (ref:darwin-finches) Illustration of variation in Galapagos finches by John Gould, published in @darwinNaturalistVoyageJournal1882. Image from @darwinFinches.
 
@@ -106,7 +95,7 @@ Around the time the *Origin of Species* was published, the prevailing theory of 
 
 (ref:lamarck) Portrait of Jean Baptiste de Lamarck from 1802-1803 by Charles Thévenin [@lamarck1802].
 
-\begin{wrapfigure}{L}{0.5\textwidth}
+\begin{wrapfigure}{L}{0.4\textwidth}
 
 \includegraphics[width=1\linewidth]{figs/introduction/Jean-Baptiste_de_Lamarck} \hfill{}
 
@@ -117,7 +106,7 @@ But by extending that logic, if a human had their arm amputated, their children 
 
 (ref:mendel) Photograph from @mendelPhoto.
 
-\begin{wrapfigure}{R}{0.6\textwidth}
+\begin{wrapfigure}{R}{0.5\textwidth}
 
 \hfill{}\includegraphics[width=1\linewidth]{figs/introduction/Gregor_Mendel_2} 
 
@@ -241,7 +230,7 @@ During this fertile period in statistical genetics research, the physical locati
 
 Around 1905 Morgan began to breed *Drosophila*, identifying visible variants that he could track over generations, including white versus red eyes, forked versus straight bristles, sable-coloured bodies, curved legs; bent, bat-like wings; disjointed abdomens, and deformed eyes [@mukherjeeGeneIntimateHistory2016]. Through repeated crossing experiments, Morgan discovered that some genes were transmitted together at a higher rate than chance alone. He proposed that these genes were physically "linked" to one another, implying that they were situated on some string within the chromosome [@mukherjeeGeneIntimateHistory2016]. This advanced the understanding of a gene from a purely theoretical unit of inheritance to a physical unit [@mukherjeeGeneIntimateHistory2016]. He further discovered that, occasionally, a gene that was otherwise linked to another could "cross over" from one parental strand to the other, generating offspring with a mixture of parental alleles [@mukherjeeGeneIntimateHistory2016].
 
-While Morgan was carrying out his experiments with *Drosophila*, Japanese researchers were also studying Mendelian inheritance with the Japanese medaka fish, *Oryzias latipes*. Following three articles published by three separate professors in Japanese on the recessive inheritance of medaka colour variants [@fukamachi100YearsMedaka2021], a teacher named Tatsuo Aida (**Figure \@ref(fig:aida)**) published the first article in English about medaka in 1921 [@aidaInheritanceColorFreshWater1921]. The study involved a total of 22 crosses of two generations, and among several other findings, Aida discovered recombination between the X and Y chromosome -- the world's first demonstration of Y-linked inheritance  in any species  [@naruseMedakaModelOrganogenesis2011a].^[The editor, William Castle, was so impressed by this last finding that he added the following footnote to the paper: "It should be pointed out, in justice to the author, that his observations go beyond those of Schmidt in the important respect of showing the occurrence of crossing over between the X and the Y chromosome."]
+While Morgan was carrying out his experiments with *Drosophila*, Japanese researchers were also studying Mendelian inheritance with the Japanese medaka fish, *Oryzias latipes*. Following three articles published by three separate professors in Japanese on the recessive inheritance of medaka colour variants [@fukamachi100YearsMedaka2021], a teacher named Tatsuo Aida (**Figure \@ref(fig:aida)**) published the first article in English about medaka in 1921 [@aidaInheritanceColorFreshWater1921] (**Figure \@ref(fig:aida-fig)**). The study involved a total of 22 crosses of two generations, and among several other findings, Aida discovered recombination between the X and Y chromosome -- the world's first demonstration of Y-linked inheritance  in any species  [@naruseMedakaModelOrganogenesis2011a].^[The editor, William Castle, was so impressed by this last finding that he added the following footnote to the paper: "It should be pointed out, in justice to the author, that his observations go beyond those of Schmidt in the important respect of showing the occurrence of crossing over between the X and the Y chromosome."]
 
 (ref:aida) Photo of Tetsuo Aida from [@fukamachi100YearsMedaka2021].
 
@@ -283,11 +272,11 @@ By the early 1940s, it was known that genes resided in chromatin, the mixture of
 
 Over the course of the 1970s, Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University of Cambridge, developed a method identifying each nucleotide base as it was added to the strand during DNA replication [@mukherjeeGeneIntimateHistory2016]. In 1977 he published what became known as the "Sanger method", using radio-labelled nucleic acids to identify the precise order and type of nucleotides that made up a DNA sequence [@sangerDNASequencingChainterminating1977], earning him a second Nobel prize in Chemistry in 1980 [@NobelPrizeChemistry].
 
-(ref:sanger) Undated photo of Frederick Sanger from @sanger.
+(ref:sanger) Undated photo of Frederick Sanger from @ObituaryFredSanger2013.
 
 \begin{wrapfigure}{R}{0.5\textwidth}
 
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/Frederick_Sanger2} 
+\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/sanger} 
 
 \caption{(ref:sanger)}(\#fig:sanger)
 \end{wrapfigure}
@@ -470,17 +459,23 @@ In medaka, it is known that the southern Japanese *Cab* strain and the northern 
 
 (ref:F0-Cab-Kaga-HdrR) Comparison of period for three inbred medaka strains (*Cab*, *Kaga* and *HdrR*). Kaga's period is lower, and therefore it takes less time to form each somite than *Cab*. Figure generated by Ali Seleit.
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/somites/ali_period_F0_Cab_Kaga} \caption{(ref:F0-Cab-Kaga-HdrR)}(\#fig:F0-Cab-Kaga-HdrR)
-\end{figure}
+\begin{wrapfigure}{R}{0.5\textwidth}
+
+\hfill{}\includegraphics[width=1\linewidth]{figs/somites/ali_period_F0_Cab_Kaga} 
+
+\caption{(ref:F0-Cab-Kaga-HdrR)}(\#fig:F0-Cab-Kaga-HdrR)
+\end{wrapfigure}
 
 Our collaborators accordingly set up a one-way F2 cross experiment as described in Chapter \@ref(MIKK-F2-cross), using the reporter-carrying *Cab* strain and the *Kaga* strain as the parental F0 strains, in order to identify genetic loci associated with these differences in clock dynamics. They inter-crossed the hybrid F1 generation to create a sample of 622 F2 individuals, imaged the developing embryos of these F2 samples, and used pyBOAT [@schmalAnalysisComplexCircadian2022] to extract the oscillation features during somite development. **Figure \@ref(fig:somite-period-ali)** shows a series of raw images used by pyBOAT to track the elongation of a medaka tail during somitogenesis, with the identified posterior tip of the embryo labelled with a blue circle.
 
 (ref:somite-period-ali) Screenshots of vertebral elongation in an F2 individual captured by Ali Seleit during imaging. The blue circle represents the point tracked by pyBOAT over time, generating the quantitative phenotype data on period development used in this study.  
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/somites/ali_compiled_somite_elong} \caption{(ref:somite-period-ali)}(\#fig:somite-period-ali)
-\end{figure}
+\begin{wrapfigure}{L}{0.5\textwidth}
+
+\includegraphics[width=1\linewidth]{figs/somites/ali_compiled_somite_elong} \hfill{}
+
+\caption{(ref:somite-period-ali)}(\#fig:somite-period-ali)
+\end{wrapfigure}
 
 ### Behaviour
 
