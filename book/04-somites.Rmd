@@ -4,7 +4,7 @@
 library(tidyverse)
 ```
 
-## Background
+## Background^[This Chapter describes a project carried out in collaboration with Ali Seleit and Alexander Aulehla from the Aulehla Group at EMBL Heidelberg. Drs Seleit and Aulehla performed the experiments and gathered the data; my role was to carry out the bioinformatics involved in mapping the genetic variants associated with the phenotypes of interest.]
 
 During the development of an embryo, somites are the earliest primitive segmental structures that form from  presomatic mesoderm cells (**PSM**) [@kimPeriodSomiteSegmentation2011]. They later differentiate into vertebrae, ribs, and skeletal muscles, thereby establishing the body's anterior-posterior axis. **Figure \@ref(fig:mouse-embryo)** depicts a number of formed somites in a 9.5-day-old mouse embryo. 
 
@@ -24,7 +24,7 @@ knitr::include_graphics(here::here("book/figs/somites/ali_fish_seg_compiled.png"
 
 The period of somite formation is controlled by a molecular oscillator, known as the 'segmentation clock', which drives waves of gene expression in the Notch, fibroblast growth factor (FGF), and Wnt pathways, forming a signalling gradient that regresses towards the tail in concert with axis elongation [@gomezControlSegmentNumber2008]. Over the course of elongation, the wave period increases (i.e. each somite takes longer to form), and the PSM progressively shrinks until it is exhausted, eventually terminating somite formation [@gomezControlSegmentNumber2008]. 
 
-It is not fully understood how the phase waves of the segmentation clock are intially established [@falkImagingOnsetOscillatory2022]. @matsudaSpeciesspecificSegmentationClock2020 found that period differences between mouse and human occur at the single-cell level (i.e. not due to intercellular communication), and are driven by biochemical reaction speeds - specifically, mRNA and protein degradation rates, transcription and translation delays, and intron and splicing delays. To identify the genetic basis of these biochemical differences, our collaborators Ali Seleit and Alexander Aulehla at EMBL-Heidelberg used a CRISPR-Case9 knock-in approach [@seleitEndogenousProteinTagging2021] to establish a medaka *Cab* strain with an endogenous, fluorescing reporter gene (Her7-Venus) for the oscillation signalling pathway. This method allows them to image somite formation and extract quantitative measures for segmentation clock dynamics. 
+It is not fully understood how the phase waves of the segmentation clock are intially established [@falkImagingOnsetOscillatory2022]. @matsudaSpeciesspecificSegmentationClock2020 found that period differences between mouse and human occur at the single-cell level (i.e. not due to intercellular communication), and are driven by biochemical reaction speeds - specifically, mRNA and protein degradation rates, transcription and translation delays, and intron and splicing delays. To identify the genetic basis of these biochemical differences, our collaborators Ali Seleit and Alexander Aulehla at EMBL-Heidelberg used a CRISPR-Case9 knock-in approach [@seleitEndogenousProteinTagging2021] to establish a medaka *Cab* strain with an endogenous, fluorescing reporter gene (*Her7*-Venus, ~1.5 kb in length at the locus 16:28,706,898-28,708,417) for the oscillation signalling pathway. This method allows them to image somite formation and extract quantitative measures for segmentation clock dynamics. 
 
 In medaka, it is known that the southern Japanese *Cab* strain and the northern Japanese *Kaga* strain have divergent somite periodicity, where *Kaga*'s tends to be faster, and *Cab*'s slower (**Figure \@ref(fig:F0-Cab-Kaga-HdrR)**). 
 
@@ -34,7 +34,7 @@ In medaka, it is known that the southern Japanese *Cab* strain and the northern 
 knitr::include_graphics(here::here("book/figs/somites/ali_period_F0_Cab_Kaga.png"), auto_pdf = T)
 ```
 
-Our collaborators accordingly set up a one-way F2 cross experiment as described in Chapter \@ref(MIKK-F2-cross), using the reporter-carrying *Cab* strain and the *Kaga* strain as the parental F0 strains, in order to identify genetic loci associated with these differences in clock dynamics. They inter-crossed the hybrid F1 generation to create a sample of 622 F2 individuals, imaged the developing embryos of these F2 samples, and used pyBOAT [@schmalAnalysisComplexCircadian2022] to extract the oscillation features during somite development. **Figure \@ref(fig:somite-period-ali)** shows a series of raw images used by pyBOAT to track the elongation of a medaka tail during somitogenesis, with the identified posterior tip of the embryo labelled with a blue circle.
+Our collaborators accordingly set up a one-way F2 cross experiment as described in Chapter \@ref(MIKK-F2-cross), using the reporter-carrying *Cab* strain and the *Kaga* strain as the parental F0 strains, in order to identify genetic loci associated with these differences in clock dynamics. They inter-crossed the hybrid F1 generation to create a sample of 622 F2 individuals (having selected for the F2 individuals carrying either one or two copies of the *Her7*-Venus reporter gene), imaged the developing embryos of these F2 samples, and used pyBOAT [@schmalAnalysisComplexCircadian2022] to extract the oscillation features during somite development. **Figure \@ref(fig:somite-period-ali)** shows a series of raw images used by pyBOAT to track the elongation of a medaka tail during somitogenesis, with the identified posterior tip of the embryo labelled with a blue circle.
 
 (ref:somite-period-ali) Screenshots of vertebral elongation in an F2 individual captured by Ali Seleit during imaging. The blue circle represents the point tracked by pyBOAT over time, generating the quantitative phenotype data on period development used in this study.  
 
@@ -46,7 +46,7 @@ knitr::include_graphics(here::here("book/figs/somites/ali_compiled_somite_elong.
 
 ### Somite development period
 
-**Figure \@ref(fig:ali-somite-period-lines)** shows the period data generated by pyBOAT for this study, for 100 illustrative F2 samples over 300 minutes. The same data can be represented by boxplots as shown in **Figure \@ref(fig:ali-somite-period-box)**. I experimented with using the F2 individuals' mean period and period intercept as the phenotype of interest. The two measures are highly correlated ($Pearson's~r =$ 0.84, $p$ < 2.2x10<sup>-16</sup>), so after displaying the distributions for both measures in Figure \@ref(fig:somite-phenos), I proceed to only discuss the analysis of period intercept, as it would appear to potentially be more robust to the changes in slope that can be observed in Figure \@ref(fig:ali-somite-period-lines).
+**Figure \@ref(fig:ali-somite-period-lines)** shows the period data generated by pyBOAT for this study, for 100 illustrative F2 samples over 300 minutes. The same data can be represented by boxplots as shown in **Figure \@ref(fig:ali-somite-period-box)**. I experimented with using the F2 individuals' mean period and period intercept as the phenotype of interest. The two measures are highly correlated ($Pearson's~r =$ 0.84, $p$ < 2.2 x 10^-16^), so after displaying the distributions for both measures in Figure \@ref(fig:somite-phenos), I proceed to only discuss the analysis of period intercept, as it would appear to potentially be more robust to the changes in slope that can be observed in Figure \@ref(fig:ali-somite-period-lines).
 
 (ref:ali-somite-period-lines) PyBOAT results for 100 illustrative F2 samples, showing the period length in minutes over the course of 300 minutes. Period tends to increase over time, meaning that as the embryo develops, each successive somite takes longer to form. Figure generated by Ali Seleit.
 
@@ -60,9 +60,9 @@ knitr::include_graphics(here::here("book/figs/somites/ali_period_lines_100fish30
 knitr::include_graphics(here::here("book/figs/somites/ali_F2_mean_period.png"), auto_pdf = T)
 ```
 
-### PSM area
+### Unsegmented presomatic mesoderm area (PSM)
 
-In the proceeding analyses, I also included a second phenotype of interest: the total size of the PSM prior to the formation of any somite segments. As the measure is simply based on the total number of pixels covered by the embryo object, I considered it to be potentially more robust than the period measurements, and therefore included it as a type of positive control for the genetic association analyses on the period phenotype. The measurements for PSM area comparing F0 *Cab* and *Kaga* strains are set out in **Figure \@ref(fig:ali-psm-F0)**.
+In the proceeding analyses, I also included a second phenotype of interest: the total area of the presomatic mesoderm prior to the formation of any somite segments (**PSM area**). As the measure is simply based on the total number of pixels covered by the embryo object, I considered it to be potentially more robust than the period measurements, and therefore included it as a type of positive control for the genetic association analyses on the period phenotype. The measurements for PSM area comparing F0 *Cab* and *Kaga* strains are set out in **Figure \@ref(fig:ali-psm-F0)**.
 
 (ref:ali-psm-F0) Measurements of unsegmented PSM area in pixels for the F0 individuals from the *Cab* strain ($N = 19$) and *Kaga* strain ($N = 10$). *Kaga* tends to have a smaller PSM than *Cab*. Figure generated by Ali Seleit.
 
@@ -72,7 +72,7 @@ knitr::include_graphics(here::here("book/figs/somites/ali_PSM_Cab_Kaga.png"), au
 
 ### Comparisons between F0, F1 and F2 generations
 
-The distributions across the F0, F1 and F2 generations are curious (**Figure \@ref(fig:somite-phenos)**). I expected to observe an F2 distribution with a similar median to the F1, and a variance that spanned across the extremes of the F0 strains. Instead, I observed that for the period phenotypes, the F2 generation had a mean that was slightly higher than the median of the higher-period F0 *Cab* strain, and many F2 samples exceed the period values in those F0 samples. Our collaborators assured me that these observations were unlikely to be caused by technical issues. The *Cab* and *Kaga* strains originate from different Japanese medaka populations (southern and northern respectively) that are understood to be at the point of speciation (see Chapter \@ref(MIKK-genomes-chap)), so this slower period may be driven by a biological incompatibility between their genomes in cases where they do not have a complete chromosome from each parent (as the F1 generation does). I nevertheless proceeded with the genetic analysis with a view to potentially discovering the reason for this unusual distribution.
+The distributions across the F0, F1 and F2 generations are unexpected (**Figure \@ref(fig:somite-phenos)**). I rather expected to observe an F2 distribution with a similar median to the F1, and a variance that spanned across the extremes of the F0 strains. Instead, I observed that for the period phenotypes, the F2 generation had a mean that was slightly higher than the median of the higher-period F0 *Cab* strain, and many F2 samples exceed the period values in those F0 samples. Our collaborators assured me that these observations were unlikely to be caused by technical issues. The *Cab* and *Kaga* strains originate from different Japanese medaka populations (southern and northern respectively) that are understood to be at the point of speciation (see Chapter \@ref(MIKK-genomes-chap)), so this slower period may be driven by a biological incompatibility between their genomes in cases where they do not have a complete chromosome from each parent (as the F1 generation does). I nevertheless proceeded with the genetic analysis with a view to potentially discovering the reason for this unusual distribution.
 
 (ref:somite-phenos) Comparisons between the F0, F1 and F2 generations for the three phenotypes of interest. Here, the F0 only includes *Cab* individuals. **A**: period intercept. **B**: period mean. **C**: unsegmented PSM area. $P$-values are derived from Kruskal-Wallis tests comparing the F2 individuals across microscopes. 
 
@@ -80,9 +80,23 @@ The distributions across the F0, F1 and F2 generations are curious (**Figure \@r
 knitr::include_graphics(here::here("book/figs/somites/phenotypes.png"), auto_pdf = T)
 ```
 
-Another important issue to note is that the F2 individuals were sequenced using different microscopes, denoted as 'AU' and 'DB'. Our collaborators noticed that there was a difference between the microscopes in their temperatures of 0.7-0.8°C, translating to a 4-minute difference in the F2 means for the period intercept measure (Kruskal-Wallis = 177.97, $p$ = 1.34x10<sup>-40</sup>), and a 3.5-minute difference in the F2 means for the period mean measure (Kruskal-Wallis = 141.79, $p$ = 1.08x10<sup>-32</sup>). This difference would need to be accounted for in the downstream analysis through either adjusting the phenotype prior to running the genetic association model, or by including microscope as a covariate in the model. No significant was found for the PSM area. To resolve this difference between microscopes for the period intercept data, I elected to transform it for the F2 generation by inverse-normalising the period intercept within each microscope (**Figure \@ref(fig:invnorm-intercept)**). I then used this transformed data in the downstream analysis.
+Another important issue to note is that the F2 individuals were sequenced using different microscopes, denoted as 'AU' and 'DB'. Our collaborators noticed that there was a difference between the microscopes in their temperatures of 0.7-0.8°C, translating to a 4-minute difference in the F2 means for the period intercept measure (Kruskal-Wallis = 177.97, $p$ = 1.34 x 10^-40^), and a 3.5-minute difference in the F2 means for the period mean measure (Kruskal-Wallis = 141.79, $p$ = 1.08 x 10^-32^). This difference would need to be accounted for in the downstream analysis through either adjusting the phenotype prior to running the genetic association model, or by including microscope as a covariate in the model. No significant difference was found for the PSM area. 
 
-(ref:invnorm-intercept) Comparison of the period intercept phenotype data for the F2 generation before (**A**) and after (**B**) inverse-normalisation.
+#### Inverse-normalisation {#inverse-norm-sec}
+
+To resolve this difference between microscopes for the period intercept data, I elected to transform it for the F2 generation by "inverse-normalising" the period intercept within each microscope (**Figure \@ref(fig:invnorm-intercept)**), and used this transformed phenotype for the downstream analysis. Inverse-normalisation is a rank-based normalisation approach which involves replacing the values in the phenotype vector with their rank (where ties are averaged), then converting the ranks into a normal distribution with the quantile function [@wichuraAlgorithm241Percentage1988]. The inverse-normalisation function I used for this analysis is set out in the following `R` code:
+
+```{r}
+invnorm = function(x) {
+  res = rank(x)
+  # The arbitrary 0.5 value is added to the denominator below 
+  # to avoid `qnorm()` returning 'Inf' for the last-ranked value
+  res = qnorm(res/(length(res)+0.5))
+  return(res)
+}
+```
+
+(ref:invnorm-intercept) Comparison of the period intercept phenotype data for the F2 generation before (**A**) and after (**B**) inverse-normalisation, with vertical lines marking the mean of each group.
 
 ```{r invnorm-intercept, echo = F, fig.cap = '(ref:invnorm-intercept)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/somites/invnorm_intercept.png"), auto_pdf = T)
@@ -90,7 +104,7 @@ knitr::include_graphics(here::here("book/figs/somites/invnorm_intercept.png"), a
 
 ## Genetic sequencing data
 
-Our collaborators extracted DNA from the F0, F1, and F2, and sequenced the F0 and F1 samples with the Illumina platform at high coverage (~26x for *Cab* and ~29x for *Kaga*), as measured by samtools [@danecekTwelveYearsSAMtools2021]. **Figure \@ref(fig:F0-coverage)** sets out the mean sequencing depth within each chromosome and across the whole genome for the *Cab* and *Kaga* F0 samples. Our collaborators then sequenced the F2 samples at low coverage (~1x), which would be sufficient to map their genotypes back to the genotypes of their parental strains (see Chapter \@ref(somite-f2-sequencing) for further details).
+Our collaborators extracted DNA from the F0, F1, and F2, and sequenced the F0 and F1 samples with the Illumina platform at high coverage (~26x for *Cab* and ~29x for *Kaga*), as measured by samtools [@danecekTwelveYearsSAMtools2021]. **Figure \@ref(fig:F0-coverage)** sets out the mean sequencing depth within each chromosome and across the whole genome for the *Cab* and *Kaga* F0 samples. Our collaborators then sequenced the F2 samples at low coverage (~1x), which would be sufficient to map their genotypes back to the genotypes of their parental strains (see section \@ref(somite-f2-sequencing) below for further details).
 
 ```{r F0-coverage, echo = F, fig.cap = '(ref:F0-coverage)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/somites/F0_coverage.png"), auto_pdf = T)
@@ -98,7 +112,7 @@ knitr::include_graphics(here::here("book/figs/somites/F0_coverage.png"), auto_pd
 
 ## F0 homozygosity and F1 heterozygosity
 
-Before proceeding to map the F2 sequences to the genotypes of the F0 generation, I first investigated the levels of homozygosity in the F0 *Cab* and *Kaga* strains, as this would have an effect on the resolution of our genetic mapping. That is to say, for regions where either parent is consistently heterozygous, it would be difficult to determine the parent from which a particular F2 individual derived its chromosomes at that locus. I therefore aligned the high-coverage sequencing data for the F0 *Cab* and *Kaga* strains to the medaka *HdrR* reference (Ensembl release 104, build ASM223467v1) using BWA-MEM2, sorted the aligned .sam files, marked duplicate reads, and merged the paired reads with picard [@Picard2019toolkit], and indexed the .bam files with Samtools [@liSequenceAlignmentMap2009]. 
+Before proceeding to map the F2 sequences to the genotypes of the F0 generation, I first investigated the levels of homozygosity in the F0 *Cab* and *Kaga* strains, as this would affect our ability to accurately call the F2 generation. That is to say, for regions where either F0 parent is consistently heterozygous, it would be difficult to determine the parent from which a particular F2 individual derived its chromosomes at that locus. I therefore aligned the high-coverage sequencing data for the F0 *Cab* and *Kaga* strains to the medaka *HdrR* reference (Ensembl release 104, build ASM223467v1) using BWA-MEM2, sorted the aligned .sam files, marked duplicate reads, and merged the paired reads with picard [@Picard2019toolkit], and indexed the .bam files with Samtools [@liSequenceAlignmentMap2009]. 
 
 To call variants, I followed the GATK best practices (to the extent they were applicable) [@mckennaGenomeAnalysisToolkit2010; @depristoFrameworkVariationDiscovery2011; @vanderauweraGenomicsCloudUsing2020] with GATK's HaplotypeCaller and GenotypeGVCFs tools [@poplinScalingAccurateGenetic2018], then merged all calls into a single .vcf file with picard [@Picard2019toolkit]. Finally, I extracted the biallelic calls for *Cab* and *Kaga* with bcftools [@danecekTwelveYearsSAMtools2021], counted the number of SNPs within non-overlapping, 5-kb bins, and calculated the proportion of SNPs within each bin that were homozgyous. 
 
@@ -110,7 +124,7 @@ To call variants, I followed the GATK best practices (to the extent they were ap
 knitr::include_graphics(here::here("book/figs/somites/Cab.png"), auto_pdf = T)
 ```
 
-However, the levels of homozygosity in the *Kaga* strain used in this experiment was far lower, with a mean homozygosity across all bins of only 31%. This was a surprise, as it is an established strain of X generations, and we therefore expected the level of homozygosity to be commensurate with that observed in the *Cab* strain. 
+However, the levels of homozygosity in the *Kaga* strain used in this experiment was far lower, with a mean homozygosity across all bins of only 31%. This was a surprise, as it is an established strain of X generations, and we therefore expected the level of homozygosity to be commensurate with that observed in the *Cab* strain. An obvious exception is chr22, for which *Kaga* appears to be homozygous across its entire length.
 
 (ref:somite-f0-kaga) Proportion of homozygous SNPs within 5 kb bins in the *Kaga* F0 generation genome (red), and number of SNPs in each bin (yellow).
 
@@ -118,7 +132,7 @@ However, the levels of homozygosity in the *Kaga* strain used in this experiment
 knitr::include_graphics(here::here("book/figs/somites/Kaga.png"), auto_pdf = T)
 ```
 
-To determine whether the low levels of observed homozygosity in Kaga was affected by its alignments to the southern Japanese *HdrR* reference, we also aligned the F0 samples to the northern Japanese *HNI* reference (**Figure \@ref(fig:somite-f0-kaga-hni)**. This did not make differences to the levels of observed homozygosity in either sample, which gave us confidence that the low homozygosity observed in *Kaga* was not driven by reference bias. 
+To determine whether the low levels of observed homozygosity in Kaga was affected by its alignments to the southern Japanese *HdrR* reference, we also aligned the F0 samples to the northern Japanese *HNI* reference (**Figure \@ref(fig:somite-f0-kaga-hni)**. This did not make differences to the levels of observed homozygosity in either sample, which gave us confidence that the low homozygosity observed in *Kaga* was not driven by reference bias. I understand from our collaborators that the low homozygosity of this *Kaga* individual, which was supposed to have been inbred for [XXXX] generations, must have resulted from the strain having been contaminated at some stage by breeding with a different inbred strain housed in the same facility. 
 
 (ref:somite-f0-kaga-hni) Proportion of homozygous SNPs within 5 kb bins in the *Kaga* F0 generation genome when aligned to the *HNI* reference (red), and number of SNPs in each bin (yellow).
 
@@ -128,7 +142,7 @@ knitr::include_graphics(here::here("book/figs/somites/Kaga_HNI.png"), auto_pdf =
 
 ## F1 homozygosity {#f1-homozygosity}
 
-I next examined the level of heterozygosity in the F1 generation from the *Cab*-*Kaga* cross. **Figure \@ref(fig:somite-f1)** shows the level of heterozygosity across the genome of the F1 hybrid in brown measured by the proportion of heterozygous SNPs within 5-kb bins (brown), and the number of SNPs in each bin (yellow). Approximately half the chromosomes show inconsistent heterozygosity, with a mean heterozygosity across all bins of 67%. This lower level of heterozygosity than expected was likely caused by the low levels of heterozygosity in the *Kaga* F0 parent. 
+I next examined the level of heterozygosity in the F1 generation from the *Cab*-*Kaga* cross. **Figure \@ref(fig:somite-f1)** shows the level of heterozygosity across the genome of the F1 hybrid in brown measured by the proportion of heterozygous SNPs within 5-kb bins (brown), and the number of SNPs in each bin (yellow). Approximately half the chromosomes show inconsistent heterozygosity, with a mean heterozygosity across all bins of 67%. This lower level of apparent heterozygosity than expected was likely caused by the low levels of homozygosity in the *Kaga* F0 parent. 
 
 (ref:somite-f1) Proportion of heterozygous SNPs within 5 kb bins in the *Cab*-*Kaga* F1 cross (brown), and number of SNPs in each bin (yellow).
 
@@ -136,7 +150,7 @@ I next examined the level of heterozygosity in the F1 generation from the *Cab*-
 knitr::include_graphics(here::here("book/figs/somites/F1.png"), auto_pdf = T)
 ```
 
-For the purpose of mapping the F2 sample sequences to the genomes of their parental strains, I selected only biallelic SNPs that were homozygous-divergent in the F0 generation (i.e. homozygous reference allele in *Cab* and homozygous alternative allele in *Kaga* or vice versa) *and* heterozygous in the F1 generation. The number of SNPs that met these criteria per chromosome are set out in **Figure \@ref(fig:snp-counts-per-chrom)**. 
+For the purpose of mapping the F2 sample sequences to the genomes of their parental strains, I selected only biallelic SNPs that were homozygous-divergent in the F0 generation (i.e. homozygous reference allele in *Cab* and homozygous alternative allele in *Kaga* or vice versa) *and* heterozygous in the F1 generation. The number of SNPs that met these criteria per chromosome are set out in **Figure \@ref(fig:snp-counts-per-chrom)**. The strong homozygosity of *Kaga* on chr22 is likely responsible for the much greater number of loci on that chromosome that can be used for calling genoytpes in the F2 generation, and highlights the importance of the parental strains being highly homozygous when used in experimental crosses such as this.
 
 (ref:snp-counts-per-chrom) Number of SNPs per chromosome that were homozygous-divergent in the F0 *Cab* and *Kaga* generations, and heterozygous in the F1 generation.
 
@@ -148,8 +162,7 @@ knitr::include_graphics(here::here("book/figs/somites/snp_counts_per_chrom.png")
 
 To maximise the efficiency of our sequencing runs, our collaborators "shallow-sequenced" the F2 generation with the short-read Illumina platform at a depth of ~1x. We then aligned these sequences to the *HdrR* reference with BWA-MEM2 [@vasimuddinEfficientArchitectureawareAcceleration2019], sorted the reads and marked duplicates with Picard [@Picard2019toolkit], then indexed the resulting BAM files with samtools [@danecekTwelveYearsSAMtools2021]. Genotyping these shallow sequences with the same method as used for the high-coverage sequences for the F0 and F1 generation would be inappropriate. We therefore used a different method whereby we used *bam-readcount* [@khannaBamreadcountRapidGeneration2022] to count the reads that supported either the *Cab* or the *Kaga* allele for all SNPs that met the criteria described above in section \@ref(f1-homozygosity), summed the read counts within 5 kb blocks, and calculated the frequency of reads within each bin that supported the *Kaga* allele. This generated a value for each bin between 0 and 1, where 0 signified that all reads within that bin supported the *Cab* allele, and 1 signified that all reads within that bin supported the *Kaga* allele. Bins containing no reads were imputed with a value of 0.5. 
 
-I then used these values for all F2 individuals as the input to a Hidden Markov Model (HMM) with the software package *hmmlearn* [@HmmlearnHmmlearn2022], which I applied to classify each bin as one of three states, with state 0 corresponding to homozygous-*Cab*, 1 corresponding to heterozygous, and 2 corresponding to homozygous-*Kaga*. 
-Across each chromosome of every sample, the output of the HMM was expected to produce a sequence of states. Based on previous biological knowledge that crossover events occur on average less than once per chromosome [@haenelMetaanalysisChromosomescaleCrossover2018] (see **Figure \@ref(fig:zebrafish-co-per-chrom)** for the average crossover rates per chromosome in zebrafish), I expected to observe the same state persisting for long stretches of the chromosome, only changing to another state between 0 and 3 times, and rarely more. 
+I then used these values for all F2 individuals as the input to a Hidden Markov Model (HMM) with the software package *hmmlearn* [@HmmlearnHmmlearn2022], which I applied to classify each bin as one of three states, with state 0 corresponding to homozygous-*Cab*, 1 corresponding to heterozygous, and 2 corresponding to homozygous-*Kaga*. Across each chromosome of every sample, the output of the HMM was expected to produce a sequence of states. Based on previous biological knowledge that crossover events occur on average less than once per chromosome [@haenelMetaanalysisChromosomescaleCrossover2018] (see **Figure \@ref(fig:zebrafish-co-per-chrom)** for the average crossover rates per chromosome in zebrafish), I expected to observe the same state persisting for long stretches of the chromosome, only changing to another state between 0 and 3 times, and rarely more. 
 
 ```{r, include = F}
 # Data from S4, haenelMetaanalysisChromosomescaleCrossover2018
@@ -203,7 +216,7 @@ df %>%
 knitr::include_graphics(here::here("book/figs/somites/scatter_collage.png"), auto_pdf = T)
 ```
 
-I used these genotype-block calls to generate the recombination karyoplots shown in **Figures \@ref(fig:karyo-wi-missing)** and **\@ref(fig:karyo-no-missing)**. 
+I used these genotype-block calls to generate the recombination karyoplot shown in **Figure \@ref(fig:karyo-wi-missing)**, with homozygous-*Cab* blocks in green, heterozoygous blocks in navy blue, and homozygous *Kaga* blocks in red. Missing calls are blank, where the vertical blank lines indicate that the region could not be called for any F2 individuals, likely due to an insufficient number of informative SNPs residing in those 5-kb blocks; and horizontal blank lines indicate that the sample could not be called, likely due to low sequencing coverage for that sample. 
 
 (ref:karyo-wi-missing) Recombination blocks in 622 F2 samples based on the ratio of reads mapping to either the *Cab* or *Kaga* allele within 5-kb bins, with homozygous-*Cab* blocks in green, heterozoygous blocks in navy blue, and homozygous *Kaga* blocks in red. Most blocks show 0-2 crossover events, as expected, with some regions showing higher numbers of crossovers interpreted as noise. Unfilled regions are those with no state called by the HMM due to a lack of reads mapping to SNPs within those 5-kb bins.
 
@@ -211,12 +224,17 @@ I used these genotype-block calls to generate the recombination karyoplots shown
 knitr::include_graphics(here::here("book/figs/somites/karyoplot_wi_missing.png"), auto_pdf = T)
 ```
 
+In the downstream analysis, I excluded the 22 samples that showed poor coverage across the genome. For the remaining samples, I "filled" the bins with missing genotypes based on the call of the previous called bin, or if unavailable (e.g. the missing bin was at the start of the chromosome), then the next called bin (**Figure \@ref(fig:karyo-no-missing)**; note that this figure retains the low-coverage samples that were excluded from further analysis to allow for a direct comparison with **Figure \@ref(fig:karyo-wi-missing)**). I used these filled genotype calls for the association tests described below in section **\@ref(somite-assoc-tests)**. These karyoplots show interesting recombination patterns for several chromosomes. The reporter gene resides on chr16 ~28.7Mb, so given the F2 individuals were selected for the reporter gene, as expected, all but one F2 individual are called as either homozygous-*Cab* or heterozygous at that locus, with that single exception being a genotyping error. Moreover, the selection for homozygous-*Cab* or heterozygous genotypes at that locus has caused a strong skew towards those genotypes across the whole chromosome. 
+
+On chr3, most samples are homozygous-*Cab* for the second half of the chromosome, with a consistent breakpoint around ~22 Mb. However, the final fifth of samples which show a different recombination pattern. The samples are sorted based on the order that they were phenotyped and sequenced, so this difference could have been caused by their being generated from different F1 individuals with distinct haplotypes [CHECK WITH ALI]. 
+
+(ref:karyo-no-missing) Recombination blocks in 622 F2 samples based on the ratio of reads mapping to either the *Cab* or *Kaga* allele within 5-kb bins, with homozygous-*Cab* blocks in green, heterozoygous blocks in navy blue, and homozygous *Kaga* blocks in red. Most blocks show 0-2 crossover events, as expected, with some regions showing higher numbers of crossovers interpreted as noise. Bins with missing genotypes were "filled" based on the call of the previous called bin, or if unavailable (e.g. the missing bin was at the start of the chromosome), then the next called bin.
 
 ```{r karyo-no-missing, echo = F, fig.cap = '(ref:karyo-no-missing)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/somites/karyoplot_no_missing.png"), auto_pdf = T)
 ```
 
-**Figure \@ref(fig:prop-sites-total)** shows the proportion of 5-kb bins called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga* within each F2 sample (points). The ordinary expectation for the ratios would be 0.25, 0.5, and 0.25 respectively. However, we observe a skew towards homozygous-*Cab* and away from homozygous *Kaga*. This may have been caused by the low homozygosity observed in *Kaga*. 
+**Figure \@ref(fig:prop-sites-total)** shows the proportion of 5-kb bins called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga* within each F2 sample (points). The ordinary expectation for the ratios would be 0.25, 0.5, and 0.25 respectively. However, we observe a skew towards homozygous-*Cab* and away from homozygous *Kaga*. This was likely caused by the hybrid incompatibility between *Cab* and *Kaga*, given the two strains were derived from populations  that are thought to be at the point of speciation (see the previous analysis in **Chapter \@ref(MIKK-genomes-chap)**, section **\@ref(introgression-sec)**). 
 
 (ref:prop-sites-total) Proportions of 5-kb blocks called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga*.
 
@@ -224,7 +242,7 @@ knitr::include_graphics(here::here("book/figs/somites/karyoplot_no_missing.png")
 knitr::include_graphics(here::here("book/figs/somites/prop_sites_total.png"), auto_pdf = T)
 ```
 
-## Genome-wide linkage anlaysis
+## Genome-wide linkage anlaysis {#somite-assoc-tests}
 
 Finally, I used the called recombination blocks as pseudo-SNPs in a genetic linkage analysis. To detect associations between the pseudo-SNPs and the three phenotypes of interest, I used a mixed linear model (**MLM**) as implemented in GCTA [@yangGCTAToolGenomewide2011]. That paper describes the model as follows:
 

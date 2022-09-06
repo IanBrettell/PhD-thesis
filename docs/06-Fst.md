@@ -82,13 +82,15 @@ The widely-used fixation index ($F_{ST}$) was introduced independently by Sewall
 
 I first sought to explore the distribution of $F_{ST}$ for SNPs across the human genome. As the reference for human genomic variation across diverse populations, I used the New York Genome Center high-coverage, phased .vcf files[@IndexVol1Ftp] for the 2,504 individuals from 26 populations from across the globe, as described in the 1000 Genomes phase 3 release [@10002015global]. I then annotated those .vcf files with human SNP IDs from dbSNP release 9606 [@smigielskiDbSNPDatabaseSingle2000], and calculated $F_{ST}$ for each of the ~69M SNPs in that dataset with PLINK 1.9 [@changSecondgenerationPLINKRising2015; @purcellPLINK]. Figure \@ref(fig:fst-circos) shows the location and $F_{ST}$ value for all SNPs in the 1000 Genomes dataset, and Figure \@ref(fig:fst-histo) shows their distribution across the range of $F_{ST}$ values.
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/fst/circos_all_fst} \caption{(ref:fst-circos)}(\#fig:fst-circos)
-\end{figure}
+<div class="figure">
+<img src="figs/fst/circos_all_fst.png" alt="(ref:fst-circos)" width="100%" />
+<p class="caption">(\#fig:fst-circos)(ref:fst-circos)</p>
+</div>
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/fst/histo_fst_all} \caption{(ref:fst-histo)}(\#fig:fst-histo)
-\end{figure}
+<div class="figure">
+<img src="figs/fst/histo_fst_all.png" alt="(ref:fst-histo)" width="100%" />
+<p class="caption">(\#fig:fst-histo)(ref:fst-histo)</p>
+</div>
 
 Figure \@ref(fig:fst-circos) shows that with very few exceptions, $F_{ST}$ remains below 0.6, although specific regions do appear to be differentially selected, as indicated be the peaks on chromosomes 1, 2, and 17. Figure \@ref(fig:fst-histo) makes it clear that the vast majority of SNPs have very low $F_{ST}$, with a genome-wide mean of 0.019. The question then is whether the SNPs that have a detectable effect on traits tend to have higher $F_{ST}$ values -- and therefore greater variation in allele frequencies between populations -- than random SNPs with similar allele frequencies in European populations. If so, this would suggest that variation in allele frequencies might contribute significantly to the non-transferability of PRS scores derived from European-focused GWAS.
 
@@ -106,9 +108,10 @@ To obtain the "trait SNP" dataset, for each trait, I sought to isolate the SNP c
 
 (ref:FstSnpCount) log<sub>10</sub> counts of associated SNPs for each trait before and after the clumping process, which involved: a) excluding all SNPs with a *p*-value greater than $10^{-8}$; and b) starting with the SNPs with the lowest *p*-values ("index" SNPs), excluding all other SNPs within a 1 Mb region of the index SNP with an LD $r^2$ of more than 0.1. [CHANGE COLOUR]
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/fst/0.1_1000_20220314_snp_counts} \caption{(ref:FstSnpCount)}(\#fig:FstSnpCount)
-\end{figure}
+<div class="figure">
+<img src="figs/fst/0.1_1000_20220314_snp_counts.png" alt="(ref:FstSnpCount)" width="100%" />
+<p class="caption">(\#fig:FstSnpCount)(ref:FstSnpCount)</p>
+</div>
 
 ### Control SNPs
 
@@ -142,17 +145,19 @@ In **Figure \@ref(fig:FstMain)** I present the $F_{ST}$ distributions of trait S
 
 (ref:FstMain) Distributions of $F_{ST}$ across 28 illustrative human traits, ranked by signed-D (Kolmogorov-Smirnov test) comparing trait and control SNPs. **A**. $F_{ST}$ density ridge plots with SNP markers. **B**. Empirical Cumulative Distribution Functions (eCDFs) of $F_{ST}$ for trait-associated (colour) and random control (grey) SNPs, faceted by trait. **C**. Consolidated eCDFs of trait-associated SNPs from (B). eCDFs for all traits are included in the Appendix.  
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/fst/0.1_1000_20220314_final} \caption{(ref:FstMain)}(\#fig:FstMain)
-\end{figure}
+<div class="figure">
+<img src="figs/fst/0.1_1000_20220314_final.png" alt="(ref:FstMain)" width="100%" />
+<p class="caption">(\#fig:FstMain)(ref:FstMain)</p>
+</div>
 
 These results show that for most traits, especially those that are highly polygenic, the $F_{ST}$ of their associated alleles tend to be low, and to differ little from their matched control SNPs. This suggests that the causal variants of polygenic traits are generally shared across global populations at similar frequencies. @wangTheoreticalEmpiricalQuantification2020 determined through simulations that differences in LD and allele frequencies between populations can explain 70-80% of the loss of PGS relative accuracy for traits like body mass index and type 2 diabetes. This builds on the work of others [CITE PAPERS CITED BY BERG AND COOP AND ELABORATE]. As most of these variants have been discovered in European populations, the poor transferability of PGS between populations does not appear to be primarily driven by differences in the allele frequencies of these discovered variants, but perhaps rather by as-yet undiscovered variants of larger effect sizes in non-European populations, as well as differences between these populations in LD structure and environment.
 
 There is a question as to whether the higher distributions of $F_{ST}$ observed for hair shape, eye colour, skin pigmentation, and HIV infection, are due to those variants being discovered in diverse populations, such as those in Africa. For instance, if the alleles were predominantly discovered through GWAS on African populations, which contain an outsized proportion of genetic variation, those alleles would be more likely to show lower frequencies in other populations, and consequently higher $F_{ST}$. To examine the number of individuals from different ancestries that were used in these studies, I generated Figure \@ref(fig:fst-n-indivs). This figure shows that GWAS performed for the more comprehensively-studied phenotypes such as body height, BMI, and educational attainment, included individuals from many diverse populations, whereas the GWAS on pigmentation-related traits tended to focus on European or Latin American populations, as well as those of African ancestry in some cases. As expected, the GWAS on HIV-related traits included a higher proportion of individuals of African ancestry, which may explain the higher levels of $F_{ST}$ observed there. I note that the GWAS Catalog data did not allow me to determine whether different studies on the same trait used the same cohorts (e.g. from UK Biobank), which would have the effect of inflating the counts shown in Figure \@ref(fig:fst-n-indivs).
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/fst/20220324_n_individuals} \caption{(ref:fst-n-indivs)}(\#fig:fst-n-indivs)
-\end{figure}
+<div class="figure">
+<img src="figs/fst/20220324_n_individuals.png" alt="(ref:fst-n-indivs)" width="100%" />
+<p class="caption">(\#fig:fst-n-indivs)(ref:fst-n-indivs)</p>
+</div>
 
 ## Implications
 

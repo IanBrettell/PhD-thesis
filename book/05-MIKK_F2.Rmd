@@ -249,17 +249,7 @@ I again used *idtrackerai* [@romero-ferreroIdtrackerAiTracking2019] to track the
 
 ### Behavioural phenotyping
 
-To ensure that the predicted HMM states for behaviour were consistent across both F0 and F2 generations, I had included these F2 individuals for training and prediction in the models described above. I again calculated the proportions of time that every individual spent in each state ("**state frequency**"), then inverse-normalised the values within each combination of assay component (open field or novel object) and state (1 to 15). Inverse-normalisation is a rank-based normalisation approach which involves replacing the values in the phenotype vector with their rank (where ties are averaged), then converting the ranks into a normal distribution with the quantile function [@wichuraAlgorithm241Percentage1988]. The inverse-normalisation function I used for this analysis is set out in the following `R` code:
-
-```{r}
-invnorm = function(x) {
-  res = rank(x)
-  # The arbitrary 0.5 value is added to the denominator below 
-  # to avoid `qnorm()` returning 'Inf' for the last-ranked value
-  res = qnorm(res/(length(res)+0.5))
-  return(res)
-}
-```
+To ensure that the predicted HMM states for behaviour were consistent across both F0 and F2 generations, I had included these F2 individuals for training and prediction in the models described above. I again calculated the proportions of time that every individual spent in each state ("**state frequency**"), then inverse-normalised^[See section \@ref(inverse-norm-sec) in Chapter \@ref(Somite-chap) for a description of this process.] the values within each combination of assay component (open field or novel object) and state (1 to 15). 
 
 **Figures \@ref(fig:F2-state-freq-dge)** and **\@ref(fig:F2-state-freq-sge)** compares the phenotype pre- and post-transformation with this normalisation approach. For the higher-movement states there are increasing numbers of individuals who spent no time in those states, which are responsible for the apparently non-normal distributions observed for the skewed distributions post-transformation. States 1, 3, 6, 8, 9 and 11 already appear to have a large amount of variation between individuals, but this normalisation process will increase the variance for states where there is small, yet potentially meaningful, variation between individuals. One exception may perhaps be state 15, which involves very large distances of travel in all directions, and therefore may correspond to tracking errors. 
 

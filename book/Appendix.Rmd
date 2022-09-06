@@ -1,6 +1,18 @@
 # (APPENDIX) Appendix {-}
 
-# 15 HMM states with 0.05 second interval
+# Chapter 4 supplementary information
+
+## Recombination blocks for F2 individuals showing regions with missing genotype calls
+
+(ref:karyo-wi-missing) Recombination blocks in 622 F2 samples based on the ratio of reads mapping to either the *Cab* or *Kaga* allele within 5-kb bins, with homozygous-*Cab* blocks in green, heterozoygous blocks in navy blue, and homozygous *Kaga* blocks in red. Most blocks show 0-2 crossover events, as expected, with some regions showing higher numbers of crossovers interpreted as noise. Unfilled regions are those with no state called by the HMM due to a lack of reads mapping to SNPs within those 5-kb bins.
+
+```{r karyo-wi-missing, echo = F, fig.cap = '(ref:karyo-wi-missing)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/somites/karyoplot_wi_missing.png"), auto_pdf = T)
+```
+
+# Chapter 5 supplementary information
+
+## 15 HMM states with 0.05 second interval
 
 (ref:hmm-states-05) HMM states predicted for the F0 dataset, using the combination of a 0.05-second interval between which the distance and angle variables were calculated.
 
@@ -8,13 +20,13 @@
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.05_15_polar_all_dge.png"), auto_pdf = T)
 ```
 
-# Four-panel plots for MIKK lines selected for the F2 cross {#four-panel-app}
+## Four-panel plots for MIKK lines selected for the F2 cross {#four-panel-app}
 
 All frame grabs were taken at the 300th second (5-minute mark) of each 10-minute assay component.
 
-## Open field
+### Open field
 
-### 8-2
+#### 8-2
 
 (ref:4p-8-2-of-A) Line 8-2, open field, run A.
 
@@ -28,7 +40,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/op
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/open_field_20191118_1224_8-2_R_B_300.png"), auto_pdf = T)
 ```
 
-### 18-2
+#### 18-2
 
 (ref:4p-18-2-of-A) Line 18-2, open field, run A.
 
@@ -48,7 +60,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/op
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/open_field_20191119_1459_18-2_R_C_300.png"), auto_pdf = T)
 ```
 
-### 50-2
+#### 50-2
 
 (ref:4p-50-2-of-A) Line 50-2, open field, run A.
 
@@ -68,7 +80,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/op
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/open_field_20191120_1150_50-2_R_C_300.png"), auto_pdf = T)
 ```
 
-### 38-2
+#### 38-2
 
 (ref:4p-38-2-of-A) Line 38-2, open field, run A.
 
@@ -82,7 +94,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/op
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/open_field_20191116_1203_38-2_L_B_300.png"), auto_pdf = T)
 ```
 
-### 21-2
+#### 21-2
 
 (ref:4p-21-2-of-A) Line 38-2, open field, run A.
 
@@ -96,7 +108,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/op
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/open_field_20191116_1309_21-2_R_B_300.png"), auto_pdf = T)
 ```
 
-### 40-1
+#### 40-1
 
 (ref:4p-40-1-of-A) Line 40-1, open field, run A.
 
@@ -110,9 +122,9 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/op
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/open_field_20191118_1129_40-1_R_B_300.png"), auto_pdf = T)
 ```
 
-## Novel object
+### Novel object
 
-### 8-2
+#### 8-2
 
 (ref:4p-8-2-no-A) Line 8-2, novel object, run A.
 
@@ -126,7 +138,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/no
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/novel_object_20191118_1224_8-2_R_B_300.png"), auto_pdf = T)
 ```
 
-### 18-2
+#### 18-2
 
 (ref:4p-18-2-no-A) Line 18-2, novel object, run A.
 
@@ -146,7 +158,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/no
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/novel_object_20191119_1459_18-2_R_C_300.png"), auto_pdf = T)
 ```
 
-### 50-2
+#### 50-2
 
 (ref:4p-50-2-no-A) Line 50-2, novel object, run A.
 
@@ -166,7 +178,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/no
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/novel_object_20191120_1150_50-2_R_C_300.png"), auto_pdf = T)
 ```
 
-### 38-2
+#### 38-2
 
 (ref:4p-38-2-no-A) Line 38-2, novel object, run A.
 
@@ -180,7 +192,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/no
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1203_38-2_L_B_300.png"), auto_pdf = T)
 ```
 
-### 21-2
+#### 21-2
 
 (ref:4p-21-2-no-A) Line 38-2, novel object, run A.
 
@@ -194,7 +206,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/no
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/novel_object_20191116_1309_21-2_R_B_300.png"), auto_pdf = T)
 ```
 
-### 40-1
+#### 40-1
 
 (ref:4p-40-1-no-A) Line 40-1, novel object, run A.
 
@@ -208,11 +220,11 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/no
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/novel_object_20191118_1129_40-1_R_B_300.png"), auto_pdf = T)
 ```
 
-# HMM state time dependence for all MIKK panel lines
+## HMM state time dependence for all MIKK panel lines
 
-## Direct genetic effects
+### Direct genetic effects
 
-### Tile plot
+#### Tile plot
 
 (ref:mikk-all-tile-dge) Tile plot for all 1610 test fishes included in the MIKK panel behaviour analysis, ordered by each line's group median for individual mean speed over the course of the 20-minute video (open field and novel object combined). The order of lines is identical to that shown in **Figure \@ref(fig:mikk-mean-speed)**. 
 
@@ -220,7 +232,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/no
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_tile_dge.png"), auto_pdf = T)
 ```
 
-### Density plot
+#### Density plot
 
 (ref:mikk-all-dens-dge) Density plot for all 1610 test fishes included in the MIKK panel behaviour analysis, ordered by each line's group median for individual mean speed over the course of the 20-minute video (open field and novel object combined). The order of lines is identical to that shown in **Figure \@ref(fig:mikk-mean-speed)**. 
 
@@ -228,9 +240,9 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_tile_dge.pn
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_dens_dge.png"), auto_pdf = T)
 ```
 
-## Social genetic effects
+### Social genetic effects
 
-### Tile plot
+#### Tile plot
 
 (ref:mikk-all-tile-sge) Tile plot for all 1610 reference fishes included in the MIKK panel behaviour analysis, ordered by each line's group median for individual mean speed over the course of the 20-minute video (open field and novel object combined). The order of lines is identical to that shown in **Figure \@ref(fig:mikk-mean-speed)**. 
 
@@ -238,7 +250,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_dens_dge.pn
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_tile_sge.png"), auto_pdf = T)
 ```
 
-### Density plot
+#### Density plot
 
 (ref:mikk-all-dens-sge) Density plot for all 1610 test fishes included in the MIKK panel behaviour analysis, ordered by each line's group median for individual mean speed over the course of the 20-minute video (open field and novel object combined). The order of lines is identical to that shown in **Figure \@ref(fig:mikk-mean-speed)**. 
 
@@ -246,7 +258,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_tile_sge.pn
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_dens_sge.png"), auto_pdf = T)
 ```
 
-# F2 recombination karyoplot with missing calls
+## F2 recombination karyoplot with missing calls
 
 (ref:F2-recomb-blocks-missing) Karyoplot for F2 samples, coloured by genotype. Samples are sorted in the order in which they were phenotyped. Blocks are filled with the colour of the paternal F0 line for the homozygous paternal haplotype block, black for heterozygous, and the colour of the maternal F0 line for the homozygous maternal haplotype block. 
 
@@ -254,7 +266,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_dens_sge.pn
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/karyoplot_wi_missing.png"), auto_pdf = T)
 ```
 
-# LOCO GRM for chromosome 1 
+## LOCO GRM for chromosome 1 
 
 (ref:loco-grm-chr1) "Leave-one-chromosome-out" genetic relationship matrix for 271 F2 samples based on 44,284 non-missing SNPs, having excluded 76 SNPs on chromosome 1.
 
@@ -262,7 +274,9 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/karyoplot_wi_missin
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/grm_loco_man_chr1.png"), auto_pdf = T)
 ```
 
-# eCDF of all polygenic traits in the GWAS Catalog ranked by ${D_t^S}$ 
+# Chapter 6 supplementary information
+
+## eCDF of all polygenic traits in the GWAS Catalog ranked by ${D_t^S}$ 
 
 (ref:eCDFall) 587 traits from the GWAS Catalog that passed our filters for polygenic traits, ranked by ${D_t^S}$.
 

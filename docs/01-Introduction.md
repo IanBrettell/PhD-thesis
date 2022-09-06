@@ -7,17 +7,24 @@ bibliography: book.bib
 
 
 
+
+[STRUCTURE SHOULD START WITH G AND E GO INTO P. THAT'S WHAT GWAS USES. THEN INTRODUCE SOCIAL GENETIC EFFECTS. THEN ADD THE FAMILY ONE. BUILD FROM SIMPLE TO MORE COMPLEX. EXPLAIN THE TECHNIQUES AT THE SAME TIME. IN A HUMAN SITUATION IS GETS EVEN MORE COMPLICATED, THEN PUT INTO THE APPENDIX.]
+
 # Introduction {#Introduction}
 
-Humankind has long sought to understand the basis of biological variation. What gives rise to the wondrous variety of life forms on Earth? Why do individuals of a particular species differ from one another? How do children inherit traits that are similar to those of their parents, yet on the whole remain distinct from both their parents and their siblings? And are the traits we care about -- our health, our intelligence, our ability to thrive in a changing world -- pre-determined from birth, or continuously pliable throughout our lives? These questions fundamentally concern the natural laws of inheritance, which until  recently remained mysterious and obscure. Rapidly-improving technologies are making these questions increasingly tractable, yet the interplay between genes and environment are still the subject of controversy, especially in relation to human traits such as intelligence.
+Humankind has long sought to understand the basis of biological variation. What gives rise to the wondrous variety of life forms on Earth? Why do individuals of a particular species differ from one another? How do children inherit traits that are similar to those of their parents, yet on the whole remain distinct from both their parents and their siblings? And are the traits we care about -- our health, our BEHAVIOUR [NEED TO GET THE SOCIAL ENVRIONMENT OUT] intelligence, our ability to thrive in a changing world -- pre-determined from birth, or continuously pliable throughout our lives? These questions fundamentally concern the natural laws of inheritance, which until recently remained mysterious and obscure. Rapidly-improving technologies are making these questions increasingly tractable, yet the interplay between genes and environment are still the subject of controversy, especially in relation to human traits such as intelligence.
 
-In this thesis, I primarily explore the extent to which phenotypic variation is determined by an individual's own genes, and how much it is mediated by the genes of one's social companions, with a particular focus on the phenotype of bold-type behaviours in the Japanese rice paddy fish *Oryzias latipes*. I first provide a brief history of the field, describing some of the work of the scientific giants on whose shoulders this research stands, from Charles Darwin's theory of evolution, Mendel's identification of the units of inheritance, and the study of continuous variation by Francis Galton, Karl Pearson, Ronald Fisher, and Sewall Wright. I then outline the traditional animal crossing methods and modern DNA sequencing and statistical techniques that I used to parse the respective contributions of genes and environment to variation in complex traits, and ultimately identify the genetic variants that drive those differences. 
+In this thesis, I primarily explore the extent to which phenotypic variation is determined by an individual's own genes, and how much it is mediated by the genes of one's social companions, with a particular focus on the phenotype of bold-type behaviours in the Japanese rice paddy fish *Oryzias latipes*. I first provide a brief history of the field, describing some of the work of the scientists on whose shoulders this research stands, from Charles Darwin's theory of evolution, Mendel's identification of the units of inheritance, and the study of continuous variation by Francis Galton, Karl Pearson, Ronald Fisher, and Sewall Wright, but also touching on their other legacies.[BRING EUGENICS INTO MAIN TEXT.] I then outline the traditional animal crossing methods and modern DNA sequencing and statistical techniques that I used to parse the respective contributions of genes and environment to variation in complex traits, and ultimately identify the genetic variants that drive those differences. [I'M ALSO GOING TO GIVE YOU AN INTRODUCTION THTE PHENOTYPES I STUDY IN MEDAKA]
 
 ## A brief history of genetics
 
+[MUCH OF THIS INTRODUCTION AHS BEEN INFORMED BY MUKHERJEE, RUTHERFORD, ETC. WHERE POSSIBLE I HAVE QUOTED FROM THE ORIGINAL SOURCES.]
+
+Much of this section has been informed by @mukherjeeGeneIntimateHistory2016, @rutherfordHowArgueRacist2020, and @taberyStruggleUnderstandInteraction2014. Where possible, I have cited the original sources. 
+
 ### Ancient Greece
 
-Throughout ancient history, the sources of biological variation were completely unknown. With limited technologies available to them, the Ancient Greek philosophers proposed theories for the inheritance of traits that they observed in humans. Around 500 BC, Pythagoras applied his knowledge of triangles to the question of how traits are inherited from one's parents. He proposed the theory known as "spermism", positing that hereditary information was passed down from parent to child via male sperm, with the female providing the nutrients that would allow it to grow. Like the theorem that bears his name, he supposed that these two sides of the "triangle" would determine the length of the third side: the characteristics of the child [@mukherjeeGeneIntimateHistory2016]. Over a century later, in 380 BC, Plato extended this metaphor in *The Republic* [@badiouPlatoRepublic2013] to argue that this principle could be applied to perfect humanity by breeding perfect combinations of parents at perfect times [@mukherjeeGeneIntimateHistory2016]. 
+Throughout ancient history, the sources of biological variation were completely unknown. With limited technologies available to them, the Ancient Greek philosophers proposed theories for the inheritance of traits that they observed in humans. Around 500 BC, Pythagoras applied his knowledge of triangles to the question of how traits are inherited from one's parents. He proposed the theory known as "spermism", positing that hereditary information was passed down from parent to child via male sperm, with the female providing the nutrients that would allow it to grow. Like the theorem that bears his name, he supposed that these two sides of the "triangle" would determine the length of the third side: the characteristics of the child [@mukherjeeGeneIntimateHistory2016]. Over a century later, in 380 BC, Plato extended this metaphor in *The Republic* [@badiouPlatoRepublic2013] to argue that this principle could be applied to perfect humanity by breeding perfect combinations of parents at perfect times [@mukherjeeGeneIntimateHistory2016]. [THE FIRST EUGENICIST.]
 
 Aristotle later joined the discussion with his treatise *Generation of Animals* [@aristotleGenerationAnimals2021], where he noted that children inherited features from their mothers as well as their fathers, raising cases where human skin colour and other traits from maternal ancestors could skip generations, and thus sperm could not be the only vessel of hereditary information. He suggested an idea of "movement" -- the transmission of information -- from the father's sperm, which sculpts the mother's menstrual blood in the same way a carpenter carves a piece of wood [@mukherjeeGeneIntimateHistory2016]. It was, however, impossible for Aristotle to deduce the form in which the information was conveyed.
 
@@ -27,12 +34,10 @@ From medieval times through to the 1800s, the prevailing theory of heredity was 
 
 (ref:homunculus-pic) Preformation, drawn by Nicolaas Hartsoeker in 1695. Image adapted from @homunculusImage.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/homunculus} 
-
-\caption{(ref:homunculus-pic)}(\#fig:homunculus-pic)
-\end{wrapfigure}
+<div class="figure" style="text-align: right">
+<img src="figs/introduction/homunculus.png" alt="(ref:homunculus-pic)" width="100%" />
+<p class="caption">(\#fig:homunculus-pic)(ref:homunculus-pic)</p>
+</div>
 
 ### Charles Darwin
 
@@ -42,36 +47,28 @@ It was in this context that a 22-year-old English clergyman named Charles Darwin
 
 (ref:charles-darwin-young-portrait) Portrait of Charles Darwin from the late 1830s by George Richmond [@charlesDarwinYoung].
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.7\linewidth]{figs/introduction/Charles_Darwin_by_G._Richmond} 
-
-}
-
-\caption{(ref:charles-darwin-young-portrait)}(\#fig:charles-darwin-young-portrait)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="figs/introduction/Charles_Darwin_by_G._Richmond.png" alt="(ref:charles-darwin-young-portrait)" width="70%" />
+<p class="caption">(\#fig:charles-darwin-young-portrait)(ref:charles-darwin-young-portrait)</p>
+</div>
 
 After rounding Cape Horn and moving northward along the western coast of South America, the *HMS Beagle* eventually reached the Galápagos Islands on the coast of Peru, an archipelago of 18 islands formed from volcanic lava [@mukherjeeGeneIntimateHistory2016]. Over the course of five weeks, Darwin collected carcasses of birds, lizards, and plants [@mukherjeeGeneIntimateHistory2016]. Upon his return to England, he was hailed as a minor celebrity among natural historians due to the collections of specimens he had gathered and shipped back [@mukherjeeGeneIntimateHistory2016]. John Gould -- the ornithologist who lent his (wife's) name to the Gouldian finch (**Figure \@ref(fig:gouldian-finch)**) -- told him that the various birds that Darwin thought were a variety of wrens, warblers, blackbirds, and "gros-beaks" were in fact all 13 different species of finches [@mukherjeeGeneIntimateHistory2016].
 
 (ref:gouldian-finch) The Gouldian Finch, an Australian native bird described by British ornithological artist John Gould in 1844 and named after his deceased wife Elizabeth [@bancroftPartIntroductionGouldian]. Photograph by Sarah R. Pryke, published in @prykeRedDominatesBlack2006.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+<div class="figure" style="text-align: right">
+<img src="figs/introduction/gouldian_finch.png" alt="(ref:gouldian-finch)" width="100%" />
+<p class="caption">(\#fig:gouldian-finch)(ref:gouldian-finch)</p>
+</div>
 
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/gouldian_finch} 
-
-\caption{(ref:gouldian-finch)}(\#fig:gouldian-finch)
-\end{wrapfigure}
-
-Each island had produced its own variant (**Figure \@ref(fig:darwin-finches)**), and this caused Darwin to consider whether they had all arisen from a common ancestral finch, branching off like the boughs of a tree over time [@mukherjeeGeneIntimateHistory2016]. He understood that animal breeders took advantage of the natural variation in populations to select for desired traits, but he questioned what force had guided the development of these different varieties of finches in the wild [@mukherjeeGeneIntimateHistory2016].
+Each island had produced its own variant (**Figure \@ref(fig:darwin-finches)**), and this caused Darwin to consider whether they had all arisen from a common ancestral finch, branching off like the boughs of a tree over time [QUOTE ORIGIN OF SPECIES] [@mukherjeeGeneIntimateHistory2016]. He understood that animal breeders took advantage of the natural variation in populations to select for desired traits, but he questioned what force had guided the development of these different varieties of finches in the wild [@mukherjeeGeneIntimateHistory2016].
 
 (ref:darwin-finches) Illustration of variation in Galapagos finches by John Gould, published in @darwinNaturalistVoyageJournal1882. Image from @darwinFinches.
 
-\begin{wrapfigure}{L}{0.5\textwidth}
-
-\includegraphics[width=1\linewidth]{figs/introduction/Darwin's_finches_by_Gould} \hfill{}
-
-\caption{(ref:darwin-finches)}(\#fig:darwin-finches)
-\end{wrapfigure}
+<div class="figure" style="text-align: left">
+<img src="figs/introduction/Darwin's_finches_by_Gould.png" alt="(ref:darwin-finches)" width="100%" />
+<p class="caption">(\#fig:darwin-finches)(ref:darwin-finches)</p>
+</div>
 
 
 Well prior to Darwin's voyage, Thomas Malthus, a curate and amateur economist, had published a paper in titled *An Essay on the Principle of Population* [@malthusEssayPrinciplePopulation1872], in which he argued that the human population was in constant struggle with its limited resource pool, which in turn was affected by droughts, floods, epidemics, and diseases [@mukherjeeGeneIntimateHistory2016]. Darwin read the paper and identified this struggle for resources as the natural hand that selected those who possessed traits favourable for survival [@mukherjeeGeneIntimateHistory2016]. He continued to gestate these ideas throughout the period from his return from the voyage in 1836 through to 1858, when he read a draft paper that had been sent to him by the author, Alfred Russel Wallace (**Figure \@ref(fig:alfred-wallace)**). 
@@ -80,14 +77,12 @@ Like Darwin, Wallace had set off on a voyage to distant lands, and had observed 
 
 (ref:alfred-wallace) Alfred Russel Wallace, taken around 1895. Image from @alfredWallace1895.
 
-\begin{wrapfigure}{L}{0.5\textwidth}
+<div class="figure" style="text-align: left">
+<img src="figs/introduction/Alfred-Russel-Wallace.png" alt="(ref:alfred-wallace)" width="100%" />
+<p class="caption">(\#fig:alfred-wallace)(ref:alfred-wallace)</p>
+</div>
 
-\includegraphics[width=1\linewidth]{figs/introduction/Alfred-Russel-Wallace} \hfill{}
-
-\caption{(ref:alfred-wallace)}(\#fig:alfred-wallace)
-\end{wrapfigure}
-
-The presentation made few waves at the time, but Darwin proceeded to complete his opus, *On the Origin of Species by Means of Natural Selection* [@darwinOriginSpeciesMeans1859]. The book was unexpectedly met with enthusiastic reviews, and sold well [@mukherjeeGeneIntimateHistory2016]. However two crucial questions yet remained: how was the variation within species generated in the first place, and how were the traits transmitted to future generations? [@mukherjeeGeneIntimateHistory2016]
+The presentation made few waves at the time, but Darwin proceeded to complete his opus, *On the Origin of Species by Means of Natural Selection* [@darwinOriginSpeciesMeans1859]. [WHAT DID HE ACTUALLY SAY? EVOLTUION THROUGH NATURAL SELECTION NOW ESTABLISHED AND HAS STOOD THE TEST OF TIME] The book was unexpectedly met with enthusiastic reviews, and sold well [@mukherjeeGeneIntimateHistory2016]. However two crucial questions yet remained: how was the variation within species generated in the first place, and how were the traits transmitted to future generations? [@mukherjeeGeneIntimateHistory2016]
 
 ### Gregor Mendel
 
@@ -95,23 +90,19 @@ Around the time the *Origin of Species* was published, the prevailing theory of 
 
 (ref:lamarck) Portrait of Jean Baptiste de Lamarck from 1802-1803 by Charles Thévenin [@lamarck1802].
 
-\begin{wrapfigure}{L}{0.4\textwidth}
-
-\includegraphics[width=1\linewidth]{figs/introduction/Jean-Baptiste_de_Lamarck} \hfill{}
-
-\caption{(ref:lamarck)}(\#fig:lamarck)
-\end{wrapfigure}
+<div class="figure" style="text-align: left">
+<img src="figs/introduction/Jean-Baptiste_de_Lamarck.png" alt="(ref:lamarck)" width="100%" />
+<p class="caption">(\#fig:lamarck)(ref:lamarck)</p>
+</div>
 
 But by extending that logic, if a human had their arm amputated, their children would be born with shortened arms.^[This theory was experimentally tested by the German embryologist August Weismann, who amputated the tails of mice to determine whether the offspring would be born tailless. The offspring were all born with tails intact [@mukherjeeGeneIntimateHistory2016].] Darwin was convinced that selection rather acted upon *pre-existing* variation in a population, and proposed that that variation was transmitted by hereditary particles he called *gemmules* [@mukherjeeGeneIntimateHistory2016]. During conception, he posited that the gemmules of each parent were blended like paints. But such blending would result in a monochrome population, preventing the creation of the unique, outlying traits required to drive the variation he observed. Around this time Darwin had recorded notes on an obscure paper titled *Experiments in Plant Hybridization*, but he appeared to have inadvertently skipped the page containing a description of the experiments on pea hybrids performed by an Augustine monk called Gregor Mendel (**Figure \@ref(fig:mendel)**) [@mukherjeeGeneIntimateHistory2016].
 
 (ref:mendel) Photograph from @mendelPhoto.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/Gregor_Mendel_2} 
-
-\caption{(ref:mendel)}(\#fig:mendel)
-\end{wrapfigure}
+<div class="figure" style="text-align: right">
+<img src="figs/introduction/Gregor_Mendel_2.png" alt="(ref:mendel)" width="100%" />
+<p class="caption">(\#fig:mendel)(ref:mendel)</p>
+</div>
 
 Mendel had aspired to become a teacher, but had failed the teacher's exam multiple times, so by 1853 he had returned to the monastery in Brno, Morvia (present day Czech Republic), and planted a crop of peas which he had been breeding for about three years [@mukherjeeGeneIntimateHistory2016]. He had collected 34 strains that bred "true", meaning that the offspring were identical to the parents in seven famous traits [@mukherjeeGeneIntimateHistory2016]:
 
@@ -139,31 +130,29 @@ In 1894, the English botanist William Bateson (**Figure \@ref(fig:bateson)**) ha
 
 (ref:bateson) Portrait of William Bateson, date and author unknown [@batesonPhoto].
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/Bateson2} 
-
-\caption{(ref:bateson)}(\#fig:bateson)
-\end{wrapfigure}
+<div class="figure" style="text-align: right">
+<img src="figs/introduction/Bateson2.png" alt="(ref:bateson)" width="100%" />
+<p class="caption">(\#fig:bateson)(ref:bateson)</p>
+</div>
 
 ### Quantitative genetics: Francis Galton, Karl Pearson, Ronald Fisher and Sewall Wright
 
-The rediscovery of Mendel's work triggered a vociferous debate between Bateson and a cohort of other scientists who sought to reconcile Mendelian inheritance with the continuous variation observed in natural populations [@bartonSewallWrightEvolution2016]. Francis Galton (**Figure \@ref(fig:galton)**) was the cousin of Charles Darwin, born in the same year as Mendel (1822), and travelled to Egypt and Sudan in 1844, spurring his lifelong obsession with the differences between human races [@mukherjeeGeneIntimateHistory2016]. His reading of Darwin's *Origin of Species* in 1859 galvanised him to explore the measurement and variance of heredity in humans, with an emphasis on height, intelligence, temperament, and physical prowess [@mukherjeeGeneIntimateHistory2016].^[One of Galton's more eccentric activities involved strolling through England and Scotland secretly tabulating beauty by ranking the women he met as "attractive", "indifferent," or "repellent" using pinpricks on a card hidden in his pocket [@mukherjeeGeneIntimateHistory2016].] He coined the phrase *nature versus nurture* to distinguish between hereditary and environmental influences [@galtonMenScienceTheir1874a].
+The rediscovery of Mendel's work triggered a vociferous debate between Bateson and a cohort of other scientists who sought to reconcile Mendelian inheritance with the continuous variation observed in natural populations [@bartonSewallWrightEvolution2016]. Francis Galton (**Figure \@ref(fig:galton)**) was the cousin of Charles Darwin, born in the same year as Mendel (1822), and travelled to Egypt and Sudan in 1844, spurring his lifelong obsession with the differences between human races [@mukherjeeGeneIntimateHistory2016]. His reading of Darwin's *Origin of Species* in 1859 galvanised him to explore the measurement and variance of heredity in humans, with an emphasis on height, intelligence, temperament, and physical prowess [@mukherjeeGeneIntimateHistory2016].^[One of Galton's more eccentric activities involved strolling through England and Scotland secretly tabulating beauty by ranking the women he met as "attractive", "indifferent," or "repellent" using pinpricks on a card hidden in his pocket [@mukherjeeGeneIntimateHistory2016].] He coined the phrase *nature versus nurture* to distinguish between hereditary and environmental influences [@galtonMenScienceTheir1874a]. [GALTON WAS INTERESTED IN THIS TO IMPROVE THE HUMNAN STOCK. REMOVING THE POOR PEPOLE, RACISM IS HIDDEN INSIDE THERE. ]
 
 (ref:galton) Portrait of Francis Galton, taken in the 1850s or early 1860s, originally scanned from @pearsonLifeLettersLabours2011 [@galtonPhoto].
 
-\begin{wrapfigure}{L}{0.5\textwidth}
-
-\includegraphics[width=1\linewidth]{figs/introduction/Francis_Galton_1850s} \hfill{}
-
-\caption{(ref:galton)}(\#fig:galton)
-\end{wrapfigure}
+<div class="figure" style="text-align: left">
+<img src="figs/introduction/Francis_Galton_1850s.png" alt="(ref:galton)" width="100%" />
+<p class="caption">(\#fig:galton)(ref:galton)</p>
+</div>
 
 Through surveys he sent out to men and women in the mid-1880s, he requested they mail him detailed measurements on the height, weight, eye colour, intelligence, and artistic abilities of parents, grandparents, and children in return for a substantial fee [@mukherjeeGeneIntimateHistory2016]. With this data he discovered that tall parents indeed tend to have tall children, albeit on average, although the distribution of heights within a generation fit the shape of a normal distribution, or 'bell-curve' [@mukherjeeGeneIntimateHistory2016]. In a surprising twist, he also discovered that the mean height of the sons of the tallest fathers tended to be slightly lower than the father's height, and closer to the population's average -- a phenomenon he described as *regression to the mean* [@mukherjeeGeneIntimateHistory2016]. The *ancestral law of heredity* sparked an intellectual war with Bateson, through which they attempted to reconcile the dominant/recessive theory with the quantitative theory proposed by Galton [@mukherjeeGeneIntimateHistory2016]. 
 
 Spurred by a desire to apply this new science to the advancement of humankind, and by a fear the the "unfit" were outbreeding the "fit" [@taberyStruggleUnderstandInteraction2014], in 1883 Galton coined the term *eugenics* for his project to improve the human population through selective breeding [@watsonDNASecretLife2009]. It was his vision for a "science which deals with all influences that improve the inborn qualities of race" [@galtonEugenicsItsDefinition1904; @taberyStruggleUnderstandInteraction2014].^[Driven by fear of a world overrun by imbeciles, Galton wrote: "What nature does blindly, slowly and ruthlessly, man may do providently, quickly, and kindly. As it lies within his power, so it becomes his duty to work in that direction."]
 
 In the 1890s, in an attempt to tease out the respective contributions of nature and nurture, Galton proposed the first study on human twins. Since twins share identical genetic material, he reasoned, they represent a natural experiment where any substantial similarities between them could be attributed to genes, while any differences were the consequence of environment [@mukherjeeGeneIntimateHistory2016]. However, these studies were hampered by Galton's failure to distinguish between identical and non-identical twins.
+
+[PEARSON WANTED TO IMRPOVE HUMAN INTELLIGENCE. CREATES PCA TO EXPLORE THAT.]
 
 In Galton's later years, he adopted the English mathematician Karl Pearson (**Figure \@ref(fig:pearson)**) as his protégé. From 1893 to 1904, Pearson built upon the work of his mentor, continuing to develop a number of statistical techniques for biometry including the chi-squared test [@pearsonCriterionThatGiven1900], the term "standard deviation" [@pearsonDissectionAsymmetricalFrequency1894], and correlation and regression coefficients [@pearsonMathematicalContributionsTheory1898], and establishing the foundations of principal components analysis [@pearsonLIIILinesPlanes1901].^[Pearson also inherited his Galton's enthusiasm for eugenics. When Galton died in 1911, he bequeathed money to University College London for a Galton Eugenics Professorship, a position that was given to Pearson, who was also the head of the newly created Department of Applied Statistics, the world's first university statistics department [@kevlesNameEugenicsGenetics1995; @hardenGeneticLotteryWhy2021].]
 
@@ -184,36 +173,30 @@ r_{X,Y} = \frac{\mathrm{cov}(X,Y)}{s_X s_Y} (\#eq:cor)
 
 (ref:pearson) Portrait of Karl Pearson in 1910 [@pearsonPhoto].
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/Karl_Pearson_1910} 
-
-\caption{(ref:pearson)}(\#fig:pearson)
-\end{wrapfigure}
+<div class="figure" style="text-align: right">
+<img src="figs/introduction/Karl_Pearson_1910.png" alt="(ref:pearson)" width="100%" />
+<p class="caption">(\#fig:pearson)(ref:pearson)</p>
+</div>
 
 Following in the footsteps of Galton and Pearson, the mathematician Ronald Fisher (**Figure \@ref(fig:fisher)**) of Caius College at the University of Cambridge began to apply his skills to elucidating how continuous traits, like height, could be driven by genetic variation [@mukherjeeGeneIntimateHistory2016]. In 1918, Fisher published his analysis in a landmark paper entitled *The Correlation between Relatives on the Supposition of Mendelian Inheritance* [@fisherXVCorrelationRelatives1919], where he described how the combination of a large number of Mendelian alleles acting on the same trait would result in a normal distribution. This reconciliation between Mendelian inheritance and observed continuous traits was the beginning of what was later referred to by Julian Huxley as the "**modern evolutionary synthesis**" [@huxleyEvolutionModernSynthesis1942; @taberyStruggleUnderstandInteraction2014]. 
 
 (ref:fisher) Photo of a young Ronald Fisher taken in 1913. Image from @fisherPhoto.
 
-\begin{wrapfigure}{L}{0.5\textwidth}
+<div class="figure" style="text-align: left">
+<img src="figs/introduction/Youngronaldfisher2.png" alt="(ref:fisher)" width="100%" />
+<p class="caption">(\#fig:fisher)(ref:fisher)</p>
+</div>
 
-\includegraphics[width=1\linewidth]{figs/introduction/Youngronaldfisher2} \hfill{}
-
-\caption{(ref:fisher)}(\#fig:fisher)
-\end{wrapfigure}
-
-In the same paper, Fisher also introduced the concept of *variance* as the square of the standard deviation developed by Galton and Pearson (Equation \@ref(eq:sd) above), and used it to partition the *causes* of variation [@taberyStruggleUnderstandInteraction2014].^[Fisher: "For stature the coefficient of correlation between brothers is about .54, which we may interpret by saying that 54% of their variance is accounted for by ancestry alone, and that 46% must have some other explanation."] In 1921 he published his first application of this "analysis of variance" (**ANOVA**) [@fisherProbableErrorCoefficient1921], which became widely used following its inclusion in his widely influential book *Statistical Methods for Research Workers* [@fisherStatisticalMethodsResearch1925].^[Fisher was also an ardent eugenicist. He helped create the Cambridge University Eugenics Society in 1911, hosting meetings in his rooms, organising public lectures by well-known eugenicists, assisting at the First Internvaional Eugenics Congress, and even delivering his own eugenic lectures [@mazumdarEugenicsHumanGenetics2005; @taberyStruggleUnderstandInteraction2014]. He was also a member of the British Eugenics Society, and helped establish the Society's Committee for Legalising Sterilisation. His statistical innovations were developed in part to make eugenic assessments of the relative importance of nature and nurture when it came to evaluating traits like feeble-mindedness [@taberyStruggleUnderstandInteraction2014]. Eugenics policies were implemented in the United States, Sweden, and other countries, which resulted in the forced sterilisations and deaths of millions [@rutherfordHowArgueRacist2020]. Ultimately, eugenics was adopted as a policy by the Nazi regime, resulting in the genocide of around a million Jews, Poles, and Gypsies. The association between eugenics and the horrors of World War II became inextricable, and the eugenics movement was all but finished [@mukherjeeGeneIntimateHistory2016].] Fisher later moved to the Rothamsted Agricultural Research Station in Harpenden, where he created many of the statistical methodologies -- such as tests of significance and the design of experiments -- that continue to be used by statisticians today [@taberyStruggleUnderstandInteraction2014].^[With Winifred A. Mackenzie, Fisher studied the response of 12 different potato varieties to different manure-based fertilizer treatments, where they set up a plot of two treatments (treatment/no treatment), with three replicate plots within each treatment, and three rows within each replicate plots with different manure treatments (either manure, manure + potassium sulfate, or manure + potassium chloride) [@fisherStudiesCropVariation1923]. From this data Fisher generated the first ANOVA table, listing the various causes of variation along with their respective contribution to total variation in crop yield [@taberyStruggleUnderstandInteraction2014].]
+In the same paper, Fisher also introduced the concept of *variance* as the square of the standard deviation developed by Galton and Pearson (Equation \@ref(eq:sd) above), and used it to partition the *causes* of variation [@taberyStruggleUnderstandInteraction2014].^[Fisher: "For stature the coefficient of correlation between brothers is about .54, which we may interpret by saying that 54% of their variance is accounted for by ancestry alone, and that 46% must have some other explanation."] In 1921 he published his first application of this "analysis of variance" (**ANOVA**) [@fisherProbableErrorCoefficient1921], which became widely used following its inclusion in his widely influential book *Statistical Methods for Research Workers* [@fisherStatisticalMethodsResearch1925].^[Fisher was also an ardent eugenicist. He helped create the Cambridge University Eugenics Society in 1911, hosting meetings in his rooms, organising public lectures by well-known eugenicists, assisting at the First International Eugenics Congress, and even delivering his own eugenic lectures [@mazumdarEugenicsHumanGenetics2005; @taberyStruggleUnderstandInteraction2014]. He was also a member of the British Eugenics Society, and helped establish the Society's Committee for Legalising Sterilisation. His statistical innovations were developed in part to make eugenic assessments of the relative importance of nature and nurture when it came to evaluating traits like feeble-mindedness [@taberyStruggleUnderstandInteraction2014]. Eugenics policies were implemented in the United States, Sweden, and other countries, which resulted in the forced sterilisations and deaths of millions [@rutherfordHowArgueRacist2020]. Ultimately, eugenics was adopted as a policy by the Nazi regime, resulting in the genocide of around a million Jews, Poles, and Gypsies. The association between eugenics and the horrors of World War II became inextricable, and the eugenics movement was all but finished [@mukherjeeGeneIntimateHistory2016].] Fisher later moved to the Rothamsted Agricultural Research Station in Harpenden, where he created many of the statistical methodologies -- such as tests of significance and the design of experiments -- that continue to be used by statisticians today [@taberyStruggleUnderstandInteraction2014].^[With Winifred A. Mackenzie, Fisher studied the response of 12 different potato varieties to different manure-based fertilizer treatments, where they set up a plot of two treatments (treatment/no treatment), with three replicate plots within each treatment, and three rows within each replicate plots with different manure treatments (either manure, manure + potassium sulfate, or manure + potassium chloride) [@fisherStudiesCropVariation1923]. From this data Fisher generated the first ANOVA table, listing the various causes of variation along with their respective contribution to total variation in crop yield [@taberyStruggleUnderstandInteraction2014].]
 
 Around the time Fisher was working on his landmark 1919 paper, the American geneticist Sewall Wright (**Figure \@ref(fig:wright)**) was using his work on guinea pigs to reconcile Mendelian inheritance with continuous variation [@wrightGeneticalTheoryNatural1930]. He developed a mathematical theory of inbreeding, eventually introducing the inbreeding coefficient $F$ as the correlation between uniting gametes in 1922 [@wrightCoefficientsInbreedingRelationship1922]. Over the course of an esteemed career, together with Fisher and J. B. S. Haldane [@provineOriginsTheoreticalPopulation2001; @taberyStruggleUnderstandInteraction2014], he advanced the modern evolutionary synthesis, and founded the field of population genetics with his papers on mating systems [@wrightIsolationDistanceDiverse1946] and genetic drift [@wrightRolesDirectedRandom1948] .
 
 (ref:wright) Photo of Sewall Wright in 1965. Image from @goodnightSewallWrightSeven2014.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/Sewall_Wright} 
-
-\caption{(ref:wright)}(\#fig:wright)
-\end{wrapfigure}
+<div class="figure" style="text-align: right">
+<img src="figs/introduction/Sewall_Wright.png" alt="(ref:wright)" width="100%" />
+<p class="caption">(\#fig:wright)(ref:wright)</p>
+</div>
 
 ### Genetic mapping: Thomas Morgan, Tetsuo Aida and Theodosius Dobzhansky
 
@@ -221,79 +204,76 @@ During this fertile period in statistical genetics research, the physical locati
 
 (ref:morgan) Thomas Hunt Morgan in 1920. Portrait taken by A. F. Huettner. Image from @kenneyThomasHuntMorgan2009.
 
-\begin{wrapfigure}{L}{0.5\textwidth}
-
-\includegraphics[width=1\linewidth]{figs/introduction/Thomas_Morgan} \hfill{}
-
-\caption{(ref:morgan)}(\#fig:morgan)
-\end{wrapfigure}
+<div class="figure" style="text-align: left">
+<img src="figs/introduction/Thomas_Morgan.png" alt="(ref:morgan)" width="100%" />
+<p class="caption">(\#fig:morgan)(ref:morgan)</p>
+</div>
 
 Around 1905 Morgan began to breed *Drosophila*, identifying visible variants that he could track over generations, including white versus red eyes, forked versus straight bristles, sable-coloured bodies, curved legs; bent, bat-like wings; disjointed abdomens, and deformed eyes [@mukherjeeGeneIntimateHistory2016]. Through repeated crossing experiments, Morgan discovered that some genes were transmitted together at a higher rate than chance alone. He proposed that these genes were physically "linked" to one another, implying that they were situated on some string within the chromosome [@mukherjeeGeneIntimateHistory2016]. This advanced the understanding of a gene from a purely theoretical unit of inheritance to a physical unit [@mukherjeeGeneIntimateHistory2016]. He further discovered that, occasionally, a gene that was otherwise linked to another could "cross over" from one parental strand to the other, generating offspring with a mixture of parental alleles [@mukherjeeGeneIntimateHistory2016].
 
-While Morgan was carrying out his experiments with *Drosophila*, Japanese researchers were also studying Mendelian inheritance with the Japanese medaka fish, *Oryzias latipes*. Following three articles published by three separate professors in Japanese on the recessive inheritance of medaka colour variants [@fukamachi100YearsMedaka2021], a teacher named Tatsuo Aida (**Figure \@ref(fig:aida)**) published the first article in English about medaka in 1921 [@aidaInheritanceColorFreshWater1921] (**Figure \@ref(fig:aida-fig)**). The study involved a total of 22 crosses of two generations, and among several other findings, Aida discovered recombination between the X and Y chromosome -- the world's first demonstration of Y-linked inheritance  in any species  [@naruseMedakaModelOrganogenesis2011a].^[The editor, William Castle, was so impressed by this last finding that he added the following footnote to the paper: "It should be pointed out, in justice to the author, that his observations go beyond those of Schmidt in the important respect of showing the occurrence of crossing over between the X and the Y chromosome."]
+While Morgan was carrying out his experiments with *Drosophila*, Japanese researchers were also studying Mendelian inheritance with the Japanese medaka fish, *Oryzias latipes*. Following three articles published by three separate professors in Japanese on the recessive inheritance of medaka colour variants [@fukamachi100YearsMedaka2021], a teacher named Tatsuo Aida (**Figure \@ref(fig:aida)**) published the first article in English about medaka in 1921 [@aidaInheritanceColorFreshWater1921] (**Figure \@ref(fig:aida-fig)**). The study involved a total of 22 crosses of two generations, and among several other findings, Aida discovered recombination between the X and Y chromosome -- the world's first demonstration of PSEUDO-AUTOSOMAL SEX CROSSOVER inheritance in any species  [@naruseMedakaModelOrganogenesis2011a].^[The editor, William Castle, was so impressed by this last finding that he added the following footnote to the paper: "It should be pointed out, in justice to the author, that his observations go beyond those of Schmidt in the important respect of showing the occurrence of crossing over between the X and the Y chromosome."]
 
 (ref:aida) Photo of Tetsuo Aida from [@fukamachi100YearsMedaka2021].
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/Aida} 
-
-\caption{(ref:aida)}(\#fig:aida)
-\end{wrapfigure}
+<div class="figure" style="text-align: right">
+<img src="figs/introduction/Aida.png" alt="(ref:aida)" width="100%" />
+<p class="caption">(\#fig:aida)(ref:aida)</p>
+</div>
 
 (ref:aida-fig) Figure from @aidaInheritanceColorFreshWater1921 showing the different medaka colour variants used in the study.
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/introduction/Aida_1921_fig} \caption{(ref:aida-fig)}(\#fig:aida-fig)
-\end{figure}
+<div class="figure">
+<img src="figs/introduction/Aida_1921_fig.png" alt="(ref:aida-fig)" width="100%" />
+<p class="caption">(\#fig:aida-fig)(ref:aida-fig)</p>
+</div>
 
 In the 1930s, Theodosius Dobzhansky (**Figure \@ref(fig:dobzhansky)**), a Ukrainian biologist who had trained with Morgan, used *Drosophila pseudoobscura* to investigate how genetic variation drove evolution [@mukherjeeGeneIntimateHistory2016]. Using a single population of flies that he raised in different temperatures while controlling for all other environmental variables, he found that after four months, the genetic ratios in the two sub-populations had changed [@mukherjeeGeneIntimateHistory2016]. Through this experiment, he determined that genetic variation was the norm across biology; that the adaptive benefit of a given variant would depend on the particular environment that an individual found itself in, and that most phenotypes were driven by many genes interacting with each other and the environment, while also subject to chance [@mukherjeeGeneIntimateHistory2016]. 
 
 (ref:dobzhansky) Undated photo of Theodosius Dobzhansky from @coyneTheodosiusDobzhanskyHybrid2016, reprinted courtesy of UW-Madison Archives, #S05461.
 
-\begin{wrapfigure}{L}{0.5\textwidth}
-
-\includegraphics[width=1\linewidth]{figs/introduction/Dobzhansky} \hfill{}
-
-\caption{(ref:dobzhansky)}(\#fig:dobzhansky)
-\end{wrapfigure}
+<div class="figure" style="text-align: left">
+<img src="figs/introduction/Dobzhansky.png" alt="(ref:dobzhansky)" width="100%" />
+<p class="caption">(\#fig:dobzhansky)(ref:dobzhansky)</p>
+</div>
 
 ### The discovery of the structure of DNA
 
-By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that compose chromosomes. After some flirtation with proteins as the molecule of inheritance, Oswald Avery finally proved that it was in fact deoxyribonucleic acid (**DNA**) that was "the material substance of the gene" -- the "cloth from which genes were cut" [@mukherjeeGeneIntimateHistory2016]. In 1953, Rosalind Franklin, James Watson, and Francis Crick, and Maurice Wilkins (**Figure \@ref(fig:all-four)**) discovered the structure of DNA using X-ray crystallography [@mukherjeeGeneIntimateHistory2016].
+By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that compose chromosomes. After some flirtation with proteins as the molecule of inheritance, Oswald Avery finally proved that it was in fact deoxyribonucleic acid (**DNA**) that was "the material substance of the gene" -- the "cloth from which genes were cut" [@mukherjeeGeneIntimateHistory2016]. In 1953, Rosalind Franklin, James Watson, and Francis Crick, and Maurice Wilkins (**Figure \@ref(fig:all-four)**) discovered the structure of DNA using X-ray crystallography [@mukherjeeGeneIntimateHistory2016]. [EXPAND THIS SECTION. WATSON EUGENICIST? ENGAGE WITH HIS COMMENTS. CRICK SAYS SOMETHING TOO, BUT LESS PUBLICISED.]
 
 (ref:all-four) Composite image of Rosalind Franklin (1956), James Watson (1980s), Francis Crick (1980s) and Maurice Wilkins (early 1990s) from @DNAThenNow reprinted courtesy of Cold Spring Harbor Laboratory Library and Archive, James D. Watson Collection; Wilkins photo courtesy of TVNZ.
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/introduction/all_four} \caption{(ref:all-four)}(\#fig:all-four)
-\end{figure}
+<div class="figure">
+<img src="figs/introduction/all_four.png" alt="(ref:all-four)" width="100%" />
+<p class="caption">(\#fig:all-four)(ref:all-four)</p>
+</div>
 
 ### The development of DNA sequencing
 
-Over the course of the 1970s, Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University of Cambridge, developed a method identifying each nucleotide base as it was added to the strand during DNA replication [@mukherjeeGeneIntimateHistory2016]. In 1977 he published what became known as the "Sanger method", using radio-labelled nucleic acids to identify the precise order and type of nucleotides that made up a DNA sequence [@sangerDNASequencingChainterminating1977], earning him a second Nobel prize in Chemistry in 1980 [@NobelPrizeChemistry].
+Over the course of the 1970s, Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University of Cambridge, developed a method identifying each nucleotide base as it was added to the strand during DNA replication [@mukherjeeGeneIntimateHistory2016]. In 1977 he published what became known as the "Sanger method", using radio-labelled nucleic acids to identify the precise order and type of nucleotides that made up a DNA sequence [@sangerDNASequencingChainterminating1977], earning him a second Nobel prize in Chemistry in 1980 [@NobelPrizeChemistry].[DO I KNOW HOW SEQUENCING WORKS? MAKE SURE I KNOW.]
 
 (ref:sanger) Undated photo of Frederick Sanger from @ObituaryFredSanger2013.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/sanger} 
-
-\caption{(ref:sanger)}(\#fig:sanger)
-\end{wrapfigure}
+<div class="figure" style="text-align: right">
+<img src="figs/introduction/sanger.png" alt="(ref:sanger)" width="100%" />
+<p class="caption">(\#fig:sanger)(ref:sanger)</p>
+</div>
 
 These technological breakthroughs eventually led to the first draft of the human genome being published in 2001 by a large international consortium [@internationalhumangenomesequencingconsortiumInitialSequencingAnalysis2001a].^[The full sequence (including heterochromatic regions) was only completed in 2022 [@nurkCompleteSequenceHuman2022].] The improvement in sequencing technologies has continued to progess to the stage where a $100 human genome is now on the horizon [@pennisi100GenomeNew2022]. Long-read technologies developed by Pacific Biosciences and Oxford Nanopore Technologies can also generate single reads of over 2 megabases in length [@payneBulkVisGraphicalViewer2019] and directly sequence DNA modifications [@wangNanoporeSequencingTechnology2021]. These developments are making genetic technologies ever more accessible and informative, paving the way for greater insights into the genetic basis of phenotypic differences. Yet despite these technological advances, the relative contribution of genetics and environment to differences in complex traits is still not fully understood -- especially in humans -- and therefore remains an active area of research.
 
 ## Genetic and environmental causes of variation in complex traits
 
-Individual differences in human traits have now been studied for more than a century, yet the causes of variation in human traits remain uncertain and controversial [@poldermanMetaanalysisHeritabilityHuman2015]. Specifically, the partitioning of observed variability into underlying genetic and environmental sources, and the relative importance of additive and non-additive genetic variation, continue to be debated [@poldermanMetaanalysisHeritabilityHuman2015].
+Individual differences in human traits have now been studied for more than a century, yet the causes of variation in human traits remain uncertain and COMPLEX [@poldermanMetaanalysisHeritabilityHuman2015]. Specifically, the partitioning of observed variability into underlying genetic and environmental sources, and the relative importance of additive and non-additive genetic variation, continue to be debated [@poldermanMetaanalysisHeritabilityHuman2015].
+
+[START WITH THE SIMPLE END. HERITABILITY. GWAS. ANIMAL BREEDING. FAMILIES. ]
 
 A simplified causal model for the inheritance of traits from one's parents is presented in **Figure \@ref(fig:pheno-causal-model)**, adapted from @morrisPopulationPhenomenaInflate2020. The ancestry of each parent determines both their genotypes and phenotypes (yellow lines). The parents' genotypes directly affect their own phenotypes (black arrows genotype → phenotype). The parents transmit half of each of their alleles *directly* to their offspring (black arrows from genotype → genotype), while the non-transmitted alleles also affect their offspring *indirectly* through their effect on the parents' phenotypes (red lines), a phenomenon known as "**dynastic effects**" [@kongNatureNurtureEffects2018]. In addition, the parents' phenotypes can be correlated through "**assortative mating**" (green line), which also has the consequence of creating correlations between the genotypes that affect those phenotypes [@howeGeneticEvidenceAssortative2019].^[The model has been substantiated by @hwangEstimatingIndirectParental2020, who discovered that indirect parental genetic effects could influence offspring phenotypes through the alleles that they *do not* pass on to their children, but which drive the parents' own behaviour, ultimately influencing the child's outcomes. Their strategy involved creating "virtual" mothers and fathers by estimating the genotypic dosages of parental genotypes using physically genotyped data from relative pairs. They applied the approach to 19,066 sibling pairs from the UK Biobank and showed a polygenic score consisting of imputed parental educational attainment SNP dosages is strongly related to offspring educational attainment even after correcting for offspring genotype at the same loci.]
 
 (ref:pheno-causal-model) Causal model of offspring phenotypes. Ancestry causes differences in both genotypes and phenotypes of the parents (yellow lines). Dynastic effects are transmitted through parental parental phenotypes (red lines). Assortative mating creates associations between the phenotypes of the parents (green line), which will also lead to genotypic correlations. Arrows represent direction of effect. Figure adapted from @morrisPopulationPhenomenaInflate2020.
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/introduction/pheno_causal_model} \caption{(ref:pheno-causal-model)}(\#fig:pheno-causal-model)
-\end{figure}
+<div class="figure">
+<img src="figs/introduction/pheno_causal_model.png" alt="(ref:pheno-causal-model)" width="100%" />
+<p class="caption">(\#fig:pheno-causal-model)(ref:pheno-causal-model)</p>
+</div>
 
 This model only includes environmental factors related to the parents' phenotypes, yet the phenotype of an individual is continuously affected by all other environmental influences it is exposed to throughout its lifetime [@plominNatureNurtureGenetic2005]. It is impossible to parse out the respective contributions of each of these factors at the individual level [@knopikBehavioralGenetics2019]: to what extent does the width or the length of a rectangle determine its area? It is determined by the product of the two. But by examining a population of rectangles, one can determine how much of the variance within the population depends on either width or length. The same principle applies to genotypic and environmental variation within groups of individuals.
 
@@ -340,7 +320,7 @@ h^2 = 2\times(r_{MZ} - r_{DZ})
 
 Narrow-sense heritability $h^2$ can therefore be estimated by doubling the difference between the correlation coefficients of MZ versus DZ twins. A 2015 meta-analysis of virtually all human twin studies that had been performed to that date included 2,748 twin studies assessing ~18,000 traits and ~14.5M twin pairs. The results showed that across all traits, $h^2$ is 0.488 and $c^2$ is 0.174 [@poldermanMetaanalysisHeritabilityHuman2015]. Moreover, in 69% of studies $2r_{DZ} = r_{MZ}$ (implying that the shared environment $c^2$ is equivalent across both MZ and DZ twin pairs). This suggests that for most traits, shared environmental or non-additive genetic variation do not make a substantial contribution to phenotypic variation. 
 
-However, that study found that several behavioural traits were inconsistent with this model. These traits included conduct disorder, higher-level cognitive functions, mental and behavioural disorders due to the use of alcohol or tobacco, anxiety disorder, and weight maintenance. For these traits, either or both non-additive genetic influences or shared environmental influences are therefore needed to explain the observed patterns of twin correlations [@poldermanMetaanalysisHeritabilityHuman2015].^[@kongNatureNurtureEffects2018 also showed that parents' non-transmitted alleles can affect a child through their impacts on the parents and other relatives, a phenomenon the authors call "genetic nurture", comprising 29.9% of the transmitted polygenic score.]
+[COULD BE THE INTRO TO: THIS SIMPLE MODEL DOESN'T WORK] However, that study found that several behavioural traits were inconsistent with this model. These traits included conduct disorder, higher-level cognitive functions, mental and behavioural disorders due to the use of alcohol or tobacco, anxiety disorder, and weight maintenance. For these traits, either or both non-additive genetic influences or shared environmental influences are therefore needed to explain the observed patterns of twin correlations [@poldermanMetaanalysisHeritabilityHuman2015].^[@kongNatureNurtureEffects2018 also showed that parents' non-transmitted alleles can affect a child through their impacts on the parents and other relatives, a phenomenon the authors call "genetic nurture", comprising 29.9% of the transmitted polygenic score.]
 
 Beyond twin-studies, the advent of next-generation sequencing technologies has enabled the dense genotyping of large samples of individuals, leading to the development of new methods for analysing the genetic influences on human traits. The most widely used method is known as the Genome-Wide Association Analysis (**GWAS**).
 
@@ -368,7 +348,7 @@ where, for each individual, $\textbf{Y}$ is a vector of phenotype values, $\text
 
 Population structure and unequal relatedness among individuals in a given cohort can lead to false discoveries [@ewensTransmissionDisequilibriumTest1995; @membersofthecomplextraitconsortiumNatureIdentificationQuantitative2003]. This is because individuals who share common ancestries will share both variants that do affect the trait of interest, and variants that do not. Both causal and non-causal variants will be correlated with one other due to that shared ancestry. Therefore, if an association is found between the causal variants and a trait of interest, the non-causal variants that are correlated with the causal variants will also be found to be statistically associated with the trait.
 
-GWAS output a $p$-value and directional effect size (commonly denoted as $\beta$) for each tested SNP. Significance of SNPs are determined by either Bonferroni correction ($\alpha / M_{SNPs}$, commonly set as $p < 5 \times 10^{-8}$ for human studies), or by running permutations of the phenotype (and covariates) and selecting the lowest $p$-value from those permutations as the significance threshold.^[The summed effect sizes of significant SNPs should theoretically reach the heritability estimates from twin studies, however until recently they fell far short, leading to a discussion on the sources of this "missing heritability" [@manolioFindingMissingHeritability2009]. GWAS are limited by sample size, as extremely large samples are required to detect rare variants, and variants with small effect sizes. Short-read sequencing technologies are also unable to detect large "structural" variants, which may have large effects on the phenotype of interest. However, this issue has largely been resolved through improvements in genotyping that can capture rare variants [@yangCommonSNPsExplain2010], and tools such as GCTA which estimates the variance explained by *all* SNPs in the genome, rather than testing the association of individual SNPs [@yangGCTAToolGenomewide2011].]
+GWAS output a $p$-value and directional effect size (commonly denoted as $\beta$) for each tested SNP. Significance of SNPs are determined by either Bonferroni correction ($\alpha / M_{SNPs}$, commonly set as $p < 5 \times 10^{-8}$ for human studies), [NO!!! ARGUMENT MAD EIN THE CASE-CONTROL CONSORTIUM. CLOSER TO A FALSE DISCOVERY RATE ARGUMENT. BASED ON THE QQPLOT. PERMUTATIONS FROM FARM ANIMALS. IN HUMANS THE POPULATION IS ALWAYS SORT FO THE SAME. WITH FARM ANIMALS WE ALWAYS HAVE COMPLICATED STRUCTURE. NEED TO MENTION IN LINKAGE STUDIES OF LOD > 3 IE 1/1000 CRITERIA. ALSO A BIT ARBITRARY. AT WHAT POINT DOES A LOCUS BECOME INTERESTING TO LOOK AT? ] or by running permutations of the phenotype (and covariates) and selecting the lowest $p$-value from those permutations as the significance threshold.^[The summed effect sizes of significant SNPs should theoretically reach the heritability estimates from twin studies, however until recently they fell far short, leading to a discussion on the sources of this "missing heritability" [@manolioFindingMissingHeritability2009]. GWAS are limited by sample size, as extremely large samples are required to detect rare variants, and variants with small effect sizes. Short-read sequencing technologies are also unable to detect large "structural" variants, which may have large effects on the phenotype of interest. However, this issue has largely been resolved through improvements in genotyping that can capture rare variants [@yangCommonSNPsExplain2010], and tools such as GCTA which estimates the variance explained by *all* SNPs in the genome, rather than testing the association of individual SNPs [@yangGCTAToolGenomewide2011].]
 
 ### Animal models
 
@@ -382,21 +362,23 @@ Contemporaneously, the Harvard undergraduate Clarence Cook Little and his superv
 
 The utility of inbred strains eventually led to the establishment of "panels" of inbred strains for several model organisms including the thale cress (*Arabidopsis thaliana*) [@bergelsonIdentifyingGenesUnderlying2010], common bean (*Phaseolus vulgaris L*) [@johnsonSegregationPerformanceRecombinant1999], tomato (*Lycopersicon esculentum*) [@saliba-colombaniEfficiencyRFLPRAPD2000], maize (*Zea mays*) [@limamiGeneticPhysiologicalAnalysis2002], nematode (*Caenorhabditis elegans*) [@evansQTLGeneElegans2021], fruit fly (*Drosophila melanogaster*) [@mackayChartingGenotypePhenotype2018], and mouse (*Mus musculus*) [@saulHighDiversityMousePopulations2019].
 
-Although the mouse is an appropriate model for humans due to their orthologous mammalian organ systems and cell types, inbred strains of this organism descend from individuals that had already been domesticated, and therefore do not represent the genetic variation present in wild populations. Furthermore, the large panels of inbred mice such as the Collaborative Cross (**CC**) [@threadgillCollaborativeCrossRecombinant2011], Diversity Outcross (**DO**)[@svensonHighResolutionGeneticMapping2012] and B6-by-D2 (**BXD**)[@peirceNewSetBXD2004] are derived from only a small number of individuals. As gene-environment studies seek to ultimately understand their effects on traits "in the wild" (such as with humans), there is accordingly a need for a panel of inbred vertebrates that represents the genetic variation present in natural populations.
+Although the mouse is an appropriate model for humans due to their orthologous mammalian organ systems and cell types, inbred strains of this organism descend from individuals that had already been domesticated, and therefore do not represent the genetic variation present in wild populations. Furthermore, the large panels of inbred mice such as the Collaborative Cross (**CC**) [@threadgillCollaborativeCrossRecombinant2011], Diversity Outcross (**DO**)[@svensonHighResolutionGeneticMapping2012] and B6-by-D2 (**BXD**)[@peirceNewSetBXD2004] are derived from only a small number of individuals. [THEY'VE COME FROM THIS COMPLEX HYBRIDISATION FROM THREE DIFFERENT SPECIES OF MICE. HAPPENED IN JAPAN -- FANCY MICE.] As gene-environment studies seek to ultimately understand their effects on traits "in the wild" (such as with humans), there is accordingly a need for a panel of inbred vertebrates that represents the genetic variation present in natural populations.
 
 ### The Medaka Inbred Kiyosu-Karlsruhe (MIKK) panel
 
+[REMIND THAT ITS THE SAME FISH THAT AIDA USED IN 1921]
 The medaka fish (*Oryzias latipes*) has been studied as a model organism in Japan for over a century [@wittbrodtMedakaModelOrganism2002], and is gaining recognition elsewhere as a powerful genetic model for vertebrates [@spivakovGenomicPhenotypicCharacterization2014]. In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, and high fertility), medaka are also – uniquely among vertebrates – resilient to inbreeding from the wild. 
 
 This resilience to inbreeding has allowed (predominantly Japanese) researchers to develop several inbred strains that have been maintained for over 100 generations. One of the most famous inbred medaka strains, *HdrR*, was derived from Tatsuo Aida's collection of southern Japanese medaka fish [@fukamachi100YearsMedaka2021]. Other prominent strains include *HO5* and *iCab* from southern Japan, and *Kaga* and *HNI* from northern Japan. The locations of the originating populations of these strains are set out in **Figure \@ref(fig:line-locations)**. 
 
 (ref:line-locations) Image adapted from [@spivakovGenomicPhenotypicCharacterization2014], showing the locations of the originating populations of the 5 inbred medaka lines used in this study. 
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/pilot/line_locations} \caption{(ref:line-locations)}(\#fig:line-locations)
-\end{figure}
+<div class="figure">
+<img src="figs/pilot/line_locations.png" alt="(ref:line-locations)" width="100%" />
+<p class="caption">(\#fig:line-locations)(ref:line-locations)</p>
+</div>
 
-Since 2010, the Birney Group at EMBL-EBI, in collaboration with the Wittbrodt Group at COS, University of Heidelberg and the Loosli Group at the Karlsruhe Institute of Technology (KIT), have been working to establish the world’s first panel of vertebrate inbred strains – now known as the Medaka Inbred Kiyosu-Karlsruhe Panel (**MIKK panel**). The MIKK Panel was bred from a wild population caught near Kiyosu in Southern Japan (**Figure \@ref(fig:line-locations)**), and now comprises 80 inbred, near-isogenic "lines" [@fitzgeraldMedakaInbredKiyosuKarlsruhe2022].
+Since 2010, the Birney Group at EMBL-EBI, in collaboration with the Wittbrodt Group at COS, University of Heidelberg and the Loosli Group at the Karlsruhe Institute of Technology (KIT), have been working to establish the world’s first panel of vertebrate inbred strains FROM THE WILD – now known as the Medaka Inbred Kiyosu-Karlsruhe Panel (**MIKK panel**). The MIKK Panel was bred from a wild population caught near Kiyosu in Southern Japan (**Figure \@ref(fig:line-locations)**), and now comprises 80 inbred, near-isogenic "lines" [@fitzgeraldMedakaInbredKiyosuKarlsruhe2022].
 
 The MIKK Panel was created to map genetic variants associated with quantitative traits at a high resolution, and to explore the interactions between those variants and any environmental variables of interest. In **Chapter \@ref(MIKK-genomes-chap)** of this thesis,^[The contents of this Chapter \@ref(MIKK-genomes-chap) have been published in @fitzgeraldMedakaInbredKiyosuKarlsruhe2022 and @legerGenomicVariationsEpigenomic2022.] I describe several genomic characteristics of the MIKK panel that are relevant to its utility for genetic mapping of complex traits, including:
 
@@ -418,9 +400,10 @@ The F2 cross is the same method used by Mendel in his historic paper, but here a
 
 (ref:F2-cross-schema) Schema of the F2-cross experimental setup. The F0 generation comprises two medaka strains that have extreme, opposing values for a trait of interest, represented by the colours red and blue. Below them is an illustrative single pair of chromosomes. The chromosomes within each pair are depicted as the same colour, as the strains are homozygous through successive generations of inbreeding. Their F1 offspring is heterozygous for each pair of their 24 chromosomes, and all F1 individuals are therefore almost genetically identical to one another (with the exception of somatic mutations and the regions of the genome that were not homozygous in the parental generations). The F1 individuals are then inter-crossed with one another to produce the F2 generation, which, due to recombination events during gamete formation, have unique combinations of the parental strains' genotypes, and tend to span the phenotypic spectrum between the extremes of their F0 parental strains, represented by their colours.
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/mikk_behaviour/F2-cross-schema} \caption{(ref:F2-cross-schema)}(\#fig:F2-cross-schema)
-\end{figure}
+<div class="figure">
+<img src="figs/mikk_behaviour/F2-cross-schema.png" alt="(ref:F2-cross-schema)" width="100%" />
+<p class="caption">(\#fig:F2-cross-schema)(ref:F2-cross-schema)</p>
+</div>
 
 By combining this traditional crossing method with modern sequencing technologies, researchers are not only able to map genetic variants associated with a phenotype of interest at a higher resolution than in humans, but also functionally validate those variants by carrying out targeted gene editing in an embryo to confirm that the developed organism shows the expected change in phenotype. Many studies have already made use of this combined method (CITE), known as a "Genome-Wide Linkage Analysis".
 
@@ -433,23 +416,19 @@ In this thesis I apply the Genome-Wide Linkage Analysis method to identifying th
 During the development of an embryo, somites are the earliest primitive segmental structures that form from  presomatic mesoderm cells (**PSM**) [@kimPeriodSomiteSegmentation2011]. They later differentiate into vertebrae, ribs, and skeletal muscles, thereby establishing the body's anterior-posterior axis. **Figure \@ref(fig:mouse-embryo)** depicts a number of formed somites in a 9.5-day-old mouse embryo. 
 (ref:mouse-embryo) Image of a mouse embryo at day 9.5 from @gridleyLongShortIt2006, showing somites in darker colours. 
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+<div class="figure" style="text-align: right">
+<img src="figs/somites/mouse_embryo_gridley.png" alt="(ref:mouse-embryo)" width="100%" />
+<p class="caption">(\#fig:mouse-embryo)(ref:mouse-embryo)</p>
+</div>
 
-\hfill{}\includegraphics[width=1\linewidth]{figs/somites/mouse_embryo_gridley} 
-
-\caption{(ref:mouse-embryo)}(\#fig:mouse-embryo)
-\end{wrapfigure}
-
-Somite formation occurs rhythmically and sequentially, with the time between the formation of each pair of somites referred to as the "period". The period of somite formation varies greatly between species: ~30 minutes for zebrafish, 90 minutes for chickens, 2-3 hours for mice, and 5-6 hours for humans [@hubaudSignallingDynamicsVertebrate2014; @matsudaSpeciesspecificSegmentationClock2020]. **Figure \@ref(fig:somite-seg-ali)** shows the a series of time-stamped images of somite segmentation in medaka fish, generated by Ali Seleit. 
+Somite formation occurs rhythmically and sequentially, with the time between the formation of each pair of somites referred to as the "period". The period of somite formation varies greatly between species: ~30 minutes for zebrafish, 90 minutes for chickens, 2-3 hours for mice, and 5-6 hours for humans [@hubaudSignallingDynamicsVertebrate2014; @matsudaSpeciesspecificSegmentationClock2020]. **Figure \@ref(fig:somite-seg-ali)** shows the a series of time-stamped images of somite segmentation in medaka fish, generated by my collaborator, Ali Seleit. 
 
 (ref:somite-seg-ali) Time-stamped images of somite segmentation in medaka, generated by Ali Seleit.
 
-\begin{wrapfigure}{L}{0.5\textwidth}
-
-\includegraphics[width=1\linewidth]{figs/somites/ali_fish_seg_compiled} \hfill{}
-
-\caption{(ref:somite-seg-ali)}(\#fig:somite-seg-ali)
-\end{wrapfigure}
+<div class="figure" style="text-align: left">
+<img src="figs/somites/ali_fish_seg_compiled.png" alt="(ref:somite-seg-ali)" width="100%" />
+<p class="caption">(\#fig:somite-seg-ali)(ref:somite-seg-ali)</p>
+</div>
 
 The period of somite formation is controlled by a molecular oscillator, known as the 'segmentation clock', which drives waves of gene expression in the Notch, fibroblast growth factor (FGF), and Wnt pathways, forming a signalling gradient that regresses towards the tail in concert with axis elongation [@gomezControlSegmentNumber2008]. Over the course of elongation, the wave period increases (i.e. each somite takes longer to form), and the PSM progressively shrinks until it is exhausted, eventually terminating somite formation [@gomezControlSegmentNumber2008]. 
 
@@ -459,29 +438,27 @@ In medaka, it is known that the southern Japanese *Cab* strain and the northern 
 
 (ref:F0-Cab-Kaga-HdrR) Comparison of period for three inbred medaka strains (*Cab*, *Kaga* and *HdrR*). Kaga's period is lower, and therefore it takes less time to form each somite than *Cab*. Figure generated by Ali Seleit.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-
-\hfill{}\includegraphics[width=1\linewidth]{figs/somites/ali_period_F0_Cab_Kaga} 
-
-\caption{(ref:F0-Cab-Kaga-HdrR)}(\#fig:F0-Cab-Kaga-HdrR)
-\end{wrapfigure}
+<div class="figure" style="text-align: right">
+<img src="figs/somites/ali_period_F0_Cab_Kaga.png" alt="(ref:F0-Cab-Kaga-HdrR)" width="100%" />
+<p class="caption">(\#fig:F0-Cab-Kaga-HdrR)(ref:F0-Cab-Kaga-HdrR)</p>
+</div>
 
 Our collaborators accordingly set up a one-way F2 cross experiment as described in Chapter \@ref(MIKK-F2-cross), using the reporter-carrying *Cab* strain and the *Kaga* strain as the parental F0 strains, in order to identify genetic loci associated with these differences in clock dynamics. They inter-crossed the hybrid F1 generation to create a sample of 622 F2 individuals, imaged the developing embryos of these F2 samples, and used pyBOAT [@schmalAnalysisComplexCircadian2022] to extract the oscillation features during somite development. **Figure \@ref(fig:somite-period-ali)** shows a series of raw images used by pyBOAT to track the elongation of a medaka tail during somitogenesis, with the identified posterior tip of the embryo labelled with a blue circle.
 
 (ref:somite-period-ali) Screenshots of vertebral elongation in an F2 individual captured by Ali Seleit during imaging. The blue circle represents the point tracked by pyBOAT over time, generating the quantitative phenotype data on period development used in this study.  
 
-\begin{wrapfigure}{L}{0.5\textwidth}
-
-\includegraphics[width=1\linewidth]{figs/somites/ali_compiled_somite_elong} \hfill{}
-
-\caption{(ref:somite-period-ali)}(\#fig:somite-period-ali)
-\end{wrapfigure}
+<div class="figure" style="text-align: left">
+<img src="figs/somites/ali_compiled_somite_elong.png" alt="(ref:somite-period-ali)" width="100%" />
+<p class="caption">(\#fig:somite-period-ali)(ref:somite-period-ali)</p>
+</div>
 
 ### Behaviour
 
 In **Chapters \@ref(Pilot-chap)** and **\@ref(MIKK-F2-chap)** I use medaka as a model organism to explore social genetic effects on bold-type behaviours. Behaviour is a complex trait that is affected by both genes and environment, and for social animals such as humans and medaka, one’s social environment is considered likely to constitute a large component of the environmental effect [@ruzzanteBehaviouralGrowthResponses1990; @youngNeurobiologyHumanSocial2008]. Apart from social aspects, an organism must face many “hostile forces of nature” throughout its life [@bussEvolutionaryPersonalityPsychology1991; @darwinOriginSpeciesMeans1859], such as food shortages, predation, harsh climate, and diseases. Adaptive behaviours allow individuals to navigate such dangers and maximise the likelihood of their survival at both the individual and population level [@limaBehavioralDecisionsMade1990].
 
 Boldness-shyness is thought to be a fundamental axis of behavioural variation in many species, with an obvious causal relationship to an individual’s likelihood of survival, and consequently with natural selection at the population level [@sloanwilsonShynessBoldnessHumans1994]. It represents an evolutionary trade-off between acquiring benefits (in terms of food or mates) and avoiding harms (in terms of predators or conspecific competitors), with each situation accompanied by its own optimal degree of risk [@limaBehavioralDecisionsMade1990]. It is both heritable [@svartbergShynessBoldnessPredicts2002; @brownHeritableExperientialEffects2007], and subject to change following different life experiences or under different environmental conditions [@brownHeritableExperientialEffects2007].
+
+[OPEN FIELD AND NOVEL OBJECT IS A GENERIC PARADIGM, NOT JUST FISH. CITE BAUD.]
 
 Boldness-shyness has been studied extensively with fish. Shy individuals tend to react to novelty by reducing their activity and becoming more vigilant, whereas bold individuals show higher levels of activity and exploratory behaviour [@brownCorrelationBoldnessBody2007]. One assay commonly used to measure this behavioural domain is referred to as the ‘open field’ assay, where fishes are observed while swimming freely in an experimental setting [@brownCorrelationBoldnessBody2007; @lalandFishCognitionBehavior2011; @lucon-xiccatoComparisonAnxietylikeSocial2022; @lucon-xiccatoDevelopmentOpenFieldBehaviour2020; @lucon-xiccatoIndividualDifferencesCognition2017; @matsunagaHabituationMedakaOryzias2010]. 
 
@@ -495,13 +472,16 @@ In **Chapter \@ref(Pilot-chap)** I used a combined open-field and novel-object a
 
 (ref:behavioural-schema) Schema for experimental plan. *iCab*-*iCab* pairings are the control condition. To explore direct genetic effects on behaviour, we compare the behaviours of test fishes from different lines, and infer that the differences between lines are caused by the differences in their genetics (direct genetic effects). To explore social genetic effects, we use the same data but turn our focus to the reference fish, and infer that the differences we observe between their behaviours are caused by the differences in their social environments, which are in turn driven by the different genetics in the test fish lines (social genetic effects). 
 
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/pilot/experimental_schema} \caption{(ref:behavioural-schema)}(\#fig:behavioural-schema)
-\end{figure}
+<div class="figure">
+<img src="figs/pilot/experimental_schema.png" alt="(ref:behavioural-schema)" width="100%" />
+<p class="caption">(\#fig:behavioural-schema)(ref:behavioural-schema)</p>
+</div>
 
-In **Chapter \@ref(MIKK-F2-chap)** I extend the behavioural analysis described in Chapter \@ref(Pilot-chap) over the MIKK panel. I then identify the lines that diverged in both (a) their own behaviour; and (b) the level of transmission of their behaviour onto their *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* reference tank partner, and then use them as the parental strains in an F2 cross to attempt to identify the genetic variants associated with those differences.
+In **Chapter \@ref(MIKK-F2-chap)** I extend the behavioural analysis described in Chapter \@ref(Pilot-chap) over the MIKK panel. I then identify the lines that diverged in both (a) their own behaviour; and (b) the level of transmission of their behaviour onto their *<span style='color: #424B4D;'>iCab</span>* reference tank partner, and then use them as the parental strains in an F2 cross to attempt to identify the genetic variants associated with those differences.
 
 ## Poor transferability of polygenic scores to diverse human populations
+
+[CITE MIKE INOUYE]
 
 **Chapter \@ref(Fst-chap)** -- the final chapter of this thesis -- relates to the poor transferability of polygenic scores (**PRS**) derived from GWAS results when applied to non-European populations. Humans have long sought to use genetic information to predict an individual's likely value for a given trait, in our own species and in other organisms. As already discussed, an individual's phenotypic value at a given point in time is the product of complex interactions between their genome and their environment, beginning from embryonic development and continuing throughout their lifetimes. It is now clear that "complex" traits such as height, intelligence, and behaviour are highly polygenic, meaning that they are genetically influenced by hundreds or thousands of genetic variants, each exerting a small effect in one or the other direction along the trait's spectrum [@sellaThinkingEvolutionComplex2019]. 
 
