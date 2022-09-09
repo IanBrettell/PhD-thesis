@@ -36,17 +36,8 @@ colour_line = function(LINE){
 ```
 
 ```{r, include = F}
-defOut <- knitr::knit_hooks$get("plot")  # save the default plot hook 
-knitr::knit_hooks$set(plot = function(x, options) {  # set new plot hook ...
-  x <- defOut(x, options)  # first apply the default hook
-  if(!is.null(options$wrapfigure)) {  # then, if option wrapfigure is given ...
-    # create the new opening string for the wrapfigure environment ...
-    wf <- sprintf("\\begin{wrapfigure}{%s}{%g\\textwidth}", options$wrapfigure[[1]], options$wrapfigure[[2]])
-    x  <- gsub("\\begin{figure}", wf, x, fixed = T)  # and replace the default one with it.
-    x  <- gsub("{figure}", "{wrapfigure}", x, fixed = T)  # also replace the environment ending
-  }
-  return(x)
-})
+# Source function enabling text wrapping around figures
+devtools::source_gist("16fec9e4b02b89bf92f72355ebe313b5")
 ```
 
 

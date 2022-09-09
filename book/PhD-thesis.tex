@@ -15,6 +15,7 @@
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[]{Cabin}
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -89,6 +90,7 @@
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 \usepackage{booktabs}
 \usepackage{setspace}
+\usepackage{fontspec}
 \onehalfspacing
 \usepackage{xcolor}
 \usepackage{xfrac}
@@ -303,7 +305,7 @@ To call variants, I followed the GATK best practices (to the extent they were ap
 \includegraphics[width=1\linewidth]{figs/somites/Cab} \caption{Proportion of homozygous SNPs within 5 kb bins in the \emph{Cab} F0 generation genome (green), and number of SNPs in each bin (yellow).}\label{fig:somite-f0-cab}
 \end{figure}
 
-However, the levels of homozygosity in the \emph{Kaga} strain used in this experiment was far lower, with a mean homozygosity across all bins of only 31\%. This was a surprise, as it is an established strain of X generations, and we therefore expected the level of homozygosity to be commensurate with that observed in the \emph{Cab} strain. An obvious exception is chr22, for which \emph{Kaga} appears to be homozygous across its entire length.
+However, the levels of homozygosity in the \emph{Kaga} strain used in this experiment was far lower, with a mean homozygosity across all bins of only 31\% (\textbf{Figure \ref{fig:somite-f0-kaga}}). This was a surprise, as it is an established strain of {[}XXXX{]} generations, and we therefore expected the level of homozygosity to be commensurate with that observed in the \emph{Cab} strain. An obvious exception is chr22, for which \emph{Kaga} appears to be homozygous across its entire length.
 
 
 
@@ -311,7 +313,7 @@ However, the levels of homozygosity in the \emph{Kaga} strain used in this exper
 \includegraphics[width=1\linewidth]{figs/somites/Kaga} \caption{Proportion of homozygous SNPs within 5 kb bins in the \emph{Kaga} F0 generation genome (red), and number of SNPs in each bin (yellow).}\label{fig:somite-f0-kaga}
 \end{figure}
 
-To determine whether the low levels of observed homozygosity in Kaga was affected by its alignments to the southern Japanese \emph{HdrR} reference, we also aligned the F0 samples to the northern Japanese \emph{HNI} reference (\textbf{Figure \ref{fig:somite-f0-kaga-hni}}. This did not make differences to the levels of observed homozygosity in either sample, which gave us confidence that the low homozygosity observed in \emph{Kaga} was not driven by reference bias. I understand from our collaborators that the low homozygosity of this \emph{Kaga} individual, which was supposed to have been inbred for {[}XXXX{]} generations, must have resulted from the strain having been contaminated at some stage by breeding with a different inbred strain housed in the same facility.
+To determine whether the low levels of observed homozygosity in Kaga was affected by its alignments to the southern Japanese \emph{HdrR} reference, we also aligned the F0 samples to the northern Japanese \emph{HNI} reference (\textbf{Figure \ref{fig:somite-f0-kaga-hni}}. This did not make differences to the levels of observed homozygosity in either sample, which gave us confidence that the low homozygosity observed in \emph{Kaga} was not driven by reference bias. I understand from our collaborators that the low homozygosity of this \emph{Kaga} individual must have resulted from the strain having been contaminated at some stage by breeding with a different inbred strain.
 
 
 

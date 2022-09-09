@@ -1,5 +1,15 @@
 # Notes
 
+## 9 September 2022
+
+Floating tables guidance: 
+
+    - https://stackoverflow.com/questions/66091846/how-to-i-keep-a-kable-caption-with-a-floating-table
+
+    - https://stackoverflow.com/questions/61995019/kableextra-float-options-float-left-or-float-right-for-format-latex-not-work 
+
+
+
 ## 2 August 2022
 
 Meeting with Ali:

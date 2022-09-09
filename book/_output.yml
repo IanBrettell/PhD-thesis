@@ -1,3 +1,13 @@
+bookdown::pdf_book:
+  documentclass: report
+  pandoc_args: --listings
+  includes:
+    in_header: preamble.tex
+    #before_body: doc_prefix.tex
+  latex_engine: xelatex
+#  citation_package: natbib
+  keep_tex: yes
+  biblio-style: apalike
 bookdown::bs4_book:
   css: style.css
   theme:
@@ -10,16 +20,7 @@ bookdown::bs4_book:
     in_header: css.html
   footnotes_inline: true
   bibliography: [book.bib, packages.bib]
-bookdown::pdf_book:
-  documentclass: report
-  pandoc_args: --listings
-  includes:
-    in_header: preamble.tex
-    #before_body: doc_prefix.tex
-  latex_engine: xelatex
-#  citation_package: natbib
-  keep_tex: yes
-  biblio-style: apalike
+
 
 
 

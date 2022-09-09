@@ -8,12 +8,12 @@ language:
 output_dir: "../docs"
 rmd_files: [
   "index.Rmd",
-  "01-Introduction.Rmd",
-  "02-MIKK_genome.Rmd",
-  "03-Pilot.Rmd",
+#  "01-Introduction.Rmd",
+#  "02-MIKK_genome.Rmd",
+#  "03-Pilot.Rmd",
   "04-somites.Rmd",
-  "05-MIKK_F2.Rmd",
-  "06-Fst.Rmd",
+#  "05-MIKK_F2.Rmd",
+#  "06-Fst.Rmd",
   "07-references.Rmd",
-  "Appendix.Rmd",
+#  "Appendix.Rmd",
 ]
