@@ -15,6 +15,7 @@
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[]{Libre Baskerville}
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -89,6 +90,7 @@
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 \usepackage{booktabs}
 \usepackage{setspace}
+\usepackage{fontspec}
 \onehalfspacing
 \usepackage{xcolor}
 \usepackage{xfrac}
@@ -303,7 +305,7 @@ To call variants, I followed the GATK best practices (to the extent they were ap
 \includegraphics[width=1\linewidth]{figs/somites/Cab} \caption{Proportion of homozygous SNPs within 5 kb bins in the \emph{Cab} F0 generation genome (green), and number of SNPs in each bin (yellow).}\label{fig:somite-f0-cab}
 \end{figure}
 
-However, the levels of homozygosity in the \emph{Kaga} strain used in this experiment was far lower, with a mean homozygosity across all bins of only 31\%. This was a surprise, as it is an established strain of X generations, and we therefore expected the level of homozygosity to be commensurate with that observed in the \emph{Cab} strain. An obvious exception is chr22, for which \emph{Kaga} appears to be homozygous across its entire length.
+However, the levels of homozygosity in the \emph{Kaga} strain used in this experiment was far lower, with a mean homozygosity across all bins of only 31\% (\textbf{Figure \ref{fig:somite-f0-kaga}}). This was a surprise, as it is an established strain of {[}XXXX{]} generations, and we therefore expected the level of homozygosity to be commensurate with that observed in the \emph{Cab} strain. An obvious exception is chr22, for which \emph{Kaga} appears to be homozygous across its entire length.
 
 
 
@@ -311,7 +313,7 @@ However, the levels of homozygosity in the \emph{Kaga} strain used in this exper
 \includegraphics[width=1\linewidth]{figs/somites/Kaga} \caption{Proportion of homozygous SNPs within 5 kb bins in the \emph{Kaga} F0 generation genome (red), and number of SNPs in each bin (yellow).}\label{fig:somite-f0-kaga}
 \end{figure}
 
-To determine whether the low levels of observed homozygosity in Kaga was affected by its alignments to the southern Japanese \emph{HdrR} reference, we also aligned the F0 samples to the northern Japanese \emph{HNI} reference (\textbf{Figure \ref{fig:somite-f0-kaga-hni}}. This did not make differences to the levels of observed homozygosity in either sample, which gave us confidence that the low homozygosity observed in \emph{Kaga} was not driven by reference bias. I understand from our collaborators that the low homozygosity of this \emph{Kaga} individual, which was supposed to have been inbred for {[}XXXX{]} generations, must have resulted from the strain having been contaminated at some stage by breeding with a different inbred strain housed in the same facility.
+To determine whether the low levels of observed homozygosity in Kaga was affected by its alignments to the southern Japanese \emph{HdrR} reference, we also aligned the F0 samples to the northern Japanese \emph{HNI} reference (\textbf{Figure \ref{fig:somite-f0-kaga-hni}}. This did not make differences to the levels of observed homozygosity in either sample, which gave us confidence that the low homozygosity observed in \emph{Kaga} was not driven by reference bias. I understand from our collaborators that the low homozygosity of this \emph{Kaga} individual must have resulted from the strain having been contaminated at some stage by breeding with a different inbred strain.
 
 
 
@@ -351,12 +353,12 @@ I then used these values for all F2 individuals as the input to a Hidden Markov 
 \includegraphics[width=1\linewidth]{04-somites_files/figure-latex/zebrafish-co-per-chrom-1} \caption{Crossovers per chromosome based on data provided in Haenel et al. (2018), where ``crossovers per chromosome'' for each chromosome \(c\) was calculated by \(\frac{crossover~rate_{c}(cM / Mb) \times length_{c}(Mb)} {100}\). The medaka genome is shorter in length than zebrafish genome (\textasciitilde800 Mb compared to \textasciitilde1,300 Mb), which according to the authors would suggest that medaka likely has a higher average crossover rate than what is presented in this figure.}\label{fig:zebrafish-co-per-chrom}
 \end{figure}
 
-\textbf{Figure @\ref(fig:hmm-scatter-diagnoses)} shows how adjusting the HMM parameters changed the called genotypes for 10 F2 samples on chromosome 18. Allowing the HMM to train itself for the transition probabilities and emission variances, the HMM produced an apparently noisy output (\textbf{Figure @\ref(fig:hmm-scatter-diagnoses)A}). Fixing the transition probabilities to make it very likely for a state to transition back to itself rather than to another state.
+\textbf{Figure \ref{fig:hmm-scat}} shows how adjusting the HMM parameters changed the called genotypes for 10 F2 samples on chromosome 18. Allowing the HMM to train itself for the transition probabilities and emission variances, the HMM produced an apparently noisy output (\textbf{Figure @\ref(fig:hmm-scat)A}). Fixing the transition probabilities to make it very likely for a state to transition back to itself rather than to another state.
 
 
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{figs/somites/scatter_collage} \caption{HMM states called for each bin across chr18 for 10 F2 samples. States 0, 1, and 2 correspond to homozygous \emph{Cab}, heterozygous, and homozygous \emph{Kaga}. Each point represents a 5-kb bin. Y-axis is the proportion of reads within each bin that align to the \emph{Kaga} allele. X-axis is the bp location of the start of each bin. \textbf{A}: Standard HMM with all model parameters trained on the data. \textbf{B}. HMM with fixed transition probabilities of 0→0 or 1→1 or 2→2 = 0.999; 0→1 or 2→1 = 0.00066; 0→2 or 2→0 = 0.000333; 1→0 or 1→2 = 0.0005. \textbf{C}-\textbf{F} retain those transition probabilities but with different fixed emission variances of 0.01 (\textbf{C}), 0.33 (\textbf{D}), 0.8 (\textbf{E}), and 1 (\textbf{F}).}\label{fig:hmm-scatter-diagnoses}
+\includegraphics[width=1\linewidth]{figs/somites/scatter_collage} \caption{HMM states called for each bin across chr18 for 10 F2 samples. States 0, 1, and 2 correspond to homozygous \emph{Cab}, heterozygous, and homozygous \emph{Kaga}. Each point represents a 5-kb bin. Y-axis is the proportion of reads within each bin that align to the \emph{Kaga} allele. X-axis is the bp location of the start of each bin. \textbf{A}: Standard HMM with all model parameters trained on the data. \textbf{B}. HMM with fixed transition probabilities of 0→0 or 1→1 or 2→2 = 0.999; 0→1 or 2→1 = 0.00066; 0→2 or 2→0 = 0.000333; 1→0 or 1→2 = 0.0005. \textbf{C}-\textbf{F} retain those transition probabilities but with different fixed emission variances of 0.01 (\textbf{C}), 0.33 (\textbf{D}), 0.8 (\textbf{E}), and 1 (\textbf{F}).}\label{fig:hmm-scat}
 \end{figure}
 
 I used these genotype-block calls to generate the recombination karyoplot shown in \textbf{Figure \ref{fig:karyo-wi-missing}}, with homozygous-\emph{Cab} blocks in green, heterozoygous blocks in navy blue, and homozygous \emph{Kaga} blocks in red. Missing calls are blank, where the vertical blank lines indicate that the region could not be called for any F2 individuals, likely due to an insufficient number of informative SNPs residing in those 5-kb blocks; and horizontal blank lines indicate that the sample could not be called, likely due to low sequencing coverage for that sample.

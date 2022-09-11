@@ -10,7 +10,7 @@ description: |
 documentclass: book
 bibliography: [book.bib, packages.bib]
 #csl: chicago-fullnote-bibliography.csl
-mainfont: Cabin
+mainfont: Libre Baskerville
 ---
 
 # About {-}
