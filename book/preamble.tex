@@ -3,6 +3,7 @@
 \usepackage{fontspec}
 \onehalfspacing
 \usepackage{xcolor}
+\usepackage{titlesec}
 \usepackage{xfrac}
 % Make caption labels bold: https://bookdown.org/yihui/rmarkdown-cookbook/latex-extra.html
 \usepackage[labelfont={bf}]{caption} 
@@ -25,3 +26,32 @@
 \setcounter{topnumber}{3}
 \setcounter{bottomnumber}{3}
 \setcounter{totalnumber}{4}
+
+%% https://stackoverflow.com/questions/3275770/modifying-section-to-make-it-colorful-with-latex
+%\usepackage{color}
+%\titleformat{\section}
+%{\color{red}}
+
+
+% https://tex.stackexchange.com/questions/10320/section-and-subsection-colors-using-titlesec
+%\makeatletter
+%\newcommand*\@secondofsix[6]{#2}
+%\newcommand{\addtotitleformat}{%
+%  \@ifstar{\addtotitleformat@star}{\addtotitleformat@nostar}}
+%\newcommand\addtotitleformat@nostar[2]{%
+%  \PackageError{titlesec}{non starred form of \string\addtotitleformat\space not supported}{}}
+%\newcommand\addtotitleformat@star[2]{%
+%  \expandafter\expandafter\expandafter\expandafter
+%  \expandafter\expandafter\expandafter\def
+%  \expandafter\expandafter\expandafter\expandafter
+%  \expandafter\expandafter\expandafter\@currentsection@font
+%  \expandafter\expandafter\expandafter\expandafter
+%  \expandafter\expandafter\expandafter{%
+%    \expandafter\expandafter\expandafter\@secondofsix
+%       \csname ttlf@\expandafter\@gobble\string#1\endcsname}%
+%  \titleformat*{#1}{\@currentsection@font#2}%
+%}
+%\makeatother
+%
+%\addtotitleformat*{\section}{\Huge\color{red}}
+%\addtotitleformat*{\subsection}{\sffamily\color{blue}}
