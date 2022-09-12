@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.9)  9 SEP 2022 16:17
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.9)  11 SEP 2022 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -411,6 +411,8 @@ Package: xfrac 2022-06-22 L3 Experimental split-level fractions
 Package xtemplate Info: Declaring object type 'xfrac' taking 3 argument(s) on
 (xtemplate)             line 80.
 
+) (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
 ) (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen182
 \WF@size=\dimen183
@@ -635,37 +637,38 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip71
-) (./PhD-thesis.aux)
+)
+No file PhD-thesis.aux.
 \openout1 = `PhD-thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 143.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 145.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 143.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 145.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 143.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 145.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 143.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 145.
 
 Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
@@ -691,7 +694,7 @@ Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 12.2969pt on input line 143.
+(Font)              scaled to size 12.2969pt on input line 145.
 
 Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
@@ -723,15 +726,15 @@ Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.2969pt on input line 143.
+(Font)              scaled to size 12.2969pt on input line 145.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 143.
+(Font)              `operators' in the math version `normal' on input line 145.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 143.
+(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 145.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 143.
+(Font)              `operators' in the math version `bold' on input line 145.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 143.
+(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 145.
 
 Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
@@ -810,13 +813,13 @@ Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 143.
+(Font)              `symbols' in the math version `normal' on input line 145.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 143.
+(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 145.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 143.
+(Font)              `symbols' in the math version `bold' on input line 145.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 143.
+(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 145.
 
 Package fontspec Info: latinmodern-math scale = 1.2296954269793.
 
@@ -877,55 +880,57 @@ Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
 (fontspec)             =7.37814pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 143.
+(Font)              `largesymbols' in the math version `normal' on input line 145.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 143.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 145.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 143.
+(Font)              `largesymbols' in the math version `bold' on input line 145.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 143.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 145.
 \c@lstlisting=\count339
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 143.
-(./PhD-thesis.out) (./PhD-thesis.out)
+Package hyperref Info: Link coloring OFF on input line 145.
 \@outlinefile=\write3
 \openout3 = `PhD-thesis.out'.
 
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 145.
+(Font)              scaled to size 17.28pt on input line 147.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 145.
+(Font)              scaled to size 12.0pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.75629pt on input line 145.
+(Font)              scaled to size 14.75629pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 9.83752pt on input line 145.
+(Font)              scaled to size 9.83752pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.37814pt on input line 145.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 145.
+(Font)              scaled to size 7.37814pt on input line 147.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 147.
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.75775pt on input line 145.
+(Font)              scaled to size 14.75775pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 9.8385pt on input line 145.
+(Font)              scaled to size 9.8385pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.37888pt on input line 145.
+(Font)              scaled to size 7.37888pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.75482pt on input line 145.
+(Font)              scaled to size 14.75482pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.83655pt on input line 145.
+(Font)              scaled to size 9.83655pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.37741pt on input line 145.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 145.
+(Font)              scaled to size 7.37741pt on input line 147.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 147.
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 145.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 147.
 (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -933,36 +938,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/sl' in size <10> not available
-(Font)              Font shape `TU/LibreBaskerville(0)/m/it' tried instead on input line 148.
+(Font)              Font shape `TU/LibreBaskerville(0)/m/it' tried instead on input line 150.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 148.
+(Font)              scaled to size 10.0pt on input line 150.
 [2
 
 ]
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 148.
+(Font)              scaled to size 24.88pt on input line 150.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 148.
-(./PhD-thesis.toc
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 1.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.60783pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.14845pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.29813pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.60869pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.14906pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 12.29568pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.60698pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.14784pt on input line 2.
-)
+(Font)              scaled to size 24.88pt on input line 150.
+No file PhD-thesis.toc.
 \tf@toc=\write4
 \openout4 = `PhD-thesis.toc'.
 
@@ -970,179 +956,221 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 
 ]
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 155.
+(Font)              scaled to size 14.4pt on input line 157.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 155.
+(Font)              scaled to size 14.4pt on input line 157.
 
-Underfull \hbox (badness 1596) in paragraph at lines 163--164
+Underfull \hbox (badness 1596) in paragraph at lines 165--166
 \TU/LibreBaskerville(0)/m/n/10 classify bold-shy behaviours in 5 previously established inbred
  []
 
 [5] [6]
 Chapter 1.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 174.
+(Font)              scaled to size 20.74pt on input line 176.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 20.74pt on input line 174.
+(Font)              scaled to size 20.74pt on input line 176.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 17.70753pt on input line 179.
+(Font)              scaled to size 17.70753pt on input line 181.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 8.60783pt on input line 181.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 17.70929pt on input line 179.
+(Font)              scaled to size 17.70929pt on input line 181.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 12.29813pt on input line 181.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 8.60869pt on input line 181.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 17.70576pt on input line 179.
+(Font)              scaled to size 17.70576pt on input line 181.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 12.29568pt on input line 181.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 8.60698pt on input line 181.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 179.
+(Font)              scaled to size 8.0pt on input line 181.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 6.14845pt on input line 181.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 6.14906pt on input line 181.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.14784pt on input line 181.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 179.
+(Font)              scaled to size 6.0pt on input line 181.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 183.
+
+LaTeX Warning: Reference `fig:mouse-embryo' on page 7 undefined on input line 183.
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 183--184
+\TU/LibreBaskerville(0)/m/n/10 anterior-posterior axis. \TU/LibreBaskerville(0)/b/n/10 Figure [] \TU/LibreBaskerville(0)/m/n/10 depicts a number of formed
+ []
+
 File: figs/somites/mouse_embryo_gridley.pdf Graphic file (type pdf)
 <use figs/somites/mouse_embryo_gridley.pdf>
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 186.
+(Font)              scaled to size 9.0pt on input line 188.
+
+LaTeX Warning: Reference `fig:somite-seg-ali' on page 7 undefined on input line 191.
+
 [7
 
 ]
-
-Package wrapfig Warning: Collision between wrapping environments on input line 193.
-
 File: figs/somites/ali_fish_seg_compiled.pdf Graphic file (type pdf)
 <use figs/somites/ali_fish_seg_compiled.pdf>
-
-Underfull \hbox (badness 4328) in paragraph at lines 197--198
-\TU/LibreBaskerville(0)/m/n/10 is controlled by a molecular
- []
-
-
-Underfull \hbox (badness 2189) in paragraph at lines 197--198
-\TU/LibreBaskerville(0)/m/n/10 oscillator, known as the ‘seg-
- []
-
-
-Underfull \hbox (badness 4886) in paragraph at lines 197--198
-\TU/LibreBaskerville(0)/m/n/10 waves of gene expression in
- []
-
-
-Underfull \hbox (badness 7221) in paragraph at lines 197--198
-\TU/LibreBaskerville(0)/m/n/10 the Notch, fibroblast growth
- []
-
-
-Underfull \hbox (badness 3428) in paragraph at lines 197--198
-\TU/LibreBaskerville(0)/m/n/10 forming a signalling gradient
- []
-
-
-Underfull \hbox (badness 1033) in paragraph at lines 197--198
-\TU/LibreBaskerville(0)/m/n/10 that regresses towards the tail
- []
-
-
-Underfull \hbox (badness 1715) in paragraph at lines 197--198
-\TU/LibreBaskerville(0)/m/n/10 (Gomez et al. 2008). Over
- []
-
-
-Underfull \hbox (badness 2027) in paragraph at lines 197--198
-\TU/LibreBaskerville(0)/m/n/10 the course of elongation, the
- []
-
-
-Underfull \hbox (badness 1990) in paragraph at lines 197--198
-\TU/LibreBaskerville(0)/m/n/10 somite takes longer to form),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
-\TU/LibreBaskerville(0)/m/n/10 and the PSM progressively
- []
-
-
-Underfull \hbox (badness 4378) in paragraph at lines 197--198
-\TU/LibreBaskerville(0)/m/n/10 shrinks until it is exhausted,
- []
-
-
-Underfull \hbox (badness 2293) in paragraph at lines 197--198
-\TU/LibreBaskerville(0)/m/n/10 eventually terminating somite
- []
-
 [8]
-File: figs/somites/ali_period_F0_Cab_Kaga.png Graphic file (type bmp)
-<figs/somites/ali_period_F0_Cab_Kaga.png>
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 206.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 201.
 
-Underfull \hbox (badness 2680) in paragraph at lines 206--206
+Underfull \hbox (badness 5105) in paragraph at lines 201--202
+\TU/LibreBaskerville(0)/m/n/10 cellular communication), and
+ []
+
+
+Underfull \hbox (badness 2409) in paragraph at lines 201--202
+\TU/LibreBaskerville(0)/m/n/10 reaction speeds – specifically,
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 201--202
+\TU/LibreBaskerville(0)/m/n/10 rates, transcription and trans-
+ []
+
+
+Underfull \hbox (badness 1983) in paragraph at lines 201--202
+\TU/LibreBaskerville(0)/m/n/10 lation delays, and intron and
+ []
+
+
+LaTeX Warning: Reference `fig:F0-Cab-Kaga-HdrR' on page 9 undefined on input line 203.
+
+
+LaTeX Warning: Reference `MIKK-F2-cross' on page 9 undefined on input line 203.
+
+[9]
+File: figs/somites/ali_period_F0_Cab_Kaga.pdf Graphic file (type pdf)
+<use figs/somites/ali_period_F0_Cab_Kaga.pdf>
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/it' will be
+(Font)              scaled to size 9.0pt on input line 208.
+
+Underfull \hbox (badness 2680) in paragraph at lines 208--208
 []\TU/LibreBaskerville(0)/m/n/9 Figure 1.3: |Comparison of period
  []
 
 
-Underfull \hbox (badness 5446) in paragraph at lines 206--206
+Underfull \hbox (badness 5446) in paragraph at lines 208--208
 \TU/LibreBaskerville(0)/m/it/9 Kaga \TU/LibreBaskerville(0)/m/n/9 and \TU/LibreBaskerville(0)/m/it/9 HdrR\TU/LibreBaskerville(0)/m/n/9 ). Kaga’s period is
  []
 
 
-LaTeX Warning: Reference `MIKK-F2-cross' on page 9 undefined on input line 209.
+LaTeX Warning: Reference `fig:somite-period-ali' on page 10 undefined on input line 211.
 
-
-Underfull \hbox (badness 2856) in paragraph at lines 209--210
-[][]\TU/LibreBaskerville(0)/m/n/10 Our collaborators accordingly
- []
-
-
-Underfull \hbox (badness 1990) in paragraph at lines 209--210
-\TU/LibreBaskerville(0)/m/n/10 aged the developing embryos
- []
-
-[9]
-File: figs/somites/ali_compiled_somite_elong.png Graphic file (type bmp)
-<figs/somites/ali_compiled_somite_elong.png>
-
-LaTeX Warning: Float too large for page by 54.00758pt on input line 215.
-
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 221.
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 223.
-File: figs/somites/ali_period_lines_100fish300mins.png Graphic file (type bmp)
-<figs/somites/ali_period_lines_100fish300mins.png>
-File: figs/somites/ali_F2_mean_period.pdf Graphic file (type pdf)
-<use figs/somites/ali_F2_mean_period.pdf>
-File: figs/somites/ali_PSM_Cab_Kaga.png Graphic file (type bmp)
-<figs/somites/ali_PSM_Cab_Kaga.png>
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 11.06721pt on input line 245.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 11.06831pt on input line 245.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.06612pt on input line 245.
-[10] [11] [12]
-
-LaTeX Warning: Reference `MIKK-genomes-chap' on page 13 undefined on input line 251.
-
-
-Underfull \hbox (badness 7186) in paragraph at lines 251--252
-\TU/LibreBaskerville(0)/m/n/10 values in those F0 samples.
- []
-
-
-Underfull \hbox (badness 1701) in paragraph at lines 251--252
-\TU/LibreBaskerville(0)/m/n/10 Our collaborators assured me
- []
-
-File: figs/somites/phenotypes.pdf Graphic file (type pdf)
-<use figs/somites/phenotypes.pdf>
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 256.
-
-Underfull \hbox (badness 1910) in paragraph at lines 259--260
-\TU/LibreBaskerville(0)/m/n/10 Our collaborators noticed that there was a difference between
- []
-
+File: figs/somites/ali_compiled_somite_elong.pdf Graphic file (type pdf)
+<use figs/somites/ali_compiled_somite_elong.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[13] [14] (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/listings/lstlang1.sty
+[10] [11] [12
+
+]
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 225.
+
+LaTeX Warning: Reference `fig:ali-somite-period-lines' on page 13 undefined on input line 227.
+
+
+LaTeX Warning: Reference `fig:ali-somite-period-box' on page 13 undefined on input line 227.
+
+
+LaTeX Warning: Reference `fig:somite-phenos' on page 13 undefined on input line 227.
+
+
+LaTeX Warning: Reference `fig:ali-somite-period-lines' on page 13 undefined on input line 227.
+
+File: figs/somites/ali_period_lines_100fish300mins.pdf Graphic file (type pdf)
+<use figs/somites/ali_period_lines_100fish300mins.pdf>
+File: figs/somites/ali_F2_mean_period.pdf Graphic file (type pdf)
+<use figs/somites/ali_F2_mean_period.pdf>
+
+LaTeX Warning: Reference `fig:ali-psm-F0' on page 13 undefined on input line 244.
+
+
+Underfull \vbox (badness 8000) has occurred while \output is active []
+
+[13]
+File: figs/somites/ali_PSM_Cab_Kaga.pdf Graphic file (type pdf)
+<use figs/somites/ali_PSM_Cab_Kaga.pdf>
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 11.06721pt on input line 249.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 11.06831pt on input line 249.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 11.06612pt on input line 249.
+
+LaTeX Warning: Reference `fig:somite-phenos' on page 14 undefined on input line 255.
+
+
+LaTeX Warning: Reference `MIKK-genomes-chap' on page 14 undefined on input line 255.
+
+[14]
+File: figs/somites/phenotypes.pdf Graphic file (type pdf)
+<use figs/somites/phenotypes.pdf>
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
+(Font)              scaled to size 9.0pt on input line 260.
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
+[][]\TU/LibreBaskerville(0)/m/n/10 Another important issue to
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 263--264
+\TU/LibreBaskerville(0)/m/n/10 microscopes, denoted as ‘AU’
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
+\TU/LibreBaskerville(0)/m/n/10 between the microscopes in
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 263--264
+\TU/LibreBaskerville(0)/m/n/10 translating to a 4-minute dif-
+ []
+
+
+Underfull \hbox (badness 2781) in paragraph at lines 263--264
+\TU/LibreBaskerville(0)/m/n/10 ference in the F2 means for
+ []
+
+
+Underfull \hbox (badness 3250) in paragraph at lines 263--264
+\TU/LibreBaskerville(0)/m/n/10 the period intercept measure
+ []
+
+
+Underfull \hbox (badness 6842) in paragraph at lines 263--264
+\TU/LibreBaskerville(0)/m/n/10 (Kruskal-Wallis = 177.97, $[]$ =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
+\TU/LibreBaskerville(0)/m/n/10 difference in the F2 means
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 263--264
+\TU/LibreBaskerville(0)/m/n/10 for the period mean measure
+ []
+
+
+Underfull \hbox (badness 2951) in paragraph at lines 263--264
+\TU/LibreBaskerville(0)/m/n/10 need to be accounted for in
+ []
+
+
+LaTeX Warning: Reference `fig:invnorm-intercept' on page 15 undefined on input line 268.
+
+[15] [16] (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/Users/brettell/Library/TinyTeX/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
@@ -1151,151 +1179,68 @@ File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 File: figs/somites/invnorm_intercept.pdf Graphic file (type pdf)
 <use figs/somites/invnorm_intercept.pdf>
+[17] [18]
+
+LaTeX Warning: Reference `fig:F0-coverage' on page 19 undefined on input line 291.
+
+
+LaTeX Warning: Reference `somite-f2-sequencing' on page 19 undefined on input line 291.
+
 File: figs/somites/F0_coverage.pdf Graphic file (type pdf)
 <use figs/somites/F0_coverage.pdf>
-[15] [16] [17]
+[19
+
+]
+
+LaTeX Warning: Reference `fig:somite-f0-cab' on page 20 undefined on input line 308.
+
 File: figs/somites/Cab.pdf Graphic file (type pdf)
 <use figs/somites/Cab.pdf>
+[20
+
+] [21]
+
+LaTeX Warning: Reference `fig:somite-f0-kaga' on page 22 undefined on input line 318.
+
 File: figs/somites/Kaga.pdf Graphic file (type pdf)
 <use figs/somites/Kaga.pdf>
+
+LaTeX Warning: Reference `fig:somite-f0-kaga-hni' on page 22 undefined on input line 326.
+
+[22
+
+]
 File: figs/somites/Kaga_HNI.pdf Graphic file (type pdf)
 <use figs/somites/Kaga_HNI.pdf>
-[18] [19] [20] [21]
+
+LaTeX Warning: Reference `fig:somite-f1' on page 23 undefined on input line 337.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[23]
 File: figs/somites/F1.pdf Graphic file (type pdf)
 <use figs/somites/F1.pdf>
 
-Underfull \hbox (badness 2057) in paragraph at lines 335--336
+LaTeX Warning: Reference `fig:snp-counts-per-chrom' on page 24 undefined on input line 345.
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 345--346
 []\TU/LibreBaskerville(0)/m/n/10 For the purpose of mapping the F2 sample sequences to the
  []
 
-File: figs/somites/snp_counts_per_chrom.png Graphic file (type bmp)
-<figs/somites/snp_counts_per_chrom.png>
-[22] [23]
-Underfull \hbox (badness 1383) in paragraph at lines 348--349
-\TU/LibreBaskerville(0)/m/it/10 Cab\TU/LibreBaskerville(0)/m/n/10 , 1 corresponding to heterozygous, and 2 corresponding to
- []
-
-[24]
-File: 04-somites_files/figure-latex/zebrafish-co-per-chrom-1.pdf Graphic file (type pdf)
-<use 04-somites_files/figure-latex/zebrafish-co-per-chrom-1.pdf>
-
-LaTeX Warning: Reference `(' on page 25 undefined on input line 356.
-
-File: figs/somites/scatter_collage.pdf Graphic file (type pdf)
-<use figs/somites/scatter_collage.pdf>
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-[25] [26]
-File: figs/somites/karyoplot_wi_missing.png Graphic file (type bmp)
-<figs/somites/karyoplot_wi_missing.png>
-
-LaTeX Warning: Float too large for page by 86.97314pt on input line 370.
-
-File: figs/somites/karyoplot_no_missing.png Graphic file (type bmp)
-<figs/somites/karyoplot_no_missing.png>
-
-LaTeX Warning: Float too large for page by 97.97314pt on input line 380.
-
-
-LaTeX Warning: Reference `MIKK-genomes-chap' on page 27 undefined on input line 382.
-
-
-LaTeX Warning: Reference `introgression-sec' on page 27 undefined on input line 382.
-
-
-Underfull \hbox (badness 1117) in paragraph at lines 382--383
-[]\TU/LibreBaskerville(0)/b/n/10 Figure []1.20[] \TU/LibreBaskerville(0)/m/n/10 shows the proportion of 5-kb bins called as either
- []
-
-[27] [28] [29]
-File: figs/somites/prop_sites_total.png Graphic file (type bmp)
-<figs/somites/prop_sites_total.png>
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 396.
-
-Underfull \hbox (badness 1708) in paragraph at lines 401--402
-\TU/LibreBaskerville(0)/m/n/10 experimented with including microscope as a covariate, either
- []
-
-
-Underfull \hbox (badness 1383) in paragraph at lines 401--402
-\TU/LibreBaskerville(0)/m/n/10 attempt to avoid complications resulting from its inclusion, Id
- []
-
-[30]
-
-LaTeX Warning: Reference `tab:somite-sig-int-tbl' on page 31 undefined on input line 408.
-
-
-Underfull \hbox (badness 2310) in paragraph at lines 408--409
-\TU/LibreBaskerville(0)/b/n/10 Figure []1.21[] \TU/LibreBaskerville(0)/m/n/10 is a Manhattan plot of the genetic linkage results
- []
-
-
-Underfull \hbox (badness 2717) in paragraph at lines 408--409
-\TU/LibreBaskerville(0)/m/n/10 for the period intercept phenotype, inverse-normalised across
- []
-
-File: figs/somites/manhattan_intercept.png Graphic file (type bmp)
-<figs/somites/manhattan_intercept.png>
-[31] [32] [33] [34]
-File: figs/somites/manhattan_psm_no-covariates.png Graphic file (type bmp)
-<figs/somites/manhattan_psm_no-covariates.png>
-[35
-
-
-] [36] [37
-
-]
-Underfull \hbox (badness 1199) in paragraph at lines 604--606
-[]\TU/LibreBaskerville(0)/m/n/10 Khanna, Ajay, David E. Larson, Sridhar Nonavinkere Srivatsan,
- []
-
-[38]
-Underfull \hbox (badness 5460) in paragraph at lines 628--630
-[]\TU/LibreBaskerville(0)/m/n/10 Schmal, Christoph, Gregor Mönke, and Adri’an E. Granada.
- []
-
-
-Underfull \hbox (badness 2096) in paragraph at lines 637--639
-\TU/LibreBaskerville(0)/m/n/10 “Efficient Architecture-Aware Acceleration of BWA-MEM for
- []
-
-
-Underfull \hbox (badness 1867) in paragraph at lines 637--639
-\TU/LibreBaskerville(0)/m/n/10 Multicore Systems.” In \TU/LibreBaskerville(0)/m/it/10 2019 IEEE International Parallel and
- []
-
-[39] (./PhD-thesis.aux)
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `PhD-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 312128202B6D7B2E8775B5AA62DB9F3E;1766.
- ) 
+! Unable to load picture or PDF file 'figs/somites/snp_counts_per_chr_hdrr.pdf'.
+<to be read again> 
+                   }
+l.350 ...th]{figs/somites/snp_counts_per_chr_hdrr}
+                                                   \caption{Number of SNPs p... 
 Here is how much of TeX's memory you used:
- 22628 strings out of 477747
- 426180 string characters out of 5843091
- 1186611 words of memory out of 5000000
- 43295 multiletter control sequences out of 15000+600000
- 477882 words of font info for 112 fonts, out of 8000000 for 9000
+ 22449 strings out of 477747
+ 419327 string characters out of 5843091
+ 1173875 words of memory out of 5000000
+ 43137 multiletter control sequences out of 15000+600000
+ 477858 words of font info for 109 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 86i,10n,122p,1304b,1675s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,8n,122p,1314b,1675s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on PhD-thesis.pdf (39 pages).
+Output written on PhD-thesis.pdf (23 pages).
