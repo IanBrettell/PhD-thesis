@@ -4,6 +4,10 @@
 \onehalfspacing
 \usepackage{xcolor}
 \usepackage{xfrac}
+% Make caption labels bold: https://bookdown.org/yihui/rmarkdown-cookbook/latex-extra.html
+\usepackage[labelfont={bf}]{caption} 
+% force floats forward: https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
+\usepackage{flafter}
 % https://tex.stackexchange.com/questions/279/how-do-i-ensure-that-figures-appear-in-the-section-theyre-associated-with
 \usepackage[section]{placeins}
 \lstset{
@@ -21,4 +25,3 @@
 \setcounter{topnumber}{3}
 \setcounter{bottomnumber}{3}
 \setcounter{totalnumber}{4}
-

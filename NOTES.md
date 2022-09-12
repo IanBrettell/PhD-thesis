@@ -1,5 +1,24 @@
 # Notes
 
+## 12 September 2022
+
+Attempt at aligning logos at bottom of title page (from https://mirror.apps.cam.ac.uk/pub/tex-archive/macros/latex/contrib/subfig/subfig.pdf)
+  - \postdate{\end{center}
+    \newsavebox{\tempbox}
+      \begin{figure}[!tpb]
+        \centering
+        \sbox{\tempbox}{\includegraphics[height=0.45in]{/Users/brettell/Documents/Repositories/PhD-thesis/book/figs/title/cambridge_university2.pdf}}
+        \subfloat{\usebox{\tempbox}}
+        \hfil
+        \subfloat{
+          \vbox to \ht\tempbox{
+          \vfil
+          \includegraphics[height=0.55in]{/Users/brettell/Documents/Repositories/PhD-thesis/book/figs/title/EMBL_EBI_Logo_black.pdf}
+          \vfil}}
+        \label{fig:vertcenter}
+      \end{figure}
+    } 
+
 ## 9 September 2022
 
 Floating tables guidance: 

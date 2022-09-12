@@ -42,7 +42,7 @@ They inter-crossed the hybrid F1 generation to create a sample of 622 F2 individ
 \includegraphics[width=1\linewidth]{figs/somites/ali_compiled_somite_elong} \caption{(ref:somite-period-ali)}(\#fig:somite-period-ali)
 \end{wrapfigure}
 
-\cleardoublepage
+\clearpage
 ## Phenotypes of interest {#somite-phenotype}
 
 ### Somite development period
@@ -71,6 +71,7 @@ In the proceeding analyses, I also included a second phenotype of interest: the 
 \includegraphics[width=1\linewidth]{figs/somites/ali_PSM_Cab_Kaga} \caption{(ref:ali-psm-F0)}(\#fig:ali-psm-F0)
 \end{wrapfigure}
 
+\clearpage
 ### Comparisons between F0, F1 and F2 generations
 
 The distributions across the F0, F1 and F2 generations are unexpected (**Figure \@ref(fig:somite-phenos)**). I rather expected to observe an F2 distribution with a similar median to the F1, and a variance that spanned across the extremes of the F0 strains. Instead, I observed that for the period phenotypes, the F2 generation had a mean that was slightly higher than the median of the higher-period F0 *Cab* strain, and many F2 samples exceed the period values in those F0 samples. Our collaborators assured me that these observations were unlikely to be caused by technical issues. The *Cab* and *Kaga* strains originate from different Japanese medaka populations (southern and northern respectively) that are understood to be at the point of speciation (see Chapter \@ref(MIKK-genomes-chap)), so this slower period may be driven by a biological incompatibility between their genomes in cases where they do not have a complete chromosome from each parent (as the F1 generation does). I nevertheless proceeded with the genetic analysis with a view to potentially discovering the reason for this unusual distribution.

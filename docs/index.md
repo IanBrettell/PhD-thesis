@@ -1,7 +1,8 @@
 ---
-title: "Japanese courage: a genetic analysis of complex traits in medaka fish and humans"
-author: "Ian Brettell"
-date: "2022-09-11"
+title: |
+  Japanese courage: a genetic analysis of complex traits in medaka fish and humans
+author: "Ian Narain Brettell"
+date: "12 September 2022"
 site: bookdown::bookdown_site
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
@@ -11,6 +12,35 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 #csl: chicago-fullnote-bibliography.csl
 mainfont: Libre Baskerville
+geometry: "left=4cm, right=3cm, top=2.5cm, bottom=2.5cm"
+header-includes:
+# With guidance from https://tex.stackexchange.com/questions/148438/putting-two-images-beside-each-other
+  - \usepackage{titling}
+#  - \usepackage{subfig}
+  - \usepackage{subcaption}
+  - \pretitle{\begin{center}
+    \includegraphics[width=2in,height=2in]{/Users/brettell/Documents/Repositories/PhD-thesis/book/figs/title/Arms_PembrokeCollege_Cambridge.pdf}\LARGE\\
+    \bigskip
+    \bigskip
+    \bigskip
+    }
+  - \posttitle{\end{center}}
+  - \predate{\begin{center}}
+  - \postdate{\end{center}
+      \centering
+      \begin{figure}[!tpb]
+      \centering
+      \begin{subfigure}{0.49 \linewidth}
+        \centering
+        \vfill
+        \includegraphics[height=0.45in]{/Users/brettell/Documents/Repositories/PhD-thesis/book/figs/title/cambridge_university2.pdf}
+      \end{subfigure} \hfill
+      \begin{subfigure}{0.49 \linewidth}
+        \centering
+        \includegraphics[height=0.55in]{/Users/brettell/Documents/Repositories/PhD-thesis/book/figs/title/EMBL_EBI_Logo_black.pdf}
+      \end{subfigure}
+      \end{figure}
+    }
 ---
 
 # About {-}
