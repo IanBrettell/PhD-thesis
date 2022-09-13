@@ -1,77 +1,59 @@
----
-zotero: ["PhD"]
-bibliography: book.bib
----
+# Genomic variations in the MIKK panel {#MIKK-genomes-chap}^[This project was carried out in collaboration with Felix Loosli's group at the Karlsruhe Institute of Technology (KIT), and Joachim Wittbrodt's group in the Centre for Organismal Studies (COS) at the University of Heidelberg. This chapter sets out my contributions to @fitzgeraldMedakaInbredKiyosuKarlsruhe2022 and @legerGenomicVariationsEpigenomic2022, which were published as companion papers in the journal *Genome Biology* to introduce the MIKK panel to the scientific community, and describe the genetic characteristics of the MIKK panel that would make it a useful resource for other researchers who wish to explore the genetics of quantitative traits in vertebrates. I am joint-first author on both papers.]
 
-# Genomic variations in the MIKK panel {#MIKK-genomes-chap}
 
-This project was carried out in collaboration with Felix Loosli's group at the Karlsruhe Institute of Technology (KIT), and Joachim Wittbrodt's group in the Centre for Organismal Studies (COS) at the University of Heidelberg.
 
-This chapter sets out my contributions to the the following pair of papers published in the journal *Genome Biology*, on both of which I am joint-first author:
-
--  @fitzgeraldMedakaInbredKiyosuKarlsruhe2022
-
--  @legerGenomicVariationsEpigenomic2022
 
 ## The Medaka Inbred Kiyosu-Karlruhe (MIKK) panel
 
-Biological traits are the product of an interaction between an organism’s genes and its environment, often described as the relationship between "nature and nurture".[@plominNatureNurtureGenetic2005] This is especially true for complex traits such as behaviour, which I investigate in Chapters \@ref(Pilot-chap) and \@ref(MIKK-F2-chap).
-
-It is unfeasible to explore the relationship between genes and environment experimentally in humans due to the insufficient ability to manipulate either set of variables. Researchers accordingly resort to using model organisms, with which it is possible to control for both. The genetics of model organisms may be controlled to a degree by establishing inbred strains through the repeated mating of siblings over successive generations. Eventually, as the individuals within each line inherit the same same haplotype from their related parents, they become almost genetically identical to one another, with the added benefit that their genotypes can be replicated across time in subsequent generations. This utility has led to the establishment of "panels" of inbred strains for several model organisms including the thale cress (*Arabidopsis thaliana*),[@bergelsonIdentifyingGenesUnderlying2010] common bean (*Phaseolus vulgaris L*),[@johnsonSegregationPerformanceRecombinant1999] tomato (*Lycopersicon esculentum*),[@saliba-colombaniEfficiencyRFLPRAPD2000] maize (*Zea mays*),[@limamiGeneticPhysiologicalAnalysis2002] nematode (*Caenorhabditis elegans*),[@evansQTLGeneElegans2021] fruit fly (*Drosophila melanogaster*) [@mackayChartingGenotypePhenotype2018], and mouse (*Mus musculus*) [@saulHighDiversityMousePopulations2019].
-
-Although the mouse is an appropriate model for humans due to their orthologous mammalian organ systems and cell types, inbred strains of this organism descend from individuals that had already been domesticated, and therefore do not represent the genetic variation present in wild populations. Furthermore, the large panels of inbred mice such as the Collaborative Cross (CC),[@threadgillCollaborativeCrossRecombinant2011] Diversity Outcross (DO)[@svensonHighResolutionGeneticMapping2012] and B6-by-D2 (BXD)[@peirceNewSetBXD2004] are derived from only a small number of individuals. As gene-environment studies seek to ultimately understand their effects on traits "in the wild" (such as with humans), there is accordingly a need for a panel of inbred vertebrates that represents the genetic variation present in natural populations.
-
-The medaka fish (*Oryzias latipes*) has been studied as a model organism in Japan for over a century,[@wittbrodtMedakaModelOrganism2002] and is gaining recognition elsewhere as a powerful genetic model for vertebrates.[@spivakovGenomicPhenotypicCharacterization2014] In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, and high fertility), medaka are also – uniquely among vertebrates – resilient to inbreeding from the wild. 
-
-Since 2010, the Birney Group at EMBL-EBI, in collaboration with the Wittbrodt Group at COS, University of Heidelberg and the Loosli Group at the Karlsruhe Institute of Technology (KIT), have been working to establish the world’s first panel of vertebrate inbred strains – now known as the Medaka Inbred Kiyosu-Karlsruhe Panel (**MIKK panel**). The MIKK Panel was bred from a wild population caught near Kiyosu in Southern Japan, and now comprises 80 inbred, near-isogenic "lines".[@fitzgeraldMedakaInbredKiyosuKarlsruhe2022] 
-
-The MIKK Panel was created to map genetic variants associated with quantitative traits at a high resolution, and to explore the interactions between those variants and any environmental variables of interest. The purpose of the companion papers @fitzgeraldMedakaInbredKiyosuKarlsruhe2022 and @legerGenomicVariationsEpigenomic2022 was to introduce the MIKK panel to the scientific community, and describe the genetic characteristics of the MIKK panel that would make it a useful resource for other researchers who wish to explore the genetics of quantitative traits in vertebrates. My contributions to these papers involved visualising the inbreeding trajectory of the panel (Chapter \@ref(inbreeding-sec)), 
-exploring the evolutionary history of the MIKK panel's founding population (Chapter \@ref(introgression-sec)), measuring the levels of homozygosity across the panel (Chapter \@ref(nuc-div)), assessing its allele-frequency distribution and rate of linkage disequilibrium (LD) decay (Chapter \@ref(ld-decay-sec)), and characterising the structural variants present in a smaller sample of lines using Oxford Nanopore long-read sequencing data (Chapter \@ref(mikksv-sec)).
+I introduced the MIKK panel in section \@ref(MIKK-background) of the previous chapter, and here I describe several of its genomic characteristics that are relevant to its utility for the genetic mapping of complex traits. These include a visualisation of the inbreeding trajectory of the panel (section \@ref(inbreeding-sec)), an exploration of the evolutionary history of the MIKK panel's founding population (section \@ref(introgression-sec)), measurement of the levels of homozygosity across the panel (section \@ref(nuc-div)), an assessment of the panel's allele-frequency distribution and rate of linkage disequilibrium (LD) decay (section \@ref(ld-decay-sec)), and a characterisation of the structural variants present in a smaller sample of lines using Oxford Nanopore long-read sequencing data (section \@ref(mikksv-sec)).
 
 ## Genomic characterisation of the MIKK panel
 
 ### MIKK panel DNA sequence dataset {#non-sib-calls}
 
-For the preparation of @fitzgeraldMedakaInbredKiyosuKarlsruhe2022, 79 of the 80 extant MIKK panel lines -- together with several wild Kiyosu samples and individuals from the established *iCab* medaka strain -- had their DNA sequenced from brain samples using Illumina short-read sequencing technology. Tomas Fitzgerald from the Birney Group at EMBL-EBI then aligned these sequences to the *HdrR* medaka reference and called variants to produce the **MIKK Illumina call set** in the form of a .vcf file containing single nucleotide polymorphism (SNP) and small insertion-deletion (INDEL) calls for each line. To avoid allele frequency biases introduced by the 16 pairs/triplets of "sibling lines" (see \@ref(inbreeding-sec)), I removed each pair’s arbitrarily-labelled second sibling line from the variant call set, leaving 63 MIKK panel lines (**MIKK non-sibling call set**), and used only those calls for the analyses in Chapters \@ref(nuc-div) and \@ref(ld-decay-sec).
+In 2018, our collaborators sequenced 79 of the 80 extant MIKK panel lines -- together with several wild Kiyosu samples and individuals from the established *iCab* medaka strain -- from male brain samples using Illumina short-read sequencing technology. Tomas Fitzgerald from the Birney Group at EMBL-EBI then aligned these sequences to the *HdrR* medaka reference [@IndexPubRelease104] and called variants to produce the **MIKK Illumina call set** in the form of a .vcf file containing single nucleotide polymorphism (SNP) and small insertion-deletion (INDEL) calls for each line. To avoid allele frequency biases introduced by the 16 pairs/triplets of "sibling lines" (see \@ref(inbreeding-sec)), I removed each pair’s arbitrarily-labelled second sibling line from the variant call set, leaving 63 MIKK panel lines (**MIKK non-sibling call set**), and used only those calls for the analyses in sections \@ref(nuc-div) and \@ref(ld-decay-sec) below.
 
-For the preparation of @legerGenomicVariationsEpigenomic2022, 12 MIKK panel lines had their DNA sequenced from brain samples using Oxford Nanopore Technologies (ONT) long-read sequencing technology. Adrien Leger from the Birney Group at EMBL-EBI then aligned these sequences to the *HdrR* medaka reference, and called variants to produce the **MIKK ONT call set** in the form of a .vcf file containing structural variants calls for each line with tags for insertions (INS), deletions (DEL), duplications (SUP), inversions (INV) and translocations (TRA). The work described below used these variant call sets as the primary datasets.
+We also performed a pilot study on 12 MIKK panel lines by sequencing DNA from brain samples using Oxford Nanopore Technologies (ONT) long-read sequencing technology. Adrien Leger from the Birney Group at EMBL-EBI then aligned these sequences to the *HdrR* medaka reference [@IndexPubRelease104], and called variants to produce the **MIKK ONT call set** in the form of a .vcf file containing structural variants calls for each line with tags for insertions (INS), deletions (DEL), duplications (SUP), inversions (INV) and translocations (TRA). The work described below used these variant call sets as the primary datasets.
 
 ### Assessing the inbreeding trajectory of the MIKK panel {#inbreeding-sec}
 
-The MIKK panel was bred from a wild population of medaka found in the Kiyosu area near Toyohashi, Aichi Prefecture, in southern Japan.[@spivakovGenomicPhenotypicCharacterization2014] From this wild population, the Loosli Group at KIT set up random crosses of single mating pairs to create 115 'founder families'. For each founder family, they then set up between two and five single full-sibling-pair inbreeding crosses, which resulted in 253 F1 lines. Lines derived from the same founder family are referred to as 'sibling lines'. Over the course of the next eight generations of inbreeding, they used only one mating pair per line. I generated **Fig. \@ref(fig:InbreedingFigure)A** and **B** from the inbreeding data provided by the Loosli Group. **Fig. \@ref(fig:InbreedingFigure)A** shows the number of lines that survived over the course of the first 14 generations of the inbreeding program, and the various causes for the termination of other lines. **Fig. \@ref(fig:InbreedingFigure)B** shows the average fecundity levels of the surviving lines at generation F16. In addition, the Birney Group at EMBL-EBI generated morphometric data for the MIKK panel lines to demonstrate the distribution of physical phenotypes across the MIKK panel. I used this data on relative eye diameters to generate **Fig. \@ref(fig:InbreedingFigure)C**.
+The MIKK panel was bred from a wild population of medaka found in the Kiyosu area near Toyohashi, Aichi Prefecture, in southern Japan.[@spivakovGenomicPhenotypicCharacterization2014] From this wild population, the Loosli Group at KIT set up random crosses of single mating pairs to create 115 'founder families'. For each founder family, they then set up between two and five single full-sibling-pair inbreeding crosses, which resulted in 253 F1 lines. Lines derived from the same founder family are referred to as 'sibling lines'. Over the course of the next eight generations of inbreeding, they used only one mating pair per line. I generated **Fig. \@ref(fig:InbreedingFigure)A** and **B** from the inbreeding data provided by the Loosli Group. **Fig. \@ref(fig:InbreedingFigure)A** shows the number of lines that survived over the course of the first 14 generations of the inbreeding program, and the various causes for the termination of other lines. **Fig. \@ref(fig:InbreedingFigure)B** shows the average fecundity levels of the surviving lines at generation F16. 
 
 (ref:InbreedingFigure) Inbreeding, fecundity and eye size in the MIKK panel lines. **A**: Status of all MIKK panel lines during the first 14 generations of inbreeding, showing cause of death for non-extant lines. **B**: Average fecundity of MIKK panel lines in generation F16, as measured during peak egg production in July 2020. **C**: Distribution of mean relative eye size for female and male medaka across all MIKK panel lines.
 
-<div class="figure">
-<img src="figs/mikk_genome/20211213_final_figure.png" alt="(ref:InbreedingFigure)" width="100%" />
-<p class="caption">(\#fig:InbreedingFigure)(ref:InbreedingFigure)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/20211213_final_figure} \caption{(ref:InbreedingFigure)}(\#fig:InbreedingFigure)
+\end{figure}
 
-### Introgression with northern Japanese and Korean medaka populations {#introgression-sec}
 
-To explore the evolutionary history of the MIKK panel's founding population, we sought to determine whether there was evidence of introgression between that southern Japanese population, and northern Japanese and Korean medaka populations. To this end, I used the 50-fish multiple alignment from Ensembl release 102 to obtain the aligned genome sequences for the established medaka inbred lines *HdrR* (southern Japan), *HNI* (northern Japan), and *HSOK* (Korea), as well as the most recent common ancestor of all three strains.[@IndexPubRelease102] Using the phylogenetic tree provided with the dataset, and the *ape* R package,[@paradisApeEnvironmentModern2019] I identified the most recent common ancestor of those three strains. For each locus with a non-missing base for *HdrR*, I assigned the allele in that ancestral sequence as the 'ancestral' allele, and the alternative allele as the 'derived' allele, and then combined that dataset with the MIKK Illumina call set and variant calls for the southern Japanese *iCab* strain (see \@ref(non-sib-calls)). 
 
-I then carried out an ABBA BABA analysis to calculate a modified 'admixture proportion' statistic $\hat{f}_d$[@martinEvaluatingUseABBA2015] as a measure of the proportion of shared genome in 500-kb sliding windows between the MIKK panel and either *iCab*, *HNI*, or *HSOK* (**Fig. \@ref(fig:ABBABABA)**), using the scripts provided by the first author of @martinEvaluatingUseABBA2015 on their GitHub page.[@martinSimonhmartinGenomicsGeneral2022]
+In addition, the Birney Group at EMBL-EBI generated morphometric data for the MIKK panel lines to demonstrate the distribution of physical phenotypes across the MIKK panel. I used this data on relative eye diameters to generate **Fig. \@ref(fig:InbreedingFigure)C**, and as we can see, the trait has a roughly normal distribution, with minimal differences in the mean between sexes. I also computed this trait's broad-sense heritability $\eta^2_{(partial)} = \hat{H^2} = SS_{line} / (SS_{line} + SS_{residuals}) =$ 0.56. This value is on the higher range of heritability estimates for morphological traits across different species inluding mouse and human [@visscherHeritabilityGenomicsEra2008; @claesGenomewideMappingGlobaltolocal2018; @weinbergCraniofacialGeneticsWhere2018], and indicates that the majority of variance observed across the panel is driven by differences between lines in their genetics. This in turn makes the MIKK panel a promising resource for discovering the genetic variants that create such differences. 
 
-(ref:ABBABABA) **Figure 2**: ABBA-BABA analysis. **A**. Phylogenetic tree generated from the Ensembl release 102 50-fish multiple alignment, showing only the medaka lines used in the ABBA-BABA analysis. **B**. Schema of the comparisons carried out in the ABBA-BABA analysis. **C**. Circos plot comparing introgression ($\hat{f}_d$) between the MIKK panel and either *iCab* (yellow), *HNI* (orange), or *HSOK* (purple), calculated within 500-kb sliding windows using a minimum of 250 SNPs per window.
+### Levels of homozygosity
 
-<div class="figure">
-<img src="figs/mikk_genome/07_introgression.png" alt="(ref:ABBABABA)" width="100%" />
-<p class="caption">(\#fig:ABBABABA)(ref:ABBABABA)</p>
-</div>
+To roughly assess whether the inbreeding process resulted in high levels of homozygosity in the MIKK panel, for each line I extracted from the MIKK Illumina call set all non-missing, biallelic calls (both SNPs and indels)with *bcftools* [@danecekTwelveYearsSAMtools2021], counted the number of SNPs within non-overlapping, 5-kb bins, and calculated the proportion of SNPs within each bin that were homozgyous. To provide an example of the levels of homozygosity in the MIKK panel, **Figure \@ref(fig:circos-18-2)** is a circos plot generated with circlize [@guCirclizeImplementsEnhances2014] for the MIKK panel line 18-2, featuring the proportion of homozygous SNPs per 5-kb bin (pink), and the total number of SNPs in each bin (yellow). With few exceptions, almost all 5-kb bins across the genome contain a very high proportion of homozygous variants, and all other MIKK panel lines show similar levels of homozygosity. Although there are more sophisticated means of measuring homozygosity -- for example, by using a Hidden Markov Model to separate out regions of residual homozygosity^[As described in @fitzgeraldMedakaInbredKiyosuKarlsruhe2022.] -- this confirms that the breeding program was successful in establishing a panel of inbred lines with levels of homozygosity comparable to established medaka strains that have been inbred for dozens of generations, such as the *iCab* strain at generation F24 which was sequenced with the MIKK panel  (**Figure \@ref(fig:circos-iCab-F24)**).
 
-Based on the genome-wide mean $\hat{f}_d$, the MIKK panel shares approximately 25% of its genome with *iCab*, 9% with *HNI*, and 12% with *HSOK*. These results provide evidence that the MIKK panel's originating population has more recently introgressed with medaka from Korea than with medaka from northern Japan. This supports the findings in @spivakovGenomicPhenotypicCharacterization2014, where the authors found little evidence of significant interbreeding between southern and northern Japanese medaka since the populations diverged. Although the proportional difference between *HNI* and *HSOK* is small, this further supports the general finding that northern and southern Japanese medaka strains show low levels of interbreeding that may be a result of geographical isolation or genome divergence.[@katsumuraMedakaPopulationGenome2019]
+(ref:circos-18-2) Proportion of homozygous SNPs within 5 kb bins in the MIKK panel line 18-2 (pink), and number of SNPs in each bin (yellow).
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/circos/18-2} \caption{(ref:circos-18-2)}(\#fig:circos-18-2)
+\end{figure}
+
+(ref:circos-iCab-F24) Proportion of homozygous SNPs within 5 kb bins in the previously established *iCab* strain at generation F24 (dark grey), and number of SNPs in each bin (yellow).
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/circos/iCab_F24} \caption{(ref:circos-iCab-F24)}(\#fig:circos-iCab-F24)
+\end{figure}
 
 ### Nucleotide diversity {#nuc-div}
 
-As a  means of assessing genetic diversity in the MIKK panel, I calculated nucleotide diversity ($\hat{\pi}$) within 500-kb non-overlapping windows across the genome of the 63 lines in the MIKK non-sibling call set (see \@ref(non-sib-calls)), and compared this to the nucleotide diversity in 7 wild medaka from the same Kiyosu population from which the MIKK panel was derived. Mean and median nucleotide diversity in both the MIKK panel and wild Kiyosu medaka were close to 0, and slightly higher in the MIKK panel (mean: MIKK = 0.0038, wild = 0.0037; median: MIKK = 0.0033, wild = 0.0031). The patterns of varying nucleotide diversity across the genome are shared between the MIKK panel and wild Kiyosu medaka, where regions with high levels of repeat content tend to have higher nucleotide diversity (r = 0.386, p \< 0.001) (**Fig. \@ref(fig:NucleotideDiversity)**). I also calculated $\hat{\pi}$ for each line individually, and as expected, levels of $\hat{\pi}$ around the (XX/XY) sex determination region of 1:~16-17 Mb are elevated in all lines relative to the consistently low levels found in most other chromosomes.
+We also sought to assess the levels of genetic diversity in the MIKK panel, and to compare them with the levels of genetic diversity present in the wild Kiyosu population. If the levels were similar, it would confirm that the MIKK panel provided a reasonable representation of the variation present in its originating population, and that any selection for loci associated with domestication was not widespread across the genome. As a means of assessing genetic diversity in the MIKK panel, I calculated the widely-used measure of 'nucleotide diversity' ($\hat{\pi}$) [@neiMathematicalModelStudying1979] within 500-kb non-overlapping windows across the genome of the 63 lines in the MIKK non-sibling call set (see \@ref(non-sib-calls)), and compared this to the nucleotide diversity in 7 wild medaka from the same Kiyosu population from which the MIKK panel was derived. Mean and median nucleotide diversity in both the MIKK panel and wild Kiyosu medaka were close to 0, and slightly higher in the MIKK panel (mean: MIKK = 0.0038, wild = 0.0037; median: MIKK = 0.0033, wild = 0.0031). This may have been caused by the smaller sample size of wild Kiyosu medaka, as mean $\hat{\pi}$ for a random sample of 7 MIKK lines dropped to 0.0037, although it is unexpected that the highly-inbred MIKK lines have similar levels of $\hat{\pi}$ to wild Kiyosu individuals. The patterns of varying nucleotide diversity across the genome are shared between the MIKK panel and wild Kiyosu medaka, where regions with high levels of repeat content tend to have higher nucleotide diversity (r = 0.386, $p$ \< 0.001) (**Fig. \@ref(fig:NucleotideDiversity)**). I also calculated $\hat{\pi}$ for each line individually, and as expected, levels of $\hat{\pi}$ around the (XX/XY) sex determination region of 1:~16-17 Mb are elevated in all lines relative to the consistently low levels found in most other chromosomes.
 
 (ref:NucleotideDiversity) Circos plot with nucleotide diversity ($\hat{\pi}$) calculated within 500-kb non-overlapping windows for 63 non-sibling lines from the MIKK panel (*green*) and 7 wild Kiyosu medaka samples from the same originating population (*purple*); proportion of sequence classified as repeats by RepeatMasker (*blue*); and mean mapping quality (*pink*).
 
-<div class="figure">
-<img src="figs/mikk_genome/supp_01_pi_circos.png" alt="(ref:NucleotideDiversity)" width="100%" />
-<p class="caption">(\#fig:NucleotideDiversity)(ref:NucleotideDiversity)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/supp_01_pi_circos} \caption{(ref:NucleotideDiversity)}(\#fig:NucleotideDiversity)
+\end{figure}
 
 The higher level of $\hat{\pi}$ observed within specific regions on several chromosomes -- such as chromosomes 2, 11, and 18 -- correspond closely to the regions we identified as containing large (>250 kb) inversions that appear to be shared across at least some of the MIKK panel (**Fig. \@ref(fig:SVInvs)**). These regions are also enriched for large deletions and duplications.[@legerGenomicVariationsEpigenomic2022] Inversions cause permanent heterozygosity [@hoffmannChromosomalInversionPolymorphisms2004], and duplications and deletions may have increased the density of called SNPs in these regions [@fredmanComplexSNPrelatedSequence2004], so the observed depressions in homozygosity at these loci may be the result of such large structural variants that are present in the MIKK panel's genomes.
 
@@ -79,10 +61,25 @@ Overall, this analysis confirms that the MIKK panel shows similar levels of homo
 
 (ref:SVInvs) Inversions identified in 9 MIKK panel lines using a combination of Oxford Nanopore Technologies long-read and Illumina short-read sequences (see Chapter \@ref(mikksv-sec) below).
 
-<div class="figure">
-<img src="figs/mikk_genome/20210224_sv_invs_lines.png" alt="(ref:SVInvs)" width="100%" />
-<p class="caption">(\#fig:SVInvs)(ref:SVInvs)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/20210224_sv_invs_lines} \caption{(ref:SVInvs)}(\#fig:SVInvs)
+\end{figure}
+
+### Introgression with northern Japanese and Korean medaka populations {#introgression-sec}
+
+There is an o explore the evolutionary history of the MIKK panel's founding population, we sought to determine whether there was evidence of introgression between that southern Japanese population, and northern Japanese and Korean medaka populations. To this end, I used the 50-fish multiple alignment from Ensembl release 102 to obtain the aligned genome sequences for the established medaka inbred lines *HdrR* (southern Japan), *HNI* (northern Japan), and *HSOK* (Korea), as well as the most recent common ancestor of all three strains.[@IndexPubRelease102] Using the phylogenetic tree provided with the dataset, and the *ape* R package,[@paradisApeEnvironmentModern2019] I identified the most recent common ancestor of those three strains. For each locus with a non-missing base for *HdrR*, I assigned the allele in that ancestral sequence as the 'ancestral' allele, and the alternative allele as the 'derived' allele, and then combined that dataset with the MIKK Illumina call set and variant calls for the southern Japanese *iCab* strain (see \@ref(non-sib-calls)). 
+
+I then carried out an ABBA BABA analysis to calculate a modified 'admixture proportion' statistic $\hat{f}_d$[@martinEvaluatingUseABBA2015] as a measure of the proportion of shared genome in 500-kb sliding windows between the MIKK panel and either *iCab*, *HNI*, or *HSOK* (**Fig. \@ref(fig:ABBABABA)**), using the scripts provided by the first author of @martinEvaluatingUseABBA2015 on their GitHub page.[@martinSimonhmartinGenomicsGeneral2022]
+
+(ref:ABBABABA) **Figure 2**: ABBA-BABA analysis. **A**. Phylogenetic tree generated from the Ensembl release 102 50-fish multiple alignment, showing only the medaka lines used in the ABBA-BABA analysis. **B**. Schema of the comparisons carried out in the ABBA-BABA analysis. **C**. Circos plot comparing introgression ($\hat{f}_d$) between the MIKK panel and either *iCab* (yellow), *HNI* (orange), or *HSOK* (purple), calculated within 500-kb sliding windows using a minimum of 250 SNPs per window.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/07_introgression} \caption{(ref:ABBABABA)}(\#fig:ABBABABA)
+\end{figure}
+
+Based on the genome-wide mean $\hat{f}_d$, the MIKK panel shares approximately 25% of its genome with *iCab*, 9% with *HNI*, and 12% with *HSOK*. These results provide evidence that the MIKK panel's originating population has more recently introgressed with medaka from Korea than with medaka from northern Japan. This supports the findings in @spivakovGenomicPhenotypicCharacterization2014, where the authors found little evidence of significant interbreeding between southern and northern Japanese medaka since the populations diverged. Although the proportional difference between *HNI* and *HSOK* is small, this further supports the general finding that northern and southern Japanese medaka strains show low levels of interbreeding that may be a result of geographical isolation or genome divergence.[@katsumuraMedakaPopulationGenome2019]
+
+
 
 ### LD decay {#ld-decay-sec}
 
@@ -94,19 +91,17 @@ To determine the rate of LD decay in the MIKK panel and compare it to that in th
 
 (ref:LDdecay) Minor allele frequency distributions and LD decay for biallelic, non-missing SNPs in the 1000 Genomes Phase 3 variant calls (N = 2,504) (1KG), and the MIKK panel Illumina-based calls excluding one of each pair of sibling lines (N = 63), across all autosomes (1KG: chrs 1-22; MIKK: chrs 1-24). **A**: Histogram of allele frequencies in the 1KG and MIKK panel calls. **B**: LD decay for each autosome, calculated by taking the mean $r^2$ of pairs of SNPs with MAF $>$ 0.1 within non-overlapping 100 bp windows of distance from one another, up to a maximum of 10 kb. LD decays faster on chromosome 2 for the MIKK panel due to its higher recombination rate.
 
-<div class="figure">
-<img src="figs/mikk_genome/08_ld_decay.png" alt="(ref:LDdecay)" width="100%" />
-<p class="caption">(\#fig:LDdecay)(ref:LDdecay)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/08_ld_decay} \caption{(ref:LDdecay)}(\#fig:LDdecay)
+\end{figure}
 
 Based on the 1KG calls under these parameters, LD decays in humans to a mean $r^2$ of around 0.2-0.35 at a distance of 10 kb, whereas the MIKK panel reaches this level within 1 kb, with a mean $r^2$ of 0.3-0.4 at a distance of ~100 bp. This implies that when a causal variant is present in at least two lines in the MIKK panel, one may be able to map causal variants at a higher resolution than in humans. We note that LD decays faster in chromosome 2 of the MIKK panel relative to the other chromosomes. This suggests that it has a much higher recombination rate, which is consistent with the linkage map described in @naruseDetailedLinkageMap2000, showing a higher genetic distance per Mb for this chromosome. This higher recombination rate in chromosome 2 may in turn be caused by its relatively high proportion of repeat content (**Fig. \@ref(fig:repeats)**).
 
 (ref:repeats-fig) Repeat content in the *HdrR* genome based on RepeatMasker results obtained by Jack Monahan. **A**. Proportion of repeat content per-chromosome. **B**. log10 of repeat lengths and counts per repeat class. "Misc" includes all repeats assigned to their own specific class, for example "(GAG)n" or "(GATCCA)n". **C**.  Circos plot showing repeat length (radial axes) by locus (angular axis) and repeat class (track). 
 
-<div class="figure">
-<img src="figs/mikk_genome/20210401_hdrr_repeats_final.png" alt="(ref:repeats-fig)" width="100%" />
-<p class="caption">(\#fig:repeats)(ref:repeats-fig)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/20210401_hdrr_repeats_final} \caption{(ref:repeats-fig)}(\#fig:repeats)
+\end{figure}
 
 ## Structural variation in the MIKK panel {#mikksv-sec}
 
@@ -119,10 +114,9 @@ SVs were generally enriched in regions covered by repeats. While only 16% of bas
 (ref:SV-cap) Polished SVs in 9 MIKK panel lines sequenced with ONT. DEL: deletion; INS: insertion; TRA: translocation; DUP: duplication; INV: inversion. **A**. Aggregate log10 counts and lengths of distinct SVs by type, excluding TRA. **B**. pLI LOD scores in distinct SVs by SV type. **C**. Histogram of LOD scores by SV type. **D**. Total and singleton counts of SV types per sample. **E**. Circos plot showing per-sample distribution and lengths of DEL variants across the genome.
 
 
-<div class="figure">
-<img src="figs/mikk_genome/20210408_sv_main.png" alt="(ref:SV-cap)" width="100%" />
-<p class="caption">(\#fig:SV-main)(ref:SV-cap)</p>
-</div>
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_genome/20210408_sv_main} \caption{(ref:SV-cap)}(\#fig:SV-main)
+\end{figure}
 
 We compared these polished INS and DEL calls with the high-quality graph-based alternative paths and large-scale deletions, respectively (see section titled *Novel genetic sequences and large-scale insertions and deletions in the MIKK panel* in @legerGenomicVariationsEpigenomic2022). We found that 2 of the 19 regions covered by graph-based alternative paths, and 4 of the 16 regions covered by graph-based deletions, had no SVs that overlapped those regions at all, which suggests they would have been missed entirely when using a reference-anchored approach alone.
 

@@ -88,7 +88,7 @@ The distributions across the F0, F1 and F2 generations are unexpected (**Figure 
 \includegraphics[width=1\linewidth]{figs/somites/phenotypes} \caption{(ref:somite-phenos)}(\#fig:somite-phenos)
 \end{figure}
 
-Another important issue to note is that the F2 individuals were sequenced using different microscopes, denoted as 'AU' and 'DB'. Our collaborators noticed that there was a difference between the microscopes in their temperatures of 0.7-0.8°C, translating to a 4-minute difference in the F2 means for the period intercept measure (Kruskal-Wallis = 177.97, $p$ = 1.34 x 10^-40^), and a 3.5-minute difference in the F2 means for the period mean measure (Kruskal-Wallis = 141.79, $p$ = 1.08 x 10^-32^). This difference would need to be accounted for in the downstream analysis through either adjusting the phenotype prior to running the genetic association model, or by including microscope as a covariate in the model. No significant difference was found for the PSM area. 
+Another important issue to note is that the F2 individuals were sequenced using different microscopes of the same model (Zeiss LSM 780) but with different temperature control units and incubator boxes, denoted as 'AU' and 'DB'.^['AU' for the Aulehla Lab microscope, and 'DB' for  EMBL-Heidelberg's Developmental Biology Unit microscope.] Our collaborators noticed that there was a difference between the microscopes in their temperatures of 0.7-0.8°C, translating to a 4-minute difference in the F2 means for the period intercept measure (Kruskal-Wallis = 177.97, $p$ = 1.34 x 10^-40^), and a 3.5-minute difference in the F2 means for the period mean measure (Kruskal-Wallis = 141.79, $p$ = 1.08 x 10^-32^). This difference would need to be accounted for in the downstream analysis through either adjusting the phenotype prior to running the genetic association model, or by including microscope as a covariate in the model. No significant difference was found for the PSM area. 
 
 #### Inverse-normalisation {#inverse-norm-sec}
 
@@ -200,38 +200,36 @@ I used these genotype-block calls to generate the recombination karyoplot shown 
 (ref:karyo-wi-missing) Recombination blocks in 622 F2 samples based on the ratio of reads mapping to either the *Cab* or *Kaga* allele within 5-kb bins, with homozygous-*Cab* blocks in green, heterozoygous blocks in navy blue, and homozygous *Kaga* blocks in red. Most blocks show 0-2 crossover events, as expected, with some regions showing higher numbers of crossovers interpreted as noise. Unfilled regions are those with no state called by the HMM due to a lack of reads mapping to SNPs within those 5-kb bins.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{figs/somites/karyoplot_wi_missing} \caption{(ref:karyo-wi-missing)}(\#fig:karyo-wi-missing)
+\includegraphics[width=1\linewidth]{figs/somites/karyoplot_wi_missing_cropped} \caption{(ref:karyo-wi-missing)}(\#fig:karyo-wi-missing)
 \end{figure}
 
-In the downstream analysis, I excluded the 22 samples that showed poor coverage across the genome. For the remaining samples, I "filled" the bins with missing genotypes based on the call of the previous called bin, or if unavailable (e.g. the missing bin was at the start of the chromosome), then the next called bin (**Figure \@ref(fig:karyo-no-missing)**; note that this figure retains the low-coverage samples that were excluded from further analysis to allow for a direct comparison with **Figure \@ref(fig:karyo-wi-missing)**). I used these filled genotype calls for the association tests described below in section **\@ref(somite-assoc-tests)**. These karyoplots show interesting recombination patterns for several chromosomes. The reporter gene resides on chr16 ~28.7Mb, so given the F2 individuals were selected for the reporter gene, as expected, all but one F2 individual are called as either homozygous-*Cab* or heterozygous at that locus, with that single exception being a genotyping error. Our collaborators could estimate whether the F2 individuals possessed one or two copies of the reporter gene, based on the brightness of the fluorescence. 
+In the downstream analysis, I excluded the 22 samples that showed poor coverage across the genome. For the remaining samples, I "filled" the bins with missing genotypes based on the call of the previous called bin, or if unavailable (e.g. the missing bin was at the start of the chromosome), then the next called bin (**Figure \@ref(fig:karyo-no-missing)**; note that this figure retains the low-coverage samples that were excluded from further analysis to allow for a direct comparison with **Figure \@ref(fig:karyo-wi-missing)**). I used these filled genotype calls for the association tests described below in section **\@ref(somite-assoc-tests)**. As a rough way to estimate the accuracy of this genotyping method, we checked the genotypes called by the HMM for the reporter region on chr16 ~28.7Mb against our collaborators' manual recording of reporter gene counts based on the intensity of the *Her7*-Venus reporter's fluorescence. The confusion matrix is set out in **Table \@ref(tab:reporter-conc-tbl)**, showing that 83% of genotypes called by the HMM were consistent with the reporter fluorescence.
 
 \begin{table}
 
-\caption{(\#tab:reporter-conc-tbl)Counts.}
+\caption{(\#tab:reporter-conc-tbl)Confusion matrix for reporter genotype as called by the HMM, and as inferred from the fluorescence brightness.}
 \centering
-\begin{tabular}[t]{rrr}
+\begin{tabular}[t]{llr}
 \toprule
 HMM state & Reporter phenotype & Count\\
 \midrule
 \cellcolor{gray!6}{0} & \cellcolor{gray!6}{0} & \cellcolor{gray!6}{252}\\
 0 & 1 & 91\\
-\cellcolor{gray!6}{1} & \cellcolor{gray!6}{0} & \cellcolor{gray!6}{91}\\
-1 & 0 & 9\\
-\cellcolor{gray!6}{1} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{245}\\
+\cellcolor{gray!6}{1} & \cellcolor{gray!6}{0} & \cellcolor{gray!6}{9}\\
+1 & 1 & 245\\
+\cellcolor{gray!6}{2} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{1}\\
 \addlinespace
-2 & 1 & 1\\
+Total & - & 598\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Moreover, the selection for homozygous-*Cab* or heterozygous genotypes at that locus has caused a strong skew towards those genotypes across the whole chromosome. 
-
-On chr3, most samples are homozygous-*Cab* for the second half of the chromosome, with a consistent breakpoint around ~22 Mb. However, the final fifth of samples which show a different recombination pattern. The samples are sorted based on the order that they were phenotyped and sequenced, so this difference could have been caused by their being generated from different F1 individuals with distinct haplotypes [CHECK WITH ALI]. 
+These karyoplots show interesting recombination patterns for several chromosomes. Given the F2 individuals were selected for the reporter gene on chr16, as expected, there appears to be a strong strong skew towards those genotypes across the whole chromosome. On chr3, most samples are homozygous-*Cab* for the second half of the chromosome, with a consistent breakpoint around ~22 Mb. However, the final fifth of samples which show a different recombination pattern. The samples are sorted based on the order that they were phenotyped and sequenced, so this difference could have been caused by their being generated from different F1 individuals with distinct haplotypes. 
 
 (ref:karyo-no-missing) Recombination blocks in 622 F2 samples based on the ratio of reads mapping to either the *Cab* or *Kaga* allele within 5-kb bins, with homozygous-*Cab* blocks in green, heterozoygous blocks in navy blue, and homozygous *Kaga* blocks in red. Most blocks show 0-2 crossover events, as expected, with some regions showing higher numbers of crossovers interpreted as noise. Bins with missing genotypes were "filled" based on the call of the previous called bin, or if unavailable (e.g. the missing bin was at the start of the chromosome), then the next called bin.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{figs/somites/karyoplot_no_missing} \caption{(ref:karyo-no-missing)}(\#fig:karyo-no-missing)
+\includegraphics[width=1\linewidth]{figs/somites/karyoplot_no_missing_cropped} \caption{(ref:karyo-no-missing)}(\#fig:karyo-no-missing)
 \end{figure}
 
 **Figure \@ref(fig:prop-sites-total)** shows the proportion of 5-kb bins called as either homozygous-*Cab*, heterozygous, or homozygous-*Kaga* within each F2 sample (points). The ordinary expectation for the ratios would be 0.25, 0.5, and 0.25 respectively. However, we observe a skew towards homozygous-*Cab* and away from homozygous *Kaga*. This was likely caused by the hybrid incompatibility between *Cab* and *Kaga*, given the two strains were derived from populations  that are thought to be at the point of speciation (see the previous analysis in **Chapter \@ref(MIKK-genomes-chap)**, section **\@ref(introgression-sec)**). 
@@ -268,17 +266,18 @@ To set the significance threshold, I permuted the phenotype across samples using
 \end{figure}
 
 \begin{table}
+
+\caption{(\#tab:somite-sig-int-tbl)Significant 5-kb bin ranges for period intercept below the minimum p-value from 10 permutations.}
 \centering
-\begin{tabular}{rrrrr}
-  \hline
- & Chromosome & Bin start & Bin end & Length (kb) \\ 
-  \hline
-\cellcolor{gray!6}{1} & \cellcolor{gray!6}{3.00} & \cellcolor{gray!6}{31880001.00} & \cellcolor{gray!6}{35420000.00} & \cellcolor{gray!6}{3540.00 }\\ 
-  2 & 4.00 & 18090001.00 & 18095000.00 & 5.00 \\ 
-\cellcolor{gray!6}{  3} & \cellcolor{gray!6}{10.00} & \cellcolor{gray!6}{2995001.00} & \cellcolor{gray!6}{3690000.00} & \cellcolor{gray!6}{695.00 }\\ 
-   \hline
+\begin{tabular}[t]{rrrr}
+\toprule
+Chromosome & Bin start & Bin end & Length (kb)\\
+\midrule
+\cellcolor{gray!6}{3} & \cellcolor{gray!6}{31880001} & \cellcolor{gray!6}{35420000} & \cellcolor{gray!6}{3540}\\
+4 & 18090001 & 18095000 & 5\\
+\cellcolor{gray!6}{10} & \cellcolor{gray!6}{2995001} & \cellcolor{gray!6}{3690000} & \cellcolor{gray!6}{695}\\
+\bottomrule
 \end{tabular}
-\caption{Significant 5-kb bin ranges for period intercept below the minimum p-value from 10 permutations.} 
 \end{table}
 
 These regions contained a total of 46,872 SNPs imputed from the genotype of the F0 parental strains. 
@@ -316,7 +315,7 @@ stop lost,splice region variant & 1\\
 \end{tabular}
 \end{table}
 
-Our collaborators then combined these results with bulk RNA-seq that they had performed on F0 *Cab* and *Kaga* individuals, to determine which of these genes are expressed in the tail during embryogenesis. This allowed them to reduce to the list to 29 genes, and a gene ontology analysis of this found that the list of genes was enriched for body axis, somitogenesis, and segmentation (**Table \@ref(tab:psm-final-genes)**). For this list of genes, our collaborators are now in the process of knocking in the protein-altering *Cab* allele into *Kaga* embryos, and *vice versa*, to functionally validate these variants.
+Our collaborators then combined these results with bulk RNA-seq that they had performed on F0 *Cab* and *Kaga* individuals, to determine which of these genes are expressed in the tail during embryogenesis. This allowed them to reduce to the list to 29 genes, and a gene ontology analysis of this found that the list of genes was enriched for body axis, somitogenesis, and segmentation (**Table \@ref(tab:psm-final-genes)**). For this list of genes, our collaborators are now in the process of knocking out the protein-altering *Cab* allele into *Kaga* embryos, and *vice versa*, to functionally validate these variants.
 
 
 \begin{landscape}\begin{table}
@@ -326,7 +325,7 @@ Our collaborators then combined these results with bulk RNA-seq that they had pe
 \resizebox{\linewidth}{!}{
 \begin{tabular}[t]{rlll}
 \toprule
-chromosome\_name & ensembl\_gene\_id & description & Role\\
+Chromosome & Ensembl gene ID & Description & Role\\
 \midrule
 \cellcolor{gray!6}{3} & \cellcolor{gray!6}{ENSORLG00000014656} & \cellcolor{gray!6}{mesoderm posterior protein 2-like} & \cellcolor{gray!6}{Somitogenesis}\\
 3 & ENSORLG00000014659 & mesp & Somitogenesis\\
@@ -383,7 +382,7 @@ chromosome\_name & ensembl\_gene\_id & description & Role\\
 \centering
 \begin{tabular}[t]{rrrr}
 \toprule
-CHROM & Bin start & Bin end & Length (kb)\\
+Chromosome & Bin start & Bin end & Length (kb)\\
 \midrule
 \cellcolor{gray!6}{3} & \cellcolor{gray!6}{20375001} & \cellcolor{gray!6}{26285000} & \cellcolor{gray!6}{5910}\\
 \bottomrule
