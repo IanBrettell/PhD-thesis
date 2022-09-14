@@ -1,7 +1,4 @@
----
-zotero: ["PhD"]
-bibliography: book.bib
----
+
 
 
 
@@ -30,16 +27,18 @@ Aristotle later joined the discussion with his treatise *Generation of Animals* 
 
 ### Middle Ages
 
-From medieval times through to the 1800s, the prevailing theory of heredity was that a tiny human -- a homunculus -- sat within the sperm, waiting to be inflated upon its introduction to a woman's uterus. But from where did each previous homunculus originate? Logically, the theory would require each homunculus to hold another homunculus, *ad infinitum* [@mukherjeeGeneIntimateHistory2016]. This theory deceived the inventor of the microscope, Nicolaas Hartsoeker, into thinking he observed a homunculus in a sperm he was studying (**Figure \@ref(fig:homunculus-pic)**). But a fundamental question remained: what triggered the expansion of the human form, causing the embryo to develop new parts on its road to becoming fetus? The answer could only have been some instruction, blueprint, or code, but any specifics remained out of reach.
+From medieval times through to the 1800s, the prevailing theory of heredity was that a tiny human -- a homunculus -- sat within the sperm, waiting to be inflated upon its introduction to a woman's uterus. But from where did each previous homunculus originate? Logically, the theory would require each homunculus to hold another homunculus, *ad infinitum* [@mukherjeeGeneIntimateHistory2016]. This theory deceived the inventor of the microscope, Nicolaas Hartsoeker, into thinking he observed a homunculus in a sperm he was studying (**Figure \@ref(fig:homunculus-pic)**). But a fundamental question remained: what triggered the expansion of the human form, causing the embryo to develop new parts on its road to becoming a fetus? The answer could only have been some instruction, blueprint, or code, but any specifics remained out of reach.
 
 (ref:homunculus-pic) Preformation, drawn by Nicolaas Hartsoeker in 1695. Image adapted from @homunculusImage.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{figure}
 
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/homunculus} 
+{\centering \includegraphics[width=0.5\linewidth]{figs/introduction/homunculus} 
+
+}
 
 \caption{(ref:homunculus-pic)}(\#fig:homunculus-pic)
-\end{wrapfigure}
+\end{figure}
 
 ### Charles Darwin
 
@@ -62,23 +61,27 @@ After rounding Cape Horn and moving northward along the western coast of South A
 
 (ref:gouldian-finch) The Gouldian Finch, an Australian native bird described by British ornithological artist John Gould in 1844 and named after his deceased wife Elizabeth [@bancroftPartIntroductionGouldian]. Photograph by Sarah R. Pryke, published in @prykeRedDominatesBlack2006.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{figure}
 
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/gouldian_finch} 
+{\centering \includegraphics[width=1\linewidth]{figs/introduction/gouldian_finch} 
+
+}
 
 \caption{(ref:gouldian-finch)}(\#fig:gouldian-finch)
-\end{wrapfigure}
+\end{figure}
 
 Each island had produced its own variant (**Figure \@ref(fig:darwin-finches)**), and this caused Darwin to consider whether they had all arisen from a common ancestral finch, branching off like the boughs of a tree over time [QUOTE ORIGIN OF SPECIES] [@mukherjeeGeneIntimateHistory2016]. He understood that animal breeders took advantage of the natural variation in populations to select for desired traits, but he questioned what force had guided the development of these different varieties of finches in the wild [@mukherjeeGeneIntimateHistory2016].
 
 (ref:darwin-finches) Illustration of variation in Galapagos finches by John Gould, published in @darwinNaturalistVoyageJournal1882. Image from @darwinFinches.
 
-\begin{wrapfigure}{L}{0.5\textwidth}
+\begin{figure}
 
-\includegraphics[width=1\linewidth]{figs/introduction/Darwin's_finches_by_Gould} \hfill{}
+{\centering \includegraphics[width=1\linewidth]{figs/introduction/Darwin's_finches_by_Gould} 
+
+}
 
 \caption{(ref:darwin-finches)}(\#fig:darwin-finches)
-\end{wrapfigure}
+\end{figure}
 
 
 Well prior to Darwin's voyage, Thomas Malthus, a curate and amateur economist, had published a paper in titled *An Essay on the Principle of Population* [@malthusEssayPrinciplePopulation1872], in which he argued that the human population was in constant struggle with its limited resource pool, which in turn was affected by droughts, floods, epidemics, and diseases [@mukherjeeGeneIntimateHistory2016]. Darwin read the paper and identified this struggle for resources as the natural hand that selected those who possessed traits favourable for survival [@mukherjeeGeneIntimateHistory2016]. He continued to gestate these ideas throughout the period from his return from the voyage in 1836 through to 1858, when he read a draft paper that had been sent to him by the author, Alfred Russel Wallace (**Figure \@ref(fig:alfred-wallace)**). 
@@ -87,12 +90,14 @@ Like Darwin, Wallace had set off on a voyage to distant lands, and had observed 
 
 (ref:alfred-wallace) Alfred Russel Wallace, taken around 1895. Image from @alfredWallace1895.
 
-\begin{wrapfigure}{L}{0.5\textwidth}
+\begin{figure}
 
-\includegraphics[width=1\linewidth]{figs/introduction/Alfred-Russel-Wallace} \hfill{}
+{\centering \includegraphics[width=0.5\linewidth]{figs/introduction/Alfred-Russel-Wallace} 
+
+}
 
 \caption{(ref:alfred-wallace)}(\#fig:alfred-wallace)
-\end{wrapfigure}
+\end{figure}
 
 The presentation made few waves at the time, but Darwin proceeded to complete his opus, *On the Origin of Species by Means of Natural Selection* [@darwinOriginSpeciesMeans1859]. [WHAT DID HE ACTUALLY SAY? EVOLTUION THROUGH NATURAL SELECTION NOW ESTABLISHED AND HAS STOOD THE TEST OF TIME] The book was unexpectedly met with enthusiastic reviews, and sold well [@mukherjeeGeneIntimateHistory2016]. However two crucial questions yet remained: how was the variation within species generated in the first place, and how were the traits transmitted to future generations? [@mukherjeeGeneIntimateHistory2016]
 
@@ -102,23 +107,27 @@ Around the time the *Origin of Species* was published, the prevailing theory of 
 
 (ref:lamarck) Portrait of Jean Baptiste de Lamarck from 1802-1803 by Charles Thévenin [@lamarck1802].
 
-\begin{wrapfigure}{L}{0.4\textwidth}
+\begin{figure}
 
-\includegraphics[width=1\linewidth]{figs/introduction/Jean-Baptiste_de_Lamarck} \hfill{}
+{\centering \includegraphics[width=0.5\linewidth]{figs/introduction/Jean-Baptiste_de_Lamarck} 
+
+}
 
 \caption{(ref:lamarck)}(\#fig:lamarck)
-\end{wrapfigure}
+\end{figure}
 
 But by extending that logic, if a human had their arm amputated, their children would be born with shortened arms.^[This theory was experimentally tested by the German embryologist August Weismann, who amputated the tails of mice to determine whether the offspring would be born tailless. The offspring were all born with tails intact [@mukherjeeGeneIntimateHistory2016].] Darwin was convinced that selection rather acted upon *pre-existing* variation in a population, and proposed that that variation was transmitted by hereditary particles he called *gemmules* [@mukherjeeGeneIntimateHistory2016]. During conception, he posited that the gemmules of each parent were blended like paints. But such blending would result in a monochrome population, preventing the creation of the unique, outlying traits required to drive the variation he observed. Around this time Darwin had recorded notes on an obscure paper titled *Experiments in Plant Hybridization*, but he appeared to have inadvertently skipped the page containing a description of the experiments on pea hybrids performed by an Augustine monk called Gregor Mendel (**Figure \@ref(fig:mendel)**) [@mukherjeeGeneIntimateHistory2016].
 
 (ref:mendel) Photograph from @mendelPhoto.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{figure}
 
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/Gregor_Mendel_2} 
+{\centering \includegraphics[width=0.7\linewidth]{figs/introduction/Gregor_Mendel_2} 
+
+}
 
 \caption{(ref:mendel)}(\#fig:mendel)
-\end{wrapfigure}
+\end{figure}
 
 Mendel had aspired to become a teacher, but had failed the teacher's exam multiple times, so by 1853 he had returned to the monastery in Brno, Morvia (present day Czech Republic), and planted a crop of peas which he had been breeding for about three years [@mukherjeeGeneIntimateHistory2016]. He had collected 34 strains that bred "true", meaning that the offspring were identical to the parents in seven famous traits [@mukherjeeGeneIntimateHistory2016]:
 
@@ -146,12 +155,14 @@ In 1894, the English botanist William Bateson (**Figure \@ref(fig:bateson)**) ha
 
 (ref:bateson) Portrait of William Bateson, date and author unknown [@batesonPhoto].
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{figure}
 
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/Bateson2} 
+{\centering \includegraphics[width=1\linewidth]{figs/introduction/Bateson2} 
+
+}
 
 \caption{(ref:bateson)}(\#fig:bateson)
-\end{wrapfigure}
+\end{figure}
 
 ### Quantitative genetics: Francis Galton, Karl Pearson, Ronald Fisher and Sewall Wright
 
@@ -159,12 +170,14 @@ The rediscovery of Mendel's work triggered a vociferous debate between Bateson a
 
 (ref:galton) Portrait of Francis Galton, taken in the 1850s or early 1860s, originally scanned from @pearsonLifeLettersLabours2011 [@galtonPhoto].
 
-\begin{wrapfigure}{L}{0.5\textwidth}
+\begin{figure}
 
-\includegraphics[width=1\linewidth]{figs/introduction/Francis_Galton_1850s} \hfill{}
+{\centering \includegraphics[width=0.7\linewidth]{figs/introduction/Francis_Galton_1850s} 
+
+}
 
 \caption{(ref:galton)}(\#fig:galton)
-\end{wrapfigure}
+\end{figure}
 
 Through surveys he sent out to men and women in the mid-1880s, he requested they mail him detailed measurements on the height, weight, eye colour, intelligence, and artistic abilities of parents, grandparents, and children in return for a substantial fee [@mukherjeeGeneIntimateHistory2016]. With this data he discovered that tall parents indeed tend to have tall children, albeit on average, although the distribution of heights within a generation fit the shape of a normal distribution, or 'bell-curve' [@mukherjeeGeneIntimateHistory2016]. In a surprising twist, he also discovered that the mean height of the sons of the tallest fathers tended to be slightly lower than the father's height, and closer to the population's average -- a phenomenon he described as *regression to the mean* [@mukherjeeGeneIntimateHistory2016]. The *ancestral law of heredity* sparked an intellectual war with Bateson, through which they attempted to reconcile the dominant/recessive theory with the quantitative theory proposed by Galton [@mukherjeeGeneIntimateHistory2016]. 
 
@@ -193,23 +206,27 @@ r_{X,Y} = \frac{\mathrm{cov}(X,Y)}{s_X s_Y} (\#eq:cor)
 
 (ref:pearson) Portrait of Karl Pearson in 1910 [@pearsonPhoto].
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{figure}
 
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/Karl_Pearson_1910} 
+{\centering \includegraphics[width=0.7\linewidth]{figs/introduction/Karl_Pearson_1910} 
+
+}
 
 \caption{(ref:pearson)}(\#fig:pearson)
-\end{wrapfigure}
+\end{figure}
 
 Following in the footsteps of Galton and Pearson, the mathematician Ronald Fisher (**Figure \@ref(fig:fisher)**) of Caius College at the University of Cambridge began to apply his skills to elucidating how continuous traits, like height, could be driven by genetic variation [@mukherjeeGeneIntimateHistory2016]. In 1918, Fisher published his analysis in a landmark paper entitled *The Correlation between Relatives on the Supposition of Mendelian Inheritance* [@fisherXVCorrelationRelatives1919], where he described how the combination of a large number of Mendelian alleles acting on the same trait would result in a normal distribution. This reconciliation between Mendelian inheritance and observed continuous traits was the beginning of what was later referred to by Julian Huxley as the "**modern evolutionary synthesis**" [@huxleyEvolutionModernSynthesis1942; @taberyStruggleUnderstandInteraction2014]. 
 
 (ref:fisher) Photo of a young Ronald Fisher taken in 1913. Image from @fisherPhoto.
 
-\begin{wrapfigure}{L}{0.5\textwidth}
+\begin{figure}
 
-\includegraphics[width=1\linewidth]{figs/introduction/Youngronaldfisher2} \hfill{}
+{\centering \includegraphics[width=0.7\linewidth]{figs/introduction/Youngronaldfisher2} 
+
+}
 
 \caption{(ref:fisher)}(\#fig:fisher)
-\end{wrapfigure}
+\end{figure}
 
 In the same paper, Fisher also introduced the concept of *variance* as the square of the standard deviation developed by Galton and Pearson (Equation \@ref(eq:sd) above), and used it to partition the *causes* of variation [@taberyStruggleUnderstandInteraction2014].^[Fisher: "For stature the coefficient of correlation between brothers is about .54, which we may interpret by saying that 54% of their variance is accounted for by ancestry alone, and that 46% must have some other explanation."] In 1921 he published his first application of this "analysis of variance" (**ANOVA**) [@fisherProbableErrorCoefficient1921], which became widely used following its inclusion in his widely influential book *Statistical Methods for Research Workers* [@fisherStatisticalMethodsResearch1925].^[Fisher was also an ardent eugenicist. He helped create the Cambridge University Eugenics Society in 1911, hosting meetings in his rooms, organising public lectures by well-known eugenicists, assisting at the First International Eugenics Congress, and even delivering his own eugenic lectures [@mazumdarEugenicsHumanGenetics2005; @taberyStruggleUnderstandInteraction2014]. He was also a member of the British Eugenics Society, and helped establish the Society's Committee for Legalising Sterilisation. His statistical innovations were developed in part to make eugenic assessments of the relative importance of nature and nurture when it came to evaluating traits like feeble-mindedness [@taberyStruggleUnderstandInteraction2014]. Eugenics policies were implemented in the United States, Sweden, and other countries, which resulted in the forced sterilisations and deaths of millions [@rutherfordHowArgueRacist2020]. Ultimately, eugenics was adopted as a policy by the Nazi regime, resulting in the genocide of around a million Jews, Poles, and Gypsies. The association between eugenics and the horrors of World War II became inextricable, and the eugenics movement was all but finished [@mukherjeeGeneIntimateHistory2016].] Fisher later moved to the Rothamsted Agricultural Research Station in Harpenden, where he created many of the statistical methodologies -- such as tests of significance and the design of experiments -- that continue to be used by statisticians today [@taberyStruggleUnderstandInteraction2014].^[With Winifred A. Mackenzie, Fisher studied the response of 12 different potato varieties to different manure-based fertilizer treatments, where they set up a plot of two treatments (treatment/no treatment), with three replicate plots within each treatment, and three rows within each replicate plots with different manure treatments (either manure, manure + potassium sulfate, or manure + potassium chloride) [@fisherStudiesCropVariation1923]. From this data Fisher generated the first ANOVA table, listing the various causes of variation along with their respective contribution to total variation in crop yield [@taberyStruggleUnderstandInteraction2014].]
 
@@ -217,12 +234,14 @@ Around the time Fisher was working on his landmark 1919 paper, the American gene
 
 (ref:wright) Photo of Sewall Wright in 1965. Image from @goodnightSewallWrightSeven2014.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{figure}
 
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/Sewall_Wright} 
+{\centering \includegraphics[width=0.8\linewidth]{figs/introduction/Sewall_Wright} 
+
+}
 
 \caption{(ref:wright)}(\#fig:wright)
-\end{wrapfigure}
+\end{figure}
 
 ### Genetic mapping: Thomas Morgan, Tetsuo Aida and Theodosius Dobzhansky
 
@@ -230,12 +249,14 @@ During this fertile period in statistical genetics research, the physical locati
 
 (ref:morgan) Thomas Hunt Morgan in 1920. Portrait taken by A. F. Huettner. Image from @kenneyThomasHuntMorgan2009.
 
-\begin{wrapfigure}{L}{0.5\textwidth}
+\begin{figure}
 
-\includegraphics[width=1\linewidth]{figs/introduction/Thomas_Morgan} \hfill{}
+{\centering \includegraphics[width=0.8\linewidth]{figs/introduction/Thomas_Morgan} 
+
+}
 
 \caption{(ref:morgan)}(\#fig:morgan)
-\end{wrapfigure}
+\end{figure}
 
 Around 1905 Morgan began to breed *Drosophila*, identifying visible variants that he could track over generations, including white versus red eyes, forked versus straight bristles, sable-coloured bodies, curved legs; bent, bat-like wings; disjointed abdomens, and deformed eyes [@mukherjeeGeneIntimateHistory2016]. Through repeated crossing experiments, Morgan discovered that some genes were transmitted together at a higher rate than chance alone. He proposed that these genes were physically "linked" to one another, implying that they were situated on some string within the chromosome [@mukherjeeGeneIntimateHistory2016]. This advanced the understanding of a gene from a purely theoretical unit of inheritance to a physical unit [@mukherjeeGeneIntimateHistory2016]. He further discovered that, occasionally, a gene that was otherwise linked to another could "cross over" from one parental strand to the other, generating offspring with a mixture of parental alleles [@mukherjeeGeneIntimateHistory2016].
 
@@ -243,33 +264,42 @@ While Morgan was carrying out his experiments with *Drosophila*, Japanese resear
 
 (ref:aida) Photo of Tetsuo Aida from [@fukamachi100YearsMedaka2021].
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{figure}
 
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/Aida} 
+{\centering \includegraphics[width=0.9\linewidth]{figs/introduction/Aida} 
+
+}
 
 \caption{(ref:aida)}(\#fig:aida)
-\end{wrapfigure}
+\end{figure}
 
 (ref:aida-fig) Figure from @aidaInheritanceColorFreshWater1921 showing the different medaka colour variants used in the study.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{figs/introduction/Aida_1921_fig} \caption{(ref:aida-fig)}(\#fig:aida-fig)
+
+{\centering \includegraphics[width=1\linewidth]{figs/introduction/Aida_1921_fig} 
+
+}
+
+\caption{(ref:aida-fig)}(\#fig:aida-fig)
 \end{figure}
 
 In the 1930s, Theodosius Dobzhansky (**Figure \@ref(fig:dobzhansky)**), a Ukrainian biologist who had trained with Morgan, used *Drosophila pseudoobscura* to investigate how genetic variation drove evolution [@mukherjeeGeneIntimateHistory2016]. Using a single population of flies that he raised in different temperatures while controlling for all other environmental variables, he found that after four months, the genetic ratios in the two sub-populations had changed [@mukherjeeGeneIntimateHistory2016]. Through this experiment, he determined that genetic variation was the norm across biology; that the adaptive benefit of a given variant would depend on the particular environment that an individual found itself in, and that most phenotypes were driven by many genes interacting with each other and the environment, while also subject to chance [@mukherjeeGeneIntimateHistory2016]. 
 
 (ref:dobzhansky) Undated photo of Theodosius Dobzhansky from @coyneTheodosiusDobzhanskyHybrid2016, reprinted courtesy of UW-Madison Archives, #S05461.
 
-\begin{wrapfigure}{L}{0.5\textwidth}
+\begin{figure}
 
-\includegraphics[width=1\linewidth]{figs/introduction/Dobzhansky} \hfill{}
+{\centering \includegraphics[width=1\linewidth]{figs/introduction/Dobzhansky} 
+
+}
 
 \caption{(ref:dobzhansky)}(\#fig:dobzhansky)
-\end{wrapfigure}
+\end{figure}
 
 ### The discovery of the structure of DNA
 
-By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that compose chromosomes. After some flirtation with proteins as the molecule of inheritance, Oswald Avery finally proved that it was in fact deoxyribonucleic acid (**DNA**) that was "the material substance of the gene" -- the "cloth from which genes were cut" [@mukherjeeGeneIntimateHistory2016]. In 1953, Rosalind Franklin, James Watson, and Francis Crick, and Maurice Wilkins (**Figure \@ref(fig:all-four)**) discovered the structure of DNA using X-ray crystallography [@mukherjeeGeneIntimateHistory2016]. [EXPAND THIS SECTION. WATSON EUGENICIST? ENGAGE WITH HIS COMMENTS. CRICK SAYS SOMETHING TOO, BUT LESS PUBLICISED.]
+By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that compose chromosomes. After some flirtation with proteins as the molecule of inheritance, Oswald Avery finally proved that it was in fact deoxyribonucleic acid (**DNA**) that was "the material substance of the gene" -- the "cloth from which genes were cut" [@mukherjeeGeneIntimateHistory2016]. In 1953, Rosalind Franklin, James Watson, and Francis Crick, and Maurice Wilkins (**Figure \@ref(fig:all-four)**) discovered the structure of DNA using X-ray crystallography [@mukherjeeGeneIntimateHistory2016]. EXPAND THIS SECTION. WATSON EUGENICIST? ENGAGE WITH HIS COMMENTS. CRICK SAYS SOMETHING TOO, BUT LESS PUBLICISED.
 
 (ref:all-four) Composite image of Rosalind Franklin (1956), James Watson (1980s), Francis Crick (1980s) and Maurice Wilkins (early 1990s) from @DNAThenNow reprinted courtesy of Cold Spring Harbor Laboratory Library and Archive, James D. Watson Collection; Wilkins photo courtesy of TVNZ.
 
@@ -279,16 +309,16 @@ By the early 1940s, it was known that genes resided in chromatin, the mixture of
 
 ### The development of DNA sequencing
 
-Over the course of the 1970s, Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University of Cambridge, developed a method identifying each nucleotide base as it was added to the strand during DNA replication [@mukherjeeGeneIntimateHistory2016]. In 1977 he published what became known as the "Sanger method", using radio-labelled nucleic acids to identify the precise order and type of nucleotides that made up a DNA sequence [@sangerDNASequencingChainterminating1977], earning him a second Nobel prize in Chemistry in 1980 [@NobelPrizeChemistry].[DO I KNOW HOW SEQUENCING WORKS? MAKE SURE I KNOW.]
+Over the course of the 1970s, Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University of Cambridge, developed a method identifying each nucleotide base as it was added to the strand during DNA replication [@mukherjeeGeneIntimateHistory2016]. In 1977 he published what became known as the "Sanger method", using radio-labelled nucleic acids to identify the precise order and type of nucleotides that made up a DNA sequence [@sangerDNASequencingChainterminating1977], earning him a second Nobel prize in Chemistry in 1980 [@NobelPrizeChemistry].DO I KNOW HOW SEQUENCING WORKS? MAKE SURE I KNOW.
 
 (ref:sanger) Undated photo of Frederick Sanger from @ObituaryFredSanger2013.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{figure}
 
 \hfill{}\includegraphics[width=1\linewidth]{figs/introduction/sanger} 
 
 \caption{(ref:sanger)}(\#fig:sanger)
-\end{wrapfigure}
+\end{figure}
 
 These technological breakthroughs eventually led to the first draft of the human genome being published in 2001 by a large international consortium [@internationalhumangenomesequencingconsortiumInitialSequencingAnalysis2001a].^[The full sequence (including heterochromatic regions) was only completed in 2022 [@nurkCompleteSequenceHuman2022].] The improvement in sequencing technologies has continued to progess to the stage where a $100 human genome is now on the horizon [@pennisi100GenomeNew2022]. Long-read technologies developed by Pacific Biosciences and Oxford Nanopore Technologies can also generate single reads of over 2 megabases in length [@payneBulkVisGraphicalViewer2019] and directly sequence DNA modifications [@wangNanoporeSequencingTechnology2021]. These developments are making genetic technologies ever more accessible and informative, paving the way for greater insights into the genetic basis of phenotypic differences. Yet despite these technological advances, the relative contribution of genetics and environment to differences in complex traits is still not fully understood -- especially in humans -- and therefore remains an active area of research.
 
@@ -445,23 +475,23 @@ In this thesis I apply the Genome-Wide Linkage Analysis method to identifying th
 During the development of an embryo, somites are the earliest primitive segmental structures that form from  presomatic mesoderm cells (**PSM**) [@kimPeriodSomiteSegmentation2011]. They later differentiate into vertebrae, ribs, and skeletal muscles, thereby establishing the body's anterior-posterior axis. **Figure \@ref(fig:mouse-embryo)** depicts a number of formed somites in a 9.5-day-old mouse embryo. 
 (ref:mouse-embryo) Image of a mouse embryo at day 9.5 from @gridleyLongShortIt2006, showing somites in darker colours. 
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{figure}
 
 \hfill{}\includegraphics[width=1\linewidth]{figs/somites/mouse_embryo_gridley} 
 
 \caption{(ref:mouse-embryo)}(\#fig:mouse-embryo)
-\end{wrapfigure}
+\end{figure}
 
 Somite formation occurs rhythmically and sequentially, with the time between the formation of each pair of somites referred to as the "period". The period of somite formation varies greatly between species: ~30 minutes for zebrafish, 90 minutes for chickens, 2-3 hours for mice, and 5-6 hours for humans [@hubaudSignallingDynamicsVertebrate2014; @matsudaSpeciesspecificSegmentationClock2020]. **Figure \@ref(fig:somite-seg-ali)** shows the a series of time-stamped images of somite segmentation in medaka fish, generated by my collaborator, Ali Seleit. 
 
 (ref:somite-seg-ali) Time-stamped images of somite segmentation in medaka, generated by Ali Seleit.
 
-\begin{wrapfigure}{L}{0.5\textwidth}
+\begin{figure}
 
 \includegraphics[width=1\linewidth]{figs/somites/ali_fish_seg_compiled} \hfill{}
 
 \caption{(ref:somite-seg-ali)}(\#fig:somite-seg-ali)
-\end{wrapfigure}
+\end{figure}
 
 The period of somite formation is controlled by a molecular oscillator, known as the 'segmentation clock', which drives waves of gene expression in the Notch, fibroblast growth factor (FGF), and Wnt pathways, forming a signalling gradient that regresses towards the tail in concert with axis elongation [@gomezControlSegmentNumber2008]. Over the course of elongation, the wave period increases (i.e. each somite takes longer to form), and the PSM progressively shrinks until it is exhausted, eventually terminating somite formation [@gomezControlSegmentNumber2008]. 
 
@@ -471,23 +501,23 @@ In medaka, it is known that the southern Japanese *Cab* strain and the northern 
 
 (ref:F0-Cab-Kaga-HdrR) Comparison of period for three inbred medaka strains (*Cab*, *Kaga* and *HdrR*). Kaga's period is lower, and therefore it takes less time to form each somite than *Cab*. Figure generated by Ali Seleit.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{figure}
 
 \hfill{}\includegraphics[width=1\linewidth]{figs/somites/ali_period_F0_Cab_Kaga} 
 
 \caption{(ref:F0-Cab-Kaga-HdrR)}(\#fig:F0-Cab-Kaga-HdrR)
-\end{wrapfigure}
+\end{figure}
 
 Our collaborators accordingly set up a one-way F2 cross experiment as described in Chapter \@ref(MIKK-F2-cross), using the reporter-carrying *Cab* strain and the *Kaga* strain as the parental F0 strains, in order to identify genetic loci associated with these differences in clock dynamics. They inter-crossed the hybrid F1 generation to create a sample of 622 F2 individuals, imaged the developing embryos of these F2 samples, and used pyBOAT [@schmalAnalysisComplexCircadian2022] to extract the oscillation features during somite development. **Figure \@ref(fig:somite-period-ali)** shows a series of raw images used by pyBOAT to track the elongation of a medaka tail during somitogenesis, with the identified posterior tip of the embryo labelled with a blue circle.
 
 (ref:somite-period-ali) Screenshots of vertebral elongation in an F2 individual captured by Ali Seleit during imaging. The blue circle represents the point tracked by pyBOAT over time, generating the quantitative phenotype data on period development used in this study.  
 
-\begin{wrapfigure}{L}{0.5\textwidth}
+\begin{figure}
 
 \includegraphics[width=1\linewidth]{figs/somites/ali_compiled_somite_elong} \hfill{}
 
 \caption{(ref:somite-period-ali)}(\#fig:somite-period-ali)
-\end{wrapfigure}
+\end{figure}
 
 ### Behaviour
 

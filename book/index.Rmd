@@ -45,9 +45,7 @@ header-includes:
 
 # About {-}
 
-## Summary
-
-Japanese courage: a genetic analysis of complex traits in medaka fish and humans
+**Japanese courage: a genetic analysis of complex traits in medaka fish and humans**
 
 This thesis primarily explores how an individual's genes interact with the genes of their social companions to create differences in behaviour, using the Japanese medaka fish as a model organism. Chapter 1 sets out the introduction to the diverse topics covered in this thesis. 
 

@@ -8,6 +8,8 @@ bookdown::pdf_book:
 #  citation_package: natbib
   keep_tex: yes
   biblio-style: apalike
+  highlight: tango
+  extra_dependencies: ["float"]
 bookdown::bs4_book:
   css: style.css
   theme:

@@ -1,8 +1,3 @@
----
-zotero: ["PhD"]
-bibliography: book.bib
----
-
 ```{r, include = F}
 library(tidyverse)
 
@@ -37,8 +32,10 @@ colour_line = function(LINE){
 
 ```{r, include = F}
 # Source function enabling text wrapping around figures
-devtools::source_gist("16fec9e4b02b89bf92f72355ebe313b5")
+#devtools::source_gist("16fec9e4b02b89bf92f72355ebe313b5")
 ```
+
+
 
 
 [STRUCTURE SHOULD START WITH G AND E GO INTO P. THAT'S WHAT GWAS USES. THEN INTRODUCE SOCIAL GENETIC EFFECTS. THEN ADD THE FAMILY ONE. BUILD FROM SIMPLE TO MORE COMPLEX. EXPLAIN THE TECHNIQUES AT THE SAME TIME. IN A HUMAN SITUATION IS GETS EVEN MORE COMPLICATED, THEN PUT INTO THE APPENDIX.]
@@ -63,11 +60,11 @@ Aristotle later joined the discussion with his treatise *Generation of Animals* 
 
 ### Middle Ages
 
-From medieval times through to the 1800s, the prevailing theory of heredity was that a tiny human -- a homunculus -- sat within the sperm, waiting to be inflated upon its introduction to a woman's uterus. But from where did each previous homunculus originate? Logically, the theory would require each homunculus to hold another homunculus, *ad infinitum* [@mukherjeeGeneIntimateHistory2016]. This theory deceived the inventor of the microscope, Nicolaas Hartsoeker, into thinking he observed a homunculus in a sperm he was studying (**Figure \@ref(fig:homunculus-pic)**). But a fundamental question remained: what triggered the expansion of the human form, causing the embryo to develop new parts on its road to becoming fetus? The answer could only have been some instruction, blueprint, or code, but any specifics remained out of reach.
+From medieval times through to the 1800s, the prevailing theory of heredity was that a tiny human -- a homunculus -- sat within the sperm, waiting to be inflated upon its introduction to a woman's uterus. But from where did each previous homunculus originate? Logically, the theory would require each homunculus to hold another homunculus, *ad infinitum* [@mukherjeeGeneIntimateHistory2016]. This theory deceived the inventor of the microscope, Nicolaas Hartsoeker, into thinking he observed a homunculus in a sperm he was studying (**Figure \@ref(fig:homunculus-pic)**). But a fundamental question remained: what triggered the expansion of the human form, causing the embryo to develop new parts on its road to becoming a fetus? The answer could only have been some instruction, blueprint, or code, but any specifics remained out of reach.
 
 (ref:homunculus-pic) Preformation, drawn by Nicolaas Hartsoeker in 1695. Image adapted from @homunculusImage.
 
-```{r homunculus-pic, echo = F, fig.cap = '(ref:homunculus-pic)', out.width='100%', fig.align='right', wrapfigure = list("R", .5)}
+```{r homunculus-pic, echo = F, fig.cap = '(ref:homunculus-pic)', out.width='50%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/homunculus.png"))
 ```
 
@@ -87,7 +84,7 @@ After rounding Cape Horn and moving northward along the western coast of South A
 
 (ref:gouldian-finch) The Gouldian Finch, an Australian native bird described by British ornithological artist John Gould in 1844 and named after his deceased wife Elizabeth [@bancroftPartIntroductionGouldian]. Photograph by Sarah R. Pryke, published in @prykeRedDominatesBlack2006.
 
-```{r gouldian-finch, echo = F, fig.cap = '(ref:gouldian-finch)', out.width='100%', fig.align='right', wrapfigure = list("R", .5)}
+```{r gouldian-finch, echo = F, fig.cap = '(ref:gouldian-finch)', out.width='100%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/gouldian_finch.png"), auto_pdf = T)
 ```
 
@@ -95,7 +92,7 @@ Each island had produced its own variant (**Figure \@ref(fig:darwin-finches)**),
 
 (ref:darwin-finches) Illustration of variation in Galapagos finches by John Gould, published in @darwinNaturalistVoyageJournal1882. Image from @darwinFinches.
 
-```{r darwin-finches, echo = F, fig.cap = '(ref:darwin-finches)', out.width='100%', fig.align='left', wrapfigure = list("L", .5)}
+```{r darwin-finches, echo = F, fig.cap = '(ref:darwin-finches)', out.width='100%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/Darwin's_finches_by_Gould.png"), auto_pdf = T)
 ```
 
@@ -106,7 +103,7 @@ Like Darwin, Wallace had set off on a voyage to distant lands, and had observed 
 
 (ref:alfred-wallace) Alfred Russel Wallace, taken around 1895. Image from @alfredWallace1895.
 
-```{r alfred-wallace, echo = F, fig.cap = '(ref:alfred-wallace)', out.width='100%', fig.align='left', wrapfigure = list("L", .5)}
+```{r alfred-wallace, echo = F, fig.cap = '(ref:alfred-wallace)', out.width='50%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/Alfred-Russel-Wallace.png"), auto_pdf = T)
 ```
 
@@ -118,7 +115,7 @@ Around the time the *Origin of Species* was published, the prevailing theory of 
 
 (ref:lamarck) Portrait of Jean Baptiste de Lamarck from 1802-1803 by Charles Thévenin [@lamarck1802].
 
-```{r lamarck, echo = F, fig.cap = '(ref:lamarck)', out.width='100%', fig.align='left', wrapfigure = list("L", .4)}
+```{r lamarck, echo = F, fig.cap = '(ref:lamarck)', out.width='50%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/Jean-Baptiste_de_Lamarck.png"), auto_pdf = T)
 ```
 
@@ -126,7 +123,7 @@ But by extending that logic, if a human had their arm amputated, their children 
 
 (ref:mendel) Photograph from @mendelPhoto.
 
-```{r mendel, echo = F, fig.cap = '(ref:mendel)', out.width='100%', fig.align='right', wrapfigure = list("R", .5)}
+```{r mendel, echo = F, fig.cap = '(ref:mendel)', out.width='70%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/Gregor_Mendel_2.png"), auto_pdf = T)
 ```
 
@@ -156,7 +153,7 @@ In 1894, the English botanist William Bateson (**Figure \@ref(fig:bateson)**) ha
 
 (ref:bateson) Portrait of William Bateson, date and author unknown [@batesonPhoto].
 
-```{r bateson, echo = F, fig.cap = '(ref:bateson)', out.width='100%', fig.align='right', wrapfigure = list("R", .5)}
+```{r bateson, echo = F, fig.cap = '(ref:bateson)', out.width='100%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/Bateson2.png"), auto_pdf = T)
 ```
 
@@ -166,7 +163,7 @@ The rediscovery of Mendel's work triggered a vociferous debate between Bateson a
 
 (ref:galton) Portrait of Francis Galton, taken in the 1850s or early 1860s, originally scanned from @pearsonLifeLettersLabours2011 [@galtonPhoto].
 
-```{r galton, echo = F, fig.cap = '(ref:galton)', out.width='100%', fig.align='left', wrapfigure = list("L", .5)}
+```{r galton, echo = F, fig.cap = '(ref:galton)', out.width='70%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/Francis_Galton_1850s.png"), auto_pdf = T)
 ```
 
@@ -197,7 +194,7 @@ r_{X,Y} = \frac{\mathrm{cov}(X,Y)}{s_X s_Y} (\#eq:cor)
 
 (ref:pearson) Portrait of Karl Pearson in 1910 [@pearsonPhoto].
 
-```{r pearson, echo = F, fig.cap = '(ref:pearson)', out.width='100%', fig.align='right', wrapfigure = list("R", .5)}
+```{r pearson, echo = F, fig.cap = '(ref:pearson)', out.width='70%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/Karl_Pearson_1910.png"), auto_pdf = T)
 ```
 
@@ -205,7 +202,7 @@ Following in the footsteps of Galton and Pearson, the mathematician Ronald Fishe
 
 (ref:fisher) Photo of a young Ronald Fisher taken in 1913. Image from @fisherPhoto.
 
-```{r fisher, echo = F, fig.cap = '(ref:fisher)', out.width='100%', fig.align='left', wrapfigure = list("L", .5)}
+```{r fisher, echo = F, fig.cap = '(ref:fisher)', out.width='70%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/Youngronaldfisher2.png"), auto_pdf = T)
 ```
 
@@ -215,7 +212,7 @@ Around the time Fisher was working on his landmark 1919 paper, the American gene
 
 (ref:wright) Photo of Sewall Wright in 1965. Image from @goodnightSewallWrightSeven2014.
 
-```{r wright, echo = F, fig.cap = '(ref:wright)', out.width='100%', fig.align='right', wrapfigure = list("R", .5)}
+```{r wright, echo = F, fig.cap = '(ref:wright)', out.width='80%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/Sewall_Wright.png"), auto_pdf = T)
 ```
 
@@ -225,7 +222,7 @@ During this fertile period in statistical genetics research, the physical locati
 
 (ref:morgan) Thomas Hunt Morgan in 1920. Portrait taken by A. F. Huettner. Image from @kenneyThomasHuntMorgan2009.
 
-```{r morgan, echo = F, fig.cap = '(ref:morgan)', out.width='100%', fig.align='left', wrapfigure = list("L", .5)}
+```{r morgan, echo = F, fig.cap = '(ref:morgan)', out.width='80%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/Thomas_Morgan.png"), auto_pdf = T)
 ```
 
@@ -235,13 +232,13 @@ While Morgan was carrying out his experiments with *Drosophila*, Japanese resear
 
 (ref:aida) Photo of Tetsuo Aida from [@fukamachi100YearsMedaka2021].
 
-```{r aida, echo = F, fig.cap = '(ref:aida)', out.width='100%', fig.align='right', wrapfigure = list("R", .5)}
+```{r aida, echo = F, fig.cap = '(ref:aida)', out.width='90%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/Aida.png"), auto_pdf = T)
 ```
 
 (ref:aida-fig) Figure from @aidaInheritanceColorFreshWater1921 showing the different medaka colour variants used in the study.
 
-```{r aida-fig, echo = F, fig.cap = '(ref:aida-fig)', out.width='100%'}
+```{r aida-fig, echo = F, fig.cap = '(ref:aida-fig)', out.width='100%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/Aida_1921_fig.png"), auto_pdf = T)
 ```
 
@@ -249,13 +246,13 @@ In the 1930s, Theodosius Dobzhansky (**Figure \@ref(fig:dobzhansky)**), a Ukrain
 
 (ref:dobzhansky) Undated photo of Theodosius Dobzhansky from @coyneTheodosiusDobzhanskyHybrid2016, reprinted courtesy of UW-Madison Archives, #S05461.
 
-```{r dobzhansky, echo = F, fig.cap = '(ref:dobzhansky)', out.width='100%', fig.align='left', wrapfigure = list("L", .5)}
+```{r dobzhansky, echo = F, fig.cap = '(ref:dobzhansky)', out.width='100%', fig.align='center'}
 knitr::include_graphics(here::here("book/figs/introduction/Dobzhansky.png"), auto_pdf = T)
 ```
 
 ### The discovery of the structure of DNA
 
-By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that compose chromosomes. After some flirtation with proteins as the molecule of inheritance, Oswald Avery finally proved that it was in fact deoxyribonucleic acid (**DNA**) that was "the material substance of the gene" -- the "cloth from which genes were cut" [@mukherjeeGeneIntimateHistory2016]. In 1953, Rosalind Franklin, James Watson, and Francis Crick, and Maurice Wilkins (**Figure \@ref(fig:all-four)**) discovered the structure of DNA using X-ray crystallography [@mukherjeeGeneIntimateHistory2016]. [EXPAND THIS SECTION. WATSON EUGENICIST? ENGAGE WITH HIS COMMENTS. CRICK SAYS SOMETHING TOO, BUT LESS PUBLICISED.]
+By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that compose chromosomes. After some flirtation with proteins as the molecule of inheritance, Oswald Avery finally proved that it was in fact deoxyribonucleic acid (**DNA**) that was "the material substance of the gene" -- the "cloth from which genes were cut" [@mukherjeeGeneIntimateHistory2016]. In 1953, Rosalind Franklin, James Watson, and Francis Crick, and Maurice Wilkins (**Figure \@ref(fig:all-four)**) discovered the structure of DNA using X-ray crystallography [@mukherjeeGeneIntimateHistory2016]. EXPAND THIS SECTION. WATSON EUGENICIST? ENGAGE WITH HIS COMMENTS. CRICK SAYS SOMETHING TOO, BUT LESS PUBLICISED.
 
 (ref:all-four) Composite image of Rosalind Franklin (1956), James Watson (1980s), Francis Crick (1980s) and Maurice Wilkins (early 1990s) from @DNAThenNow reprinted courtesy of Cold Spring Harbor Laboratory Library and Archive, James D. Watson Collection; Wilkins photo courtesy of TVNZ.
 
@@ -265,7 +262,7 @@ knitr::include_graphics(here::here("book/figs/introduction/all_four.png"), auto_
 
 ### The development of DNA sequencing
 
-Over the course of the 1970s, Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University of Cambridge, developed a method identifying each nucleotide base as it was added to the strand during DNA replication [@mukherjeeGeneIntimateHistory2016]. In 1977 he published what became known as the "Sanger method", using radio-labelled nucleic acids to identify the precise order and type of nucleotides that made up a DNA sequence [@sangerDNASequencingChainterminating1977], earning him a second Nobel prize in Chemistry in 1980 [@NobelPrizeChemistry].[DO I KNOW HOW SEQUENCING WORKS? MAKE SURE I KNOW.]
+Over the course of the 1970s, Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University of Cambridge, developed a method identifying each nucleotide base as it was added to the strand during DNA replication [@mukherjeeGeneIntimateHistory2016]. In 1977 he published what became known as the "Sanger method", using radio-labelled nucleic acids to identify the precise order and type of nucleotides that made up a DNA sequence [@sangerDNASequencingChainterminating1977], earning him a second Nobel prize in Chemistry in 1980 [@NobelPrizeChemistry].DO I KNOW HOW SEQUENCING WORKS? MAKE SURE I KNOW.
 
 (ref:sanger) Undated photo of Frederick Sanger from @ObituaryFredSanger2013.
 

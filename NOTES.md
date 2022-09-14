@@ -1,5 +1,25 @@
 # Notes
 
+## 14 September 2022
+
+Finding extra loci:
+
+* 14-16:343557
+* 12-11:17115890
+* 11-20:9935760 Three in the same direction for DGE
+* 11-20:9638845 Three in the same direction for DGE
+* 11-20:9310537 4 in same direction for DGE
+* 9-18:21213381 Three in the same direction for DGE
+* 9-7:25910647 3 or 4 in the same direction for DGE
+* 9-6:30807013 4 in same direction for DGE and SGE
+* 9-1:5263649 6 in same direction for DGE and opposite direction for SGE
+* 8-5:24433800 3 in same direction for DGe and opposite direction for SGE
+* 2-18:19136722 6 in same direction for DGE 
+* 2-18:15178810 4 in same direction for DGE
+* 1-18:19136722 5 in same direction for DGE
+* 1-18:15178810 4 in same direction for DGE
+
+
 ## 12 September 2022
 
 Attempt at aligning logos at bottom of title page (from https://mirror.apps.cam.ac.uk/pub/tex-archive/macros/latex/contrib/subfig/subfig.pdf)
@@ -18,6 +38,23 @@ Attempt at aligning logos at bottom of title page (from https://mirror.apps.cam.
         \label{fig:vertcenter}
       \end{figure}
     } 
+
+Using subcaption:
+  - \postdate{\end{center}
+      \begin{figure}[!tpb]
+      \centering
+        \begin{subfigure}{0.3\textwidth}
+          \centering
+          \includegraphics[height=0.45in]{/Users/brettell/Documents/Repositories/PhD-thesis/book/figs/title/cambridge_university2.pdf}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{0.3\textwidth}
+          \centering
+          \vfill
+          \includegraphics[height=0.55in]{/Users/brettell/Documents/Repositories/PhD-thesis/book/figs/title/EMBL_EBI_Logo_black.pdf}
+        \end{subfigure}
+      \end{figure}
+    }
 
 ## 9 September 2022
 

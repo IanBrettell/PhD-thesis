@@ -1,9 +1,6 @@
----
-zotero: ["PhD"]
-bibliography: book.bib
----
-
 # Variation in the frequency of trait-associated alleles across global human populations {#Fst-chap}
+
+\chaptermark{Human $F_{ST}$ distributions}
 
 ## Background {#Fst-background}
 
