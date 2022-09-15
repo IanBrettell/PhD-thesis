@@ -74,11 +74,11 @@ The best combination of parameters *without* this asymmetry was a time interval 
 \clearpage
 ## Social genetic effects
 
-As discussed above, in this project our traits of interest include not only direct genetic behaviours, but also social genetic behaviours. I therefore sought to identify the MIKK panel lines that transmit their behaviour onto the reference *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* tank partners either to the greatest or least extent. I refer to this transmission of behaviour as "*charisma*", to capture the element of behavioural influence. I formulated two methods to measure charisma, which I refer to as a) HMM state co-occupancy; and b) reference deviation. The first, HMM state co-occupancy, measures the proportions of time that the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* reference fish spends in the same HMM state as its tank partner. The second, deviation of the reference fishes' behaviour from the behaviour exhibited in the control condition, seeks to quantify the extent to which the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}*'s behaviour changes when partnered with each MIKK panel line.
+As discussed above, in this project our traits of interest include not only direct genetic behaviours, but also social genetic behaviours. I therefore sought to identify the MIKK panel lines that transmit their behaviour onto the reference *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* tank partners either to the greatest or least extent. I refer to this transmission of behaviour as "***charisma***", to capture the element of behavioural influence. I formulated two methods to measure charisma, which I refer to as a) HMM state co-occupancy; and b) reference deviation. The first, HMM state co-occupancy, measures the proportions of time that the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* reference fish spends in the same HMM state as its tank partner. The second, deviation of the reference fishes' behaviour from the behaviour exhibited in the control condition, seeks to quantify the extent to which the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}*'s behaviour changes when partnered with each MIKK panel line.
 
 ### State co-occupancy
 
-**Figure \@ref(fig:F0-sge-cooc-box)** sets out the proportions of total time for each assay sub-component that each pair of individual fish spent in the same HMM state, grouped by line and ranked in the same order as their group median for individual mean speed as shown above in **Figure \@ref(fig:mikk-mean-speed)**. **\@ref(fig:F0-sge-cooc-box)A** shows the data as boxplots, with $p$-values from the Kruskal-Wallis test comparing all groups. **Figure \@ref(fig:F0-sge-cooc-box)B** shows the same data but with each group's median represented by columns to make it easier to compare group medians. Of the slower-moving lines, \definecolor{8-2 (‘Gail’)_FF699C}{HTML}{FF699C}\textcolor{8-2 (‘Gail’)_FF699C}{8-2 (‘Gail’)} and \definecolor{18-2 (‘Elsa’)_FF66A6}{HTML}{FF66A6}\textcolor{18-2 (‘Elsa’)_FF66A6}{18-2 (‘Elsa’)} tend to show relatively higher state co-occupancy in the open field component, but during the novel object component, the slow-moving line \definecolor{139-4_FF61CC}{HTML}{FF61CC}\textcolor{139-4_FF61CC}{139-4} has the highest median co-occupancy of all lines. Of the faster-moving lines, \definecolor{43-2_F17D50}{HTML}{F17D50}\textcolor{43-2_F17D50}{43-2} and \definecolor{13-2_F57A5F}{HTML}{F57A5F}\textcolor{13-2_F57A5F}{13-2} showed the highest state co-occupancy during the open field assay component. However, the moderate-to-fast line \definecolor{21-2 (‘Amelia’)_49B500}{HTML}{49B500}\textcolor{21-2 (‘Amelia’)_49B500}{21-2 (‘Amelia’)} had relatively high state co-occupancy during both assay components.
+**Figure \@ref(fig:F0-sge-cooc-box)** sets out the proportions of total time for each assay sub-component that each pair of individual fish spent in the same HMM state, grouped by line and ranked in the same order as their group median for individual mean speed as shown above in **Figure \@ref(fig:mikk-mean-speed)**. **\@ref(fig:F0-sge-cooc-box)A** shows the data as boxplots, with $p$-values from the Kruskal-Wallis test comparing all groups. **Figure \@ref(fig:F0-sge-cooc-box)B** shows the same data but with each group's median represented by columns to make it easier to compare group medians. Of the slower-moving lines, \definecolor{8-2 (‘Gail’)_FF699C}{HTML}{FF699C}\textcolor{8-2 (‘Gail’)_FF699C}{8-2 (‘Gail’)}^[Named after Gail the Snail, the slow but curiously captivating character from *It's Always Sunny in Philadelphia*.] and \definecolor{18-2 (‘Elsa’)_FF66A6}{HTML}{FF66A6}\textcolor{18-2 (‘Elsa’)_FF66A6}{18-2 (‘Elsa’)} tend to show relatively higher state co-occupancy in the open field component, but during the novel object component, the slow-moving line \definecolor{139-4_FF61CC}{HTML}{FF61CC}\textcolor{139-4_FF61CC}{139-4} has the highest median co-occupancy of all lines. Of the faster-moving lines, \definecolor{43-2_F17D50}{HTML}{F17D50}\textcolor{43-2_F17D50}{43-2} and \definecolor{13-2_F57A5F}{HTML}{F57A5F}\textcolor{13-2_F57A5F}{13-2} showed the highest state co-occupancy during the open field assay component. However, the moderate-to-fast line \definecolor{21-2 (‘Amelia’)_49B500}{HTML}{49B500}\textcolor{21-2 (‘Amelia’)_49B500}{21-2 (‘Amelia’)}^[Named after the fast and charismatic Amelia Earhart.] had relatively high state co-occupancy during both assay components.
 
 (ref:F0-sge-cooc-box) Frequency of HMM state co-occupancy
 
@@ -86,7 +86,7 @@ As discussed above, in this project our traits of interest include not only dire
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/0.08_15_cooc_box_all} \caption{(ref:F0-sge-cooc-box)}(\#fig:F0-sge-cooc-box)
 \end{figure}
 
-To visualise which states are driving the higher co-occupancy measures, for a selection of lines I generated a heatmap of the states occupied simultaneously by the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* reference and MIKK test fishes, combining the observations for all individuals within each test fish group (**Figure \@ref(fig:F0-sge-cooc-heat)**). When *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* is paired with \definecolor{18-2 (‘Elsa’)_FF66A6}{HTML}{FF66A6}\textcolor{18-2 (‘Elsa’)_FF66A6}{18-2 (‘Elsa’)} or \definecolor{8-2 (‘Gail’)_FF699C}{HTML}{FF699C}\textcolor{8-2 (‘Gail’)_FF699C}{8-2 (‘Gail’)}, the fishes most frequently occupy states 3 or 1 in both open field and novel object components. In pairings with line \definecolor{139-4_FF61CC}{HTML}{FF61CC}\textcolor{139-4_FF61CC}{139-4}, while the test fishes remain in the still states 1 or 3 during the open field assay, *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* tends to be moving much faster in states 11 and 13. However, during the novel object component, they co-occupy state 3 more than in any other combination. This general pattern is observed with line \definecolor{14-2_F066EA}{HTML}{F066EA}\textcolor{14-2_F066EA}{14-2} as well, albeit to a lesser extent. For \definecolor{38-2 (‘Mark’)_00C08B}{HTML}{00C08B}\textcolor{38-2 (‘Mark’)_00C08B}{38-2 (‘Mark’)}, the fishes tend not to show a strong preference for co-occupying a particular state for either assay component, but the diagonal spread indicates that they tend to move at similar speeds. When paired with the faster moving \definecolor{21-2 (‘Amelia’)_49B500}{HTML}{49B500}\textcolor{21-2 (‘Amelia’)_49B500}{21-2 (‘Amelia’)}, the novel object component appears to accentuate the co-occupancy of state 3 that is also observed in the open field component. Finally, when paired with line \definecolor{40-1 (‘Max’)_93AA00}{HTML}{93AA00}\textcolor{40-1 (‘Max’)_93AA00}{40-1 (‘Max’)}, in both assay components, both fishes show a strong preference for the faster-moving states.
+To visualise which states are driving the higher co-occupancy measures, for a selection of lines I generated a heatmap of the states occupied simultaneously by the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* reference and MIKK test fishes, combining the observations for all individuals within each test fish group (**Figure \@ref(fig:F0-sge-cooc-heat)**). When *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* is paired with \definecolor{18-2 (‘Elsa’)_FF66A6}{HTML}{FF66A6}\textcolor{18-2 (‘Elsa’)_FF66A6}{18-2 (‘Elsa’)} or \definecolor{8-2 (‘Gail’)_FF699C}{HTML}{FF699C}\textcolor{8-2 (‘Gail’)_FF699C}{8-2 (‘Gail’)}, the fishes most frequently occupy states 3 or 1 in both open field and novel object components. In pairings with line \definecolor{139-4_FF61CC}{HTML}{FF61CC}\textcolor{139-4_FF61CC}{139-4}, while the test fishes remain in the still states 1 or 3 during the open field assay, *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* tends to be moving much faster in states 11 and 13. However, during the novel object component, they co-occupy state 3 more than in any other combination. This general pattern is observed with line \definecolor{14-2_F066EA}{HTML}{F066EA}\textcolor{14-2_F066EA}{14-2} as well, albeit to a lesser extent. For \definecolor{38-2 (‘Mark’)_00C08B}{HTML}{00C08B}\textcolor{38-2 (‘Mark’)_00C08B}{38-2 (‘Mark’)},^[Line 38-2 appears to have intermediate measures for both movement and charisma, causing us to affectionately refer to it as the "boring" line, and then later to christen it after Mark Corrigan from *Peep Show*.] the fishes tend not to show a strong preference for co-occupying a particular state for either assay component, but the diagonal spread indicates that they tend to move at similar speeds. When paired with the faster moving \definecolor{21-2 (‘Amelia’)_49B500}{HTML}{49B500}\textcolor{21-2 (‘Amelia’)_49B500}{21-2 (‘Amelia’)}, the novel object component appears to accentuate the co-occupancy of state 3 that is also observed in the open field component. Finally, when paired with line \definecolor{40-1 (‘Max’)_93AA00}{HTML}{93AA00}\textcolor{40-1 (‘Max’)_93AA00}{40-1 (‘Max’)},^[Line 40-1 and its sibling line 40-2 both appeared to be preternaturally bold, like the siblings Max and Moritz from Wilhelm Busch's eponymous story [@buschMaxUndMoritz2015].] in both assay components, both fishes show a strong preference for the faster-moving states.
 
 (ref:F0-sge-cooc-heat) Heatmaps for a selection of MIKK panel lines (including those ultimately selected as the parental strains in the F2 cross) showing the frequency of HMM states simultaneously occupied by the reference (x-axis) and test (y-axis) fishes during the open field (**A**) and novel object (**B**) assay components, aggregated over all replicates for each line. 
 
@@ -95,8 +95,6 @@ To visualise which states are driving the higher co-occupancy measures, for a se
 \end{figure}
 
 ### Deviation of *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* from its control condition
-
-[DEFINE CHARISMA: "I USE THE TERM CHARISMA TO MEAN..."]
 
 The second method for quantifying the level of behavioural transmission from test fish to *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* reference fish was to determine the proportion of time that the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* spent in a particular state when paired with another *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}*, and then quantify the degree to which those proportions change when in the presence of a fish from another line (**Figure \@ref(fig:F0-sge-deviation)**). **Figure \@ref(fig:F0-sge-deviation)A** presents boxplots for state frequencies for all *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* individuals in *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}*-*\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* pairings. I further calculated the state frequencies for all *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* reference fishes for all other MIKK line pairings. For each combination of assay component, line-pairing, and HMM state, I then ran Welch's t-test [@ruxtonUnequalVarianceTtest2006] comparing the proportions of time the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* individuals spent in that state when paired with another *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}*, against the proportions of time the *\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}* reference individuals spent in that state when paired with a different MIKK line. I then summed the t-statistics across states to generate a single metric for each combination of line and assay component, and plotted the results in **Figure \@ref(fig:F0-sge-deviation)B**.
 
@@ -164,7 +162,7 @@ novel object & 5 & 27.84 & 4.27e-03\\
 \end{tabular}
 \end{table}
 
-**Figures \@ref(fig:F2-time-dge-of)** and **\@ref(fig:F2-time-dge-no)** highlight the states that showed significant differences in the proportions of time that these lines spent in those states for the open field and novel object assay components respectively. In both figures, **A** highlights the significant states, **B** shows how the individuals moved through those states over the course of the 10-minute assay component, and **C** shows the densities of the significant states within each line. For the open field component, although the tile plots show a notable level of variance within each line, the density plots clarify how the three slow-moving lines (8-2, 18-2 and 50-2) spent little time in the fast-moving states 10, 12 and 14 relative to the fast-moving lines. Interestingly, the intermediate line 38-2 tended to transition into these states around the middle of the video, presumably a period of habituating to the new environment.
+**Figures \@ref(fig:F2-time-dge-of)** and **\@ref(fig:F2-time-dge-no)** highlight the states that showed significant differences in the proportions of time that these lines spent in those states for the open field and novel object assay components respectively. In both figures, **A** highlights the significant states, **B** shows how the individuals moved through those states over the course of the 10-minute assay component, and **C** shows the densities of the significant states within each line. For the open field component, although the tile plots show a notable level of variance within each line, the density plots clarify how the three slow-moving lines (\definecolor{8-2 (‘Gail’)_FF699C}{HTML}{FF699C}\textcolor{8-2 (‘Gail’)_FF699C}{8-2 (‘Gail’)}, \definecolor{18-2 (‘Elsa’)_FF66A6}{HTML}{FF66A6}\textcolor{18-2 (‘Elsa’)_FF66A6}{18-2 (‘Elsa’)} and \definecolor{50-2 (‘Patrick’)_BB81FF}{HTML}{BB81FF}\textcolor{50-2 (‘Patrick’)_BB81FF}{50-2 (‘Patrick’)}) spent little time in the fast-moving states 10, 12 and 14 relative to the fast-moving lines. Interestingly, the intermediate line \definecolor{38-2 (‘Mark’)_00C08B}{HTML}{00C08B}\textcolor{38-2 (‘Mark’)_00C08B}{38-2 (‘Mark’)} tended to transition into these states around the middle of the video, presumably a period of habituating to the new environment.
 
 (ref:F2-time-dge-of) Differences between MIKK F0 lines in the HMM states they occupied during the *open field* assay component. **A**: 15 HMM states with panels coloured red to indicate significant differences between MIKK F0 lines in the proportion of time spent in those states. **B**: Transitions between HMM states across time for each individual test fish, grouped by MIKK line Tiles are coloured by the state most frequently occupied by each fish within 2-second intervals. **C**: Densities within each MIKK line for the occupation of states that significantly differed between strains (colour), with other states consolidated (grey).
 
@@ -294,8 +292,6 @@ I then took these HMM-generated haplotype block calls and used them to impute ea
 
 ### Genetic linkage analysis
 
-
-
 For the purpose of using the *GCTA* software package [@yangGCTAToolGenomewide2011] for the genetic linkage analysis,  That software requires the construction of a genetic relationship matrix (**GRM**) $\textbf{A} = \textbf{WW}'/N$. $\textbf{W}$ is a standardised genotype matrix with the $ij^{th}$ element $w_{ij} = (x_{ij} - 2p_i) / \sqrt{(2p_i(1-p_i)}$, where $x_{ij}$ is the number of copies of the reference allele for the $i^{th}$ SNP of the $j^{th}$ individual and $p_i$ is the frequency of the reference allele [@yangGCTAToolGenomewide2011].
 
 For the GRM, I first filtered the .bed for SNPs that had no missing calls for any samples ($M_{SNPs}$ = 44,360). I then used these SNPs to construct a "leave-one-chromosome-out" (**LOCO**) genetic relationship matrix for each chromosome -- that is, if the "focal" chromosome was chr1, I would exclude the SNPs on that chromosome before constructing the GRM. To illustrate, **Figure \@ref(fig:F2-grm)** is a GRM constructed using all 44,360 non-missing SNPs. However, given the relatively small amount of non-missing SNPs on each chromosome, the number of SNPs on the focal chromosome that were excluded was small, resulting in GRMs that appear almost identical by eye -- see the LOCO-GRM for chromosome 1 in **Appendix \@ref(fig:loco-grm-chr1)**. The individuals from each cross neatly cluster together, and the individuals that share one parental strain cluster nearby.
@@ -344,7 +340,7 @@ For social genetic effects, I was attempting to discover genetic variants in the
 
 
 
-The next goal was to attempt to identify the SNPs that are mostly likely to be the causal variants, or closest in proximity to the causal variants, responsible for differences in the phenotypes of interest. I therefore proceeded to extract the significant SNPs and use Ensembl's Variant Effect Predictor (**VEP**) [@mclarenEnsemblVariantEffect2016] to identify the SNPs that are most likely to have a functional consequence, and determine whether the genes they reside in have already been identified as being involved in biological pathways that could be related to behaviour. **Table \@ref(tab:F2-sig-snps-consq-counts)** shows the counts for the different potential consequences of the unique significant SNPs, based on Ensembl's annotation of the *HdrR* reference. I note that as multiple genes can overlap the same locus (including those transcribed from opposing strands), one SNP may map to multiple genes and therefore be counted as having more than one type of consequence.
+The next goal was to attempt to identify the SNPs that are mostly likely to be the causal variants, or closest in proximity to the causal variants, that are responsible for differences in the phenotypes of interest. I therefore proceeded to extract the significant SNPs and use Ensembl's Variant Effect Predictor (**VEP**) [@mclarenEnsemblVariantEffect2016] to identify the SNPs that are most likely to have a functional consequence, and determine whether the genes they reside in have already been identified as being involved in biological pathways that could be related to behaviour. **Table \@ref(tab:F2-sig-snps-consq-counts)** shows the counts for the different potential consequences of the unique significant SNPs, based on Ensembl's annotation of the *HdrR* reference genome. I note that as multiple genes can overlap the same locus (including those transcribed from opposing strands), one SNP may map to multiple genes and therefore be counted as having more than one type of consequence.
 
 \begin{table}
 
@@ -397,7 +393,7 @@ DGE & novel object & 10 & 10 & 15319434 & C & T & T & ENSORLG00000024866 & proto
 \end{tabular}}
 \end{table}
 
-One SNP, 10:15,319,434, was significant for DGE for frequencies in both state 3 (**Figure \@ref(fig:sig-snp-10-15mb)**) and 10 during the novel object assay (see **Figure \@ref(fig:F2-man-dge-no-3)** above for state 3), and maps to two genes: ENSORLG00000029574 and ENSORLG00000024866. ENSORLG00000029574 is a novel gene on the forward strand with no recorded phenotypes. Based on discussions about this issue with an expert on genetic prediction analyses, it is most likely that this was a mis-prediction. However, on the reverse strand of this locus is ENSORLG00000024866, a gene for protocadherin alpha-C2-like, a well-known protein involved in mammalian synapse formation [@junghansPostsynapticDifferentialLocalization2008; @phillipsGProtocadherinsAreTargeted2003].
+One SNP, 10:15,319,434, was significant in respect of DGE for frequencies in both state 3 (**Figure \@ref(fig:sig-snp-10-15mb)**) and 10 during the novel object assay (see **Figure \@ref(fig:F2-man-dge-no-3)** above for state 3), and maps to two genes: ENSORLG00000029574 and ENSORLG00000024866. ENSORLG00000029574 is a novel gene on the forward strand with no recorded phenotypes. Based on discussions about this issue with an expert on genetic prediction analyses, it is most likely that this was a mis-prediction. However, on the reverse strand of this locus is ENSORLG00000024866, a gene for protocadherin alpha-C2-like, a well-known protein involved in mammalian synapse formation [@junghansPostsynapticDifferentialLocalization2008; @phillipsGProtocadherinsAreTargeted2003].
 
 FIND ONE MORE LOCUS
 
@@ -422,26 +418,34 @@ There are additional significant loci of note shown in **Figure \@ref(fig:F2-man
 
 \begin{table}
 
-\caption{(\#tab:tbl-sig-snp-chr-9-10)Significant loci on chromosome 9 for direct genetic effects on state 3 frequency during the novel object assay.}
+\caption{(\#tab:tbl-sig-snp-chr-9-10)Top significant SNPs on chromosomes 9 and 10 for direct genetic effects on state 3 frequency during the novel object assay.}
 \centering
 \resizebox{\linewidth}{!}{
 \begin{tabular}[t]{llrrrllllll}
 \toprule
 Genetic effect & Assay & State & Chr & Pos & Ref & Alt & Allele & Gene & Description & Human homologue\\
 \midrule
-\cellcolor{gray!6}{DGE} & \cellcolor{gray!6}{novel object} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{9} & \cellcolor{gray!6}{9802754} & \cellcolor{gray!6}{C} & \cellcolor{gray!6}{A} & \cellcolor{gray!6}{A} & \cellcolor{gray!6}{ENSORLG00000024663} & \cellcolor{gray!6}{glutamate ionotropic receptor delta type subunit 2} & \cellcolor{gray!6}{GRID2}\\
-DGE & novel object & 3 & 10 & 18537719 & C & A & A & ENSORLG00000006464 & neuroligin 3a & NLGN3\\
+\cellcolor{gray!6}{DGE} & \cellcolor{gray!6}{open field} & \cellcolor{gray!6}{8} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{24433800} & \cellcolor{gray!6}{C} & \cellcolor{gray!6}{A} & \cellcolor{gray!6}{A} & \cellcolor{gray!6}{ENSORLG00000012418} & \cellcolor{gray!6}{claudin 19} & \cellcolor{gray!6}{CLDN19}\\
+DGE & novel object & 3 & 9 & 9802754 & C & A & A & ENSORLG00000024663 & glutamate ionotropic receptor delta type subunit 2 & GRID2\\
+\cellcolor{gray!6}{DGE} & \cellcolor{gray!6}{novel object} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{18537719} & \cellcolor{gray!6}{C} & \cellcolor{gray!6}{A} & \cellcolor{gray!6}{A} & \cellcolor{gray!6}{ENSORLG00000006464} & \cellcolor{gray!6}{neuroligin 3a} & \cellcolor{gray!6}{NLGN3}\\
+DGE & novel object & 9 & 6 & 30807013 & T & A & A & ENSORLG00000016329 & pannexin 2 & PANX2\\
 \bottomrule
 \end{tabular}}
 \end{table}
 
+#### *GRID2*
+
 The first is located around 9:9,802,754 (**Figure \@ref(fig:sig-snp-9-9mb)**), and maps to a gene for glutamate ionotropic receptor delta type subunit 2, an orthologue of the human gene *GRID2*. Deletions in this gene have been found to cause ataxia in humans [@hillsDeletionsGRID2Lead2013; @utineHomozygousDeletionGRID22013], and other mutations in this gene have been found to cause various neurological disorders in mice [Mouse Genome Database, @blakeMouseGenomeDatabase2021]. 
 
+<!--
 (ref:sig-snp-9-9mb) State 3 frequency during the novel object assay for counts of the alternative allele (A) at SNP 9:9,802,754. The boxes are coloured on the left by the paternal line, and on the right by the maternal line.
 
 \begin{figure}
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/sig_snps_boxplots/3-9:9802754} \caption{(ref:sig-snp-9-9mb)}(\#fig:sig-snp-9-9mb)
 \end{figure}
+-->
+
+#### *NLGN3*
 
 The second locus resides around 10:18,537,719 (**Figure \@ref(fig:sig-snp-10-18mb)**) within the neuroligin 3 gene, an orthologue of the human gene *NLGN3*, which has been linked with autism in humans [@jamainMutationsXlinkedGenes2003], and various neurological in mice and rats [@blakeMouseGenomeDatabase2021; @smithYearRatRat2020].
 
@@ -449,6 +453,30 @@ The second locus resides around 10:18,537,719 (**Figure \@ref(fig:sig-snp-10-18m
 
 \begin{figure}
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/sig_snps_boxplots/3-10:18537719} \caption{(ref:sig-snp-10-18mb)}(\#fig:sig-snp-10-18mb)
+\end{figure}
+
+#### *cldn19*
+
+The third locus resides around 5:24,433,800 with the claudin 19 gene, a projected zinc finger. 
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/sig_snps_boxplots/8-5:24433800} \caption{(ref:sig-snp-5-24mb)}(\#fig:sig-snp-5-24mb)
+\end{figure}
+
+#### *panx2*
+
+The fourth locus resides around 6:30,807,013 in the pannexin 2 (*panx2*) gene (ENSORLG00000016329), a projected zinc finger. 
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/sig_snps_boxplots/9-6:30807013} \caption{(ref:sig-snp-6-30mb)}(\#fig:sig-snp-6-30mb)
+\end{figure}
+
+#### *RELL1*
+
+The fifth locus resides around 18:15,178,810 in the RELT like 1 (*RELL1*) gene (ENSORLG00000006940). The orthologue for this gene has been found to be associated with abnormal auditory brainstem response and hyperactivity in mouse
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/sig_snps_boxplots/2-18:15178810} \caption{(ref:sig-snp-18-15mb)}(\#fig:sig-snp-18-15mb)
 \end{figure}
 
 These results provide promising evidence that the assay and methods described above can identify genetic loci associated with differences in behaviours - and potentially difference in the transmission of behaviour onto social companions - with functional relevance to humans. However, before seeking to functionally validate these variants, there are a number of steps that we seek to take to refine the analysis and thereby increase our confidence in the variants we ultimately select for validation.

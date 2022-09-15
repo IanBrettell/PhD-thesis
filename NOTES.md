@@ -4,20 +4,20 @@
 
 Finding extra loci:
 
-* 14-16:343557
-* 12-11:17115890
-* 11-20:9935760 Three in the same direction for DGE
-* 11-20:9638845 Three in the same direction for DGE
-* 11-20:9310537 4 in same direction for DGE
-* 9-18:21213381 Three in the same direction for DGE
-* 9-7:25910647 3 or 4 in the same direction for DGE
-* 9-6:30807013 4 in same direction for DGE and SGE
-* 9-1:5263649 6 in same direction for DGE and opposite direction for SGE
-* 8-5:24433800 3 in same direction for DGe and opposite direction for SGE
-* 2-18:19136722 6 in same direction for DGE 
-* 2-18:15178810 4 in same direction for DGE
-* 1-18:19136722 5 in same direction for DGE
-* 1-18:15178810 4 in same direction for DGE
+* 14-16:343557: serinc2l ENSORLG00000019865, phenotypes: impaired glucose tolerance
+* 12-11:17115890: no overlapping genes. 
+* 11-20:9935760 Three in the same direction for DGE. No overlapping genes.
+* 11-20:9638845 Three in the same direction for DGE. No overlapping genes
+* 11-20:9310537 4 in same direction for DGE. No overlapping genes.
+* 9-18:21213381 Three in the same direction for DGE. casq1b (calsequestrin-1) ENSORLG00000008656, phenotypes: abnormal freezing behaviour in mouse.
+* 9-7:25910647 3 or 4 in the same direction for DGE. sarnp (SAP domain containing ribonucleoprotein, projected ZFIN) ENSORLG00000029565. Phenotypes: increased startle reflex in mouse.
+* *9-6:30807013* 4 in same direction for DGE and SGE. panx2 (pannexin 2, projected zinc finger) ENSORLG00000016329. Decreased prepulse inhibition in mouse, and autism spectrum disorder and intellectual disability in rat.
+* 9-1:5263649 6 in same direction for DGE and opposite direction for SGE. No overlapping genes.
+* *8-5:24433800* 3 in same direction for DGe and opposite direction for SGE. cldn19 (claudin 19, projected zince finger) ENSORLG00000012418. Phenotypes: hypomagnesemia (magnesium deficiency) in human, impaired coordination in mouse.
+* 2-18:19136722 6 in same direction for DGE. No overlapping genes.
+* *2-18:15178810* 4 in same direction for DGE. RELL1 (RELT like 1) ENSORLG00000006940. Phenotypes: abnormal auditory brainstem response and hyperactivity in mouse. 
+* 1-18:19136722 5 in same direction for DGE. No overlapping genes.
+* 1-18:15178810 4 in same direction for DGE. 
 
 
 ## 12 September 2022

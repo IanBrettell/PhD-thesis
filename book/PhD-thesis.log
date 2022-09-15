@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.9)  14 SEP 2022 17:58
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.9)  15 SEP 2022 14:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1030,137 +1030,146 @@ LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 1.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.60783pt on input line 2.
+(Font)              scaled to size 8.60783pt on input line 6.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.14845pt on input line 2.
+(Font)              scaled to size 6.14845pt on input line 6.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.29813pt on input line 2.
+(Font)              scaled to size 12.29813pt on input line 6.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.60869pt on input line 2.
+(Font)              scaled to size 8.60869pt on input line 6.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.14906pt on input line 2.
+(Font)              scaled to size 6.14906pt on input line 6.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 12.29568pt on input line 2.
+(Font)              scaled to size 12.29568pt on input line 6.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.60698pt on input line 2.
+(Font)              scaled to size 8.60698pt on input line 6.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.14784pt on input line 2.
+(Font)              scaled to size 6.14784pt on input line 6.
 )
 \tf@toc=\write4
 \openout4 = `PhD-thesis.toc'.
 
 [3] [4
 
+] [5] [6] [7
+
+] [8
+
+] [9] [10
+
+] [11] [12
+
 ]
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 199.
-LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 199.
-[5] [6]
 Chapter 1.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 218.
+(Font)              scaled to size 20.74pt on input line 229.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 20.74pt on input line 218.
+(Font)              scaled to size 20.74pt on input line 229.
 
-LaTeX Warning: Reference `Pilot-chap' on page 7 undefined on input line 222.
-
-
-LaTeX Warning: Reference `MIKK-genomes-chap' on page 7 undefined on input line 222.
+LaTeX Warning: Reference `Pilot-chap' on page 13 undefined on input line 233.
 
 
-LaTeX Warning: Reference `pilot-data-collection' on page 7 undefined on input line 227.
+LaTeX Warning: Reference `MIKK-genomes-chap' on page 13 undefined on input line 233.
 
-[7
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 236.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
+(Font)              scaled to size 14.4pt on input line 236.
 
-]
+LaTeX Warning: Reference `pilot-data-collection' on page 13 undefined on input line 238.
+
+[13]
 File: figs/mikk_behaviour/line_mean_speed_0.08_all.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/line_mean_speed_0.08_all.pdf>
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 234.
+(Font)              scaled to size 9.0pt on input line 245.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 234.
+(Font)              scaled to size 9.0pt on input line 245.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 234.
+(Font)              scaled to size 9.0pt on input line 245.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[8]
+[14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[9]
+[15]
 File: figs/mikk_behaviour/line_mean_speed_variance_0.08_all.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/line_mean_speed_variance_0.08_all.pdf>
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 245.
+(Font)              scaled to size 7.0pt on input line 256.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 245.
+(Font)              scaled to size 8.0pt on input line 256.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 245.
-[10]
+(Font)              scaled to size 6.0pt on input line 256.
+[16]
 File: figs/mikk_behaviour/path_plot_22-1_18-2_10-1_300.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/path_plot_22-1_18-2_10-1_300.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[11] [12]
+[17] [18]
 File: figs/mikk_behaviour/select_0.08_15_10-1_dge.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/select_0.08_15_10-1_dge.pdf>
-[13]
+[19]
 
-LaTeX Warning: Reference `Pilot-chap' on page 14 undefined on input line 268.
+LaTeX Warning: Reference `Pilot-chap' on page 20 undefined on input line 279.
 
 File: figs/mikk_behaviour/compare_params.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/compare_params.pdf>
 File: figs/mikk_behaviour/0.08_17_polar_all_dge.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/0.08_17_polar_all_dge.pdf>
-[14
+[20
 
 ]
 
-LaTeX Warning: Reference `fig:hmm-states-05' on page 15 undefined on input line 284.
+LaTeX Warning: Reference `fig:hmm-states-05' on page 21 undefined on input line 295.
 
-[15]
+[21]
 File: figs/mikk_behaviour/0.08_15_polar_all_dge.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/0.08_15_polar_all_dge.pdf>
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 11.06721pt on input line 289.
+(Font)              scaled to size 11.06721pt on input line 300.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 11.06831pt on input line 289.
+(Font)              scaled to size 11.06831pt on input line 300.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.06612pt on input line 289.
+(Font)              scaled to size 11.06612pt on input line 300.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[16] [17]
+[22] [23]
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/it' will be
+(Font)              scaled to size 10.0pt on input line 308.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 300.
+(Font)              scaled to size 12.0pt on input line 311.
+LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/it' will be
+(Font)              scaled to size 8.0pt on input line 313.
 File: figs/mikk_behaviour/0.08_15_cooc_box_all.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/0.08_15_cooc_box_all.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[18
+[24
 
-]
+] [25]
 File: figs/mikk_behaviour/0.08_15_cooc_heatmap.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/0.08_15_cooc_heatmap.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[19]
+[26]
 Overfull \vbox (23.98915pt too high) has occurred while \output is active []
 
-[20]
+[27]
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/it' will be
-(Font)              scaled to size 12.0pt on input line 319.
+(Font)              scaled to size 12.0pt on input line 330.
 File: figs/mikk_behaviour/0.08_15_deviation.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/0.08_15_deviation.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[21] [22]
-Underfull \hbox (badness 1496) in paragraph at lines 338--339
+[28] [29]
+Underfull \hbox (badness 1496) in paragraph at lines 347--348
 \TU/LibreBaskerville(0)/m/n/10 transmission of slow-moving behaviours, I chose two slow-movement/high-
  []
 
@@ -1169,193 +1178,207 @@ File: figs/mikk_behaviour/line_mean_speed_variance_selected.pdf Graphic file (ty
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[23] [24]
+[30] [31]
 File: figs/mikk_behaviour/line_selection_schema.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/line_selection_schema.pdf>
-[25]
+[32]
 
-LaTeX Warning: Reference `Pilot-chap' on page 26 undefined on input line 365.
+LaTeX Warning: Reference `Pilot-chap' on page 33 undefined on input line 374.
 
 File: figs/mikk_behaviour/select_0.08_15_dge_of.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/select_0.08_15_dge_of.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[26
+[33
 
 ]
 Overfull \vbox (56.98915pt too high) has occurred while \output is active []
 
-[27]
+[34]
 File: figs/mikk_behaviour/select_0.08_15_dge_no.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/select_0.08_15_dge_no.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[28]
+[35]
 Overfull \vbox (56.98915pt too high) has occurred while \output is active []
 
-[29]
+[36]
 File: figs/mikk_behaviour/select_0.08_15_sge_of.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/select_0.08_15_sge_of.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[30]
+[37]
 Overfull \vbox (56.98915pt too high) has occurred while \output is active []
 
-[31]
+[38]
 File: figs/mikk_behaviour/select_0.08_15_sge_no.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/select_0.08_15_sge_no.pdf>
 
 Overfull \vbox (56.98915pt too high) has occurred while \output is active []
 
-[32]
+[39]
 
-LaTeX Warning: Reference `four-panel-app' on page 33 undefined on input line 446.
+LaTeX Warning: Reference `four-panel-app' on page 40 undefined on input line 455.
 
-[33] [34
+[40] [41
 
 ]
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 491.
+(Font)              scaled to size 8.0pt on input line 500.
 
-LaTeX Warning: Reference `inverse-norm-sec' on page 35 undefined on input line 491.
+LaTeX Warning: Reference `inverse-norm-sec' on page 42 undefined on input line 500.
 
 
-LaTeX Warning: Reference `Somite-chap' on page 35 undefined on input line 491.
+LaTeX Warning: Reference `Somite-chap' on page 42 undefined on input line 500.
 
 File: figs/mikk_behaviour/0.08_15_state_freq_F2_dge.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/0.08_15_state_freq_F2_dge.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[35]
+[42]
 File: figs/mikk_behaviour/0.08_15_state_freq_F2_sge.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/0.08_15_state_freq_F2_sge.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[36]
+[43]
 
-LaTeX Warning: Reference `Somite-chap' on page 37 undefined on input line 510.
+LaTeX Warning: Reference `Somite-chap' on page 44 undefined on input line 519.
 
-[37]
+[44]
 
-LaTeX Warning: Reference `Somite-chap' on page 38 undefined on input line 512.
+LaTeX Warning: Reference `Somite-chap' on page 45 undefined on input line 521.
 
 
-LaTeX Warning: Reference `fig:F2-recomb-blocks-missing' on page 38 undefined on input line 512.
+LaTeX Warning: Reference `fig:F2-recomb-blocks-missing' on page 45 undefined on input line 521.
 
 File: figs/mikk_behaviour/karyoplot_no_missing.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/karyoplot_no_missing.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[38]
+[45]
 
-LaTeX Warning: Reference `MIKK-genomes-chap' on page 39 undefined on input line 524.
+LaTeX Warning: Reference `MIKK-genomes-chap' on page 46 undefined on input line 533.
 
-[39]
+[46]
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 529.
+(Font)              scaled to size 5.0pt on input line 538.
 
-LaTeX Warning: Reference `fig:loco-grm-chr1' on page 40 undefined on input line 531.
+LaTeX Warning: Reference `fig:loco-grm-chr1' on page 47 undefined on input line 540.
 
 File: figs/mikk_behaviour/grm_man_0.8.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/grm_man_0.8.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[40] [41]
+[47] [48]
 File: figs/mikk_behaviour/manhattans/dge_no_3_time-quadrant.png Graphic file (type bmp)
 <figs/mikk_behaviour/manhattans/dge_no_3_time-quadrant.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[42]
+[49]
 File: figs/mikk_behaviour/manhattans/sge_of_13_time-quadrant.png Graphic file (type bmp)
 <figs/mikk_behaviour/manhattans/sge_of_13_time-quadrant.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[43] [44]
+[50]
+Underfull \hbox (badness 1253) in paragraph at lines 638--639
+\TU/LibreBaskerville(0)/m/n/10 both state 3 (\TU/LibreBaskerville(0)/b/n/10 Figure []1.23[]\TU/LibreBaskerville(0)/m/n/10 ) and 10 during the novel object assay (see \TU/LibreBaskerville(0)/b/n/10 Figure
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 638--639
+\TU/LibreBaskerville(0)/m/n/10 was a mis-prediction. However, on the reverse strand of this locus is EN-
+ []
+
+[51]
 File: figs/mikk_behaviour/sig_snps_boxplots/3-10:15319434.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/sig_snps_boxplots/3-10:15319434.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[45] [46]
+[52] [53]
 File: figs/mikk_behaviour/sig_snps_boxplots/13-12:5136828.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/sig_snps_boxplots/13-12:5136828.pdf>
-File: figs/mikk_behaviour/sig_snps_boxplots/3-9:9802754.pdf Graphic file (type pdf)
-<use figs/mikk_behaviour/sig_snps_boxplots/3-9:9802754.pdf>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `fig:sig-snp-9-9mb' on page 54 undefined on input line 681.
 
-[47]
 File: figs/mikk_behaviour/sig_snps_boxplots/3-10:18537719.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/sig_snps_boxplots/3-10:18537719.pdf>
-[48] [49]
+[54]
+File: figs/mikk_behaviour/sig_snps_boxplots/8-5:24433800.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/sig_snps_boxplots/8-5:24433800.pdf>
+File: figs/mikk_behaviour/sig_snps_boxplots/9-6:30807013.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/sig_snps_boxplots/9-6:30807013.pdf>
+[55]
+File: figs/mikk_behaviour/sig_snps_boxplots/2-18:15178810.pdf Graphic file (type pdf)
+<use figs/mikk_behaviour/sig_snps_boxplots/2-18:15178810.pdf>
+[56]
 
-LaTeX Warning: Reference `Pilot-chap' on page 50 undefined on input line 694.
+LaTeX Warning: Reference `Pilot-chap' on page 57 undefined on input line 732.
 
-[50
+[57
 
 ]
 
-LaTeX Warning: Reference `Pilot-chap' on page 51 undefined on input line 700.
+LaTeX Warning: Reference `Pilot-chap' on page 58 undefined on input line 738.
 
-[51]
+[58]
 File: figs/mikk_behaviour/coverage_F2.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/coverage_F2.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[52]
+[59]
 
-LaTeX Warning: Reference `Somite-chap' on page 53 undefined on input line 721.
+LaTeX Warning: Reference `Somite-chap' on page 60 undefined on input line 759.
 
-[53]
-Underfull \hbox (badness 1158) in paragraph at lines 737--739
+[60] [61] [62
+
+]
+Underfull \hbox (badness 1158) in paragraph at lines 782--784
 \TU/LibreBaskerville(0)/m/n/10 N. Lam, Elizabeth Lim-Melia, Nandini Chandy, et al. 2013. “Deletions
  []
 
 
-Underfull \hbox (badness 1681) in paragraph at lines 737--739
+Underfull \hbox (badness 1681) in paragraph at lines 782--784
 \TU/LibreBaskerville(0)/m/n/10 in Grid2 Lead to a Recessive Syndrome of Cerebellar Ataxia and Tonic
  []
 
-[54]
 Missing character: There is no Β (U+0392) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
 
-Underfull \hbox (badness 4048) in paragraph at lines 746--748
+Underfull \hbox (badness 4048) in paragraph at lines 791--793
 []\TU/LibreBaskerville(0)/m/n/10 Junghans, Dirk, Matthias Heidenreich, Iris Hack, Verdon Taylor, Michael
  []
 
 
-Underfull \hbox (badness 3386) in paragraph at lines 746--748
+Underfull \hbox (badness 3386) in paragraph at lines 791--793
 \TU/LibreBaskerville(0)/m/n/10 ization to Neuronal Subtypes of Protocadherin Β16 in the Mammalian
  []
 
+[63]
 Missing character: There is no Γ (U+0393) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[55] [56] (./PhD-thesis.aux)
+[64] (./PhD-thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `PhD-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 91C77056371A4266B76C590CCD86F98D;1824.
+(rerunfilecheck)             Checksum: F8ABFC94DA351F35DEB0C673CBC537E1;2119.
  ) 
 Here is how much of TeX's memory you used:
- 22977 strings out of 477747
- 440900 string characters out of 5843091
- 1022162 words of memory out of 5000000
- 43604 multiletter control sequences out of 15000+600000
- 476937 words of font info for 108 fonts, out of 8000000 for 9000
+ 23010 strings out of 477747
+ 442289 string characters out of 5843091
+ 1021516 words of memory out of 5000000
+ 43634 multiletter control sequences out of 15000+600000
+ 476945 words of font info for 109 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 86i,10n,122p,2157b,532s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,10n,122p,2560b,532s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on PhD-thesis.pdf (56 pages).
+Output written on PhD-thesis.pdf (64 pages).

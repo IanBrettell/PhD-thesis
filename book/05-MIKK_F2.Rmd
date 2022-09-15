@@ -177,7 +177,7 @@ kableExtra::kbl(
   kableExtra::kable_styling(latex_options = "striped")
 ```
 
-**Figures \@ref(fig:F2-time-dge-of)** and **\@ref(fig:F2-time-dge-no)** highlight the states that showed significant differences in the proportions of time that these lines spent in those states for the open field and novel object assay components respectively. In both figures, **A** highlights the significant states, **B** shows how the individuals moved through those states over the course of the 10-minute assay component, and **C** shows the densities of the significant states within each line. For the open field component, although the tile plots show a notable level of variance within each line, the density plots clarify how the three slow-moving lines (`r colour_line("8-2 (‘Gail’)"`, `r colour_line("18-2 (‘Elsa’)"` and `r colour_line("50-2 (‘Patrick’)"`) spent little time in the fast-moving states 10, 12 and 14 relative to the fast-moving lines. Interestingly, the intermediate line `r colour_line("38-2 (‘Mark’)"` tended to transition into these states around the middle of the video, presumably a period of habituating to the new environment.
+**Figures \@ref(fig:F2-time-dge-of)** and **\@ref(fig:F2-time-dge-no)** highlight the states that showed significant differences in the proportions of time that these lines spent in those states for the open field and novel object assay components respectively. In both figures, **A** highlights the significant states, **B** shows how the individuals moved through those states over the course of the 10-minute assay component, and **C** shows the densities of the significant states within each line. For the open field component, although the tile plots show a notable level of variance within each line, the density plots clarify how the three slow-moving lines (`r colour_line("8-2 (‘Gail’)")`, `r colour_line("18-2 (‘Elsa’)")` and `r colour_line("50-2 (‘Patrick’)")`) spent little time in the fast-moving states 10, 12 and 14 relative to the fast-moving lines. Interestingly, the intermediate line `r colour_line("38-2 (‘Mark’)")` tended to transition into these states around the middle of the video, presumably a period of habituating to the new environment.
 
 (ref:F2-time-dge-of) Differences between MIKK F0 lines in the HMM states they occupied during the *open field* assay component. **A**: 15 HMM states with panels coloured red to indicate significant differences between MIKK F0 lines in the proportion of time spent in those states. **B**: Transitions between HMM states across time for each individual test fish, grouped by MIKK line Tiles are coloured by the state most frequently occupied by each fish within 2-second intervals. **C**: Densities within each MIKK line for the occupation of states that significantly differed between strains (colour), with other states consolidated (grey).
 
@@ -282,8 +282,6 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/karyoplot_no_missin
 I then took these HMM-generated haplotype block calls and used them to impute each sample's SNP-level genotypes using the homozygous biallelic SNP calls in the high-coverage .vcf file for the MIKK panel F0 lines described in Chapter \@ref(MIKK-genomes-chap). This set of variants included a total of ~20.7M SNPs, which I used to generate a Plink-format .bed file, forming the genotype input for the genetic linkage analysis.
 
 ### Genetic linkage analysis
-
-
 
 For the purpose of using the *GCTA* software package [@yangGCTAToolGenomewide2011] for the genetic linkage analysis,  That software requires the construction of a genetic relationship matrix (**GRM**) $\textbf{A} = \textbf{WW}'/N$. $\textbf{W}$ is a standardised genotype matrix with the $ij^{th}$ element $w_{ij} = (x_{ij} - 2p_i) / \sqrt{(2p_i(1-p_i)}$, where $x_{ij}$ is the number of copies of the reference allele for the $i^{th}$ SNP of the $j^{th}$ individual and $p_i$ is the frequency of the reference allele [@yangGCTAToolGenomewide2011].
 
@@ -458,7 +456,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/sig_snps_boxplots/1
 There are additional significant loci of note shown in **Figure \@ref(fig:F2-man-dge-no-3)** above that are not predicted to alter proteins, but nevertheless appear to affect genes related to neurological development (**Table \@ref(tab:tbl-sig-snp-chr-9-10)**). 
 
 ```{r tbl-sig-snp-chr-9-10, echo = F, message = F, warning = F}
-TARGET_SNPS = c("9:9802754", "10:18537719")
+TARGET_SNPS = c("5:24433800", "6:30807013", "9:9802754", "10:18537719")
 
 chr9_sigs = df %>% dplyr::filter(SNP %in% TARGET_SNPS) %>% 
   dplyr::left_join(biom_df %>% 
@@ -486,19 +484,25 @@ chr9_sigs = df %>% dplyr::filter(SNP %in% TARGET_SNPS) %>%
 
 kableExtra::kbl(
   chr9_sigs,
-  caption = 'Significant loci on chromosome 9 for direct genetic effects on state 3 frequency during the novel object assay.',
+  caption = 'Top significant SNPs on chromosomes 9 and 10 for direct genetic effects on state 3 frequency during the novel object assay.',
   booktabs = TRUE
 ) %>% 
   kableExtra::kable_styling(latex_options = c("striped", "scale_down"))
 ```
 
+#### *GRID2*
+
 The first is located around 9:9,802,754 (**Figure \@ref(fig:sig-snp-9-9mb)**), and maps to a gene for glutamate ionotropic receptor delta type subunit 2, an orthologue of the human gene *GRID2*. Deletions in this gene have been found to cause ataxia in humans [@hillsDeletionsGRID2Lead2013; @utineHomozygousDeletionGRID22013], and other mutations in this gene have been found to cause various neurological disorders in mice [Mouse Genome Database, @blakeMouseGenomeDatabase2021]. 
 
+<!--
 (ref:sig-snp-9-9mb) State 3 frequency during the novel object assay for counts of the alternative allele (A) at SNP 9:9,802,754. The boxes are coloured on the left by the paternal line, and on the right by the maternal line.
 
 ```{r sig-snp-9-9mb, echo = F, fig.cap = '(ref:sig-snp-9-9mb)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/sig_snps_boxplots/3-9:9802754.png"), auto_pdf = T)
 ```
+-->
+
+#### *NLGN3*
 
 The second locus resides around 10:18,537,719 (**Figure \@ref(fig:sig-snp-10-18mb)**) within the neuroligin 3 gene, an orthologue of the human gene *NLGN3*, which has been linked with autism in humans [@jamainMutationsXlinkedGenes2003], and various neurological in mice and rats [@blakeMouseGenomeDatabase2021; @smithYearRatRat2020].
 
@@ -506,6 +510,30 @@ The second locus resides around 10:18,537,719 (**Figure \@ref(fig:sig-snp-10-18m
 
 ```{r sig-snp-10-18mb, echo = F, fig.cap = '(ref:sig-snp-10-18mb)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/sig_snps_boxplots/3-10:18537719.png"), auto_pdf = T)
+```
+
+#### *cldn19*
+
+The third locus resides around 5:24,433,800 with the claudin 19 gene, a projected zinc finger. 
+
+```{r sig-snp-5-24mb, echo = F, fig.cap = '(ref:sig-snp-5-24mb)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/sig_snps_boxplots/8-5:24433800.png"), auto_pdf = T)
+```
+
+#### *panx2*
+
+The fourth locus resides around 6:30,807,013 in the pannexin 2 (*panx2*) gene (ENSORLG00000016329), a projected zinc finger. 
+
+```{r sig-snp-6-30mb, echo = F, fig.cap = '(ref:sig-snp-6-30mb)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/sig_snps_boxplots/9-6:30807013.png"), auto_pdf = T)
+```
+
+#### *RELL1*
+
+The fifth locus resides around 18:15,178,810 in the RELT like 1 (*RELL1*) gene (ENSORLG00000006940). The orthologue for this gene has been found to be associated with abnormal auditory brainstem response and hyperactivity in mouse
+
+```{r sig-snp-18-15mb, echo = F, fig.cap = '(ref:sig-snp-18-15mb)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/sig_snps_boxplots/2-18:15178810.png"), auto_pdf = T)
 ```
 
 These results provide promising evidence that the assay and methods described above can identify genetic loci associated with differences in behaviours - and potentially difference in the transmission of behaviour onto social companions - with functional relevance to humans. However, before seeking to functionally validate these variants, there are a number of steps that we seek to take to refine the analysis and thereby increase our confidence in the variants we ultimately select for validation.

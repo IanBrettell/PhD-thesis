@@ -2,7 +2,7 @@
 title: |
   Japanese courage: a genetic analysis of complex traits in medaka fish and humans
 author: "Ian Narain Brettell"
-date: "14 September 2022"
+date: "15 September 2022"
 site: bookdown::bookdown_site
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
@@ -45,9 +45,7 @@ header-includes:
 
 # About {-}
 
-## Summary
-
-Japanese courage: a genetic analysis of complex traits in medaka fish and humans
+**Japanese courage: a genetic analysis of complex traits in medaka fish and humans**
 
 This thesis primarily explores how an individual's genes interact with the genes of their social companions to create differences in behaviour, using the Japanese medaka fish as a model organism. Chapter 1 sets out the introduction to the diverse topics covered in this thesis. 
 
