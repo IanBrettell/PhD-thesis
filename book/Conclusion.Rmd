@@ -1,6 +1,41 @@
 # Conclusions {-}
 
+```{r, include = F}
+library(tidyverse)
+
+# Read in line colours
+line_cols = readr::read_csv(here::here("results/MIKK_F2/line_colours_0.08.csv"))
+
+# Function for colouring text
+colorize <- function(x, color, col_name) {
+  if (knitr::is_latex_output()) {
+    # remove hash prefix
+    color = stringr::str_remove(color, "#")
+    sprintf("\\definecolor{%s}{HTML}{%s}\\textcolor{%s}{%s}", col_name, color, col_name, x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span style='color: %s;'>%s</span>", color,
+      x)
+  } else x
+}
+
+# Function for pulling the line's matching colour from the data frame, then calling `colorize()`
+colour_line = function(LINE){
+  COLOUR = line_cols %>% 
+    dplyr::filter(line == LINE) %>% 
+    dplyr::pull(colour)
+  # make colour name
+  COL_NAME = paste(LINE,
+                   stringr::str_remove(COLOUR, "#"),
+                   sep = "_")
+  # call colorize function
+  colorize(LINE, COLOUR, COL_NAME)
+}
+```
+
+
 ## Chapter \@ref(MIKK-F2-chap) {-}
+
+The results from this chapter provide promising evidence that the assay and methods described can allow researchers to identify genetic loci associated with differences in behaviours - and potentially difference in the transmission of behaviour onto social companions - with functional relevance to humans. However, before seeking to functionally validate the variants, there are a number of steps that we could take to refine the analysis, and thereby increase our confidence in the variants we ultimately select for validation.
 
 With the benefit of hindsight, there are a several aspects of the analysis described in **Chapter \@ref(MIKK-F2-chap)** that I would have performed differently. The first relates to the choices of certain parental lines for the F2 cross, which were too heavily reliant on the aggregate measures of speed and charisma, without due regard to the level of behavioural variance observed within each line. As evident in **Figures \@ref(fig:F2-time-dge-of)** and **\@ref(fig:F2-time-dge-no)** above, lines `r colour_line("8-2 (‘Gail’)")` and `r colour_line("21-2 (‘Amelia’)")` showed large within-line variances. For `r colour_line("8-2 (‘Gail’)")` in particular, the differences appear to correspond to the date on which they were assayed - specifically, in the first run the four `r colour_line("8-2 (‘Gail’)")` individuals showed almost no movement, whereas in the second run they showed much higher levels of movement. The different within-line variances are an interesting phenotype to explore further, as they suggest that different lines show different degrees of sensitivity to environmental changes. However, for this analysis, high within-line variances make it difficult to ascertain the line's "true" phenotype, and therefore make them unsuitable for selection based on our axes of interest for this study (bold vs shy; high vs low behavioural transmission). 
 

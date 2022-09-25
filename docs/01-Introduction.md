@@ -2,10 +2,11 @@
 
 
 
-
-
+<!--
 
 [STRUCTURE SHOULD START WITH G AND E GO INTO P. THAT'S WHAT GWAS USES. THEN INTRODUCE SOCIAL GENETIC EFFECTS. THEN ADD THE FAMILY ONE. BUILD FROM SIMPLE TO MORE COMPLEX. EXPLAIN THE TECHNIQUES AT THE SAME TIME. IN A HUMAN SITUATION IS GETS EVEN MORE COMPLICATED, THEN PUT INTO THE APPENDIX.]
+
+-->
 
 # Introduction {#Introduction}
 
@@ -15,19 +16,17 @@ In this thesis, I primarily explore the extent to which phenotypic variation is 
 
 ## A brief history of genetics
 
-[MUCH OF THIS INTRODUCTION AHS BEEN INFORMED BY MUKHERJEE, RUTHERFORD, ETC. WHERE POSSIBLE I HAVE QUOTED FROM THE ORIGINAL SOURCES.]
-
 Much of this section has been informed by @mukherjeeGeneIntimateHistory2016, @rutherfordHowArgueRacist2020, and @taberyStruggleUnderstandInteraction2014. Where possible, I have cited the original sources. 
 
 ### Ancient Greece
 
-Throughout ancient history, the sources of biological variation were completely unknown. With limited technologies available to them, the Ancient Greek philosophers proposed theories for the inheritance of traits that they observed in humans. Around 500 BC, Pythagoras applied his knowledge of triangles to the question of how traits are inherited from one's parents. He proposed the theory known as "spermism", positing that hereditary information was passed down from parent to child via male sperm, with the female providing the nutrients that would allow it to grow. Like the theorem that bears his name, he supposed that these two sides of the "triangle" would determine the length of the third side: the characteristics of the child [@mukherjeeGeneIntimateHistory2016]. Over a century later, in 380 BC, Plato extended this metaphor in *The Republic* [@badiouPlatoRepublic2013] to argue that this principle could be applied to perfect humanity by breeding perfect combinations of parents at perfect times [@mukherjeeGeneIntimateHistory2016]. [THE FIRST EUGENICIST.]
+Throughout ancient history, the sources of biological variation were completely unknown. With limited technologies available to them, the Ancient Greek philosophers proposed theories for the inheritance of traits that they observed in humans. Around 500 BC, Pythagoras applied his knowledge of triangles to the question of how traits are inherited from one's parents. He proposed the theory known as "spermism", positing that hereditary information was passed down from parent to child via male sperm, with the female providing the nutrients that would allow it to grow. Like the theorem that bears his name, he supposed that these two sides of the "triangle" would determine the length of the third side: the characteristics of the child [@mukherjeeGeneIntimateHistory2016]. Over a century later, in 380 BC, Plato extended this metaphor in *The Republic* [@badiouPlatoRepublic2013] to argue that this principle could be applied to perfect humanity by breeding perfect combinations of parents at perfect times [@mukherjeeGeneIntimateHistory2016], which is possibly the first recorded expression of eugenic intent.
 
-Aristotle later joined the discussion with his treatise *Generation of Animals* [@aristotleGenerationAnimals2021], where he noted that children inherited features from their mothers as well as their fathers, raising cases where human skin colour and other traits from maternal ancestors could skip generations, and thus sperm could not be the only vessel of hereditary information. He suggested an idea of "movement" -- the transmission of information -- from the father's sperm, which sculpts the mother's menstrual blood in the same way a carpenter carves a piece of wood [@mukherjeeGeneIntimateHistory2016]. It was, however, impossible for Aristotle to deduce the form in which the information was conveyed.
+Aristotle later joined the discussion with his treatise *Generation of Animals* [@aristotleGenerationAnimals2021], where he noted that children inherited features from their mothers as well as their fathers, raising cases where human skin colour and other traits from maternal ancestors could skip generations, and thus sperm could not be the only vessel of hereditary information. He suggested an idea of "movement" -- the transmission of information -- from the father's sperm, which sculpts the mother's menstrual blood in the same way a carpenter carves a piece of wood. It was, however, impossible for Aristotle to deduce the form in which the information was conveyed.
 
 ### Middle Ages
 
-From medieval times through to the 1800s, the prevailing theory of heredity was that a tiny human -- a homunculus -- sat within the sperm, waiting to be inflated upon its introduction to a woman's uterus. But from where did each previous homunculus originate? Logically, the theory would require each homunculus to hold another homunculus, *ad infinitum* [@mukherjeeGeneIntimateHistory2016]. This theory deceived the inventor of the microscope, Nicolaas Hartsoeker, into thinking he observed a homunculus in a sperm he was studying (**Figure \@ref(fig:homunculus-pic)**). But a fundamental question remained: what triggered the expansion of the human form, causing the embryo to develop new parts on its road to becoming a fetus? The answer could only have been some instruction, blueprint, or code, but any specifics remained out of reach.
+From medieval times through to the 1800s, the prevailing theory of heredity was that a tiny human -- a homunculus -- sat within the sperm, waiting to be inflated upon its introduction to a woman's uterus. But from where did each previous homunculus originate? Logically, the theory would require each homunculus to hold another homunculus, *ad infinitum*. This theory deceived the inventor of the microscope, Nicolaas Hartsoeker, into thinking he observed a homunculus in a sperm he was studying (**Figure \@ref(fig:homunculus-pic)**) [@hartsoekerEssayDioptrique1694]. But a fundamental question remained: what triggered the expansion of the human form, causing the embryo to develop new parts on its road to becoming a fetus? The answer could only have been some instruction, blueprint, or code, but any specifics remained out of reach.
 
 (ref:homunculus-pic) Preformation, drawn by Nicolaas Hartsoeker in 1695. Image adapted from @homunculusImage.
 
@@ -42,9 +41,9 @@ From medieval times through to the 1800s, the prevailing theory of heredity was 
 
 ### Charles Darwin
 
-During the early 1800s, the prevailing doctrine on the origins of biological variation was Creationism, based on Christianity's literal interpretation of the Bible's Book of Genesis [@campbellKingJamesBible2010]. Any mechanistic description of how species -- and individuals within the same species -- differed from one another was thought to threaten this doctrine, making inquiries of this kind potentially blasphemous, and therefore dangerous [@mukherjeeGeneIntimateHistory2016]. 
+During the early 1800s, the prevailing doctrine on the origins of biological variation was Creationism, based on Christianity's literal interpretation of the Bible's Book of Genesis [@campbellKingJamesBible2010]. Any mechanistic description of how species -- and individuals within the same species -- differed from one another was thought to threaten this doctrine, making inquiries of this kind potentially blasphemous, and therefore dangerous [@armstrongEnglishParsonnaturalistCompanionship2000]. 
 
-It was in this context that a 22-year-old English clergyman named Charles Darwin (**Figure \@ref(fig:charles-darwin-young-portrait)**) boarded the *HMS Beagle* in 1831 to commence a voyage around the world that would last for almost five years. Darwin had previously studied theology at the University of Cambridge, but was drawn to study the natural world. He had apprenticed with his fellow clergyman John Henslow, a botanist and geologist who curated the Cambridge Botanic Garden, who suggested that he join the *Beagle*'s exploratory survey of South America as the "gentleman scientist" they were seeking to assist with the collection of specimens [@mukherjeeGeneIntimateHistory2016]. 
+It was in this context that a 22-year-old English clergyman named Charles Darwin (**Figure \@ref(fig:charles-darwin-young-portrait)**) boarded the *HMS Beagle* in 1831 to commence a voyage around the world that would last for almost five years [@darwinAutobiographyCharlesDarwin2019]. Darwin had previously studied theology at the University of Cambridge, but was drawn to study the natural world. He had apprenticed with his fellow clergyman John Henslow, a botanist and geologist who curated the Cambridge Botanic Garden [@iselyOneHundredOne2002], who suggested that he join the *Beagle*'s exploratory survey of South America as the "gentleman scientist" they were seeking to assist with the collection of specimens [@henslowLetter1051831]. 
 
 (ref:charles-darwin-young-portrait) Portrait of Charles Darwin from the late 1830s by George Richmond [@charlesDarwinYoung].
 
@@ -57,7 +56,7 @@ It was in this context that a 22-year-old English clergyman named Charles Darwin
 \caption{(ref:charles-darwin-young-portrait)}(\#fig:charles-darwin-young-portrait)
 \end{figure}
 
-After rounding Cape Horn and moving northward along the western coast of South America, the *HMS Beagle* eventually reached the Galápagos Islands on the coast of Peru, an archipelago of 18 islands formed from volcanic lava [@mukherjeeGeneIntimateHistory2016]. Over the course of five weeks, Darwin collected carcasses of birds, lizards, and plants [@mukherjeeGeneIntimateHistory2016]. Upon his return to England, he was hailed as a minor celebrity among natural historians due to the collections of specimens he had gathered and shipped back [@mukherjeeGeneIntimateHistory2016]. John Gould -- the ornithologist who lent his (wife's) name to the Gouldian finch (**Figure \@ref(fig:gouldian-finch)**) -- told him that the various birds that Darwin thought were a variety of wrens, warblers, blackbirds, and "gros-beaks" were in fact all 13 different species of finches [@mukherjeeGeneIntimateHistory2016].
+After rounding Cape Horn and moving northward along the western coast of South America, the *HMS Beagle* eventually reached the Galápagos Islands on the coast of Peru, an archipelago of 18 islands formed from volcanic lava [@darwinCharlesDarwinLetters1998]. Over the course of five weeks, Darwin collected carcasses of birds, lizards, and plants. Upon his return to England, he was hailed as a minor celebrity among natural historians due to the collections of specimens he had gathered and shipped back. John Gould -- the ornithologist who lent his (wife's) name to the Gouldian finch (**Figure \@ref(fig:gouldian-finch)**) -- told him that the various birds that Darwin thought were a variety of wrens, warblers, blackbirds, and "gros-beaks" were in fact all 13 different species of finches.
 
 (ref:gouldian-finch) The Gouldian Finch, an Australian native bird described by British ornithological artist John Gould in 1844 and named after his deceased wife Elizabeth [@bancroftPartIntroductionGouldian]. Photograph by Sarah R. Pryke, published in @prykeRedDominatesBlack2006.
 
@@ -70,7 +69,7 @@ After rounding Cape Horn and moving northward along the western coast of South A
 \caption{(ref:gouldian-finch)}(\#fig:gouldian-finch)
 \end{figure}
 
-Each island had produced its own variant (**Figure \@ref(fig:darwin-finches)**), and this caused Darwin to consider whether they had all arisen from a common ancestral finch, branching off like the boughs of a tree over time [QUOTE ORIGIN OF SPECIES] [@mukherjeeGeneIntimateHistory2016]. He understood that animal breeders took advantage of the natural variation in populations to select for desired traits, but he questioned what force had guided the development of these different varieties of finches in the wild [@mukherjeeGeneIntimateHistory2016].
+Each island had produced its own variant (**Figure \@ref(fig:darwin-finches)**), and this caused Darwin to consider whether they had all arisen from a common ancestral finch, branching off like the boughs of a tree over time [QUOTE ORIGIN OF SPECIES]. He understood that animal breeders took advantage of the natural variation in populations to select for desired traits, but he questioned what force had guided the development of these different varieties of finches in the wild.
 
 (ref:darwin-finches) Illustration of variation in Galapagos finches by John Gould, published in @darwinNaturalistVoyageJournal1882. Image from @darwinFinches.
 
@@ -99,7 +98,11 @@ Like Darwin, Wallace had set off on a voyage to distant lands, and had observed 
 \caption{(ref:alfred-wallace)}(\#fig:alfred-wallace)
 \end{figure}
 
-The presentation made few waves at the time, but Darwin proceeded to complete his opus, *On the Origin of Species by Means of Natural Selection* [@darwinOriginSpeciesMeans1859]. [WHAT DID HE ACTUALLY SAY? EVOLTUION THROUGH NATURAL SELECTION NOW ESTABLISHED AND HAS STOOD THE TEST OF TIME] The book was unexpectedly met with enthusiastic reviews, and sold well [@mukherjeeGeneIntimateHistory2016]. However two crucial questions yet remained: how was the variation within species generated in the first place, and how were the traits transmitted to future generations? [@mukherjeeGeneIntimateHistory2016]
+The presentation made few waves at the time, but Darwin proceeded to complete his opus, *On the Origin of Species by Means of Natural Selection* [@darwinOriginSpeciesMeans1859], where he provided the famous quote:
+
+>Thus, from the war of nature, from famine and death, the most exalted object which we are capable of conceiving, namely, the production of the higher animals, directly follows. There is grandeur in this view of life, with its several powers, having been originally breathed into a few forms or into one; and that, whilst this planet has gone cycling on according to the fixed law of gravity, from so simple a beginning endless forms most beautiful and most wonderful have been, and are being, evolved.
+
+[WHAT DID HE ACTUALLY SAY? EVOLTUION THROUGH NATURAL SELECTION NOW ESTABLISHED AND HAS STOOD THE TEST OF TIME] The book was unexpectedly met with enthusiastic reviews, and sold well. Darwin's theory of evolution through natural selection has since stood the test of time, and is now established as the core process by which life on Earth acquires new and wondrous forms. At the time of publication of the *Origin of Species*, however, two crucial questions still remained unanswered: how was the variation within species generated in the first place, and how were the traits transmitted to future generations? [@mukherjeeGeneIntimateHistory2016]
 
 ### Gregor Mendel
 
@@ -435,7 +438,12 @@ This resilience to inbreeding has allowed (predominantly Japanese) researchers t
 (ref:line-locations) Image adapted from [@spivakovGenomicPhenotypicCharacterization2014], showing the locations of the originating populations of the 5 inbred medaka lines used in this study. 
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{figs/pilot/line_locations} \caption{(ref:line-locations)}(\#fig:line-locations)
+
+{\centering \includegraphics[width=1\linewidth]{figs/pilot/line_locations} 
+
+}
+
+\caption{(ref:line-locations)}(\#fig:line-locations)
 \end{figure}
 
 Since 2010, the Birney Group at EMBL-EBI, in collaboration with the Wittbrodt Group at COS, University of Heidelberg and the Loosli Group at the Karlsruhe Institute of Technology (KIT), have been working to establish the world’s first panel of vertebrate inbred strains FROM THE WILD – now known as the Medaka Inbred Kiyosu-Karlsruhe Panel (**MIKK panel**). The MIKK Panel was bred from a wild population caught near Kiyosu in Southern Japan (**Figure \@ref(fig:line-locations)**), and now comprises 80 inbred, near-isogenic "lines" [@fitzgeraldMedakaInbredKiyosuKarlsruhe2022].
@@ -619,8 +627,4 @@ Different environments are also often correlated with population structure [@ber
 ### $F_{ST}$ {#Fst-descr}
 
 The widely-used fixation index ($F_{ST}$) was introduced independently by Sewall Wright [@wrightGeneticalStructurePopulations1949] and Gustave Malécot [@malecotMathematiquesHeredite1948] as a metric for measuring the genetic diversity between populations.^[In Wright's notation, $F$ refers to "fixation" of an allele, and $_{ST}$ refers to "subpopulations within the total population".] It quantifies the relative variance in allele frequency between groups compared to within groups, reflecting the combined effects of genetic drift, migration, mutation, and selection [@holsingerGeneticsGeographicallyStructured2009]. The metric ranges from 0 to 1, where loci with high $F_{ST}$ values -- that is, loci with a large relative between-group variance in allele frequencies -- may have been subject to selection or different demographic processes [@holsingerGeneticsGeographicallyStructured2009]. The metric has customarily been used to identify regions of the genome have been subject to diversifying selection [@akeyInterrogatingHighDensitySNP2002; @guoBayesianHierarchicalModel2009; @weirMeasuresHumanPopulation2005].
-
-
-
-
 
