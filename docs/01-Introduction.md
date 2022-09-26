@@ -167,6 +167,12 @@ In 1894, the English botanist William Bateson (**Figure \@ref(fig:bateson)**) ha
 \caption{(ref:bateson)}(\#fig:bateson)
 \end{figure}
 
+Mendel's work has been distilled into what are now called *Mendel's laws* [@lairdFundamentalsModernStatistical2010]:
+
+1. **Segregation**: One allele of each parent is randomly and independently selected, with probability $\frac{1}{2}$, for transmission to the offspring; the alleles unite randomly to form the offspring's genotype. That is to say, after having crossed two F~0~ inbred strains that are homozygous for different alleles (denoted as AA and aa), thus generating the F~1~ hybrid with the genotype Aa, the resultant F~2~ individuals from the F~1~ intercross will have a genotypic ratio of 1:2:1 respectively for the genotypes AA (homozygous for the first F~0~ parent's allele), Aa (heterozygous), and aa (homozygous for the second F~0~ parent's allele).
+
+1. **
+
 ### Quantitative genetics: Francis Galton, Karl Pearson, Ronald Fisher and Sewall Wright
 
 The rediscovery of Mendel's work triggered a vociferous debate between Bateson and a cohort of other scientists who sought to reconcile Mendelian inheritance with the continuous variation observed in natural populations [@bartonSewallWrightEvolution2016]. Francis Galton (**Figure \@ref(fig:galton)**) was the cousin of Charles Darwin, born in the same year as Mendel (1822), and travelled to Egypt and Sudan in 1844, spurring his lifelong obsession with the differences between human races [@mukherjeeGeneIntimateHistory2016]. His reading of Darwin's *Origin of Species* in 1859 galvanised him to explore the measurement and variance of heredity in humans, with an emphasis on height, intelligence, temperament, and physical prowess [@mukherjeeGeneIntimateHistory2016].^[One of Galton's more eccentric activities involved strolling through England and Scotland secretly tabulating beauty by ranking the women he met as "attractive", "indifferent," or "repellent" using pinpricks on a card hidden in his pocket [@mukherjeeGeneIntimateHistory2016].] He coined the phrase *nature versus nurture* to distinguish between hereditary and environmental influences [@galtonMenScienceTheir1874a]. [GALTON WAS INTERESTED IN THIS TO IMPROVE THE HUMNAN STOCK. REMOVING THE POOR PEPOLE, RACISM IS HIDDEN INSIDE THERE. ]
@@ -302,7 +308,35 @@ In the 1930s, Theodosius Dobzhansky (**Figure \@ref(fig:dobzhansky)**), a Ukrain
 
 ### The discovery of the structure of DNA
 
-By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that compose chromosomes. After some flirtation with proteins as the molecule of inheritance, Oswald Avery finally proved that it was in fact deoxyribonucleic acid (**DNA**) that was "the material substance of the gene" -- the "cloth from which genes were cut" [@mukherjeeGeneIntimateHistory2016]. In 1953, Rosalind Franklin, James Watson, and Francis Crick, and Maurice Wilkins (**Figure \@ref(fig:all-four)**) discovered the structure of DNA using X-ray crystallography [@mukherjeeGeneIntimateHistory2016]. EXPAND THIS SECTION. WATSON EUGENICIST? ENGAGE WITH HIS COMMENTS. CRICK SAYS SOMETHING TOO, BUT LESS PUBLICISED.
+By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that compose chromosomes. After some flirtation with proteins as the molecule of inheritance, Oswald Avery finally proved that it was in fact deoxyribonucleic acid (**DNA**) that was "the material substance of the gene" -- the "cloth from which genes were cut" [@mukherjeeGeneIntimateHistory2016].
+
+The British biochemist Rosalind Franklin, working at King's College in London, had been using X-ray crystallography to photograph DNA. The famous "Photo 51" was taken by her student, Raymond Gosling, and upon Franklin's decision to depart from King's College, she suggested he show the photo to Maurice Wilkins, a New Zealand-born biophysicist who was also working at King's College on the structure of DNA. 
+
+Without Franklin's permission, Wilkins brought photo 51 to James Watson, who immediately saw that "the black cross could arise only from a helical structure. Watson returned to Cambridge and, together with his collaborator Francis Crick, used this observation -- and a report by Franklin and Wilkins on their most recent measurements of the outer backbone -- to develop the established model of DNA structure: a double helix of a sugar-phosphate backbone and the nucleotide bases facing inwards and paired with one another in the conformation of A$\rightarrow$T and G$\rightarrow$C [@watsonAnnotatedIllustratedDouble2012]. 
+
+Watson and Crick built their complete model in the first week of March 1953, and, following consultations with Wilkins and Franklin, who both approved of the model, published their landmark paper on 25 April titled *Molecular structure of nucleic acids: a structure for deoxyribose nucleic acid* [@watsonMolecularStructureNucleic1953]. Theirs was accompanied by two others: one by Gosling and Franklin with crystallographic evidence for the double-helical structure including photo 51 [@franklinMolecularConfigurationSodium1953]; and another by Wilkins corroborating the evidence further with experimental data from DNA crystals [@wilkinsMolecularStructureNucleic1953].
+
+In 1962, Watson, Crick, and Wilkins were awarded the Nobel Prize for their discovery. Unfortunately, Franklin had died in 1958 from ovarian cancer. 
+
+In 1953, Rosalind Franklin, James Watson, and Francis Crick, and Maurice Wilkins (**Figure \@ref(fig:all-four)**) discovered the structure of DNA using X-ray crystallography [@mukherjeeGeneIntimateHistory2016].
+
+Watson [@wagenseilDNADiscovererBlacks2015]:
+
+> all our social policies are based on the fact that their (blacks) intelligence is the same as ours (whites) – whereas all the testing says not really ... people who have to deal with black employees find this not true.
+
+During a speaking tour, Watson also claimed that black people were less intelligent than white people, and the idea that "equal powers of reason" were shared across racial groups was a delusion [@milmoFuryDNAPioneer2007].
+
+In 1970, while reading Karl Pearson's biography of Francis Galton, Crick wrote to Bernard Davis of Harvard University, he said [@ridleyFrancisCrickDiscoverer2006]:
+
+>My other suggestion is in an attempt to solve the problem of irresponsible people and especially those who are poorly endowed genetically having large numbers of unnecessary children. Because of their irresponsibility, it seems to me that for them, sterilization is the only answer and I would do this by bribery. It would probably pay society to offer such individuals something like £1,000 down and a pension of £5 a week over the age of 60. As you probably know, the bribe in India is a transistor radio and apparently there are plenty of takers.
+
+Soon after, in a letter to Sir Peter Medawar, he wrote [@ridleyFrancisCrickDiscoverer2006]:
+
+>I do not suggest that only the very rich or the very intellectual should have children (what a thought!) but roughly that upper and upper-middle class families be encouraged to have say 3 or 4 on average and manual labourers and obviously dim and disturbed people have 0 or 1.
+
+In an interview with David Pearson of the Wellcome Library for the History and Understanding of Medicine, Crick said [@wellcomeFrancisCrickControversial2003]:
+
+>In the long run, it is unavoidable that society will begin to worry about the character of the next generation ... It is not a subject at the moment which we can tackle easily because people have so many religious beliefs and until we have a more uniform view of ourselves I think it would be risky to try and do anything in the way of eugenics ... I would be astonished if, in the next 100 or 200 years, society did not come round to the view that they would have to try to improve the next generation in some extent or one way or another.
 
 (ref:all-four) Composite image of Rosalind Franklin (1956), James Watson (1980s), Francis Crick (1980s) and Maurice Wilkins (early 1990s) from @DNAThenNow reprinted courtesy of Cold Spring Harbor Laboratory Library and Archive, James D. Watson Collection; Wilkins photo courtesy of TVNZ.
 
@@ -312,7 +346,19 @@ By the early 1940s, it was known that genes resided in chromatin, the mixture of
 
 ### The development of DNA sequencing
 
-Over the course of the 1970s, Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University of Cambridge, developed a method identifying each nucleotide base as it was added to the strand during DNA replication [@mukherjeeGeneIntimateHistory2016]. In 1977 he published what became known as the "Sanger method", using radio-labelled nucleic acids to identify the precise order and type of nucleotides that made up a DNA sequence [@sangerDNASequencingChainterminating1977], earning him a second Nobel prize in Chemistry in 1980 [@NobelPrizeChemistry].DO I KNOW HOW SEQUENCING WORKS? MAKE SURE I KNOW.
+Sanger developed methods of "sequencing by separation", first applied to determine the first protein sequence of insulin in the early 1950s" [CITE], and later to decipher the sequence of RNA, with the first being alanine tRNA [@shendureDNASequencing402017].
+
+Over the course of the 1970s, after discovering methods to sequence RNA and proteins [CITE], Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University of Cambridge, developed a method identifying each nucleotide base as it was added to the strand during DNA replication [@mukherjeeGeneIntimateHistory2016]. 
+
+In 1977 he published what became known as the "Sanger method", using radio-labelled nucleic acids to identify the order and type of nucleotides that made up a DNA sequence [@sangerDNASequencingChainterminating1977], earning him a second Nobel prize in Chemistry in 1980 [@NobelPrizeChemistry]. 
+
+"This early method involved four extensions of a labelled primer by DNA polymerase, each with trace amounts of one chain-terminating nucleotide, to produce fragments of different lengths." [@sangerDNASequencingChainterminating1977; @shendureDNASequencing402017]. The sizes of fragments present in each base-specific reaction were measured by electrophoresis on polyacrylamide slab gels [@maniatisChainLengthDetermination1975].
+
+Shotgun sequencing -- sequencing of random clones followed by sequence assembly based on the overlaps -- was suggested by [@stadenStrategyDNASequencing1979], leading to the assembly of whole genomes, beginning with the bacteriophage lambda in 1982 [@sangerNucleotideSequenceBacteriophage1982].
+
+<!--
+DO I KNOW HOW SEQUENCING WORKS? MAKE SURE I KNOW.
+-->
 
 (ref:sanger) Undated photo of Frederick Sanger from @ObituaryFredSanger2013.
 
@@ -323,7 +369,15 @@ Over the course of the 1970s, Frederick Sanger (**Figure \@ref(fig:sanger)**), a
 \caption{(ref:sanger)}(\#fig:sanger)
 \end{figure}
 
-These technological breakthroughs eventually led to the first draft of the human genome being published in 2001 by a large international consortium [@internationalhumangenomesequencingconsortiumInitialSequencingAnalysis2001a].^[The full sequence (including heterochromatic regions) was only completed in 2022 [@nurkCompleteSequenceHuman2022].] The improvement in sequencing technologies has continued to progess to the stage where a $100 human genome is now on the horizon [@pennisi100GenomeNew2022]. Long-read technologies developed by Pacific Biosciences and Oxford Nanopore Technologies can also generate single reads of over 2 megabases in length [@payneBulkVisGraphicalViewer2019] and directly sequence DNA modifications [@wangNanoporeSequencingTechnology2021]. These developments are making genetic technologies ever more accessible and informative, paving the way for greater insights into the genetic basis of phenotypic differences. Yet despite these technological advances, the relative contribution of genetics and environment to differences in complex traits is still not fully understood -- especially in humans -- and therefore remains an active area of research.
+These technological breakthroughs eventually led to the first draft of the human genome being published in 2001 by a large international consortium [@internationalhumangenomesequencingconsortiumInitialSequencingAnalysis2001a].^[The full sequence (including heterochromatic regions) was only completed in 2022 [@nurkCompleteSequenceHuman2022].] 
+
+After the human genome poroject, Sanger sequencing was superseded by "second generation" DNA sequencing (also called "massively parallel" or "next generation" sequencing). The first NGS platforms arrived in 2005, involving the dense fixation of a library of millions or billions of DNA templates onto a two-dimensional surface, allowing for a single reaction step and *in vitro* amplification , and imaging through the detection of fluorescence from deoxynucleotides over cycles of biochemistry, known as 'sequencing by synthesis' [@shendureDNASequencing402017]. Each template incorporates one and only one dNTP on each cycle. After imaging to determine which of four colours was incorporated by each template on the surface, both blocking and fluorescent groups are removed to set up the next extension.
+
+The intense competition between several NGS companies including 454, Solexa (acquired by Illumina), Agencourt, Helicos, Complete Genomics, and Ion Torrent resulted in the reduction in the raw, per-megabase count of DNA sequencing from \$1,000 to \$0.10 between 2007 and 2012 [@wetterstrandDNASequencingCosts2021]. Read lengths tend to be in the low hundreds of bases, and are mostly over 99.9% accurate. 
+
+Sanger sequencing and NGS involve template amplification, which can create copying errors, sequencing-dependent biases, and information loss (e.g. DNA modifications) [@shendureDNASequencing402017]. New technologies pioneered by PacBio and Oxford Nanopore Technologies (**ONT**) can skip this amplification step and sequence single molecules in real time, resulting in reads up to megabases in length. These third-generation sequencing technologies have a much higher error rate than NGS of around 10%, although this is reducing. ONT devices can also be as small as a USB memory stick, also making them extremely portable. 
+
+The improvement in sequencing technologies has continued to progess to the stage where a $100 human genome is now on the horizon [@pennisi100GenomeNew2022]. Long-read technologies developed by Pacific Biosciences and Oxford Nanopore Technologies can also generate single reads of over 2 megabases in length [@payneBulkVisGraphicalViewer2019] and directly sequence DNA modifications [@wangNanoporeSequencingTechnology2021]. These developments are making genetic technologies ever more accessible and informative, paving the way for greater insights into the genetic basis of phenotypic differences. Yet despite these technological advances, the relative contribution of genetics and environment to differences in complex traits is still not fully understood -- especially in humans -- and therefore remains an active area of research.
 
 ## Genetic and environmental causes of variation in complex traits
 

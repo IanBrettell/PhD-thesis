@@ -160,9 +160,17 @@ In 1894, the English botanist William Bateson (**Figure \@ref(fig:bateson)**) ha
 knitr::include_graphics(here::here("book/figs/introduction/Bateson2.png"), auto_pdf = T)
 ```
 
+Mendel's work has been distilled into what are now called *Mendel's Laws*:^[@marksConstructionMendelLaws2008 offers a fascinating description of how "Mendel's Laws" developed through a series of pedagogical processes, achieving something close to its final form in Thomas Hunt Morgan's *A Critique of the Theory of Evolution* [@morganCritiqueTheoryEvolution1919].]
+
+1. **Segregation**: One allele of each parent is randomly and independently selected, with probability $\frac{1}{2}$, for transmission to the offspring; the alleles unite randomly to form the offspring's genotype. That is to say, after having crossed two F~0~ inbred strains that are homozygous for different alleles (denoted as *AA* and *aa*), thus generating the F~1~ hybrid with the genotype *Aa*, the resultant F~2~ individuals from the F~1~ intercross will have a genotypic ratio of 1:2:1 respectively for the genotypes *AA* (homozygous for the first F~0~ parent's allele), *Aa* (heterozygous), and *aa* (homozygous for the second F~0~ parent's allele). If the alleles are dominant/recessive, as was the case for Mendel's pea plant phenotypes, these genotypes would correspond to the 3:1 phenotypic ratio that he observed [@lairdFundamentalsModernStatistical2010].
+
+1. **Independent assortment**: The alleles of separate traits are passed independently of one another, based on Mendel's dihybrid crosses which showed a 9:3:3:1 phenotypic ratio, with a 3:1 phenotypic ratio for each gene. However, it was later discovered that this "law" does not apply to genes that are linked to one another by physical proximity on the chromosome, which I expand upon below in section \@ref(mapping-sec).
+
 ### Quantitative genetics: Francis Galton, Karl Pearson, Ronald Fisher and Sewall Wright
 
-The rediscovery of Mendel's work triggered a vociferous debate between Bateson and a cohort of other scientists who sought to reconcile Mendelian inheritance with the continuous variation observed in natural populations [@bartonSewallWrightEvolution2016]. Francis Galton (**Figure \@ref(fig:galton)**) was the cousin of Charles Darwin, born in the same year as Mendel (1822), and travelled to Egypt and Sudan in 1844, spurring his lifelong obsession with the differences between human races [@mukherjeeGeneIntimateHistory2016]. His reading of Darwin's *Origin of Species* in 1859 galvanised him to explore the measurement and variance of heredity in humans, with an emphasis on height, intelligence, temperament, and physical prowess [@mukherjeeGeneIntimateHistory2016].^[One of Galton's more eccentric activities involved strolling through England and Scotland secretly tabulating beauty by ranking the women he met as "attractive", "indifferent," or "repellent" using pinpricks on a card hidden in his pocket [@mukherjeeGeneIntimateHistory2016].] He coined the phrase *nature versus nurture* to distinguish between hereditary and environmental influences [@galtonMenScienceTheir1874a]. [GALTON WAS INTERESTED IN THIS TO IMPROVE THE HUMNAN STOCK. REMOVING THE POOR PEPOLE, RACISM IS HIDDEN INSIDE THERE. ]
+The rediscovery of Mendel's work triggered a vociferous debate between Bateson and a cohort of other scientists who sought to reconcile Mendelian inheritance with the continuous variation observed in natural populations [@bartonSewallWrightEvolution2016]. 
+
+Francis Galton (**Figure \@ref(fig:galton)**) was the cousin of Charles Darwin, born in the same year as Mendel (1822), and travelled to Egypt and Sudan in 1844, spurring his lifelong obsession with the differences between human races [@mukherjeeGeneIntimateHistory2016]. His reading of Darwin's *Origin of Species* in 1859 galvanised him to explore the measurement and variance of heredity in humans, with an emphasis on height, intelligence, temperament, and physical prowess [@mukherjeeGeneIntimateHistory2016].^[One of Galton's more eccentric activities involved strolling through England and Scotland secretly tabulating beauty by ranking the women he met as "attractive", "indifferent," or "repellent" using pinpricks on a card hidden in his pocket [@mukherjeeGeneIntimateHistory2016].] He coined the phrase *nature versus nurture* to distinguish between hereditary and environmental influences [@galtonMenScienceTheir1874a]. [GALTON WAS INTERESTED IN THIS TO IMPROVE THE HUMNAN STOCK. REMOVING THE POOR PEPOLE, RACISM IS HIDDEN INSIDE THERE. ]
 
 (ref:galton) Portrait of Francis Galton, taken in the 1850s or early 1860s, originally scanned from @pearsonLifeLettersLabours2011 [@galtonPhoto].
 
@@ -219,7 +227,7 @@ Around the time Fisher was working on his landmark 1919 paper, the American gene
 knitr::include_graphics(here::here("book/figs/introduction/Sewall_Wright.png"), auto_pdf = T)
 ```
 
-### Genetic mapping: Thomas Morgan, Tetsuo Aida and Theodosius Dobzhansky
+### Genetic mapping: Thomas Morgan, Tetsuo Aida and Theodosius Dobzhansky {#mapping-sec}
 
 During this fertile period in statistical genetics research, the physical location of the gene was still a mystery. In the 1890s, Theodor Boveri, a German embryologist working with sea urchins in Naples, identified the chromosome as the location of the gene [@mukherjeeGeneIntimateHistory2016]. In 1907, on a trip to the United States to give talks on Mendel's discovery, he met the American cell biologist Thomas Hunt Morgan (**Figure \@ref(fig:morgan)**) [@mukherjeeGeneIntimateHistory2016], who sought to extend Boveri's work by exploring the architecture of genes using the fruit fly, *Drosophila melanogaster* [@mukherjeeGeneIntimateHistory2016]. 
 
@@ -257,12 +265,15 @@ knitr::include_graphics(here::here("book/figs/introduction/Dobzhansky.png"), aut
 
 By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that compose chromosomes. After some flirtation with proteins as the molecule of inheritance, Oswald Avery finally proved that it was in fact deoxyribonucleic acid (**DNA**) that was "the material substance of the gene" -- the "cloth from which genes were cut" [@mukherjeeGeneIntimateHistory2016].
 
-Rosalind Franklin, working at King's College in London, had been using crystallography to photograph DNA. 
+The British biochemist Rosalind Franklin, working at King's College in London, had been using X-ray crystallography to photograph DNA. The famous "Photo 51" was taken by her student, Raymond Gosling, and upon Franklin's decision to depart from King's College, she suggested he show the photo to Maurice Wilkins, a New Zealand-born biophysicist who was also working at King's College on the structure of DNA. 
+
+Without Franklin's permission, Wilkins brought photo 51 to James Watson, who immediately saw that "the black cross could arise only from a helical structure. Watson returned to Cambridge and, together with his collaborator Francis Crick, used this observation -- and a report by Franklin and Wilkins on their most recent measurements of the outer backbone -- to develop the established model of DNA structure: a double helix of a sugar-phosphate backbone and the nucleotide bases facing inwards and paired with one another in the conformation of A$\rightarrow$T and G$\rightarrow$C [@watsonAnnotatedIllustratedDouble2012]. 
+
+Watson and Crick built their complete model in the first week of March 1953, and, following consultations with Wilkins and Franklin, who both approved of the model, published their landmark paper on 25 April titled *Molecular structure of nucleic acids: a structure for deoxyribose nucleic acid* [@watsonMolecularStructureNucleic1953]. Theirs was accompanied by two others: one by Gosling and Franklin with crystallographic evidence for the double-helical structure including photo 51 [@franklinMolecularConfigurationSodium1953]; and another by Wilkins corroborating the evidence further with experimental data from DNA crystals [@wilkinsMolecularStructureNucleic1953].
+
+In 1962, Watson, Crick, and Wilkins were awarded the Nobel Prize for their discovery. Unfortunately, Franklin had died in 1958 from ovarian cancer. 
 
 In 1953, Rosalind Franklin, James Watson, and Francis Crick, and Maurice Wilkins (**Figure \@ref(fig:all-four)**) discovered the structure of DNA using X-ray crystallography [@mukherjeeGeneIntimateHistory2016].
-
-
-
 
 Watson [@wagenseilDNADiscovererBlacks2015]:
 
@@ -322,23 +333,25 @@ The improvement in sequencing technologies has continued to progess to the stage
 
 ## Genetic and environmental causes of variation in complex traits
 
-Individual differences in human traits have now been studied for more than a century, yet the causes of variation in human traits remain uncertain and COMPLEX [@poldermanMetaanalysisHeritabilityHuman2015]. Specifically, the partitioning of observed variability into underlying genetic and environmental sources, and the relative importance of additive and non-additive genetic variation, continue to be debated [@poldermanMetaanalysisHeritabilityHuman2015].
+Individual differences in human traits have now been studied for more than a century, yet the causes of variation in human traits remain uncertain and complex [@poldermanMetaanalysisHeritabilityHuman2015]. Specifically, the partitioning of observed variability into underlying genetic and environmental sources, and the relative importance of additive and non-additive genetic variation, continue to be debated to this day [@poldermanMetaanalysisHeritabilityHuman2015].
 
-[START WITH THE SIMPLE END. HERITABILITY. GWAS. ANIMAL BREEDING. FAMILIES. ]
+The most simple causal model for phenotypes is shown in **Figure \@ref(fig:pge-simp)**.
 
-A simplified causal model for the inheritance of traits from one's parents is presented in **Figure \@ref(fig:pheno-causal-model)**, adapted from @morrisPopulationPhenomenaInflate2020. The ancestry of each parent determines both their genotypes and phenotypes (yellow lines). The parents' genotypes directly affect their own phenotypes (black arrows genotype → phenotype). The parents transmit half of each of their alleles *directly* to their offspring (black arrows from genotype → genotype), while the non-transmitted alleles also affect their offspring *indirectly* through their effect on the parents' phenotypes (red lines), a phenomenon known as "**dynastic effects**" [@kongNatureNurtureEffects2018]. In addition, the parents' phenotypes can be correlated through "**assortative mating**" (green line), which also has the consequence of creating correlations between the genotypes that affect those phenotypes [@howeGeneticEvidenceAssortative2019].^[The model has been substantiated by @hwangEstimatingIndirectParental2020, who discovered that indirect parental genetic effects could influence offspring phenotypes through the alleles that they *do not* pass on to their children, but which drive the parents' own behaviour, ultimately influencing the child's outcomes. Their strategy involved creating "virtual" mothers and fathers by estimating the genotypic dosages of parental genotypes using physically genotyped data from relative pairs. They applied the approach to 19,066 sibling pairs from the UK Biobank and showed a polygenic score consisting of imputed parental educational attainment SNP dosages is strongly related to offspring educational attainment even after correcting for offspring genotype at the same loci.]
+(ref:pge-simp) Simplified causal model of phenotypic differences.
 
-(ref:pheno-causal-model) Causal model of offspring phenotypes. Ancestry causes differences in both genotypes and phenotypes of the parents (yellow lines). Dynastic effects are transmitted through parental parental phenotypes (red lines). Assortative mating creates associations between the phenotypes of the parents (green line), which will also lead to genotypic correlations. Arrows represent direction of effect. Figure adapted from @morrisPopulationPhenomenaInflate2020.
-
-```{r pheno-causal-model, echo = F, fig.cap = '(ref:pheno-causal-model)', out.width='100%'}
-knitr::include_graphics(here::here("book/figs/introduction/pheno_causal_model.png"), auto_pdf = T)
+```{r pge-simp, echo = F, fig.cap = '(ref:pge-simp)', out.width='50%', fig.align='center'}
+knitr::include_graphics(here::here("book/figs/introduction/pge-simp.png"), auto_pdf = T)
 ```
 
-This model only includes environmental factors related to the parents' phenotypes, yet the phenotype of an individual is continuously affected by all other environmental influences it is exposed to throughout its lifetime [@plominNatureNurtureGenetic2005]. It is impossible to parse out the respective contributions of each of these factors at the individual level [@knopikBehavioralGenetics2019]: to what extent does the width or the length of a rectangle determine its area? It is determined by the product of the two. But by examining a population of rectangles, one can determine how much of the variance within the population depends on either width or length. The same principle applies to genotypic and environmental variation within groups of individuals.
+This model could be described mathematically as follows, where $P$ represents an individual's phenotype, $G$ represents their genetics, and $E$ represents the environment, being all other (non-genetic) factors that could have influenced their phenotype up to the time of measurement:
 
-### Heritability
+\begin{equation}
+P = G + E (\#eq:pge-simp)
+\end{equation}
 
-Fisher's analysis of variance methodology allows for the partitioning of variance into components that are attributable to different factors. If the total observed phenotypic variation within a population is represented by $V_{P}$, then it can be decomposed into a simple model that includes genetic and environmental factors [@falconerIntroductionQuantitativeGenetics1996]:
+It is impossible to parse out the respective contributions of each of these factors at the individual level -- to what extent does the width or the length of a rectangle determine its area? It is determined by the product of the two. But by examining a population of rectangles, one can determine how much of the *variance* within the population depends on either width or length [@knopikBehavioralGenetics2019]. 
+
+The same principle applies to genotypic and environmental variation within groups of individuals. Fisher's analysis of variance methodology allows for the partitioning of variance into components that are attributable to different factors. If the total observed phenotypic variation within a population is represented by $V_{P}$, then it can be decomposed into a simple model that includes genetic and environmental factors [@falconerIntroductionQuantitativeGenetics1996]:
 
 \begin{equation}
 V_{P} = V_{G} + V_{E} (\#eq:pge)
@@ -357,6 +370,8 @@ h^2 = \frac{V_A}{V_P} (\#eq:heritns)
 \end{equation}
 
 Environmental variance cannot be removed experimentally because it includes by definition all non-genetic variance, and much of this is beyond experimental control. However, elimination of genotypic variance can be achieved experimentally [@falconerIntroductionQuantitativeGenetics1996] by either using human or animal identical twins, or by creating highly inbred lines. Pursuant to Equation \@ref(eq:pge), the environmental variance ($V_E$) can be subtracted from the total phenotypic variance ($V_P$) to give an estimate of the trait's heritability $V_G$ [@falconerIntroductionQuantitativeGenetics1996].^[It is important to note that as heritability is measured as a fraction of total phenotypic variance, it is liable to change depending on the level of environmental variation present in the study population [@visscherHeritabilityGenomicsEra2008].]
+
+### Twin studies
 
 In humans, the twin study design has been used widely to disentangle the relative contributions of genes and environment for a variety of traits. The classical twin design is based on contrasting the trait resemblance of monozygotic (**MZ**) and dizygotic (**DZ**) twin pairs [@poldermanMetaanalysisHeritabilityHuman2015]. MZ twins share approximately 100% of genotypes, whereas DZ twins, like siblings, share on average 50% of their genotypes [@knopikBehavioralGenetics2019]. Assuming they share the same environment (an point I return to below), a rough estimate of heritability can be obtained by comparing the respective correlations of MZ twins and DZ twins with the phenotype of interest. If $r_{MZ}$ and $r_{DZ}$ are the correlation coefficients observed between pairs of MZ and DZ twins for a trait of interest (Equation \@ref(eq:cor) above), $h^2$ = additive genetic influences (Equation \@ref(eq:heritns) above), and $c^2$ = common environmental influences, then Falconer's formula tells us:
 
@@ -378,6 +393,21 @@ h^2 = 2\times(r_{MZ} - r_{DZ})
 \end{equation}
 
 Narrow-sense heritability $h^2$ can therefore be estimated by doubling the difference between the correlation coefficients of MZ versus DZ twins. A 2015 meta-analysis of virtually all human twin studies that had been performed to that date included 2,748 twin studies assessing ~18,000 traits and ~14.5M twin pairs. The results showed that across all traits, $h^2$ is 0.488 and $c^2$ is 0.174 [@poldermanMetaanalysisHeritabilityHuman2015]. Moreover, in 69% of studies $2r_{DZ} = r_{MZ}$ (implying that the shared environment $c^2$ is equivalent across both MZ and DZ twin pairs). This suggests that for most traits, shared environmental or non-additive genetic variation do not make a substantial contribution to phenotypic variation. 
+
+[START WITH THE SIMPLE END. HERITABILITY. GWAS. ANIMAL BREEDING. FAMILIES. ]
+
+A simplified causal model for the inheritance of traits from one's parents is presented in **Figure \@ref(fig:pheno-causal-model)**, adapted from @morrisPopulationPhenomenaInflate2020. The ancestry of each parent determines both their genotypes and phenotypes (yellow lines). The parents' genotypes directly affect their own phenotypes (black arrows genotype → phenotype). The parents transmit half of each of their alleles *directly* to their offspring (black arrows from genotype → genotype), while the non-transmitted alleles also affect their offspring *indirectly* through their effect on the parents' phenotypes (red lines), a phenomenon known as "**dynastic effects**" [@kongNatureNurtureEffects2018]. In addition, the parents' phenotypes can be correlated through "**assortative mating**" (green line), which also has the consequence of creating correlations between the genotypes that affect those phenotypes [@howeGeneticEvidenceAssortative2019].^[The model has been substantiated by @hwangEstimatingIndirectParental2020, who discovered that indirect parental genetic effects could influence offspring phenotypes through the alleles that they *do not* pass on to their children, but which drive the parents' own behaviour, ultimately influencing the child's outcomes. Their strategy involved creating "virtual" mothers and fathers by estimating the genotypic dosages of parental genotypes using physically genotyped data from relative pairs. They applied the approach to 19,066 sibling pairs from the UK Biobank and showed a polygenic score consisting of imputed parental educational attainment SNP dosages is strongly related to offspring educational attainment even after correcting for offspring genotype at the same loci.]
+
+(ref:pheno-causal-model) Causal model of offspring phenotypes. Ancestry causes differences in both genotypes and phenotypes of the parents (yellow lines). Dynastic effects are transmitted through parental parental phenotypes (red lines). Assortative mating creates associations between the phenotypes of the parents (green line), which will also lead to genotypic correlations. Arrows represent direction of effect. Figure adapted from @morrisPopulationPhenomenaInflate2020.
+
+```{r pheno-causal-model, echo = F, fig.cap = '(ref:pheno-causal-model)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/introduction/pheno_causal_model.png"), auto_pdf = T)
+```
+
+This model only includes environmental factors related to the parents' phenotypes, yet the phenotype of an individual is continuously affected by all other environmental influences it is exposed to throughout its lifetime [@plominNatureNurtureGenetic2005]. 
+
+
+
 
 [COULD BE THE INTRO TO: THIS SIMPLE MODEL DOESN'T WORK] However, that study found that several behavioural traits were inconsistent with this model. These traits included conduct disorder, higher-level cognitive functions, mental and behavioural disorders due to the use of alcohol or tobacco, anxiety disorder, and weight maintenance. For these traits, either or both non-additive genetic influences or shared environmental influences are therefore needed to explain the observed patterns of twin correlations [@poldermanMetaanalysisHeritabilityHuman2015].^[@kongNatureNurtureEffects2018 also showed that parents' non-transmitted alleles can affect a child through their impacts on the parents and other relatives, a phenomenon the authors call "genetic nurture", comprising 29.9% of the transmitted polygenic score.]
 
@@ -414,7 +444,6 @@ GWAS output a $p$-value and directional effect size (commonly denoted as $\beta$
 Twin studies and GWAS have led to great advances in our understanding of the genetic basis of complex traits. However they are hampered by the inability to experimentally manipulate either genes or environment in humans. Since the rediscovery of Mendel's work, researchers have resorted to using model organisms, with which it is possible to control for both. 
 
 The genetics of model organisms may be controlled to a degree by establishing inbred strains. Mendel used self-fertilising plants, which without sexual reproduction are effectively inbred strains. At that time, inbred strains of mammals were unknown. But through the repeated mating of siblings over successive generations, as the individuals within each line inherit the same same haplotype from their related parents, they become almost genetically identical to one another, with the added benefit that their genotypes can be replicated across time in subsequent generations. 
-
 In the early 1900s, researchers began to develop inbred lines of guinea pigs and mice for the purpose of genetic research. In 1906, an inbreeding experiment involving guinea-pigs was started by George M. Rommel of the Animal Husbandry Division of the United States Department of Agriculture [@eatonQuartercenturyInbreedingGuineapigs1932]. The experiment was taken over in 1915 by Sewall Wright, who used them to develop his vast contributions to the field.
   
 Contemporaneously, the Harvard undergraduate Clarence Cook Little and his supervisor William Ernest Little collaborated with Abbie Lathrop, a breeder of fancy mice and rats which she marketed to rodent hobbyists and keepers of exotic pets, and later began selling in large numbers to scientific researchers [@steensmaAbbieLathropMouse2010]. In 1902, Castle bought some of Lathrop's mice for his laboratory [@steensmaAbbieLathropMouse2010]. The most frequently used laboratory mouse strain for the past 80 years, C57BL/6J ("Black J"), is derived from one of Lathrop's animals -- mouse number 57 -- bred by Little [@steensmaAbbieLathropMouse2010].
@@ -493,7 +522,7 @@ In medaka, it is known that the southern Japanese *Cab* strain and the northern 
 
 (ref:F0-Cab-Kaga-HdrR) Comparison of period for three inbred medaka strains (*Cab*, *Kaga* and *HdrR*). Kaga's period is lower, and therefore it takes less time to form each somite than *Cab*. Figure generated by Ali Seleit.
 
-```{r F0-Cab-Kaga-HdrR, echo = F, fig.cap = '(ref:F0-Cab-Kaga-HdrR)', out.width='100%', fig.align='right', wrapfigure = list("R", .5)}
+```{r F0-Cab-Kaga-HdrR, echo = F, fig.cap = '(ref:F0-Cab-Kaga-HdrR)', out.width='50%'}
 knitr::include_graphics(here::here("book/figs/somites/ali_period_F0_Cab_Kaga.png"), auto_pdf = T)
 ```
 
@@ -501,7 +530,7 @@ Our collaborators accordingly set up a one-way F2 cross experiment as described 
 
 (ref:somite-period-ali) Screenshots of vertebral elongation in an F2 individual captured by Ali Seleit during imaging. The blue circle represents the point tracked by pyBOAT over time, generating the quantitative phenotype data on period development used in this study.  
 
-```{r somite-period-ali, echo = F, fig.cap = '(ref:somite-period-ali)', out.width='100%', fig.align='left', wrapfigure = list("L", .5)}
+```{r somite-period-ali, echo = F, fig.cap = '(ref:somite-period-ali)', out.width='80%'}
 knitr::include_graphics(here::here("book/figs/somites/ali_compiled_somite_elong.png"), auto_pdf = T)
 ```
 
@@ -521,13 +550,7 @@ Another is the ‘novel object’ assay, where a novel object is introduced to t
 
 The experiments described in **Chapters \@ref(Pilot-chap)** and **\@ref(MIKK-F2-chap)** are designed to simulataneously measure both the direct effect of an individual's genes on their behaviour, as we as the indirect effect of their social partner's genes on the focal individual's behaviour, which is also an environmental factor [@baudGeneticVariationSocial2017]. Social genetic effects have been shown to exert influence on various traits in mice including anxiety, wound healing, immune function, and body weight [@baudGeneticVariationSocial2017], and various traits related to development and survival in many species of livestock [@ellenProspectsSelectionSocial2014]. However, in those studies the social interactions were maintained throughout development, and it is unclear whether social genetic effects can still exert influence on adaptive behaviours during discrete, time-limited interactions.
 
-In **Chapter \@ref(Pilot-chap)** I used a combined open-field and novel-object assay involving assaying pairs for fish, to determine: a) whether there were consistent differences in bold-shy behaviours exhibited by 5 established inbred strains of medaka fish (*iCab*, *HdrR*, and *HO5* from southern Japan, and *Kaga* and *HNI* from northern Japan); and b) whether there were consistent differences in bold-shy behaviours exhibited by a given strain (*iCab*) dependent on the strain that it was partnered with. The former was intended to measure the effect of an individual’s own genes on its behaviour (a direct genetic effect), and the latter to measure the effect of the genes of the focal fish’s tank partner on the behaviour of the focal fish (social genetic effect). Our experimental design allowed us to assess both direct and indirect effects on behaviour simultaneously, and to infer the degree to which variation in bold-shy behaviours is attributable to the differences in an individual’s own genetics, the differences in the genetics of their social companions, and stochastic variation. A schema for the experimental plan is shown in **Figure \@ref(fig:behavioural-schema)**.
-
-(ref:behavioural-schema) Schema for experimental plan. *iCab*-*iCab* pairings are the control condition. To explore direct genetic effects on behaviour, we compare the behaviours of test fishes from different lines, and infer that the differences between lines are caused by the differences in their genetics (direct genetic effects). To explore social genetic effects, we use the same data but turn our focus to the reference fish, and infer that the differences we observe between their behaviours are caused by the differences in their social environments, which are in turn driven by the different genetics in the test fish lines (social genetic effects). 
-
-```{r behavioural-schema, echo = F, fig.cap = '(ref:behavioural-schema)', out.width='100%'}
-knitr::include_graphics(here::here("book/figs/pilot/experimental_schema.png"), auto_pdf = T)
-```
+[CHECK FLOW]
 
 In **Chapter \@ref(MIKK-F2-chap)** I extend the behavioural analysis described in Chapter \@ref(Pilot-chap) over the MIKK panel. I then identify the lines that diverged in both (a) their own behaviour; and (b) the level of transmission of their behaviour onto their *`r colour_line("iCab")`* reference tank partner, and then use them as the parental strains in an F2 cross to attempt to identify the genetic variants associated with those differences.
 
