@@ -277,9 +277,15 @@ I then used these values for all F2 individuals as the input to a Hidden Markov 
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/karyoplot_no_missing.png"), auto_pdf = T)
 ```
 
-[ADD ANOTHER PLOT HERE. PROPORTION OF CALLS/COUNTS FROM HMM. AA/AB/BB.]
+**Figure \@ref(fig:F2-prop-sites)** sets out the genome-wide frequency of bins that were called as either homozygous paternal, heterozygous, or homozygous maternal for each individual, grouped by cross. In accordance with Mendel's law of segregation, the expected frequencies are 0.25, 0.5, and 0.25 respectively. Despite the relatively low sample sizes for each cross, the observed frequencies are generally consistent with these expected frequencies, with notable exceptions for the crosses involving `r colour_line("21-2 (‘Amelia’)")`, where that line contributed a frequency of nearly 0 bins in the four crosses it was used for. This may have been caused by some hybrid incompatibility between line `r colour_line("21-2 (‘Amelia’)")` and the other MIKK panel lines used in these crosses, where an excess of genes from line `r colour_line("21-2 (‘Amelia’)")` rendered the individual non-viable, and therefore did not reach the developmental stage where they could be assayed. There also appears to be an issue with the cross between `r colour_line("50-2 (‘Patrick’)")` and `r colour_line("8-2 (‘Gail’)")`, where the genotypes are skewed away from `r colour_line("50-2 (‘Patrick’)")`, although the small sample size for that cross makes it difficult to confirm. 
 
-I then took these HMM-generated haplotype block calls and used them to impute each sample's SNP-level genotypes using the homozygous biallelic SNP calls in the high-coverage .vcf file for the MIKK panel F0 lines described in Chapter \@ref(MIKK-genomes-chap). This set of variants included a total of ~20.7M SNPs, which I used to generate a Plink-format .bed file, forming the genotype input for the genetic linkage analysis.
+(ref:F2-prop-sites) Frequencies of bins within each individual called as either homozygous for the paternal allele, heterozygous, or homozygous for the maternal allele. 
+
+```{r F2-prop-sites, echo = F, fig.cap = '(ref:F2-prop-sites)', out.width='100%'}
+knitr::include_graphics(here::here("book/figs/mikk_behaviour/prop_sites.png"), auto_pdf = T)
+```
+
+I was nevertheless satisfied that the concordance between our observed genotypes and their expected frequencies indicated that our HMM genotyping was sufficiently robust. I therefore proceeded to use these HMM-generated haplotype block calls to impute each sample's SNP-level genotypes using the homozygous biallelic SNP calls in the high-coverage .vcf file for the MIKK panel F0 lines described in Chapter \@ref(MIKK-genomes-chap). This set of variants included a total of ~20.7M SNPs, which I used to generate a Plink-format .bed file, forming the genotype input for the genetic linkage analysis.
 
 ### Genetic linkage analysis
 
@@ -484,7 +490,7 @@ chr9_sigs = df %>% dplyr::filter(SNP %in% TARGET_SNPS) %>%
 
 kableExtra::kbl(
   chr9_sigs,
-  caption = 'Top significant SNPs on chromosomes 9 and 10 for direct genetic effects on state 3 frequency during the novel object assay.',
+  caption = 'Notable significant SNPs for direct genetic effects.',
   booktabs = TRUE
 ) %>% 
   kableExtra::kable_styling(latex_options = c("striped", "scale_down"))

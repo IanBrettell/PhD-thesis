@@ -2,7 +2,7 @@
 title: |
   Japanese courage: a genetic analysis of complex traits in medaka fish and humans
 author: "Ian Narain Brettell"
-date: "`r format(Sys.Date(), format = '%d %B %Y')`"
+date: "30 September 2022"
 site: bookdown::bookdown_site
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
@@ -25,8 +25,17 @@ header-includes:
     \bigskip
     }
   - \posttitle{\end{center}}
-  - \predate{\begin{center}}
+  - \predate{\begin{center}
+    Pembroke College \\
+    \bigskip
+    }
   - \postdate{\end{center}
+      \begin{center}
+      \bigskip
+      \bigskip
+      \bigskip
+      This thesis is submitted for the degree of Doctor of Philosophy.
+      \end{center}
       \centering
       \begin{figure}[!tpb]
       \centering
