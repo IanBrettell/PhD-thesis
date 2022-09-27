@@ -1,5 +1,15 @@
 # Notes
 
+## 27 Sept
+
+Doesn't print:
+
+* book/figs/mikk_behaviour/0.08_17_polar_all_dge.png
+
+* book/figs/fst/0.1_1000_20220314_final.png
+
+* book/figs/mikk_behaviour/0.05_15_polar_all_dge.png
+
 ## 14 September 2022
 
 Finding extra loci:

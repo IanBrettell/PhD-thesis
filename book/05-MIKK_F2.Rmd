@@ -90,6 +90,7 @@ Here I observed the same phenomenon where the parameter combinations that perfor
 (ref:mikk-hmm-asym) Based on the concordance analysis results set out in Figure \@ref(fig:mikk-param-comp) above, the best apparent combination of parameters -- 0.08 time interval with a 17-state space -- created an asymmetry between states 3 and 4, which would cause difficulties in interpreting their biological relevance. 
 
 ```{r mikk-hmm-asym, echo = F, fig.cap = '(ref:mikk-hmm-asym)', out.width='100%'}
+# NOTE: DOESN'T PRINT
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_17_polar_all_dge.png"), auto_pdf = T)
 ```
 
