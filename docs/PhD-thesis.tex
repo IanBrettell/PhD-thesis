@@ -90,7 +90,7 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 \usepackage{float}
-\floatplacement{figure}{H}
+%\floatplacement{figure}{H}
 \usepackage{booktabs}
 \usepackage{setspace}
 \usepackage{fontspec}
@@ -215,9 +215,9 @@ Altogether, this thesis describes some of the genomic characteristics of both me
 \hypertarget{Introduction}{%
 \chapter{Introduction}\label{Introduction}}
 
-Humankind has long sought to understand the basis of biological variation. What gives rise to the wondrous variety of life forms on Earth? Why do individuals of a particular species differ from one another? How do children inherit traits that are similar to those of their parents, yet on the whole remain distinct from both their parents and their siblings? And are the traits we care about -- our health, our BEHAVIOUR {[}NEED TO GET THE SOCIAL ENVRIONMENT OUT{]} intelligence, our ability to thrive in a changing world -- pre-determined from birth, or continuously pliable throughout our lives? These questions fundamentally concern the natural laws of inheritance, which until recently remained mysterious and obscure. Rapidly-improving technologies are making these questions increasingly tractable, yet the interplay between genes and environment are still the subject of controversy, especially in relation to human traits such as intelligence.
+Humankind has long sought to understand the basis of biological variation. What gives rise to the wondrous variety of life forms on Earth? Why do individuals of a particular species differ from one another? How do children inherit traits that are similar to those of their parents, yet on the whole remain distinct from both their parents and their siblings? And are the traits we care about -- our health, our intelligence, our behaviour, our ability to thrive in a changing world -- pre-determined from birth, or continuously pliable throughout our lives? And in particular, as social creatures, to what extent does our social environment affect these outcomes? Such questions fundamentally concern the natural laws of inheritance, which until recently remained mysterious and obscure. Rapidly-improving technologies are making these inquiries increasingly tractable, yet the interplay between genes and environment are still the subject of controversy, especially in relation to human traits such as intelligence.
 
-In this thesis, I primarily explore the extent to which phenotypic variation is determined by an individual's own genes, and how much it is mediated by the genes of one's social companions, with a particular focus on the phenotype of bold-type behaviours in the Japanese rice paddy fish \emph{Oryzias latipes}. I first provide a brief history of the field, describing some of the work of the scientists on whose shoulders this research stands, from Charles Darwin's theory of evolution, Mendel's identification of the units of inheritance, and the study of continuous variation by Francis Galton, Karl Pearson, Ronald Fisher, and Sewall Wright, but also touching on their other legacies.{[}BRING EUGENICS INTO MAIN TEXT.{]} I then outline the traditional animal crossing methods and modern DNA sequencing and statistical techniques that I used to parse the respective contributions of genes and environment to variation in complex traits, and ultimately identify the genetic variants that drive those differences. {[}I'M ALSO GOING TO GIVE YOU AN INTRODUCTION THTE PHENOTYPES I STUDY IN MEDAKA{]}
+In this thesis, I primarily explore the extent to which phenotypic variation is determined by an individual's own genes, and how much it is mediated by the genes of one's social companions, with a particular focus on the phenotype of bold-type behaviours in the Japanese rice paddy fish medaka (\emph{Oryzias latipes}). In this introduction I first provide a brief history of the field, describing some of the work of the scientists on whose shoulders this research stands, from Charles Darwin's theory of evolution, Mendel's identification of the units of inheritance, and the study of continuous variation by Francis Galton, Karl Pearson, Ronald Fisher, and others, while also touching on their other legacies. I then outline the traditional animal crossing methods and modern DNA sequencing and statistical techniques that I have used to parse the respective contributions of genes and environment to variation in complex traits, and introduce the phenotypes that I study in medaka. Finally, I provide some background to the issue of the non-portability of human polygenic scores to diverse populations, which I explore in the final chapter of this thesis.
 
 \hypertarget{a-brief-history-of-genetics}{%
 \section{A brief history of genetics}\label{a-brief-history-of-genetics}}
@@ -227,14 +227,14 @@ Much of this section has been informed by Mukherjee (2016), Rutherford (2020), a
 \hypertarget{ancient-greece}{%
 \subsection{Ancient Greece}\label{ancient-greece}}
 
-Throughout ancient history, the sources of biological variation were completely unknown. With limited technologies available to them, the Ancient Greek philosophers proposed theories for the inheritance of traits that they observed in humans. Around 500 BC, Pythagoras applied his knowledge of triangles to the question of how traits are inherited from one's parents. He proposed the theory known as ``spermism'', positing that hereditary information was passed down from parent to child via male sperm, with the female providing the nutrients that would allow it to grow. Like the theorem that bears his name, he supposed that these two sides of the ``triangle'' would determine the length of the third side: the characteristics of the child (Mukherjee 2016). Over a century later, in 380 BC, Plato extended this metaphor in \emph{The Republic} (Badiou 2013) to argue that this principle could be applied to perfect humanity by breeding perfect combinations of parents at perfect times (Mukherjee 2016), which is possibly the first recorded expression of eugenic intent.
+Throughout ancient history, the sources of biological variation were completely unknown. With limited technologies available to them, the Ancient Greek philosophers proposed theories for the inheritance of traits that they observed in humans. Around 500 BC, Pythagoras applied his knowledge of triangles to the question of how traits are inherited from one's parents. He proposed the theory known as ``spermism'', positing that hereditary information was passed down from parent to child via male sperm, with the female providing the nutrients that would allow it to grow. Like the theorem that bears his name, he supposed that these two sides of the ``triangle'' would determine the length of the third side: the characteristics of the child. Over a century later, in 380 BC, Plato extended this metaphor in \emph{The Republic} (Plato 2013) to argue that this principle could be applied to perfect humanity by breeding the ideal combinations of parents at perfect times, which is possibly the first recorded expression of eugenic intent.
 
-Aristotle later joined the discussion with his treatise \emph{Generation of Animals} (Aristotle 2021), where he noted that children inherited features from their mothers as well as their fathers, raising cases where human skin colour and other traits from maternal ancestors could skip generations, and thus sperm could not be the only vessel of hereditary information. He suggested an idea of ``movement'' -- the transmission of information -- from the father's sperm, which sculpts the mother's menstrual blood in the same way a carpenter carves a piece of wood. It was, however, impossible for Aristotle to deduce the form in which the information was conveyed.
+Aristotle later joined the discussion with his treatise \emph{Generation of Animals} (Aristotle 2021), where he noted that children inherited features from their mothers as well as their fathers, raising cases where human skin colour and other traits from maternal ancestors could skip generations, and thus sperm could not be the only vessel of hereditary information. He suggested an idea of ``movement'' -- the transmission of information -- from the father's sperm, which sculpts the mother's menstrual blood in the same way a carpenter carves a piece of wood. It was, however, impossible at this time for Aristotle to deduce the form in which the information was conveyed.
 
 \hypertarget{middle-ages}{%
 \subsection{Middle Ages}\label{middle-ages}}
 
-From medieval times through to the 1800s, the prevailing theory of heredity was that a tiny human -- a homunculus -- sat within the sperm, waiting to be inflated upon its introduction to a woman's uterus. But from where did each previous homunculus originate? Logically, the theory would require each homunculus to hold another homunculus, \emph{ad infinitum}. This theory deceived the inventor of the microscope, Nicolaas Hartsoeker, into thinking he observed a homunculus in a sperm he was studying (\textbf{Figure \ref{fig:homunculus-pic}}) (Hartsoeker 1694). But a fundamental question remained: what triggered the expansion of the human form, causing the embryo to develop new parts on its road to becoming a fetus? The answer could only have been some instruction, blueprint, or code, but any specifics remained out of reach.
+From the Middle Ages through to the 1800s, the prevailing theory of heredity was that a tiny human -- a homunculus -- sat within the sperm, waiting to be inflated upon its introduction to a woman's uterus. But from where did each previous homunculus originate? Logically, the theory would require each homunculus to hold within it another homunculus, \emph{ad infinitum}. This theory deceived the inventor of the microscope, Nicolaas Hartsoeker, into thinking he observed a homunculus in a sperm he was studying (\textbf{Figure \ref{fig:homunculus-pic}}) (Hartsoeker 1694). But the theory posed a fundamental question: what triggered the expansion of the human form, causing the embryo to develop new parts on its road to becoming a fetus? The answer could only have been some instruction or code, but any specifics remained out of reach.
 
 
 
@@ -244,7 +244,7 @@ From medieval times through to the 1800s, the prevailing theory of heredity was 
 
 }
 
-\caption{Preformation, drawn by Nicolaas Hartsoeker in 1695. Image adapted from Commons (2019).}\label{fig:homunculus-pic}
+\caption{Preformation, drawn by Nicolaas Hartsoeker in 1695. Image adapted from Wikimedia Commons (2019).}\label{fig:homunculus-pic}
 \end{figure}
 
 \hypertarget{charles-darwin}{%
@@ -262,10 +262,10 @@ It was in this context that a 22-year-old English clergyman named Charles Darwin
 
 }
 
-\caption{Portrait of Charles Darwin from the late 1830s by George Richmond (Commons 2017b).}\label{fig:charles-darwin-young-portrait}
+\caption{Portrait of Charles Darwin from the late 1830s by George Richmond (Wikimedia Commons 2017b).}\label{fig:charles-darwin-young-portrait}
 \end{figure}
 
-After rounding Cape Horn and moving northward along the western coast of South America, the \emph{HMS Beagle} eventually reached the Galápagos Islands on the coast of Peru, an archipelago of 18 islands formed from volcanic lava (Darwin 1998). Over the course of five weeks, Darwin collected carcasses of birds, lizards, and plants. Upon his return to England, he was hailed as a minor celebrity among natural historians due to the collections of specimens he had gathered and shipped back. John Gould -- the ornithologist who lent his (wife's) name to the Gouldian finch (\textbf{Figure \ref{fig:gouldian-finch}}) -- told him that the various birds that Darwin thought were a variety of wrens, warblers, blackbirds, and ``gros-beaks'' were in fact all 13 different species of finches.
+After rounding Cape Horn and moving northward along the western coast of South America, the \emph{HMS Beagle} eventually reached the Galápagos Islands on the coast of Peru, an archipelago of 18 islands formed from volcanic lava (Darwin 1998). Over the course of five weeks, Darwin collected carcasses of birds, lizards, and plants. Upon his return to England, he was hailed as a minor celebrity among natural historians due to the collections of specimens he had gathered and shipped back. John Gould -- the ornithologist who lent his (wife's) name to the Gouldian finch (\textbf{Figure \ref{fig:gouldian-finch}}) -- told him that the various birds that Darwin thought were a variety of wrens, warblers, blackbirds, and ``gros-beaks'' were all in fact 13 different species of finches.
 
 
 
@@ -275,10 +275,16 @@ After rounding Cape Horn and moving northward along the western coast of South A
 
 }
 
-\caption{The Gouldian Finch, an Australian native bird described by British ornithological artist John Gould in 1844 and named after his deceased wife Elizabeth (Bancroft n.d.). Photograph by Sarah R. Pryke, published in Pryke and Griffith (2006).}\label{fig:gouldian-finch}
+\caption{The Gouldian Finch, an Australian native bird described by British ornithological artist John Gould in 1844 and named after his deceased wife Elizabeth (Bancroft 2016). Photograph by Sarah R. Pryke, published in Pryke and Griffith (2006).}\label{fig:gouldian-finch}
 \end{figure}
 
-Each island had produced its own variant (\textbf{Figure \ref{fig:darwin-finches}}), and this caused Darwin to consider whether they had all arisen from a common ancestral finch, branching off like the boughs of a tree over time {[}QUOTE ORIGIN OF SPECIES{]}. He understood that animal breeders took advantage of the natural variation in populations to select for desired traits, but he questioned what force had guided the development of these different varieties of finches in the wild.
+Each island had produced its own variant (\textbf{Figure \ref{fig:darwin-finches}}), and this caused Darwin to consider whether they had all arisen from a common ancestral finch, branching off like the boughs of a tree over time. As he wrote in the second edition of his account of his voyage (Darwin 1845):
+
+\begin{quote}
+\emph{Seeing this gradation and diversity of structure in one small, intimately related group of birds, one might really fancy that from an original paucity of birds in this archipelago, one species had been taken and modified for different ends.}
+\end{quote}
+
+He understood that animal breeders took advantage of the natural variation in populations to select for desired traits, but he questioned what force had guided the development of these different varieties of finches in the wild.
 
 
 
@@ -288,12 +294,12 @@ Each island had produced its own variant (\textbf{Figure \ref{fig:darwin-finches
 
 }
 
-\caption{Illustration of variation in Galapagos finches by John Gould, published in Darwin (1882). Image from Commons (2022b).}\label{fig:darwin-finches}
+\caption{Illustration of variation in Galapagos finches by John Gould, published in Darwin (1882). Image from Wikimedia Commons (2022b).}\label{fig:darwin-finches}
 \end{figure}
 
-Well prior to Darwin's voyage, Thomas Malthus, a curate and amateur economist, had published a paper in titled \emph{An Essay on the Principle of Population} (Malthus 1872), in which he argued that the human population was in constant struggle with its limited resource pool, which in turn was affected by droughts, floods, epidemics, and diseases (Mukherjee 2016). Darwin read the paper and identified this struggle for resources as the natural hand that selected those who possessed traits favourable for survival (Mukherjee 2016). He continued to gestate these ideas throughout the period from his return from the voyage in 1836 through to 1858, when he read a draft paper that had been sent to him by the author, Alfred Russel Wallace (\textbf{Figure \ref{fig:alfred-wallace}}).
+Well prior to Darwin's voyage, Thomas Malthus, a curate and amateur economist, had published a paper in titled \emph{An Essay on the Principle of Population} (Malthus 1872), in which he argued that the human population was in constant struggle with its limited resource pool, which in turn was affected by droughts, floods, epidemics, and diseases. Darwin read the paper and identified this struggle for resources as the force that selected those with the traits that favoured their survival. He continued to gestate these ideas throughout the period from his return from the voyage in 1836 through to 1858, when he read a draft paper that had been sent to him by the author, Alfred Russel Wallace (\textbf{Figure \ref{fig:alfred-wallace}}) (Marchant and Wallace 1916).
 
-Like Darwin, Wallace had set off on a voyage to distant lands, and had observed the stunning variation across the Malay Archipelago in populations separated by channels of water (Mukherjee 2016). And like Darwin, he also derived his theory on the basis of this variation from Malthus's paper (Mukherjee 2016). The draft paper he sent to Darwin outlined his general theory of evolution and natural selection (Mukherjee 2016). In a panic about being ``scooped'', Darwin sent both papers to his geologist friend Charles Lyell, who advised Darwin to have both papers presented simultaneously at the meeting of the Linnean Society so that they could both be credited for the discovery (Mukherjee 2016).
+Like Darwin, Wallace had set off on a voyage to distant lands, and had observed the stunning variation across the Malay Archipelago in populations separated by channels of water (Smith and Beccaloni 2010). And like Darwin, he also derived his theory on the basis of this variation from Malthus's paper. The draft paper he sent to Darwin outlined his theory of evolution and natural selection (Wallace 1855). In a panic about being ``scooped'', Darwin sent both papers to his geologist friend Charles Lyell, who advised Darwin to have both papers presented simultaneously at the meeting of the Linnean Society so that they could both be credited for the discovery (Darwin et al. 2002).
 
 
 
@@ -303,21 +309,21 @@ Like Darwin, Wallace had set off on a voyage to distant lands, and had observed 
 
 }
 
-\caption{Alfred Russel Wallace, taken around 1895. Image from Commons (2022a).}\label{fig:alfred-wallace}
+\caption{Alfred Russel Wallace, taken around 1895. Image from Wikimedia Commons (2022a).}\label{fig:alfred-wallace}
 \end{figure}
 
 The presentation made few waves at the time, but Darwin proceeded to complete his opus, \emph{On the Origin of Species by Means of Natural Selection} (Darwin 1859), where he provided the famous quote:
 
 \begin{quote}
-Thus, from the war of nature, from famine and death, the most exalted object which we are capable of conceiving, namely, the production of the higher animals, directly follows. There is grandeur in this view of life, with its several powers, having been originally breathed into a few forms or into one; and that, whilst this planet has gone cycling on according to the fixed law of gravity, from so simple a beginning endless forms most beautiful and most wonderful have been, and are being, evolved.
+\emph{Thus, from the war of nature, from famine and death, the most exalted object which we are capable of conceiving, namely, the production of the higher animals, directly follows. There is grandeur in this view of life, with its several powers, having been originally breathed into a few forms or into one; and that, whilst this planet has gone cycling on according to the fixed law of gravity, from so simple a beginning endless forms most beautiful and most wonderful have been, and are being, evolved.}
 \end{quote}
 
-{[}WHAT DID HE ACTUALLY SAY? EVOLTUION THROUGH NATURAL SELECTION NOW ESTABLISHED AND HAS STOOD THE TEST OF TIME{]} The book was unexpectedly met with enthusiastic reviews, and sold well. Darwin's theory of evolution through natural selection has since stood the test of time, and is now established as the core process by which life on Earth acquires new and wondrous forms. At the time of publication of the \emph{Origin of Species}, however, two crucial questions still remained unanswered: how was the variation within species generated in the first place, and how were the traits transmitted to future generations? (Mukherjee 2016)
+The book was unexpectedly met with enthusiastic reviews (\emph{The {Saturday Review} of {Politics}, {Literature}, {Science} and {Art}} 1859), and sold well (Darwin 1887). Darwin's theory of evolution through natural selection has since stood the test of time, and is now established as the core process by which life on Earth acquires new and wondrous forms. At the time of publication of the \emph{Origin of Species}, however, two crucial questions still remained unanswered: how was the variation within species generated in the first place, and how were the traits transmitted to future generations?
 
 \hypertarget{gregor-mendel}{%
 \subsection{Gregor Mendel}\label{gregor-mendel}}
 
-Around the time the \emph{Origin of Species} was published, the prevailing theory of heredity was promoted by the French biologist Jean-Baptiste de Lamarck (\textbf{Figure \ref{fig:lamarck}}) (Mukherjee 2016). Lamarck's theory involved the transmission of traits that were strengthened or weakened by environmental pressures in one generation -- such as a giraffe having to stretch its neck to reach the leaves on a canopy -- which was then passed down to subsequent generations as a form of ``pre-adaptation'' (Mukherjee 2016).
+Around the time the \emph{Origin of Species} was published, the prevailing theory of heredity was promoted by the French biologist Jean-Baptiste de Lamarck (\textbf{Figure \ref{fig:lamarck}}). Lamarck's theory involved the transmission of traits that were strengthened or weakened by environmental pressures in one generation -- such as a giraffe having to stretch its neck to reach the leaves on a canopy -- which was then passed down to subsequent generations as a form of ``pre-adaptation'' (Strickberger 1990).
 
 
 
@@ -327,23 +333,23 @@ Around the time the \emph{Origin of Species} was published, the prevailing theor
 
 }
 
-\caption{Portrait of Jean Baptiste de Lamarck from 1802-1803 by Charles Thévenin (Commons 2022c).}\label{fig:lamarck}
+\caption{Portrait of Jean Baptiste de Lamarck from 1802-1803 by Charles Thévenin (Wikimedia Commons 2022c).}\label{fig:lamarck}
 \end{figure}
 
-But by extending that logic, if a human had their arm amputated, their children would be born with shortened arms.\footnote{This theory was experimentally tested by the German embryologist August Weismann, who amputated the tails of mice to determine whether the offspring would be born tailless. The offspring were all born with tails intact (Mukherjee 2016).} Darwin was convinced that selection rather acted upon \emph{pre-existing} variation in a population, and proposed that that variation was transmitted by hereditary particles he called \emph{gemmules} (Mukherjee 2016). During conception, he posited that the gemmules of each parent were blended like paints. But such blending would result in a monochrome population, preventing the creation of the unique, outlying traits required to drive the variation he observed. Around this time Darwin had recorded notes on an obscure paper titled \emph{Experiments in Plant Hybridization}, but he appeared to have inadvertently skipped the page containing a description of the experiments on pea hybrids performed by an Augustine monk called Gregor Mendel (\textbf{Figure \ref{fig:mendel}}) (Mukherjee 2016).
+But by extending that logic, if a human had their arm amputated, their children would be born with shortened arms.\footnote{This theory was experimentally tested by the German embryologist August Weismann, who amputated the tails of mice to determine whether the offspring would be born tailless (Schwartz 2008). The offspring were all born with tails intact.} Darwin was convinced that selection rather acted upon \emph{pre-existing} variation in a population, and proposed that that variation was transmitted by hereditary particles he called \emph{gemmules} (Schwartz 2008). During conception, he proposed that the gemmules of each parent were blended like paints (Charlesworth and Charlesworth 2009). But such blending would result in a monochrome population, preventing the creation of the unique, outlying traits required to drive the variation he observed (Jenkin 1867). Around this time Darwin had recorded notes on an obscure paper titled \emph{Experiments in Plant Hybridization} (Mendel 1866), but he appeared to have inadvertently skipped the page containing a description of the experiments on pea hybrids performed by an Augustine monk named Gregor Mendel (\textbf{Figure \ref{fig:mendel}}).
 
 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.7\linewidth]{figs/introduction/Gregor_Mendel_2} 
+{\centering \includegraphics[width=0.6\linewidth]{figs/introduction/Gregor_Mendel_2} 
 
 }
 
-\caption{Photograph from Commons (2021b).}\label{fig:mendel}
+\caption{Photograph from Wikimedia Commons (2021b).}\label{fig:mendel}
 \end{figure}
 
-Mendel had aspired to become a teacher, but had failed the teacher's exam multiple times, so by 1853 he had returned to the monastery in Brno, Morvia (present day Czech Republic), and planted a crop of peas which he had been breeding for about three years (Mukherjee 2016). He had collected 34 strains that bred ``true'', meaning that the offspring were identical to the parents in seven famous traits (Mukherjee 2016):
+Mendel had aspired to become a teacher, but had failed the teacher's exam multiple times, so by 1853 he had returned to the monastery in Brno, Morvia (present day Czech Republic), and planted a crop of peas which he had been breeding for about three years (Henig 2000). He had collected 34 strains that bred ``true'', meaning that the offspring were identical to the parents in seven famous traits (Reeve 2014):
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -363,13 +369,13 @@ Mendel had aspired to become a teacher, but had failed the teacher's exam multip
   the height of the plant (tall versus short)
 \end{enumerate}
 
-Mendel referred to these alternative versions of a trait as \emph{forms} -- biologists in the 1900s would later refer to them as \emph{alleles}, from the Greek \emph{allos}, referring to different subtypes of the same thing (Mukherjee 2016). Mendel produced hybrids of plants with different alleles to determine which allele the consequent offspring would possess. Over the course of eight years (1857-1864), he created hybrid crosses between the F0 strains (known as the filial 1 hybrid (\textbf{F1}) generation), and crossed those with each other too (known as the \textbf{F2} generation), recording their values for the above traits as he went (Mukherjee 2016). He could soon identify patterns in the reams of data he generated:\footnote{Based around 28,000 plants, 40,000 flowers, and almost 400,000 seeds.} for each of the above 7 traits, the filial 1 hybrid (\textbf{F1}) generation expressed only a single allele, which he referred to as the \emph{dominant}; the hidden allele he referred to as \emph{recessive}. Curiously, however, in the F2 generation the recessive allele reappeared at a ratio of 1:3 (Mukherjee 2016).
+Mendel referred to these alternative versions of a trait as \emph{forms} -- biologists in the 1900s would later refer to them as \emph{alleles}, from the Greek \emph{allos}, referring to different subtypes of the same thing (Mukherjee 2016). Mendel produced hybrids of plants with different alleles to determine which allele the consequent offspring would possess. Over the course of eight years (1857-1864), he crossed the true-breeding strains (termed ``filial 0'', or \textbf{F\textsubscript{0}}) to create the hybrid \textbf{F\textsubscript{1}} generation, and crossed those with each other too (the \textbf{F\textsubscript{2}} generation), recording their values for the above traits as he went. He could soon identify patterns in the reams of data he generated:\footnote{Based around 28,000 plants, 40,000 flowers, and almost 400,000 seeds.} for each of the above 7 traits, the F\textsubscript{1} generation expressed only a single allele, which he referred to as the \emph{dominant}; the hidden allele he referred to as \emph{recessive} (Henig 2000). Curiously, however, in the F\textsubscript{2} generation the recessive allele reappeared at a ratio of 1:3 (Henig 2000).
 
-From these results, Mendel inferred that the F1 hybrids must retain the information from both parents, while only expressing one version of them (Mukherjee 2016). Then when the F1 generation was inter-crossed to produce the F2 generation, the recessive allele would only be expressed when inherited with another recessive allele (Mukherjee 2016). In 1865, Mendel presented his paper \emph{Versuche über Pflanzenhybriden} (Experiments on Plant Hybridization) to a group of farmers, botanists and biologists at the Natural Science Society in Brno (Mukherjee 2016), and it was later published in the annual journal \emph{Proceedings of the Brno Natural Science Society} (Mendel 1866). He mailed out 40 copies of the paper to various scientific societies, but it was only cited four times between 1866 and 1900, and virtually disappeared from scientific literature (Mukherjee 2016).
+From these results, Mendel inferred that the F\textsubscript{1} hybrids must retain the information from both parents, while only expressing one version of them. Then when the F\textsubscript{1} generation was inter-crossed to produce the F\textsubscript{2} generation, the recessive allele would only be expressed when inherited with another recessive allele (Mukherjee 2016). In 1865, Mendel presented his paper \emph{Versuche über Pflanzenhybriden} (Experiments on Plant Hybridization) to a group of farmers, botanists and biologists at the Natural Science Society in Brno (Mukherjee 2016), and it was later published in the annual journal \emph{Proceedings of the Brno Natural Science Society} (Mendel 1866). He mailed out 40 copies of the paper to various scientific societies, but it was only cited four times between 1866 and 1900, and virtually disappeared from scientific literature (Dunn 1991).
 
-In 1900, a Dutch botanist named Hugo de Vries chanced upon Mendel's paper while working on plant hybrids (Mukherjee 2016). Likely driven by self-interest in being credited for the discovery, he proceeded to publish his own findings without mentioning the work of Mendel (Mukherjee 2016). He noted a patch of primroses named \emph{Oenothera lamarckiana}\footnote{An ironic twist given the plant was named after Lamarck.}, which spontaneously generated variants. He termed these variants \emph{mutants} (Mukherjee 2016). It became clear to de Vries that variation in populations arose spontaneously, at random, rather than in the Lamarckian mode of contemporaneous reaction to environmental pressures (Mukherjee 2016). De Vries's paper was read by Carl Correns, a botanist in Tübingen, Germany, who had also come across the work of Mendel, and pressured de Vries into acknowledging Mendel's work in the subsequent version of his publication (Mukherjee 2016).
+In 1900, a Dutch botanist named Hugo de Vries chanced upon Mendel's paper while working on plant hybrids (Sandler and Sandler 1985). Likely driven by self-interest in being credited for the discovery, he proceeded to publish his own findings without mentioning the work of Mendel (Larson, History, and Law Edward J. Larson PH.D J. D. 2004). He noted a patch of primroses named \emph{Oenothera lamarckiana}\footnote{An ironic twist given the plant was named after Lamarck.}, which spontaneously generated variants (Schwartz 2008). He termed these variants \emph{mutants} (de Vries 1909). It became clear to de Vries that variation in populations arose spontaneously, at random, rather than in the Lamarckian mode of contemporaneous reaction to environmental pressures. De Vries's paper was read by Carl Correns, a botanist in Tübingen, Germany, who had also come across the work of Mendel, and pressured de Vries into acknowledging Mendel's work in the subsequent version of his publication (Rheinberger 2000).
 
-In 1894, the English botanist William Bateson (\textbf{Figure \ref{fig:bateson}}) had published a book titled \emph{Materials for the study of variation} (Bateson 1894), in which he noted that biological variation occurs continuously for some traits, and dimorphically for others (Mukherjee 2016). In 1900, while on a train from Cambridge to London, Bateson read the second version of de Vries's paper, and was immediately struck by the significance of Mendel's original study (Mukherjee 2016). He independently confirmed Mendel's findings, and began to promote Mendel's work, including by publishing an English translation of Mendel's original paper (Druery and Bateson 1901). In 1905, Bateson coined a word for the study of these units of inheritance: \emph{genetics}, from the Greek \emph{genno}, meaning ``to give birth'' (Mukherjee 2016). A few years later, in 1909, the botanist Wilhelm Johannsen coined a distinct word to denote the unit of inheritance: the \emph{gene} (Mukherjee 2016).
+In 1894, the English biologist William Bateson (\textbf{Figure \ref{fig:bateson}}) had published a book titled \emph{Materials for the study of variation} (Bateson 1894), in which he noted that biological variation occurs continuously for some traits, and dimorphically for others. In 1900, while on a train from Cambridge to London, Bateson read the second version of de Vries's paper, and was immediately struck by the significance of Mendel's original study (Malone 2002). He independently confirmed Mendel's findings (Punnett 1905), and began to promote Mendel's work (Cock and Forsdyke 2008), including by publishing an English translation of Mendel's original paper (Druery and Bateson 1901). In 1905, Bateson coined a word for the study of these units of inheritance: \emph{genetics}, from the Greek \emph{genno}, meaning ``to give birth'' (Schwartz 2008). A few years later, in 1909, the botanist Wilhelm Johannsen coined a distinct word to denote the unit of inheritance: the \emph{gene} (Wanscher 1975).
 
 
 
@@ -379,7 +385,7 @@ In 1894, the English botanist William Bateson (\textbf{Figure \ref{fig:bateson}}
 
 }
 
-\caption{Portrait of William Bateson, date and author unknown (Commons 2017a).}\label{fig:bateson}
+\caption{Portrait of William Bateson, date and author unknown (Wikimedia Commons 2017a).}\label{fig:bateson}
 \end{figure}
 
 Mendel's work has been distilled into what are now called \emph{Mendel's Laws}:\footnote{Marks (2008) offers a fascinating description of how ``Mendel's Laws'' developed through a series of pedagogical processes, achieving something close to its final form in Thomas Hunt Morgan's \emph{A Critique of the Theory of Evolution} (Morgan 1919).}
@@ -395,9 +401,17 @@ Mendel's work has been distilled into what are now called \emph{Mendel's Laws}:\
 \hypertarget{quantitative-genetics-francis-galton-karl-pearson-ronald-fisher-and-sewall-wright}{%
 \subsection{Quantitative genetics: Francis Galton, Karl Pearson, Ronald Fisher and Sewall Wright}\label{quantitative-genetics-francis-galton-karl-pearson-ronald-fisher-and-sewall-wright}}
 
-The rediscovery of Mendel's work triggered a vociferous debate between Bateson and a cohort of other scientists who sought to reconcile Mendelian inheritance with the continuous variation observed in natural populations (Barton 2016).
+Francis Galton (\textbf{Figure \ref{fig:galton}}) was the cousin of Charles Darwin, born in the same year as Mendel (1822), and travelled to Egypt and Sudan in 1844, spurring his lifelong obsession with the differences between human races (Simonton 1999). Driven by a fear the the ``unfit'' were outbreeding the ``fit'' (Tabery 2014), Galton's reading of Darwin's \emph{Origin of Species} in 1859 galvanised him to apply this new science to improve the human population through selective breeding (James D. Watson and Berry 2009). With a view to improving the human stock, he began to explore the measurement and variance of heredity in humans, with an emphasis on height, intelligence, temperament, and physical prowess (Fairbanks 2009).\footnote{One of Galton's more eccentric activities involved strolling through England and Scotland secretly tabulating beauty by ranking the women he met as ``attractive'', ``indifferent,'' or ``repellent'' using pinpricks on a card hidden in his pocket (Mukherjee 2016).}. From Galton (1883):
 
-Francis Galton (\textbf{Figure \ref{fig:galton}}) was the cousin of Charles Darwin, born in the same year as Mendel (1822), and travelled to Egypt and Sudan in 1844, spurring his lifelong obsession with the differences between human races (Mukherjee 2016). His reading of Darwin's \emph{Origin of Species} in 1859 galvanised him to explore the measurement and variance of heredity in humans, with an emphasis on height, intelligence, temperament, and physical prowess (Mukherjee 2016).\footnote{One of Galton's more eccentric activities involved strolling through England and Scotland secretly tabulating beauty by ranking the women he met as ``attractive'', ``indifferent,'' or ``repellent'' using pinpricks on a card hidden in his pocket (Mukherjee 2016).} He coined the phrase \emph{nature versus nurture} to distinguish between hereditary and environmental influences (Galton 1874). {[}GALTON WAS INTERESTED IN THIS TO IMPROVE THE HUMNAN STOCK. REMOVING THE POOR PEPOLE, RACISM IS HIDDEN INSIDE THERE. {]}
+\begin{quote}
+\emph{We greatly want a brief word to express the science of improving stock\ldots{} to give to the more suitable races or strains of blood a better chance of prevailing speedily over the less suitable\ldots{}}
+\end{quote}
+
+For this purpose, he coined the term \emph{eugenics} (James D. Watson and Berry 2009). It was his vision for a ``science which deals with all influences that improve the inborn qualities of race'' (Galton 1904):
+
+\begin{quote}
+\emph{What nature does blindly, slowly and ruthlessly, man may do providently, quickly, and kindly. As it lies within his power, so it becomes his duty to work in that direction.}
+\end{quote}
 
 
 
@@ -407,26 +421,30 @@ Francis Galton (\textbf{Figure \ref{fig:galton}}) was the cousin of Charles Darw
 
 }
 
-\caption{Portrait of Francis Galton, taken in the 1850s or early 1860s, originally scanned from Pearson (2011; Commons 2021a).}\label{fig:galton}
+\caption{Portrait of Francis Galton, taken in the 1850s or early 1860s, originally scanned from Pearson (2011; Wikimedia Commons 2021a).}\label{fig:galton}
 \end{figure}
 
-Through surveys he sent out to men and women in the mid-1880s, he requested they mail him detailed measurements on the height, weight, eye colour, intelligence, and artistic abilities of parents, grandparents, and children in return for a substantial fee (Mukherjee 2016). With this data he discovered that tall parents indeed tend to have tall children, albeit on average, although the distribution of heights within a generation fit the shape of a normal distribution, or `bell-curve' (Mukherjee 2016). In a surprising twist, he also discovered that the mean height of the sons of the tallest fathers tended to be slightly lower than the father's height, and closer to the population's average -- a phenomenon he described as \emph{regression to the mean} (Mukherjee 2016). The \emph{ancestral law of heredity} sparked an intellectual war with Bateson, through which they attempted to reconcile Mendel's dominant/recessive results with the quantitative theory proposed by Galton (Mukherjee 2016).
+Through surveys Galton sent out to men and women in the mid-1880s, he requested they mail him detailed measurements on the height, weight, eye colour, intelligence, and artistic abilities of their relatives in return for a substantial fee. With this data he discovered that tall parents indeed tend to have tall children, albeit on average, although the distribution of heights within a generation fit the shape of a normal distribution, or `bell-curve' (Mukherjee 2016). In a surprising twist, he also discovered that the mean height of the sons of the tallest fathers tended to be slightly lower than the father's height, and closer to the population's average -- a phenomenon he described as \emph{regression to the mean} (Galton 1886).
 
-Spurred by a desire to apply this new science to the advancement of humankind, and by a fear the the ``unfit'' were outbreeding the ``fit'' (Tabery 2014), in 1883 Galton coined the term \emph{eugenics} for his project to improve the human population through selective breeding (James D. Watson and Berry 2009). It was his vision for a ``science which deals with all influences that improve the inborn qualities of race'' (Galton 1904; Tabery 2014).\footnote{Driven by fear of a world overrun by imbeciles, Galton wrote: ``What nature does blindly, slowly and ruthlessly, man may do providently, quickly, and kindly. As it lies within his power, so it becomes his duty to work in that direction.''}
+Having earlier coined the phrase \emph{nature versus nurture} to distinguish between hereditary and environmental influences (Galton 1874), in the 1890s Galton sought to tease out their respective contributions by proposing the first study on human twins. He reasoned that given twins share identical genetic material, they represent a natural experiment where their similarities could be attributed to genes, while any differences were caused by differences in their environments (Tabery 2014).\footnote{These studies, however, were hampered by Galton's failure to distinguish between identical and non-identical twins.}
 
-In the 1890s, in an attempt to tease out the respective contributions of nature and nurture, Galton proposed the first study on human twins. Since twins share identical genetic material, he reasoned, they represent a natural experiment where any substantial similarities between them could be attributed to genes, while any differences were the consequence of environment (Mukherjee 2016). However, these studies were hampered by Galton's failure to distinguish between identical and non-identical twins.
+Galton also proposed an \emph{ancestral law of heredity} (Galton 1889) -- whereby parents each contributed half of the content a feature to their offspring, the grandparents a quarter, and so on -- sparking a vociferous debate between Bateson and a cohort of other scientists who sought to reconcile Mendelian inheritance with the continuous variation observed in natural populations (Barton 2016). The debate would not be resolved until some time later.
 
-{[}PEARSON WANTED TO IMRPOVE HUMAN INTELLIGENCE. CREATES PCA TO EXPLORE THAT.{]}
+In Galton's later years, he adopted the English mathematician Karl Pearson (\textbf{Figure \ref{fig:pearson}}) as his protégé. Like his mentor, Pearson applied his formidable talents towards advancing social Darwinism (Karl 1901):
 
-In Galton's later years, he adopted the English mathematician Karl Pearson (\textbf{Figure \ref{fig:pearson}}) as his protégé. From 1893 to 1904, Pearson built upon the work of his mentor, continuing to develop a number of statistical techniques for biometry including the chi-squared test (Pearson 1900), the term ``standard deviation'' (Pearson 1894), and correlation and regression coefficients (Pearson 1898), and establishing the foundations of principal components analysis (Pearson 1901).\footnote{Pearson also inherited his Galton's enthusiasm for eugenics. When Galton died in 1911, he bequeathed money to University College London for a Galton Eugenics Professorship, a position that was given to Pearson, who was also the head of the newly created Department of Applied Statistics, the world's first university statistics department (Kevles 1995; Harden 2021).}
+\begin{quote}
+\emph{My view -- and I think it may be called the scientific view of a nation, is that of an organized whole, kept up to a high pitch of internal efficiency by insuring that its numbers are substantially recruited from the better stocks, and kept up to a high pitch of external efficiency by contest, chiefly by way of war with inferior races.}
+\end{quote}
 
-The corrected standard deviation \(s\) for a sample is defined as:
+From 1893 to 1904, Pearson built upon the work of Galton by developing a number of statistical techniques for biometry including the chi-squared test (Pearson 1900), standard deviation, {[}pearsonDissectionAsymmetricalFrequency1894{]}, correlation and regression coefficients (Pearson 1898), and the foundations of principal components analysis (Pearson 1901). When Galton died in 1911, he bequeathed money to University College London for a Galton Eugenics Professorship, a position that was given to Pearson, who was also the head of the newly established Department of Applied Statistics, the world's first university statistics department (Kevles 1995; Harden 2021).
+
+To set out some equations relevant to this thesis, Pearson's corrected standard deviation \(s\) for a sample is defined as:
 
 \begin{equation}
 s = \sqrt{\frac{1}{N-1}{\sum_{i=1} ^n (x_i - \bar{x})^2}} \label{eq:sd}
 \end{equation}
 
-The Pearson correlation coefficient for a sample is defined as:
+And the Pearson correlation coefficient for a sample is defined as:
 
 \begin{equation}
 r_{X,Y} = \frac{\mathrm{cov}(X,Y)}{s_X s_Y} \label{eq:cor}
@@ -443,10 +461,10 @@ r_{X,Y} = \frac{\mathrm{cov}(X,Y)}{s_X s_Y} \label{eq:cor}
 
 }
 
-\caption{Portrait of Karl Pearson in 1910 (Commons 2020).}\label{fig:pearson}
+\caption{Portrait of Karl Pearson in 1910 (Wikimedia Commons 2020).}\label{fig:pearson}
 \end{figure}
 
-Following in the footsteps of Galton and Pearson, the mathematician Ronald Fisher (\textbf{Figure \ref{fig:fisher}}) of Caius College at the University of Cambridge began to apply his skills to elucidating how continuous traits, like height, could be driven by genetic variation (Mukherjee 2016). In 1918, Fisher published his analysis in a landmark paper titled \emph{The Correlation between Relatives on the Supposition of Mendelian Inheritance} (R. A. Fisher 1919), where he described how the combination of a large number of Mendelian alleles acting on the same trait would result in a normal distribution. This reconciliation between Mendelian inheritance and observed continuous traits was the beginning of what was later referred to by Julian Huxley as the ``\textbf{modern evolutionary synthesis}'' (Huxley 1942; Tabery 2014).
+Following in the footsteps of Galton and Pearson, the mathematician Ronald Fisher (\textbf{Figure \ref{fig:fisher}}) of Caius College at the University of Cambridge began to apply his skills to elucidating how continuous traits, like height, could be driven by genetic variation (Reeve and Black 2001). In 1918, Fisher published his analysis in a landmark paper titled \emph{The Correlation between Relatives on the Supposition of Mendelian Inheritance} (R. A. Fisher 1919), where he described how the combination of a large number of Mendelian alleles acting on the same trait would result in a normal distribution. This reconciliation between Mendelian inheritance and observed continuous traits was the beginning of what was later referred to by Julian Huxley as the ``\textbf{modern evolutionary synthesis}'' (Huxley 1942; Tabery 2014).
 
 
 
@@ -456,16 +474,16 @@ Following in the footsteps of Galton and Pearson, the mathematician Ronald Fishe
 
 }
 
-\caption{Photo of a young Ronald Fisher taken in 1913. Image from Commons (2021c).}\label{fig:fisher}
+\caption{Photo of a young Ronald Fisher taken in 1913. Image from Wikimedia Commons (2021c).}\label{fig:fisher}
 \end{figure}
 
-In the same paper, Fisher also introduced the concept of \emph{variance} as the square of the standard deviation developed by Galton and Pearson (Equation \eqref{eq:sd} above), and used it to partition the \emph{causes} of variation (Tabery 2014).\footnote{Fisher: ``For stature the coefficient of correlation between brothers is about .54, which we may interpret by saying that 54\% of their variance is accounted for by ancestry alone, and that 46\% must have some other explanation.''} In 1921 he published his first application of this ``analysis of variance'' (\textbf{ANOVA}) (Ronald Aylmer Fisher 1921), which became widely used following its inclusion in his widely influential book \emph{Statistical Methods for Research Workers} (Ronald Aylmer Fisher 1925).
+In the same paper, Fisher also introduced the concept of \emph{variance} as the square of the standard deviation developed by Galton and Pearson (Equation \eqref{eq:sd} above), and used it to partition the \emph{causes} of variation (Tabery 2014).\footnote{R. A. Fisher (1919): ``For stature the coefficient of correlation between brothers is about .54, which we may interpret by saying that 54\% of their variance is accounted for by ancestry alone, and that 46\% must have some other explanation.''} In 1921 he published his first application of this ``analysis of variance'' (\textbf{ANOVA}) (Ronald Aylmer Fisher 1921), which became widely used following its inclusion in his widely influential book \emph{Statistical Methods for Research Workers} (Ronald Aylmer Fisher 1925).
 
-Fisher was also an ardent eugenicist. He helped create the Cambridge University Eugenics Society in 1911, hosting meetings in his rooms, organising public lectures by well-known eugenicists, assisting at the First International Eugenics Congress, and even delivering his own eugenic lectures (Mazumdar 2005; Tabery 2014). He was also a member of the British Eugenics Society, and helped establish the Society's Committee for Legalising Sterilisation. His statistical innovations were developed in part to make eugenic assessments of the relative importance of nature and nurture when it came to evaluating traits like feeble-mindedness (Tabery 2014). Eugenics policies were implemented in the United States, Sweden, and other countries, which resulted in the forced sterilisations and deaths of millions (Rutherford 2020). Ultimately, eugenics was adopted as a policy by the Nazi regime, resulting in the genocide of around a million Jews, Poles, and Gypsies. The association between eugenics and the horrors of World War II became inextricable, and the eugenics movement was all but finished (Mukherjee 2016).{]}
+Fisher was also an ardent eugenicist, and his statistical innovations were developed in part to assess the relative importance of nature and nurture for traits like feeble-mindedness (Tabery 2014). He helped create the Cambridge University Eugenics Society in 1911, hosting meetings in his rooms, organising public lectures by well-known eugenicists, assisting at the First International Eugenics Congress, and delivering his own eugenic lectures. Fisher also helped establish the Society's Committee for Legalising Sterilisation (Mazumdar 2005; Tabery 2014).
 
-Fisher later moved to the Rothamsted Agricultural Research Station in Harpenden, where he created many of the statistical methodologies -- such as tests of significance and the design of experiments -- that continue to be used by statisticians today (Tabery 2014).\footnote{With Winifred A. Mackenzie, Fisher studied the response of 12 different potato varieties to different manure-based fertilizer treatments, where they set up a plot of two treatments (treatment/no treatment), with three replicate plots within each treatment, and three rows within each replicate plots with different manure treatments (either manure, manure + potassium sulfate, or manure + potassium chloride) (R. A. Fisher and Mackenzie 1923). From this data Fisher generated the first ANOVA table, listing the various causes of variation along with their respective contribution to total variation in crop yield (Tabery 2014).}
+Through the sustained advocacy of scientists led by Galton, Pearson, and Fisher, the concept of eugenics took a firm hold on Western thought (Hawkins 1997), leading to the implementation of eugenics policies in a number of American and European countries including the United States (Barrett and Kurzman 2004), Canada (McLaren 2015), Sweden (Björkman and Widmalm 2010), and Nazi Germany (Bartov 2015). From the early 1900s through to the end of World War II, these policies resulted in the forced sterilisation and murder of millions (Bashford and Levine 2010). The eugenics movement was inextricably linked to these horrors, and subsequently fell into decline (Black 2012).
 
-Around the time Fisher was working on his landmark 1919 paper, the American geneticist Sewall Wright (\textbf{Figure \ref{fig:wright}}) was using his work on guinea pigs to reconcile Mendelian inheritance with continuous variation (S. Wright 1930). He developed a mathematical theory of inbreeding, eventually introducing the inbreeding coefficient \(F\) as the correlation between uniting gametes in 1922 (S. Wright 1922). Over the course of an esteemed career, together with Fisher and John B. S. Haldane (Provine 2001; Tabery 2014), he advanced the modern evolutionary synthesis, and founded the field of population genetics with his papers on mating systems (S. Wright 1946) and genetic drift (S. Wright 1948) .
+Prior to the war, around the time Fisher was working on his landmark 1919 paper, the American geneticist Sewall Wright (\textbf{Figure \ref{fig:wright}}) was using his work on guinea pigs to reconcile Mendelian inheritance with continuous variation (S. Wright 1930). He developed a mathematical theory of inbreeding, eventually introducing the inbreeding coefficient \(F\) as the correlation between uniting gametes in 1922 (S. Wright 1922). Over the course of an esteemed career, together with Fisher and John B. S. Haldane, he advanced the modern evolutionary synthesis (Provine 2001; Tabery 2014), and founded the field of population genetics with his papers on mating systems (S. Wright 1946) and genetic drift (S. Wright 1948).
 
 
 
@@ -481,7 +499,7 @@ Around the time Fisher was working on his landmark 1919 paper, the American gene
 \hypertarget{mapping-sec}{%
 \subsection{Genetic mapping: Thomas Morgan, Tetsuo Aida and Theodosius Dobzhansky}\label{mapping-sec}}
 
-During this fertile period in statistical genetics research, the physical location of the gene was still a mystery. In the 1890s, Theodor Boveri, a German embryologist working with sea urchins in Naples, identified the chromosome as the location of the gene (Mukherjee 2016). In 1907, on a trip to the United States to give talks on Mendel's discovery, he met the American cell biologist Thomas Hunt Morgan (\textbf{Figure \ref{fig:morgan}}) (Mukherjee 2016), who sought to extend Boveri's work by exploring the architecture of genes using the fruit fly, \emph{Drosophila melanogaster} (Mukherjee 2016).
+During this fertile period in statistical genetics research, the physical location of the gene was still a mystery. In the 1890s, Theodor Boveri, a German embryologist working with sea urchins in Naples, identified the chromosome as the location of the gene (Laubichler and Davidson 2008). Inspired by Boveri's work, the American cell biologist Thomas Hunt Morgan (\textbf{Figure \ref{fig:morgan}}) sought to extend it by exploring the architecture of genes using the fruit fly, \emph{Drosophila melanogaster}, as a model organism (Allen 1978).
 
 
 
@@ -494,9 +512,9 @@ During this fertile period in statistical genetics research, the physical locati
 \caption{Thomas Hunt Morgan in 1920. Portrait taken by A. F. Huettner. Image from Kenney and Borisy (2009).}\label{fig:morgan}
 \end{figure}
 
-Around 1905 Morgan began to breed \emph{Drosophila}, identifying visible variants that he could track over generations, including white versus red eyes, forked versus straight bristles, sable-coloured bodies, curved legs; bent, bat-like wings; disjointed abdomens, and deformed eyes (Mukherjee 2016). Through repeated crossing experiments, Morgan discovered that some genes were transmitted together at a higher rate than chance alone. He proposed that these genes were physically ``linked'' to one another, implying that they were situated on some string within the chromosome (Mukherjee 2016). This advanced the understanding of a gene from a purely theoretical unit of inheritance to a physical unit (Mukherjee 2016). He further discovered that, occasionally, a gene that was otherwise linked to another could ``cross over'' from one parental strand to the other, generating offspring with a mixture of parental alleles (Mukherjee 2016).
+Around 1905, Morgan began to breed \emph{Drosophila}, identifying visible variants that he could track over generations, such as white versus red eyes, forked versus straight bristles, disjointed abdomens, and deformed eyes (Hodge 2009). Through repeated crossing experiments, Morgan discovered that some genes were transmitted together at a higher rate than chance alone. He proposed that these genes were physically ``linked'' to one another, implying that they were situated on some string within the chromosome, like strings on a bead (Morgan 1972). This advanced the understanding of a gene from a purely theoretical unit of inheritance to a physical unit (Morgan 1935). He further discovered that, occasionally, a gene that was otherwise linked to another could ``cross over'' from one parental strand to the other, generating offspring with a mixture of parental alleles (Morgan 1916).
 
-While Morgan was carrying out his experiments with \emph{Drosophila}, Japanese researchers were also studying Mendelian inheritance with the Japanese medaka fish, \emph{Oryzias latipes}. Following three articles published by three separate professors in Japanese on the recessive inheritance of medaka colour variants (Fukamachi and Naruse 2021), a teacher named Tatsuo Aida (\textbf{Figure \ref{fig:aida}}) published the first article in English about medaka in 1921 (Aida 1921) (\textbf{Figure \ref{fig:aida-fig}}). The study involved a total of 22 crosses of two generations, and among several other findings, Aida discovered recombination between the X and Y chromosome -- the world's first demonstration of PSEUDO-AUTOSOMAL SEX CROSSOVER inheritance in any species (Naruse, Tanaka, and Takeda 2011).\footnote{The editor, William Castle, was so impressed by this last finding that he added the following footnote to the paper: ``It should be pointed out, in justice to the author, that his observations go beyond those of Schmidt in the important respect of showing the occurrence of crossing over between the X and the Y chromosome.''}
+While Morgan was carrying out his experiments with \emph{Drosophila}, Japanese researchers were also studying Mendelian inheritance with the Japanese medaka fish (\emph{Oryzias latipes}), the main subject of this thesis. Following three articles published by three separate professors in Japanese on the recessive inheritance of medaka colour variants (Fukamachi and Naruse 2021), a teacher named Tatsuo Aida (\textbf{Figure \ref{fig:aida}}) published the first article in English about medaka in 1921 (Aida 1921) (\textbf{Figure \ref{fig:aida-fig}}). The study involved a total of 22 crosses of two generations, and among several other findings, Aida discovered recombination between the X and Y chromosome -- the world's first demonstration of crossovers between pseudo-autosomal sex chromosomes in any species (Naruse, Tanaka, and Takeda 2011).\footnote{The editor, William Castle, was so impressed by this last finding that he added the following footnote to the paper: ``It should be pointed out, in justice to the author, that his observations go beyond those of Schmidt in the important respect of showing the occurrence of crossing over between the X and the Y chromosome.''}
 
 
 
@@ -520,7 +538,7 @@ While Morgan was carrying out his experiments with \emph{Drosophila}, Japanese r
 \caption{Figure from Aida (1921) showing the different medaka colour variants used in the study.}\label{fig:aida-fig}
 \end{figure}
 
-In the 1930s, Theodosius Dobzhansky (\textbf{Figure \ref{fig:dobzhansky}}), a Ukrainian biologist who had trained with Morgan, used \emph{Drosophila pseudoobscura} to investigate how genetic variation drove evolution (Mukherjee 2016). Using a single population of flies that he raised in different temperatures while controlling for all other environmental variables, he found that after four months, the genetic ratios in the two sub-populations had changed (Mukherjee 2016). Through this experiment, he determined that genetic variation was the norm across biology; that the adaptive benefit of a given variant would depend on the particular environment that an individual found itself in; and that most phenotypes were driven by many genes interacting with each other and the environment, while also subject to chance (Mukherjee 2016).
+In the 1930s, Theodosius Dobzhansky (\textbf{Figure \ref{fig:dobzhansky}}), a Ukrainian biologist who had trained with Morgan, used \emph{Drosophila pseudoobscura} to investigate how genetic variation drove evolution (Mukherjee 2016). Using a single population of flies that he raised in different temperatures while controlling for all other environmental variables, he found that after four months, the genetic ratios in the two sub-populations had changed (Dobzhansky 1943). Through this experiment, he determined that genetic variation was the norm across biology; that the adaptive benefit of a given variant would depend on the particular environment that an individual found itself in; and that most phenotypes were driven by many genes interacting with each other and the environment (Mukherjee 2016).
 
 
 
@@ -536,56 +554,49 @@ In the 1930s, Theodosius Dobzhansky (\textbf{Figure \ref{fig:dobzhansky}}), a Uk
 \hypertarget{the-discovery-of-the-structure-of-dna}{%
 \subsection{The discovery of the structure of DNA}\label{the-discovery-of-the-structure-of-dna}}
 
-By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that compose chromosomes. After some flirtation with proteins as the molecule of inheritance, Oswald Avery finally proved that it was in fact deoxyribonucleic acid (\textbf{DNA}) that was ``the material substance of the gene'' -- the ``cloth from which genes were cut'' (Mukherjee 2016).
+By the early 1940s, it was known that genes resided in chromatin, the mixture of proteins and nucleic acids that compose chromosomes. After some flirtation with proteins as the molecule of inheritance, Avery, MacLeod, and McCarty (1944) finally proved that it was in fact deoxyribonucleic acid (\textbf{DNA}) that was ``the material substance of the gene'' -- the ``cloth from which genes were cut'' (Gorner and Lyon 1996).
 
-The British biochemist Rosalind Franklin, working at King's College in London, had been using X-ray crystallography to photograph DNA. The famous ``Photo 51'' was taken by her student, Raymond Gosling, and upon Franklin's decision to depart from King's College, she suggested he show the photo to Maurice Wilkins, a New Zealand-born biophysicist who was also working at King's College on the structure of DNA.
-
-Without Franklin's permission, Wilkins brought photo 51 to James Watson, who immediately saw that ``the black cross could arise only from a helical structure. Watson returned to Cambridge and, together with his collaborator Francis Crick, used this observation -- and a report by Franklin and Wilkins on their most recent measurements of the outer backbone -- to develop the established model of DNA structure: a double helix of a sugar-phosphate backbone and the nucleotide bases facing inwards and paired with one another in the conformation of A\(\rightarrow\)T and G\(\rightarrow\)C (James D. Watson, Gann, and Witkowski 2012).
-
-Watson and Crick built their complete model in the first week of March 1953, and, following consultations with Wilkins and Franklin, who both approved of the model, published their landmark paper on 25 April titled \emph{Molecular structure of nucleic acids: a structure for deoxyribose nucleic acid} (J. D. Watson and Crick 1953). Theirs was accompanied by two others: one by Gosling and Franklin with crystallographic evidence for the double-helical structure including photo 51 (Franklin and Gosling 1953); and another by Wilkins corroborating the evidence further with experimental data from DNA crystals (Wilkins, Stokes, and Wilson 1953).
-
-In 1962, Watson, Crick, and Wilkins were awarded the Nobel Prize for their discovery. Unfortunately, Franklin had died in 1958 from ovarian cancer.
-
-In 1953, Rosalind Franklin, James Watson, and Francis Crick, and Maurice Wilkins (\textbf{Figure \ref{fig:all-four}}) discovered the structure of DNA using X-ray crystallography (Mukherjee 2016).
-
-Watson (Wagenseil 2015):
-
-\begin{quote}
-all our social policies are based on the fact that their (blacks) intelligence is the same as ours (whites) -- whereas all the testing says not really \ldots{} people who have to deal with black employees find this not true.
-\end{quote}
-
-During a speaking tour, Watson also claimed that black people were less intelligent than white people, and the idea that ``equal powers of reason'' were shared across racial groups was a delusion (Milmo 2007).
-
-In 1970, while reading Karl Pearson's biography of Francis Galton, Crick wrote to Bernard Davis of Harvard University, he said (Ridley 2006):
-
-\begin{quote}
-My other suggestion is in an attempt to solve the problem of irresponsible people and especially those who are poorly endowed genetically having large numbers of unnecessary children. Because of their irresponsibility, it seems to me that for them, sterilization is the only answer and I would do this by bribery. It would probably pay society to offer such individuals something like £1,000 down and a pension of £5 a week over the age of 60. As you probably know, the bribe in India is a transistor radio and apparently there are plenty of takers.
-\end{quote}
-
-Soon after, in a letter to Sir Peter Medawar, he wrote (Ridley 2006):
-
-\begin{quote}
-I do not suggest that only the very rich or the very intellectual should have children (what a thought!) but roughly that upper and upper-middle class families be encouraged to have say 3 or 4 on average and manual labourers and obviously dim and disturbed people have 0 or 1.
-\end{quote}
-
-In an interview with David Pearson of the Wellcome Library for the History and Understanding of Medicine, Crick said (Wellcome 2003):
-
-\begin{quote}
-In the long run, it is unavoidable that society will begin to worry about the character of the next generation \ldots{} It is not a subject at the moment which we can tackle easily because people have so many religious beliefs and until we have a more uniform view of ourselves I think it would be risky to try and do anything in the way of eugenics \ldots{} I would be astonished if, in the next 100 or 200 years, society did not come round to the view that they would have to try to improve the next generation in some extent or one way or another.
-\end{quote}
+From 1951, British biochemist Rosalind Franklin had been working at King's College in London, using X-ray crystallography to photograph DNA (Maddox 2003). In 1952, her student, Raymond Gosling, took the now famous ``Photo 51'' (\textbf{Figure '\ref{fig:photo51}}), and upon Franklin's decision to depart from King's College, she suggested he show the photo to Maurice Wilkins, a New Zealand-born biophysicist who was also working at King's College on the structure of DNA (Williams 2019).
 
 
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{figs/introduction/all_four} \caption{Composite image of Rosalind Franklin (1956), James Watson (1980s), Francis Crick (1980s) and Maurice Wilkins (early 1990s) from {``{DNA} Then and Now''} (n.d.) reprinted courtesy of Cold Spring Harbor Laboratory Library and Archive, James D. Watson Collection; Wilkins photo courtesy of TVNZ.}\label{fig:all-four}
+
+{\centering \includegraphics[width=1\linewidth]{figs/introduction/Dobzhansky} 
+
+}
+
+\caption{Photo 51 from Franklin and Gosling (1953).}\label{fig:photo51}
 \end{figure}
+
+Without Franklin's permission, Wilkins brought photo 51 to James Watson, a molecular biologist working at the University of Cambridge, who immediately saw that ``the black cross could arise only from a helical structure''(Marx 2004). Watson and his colleague Francis Crick, a molecular biologist from England, used this observation -- and a report by Franklin and Wilkins on their most recent measurements of the outer backbone -- to develop the established model of DNA structure: a double helix of a sugar-phosphate backbone and the nucleotide bases facing inwards and paired with one another in the conformation of A\(\rightarrow\)T and G\(\rightarrow\)C (James D. Watson, Gann, and Witkowski 2012).
+
+Watson and Crick built their complete model in the first week of March 1953, and, following consultations with Wilkins and Franklin, who both approved of the model, published their landmark paper on 25 April titled \emph{Molecular structure of nucleic acids: a structure for deoxyribose nucleic acid} (J. D. Watson and Crick 1953). Theirs was accompanied by two others: one by Gosling and Franklin with crystallographic evidence for the double-helical structure including photo 51 (Franklin and Gosling 1953); and another by Wilkins corroborating the evidence further with experimental data from DNA crystals (Wilkins, Stokes, and Wilson 1953). For their discovery, Watson, Crick, and Wilkins were awarded the Nobel Prize in 1962. Unfortunately, Franklin had died two years earlier from ovarian cancer, and so was not nominated.
+
+It is worth noting that both Watson and Crick have since made a number of controversial comments about eugenics, race and intelligence. For instance, in 2015 Watson said:
+
+In 1970, while reading Karl Pearson's biography of Francis Galton in 1970, Crick wrote to Bernard Davis of Harvard University and said:
+
+\begin{quote}
+\emph{My other suggestion is in an attempt to solve the problem of irresponsible people and especially those who are poorly endowed genetically having large numbers of unnecessary children. Because of their irresponsibility, it seems to me that for them, sterilization is the only answer and I would do this by bribery. It would probably pay society to offer such individuals something like £1,000 down and a pension of £5 a week over the age of 60. As you probably know, the bribe in India is a transistor radio and apparently there are plenty of takers.} (Ridley 2006)
+\end{quote}
+
+In an interview with David Pearson of the Wellcome Library for the History and Understanding of Medicine, Crick also said:
+
+\begin{quote}
+\emph{In the long run, it is unavoidable that society will begin to worry about the character of the next generation \ldots{} It is not a subject at the moment which we can tackle easily because people have so many religious beliefs and until we have a more uniform view of ourselves I think it would be risky to try and do anything in the way of eugenics \ldots{} I would be astonished if, in the next 100 or 200 years, society did not come round to the view that they would have to try to improve the next generation in some extent or one way or another.} (Wellcome 2003)
+\end{quote}
+
+\begin{quote}
+\emph{All our social policies are based on the fact that their (blacks) intelligence is the same as ours (whites) -- whereas all the testing says not really \ldots{} people who have to deal with black employees find this not true.} (Wagenseil 2015)
+\end{quote}
+
+During a speaking tour, Watson also claimed that black people were less intelligent than white people, and the idea that ``equal powers of reason'' were shared across racial groups was a delusion (Milmo 2007).
 
 \hypertarget{the-development-of-dna-sequencing}{%
 \subsection{The development of DNA sequencing}\label{the-development-of-dna-sequencing}}
 
-Sanger developed methods of ``sequencing by separation'', first applied to determine the first protein sequence of insulin in the early 1950s'' {[}CITE{]}, and later to decipher the sequence of RNA, with the first being alanine tRNA (Shendure et al. 2017).
-
-Over the course of the 1970s, after discovering methods to sequence RNA and proteins {[}CITE{]}, Frederick Sanger (\textbf{Figure \ref{fig:sanger}}), a biochemist at the University of Cambridge, developed a method identifying each nucleotide base as it was added to the strand during DNA replication (Mukherjee 2016).
+In the early 1950s, Frederick Sanger (\textbf{Figure \ref{fig:sanger}}), a biochemist at the University of Cambridge, developed methods of ``sequencing by separation'', first applied to determine the first protein sequence of insulin (F. Sanger and Tuppy 1951a, 1951b), and later to decipher the sequence of RNA, with the first being alanine tRNA (Shendure et al. 2017).
 
 In 1977 he published what became known as the ``Sanger method'', using radio-labelled nucleic acids to identify the order and type of nucleotides that made up a DNA sequence (Frederick Sanger, Nicklen, and Coulson 1977), earning him a second Nobel prize in Chemistry in 1980 ({``The {Nobel Prize} in {Chemistry} 1980''} n.d.).
 
@@ -604,7 +615,7 @@ Shotgun sequencing -- sequencing of random clones followed by sequence assembly 
 
 These technological breakthroughs eventually led to the first draft of the human genome being published in 2001 by a large international consortium (I. H. G. S. Consortium 2001).\footnote{The full sequence (including heterochromatic regions) was only completed in 2022 (Nurk et al. 2022).}
 
-After the human genome poroject, Sanger sequencing was superseded by ``second generation'' DNA sequencing (also called ``massively parallel'' or ``next generation'' sequencing). The first NGS platforms arrived in 2005, involving the dense fixation of a library of millions or billions of DNA templates onto a two-dimensional surface, allowing for a single reaction step and \emph{in vitro} amplification , and imaging through the detection of fluorescence from deoxynucleotides over cycles of biochemistry, known as `sequencing by synthesis' (Shendure et al. 2017). Each template incorporates one and only one dNTP on each cycle. After imaging to determine which of four colours was incorporated by each template on the surface, both blocking and fluorescent groups are removed to set up the next extension.
+After the human genome project, Sanger sequencing was superseded by ``second generation'' DNA sequencing (also called ``massively parallel'' or ``next generation'' sequencing). The first NGS platforms arrived in 2005, involving the dense fixation of a library of millions or billions of DNA templates onto a two-dimensional surface, allowing for a single reaction step and \emph{in vitro} amplification , and imaging through the detection of fluorescence from deoxynucleotides over cycles of biochemistry, known as `sequencing by synthesis' (Shendure et al. 2017). Each template incorporates one and only one dNTP on each cycle. After imaging to determine which of four colours was incorporated by each template on the surface, both blocking and fluorescent groups are removed to set up the next extension.
 
 The intense competition between several NGS companies including 454, Solexa (acquired by Illumina), Agencourt, Helicos, Complete Genomics, and Ion Torrent resulted in the reduction in the raw, per-megabase count of DNA sequencing from \$1,000 to \$0.10 between 2007 and 2012 (Wetterstrand 2021). Read lengths tend to be in the low hundreds of bases, and are mostly over 99.9\% accurate.
 
@@ -650,19 +661,19 @@ V_{P} = V_{G} + V_{E} \label{eq:pge}
 H^2 = \frac{V_G}{V_P}
 \]
 
-\(V_{G}\) can be parsed into additive, dominance, and interaction (epistatic) variances. Additive variance, \(V_A\), also known as the variance of ``breeding values'', measures the degree to which offspring resemble their parents.
+\(V_{G}\) can be parsed into additive, dominance, and interaction (``epistatic'') variances. Additive variance, \(V_A\), also known as the variance of ``breeding values'', measures the degree to which offspring resemble their parents. Dominance variance, \(V_D\), measures the dominance deviation, being the extent to which the phenotype deviates from the additive linear relationship across genotypes. Interaction variance, \(V_I\), measures the degree to which the phenotype deviates from the additive linear relationship across genotypes as a result of interactions between genes at different loci (Falconer and Mackay 1996).
 
-\[
-V_G = V_A + V_D + V_I
-\]
+\begin{equation}
+V_G = V_A + V_D + V_I \label{eq:gendecomp}
+\end{equation}
 
-\emph{Narrow-sense heritability} (\(h^2\)) measures the proportion of phenotypic variance attributable to \emph{additive} genetic variance, excluding variance caused by Mendelian dominant/recessive alleles, and epistasis (the interaction of alleles at different loci) (Bateson 1909; Falconer and Mackay 1996; Posthuma et al. 2003):
+Research has traditionally focused on \(V_A\) due to its importance for predicting phenotypes between relatives, and opportunities for change through natural or artificial selection (William G. Hill, Goddard, and Visscher 2008). Recent evidence has supported the proposition that most genetic variance is additive (William G. Hill, Goddard, and Visscher 2008; Polderman et al. 2015).\footnote{In a meta-anlysis on practically all twin studies published up to 2015, poldermanMetaanalysisHeritabilityHuman2015 showed that for 69\% of studies, the observed twin correlations were solely due to additive genetic variation. This was most prominent for neurological, ear, nose and throat, cardiovascular and ophthalmological domains. The trait domains that were inconsistent with this model were ``activities'', reproduction, and dematological.} \emph{Narrow-sense heritability} (\(h^2\)) measures the proportion of phenotypic variance attributable to additive genetic variance, and therefore expresses the extent to which phenotypes are determined by the genes transmitted from the parents (Bateson 1909; Falconer and Mackay 1996; Posthuma et al. 2003).
 
 \begin{equation}
 h^2 = \frac{V_A}{V_P} \label{eq:heritns}
 \end{equation}
 
-Environmental variance cannot be removed experimentally because it includes by definition all non-genetic variance, and much of this is beyond experimental control. However, elimination of genotypic variance can be achieved experimentally (Falconer and Mackay 1996) by either using human or animal identical twins, or by creating highly inbred lines. Pursuant to Equation \eqref{eq:pge}, the environmental variance (\(V_E\)) can be subtracted from the total phenotypic variance (\(V_P\)) to give an estimate of the trait's heritability \(V_G\) (Falconer and Mackay 1996).\footnote{It is important to note that as heritability is measured as a fraction of total phenotypic variance, it is liable to change depending on the level of environmental variation present in the study population (Visscher, Hill, and Wray 2008).}
+Environmental variance cannot be removed experimentally because it includes by definition all non-genetic variance, and much of this is beyond experimental control. However, elimination of genotypic variance can be achieved experimentally (Falconer and Mackay 1996) by either using human or animal identical twins, or by creating highly inbred lines. Pursuant to Equation \eqref{eq:pge}, the environmental variance (\(V_E\)) can be subtracted from the total phenotypic variance (\(V_P\)) to give an estimate of the trait's heritability \(V_G\) (Falconer and Mackay 1996). It is important to note, however, that as heritability is measured as a fraction of total phenotypic variance, it is liable to change depending on the level of environmental variation present in the study population (Visscher, Hill, and Wray 2008).
 
 \hypertarget{twin-studies}{%
 \subsection{Twin studies}\label{twin-studies}}
@@ -686,26 +697,22 @@ Therefore:
 h^2 = 2\times(r_{MZ} - r_{DZ})
 \end{equation}
 
-Narrow-sense heritability \(h^2\) can therefore be estimated by doubling the difference between the correlation coefficients of MZ versus DZ twins. A 2015 meta-analysis of virtually all human twin studies that had been performed to that date included 2,748 twin studies assessing \textasciitilde18,000 traits and \textasciitilde14.5M twin pairs. The results showed that across all traits, \(h^2\) is 0.488 and \(c^2\) is 0.174 (Polderman et al. 2015). Moreover, in 69\% of studies \(2r_{DZ} = r_{MZ}\) (implying that the shared environment \(c^2\) is equivalent across both MZ and DZ twin pairs). This suggests that for most traits, shared environmental or non-additive genetic variation do not make a substantial contribution to phenotypic variation.
-
-\hypertarget{animal-breeding}{%
-\subsection{Animal breeding}\label{animal-breeding}}
-
-Humans have been manipulating the traits of animals for thousands of years, and this observation greatly influenced Darwin's insights into the power of selection (Hill 2014). The application of the science of genetics to animal breeding was greatly advanced by the work of Jay L. Lush (1896-1982) (Caballero 2020), who developed the well-known `breeder's equation' for predicting an animal population's response to artificial selection depending on: a) the heritability of the trait; and b) the selection pressure exerted (Lush 1937):
-
-\[
-R = h^2S
-\]
-
-``Genetic imporovement requires identifying the animals with the highest breeding value and selecting them, then replacing them as better ones come along'' (Hill 2014).
+Narrow-sense heritability \(h^2\) can therefore be estimated by doubling the difference between the correlation coefficients of MZ versus DZ twins. A 2015 meta-analysis of virtually all human twin studies that had been performed to that date included 2,748 twin studies assessing \textasciitilde18,000 traits and \textasciitilde14.5M twin pairs. The results showed that across all traits, \(h^2\) is 0.488 and \(c^2\) is 0.174 (Polderman et al. 2015). Moreover, in 69\% of studies \(2r_{DZ} = r_{MZ}\), implying that the shared environment \(c^2\) is equivalent across both MZ and DZ twin pairs. This suggests that for most traits, shared environmental or non-additive genetic variation do not make a substantial contribution to phenotypic variation.
 
 \hypertarget{family-genetic-linkage-studies}{%
 \subsection{Family genetic linkage studies}\label{family-genetic-linkage-studies}}
 
 From the 1980s, advances in DNA sequencing enabled the application of genetic linkage studies -- such as those previously performed in model organisms like \emph{Drosophila} -- to human families, in order to trace inheritances and thereby discover thousands of genes for rare Mendelian diseases (Altshuler, Daly, and Lander 2008). The process involved sequencing known polymorphic regions, and using them as markers to trace the transmission of chromosomal regions in families (Altshuler, Daly, and Lander 2008). The feasibility of this method was first demonstrated in 1983 with Huntington disease (Gusella et al. 1983), and over the following decades demonstrated that Mendelian disease-causing mutations often cause major changes in encoded proteins. The utility of the approach, however, reached its limit when applied to mapping common diseases such as heart disease, breast cancer, and diabetes, even those with familial clustering (Altshuler, Daly, and Lander 2008).
 
-\hypertarget{genome-wide-association-analysis-gwas}{%
-\subsection{Genome-Wide Association Analysis (GWAS)}\label{genome-wide-association-analysis-gwas}}
+\hypertarget{animal-breeding}{%
+\subsection{Animal breeding}\label{animal-breeding}}
+
+Humans have been manipulating the traits of animals for thousands of years, and this observation greatly influenced Darwin's insights into the power of selection (William G. Hill 2014). The application of the science of genetics to animal breeding was greatly advanced by the work of Jay L. Lush (1896-1982) (Caballero 2020), who developed the well-known `breeder's equation' for predicting an animal population's response to artificial selection depending on: a) the heritability of the trait; and b) the selection pressure exerted (Lush 1937).
+
+``Genetic improvement requires identifying the animals with the highest breeding value and selecting them, then replacing them as better ones come along'' (William G. Hill 2014). ``Charles Henderson, a student of Lush, recognised that in predicting future animal breeding values, there were the''fixed'' effects of the parents' breeding values; fixed effects such as herd, year, or season, which had to be included but not estimated; and then ``random'' effects, such as litter size, which were samples from a distribution. (William G. Hill 2014)'' The In his PhD thesis (Henderson 1948), he formulated a methdodology known as Best Linear Unbiased Prediction (\textbf{BLUP}), which incorporates the genetic additive covariances between individuals in the model as a ``relationship matrix''. Henderson's BLUP method was extended into Restricted (i.e.~residual) Maximum Likelihood (\textbf{REML}) (Patterson and Thompson 1971), which is now the standard method used to fit the linear mixed models in Genome-Wide Association Studies (\textbf{GWAS}).
+
+\hypertarget{GWAS}{%
+\subsection{Genome-Wide Association Analysis (GWAS)}\label{GWAS}}
 
 Instead of tracing genes through families, an alternative approach is to map genes by comparing the frequencies of genetic variants between affected and unaffected individuals, known as a ``case-control'' approach. Early applications focused on candidate genes and found correlations between blood-group antigens and peptic ulcer disease in the 1950s (Aird et al. 1954); the human leukocyte antigen (HLA) locus and autoimmune and infectious diseases in the 1960s and 1970s (Klein and Sato 2000); and apolipoprotein E with Alzheimer's disease in the 1980s (Strittmatter and Roses 1996). These early studies were more the exception than the rule, as candidate genes were a ``shot in the dark'' (as established from the family linkage studies which often found variants previously unsuspected), and they were susceptible to false positives caused by population structure (Altshuler, Daly, and Lander 2008).
 
@@ -713,7 +720,7 @@ It became clear that Mendelian diseases were rare, likely as a consequence of pu
 
 Next-generation sequencing technologies enabled the inclusion of thousands of SNP markers to be tested simultaneously for their association with a phenotype of interest, with the first genome-wide assocaition study (\textbf{GWAS}) published in 2001 (Ozaki et al. 2002). GWAS aim to identify genetic variants associated with traits by comparing the allele frequencies of individuals who share similar ancestries, but differ in values for the trait in question (Uffelmann et al. 2021). As of 2021, over 5,700 GWAS have been performed for more than 3,330 human traits (Uffelmann et al. 2021).
 
-The standard GWAS process involves first genotyping individuals using SNP microarrays -- which target common genetic variants -- or by sequencing their full exomes\footnote{The coding regions of the genome.} (Whole Exome Sequencing, \textbf{WES}) or genomes (Whole-Genome Sequencing, \textbf{WGS}). It is common to then use principal components analysis (\textbf{PCA}) {[}AND OTHER METHODS?{]} to restrict the analysis individuals who share common ancestry, in order to avoid population stratification effects (Uffelmann et al. 2021). Missing genotypes can be imputed using a genetic reference panel such as the 1000 Genomes Project (1000. G. P. Consortium et al. 2015). Finally, an association test can be run, which includes an individual-specific random effect term to account for genetic relatedness among individuals.
+The standard GWAS process involves first genotyping individuals using SNP microarraysm, which target common genetic variants. Alternatively, one can sequence their full exomes (Whole Exome Sequencing, \textbf{WES} ), which targets only the coding regions of the genome, or their full genomes (Whole-Genome Sequencing, \textbf{WGS}). It is common to then use principal components analysis (\textbf{PCA}) {[}AND OTHER METHODS?{]} to restrict the analysis individuals who share common ancestry, in order to avoid population stratification effects (Uffelmann et al. 2021). Missing genotypes can be imputed using a genetic reference panel such as the 1000 Genomes Project (1000. G. P. Consortium et al. 2015). Finally, an association test can be run, which includes an individual-specific random effect term to account for genetic relatedness among individuals.
 
 Since it became possible to sequence the genotypes of individuals at scale, it has been an ongoing point of debate as to how best to model the effects that genetic variants have on a trait of interest. The standard linear regression model currently used for GWAS can be written as follows (Uffelmann et al. 2021):
 
@@ -729,11 +736,12 @@ e \sim N(0,\sigma^2_e \textbf{I})
 
 where, for each individual, \(\textbf{Y}\) is a vector of phenotype values, \(\textbf{W}\) is a matrix of covariates including an intercept term, \(\alpha\) is a corresponding vector of effect sizes, \(X_s\) is a vector of genotype values for all individuals at SNP \(s\), \(\beta_s\) is the corresponding fixed effect size of genetic variant \(s\) (also known as the SNP effect size), \(g\) is a random effect that captures the polygenic effect of other SNPs, \(e\) is a random effect of residual errors, \(\sigma^2_{A}\) measures additive genetic variation of the phenotype, \(\psi\) is the standard genetic relationship matrix, \(\sigma^2_e\) measures residual variance, and \(\textbf{I}\) is an identity matrix (Uffelmann et al. 2021).
 
-{[}EXPAND ON GRM{]}
+GWAS must always grapple with population structure and unequal relatedness among individuals, which in a given cohort can lead to false discoveries (Ewens and Spielman 1995; Members of the Complex Trait Consortium 2003). This is because individuals who share common ancestries will share both variants that do affect the trait of interest, and variants that do not. Both causal and non-causal variants will be correlated with one other due to that shared ancestry, and so, if an association is found between the causal variants and a trait of interest, the non-causal variants that are correlated with the causal variants will also be found to be statistically associated with the trait.
 
-Population structure and unequal relatedness among individuals in a given cohort can lead to false discoveries (Ewens and Spielman 1995; Members of the Complex Trait Consortium 2003). This is because individuals who share common ancestries will share both variants that do affect the trait of interest, and variants that do not. Both causal and non-causal variants will be correlated with one other due to that shared ancestry. Therefore, if an association is found between the causal variants and a trait of interest, the non-causal variants that are correlated with the causal variants will also be found to be statistically associated with the trait.
+GWAS output a \(p\)-value and directional effect size (commonly denoted as \(\beta\)) for each tested SNP. As the method tends to test millions of SNPs, there need to be restrictions on multiple testing. The statistical significance of SNPs is somewhaare determined by either Bonferroni correction (\(\alpha / M_{SNPs}\), commonly set as \(p < 5 \times 10^{-8}\) for human studies), or by running permutations of the phenotype (and covariates) and selecting the lowest \(p\)-value from those permutations as the significance threshold.\footnote{The summed effect sizes of significant SNPs should theoretically reach the heritability estimates from twin studies, however until recently they fell far short, leading to a discussion on the sources of this ``missing heritability'' (Manolio et al. 2009). GWAS are limited by sample size, as extremely large samples are required to detect rare variants, and variants with small effect sizes. Short-read sequencing technologies are also unable to detect large ``structural'' variants, which may have large effects on the phenotype of interest. However, this issue has largely been resolved through improvements in genotyping that can capture rare variants (Yang et al. 2010), and tools such as GCTA which estimates the variance explained by \emph{all} SNPs in the genome, rather than testing the association of individual SNPs (Yang et al. 2011).}
 
-GWAS output a \(p\)-value and directional effect size (commonly denoted as \(\beta\)) for each tested SNP. Significance of SNPs are determined by either Bonferroni correction (\(\alpha / M_{SNPs}\), commonly set as \(p < 5 \times 10^{-8}\) for human studies), or by running permutations of the phenotype (and covariates) and selecting the lowest \(p\)-value from those permutations as the significance threshold.\footnote{The summed effect sizes of significant SNPs should theoretically reach the heritability estimates from twin studies, however until recently they fell far short, leading to a discussion on the sources of this ``missing heritability'' (Manolio et al. 2009). GWAS are limited by sample size, as extremely large samples are required to detect rare variants, and variants with small effect sizes. Short-read sequencing technologies are also unable to detect large ``structural'' variants, which may have large effects on the phenotype of interest. However, this issue has largely been resolved through improvements in genotyping that can capture rare variants (Yang et al. 2010), and tools such as GCTA which estimates the variance explained by \emph{all} SNPs in the genome, rather than testing the association of individual SNPs (Yang et al. 2011).}
+\hypertarget{beyond-gwas}{%
+\subsection{Beyond GWAS}\label{beyond-gwas}}
 
 {[}START WITH THE SIMPLE END. HERITABILITY. GWAS. ANIMAL BREEDING. FAMILIES. {]}
 
@@ -754,7 +762,7 @@ Beyond twin-studies, the advent of next-generation sequencing technologies has e
 \hypertarget{animal-models}{%
 \subsection{Animal models}\label{animal-models}}
 
-Twin studies and GWAS have led to great advances in our understanding of the genetic basis of complex traits. However they are hampered by the inability to experimentally manipulate either genes or environment in humans. Since the rediscovery of Mendel's work, researchers have resorted to using model organisms, with which it is possible to control for both.
+The methods described above have led to great advances in our understanding of the genetic basis of complex traits. However they are hampered by the inability to experimentally manipulate either genes or environment in humans. Since the rediscovery of Mendel's work, researchers have resorted to using model organisms, with which it is possible to control for both.
 
 The genetics of model organisms may be controlled to a degree by establishing inbred strains. Mendel used self-fertilising plants, which without sexual reproduction are effectively inbred strains. At that time, inbred strains of mammals were unknown. But through the repeated mating of siblings over successive generations, as the individuals within each line inherit the same same haplotype from their related parents, they become almost genetically identical to one another, with the added benefit that their genotypes can be replicated across time in subsequent generations.
 In the early 1900s, researchers began to develop inbred lines of guinea pigs and mice for the purpose of genetic research. In 1906, an inbreeding experiment involving guinea-pigs was started by George M. Rommel of the Animal Husbandry Division of the United States Department of Agriculture (Eaton 1932). The experiment was taken over in 1915 by Sewall Wright, who used them to develop his vast contributions to the field.
@@ -763,13 +771,12 @@ Contemporaneously, the Harvard undergraduate Clarence Cook Little and his superv
 
 The utility of inbred strains eventually led to the establishment of ``panels'' of inbred strains for several model organisms including the thale cress (\emph{Arabidopsis thaliana}) (Bergelson and Roux 2010), common bean (\emph{Phaseolus vulgaris L}) (Johnson and Gepts 1999), tomato (\emph{Lycopersicon esculentum}) (Saliba-Colombani et al. 2000), maize (\emph{Zea mays}) (Limami et al. 2002), nematode (\emph{Caenorhabditis elegans}) (Evans et al. 2021), fruit fly (\emph{Drosophila melanogaster}) (Mackay and Huang 2018), and mouse (\emph{Mus musculus}) (Saul et al. 2019).
 
-Although the mouse is an appropriate model for humans due to their orthologous mammalian organ systems and cell types, inbred strains of this organism descend from individuals that had already been domesticated, and therefore do not represent the genetic variation present in wild populations. Furthermore, the large panels of inbred mice such as the Collaborative Cross (\textbf{CC}) (Threadgill et al. 2011), Diversity Outcross (\textbf{DO})(Svenson et al. 2012) and B6-by-D2 (\textbf{BXD})(Peirce et al. 2004) are derived from only a small number of individuals. {[}THEY'VE COME FROM THIS COMPLEX HYBRIDISATION FROM THREE DIFFERENT SPECIES OF MICE. HAPPENED IN JAPAN -- FANCY MICE.{]} As gene-environment studies seek to ultimately understand their effects on traits ``in the wild'' (such as with humans), there is accordingly a need for a panel of inbred vertebrates that represents the genetic variation present in natural populations.
+Although the mouse is an appropriate model for humans due to their orthologous mammalian organ systems and cell types, inbred strains of this organism descend from individuals that had already been domesticated, and therefore do not represent the genetic variation present in wild populations. Furthermore, the large panels of inbred mice such as the Collaborative Cross (\textbf{CC}) (Threadgill et al. 2011), Diversity Outcross (\textbf{DO}) (Svenson et al. 2012) and B6-by-D2 (\textbf{BXD}) (Peirce et al. 2004) are derived from only a small number of individuals. {[}THEY'VE COME FROM THIS COMPLEX HYBRIDISATION FROM THREE DIFFERENT SPECIES OF MICE. HAPPENED IN JAPAN -- FANCY MICE.{]} As gene-environment studies seek to ultimately understand their effects on traits ``in the wild'' (such as with humans), there is accordingly a need for a panel of inbred vertebrates that represents the genetic variation present in natural populations.
 
 \hypertarget{MIKK-background}{%
 \subsection{The Medaka Inbred Kiyosu-Karlsruhe (MIKK) panel}\label{MIKK-background}}
 
-{[}REMIND THAT ITS THE SAME FISH THAT AIDA USED IN 1921{]}
-The medaka fish (\emph{Oryzias latipes}) has been studied as a model organism in Japan for over a century (Wittbrodt, Shima, and Schartl 2002), and is gaining recognition elsewhere as a powerful genetic model for vertebrates (Spivakov et al. 2014). In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, and high fertility), medaka are also -- uniquely among vertebrates -- resilient to inbreeding from the wild.
+The medaka fish (\emph{Oryzias latipes}) is the model organism studied by Tatsuo Aida, described above in section \ref{mapping-sec}. It has now been studied as a model organism in Japan for over a century (Wittbrodt, Shima, and Schartl 2002) and is gaining recognition elsewhere as a powerful genetic model for vertebrates (Spivakov et al. 2014). In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, and high fertility), medaka are also -- uniquely among vertebrates -- resilient to inbreeding \emph{from the wild}.
 
 This resilience to inbreeding has allowed (predominantly Japanese) researchers to develop several inbred strains that have been maintained for over 100 generations (Murata et al. 2019). One of the most famous inbred medaka strains, \emph{HdrR}, was derived from Tatsuo Aida's collection of southern Japanese medaka fish (Fukamachi and Naruse 2021). Other prominent strains include \emph{HO5} and \emph{iCab} from southern Japan, and \emph{Kaga} and \emph{HNI} from northern Japan. The locations of the originating populations of these strains are set out in \textbf{Figure \ref{fig:line-locations}}.
 
@@ -781,7 +788,7 @@ This resilience to inbreeding has allowed (predominantly Japanese) researchers t
 
 }
 
-\caption{Image adapted from (Spivakov et al. 2014), showing the locations of the originating populations of the 5 inbred medaka lines used in this study.}\label{fig:line-locations}
+\caption{Image adapted from Spivakov et al. (2014), showing the locations of the originating populations of the 5 inbred medaka lines used in this study.}\label{fig:line-locations}
 \end{figure}
 
 Since 2010, the Birney Group at EMBL-EBI, in collaboration with the Wittbrodt Group at COS, University of Heidelberg and the Loosli Group at the Karlsruhe Institute of Technology (KIT), have been working to establish the world's first panel of vertebrate inbred strains FROM THE WILD -- now known as the Medaka Inbred Kiyosu-Karlsruhe Panel (\textbf{MIKK panel}). The MIKK Panel was bred from a wild population caught near Kiyosu in Southern Japan (\textbf{Figure \ref{fig:line-locations}}), and now comprises 80 inbred, near-isogenic ``lines'' (Fitzgerald et al. 2022).
@@ -802,20 +809,20 @@ The MIKK Panel was created to map genetic variants associated with quantitative 
   The structural variants present in a smaller sample of lines using Oxford Nanopore long-read sequencing data (Chapter \ref{mikksv-sec}).
 \end{enumerate}
 
-The fundamental utility of the MIKK panel arises from: a) its representation of the genetic variation that exists in a wild population; b) the ability to replicate individuals with near-identical genotypes, allowing one to modify environmental variables while keeping the genetics constant to determine the strength of those environmental effects; and c) the presence of numerous inbred lines that can by placed in the same environment, allowing one to infer the strength of the genetic effect. The overarching purpose of the MIKK panel is to provide a resource for researchers who seek to combine the traditional F2 cross technique used by Mendel with modern genetic sequencing and statistical methods, in order to identify genetic variants associated with complex traits. I describe this process below.
+The fundamental utility of the MIKK panel arises from: a) its representation of the genetic variation that exists in a wild population; b) the ability to replicate individuals with near-identical genotypes, allowing one to modify environmental variables while keeping the genetics constant to determine the strength of those environmental effects; and c) the presence of numerous inbred lines that can by placed in the same environment, allowing one to infer the strength of the genetic effect. The overarching purpose of the MIKK panel is to provide a resource for researchers who seek to combine the traditional F\textsubscript{2} cross technique used by Mendel with modern genetic sequencing and statistical methods, in order to identify genetic variants associated with complex traits. I describe this process below.
 
 \hypertarget{the-f2-cross}{%
-\subsection{The F2 cross}\label{the-f2-cross}}
+\subsection{\texorpdfstring{The F\textsubscript{2} cross}{The F2 cross}}\label{the-f2-cross}}
 
-The F2 cross is the same method used by Mendel in his historic paper, but here applied to identifying genetic variants associated with traits of interest. A schema for the method is presented in \textbf{Figure \ref{fig:F2-cross-schema}}. In essence, it involves starting with two inbred strains that diverge for the trait of interest (the `parental strains', or F0 generation F0). One then crosses the parental strains to create a generation of F1 hybrid individuals who each possess, for every pair of their chromosomes, one chromosome from each of their parents. The individuals in this F1 generation are genetically identical to their parents with respect to their germ line. Finally, one inter-crosses the F1 generation to create a set of F2 individuals that share unique combinations of the original F0 strains' genotypes, and tend to display values for the trait of interest that span across the spectrum between the extreme values of their parents.
+The F\textsubscript{2} cross is the same method used by Mendel in his historic paper, but here applied to identifying genetic variants associated with polygenic traits -- traits that are associated with a number of genes. A schema for the method is presented in \textbf{Figure \ref{fig:F2-cross-schema}}. To restate the process, one starts with two inbred strains that diverge for the trait of interest (the `parental strains', or F\textsubscript{0} generation). One then crosses the parental strains to create a generation of F\textasciitilde1 hybrid individuals who each possess, for every pair of their chromosomes, one chromosome from each of their parents. The individuals in this F\textasciitilde1 generation are genetically identical to their parents with respect to their germ line. Finally, one inter-crosses the F\textasciitilde1 generation to create a set of F\textsubscript{2} individuals that share unique combinations of the original F\textsubscript{0} strains' genotypes, and tend to display values for the trait of interest that span across the spectrum between the extreme values of their parents.
 
 
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{figs/mikk_behaviour/F2-cross-schema} \caption{Schema of the F2-cross experimental setup. The F0 generation comprises two medaka strains that have extreme, opposing values for a trait of interest, represented by the colours red and blue. Below them is an illustrative single pair of chromosomes. The chromosomes within each pair are depicted as the same colour, as the strains are homozygous through successive generations of inbreeding. Their F1 offspring is heterozygous for each pair of their 24 chromosomes, and all F1 individuals are therefore almost genetically identical to one another (with the exception of somatic mutations and the regions of the genome that were not homozygous in the parental generations). The F1 individuals are then inter-crossed with one another to produce the F2 generation, which, due to recombination events during gamete formation, have unique combinations of the parental strains' genotypes, and tend to span the phenotypic spectrum between the extremes of their F0 parental strains, represented by their colours.}\label{fig:F2-cross-schema}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/F2-cross-schema} \caption{Schema of the F\textsubscript{2}-cross experimental setup. The F\textsubscript{0} generation comprises two medaka strains that have extreme, opposing values for a trait of interest, represented by the colours red and blue. Below them is an illustrative single pair of chromosomes. The chromosomes within each pair are depicted as the same colour, as the strains are homozygous through successive generations of inbreeding. Their F\textasciitilde1 offspring is heterozygous for each pair of their 24 chromosomes, and all F\textasciitilde1 individuals are therefore almost genetically identical to one another (with the exception of somatic mutations and the regions of the genome that were not homozygous in the parental generations). The F\textasciitilde1 individuals are then inter-crossed with one another to produce the F\textsubscript{2} generation, which, due to recombination events during gamete formation, have unique combinations of the parental strains' genotypes, and tend to span the phenotypic spectrum between the extremes of their F\textsubscript{0} parental strains, represented by their colours.}\label{fig:F2-cross-schema}
 \end{figure}
 
-By combining this traditional crossing method with modern sequencing technologies, researchers are not only able to map genetic variants associated with a phenotype of interest at a higher resolution than in humans, but also functionally validate those variants by carrying out targeted gene editing in an embryo to confirm that the developed organism shows the expected change in phenotype. Many studies have already made use of this combined method (CITE), known as a ``Genome-Wide Linkage Analysis''.
+By combining this traditional crossing method with modern sequencing technologies, researchers are not only able to map genetic variants associated with a phenotype of interest at a higher resolution than in humans, but also functionally validate those variants by carrying out targeted gene editing in an embryo to confirm that the developed organism shows the expected change in phenotype. Many studies have already made use of this combined method (CITE), known as a ``\textbf{Genome-Wide Linkage Analysis}''.
 
 \hypertarget{studied-phenotypes}{%
 \section{Studied phenotypes}\label{studied-phenotypes}}
@@ -830,7 +837,9 @@ During the development of an embryo, somites are the earliest primitive segmenta
 
 \begin{figure}
 
-\hfill{}\includegraphics[width=1\linewidth]{figs/somites/mouse_embryo_gridley} 
+{\centering \includegraphics[width=0.6\linewidth]{figs/somites/mouse_embryo_gridley} 
+
+}
 
 \caption{Image of a mouse embryo at day 9.5 from Gridley (2006), showing somites in darker colours.}\label{fig:mouse-embryo}
 \end{figure}
@@ -855,15 +864,20 @@ In medaka, it is known that the southern Japanese \emph{Cab} strain and the nort
 
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{figs/somites/ali_period_F0_Cab_Kaga} \caption{Comparison of period for three inbred medaka strains (\emph{Cab}, \emph{Kaga} and \emph{HdrR}). Kaga's period is lower, and therefore it takes less time to form each somite than \emph{Cab}. Figure generated by Ali Seleit.}\label{fig:F0-Cab-Kaga-HdrR}
+
+{\centering \includegraphics[width=0.5\linewidth]{figs/somites/ali_period_F0_Cab_Kaga} 
+
+}
+
+\caption{Comparison of period for three inbred medaka strains (\emph{Cab}, \emph{Kaga} and \emph{HdrR}). Kaga's period is lower, and therefore it takes less time to form each somite than \emph{Cab}. Figure generated by Ali Seleit.}\label{fig:F0-Cab-Kaga-HdrR}
 \end{figure}
 
-Our collaborators accordingly set up a one-way F2 cross experiment as described in Chapter \ref{MIKK-F2-cross}, using the reporter-carrying \emph{Cab} strain and the \emph{Kaga} strain as the parental F0 strains, in order to identify genetic loci associated with these differences in clock dynamics. They inter-crossed the hybrid F1 generation to create a sample of 622 F2 individuals, imaged the developing embryos of these F2 samples, and used pyBOAT (Schmal, Mönke, and Granada 2022) to extract the oscillation features during somite development. \textbf{Figure \ref{fig:somite-period-ali}} shows a series of raw images used by pyBOAT to track the elongation of a medaka tail during somitogenesis, with the identified posterior tip of the embryo labelled with a blue circle.
+Our collaborators accordingly set up a one-way F\textsubscript{2} cross experiment as described in Chapter \ref{MIKK-F2-cross}, using the reporter-carrying \emph{Cab} strain and the \emph{Kaga} strain as the parental F\textsubscript{0} strains, in order to identify genetic loci associated with these differences in clock dynamics. They inter-crossed the hybrid F\textasciitilde1 generation to create a sample of 622 F\textsubscript{2} individuals, imaged the developing embryos of these F\textsubscript{2} samples, and used pyBOAT (Schmal, Mönke, and Granada 2022) to extract the oscillation features during somite development. \textbf{Figure \ref{fig:somite-period-ali}} shows a series of raw images used by pyBOAT to track the elongation of a medaka tail during somitogenesis, with the identified posterior tip of the embryo labelled with a blue circle.
 
 
 
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{figs/somites/ali_compiled_somite_elong} \caption{Screenshots of vertebral elongation in an F2 individual captured by Ali Seleit during imaging. The blue circle represents the point tracked by pyBOAT over time, generating the quantitative phenotype data on period development used in this study.}\label{fig:somite-period-ali}
+\includegraphics[width=0.8\linewidth]{figs/somites/ali_compiled_somite_elong} \caption{Screenshots of vertebral elongation in an F\textsubscript{2} individual captured by Ali Seleit during imaging. The blue circle represents the point tracked by pyBOAT over time, generating the quantitative phenotype data on period development used in this study.}\label{fig:somite-period-ali}
 \end{figure}
 
 \hypertarget{behaviour}{%
@@ -886,7 +900,7 @@ The experiments described in \textbf{Chapters \ref{Pilot-chap}} and \textbf{\ref
 
 {[}CHECK FLOW{]}
 
-In \textbf{Chapter \ref{MIKK-F2-chap}} I extend the behavioural analysis described in Chapter \ref{Pilot-chap} over the MIKK panel. I then identify the lines that diverged in both (a) their own behaviour; and (b) the level of transmission of their behaviour onto their \emph{\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}} reference tank partner, and then use them as the parental strains in an F2 cross to attempt to identify the genetic variants associated with those differences.
+In \textbf{Chapter \ref{MIKK-F2-chap}} I extend the behavioural analysis described in Chapter \ref{Pilot-chap} over the MIKK panel. I then identify the lines that diverged in both (a) their own behaviour; and (b) the level of transmission of their behaviour onto their \emph{\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}} reference tank partner, and then use them as the parental strains in an F\textsubscript{2} cross to attempt to identify the genetic variants associated with those differences.
 
 \hypertarget{poor-transferability-of-polygenic-scores-to-diverse-human-populations}{%
 \section{Poor transferability of polygenic scores to diverse human populations}\label{poor-transferability-of-polygenic-scores-to-diverse-human-populations}}
@@ -899,8 +913,8 @@ A richer understanding of the cumulative effect of genetic variants on any trait
 
 Recent technological developments have made it possible to sequence human genomes at scale, and it is thought that by combining detailed genetic information with with other environmental and phenotypic information (such as lifestyle or clinical factors), clinicians could move towards the practice of ``precision medicine'', where interventions could be tailored to their patients' unique risk profiles (Wray, Goddard, and Visscher 2007). The use of genetic information to predict individuals' values for a trait of interest entails the construction of metrics known as ``polygenic scores'' (\textbf{PGS}). When the trait is a disease, PGS is commonly known as polygenic risk scores (\textbf{PRS}), or genetic risk profiling, but I use the term PGS to encompass both disease and non-disease traits.
 
-\hypertarget{polygenic-scores-pgs-and-gwas}{%
-\subsection{Polygenic Scores (PGS) and GWAS}\label{polygenic-scores-pgs-and-gwas}}
+\hypertarget{pgs-and-gwas}{%
+\subsection{PGS and GWAS}\label{pgs-and-gwas}}
 
 \hypertarget{pgs}{%
 \subsubsection{PGS}\label{pgs}}
@@ -975,7 +989,7 @@ Different environments are also often correlated with population structure (Berg
 \hypertarget{Fst-descr}{%
 \subsection{\texorpdfstring{\(F_{ST}\)}{F\_\{ST\}}}\label{Fst-descr}}
 
-The widely-used fixation index (\(F_{ST}\)) was introduced independently by Sewall Wright (S. Wright 1949) and Gustave Malécot (Mal'ecot 1948) as a metric for measuring the genetic diversity between populations.\footnote{In Wright's notation, \(F\) refers to ``fixation'' of an allele, and \(_{ST}\) refers to ``subpopulations within the total population''.} It quantifies the relative variance in allele frequency between groups compared to within groups, reflecting the combined effects of genetic drift, migration, mutation, and selection (Holsinger and Weir 2009). The metric ranges from 0 to 1, where loci with high \(F_{ST}\) values -- that is, loci with a large relative between-group variance in allele frequencies -- may have been subject to selection or different demographic processes (Holsinger and Weir 2009). The metric has customarily been used to identify regions of the genome have been subject to diversifying selection (Akey et al. 2002; Guo, Dey, and Holsinger 2009; Weir et al. 2005).
+The widely-used fixation index (\(F_{ST}\)) was introduced independently by Sewall Wright (S. Wright 1949) and Gustave Malécot (Mal'ecot 1948) as a metric for measuring the genetic diversity between populations. In Wright's notation, \(F\) refers to ``fixation'' of an allele, and \(_{ST}\) refers to ``subpopulations within the total population''. \(F_{ST}\) quantifies the relative variance in allele frequency between groups compared to within groups, reflecting the combined effects of genetic drift, migration, mutation, and selection (Holsinger and Weir 2009). The metric ranges from 0 to 1, where loci with high \(F_{ST}\) values -- that is, loci with a large relative between-group variance in allele frequencies -- may have been subject to selection or different demographic processes (Holsinger and Weir 2009). The metric has customarily been used to identify regions of the genome have been subject to diversifying selection (Akey et al. 2002; Guo, Dey, and Holsinger 2009; Weir et al. 2005).
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
@@ -991,6 +1005,9 @@ Aird, Ian, H. H. Bentall, J. A. Mehigan, and J. A. Fraser Roberts. 1954. {``The 
 \leavevmode\vadjust pre{\hypertarget{ref-akeyInterrogatingHighDensitySNP2002}{}}%
 Akey, Joshua M., Ge Zhang, Kun Zhang, Li Jin, and Mark D. Shriver. 2002. {``Interrogating a {High-Density SNP Map} for {Signatures} of {Natural Selection}.''} \emph{Genome Research} 12 (12): 1805--14. \url{https://doi.org/10.1101/gr.631202}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-allenThomasHuntMorgan1978}{}}%
+Allen, Garland E. 1978. \emph{Thomas {Hunt Morgan}: {The Man} and {His Science}}. {Princeton University Press}. \url{https://books.google.com?id=MdVOAQAAIAAJ}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-altshulerGeneticMappingHuman2008}{}}%
 Altshuler, David, Mark J. Daly, and Eric S. Lander. 2008. {``Genetic {Mapping} in {Human Disease}.''} \emph{Science} 322 (5903): 881--88. \url{https://doi.org/10.1126/science.1156409}.
 
@@ -1003,14 +1020,23 @@ Aristotle. 2021. \emph{On the {Generation} of {Animals}}. {Good Press}. \url{htt
 \leavevmode\vadjust pre{\hypertarget{ref-armstrongEnglishParsonnaturalistCompanionship2000}{}}%
 Armstrong, Patrick. 2000. \emph{The {English Parson-naturalist}: {A Companionship Between Science} and {Religion}}. {Gracewing Publishing}. \url{https://books.google.com?id=hB0hEc4CN3wC}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-badiouPlatoRepublic2013}{}}%
-Badiou, Alain. 2013. \emph{Plato's {Republic}}. {John Wiley \& Sons}.
+\leavevmode\vadjust pre{\hypertarget{ref-averyStudiesChemicalNature1944}{}}%
+Avery, Oswald T., Colin M. MacLeod, and Maclyn McCarty. 1944. {``Studies on the Chemical Nature of the Substance Inducing Transformation of Pneumococcal Types: {Induction} of Transformation by a Desoxyribonucleic Acid Fraction Isolated from Pneumococcus Type {II}.''} \emph{Journal of Experimental Medicine} 79 (2): 137--58. \url{https://doi.org/10.1084/jem.79.2.137}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-bancroftPartIntroductionGouldian}{}}%
-Bancroft, Paul. n.d. {``Part 1: {An} Introduction to the {Gouldian} Finch - {Planet Aviary}.''} Accessed August 22, 2022. \url{https://planetaviary.com/part-1-an-introduction-to-the-gouldian-finch/}.
+\leavevmode\vadjust pre{\hypertarget{ref-bancroftPartIntroductionGouldian2016}{}}%
+Bancroft, Paul. 2016. {``Part 1: {An} Introduction to the {Gouldian} Finch - {Planet Aviary}.''} February 17, 2016. \url{https://planetaviary.com/part-1-an-introduction-to-the-gouldian-finch/}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-barrettGlobalizingSocialMovement2004}{}}%
+Barrett, Deborah, and Charles Kurzman. 2004. {``Globalizing Social Movement Theory: {The} Case of Eugenics.''} \emph{Theory and Society} 33 (5): 487--527. \url{https://doi.org/10.1023/B:RYSO.0000045719.45687.aa}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-bartonSewallWrightEvolution2016}{}}%
 Barton, Nicholas H. 2016. {``Sewall {Wright} on {Evolution} in {Mendelian Populations} and the {`{Shifting Balance}'}.''} \emph{Genetics} 202 (1): 3--4. \url{https://doi.org/10.1534/genetics.115.184796}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-bartovHolocaustOriginsImplementation2015}{}}%
+Bartov, Omer. 2015. \emph{The {Holocaust}: {Origins}, {Implementation}, {Aftermath}}. {Routledge}. \url{https://books.google.com?id=m84JSgAACAAJ}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-bashfordOxfordHandbookHistory2010a}{}}%
+Bashford, Alison, and Philippa Levine. 2010. \emph{The {Oxford Handbook} of the {History} of {Eugenics}}. {Oxford University Press, USA}. \url{https://books.google.com?id=Ml4vDwAAQBAJ}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-batesonMaterialsStudyVariation1894}{}}%
 Bateson, William. 1894. \emph{Materials for the {Study} of {Variation}: {Treated} with {Especial Regard} to {Discontinuity} in the {Origin} of {Species}}. {Macmillan and Company}. \url{https://books.google.com?id=_HIZAAAAYAAJ}.
@@ -1027,6 +1053,12 @@ Berg, Jeremy J, Arbel Harpak, Nasa Sinnott-Armstrong, Anja Moltke Joergensen, Ha
 \leavevmode\vadjust pre{\hypertarget{ref-bergelsonIdentifyingGenesUnderlying2010}{}}%
 Bergelson, Joy, and Fabrice Roux. 2010. {``Towards Identifying Genes Underlying Ecologically Relevant Traits in {Arabidopsis} Thaliana.''} \emph{Nature Reviews Genetics} 11 (12, 12): 867--79. \url{https://doi.org/10.1038/nrg2896}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-bjorkmanSellingEugenicsCase2010}{}}%
+Björkman, Maria, and Sven Widmalm. 2010. {``Selling Eugenics: The Case of {Sweden}.''} \emph{Notes and Records of the Royal Society} 64 (4): 379--400. \url{https://doi.org/10.1098/rsnr.2010.0009}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-blackWarWeakEugenics2012}{}}%
+Black, Edwin. 2012. \emph{War {Against} the {Weak}: {Eugenics} and {America}'s {Campaign} to {Create} a {Master Race}, {Expanded Edition}}. {Dialog Press}. \url{https://books.google.com?id=xzwTEAAAQBAJ}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-brownCorrelationBoldnessBody2007}{}}%
 Brown, C., F. Jones, and V. A. Braithwaite. 2007. {``Correlation Between Boldness and Body Mass in Natural Populations of the Poeciliid {Brachyrhaphis} Episcopi.''} \emph{Journal of Fish Biology} 71 (6): 1590--1601. \url{https://doi.org/10.1111/j.1095-8649.2007.01627.x}.
 
@@ -1042,41 +1074,17 @@ Caballero, Armando. 2020. \emph{Quantitative {Genetics}}. {Cambridge University 
 \leavevmode\vadjust pre{\hypertarget{ref-campbellKingJamesBible2010}{}}%
 Campbell, Gordon. 2010. \emph{King {James Bible}: 400th {Anniversary Edition}}. {OUP Oxford}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-charlesworthDarwinGenetics2009}{}}%
+Charlesworth, Brian, and Deborah Charlesworth. 2009. {``Darwin and {Genetics}.''} \emph{Genetics} 183 (3): 757--66. \url{https://doi.org/10.1534/genetics.109.109991}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-clarkImportanceInformationRelatives2012}{}}%
 Clark, Samuel A., John M. Hickey, Hans D. Daetwyler, and Julius HJ van der Werf. 2012. {``The Importance of Information on Relatives for the Prediction of Genomic Breeding Values and the Implications for the Makeup of Reference Data Sets in Livestock Breeding Schemes.''} \emph{Genetics Selection Evolution} 44 (1): 4. \url{https://doi.org/10.1186/1297-9686-44-4}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-cockTreasureYourExceptions2008}{}}%
+Cock, Alan, and Donald R. Forsdyke. 2008. \emph{Treasure {Your Exceptions}: {The Science} and {Life} of {William Bateson}}. {Springer Science \& Business Media}. \url{https://books.google.com?id=FDUi1xg26gsC}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-collinsVariationsThemeCataloging1997}{}}%
 Collins, Francis S., Mark S. Guyer, and Aravinda Chakravarti. 1997. {``Variations on a {Theme}: {Cataloging Human DNA Sequence Variation}.''} \emph{Science} 278 (5343): 1580--81. \url{https://doi.org/10.1126/science.278.5343.1580}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-batesonPhoto}{}}%
-Commons, Wikimedia. 2017a. {``File:Bateson2.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Bateson2.jpg\&oldid=255958176\%7D}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-charlesDarwinYoung}{}}%
----------. 2017b. {``File:charles Darwin by g. Richmond.png --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Charles_Darwin_by_G._Richmond.png\&oldid=260695102\%7D}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-homunculusImage}{}}%
----------. 2019. {``File:preformation.GIF --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Preformation.GIF\&oldid=372547016\%7D}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-pearsonPhoto}{}}%
----------. 2020. {``File:karl Pearson, 1910.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Karl_Pearson,_1910.jpg\&oldid=477532248\%7D}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-galtonPhoto}{}}%
----------. 2021a. {``File:francis Galton 1850s.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Francis_Galton_1850s.jpg\&oldid=569302173\%7D}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-mendelPhoto}{}}%
----------. 2021b. {``File:gregor Mendel 2.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Gregor_Mendel_2.jpg\&oldid=534728192\%7D}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-fisherPhoto}{}}%
----------. 2021c. {``File:Youngronaldfisher2.JPG --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Youngronaldfisher2.JPG\&oldid=614548490\%7D}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-alfredWallace1895}{}}%
----------. 2022a. {``File:alfred-Russel-Wallace-C1895.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{https://commons.wikimedia.org/w/index.php?title=File:Alfred-Russel-Wallace-c1895.jpg\&oldid=642853479}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-darwinFinches}{}}%
----------. 2022b. {``File:darwin's Finches by Gould.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Darwin\%27s_finches_by_Gould.jpg\&oldid=643906085\%7D}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-lamarck1802}{}}%
----------. 2022c. {``File:jean-Baptiste de Lamarck.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Jean-Baptiste_de_Lamarck.jpg\&oldid=641428959\%7D}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-10002015global}{}}%
 Consortium, 1000 Genomes Project et al. 2015. {``A Global Reference for Human Genetic Variation.''} \emph{Nature} 526 (7571): 68.
@@ -1087,11 +1095,17 @@ Consortium, International Human Genome Sequencing. 2001. {``Initial Sequencing a
 \leavevmode\vadjust pre{\hypertarget{ref-coyneTheodosiusDobzhanskyHybrid2016}{}}%
 Coyne, Jerry A. 2016. {``Theodosius {Dobzhansky} on {Hybrid Sterility} and {Speciation}.''} \emph{Genetics} 202 (1): 5--7. \url{https://doi.org/10.1534/genetics.115.184770}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-darwinJournalResearchesNatural1845}{}}%
+Darwin, Charles. 1845. \emph{Journal of {Researches Into} the {Natural History} and {Geology} of the {Countries Visited During} the {Voyage} of {H}.{M}.{S}. {Beagle Round} the {World}: {Under} the {Command} of {Capt}. {Fitz Roy}, {R}.{N}}. 2nd ed. {J. Murray}. \url{https://books.google.com?id=nXm9vEpV8BAC}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-darwinOriginSpeciesMeans1859}{}}%
-Darwin, Charles. 1859. \emph{On the {Origin} of {Species} by {Means} of {Natural Selection}, {Or}, {The Preservation} of {Favoured Races} in the {Struggle} for {Life}}. {J. Murray}. \url{https://books.google.com?id=gGUYt2PsDJcC}.
+---------. 1859. \emph{On the {Origin} of {Species} by {Means} of {Natural Selection}, {Or}, {The Preservation} of {Favoured Races} in the {Struggle} for {Life}}. {J. Murray}. \url{https://books.google.com?id=gGUYt2PsDJcC}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-darwinNaturalistVoyageJournal1882}{}}%
 ---------. 1882. \emph{A {Naturalist}'s {Voyage}: {Journal} of {Researches Into} the {Natural History} and {Geology} of the {Countries Visited During} the {Voyage} of {H}.{M}.{S}. {Beagle} : With {Maps} and {Illustrations}}. {Murray}. \url{https://books.google.com?id=JyR7HY3FMtkC}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-darwinLifeLettersCharles1887}{}}%
+---------. 1887. \emph{The {Life} and {Letters} of {Charles Darwin}: {Including} an {Autobiographical Chapter}}. {D. Appleton}. \url{https://books.google.com?id=iodTqIRzVukC}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-darwinCharlesDarwinLetters1998}{}}%
 ---------. 1998. \emph{Charles {Darwin}'s {Letters}: {A Selection}, 1825-1859}. {Cambridge University Press}. \url{https://books.google.com?id=E2TTcP6KUHgC}.
@@ -1099,8 +1113,14 @@ Darwin, Charles. 1859. \emph{On the {Origin} of {Species} by {Means} of {Natural
 \leavevmode\vadjust pre{\hypertarget{ref-darwinAutobiographyCharlesDarwin2019}{}}%
 ---------. 2019. \emph{The {Autobiography} of {Charles Darwin}}. {BoD -- Books on Demand}. \url{https://books.google.com?id=t_SxDwAAQBAJ}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-DNAThenNow}{}}%
-{``{DNA} Then and Now.''} n.d. Accessed August 30, 2022. \url{https://undsci.berkeley.edu/article/0_0_0/dna_14}.
+\leavevmode\vadjust pre{\hypertarget{ref-darwinCorrespondenceCharlesDarwin2002}{}}%
+Darwin, Charles, Duncan M. Porter, Sheila Ann Dean, Samantha Evans, Shelley Innes, and Alison M. Pearn. 2002. \emph{The {Correspondence} of {Charles Darwin}: 1821-1860}. {Cambridge University Press}. \url{https://books.google.com?id=oCWGX18UrhEC}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-vriesMutationTheory19091909}{}}%
+de Vries, Hugo. 1909. \emph{The {Mutation} Theory v. 1, 1909}. {Open Court Publishing Company}. \url{https://books.google.com?id=cdOhB5p3HkIC}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-dobzhanskyGeneticsNaturalPopulations1943}{}}%
+Dobzhansky, Th. 1943. {``Genetics of Natural Populations {IX}. {Temporal} Changes in the Composition of Populations of Drosophila Pseudoobscura.''} \emph{Genetics} 28 (2): 162--86. \url{https://doi.org/10.1093/genetics/28.2.162}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-domingueSocialGenomeFriends2018}{}}%
 Domingue, Benjamin W., Daniel W. Belsky, Jason M. Fletcher, Dalton Conley, Jason D. Boardman, and Kathleen Mullan Harris. 2018. {``The Social Genome of Friends and Schoolmates in the {National Longitudinal Study} of {Adolescent} to {Adult Health}.''} \emph{Proceedings of the National Academy of Sciences} 115 (4): 702--7. \url{https://doi.org/10.1073/pnas.1711803115}.
@@ -1110,6 +1130,9 @@ Druery, C. T., and William Bateson. 1901. {``Experiments in Plant Hybridization.
 
 \leavevmode\vadjust pre{\hypertarget{ref-duncanAnalysisPolygenicRisk2019}{}}%
 Duncan, L., H. Shen, B. Gelaye, J. Meijsen, K. Ressler, M. Feldman, R. Peterson, and B. Domingue. 2019. {``Analysis of Polygenic Risk Score Usage and Performance in Diverse Human Populations.''} \emph{Nature Communications} 10 (1, 1): 3328. \url{https://doi.org/10.1038/s41467-019-11112-0}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-dunnShortHistoryGenetics1991}{}}%
+Dunn, Leslie Clarence. 1991. \emph{A {Short History} of {Genetics}: {The Development} of {Some} of the {Main Lines} of {Thought}, 1864-1939}. {Iowa State University Press}. \url{https://books.google.com?id=MpEiAQAAMAAJ}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-eatonQuartercenturyInbreedingGuineapigs1932}{}}%
 Eaton, Orson N. 1932. {``A Quarter-Century of Inbreeding in Guinea-Pigs.''} \emph{Journal of Experimental Zoology} 63 (2): 261--90. \url{https://doi.org/10.1002/jez.1400630202}.
@@ -1126,6 +1149,9 @@ Evans, Kathryn S., Marijke H. van Wijk, Patrick T. McGrath, Erik C. Andersen, an
 \leavevmode\vadjust pre{\hypertarget{ref-ewensTransmissionDisequilibriumTest1995}{}}%
 Ewens, W J, and R S Spielman. 1995. {``The Transmission/Disequilibrium Test: History, Subdivision, and Admixture.''} \emph{American Journal of Human Genetics} 57 (2): 455--64. \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1801556/}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-fairbanksRelicsEdenPowerful2009}{}}%
+Fairbanks, Daniel J. 2009. \emph{Relics of {Eden}: {The Powerful Evidence} of {Evolution} in {Human DNA}}. {Prometheus Books}. \url{https://books.google.com?id=O1mFjWzznWkC}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-falconerIntroductionQuantitativeGenetics1996}{}}%
 Falconer, D. S., and T. F. C. Mackay. 1996. \emph{Introduction to Quantitative Genetics}. {UK: Longman Group}.
 
@@ -1134,9 +1160,6 @@ Falk, Henning J, Takehito Tomita, Gregor Mönke, Katie McDole, and Alexander Aul
 
 \leavevmode\vadjust pre{\hypertarget{ref-fisherXVCorrelationRelatives1919}{}}%
 Fisher, R. A. 1919. {``{XV}.---{The Correlation} Between {Relatives} on the {Supposition} of {Mendelian Inheritance}.''} January. \url{https://doi.org/10.1017/s0080456800012163}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-fisherStudiesCropVariation1923}{}}%
-Fisher, R. A., and W. A. Mackenzie. 1923. {``Studies in Crop Variation. {II}. {The} Manurial Response of Different Potato Varieties.''} \emph{The Journal of Agricultural Science} 13 (3): 311--20. \url{https://doi.org/10.1017/S0021859600003592}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-fisherProbableErrorCoefficient1921}{}}%
 Fisher, Ronald Aylmer. 1921. {``On the{"} {Probable Error}{"} of a {Coefficient} of {Correlation Deduced} from a {Small Sample}.''}
@@ -1159,6 +1182,15 @@ Fukamachi, Shoji, and Kiyoshi Naruse. 2021. {``100 Years Since the Medaka's Inte
 \leavevmode\vadjust pre{\hypertarget{ref-galtonMenScienceTheir1874a}{}}%
 Galton, Francis. 1874. {``On {Men} of {Science}, Their {Nature} and Their {Nurture}.''} In \emph{Proceedings of the {Royal Institution} of {Great Britain}}, 7:227--36.
 
+\leavevmode\vadjust pre{\hypertarget{ref-galtonInquiriesHumanFaculty1883}{}}%
+---------. 1883. \emph{Inquiries {Into Human Faculty} and {Its Development}}. {Macmillan}. \url{https://books.google.com?id=GGAZAAAAYAAJ}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-galtonRegressionMediocrityHereditary1886}{}}%
+---------. 1886. {``Regression {Towards Mediocrity} in {Hereditary Stature}.''} \emph{The Journal of the Anthropological Institute of Great Britain and Ireland} 15: 246--63. \url{https://doi.org/10.2307/2841583}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-galtonNaturalInheritance1889}{}}%
+---------. 1889. \emph{Natural Inheritance}. {Macmillan and Company}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-galtonEugenicsItsDefinition1904}{}}%
 ---------. 1904. {``Eugenics: {Its Definition}, {Scope}, and {Aims}.''} \emph{American Journal of Sociology} 10 (1): 1--25. \url{https://doi.org/10.1086/211280}.
 
@@ -1167,6 +1199,9 @@ Gomez, C'eline, Ertuğrul M. Özbudak, Joshua Wunderlich, Diana Baumann, Julian 
 
 \leavevmode\vadjust pre{\hypertarget{ref-goodnightSewallWrightSeven2014}{}}%
 Goodnight, Charles. 2014. {``Sewall {Wright}'s {Seven Generalizations} about {Populations}.''} {Evolution in Structured Populations}. May 22, 2014. \url{https://blog.uvm.edu/cgoodnig/2014/05/22/sewall-wrights-seven-generalizations-about-populations/}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-gornerAlteredFatesGenetic1996}{}}%
+Gorner, Peter, and Jeff Lyon. 1996. \emph{Altered {Fates}: {The Genetic Re-Engineering} of {Human Life}}. {W. W. Norton, Incorporated}. \url{https://books.google.com?id=MrhEzwEACAAJ}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-gravel2011demographic}{}}%
 Gravel, Simon, Brenna M Henn, Ryan N Gutenkunst, Amit R Indap, Gabor T Marth, Andrew G Clark, Fuli Yu, et al. 2011. {``Demographic History and Rare Allele Sharing Among Human Populations.''} \emph{Proceedings of the National Academy of Sciences} 108 (29): 11983--88. \url{https://doi.org/10.1073/pnas.1019276108}.
@@ -1195,11 +1230,26 @@ Harpak, Arbel, and Molly Przeworski. 2021. {``The Evolution of Group Differences
 \leavevmode\vadjust pre{\hypertarget{ref-hartsoekerEssayDioptrique1694}{}}%
 Hartsoeker, Nicolas. 1694. \emph{Essay de dioptrique}. {J. Anisson}. \url{https://books.google.com?id=IzYVAAAAQAAJ}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-hawkinsSocialDarwinismEuropean1997}{}}%
+Hawkins, Mike. 1997. \emph{Social darwinism in European and American thought, 1860-1945: nature as model and nature as threat}. {Cambridge University Press}. \url{https://books.google.com?id=aoXJoAEACAAJ}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-hendersonEstimationGeneralSpecific1948}{}}%
+Henderson, Charles Roy. 1948. {``Estimation of General, Specific and Maternal Combining Abilities in Crosses Among Inbred Lines of Swine.''} PhD thesis, {United States -- Iowa}: {Iowa State University}. \url{https://www.proquest.com/docview/301840571/abstract/4D5A65EDC31B4110PQ/1}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-henigMonkGardenLost2000}{}}%
+Henig, Robin Marantz. 2000. \emph{The {Monk} in the {Garden}: {The Lost} and {Found Genius} of {Gregor Mendel}, the {Father} of {Genetics}}. {Houghton Mifflin Harcourt}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-henslowLetter1051831}{}}%
 Henslow, John. 1831. {``Letter 105.''} {Darwin Correspondence Project}. 1831. \url{https://www.darwinproject.ac.uk/letter/DCP-LETT-105.xml}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-hillApplicationsPopulationGenetics2014}{}}%
 Hill, William G. 2014. {``Applications of {Population Genetics} to {Animal Breeding}, from {Wright}, {Fisher} and {Lush} to {Genomic Prediction}.''} \emph{Genetics} 196 (1): 1--16. \url{https://doi.org/10.1534/genetics.112.147850}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-hillDataTheoryPoint2008}{}}%
+Hill, William G., Michael E. Goddard, and Peter M. Visscher. 2008. {``Data and {Theory Point} to {Mainly Additive Genetic Variance} for {Complex Traits}.''} \emph{PLOS Genetics} 4 (2): e1000008. \url{https://doi.org/10.1371/journal.pgen.1000008}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-hodgeGeneticEngineeringManipulating2009}{}}%
+Hodge, Russ. 2009. \emph{Genetic {Engineering}: {Manipulating} the {Mechanisms} of {Life}}. {Infobase Publishing}. \url{https://books.google.com?id=Fqa6lmQ_YVMC}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-holsingerGeneticsGeographicallyStructured2009}{}}%
 Holsinger, Kent E., and Bruce S. Weir. 2009. {``Genetics in Geographically Structured Populations: Defining, Estimating and Interpreting {FST}.''} \emph{Nature Reviews Genetics} 10 (9, 9): 639--50. \url{https://doi.org/10.1038/nrg2611}.
@@ -1219,8 +1269,14 @@ Hwang, Liang-Dar, Justin D. Tubbs, Justin Luong, Mischa Lundberg, Gunn-Helen Moe
 \leavevmode\vadjust pre{\hypertarget{ref-iselyOneHundredOne2002}{}}%
 Isely, Duane. 2002. \emph{One {Hundred} and {One Botanists}}. {Purdue University Press}. \url{https://books.google.com?id=an6r8m0JfV8C}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-jenkinOriginSpecies1867}{}}%
+Jenkin, Fleeming. 1867. {``The Origin of Species.''} \emph{North British Review} 46 (92): 277--318.
+
 \leavevmode\vadjust pre{\hypertarget{ref-johnsonSegregationPerformanceRecombinant1999}{}}%
 Johnson, William C., and Paul Gepts. 1999. {``Segregation for Performance in Recombinant Inbred Populations Resulting from Inter-Gene Pool Crosses of Common Bean ( {Phaseolus} Vulgaris {L}.).''} \emph{Euphytica} 106 (1): 45--56. \url{https://doi.org/10.1023/A:1003541201923}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-karlNationalLifeStandpoint1901a}{}}%
+Karl, Pearson. 1901. \emph{National {Life} from the Standpoint of {Science}}. {London}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-kenneyThomasHuntMorgan2009}{}}%
 Kenney, Diana E, and Gary G Borisy. 2009. {``Thomas {Hunt Morgan} at the {Marine Biological Laboratory}: {Naturalist} and {Experimentalist}.''} \emph{Genetics} 181 (3): 841--46. \url{https://doi.org/10.1534/genetics.109.101659}.
@@ -1258,6 +1314,12 @@ Laland, Kevin, Jens Krause, and Culum Brown. 2011. \emph{Fish {Cognition} and {B
 \leavevmode\vadjust pre{\hypertarget{ref-landerNewGenomicsGlobal1996}{}}%
 Lander, Eric S. 1996. {``The {New Genomics}: {Global Views} of {Biology}.''} \emph{Science} 274 (5287): 536--39. \url{https://doi.org/10.1126/science.274.5287.536}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-larsonEvolutionRemarkableHistory2004}{}}%
+Larson, Edward John, Richard B. Russell Professor of History, and Talmadge Professor of Law Edward J. Larson PH.D J. D. 2004. \emph{Evolution: {The Remarkable History} of a {Scientific Theory}}. {Modern Library}. \url{https://books.google.com?id=wSwWjYZqkAEC}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-laubichlerBoveriLongExperiment2008}{}}%
+Laubichler, Manfred D., and Eric H. Davidson. 2008. {``Boveri's Long Experiment: {Sea} Urchin Merogones and the Establishment of the Role of Nuclear Chromosomes in Development.''} \emph{Developmental Biology} 314 (1): 1--11. \url{https://doi.org/10.1016/j.ydbio.2007.11.024}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-legerGenomicVariationsEpigenomic2022}{}}%
 Leger, Adrien, Ian Brettell, Jack Monahan, Carl Barton, Nadeshda Wolf, Natalja Kusminski, Cathrin Herder, et al. 2022. {``Genomic Variations and Epigenomic Landscape of the {Medaka Inbred Kiyosu-Karlsruhe} ({MIKK}) Panel.''} \emph{Genome Biology} 23 (1): 58. \url{https://doi.org/10.1186/s13059-022-02602-4}.
 
@@ -1285,8 +1347,14 @@ Maas, Paige, Myrto Barrdahl, Amit D. Joshi, Paul L. Auer, Mia M. Gaudet, Roger L
 \leavevmode\vadjust pre{\hypertarget{ref-mackayChartingGenotypePhenotype2018}{}}%
 Mackay, Trudy F. C., and Wen Huang. 2018. {``Charting the Genotype--Phenotype Map: Lessons from the {Drosophila} Melanogaster {Genetic Reference Panel}.''} \emph{WIREs Developmental Biology} 7 (1): e289. \url{https://doi.org/10.1002/wdev.289}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-maddoxDoubleHelixWronged2003}{}}%
+Maddox, Brenda. 2003. {``The Double Helix and the 'Wronged Heroine'.''} \emph{Nature} 421 (6921, 6921): 407--8. \url{https://doi.org/10.1038/nature01399}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-malecotMathematiquesHeredite1948}{}}%
 Mal'ecot, Gustave. 1948. {``Mathématiques de l'hérédité.''}
+
+\leavevmode\vadjust pre{\hypertarget{ref-maloneItDoesnTake2002}{}}%
+Malone, John. 2002. \emph{It {Doesn}'t {Take} a {Rocket Scientist}: {Great Amateurs} of {Science}}. {Wiley}. \url{https://books.google.com?id=OcG9NAEACAAJ}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-malthusEssayPrinciplePopulation1872}{}}%
 Malthus, Thomas Robert. 1872. \emph{An {Essay} on the {Principle} of {Population}..}
@@ -1297,6 +1365,9 @@ Maniatis, Tom, Andrea Jeffrey, and Hans Van deSande. 1975. {``Chain Length Deter
 \leavevmode\vadjust pre{\hypertarget{ref-manolioFindingMissingHeritability2009}{}}%
 Manolio, Teri A., Francis S. Collins, Nancy J. Cox, David B. Goldstein, Lucia A. Hindorff, David J. Hunter, Mark I. McCarthy, et al. 2009. {``Finding the Missing Heritability of Complex Diseases.''} \emph{Nature} 461 (7265, 7265): 747--53. \url{https://doi.org/10.1038/nature08494}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-marchantAlfredRusselWallace1916}{}}%
+Marchant, Sir James, and Alfred Russel Wallace. 1916. \emph{Alfred {Russel Wallace}: {Letters} and {Reminiscences} ({Complete})}. {Library of Alexandria}. \url{https://books.google.com?id=0IF1K9IYQYMC}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-marksConstructionMendelLaws2008}{}}%
 Marks, Jonathan. 2008. {``The Construction of {Mendel}'s Laws.''} \emph{Evolutionary Anthropology: Issues, News, and Reviews} 17 (6): 250--53. \url{https://doi.org/10.1002/evan.20192}.
 
@@ -1305,6 +1376,9 @@ Martin, Alicia R, Christopher R Gignoux, Raymond K Walters, Genevieve L Wojcik, 
 
 \leavevmode\vadjust pre{\hypertarget{ref-martinClinicalUseCurrent2019}{}}%
 Martin, Alicia R., Masahiro Kanai, Yoichiro Kamatani, Yukinori Okada, Benjamin M. Neale, and Mark J. Daly. 2019. {``Clinical Use of Current Polygenic Risk Scores May Exacerbate Health Disparities.''} \emph{Nature Genetics} 51 (4, 4): 584--91. \url{https://doi.org/10.1038/s41588-019-0379-x}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-marxWatsonCrickDNA2004}{}}%
+Marx, Christy. 2004. \emph{Watson and {Crick} and {DNA}}. {Rosen Central Primary Source}. \url{https://books.google.com?id=hLcDn6j7I8gC}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-matsudaSpeciesspecificSegmentationClock2020}{}}%
 Matsuda, Mitsuhiro, Hanako Hayashi, Jordi Garcia-Ojalvo, Kumiko Yoshioka-Kobayashi, Ryoichiro Kageyama, Yoshihiro Yamanaka, Makoto Ikeya, Junya Toguchida, Cantas Alev, and Miki Ebisuya. 2020. {``Species-Specific Segmentation Clock Periods Are Due to Differential Biochemical Reaction Speeds.''} \emph{Science} 369 (6510): 1450--55.
@@ -1318,6 +1392,9 @@ Mazumdar, Pauline. 2005. \emph{Eugenics, Human Genetics and Human Failings: The 
 \leavevmode\vadjust pre{\hypertarget{ref-mccarthyReferencePanel642016}{}}%
 McCarthy, Shane, Sayantan Das, Warren Kretzschmar, Olivier Delaneau, Andrew R Wood, Alexander Teumer, Hyun Min Kang, et al. 2016. {``A Reference Panel of 64,976 Haplotypes for Genotype Imputation.''} \emph{Nature Genetics} 48 (10, 10): 1279--83. \url{https://doi.org/10.1038/ng.3643}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-mclarenOurOwnMaster2015}{}}%
+McLaren, Angus. 2015. \emph{Our {Own Master Race}: {Eugenics} in {Canada}, 1885-1945}. {University of Toronto Press}. \url{https://books.google.com?id=4rP3rQEACAAJ}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-membersofthecomplextraitconsortiumNatureIdentificationQuantitative2003}{}}%
 Members of the Complex Trait Consortium. 2003. {``The Nature and Identification of Quantitative Trait Loci: A Community's View.''} \emph{Nature Reviews Genetics} 4 (11, 11): 911--16. \url{https://doi.org/10.1038/nrg1206}.
 
@@ -1327,8 +1404,17 @@ Mendel, Gregor. 1866. {``Versuche Uber Pflanzen-Hybriden.''} \emph{Verhandlungen
 \leavevmode\vadjust pre{\hypertarget{ref-milmoFuryDNAPioneer2007}{}}%
 Milmo, Cahal. 2007. {``Fury at {DNA} Pioneer's Theory: {Africans} Are Less Intelligent Than {Westerners}.''} \emph{The Independent: News}, October 16, 2007. \url{https://www.independent.co.uk/news/science/fury-at-dna-pioneer-s-theory-africans-are-less-intelligent-than-westerners-394898.html}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-morganCritiqueTheoryEvolution1916}{}}%
+Morgan, Thomas Hunt. 1916. \emph{A {Critique} of the {Theory} of {Evolution}. {Lectures Delivered} at {Princeton University} ... 1916}. \url{https://books.google.com?id=tGUJwwEACAAJ}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-morganCritiqueTheoryEvolution1919}{}}%
-Morgan, Thomas Hunt. 1919. \emph{A {Critique} of the {Theory} of {Evolution}}. {Princeton University Press}.
+---------. 1919. \emph{A {Critique} of the {Theory} of {Evolution}}. {Princeton University Press}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-morganRelationGeneticsPhysiology1935}{}}%
+---------. 1935. {``The {Relation} of {Genetics} to {Physiology} and {Medicine}.''} \emph{The Scientific Monthly} 41 (1): 5--18. \url{https://www.jstor.org/stable/15918}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-morganMechanismMendelianHeredity1972}{}}%
+---------. 1972. \emph{The {Mechanism} of {Mendelian Heredity}}. {Johnson Reprint Corporation}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-morrisPopulationPhenomenaInflate2020}{}}%
 Morris, Tim T., Neil M. Davies, Gibran Hemani, and George Davey Smith. 2020. {``Population Phenomena Inflate Genetic Associations of Complex Social Traits.''} \emph{Science Advances} 6 (16): eaay0328. \url{https://doi.org/10.1126/sciadv.aay0328}.
@@ -1366,14 +1452,14 @@ Paquette, Martine, Michael Chong, S'ebastien Th'eriault, Robert Dufour, Guillaum
 \leavevmode\vadjust pre{\hypertarget{ref-parkDistributionAlleleFrequencies2011}{}}%
 Park, Ju-Hyun, Mitchell H. Gail, Clarice R. Weinberg, Raymond J. Carroll, Charles C. Chung, Zhaoming Wang, Stephen J. Chanock, Joseph F. Fraumeni, and Nilanjan Chatterjee. 2011. {``Distribution of Allele Frequencies and Effect Sizes and Their Interrelationships for Common Genetic Susceptibility Variants.''} \emph{Proceedings of the National Academy of Sciences} 108 (44): 18026--31. \url{https://doi.org/10.1073/pnas.1114759108}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-pattersonRecoveryInterblockInformation1971}{}}%
+Patterson, H. D., and R. Thompson. 1971. {``Recovery of Inter-Block Information When Block Sizes Are Unequal.''} \emph{Biometrika} 58 (3): 545--54. \url{https://doi.org/10.1093/biomet/58.3.545}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-payneBulkVisGraphicalViewer2019}{}}%
 Payne, Alexander, Nadine Holmes, Vardhman Rakyan, and Matthew Loose. 2019. {``{BulkVis}: A Graphical Viewer for {Oxford} Nanopore Bulk {Fast5} Files.''} \emph{Bioinformatics} 35 (13): 2193--98. \url{https://doi.org/10.1093/bioinformatics/bty841}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-pearsonDissectionAsymmetricalFrequency1894}{}}%
-Pearson, Karl. 1894. {``On the Dissection of Asymmetrical Frequency Curves.''} \emph{Phil. Trans. Roy. Soc} 185: 71--110.
-
 \leavevmode\vadjust pre{\hypertarget{ref-pearsonMathematicalContributionsTheory1898}{}}%
----------. 1898. {``Mathematical Contributions to the Theory of Evolution, {On} the Law of Ancestral Heredity.''} \emph{Proceedings of the Royal Society of London} 62 (379-387): 386--412. \url{https://doi.org/10.1098/rspl.1897.0128}.
+Pearson, Karl. 1898. {``Mathematical Contributions to the Theory of Evolution, {On} the Law of Ancestral Heredity.''} \emph{Proceedings of the Royal Society of London} 62 (379-387): 386--412. \url{https://doi.org/10.1098/rspl.1897.0128}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-pearsonCriterionThatGiven1900}{}}%
 ---------. 1900. {``X. {On} the Criterion That a Given System of Deviations from the Probable in the Case of a Correlated System of Variables Is Such That It Can Be Reasonably Supposed to Have Arisen from Random Sampling.''} \emph{The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science} 50 (302): 157--75. \url{https://doi.org/10.1080/14786440009463897}.
@@ -1389,6 +1475,9 @@ Peirce, Jeremy L., Lu Lu, Jing Gu, Lee M. Silver, and Robert W. Williams. 2004. 
 
 \leavevmode\vadjust pre{\hypertarget{ref-pennisi100GenomeNew2022}{}}%
 Pennisi, Elizabeth. 2022. {``A \$100 Genome? {New DNA} Sequencers Could Be a {`Game Changer'} for Biology, Medicine \textbar{} {Science} \textbar{} {AAAS}.''} \emph{Science}, June 15, 2022. \url{https://www.science.org/content/article/100-genome-new-dna-sequencers-could-be-game-changer-biology-medicine}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-platoPlatoRepublic2013}{}}%
+Plato. 2013. \emph{Plato's {Republic}}. Translated by Alain Badiou. {John Wiley \& Sons}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-plominNatureNurtureGenetic2005}{}}%
 Plomin, Robert, and Kathryn Asbury. 2005. {``Nature and {Nurture}: {Genetic} and {Environmental Influences} on {Behavior}.''} \emph{The ANNALS of the American Academy of Political and Social Science} 600 (1): 86--98. \url{https://doi.org/10.1177/0002716205277184}.
@@ -1417,6 +1506,18 @@ Pryke, Sarah R, and Simon C Griffith. 2006. {``Red Dominates Black: Agonistic Si
 \leavevmode\vadjust pre{\hypertarget{ref-pszczolaReliabilityDirectGenomic2012}{}}%
 Pszczola, M., T. Strabel, H. A. Mulder, and M. P. L. Calus. 2012. {``Reliability of Direct Genomic Values for Animals with Different Relationships Within and to the Reference Population.''} \emph{Journal of Dairy Science} 95 (1): 389--400. \url{https://doi.org/10.3168/jds.2011-4338}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-punnettMendelism1905}{}}%
+Punnett, Reginald Crundall. 1905. \emph{Mendelism}. {Macmillan \& Bowes}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-reeveEncyclopediaGenetics2014}{}}%
+Reeve, Eric C. R. 2014. \emph{Encyclopedia of {Genetics}}. {Routledge}. \url{https://books.google.com?id=BGqYAgAAQBAJ}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-reeveEncyclopediaGenetics2001}{}}%
+Reeve, Eric C. R., and Isobel Black. 2001. \emph{Encyclopedia of {Genetics}}. {Taylor \& Francis}. \url{https://books.google.com?id=JjLWYKqehRsC}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-rheinbergerMendelianInheritanceGermany2000}{}}%
+Rheinberger, Hans-Jörg. 2000. {``Mendelian Inheritance in {Germany} Between 1900 and 1910. {The} Case of {Carl Correns} (1864--1933).''} \emph{Comptes Rendus de l'Académie Des Sciences-Séries III-Sciences de La Vie} 323 (12): 1089--96.
+
 \leavevmode\vadjust pre{\hypertarget{ref-ridleyFrancisCrickDiscoverer2006}{}}%
 Ridley, Matt. 2006. \emph{Francis {Crick}: Discoverer of the Genetic Code}. {Atlas Books}.
 
@@ -1435,11 +1536,20 @@ S'egurel, Laure, and C'eline Bon. 2017. {``On the {Evolution} of {Lactase Persis
 \leavevmode\vadjust pre{\hypertarget{ref-saliba-colombaniEfficiencyRFLPRAPD2000}{}}%
 Saliba-Colombani, Vera, Mathilde Causse, Laurent Gervais, and Jacqueline Philouze. 2000. {``Efficiency of {RFLP}, {RAPD}, and {AFLP} Markers for the Construction of an Intraspecific Map of the Tomato Genome.''} \emph{Genome} 43 (1): 29--40. \url{https://doi.org/10.1139/g99-096}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-sandlerConceptualAmbiguityThat1985}{}}%
+Sandler, Iris, and Laurence Sandler. 1985. {``A {Conceptual Ambiguity} That {Contributed} to the {Neglect} of {Mendel}'s {Paper}.''} \emph{History and Philosophy of the Life Sciences} 7 (1): 3--70. \url{https://www.jstor.org/stable/23328361}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-sangerNucleotideSequenceBacteriophage1982}{}}%
 Sanger, F., A. R. Coulson, G. F. Hong, D. F. Hill, and G. B. Petersen. 1982. {``Nucleotide Sequence of Bacteriophage λ {DNA}.''} \emph{Journal of Molecular Biology} 162 (4): 729--73. \url{https://doi.org/10.1016/0022-2836(82)90546-0}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-sangerDNASequencingChainterminating1977}{}}%
 Sanger, Frederick, Steven Nicklen, and Alan R. Coulson. 1977. {``{DNA} Sequencing with Chain-Terminating Inhibitors.''} \emph{Proceedings of the National Academy of Sciences} 74 (12): 5463--67.
+
+\leavevmode\vadjust pre{\hypertarget{ref-sangerAminoacidSequencePhenylalanyl1951}{}}%
+Sanger, F., and H. Tuppy. 1951a. {``The Amino-Acid Sequence in the Phenylalanyl Chain of Insulin. 1. {The} Identification of Lower Peptides from Partial Hydrolysates.''} \emph{Biochemical Journal} 49 (4): 463--81. \url{https://doi.org/10.1042/bj0490463}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-sangerAminoacidSequencePhenylalanyl1951a}{}}%
+---------. 1951b. {``The Amino-Acid Sequence in the Phenylalanyl Chain of Insulin. 2. {The} Investigation of Peptides from Enzymic Hydrolysates.''} \emph{Biochemical Journal} 49 (4): 481--90. \url{https://doi.org/10.1042/bj0490481}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-saulHighDiversityMousePopulations2019}{}}%
 Saul, Michael C., Vivek M. Philip, Laura G. Reinholdt, and Elissa J. Chesler. 2019. {``High-{Diversity Mouse Populations} for {Complex Traits}.''} \emph{Trends in Genetics} 35 (7): 501--14. \url{https://doi.org/10.1016/j.tig.2019.04.003}.
@@ -1452,6 +1562,9 @@ Schmal, Christoph, Gregor Mönke, and Adri'an E. Granada. 2022. {``Analysis of {
 
 \leavevmode\vadjust pre{\hypertarget{ref-schumacherAssociationAnalysesMore2018}{}}%
 Schumacher, Fredrick R., Ali Amin Al Olama, Sonja I. Berndt, Sara Benlloch, Mahbubl Ahmed, Edward J. Saunders, Tokhir Dadaev, et al. 2018. {``Association Analyses of More Than 140,000 Men Identify 63 New Prostate Cancer Susceptibility Loci.''} \emph{Nature Genetics} 50 (7, 7): 928--36. \url{https://doi.org/10.1038/s41588-018-0142-8}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-schwartzPursuitGene2008}{}}%
+Schwartz, James. 2008. \emph{In {Pursuit} of the {Gene}}. {Harvard University Press}. \url{https://books.google.com?id=bl2KvwEACAAJ}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-schwarzeAreWholeexomeWholegenome2018}{}}%
 Schwarze, Katharina, James Buchanan, Jenny C. Taylor, and Sarah Wordsworth. 2018. {``Are Whole-Exome and Whole-Genome Sequencing Approaches Cost-Effective? {A} Systematic Review of the Literature.''} \emph{Genetics in Medicine} 20 (10): 1122--30. \url{https://doi.org/10.1038/gim.2017.247}.
@@ -1474,8 +1587,14 @@ Sharp, Seth A., Stephen S. Rich, Andrew R. Wood, Samuel E. Jones, Robin N. Beaum
 \leavevmode\vadjust pre{\hypertarget{ref-shendureDNASequencing402017}{}}%
 Shendure, Jay, Shankar Balasubramanian, George M. Church, Walter Gilbert, Jane Rogers, Jeffery A. Schloss, and Robert H. Waterston. 2017. {``{DNA} Sequencing at 40: Past, Present and Future.''} \emph{Nature} 550 (7676, 7676): 345--53. \url{https://doi.org/10.1038/nature24286}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-simontonOriginsGeniusDarwinian1999}{}}%
+Simonton, Dean Keith. 1999. \emph{Origins of {Genius}: {Darwinian Perspectives} on {Creativity}}. {Oxford University Press}. \url{https://books.google.com?id=ChNnDAAAQBAJ}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-sloanwilsonShynessBoldnessHumans1994}{}}%
 Sloan Wilson, David, Anne B. Clark, Kristine Coleman, and Ted Dearstyne. 1994. {``Shyness and Boldness in Humans and Other Animals.''} \emph{Trends in Ecology \& Evolution} 9 (11): 442--46. \url{https://doi.org/10.1016/0169-5347(94)90134-1}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-smithNaturalSelectionIntellectual2010}{}}%
+Smith, Charles Hyde, and George Beccaloni. 2010. \emph{Natural {Selection} and {Beyond}: {The Intellectual Legacy} of {Alfred Russel Wallace}}. {Oxford University Press}. \url{https://books.google.com?id=xkYVDAAAQBAJ}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-spivakovGenomicPhenotypicCharacterization2014}{}}%
 Spivakov, Mikhail, Thomas O Auer, Ravindra Peravali, Ian Dunham, Dirk Dolle, Asao Fujiyama, Atsushi Toyoda, et al. 2014. {``Genomic and {Phenotypic Characterization} of a {Wild Medaka Population}: {Towards} the {Establishment} of an {Isogenic Population Genetic Resource} in {Fish}.''} \emph{G3 Genes\textbar Genomes\textbar Genetics} 4 (3): 433--45. \url{https://doi.org/10.1534/g3.113.008722}.
@@ -1485,6 +1604,9 @@ Staden, R. 1979. {``A Strategy of {DNA} Sequencing Employing Computer Programs.'
 
 \leavevmode\vadjust pre{\hypertarget{ref-steensmaAbbieLathropMouse2010}{}}%
 Steensma, David P., Robert A. Kyle, and Marc A. Shampo. 2010. {``Abbie {Lathrop}, the {`{Mouse Woman} of {Granby}'}: {Rodent Fancier} and {Accidental Genetics Pioneer}.''} \emph{Mayo Clinic Proceedings} 85 (11): e83. \url{https://doi.org/10.4065/mcp.2010.0647}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-strickbergerEvolution1990}{}}%
+Strickberger, Monroe W. 1990. \emph{Evolution}. {Jones and Bartlett}. \url{https://books.google.com?id=qU_wAAAAMAAJ}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-strittmatterApolipoproteinAlzheimerDisease1996}{}}%
 Strittmatter, Warren J., and Allen D. Roses. 1996. {``Apolipoprotein {E} and {Alzheimer}'s {Disease}.''} \emph{Annual Review of Neuroscience} 19 (1): 53--77. \url{https://doi.org/10.1146/annurev.ne.19.030196.000413}.
@@ -1507,6 +1629,9 @@ Tabery, James. 2014. \emph{Beyond Versus: {The} Struggle to Understand the Inter
 \leavevmode\vadjust pre{\hypertarget{ref-NobelPrizeChemistry}{}}%
 {``The {Nobel Prize} in {Chemistry} 1980.''} n.d. {NobelPrize.org}. Accessed August 30, 2022. \url{https://www.nobelprize.org/prizes/chemistry/1980/summary/}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-SaturdayReviewPolitics1859}{}}%
+\emph{The {Saturday Review} of {Politics}, {Literature}, {Science} and {Art}}. 1859. {Saturday Review}. \url{https://books.google.com?id=8UZ4NwHp9c4C}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-threadgillCollaborativeCrossRecombinant2011}{}}%
 Threadgill, David W., Darla R. Miller, Gary A. Churchill, and Fernando Pardo-Manuel de Villena. 2011. {``The {Collaborative Cross}: {A Recombinant Inbred Mouse Population} for the {Systems Genetic Era}.''} \emph{ILAR Journal} 52 (1): 24--31. \url{https://doi.org/10.1093/ilar.52.1.24}.
 
@@ -1525,11 +1650,17 @@ Visscher, Peter M., William G. Hill, and Naomi R. Wray. 2008. {``Heritability in
 \leavevmode\vadjust pre{\hypertarget{ref-wagenseilDNADiscovererBlacks2015}{}}%
 Wagenseil, Paul. 2015. {``{DNA Discoverer}: {Blacks Less Intelligent Than Whites}.''} Text.Article. {Fox News}; {Fox News}. March 25, 2015. \url{https://www.foxnews.com/story/dna-discoverer-blacks-less-intelligent-than-whites}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-wallaceXVIIILawWhich1855}{}}%
+Wallace, Alfred R. 1855. {``{XVIII}.---{On} the Law Which Has Regulated the Introduction of New Species.''} \emph{Annals and Magazine of Natural History} 16 (93): 184--96.
+
 \leavevmode\vadjust pre{\hypertarget{ref-wangTheoreticalEmpiricalQuantification2020}{}}%
 Wang, Ying, Jing Guo, Guiyan Ni, Jian Yang, Peter M. Visscher, and Loic Yengo. 2020. {``Theoretical and Empirical Quantification of the Accuracy of Polygenic Scores in Ancestry Divergent Populations.''} \emph{Nature Communications} 11 (1, 1): 3865. \url{https://doi.org/10.1038/s41467-020-17719-y}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wangNanoporeSequencingTechnology2021}{}}%
 Wang, Yunhao, Yue Zhao, Audrey Bollas, Yuru Wang, and Kin Fai Au. 2021. {``Nanopore Sequencing Technology, Bioinformatics and Applications.''} \emph{Nature Biotechnology} 39 (11, 11): 1348--65. \url{https://doi.org/10.1038/s41587-021-01108-x}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-wanscherHistoryWilhelmJohannsen1975}{}}%
+Wanscher, Johan Henrik. 1975. {``The History of {Wilhelm Johannsen}'s Genetical Terms and Concepts from the Period 1903 to 1926.''} \emph{Centaurus} 19 (2): 125--47.
 
 \leavevmode\vadjust pre{\hypertarget{ref-watanabeGlobalOverviewPleiotropy2019}{}}%
 Watanabe, Kyoko, Sven Stringer, Oleksandr Frei, Maša Umi'cevi'c Mirkov, Christiaan de Leeuw, Tinca J. C. Polderman, Sophie van der Sluis, Ole A. Andreassen, Benjamin M. Neale, and Danielle Posthuma. 2019. {``A Global Overview of Pleiotropy and Genetic Architecture in Complex Traits.''} \emph{Nature Genetics} 51 (9, 9): 1339--48. \url{https://doi.org/10.1038/s41588-019-0481-0}.
@@ -1552,8 +1683,41 @@ Wellcome. 2003. {``Francis {Crick}'s Controversial Archive on First Public Displ
 \leavevmode\vadjust pre{\hypertarget{ref-wetterstrandDNASequencingCosts2021}{}}%
 Wetterstrand, Kris A. 2021. {``{DNA Sequencing Costs}: {Data}.''} {Genome.gov}. November 1, 2021. \url{https://www.genome.gov/about-genomics/fact-sheets/DNA-Sequencing-Costs-Data}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-batesonPhoto}{}}%
+Wikimedia Commons. 2017a. {``File:Bateson2.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Bateson2.jpg\&oldid=255958176\%7D}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-charlesDarwinYoung}{}}%
+---------. 2017b. {``File:charles Darwin by g. Richmond.png --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Charles_Darwin_by_G._Richmond.png\&oldid=260695102\%7D}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-homunculusImage}{}}%
+---------. 2019. {``File:preformation.GIF --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Preformation.GIF\&oldid=372547016\%7D}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-pearsonPhoto}{}}%
+---------. 2020. {``File:karl Pearson, 1910.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Karl_Pearson,_1910.jpg\&oldid=477532248\%7D}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-galtonPhoto}{}}%
+---------. 2021a. {``File:francis Galton 1850s.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Francis_Galton_1850s.jpg\&oldid=569302173\%7D}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mendelPhoto}{}}%
+---------. 2021b. {``File:gregor Mendel 2.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Gregor_Mendel_2.jpg\&oldid=534728192\%7D}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-fisherPhoto}{}}%
+---------. 2021c. {``File:Youngronaldfisher2.JPG --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Youngronaldfisher2.JPG\&oldid=614548490\%7D}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-alfredWallace1895}{}}%
+---------. 2022a. {``File:alfred-Russel-Wallace-C1895.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{https://commons.wikimedia.org/w/index.php?title=File:Alfred-Russel-Wallace-c1895.jpg\&oldid=642853479}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-darwinFinches}{}}%
+---------. 2022b. {``File:darwin's Finches by Gould.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Darwin\%27s_finches_by_Gould.jpg\&oldid=643906085\%7D}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-lamarck1802}{}}%
+---------. 2022c. {``File:jean-Baptiste de Lamarck.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Jean-Baptiste_de_Lamarck.jpg\&oldid=641428959\%7D}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-wilkinsMolecularStructureNucleic1953}{}}%
 Wilkins, M. H. F., A. R. Stokes, and H. R. Wilson. 1953. {``Molecular {Structure} of {Nucleic Acids}: {Molecular Structure} of {Deoxypentose Nucleic Acids}.''} \emph{Nature} 171 (4356, 4356): 738--40. \url{https://doi.org/10.1038/171738a0}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-williamsUnravellingDoubleHelix2019}{}}%
+Williams, Gareth. 2019. \emph{Unravelling the {Double Helix}: {The Lost Heroes} of {DNA}}. {Hachette UK}. \url{https://books.google.com?id=uFRrDwAAQBAJ}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wilsonShyboldContinuumPumpkinseed1993}{}}%
 Wilson, David S., Kristine Coleman, Anne B. Clark, and Laurence Biederman. 1993. {``Shy-Bold Continuum in Pumpkinseed Sunfish ({Lepomis} Gibbosus): {An} Ecological Study of a Psychological Trait.''} \emph{Journal of Comparative Psychology} 107 (3): 250--60. \url{https://doi.org/10.1037/0735-7036.107.3.250}.

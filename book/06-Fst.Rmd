@@ -1,5 +1,7 @@
 # Variation in the frequency of trait-associated alleles across global human populations {#Fst-chap}
 
+[MOTIVATE]
+
 \chaptermark{Human $F_{ST}$ distributions}
 
 In this Chapter, I describe my analysis of the distribution of $F_{ST}$ for trait-associated alleles across diverse human populations, to explore the extent to which different allele frequencies contribute to the poor transferability of PGS to non-European populations. 
