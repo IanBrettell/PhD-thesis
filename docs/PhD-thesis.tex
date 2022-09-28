@@ -217,7 +217,7 @@ Altogether, this thesis describes some of the genomic characteristics of both me
 
 Humankind has long sought to understand the basis of biological variation. What gives rise to the wondrous variety of life forms on Earth? Why do individuals of a particular species differ from one another? How do children inherit traits that are similar to those of their parents, yet on the whole remain distinct from both their parents and their siblings? And are the traits we care about -- our health, our intelligence, our behaviour, our ability to thrive in a changing world -- pre-determined from birth, or continuously pliable throughout our lives? And in particular, as social creatures, to what extent does our social environment affect these outcomes? Such questions fundamentally concern the natural laws of inheritance, which until recently remained mysterious and obscure. Rapidly-improving technologies are making these inquiries increasingly tractable, yet the interplay between genes and environment are still the subject of controversy, especially in relation to human traits such as intelligence.
 
-In this thesis, I primarily explore the extent to which phenotypic variation is determined by an individual's own genes, and how much it is mediated by the genes of one's social companions, with a particular focus on the phenotype of bold-type behaviours in the Japanese rice paddy fish medaka (\emph{Oryzias latipes}). In this introduction I first provide a brief history of the field, describing some of the work of the scientists on whose shoulders this research stands, from Charles Darwin's theory of evolution, Mendel's identification of the units of inheritance, and the study of continuous variation by Francis Galton, Karl Pearson, Ronald Fisher, and others, while also touching on their other legacies. I then outline the traditional animal crossing methods and modern DNA sequencing and statistical techniques that I have used to parse the respective contributions of genes and environment to variation in complex traits, and introduce the phenotypes that I study in medaka. Finally, I provide some background to the issue of the non-portability of human polygenic scores to diverse populations, which I explore in the final chapter of this thesis.
+In this thesis, I primarily explore the extent to which phenotypic variation is determined by an individual's own genes, and how much it is mediated by the genes of one's social companions, with a particular focus on the phenotype of bold-type behaviours in the Japanese rice paddy fish medaka (\emph{Oryzias latipes}). In this introduction I first provide a brief history of the field, describing some of the work of the scientists on whose shoulders this research stands, from Charles Darwin's theory of evolution, Mendel's identification of the units of inheritance, and the study of continuous variation by Francis Galton, Karl Pearson, Ronald Fisher, and others, while also touching on their other legacies. I then outline the traditional animal crossing methods and modern DNA sequencing and statistical techniques that I have used to parse the respective contributions of genes and environment to variation in complex (polygenic) traits, and introduce the phenotypes that I study in medaka. Finally, I provide some background to the issue of the non-portability of human polygenic scores to diverse populations, which I explore in the final chapter of this thesis.
 
 \hypertarget{a-brief-history-of-genetics}{%
 \section{A brief history of genetics}\label{a-brief-history-of-genetics}}
@@ -336,7 +336,7 @@ Around the time the \emph{Origin of Species} was published, the prevailing theor
 \caption{Portrait of Jean Baptiste de Lamarck from 1802-1803 by Charles Thévenin (Wikimedia Commons 2022c).}\label{fig:lamarck}
 \end{figure}
 
-But by extending that logic, if a human had their arm amputated, their children would be born with shortened arms.\footnote{This theory was experimentally tested by the German embryologist August Weismann, who amputated the tails of mice to determine whether the offspring would be born tailless (Schwartz 2008). The offspring were all born with tails intact.} Darwin was convinced that selection rather acted upon \emph{pre-existing} variation in a population, and proposed that that variation was transmitted by hereditary particles he called \emph{gemmules} (Schwartz 2008). During conception, he proposed that the gemmules of each parent were blended like paints (Charlesworth and Charlesworth 2009). But such blending would result in a monochrome population, preventing the creation of the unique, outlying traits required to drive the variation he observed (Jenkin 1867). Around this time Darwin had recorded notes on an obscure paper titled \emph{Experiments in Plant Hybridization} (Mendel 1866), but he appeared to have inadvertently skipped the page containing a description of the experiments on pea hybrids performed by an Augustine monk named Gregor Mendel (\textbf{Figure \ref{fig:mendel}}).
+But by extending that logic, if a human had their arm amputated, their children would be born with shortened arms.\footnote{This theory was experimentally tested by the German embryologist August Weismann, who amputated the tails of mice to determine whether the offspring would be born tailless (Schwartz 2008). The offspring were all born with tails intact.} Darwin was convinced that selection rather acted upon \emph{pre-existing} variation in a population, and proposed that that variation was transmitted by hereditary particles he called \emph{gemmules} (Schwartz 2008). During conception, he proposed that the gemmules of each parent were blended like paints (B. Charlesworth and Charlesworth 2009). But such blending would result in a monochrome population, preventing the creation of the unique, outlying traits required to drive the variation he observed (Jenkin 1867). Around this time Darwin had recorded notes on an obscure paper titled \emph{Experiments in Plant Hybridization} (Mendel 1866), but he appeared to have inadvertently skipped the page containing a description of the experiments on pea hybrids performed by an Augustine monk named Gregor Mendel (\textbf{Figure \ref{fig:mendel}}).
 
 
 
@@ -470,7 +470,7 @@ Following in the footsteps of Galton and Pearson, the mathematician Ronald Fishe
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.7\linewidth]{figs/introduction/Youngronaldfisher2} 
+{\centering \includegraphics[width=0.6\linewidth]{figs/introduction/Youngronaldfisher2} 
 
 }
 
@@ -512,7 +512,7 @@ During this fertile period in statistical genetics research, the physical locati
 \caption{Thomas Hunt Morgan in 1920. Portrait taken by A. F. Huettner. Image from Kenney and Borisy (2009).}\label{fig:morgan}
 \end{figure}
 
-Around 1905, Morgan began to breed \emph{Drosophila}, identifying visible variants that he could track over generations, such as white versus red eyes, forked versus straight bristles, disjointed abdomens, and deformed eyes (Hodge 2009). Through repeated crossing experiments, Morgan discovered that some genes were transmitted together at a higher rate than chance alone. He proposed that these genes were physically ``linked'' to one another, implying that they were situated on some string within the chromosome, like strings on a bead (Morgan 1972). This advanced the understanding of a gene from a purely theoretical unit of inheritance to a physical unit (Morgan 1935). He further discovered that, occasionally, a gene that was otherwise linked to another could ``cross over'' from one parental strand to the other, generating offspring with a mixture of parental alleles (Morgan 1916).
+Around 1905, Morgan began to breed \emph{Drosophila}, identifying visible variants that he could track over generations, such as white versus red eyes, forked versus straight bristles, disjointed abdomens, and deformed eyes (Hodge 2009). Through repeated crossing experiments, Morgan discovered that some genes were transmitted together at a higher rate than chance alone. He proposed that these genes were physically ``linked'' to one another, implying that they were situated on some string within the chromosome like strings on a bead (Morgan 1972). This advanced the understanding of a gene from a purely theoretical unit of inheritance to a physical unit (Morgan 1935). He further discovered that, occasionally, a gene that was otherwise linked to another could ``cross over'' from one parental strand to the other, generating offspring with a mixture of parental alleles (Morgan 1916).
 
 While Morgan was carrying out his experiments with \emph{Drosophila}, Japanese researchers were also studying Mendelian inheritance with the Japanese medaka fish (\emph{Oryzias latipes}), the main subject of this thesis. Following three articles published by three separate professors in Japanese on the recessive inheritance of medaka colour variants (Fukamachi and Naruse 2021), a teacher named Tatsuo Aida (\textbf{Figure \ref{fig:aida}}) published the first article in English about medaka in 1921 (Aida 1921) (\textbf{Figure \ref{fig:aida-fig}}). The study involved a total of 22 crosses of two generations, and among several other findings, Aida discovered recombination between the X and Y chromosome -- the world's first demonstration of crossovers between pseudo-autosomal sex chromosomes in any species (Naruse, Tanaka, and Takeda 2011).\footnote{The editor, William Castle, was so impressed by this last finding that he added the following footnote to the paper: ``It should be pointed out, in justice to the author, that his observations go beyond those of Schmidt in the important respect of showing the occurrence of crossing over between the X and the Y chromosome.''}
 
@@ -544,7 +544,7 @@ In the 1930s, Theodosius Dobzhansky (\textbf{Figure \ref{fig:dobzhansky}}), a Uk
 
 \begin{figure}
 
-{\centering \includegraphics[width=1\linewidth]{figs/introduction/Dobzhansky} 
+{\centering \includegraphics[width=0.6\linewidth]{figs/introduction/Dobzhansky} 
 
 }
 
@@ -587,13 +587,13 @@ In an interview with David Pearson of the Wellcome Library for the History and U
 \emph{In the long run, it is unavoidable that society will begin to worry about the character of the next generation \ldots{} It is not a subject at the moment which we can tackle easily because people have so many religious beliefs and until we have a more uniform view of ourselves I think it would be risky to try and do anything in the way of eugenics \ldots{} I would be astonished if, in the next 100 or 200 years, society did not come round to the view that they would have to try to improve the next generation in some extent or one way or another.} (Wellcome 2003)
 \end{quote}
 
-In 2015, Watson said:
+And in 2015, Watson said:
 
 \begin{quote}
 \emph{All our social policies are based on the fact that their (blacks) intelligence is the same as ours (whites) -- whereas all the testing says not really \ldots{} people who have to deal with black employees find this not true.} (Wagenseil 2015)
 \end{quote}
 
-During a speaking tour, Watson also claimed that black people were less intelligent than white people, and the idea that ``equal powers of reason'' were shared across racial groups was a delusion (Milmo 2007).
+During a speaking tour, Watson again claimed that black people were less intelligent than white people, and the idea that ``equal powers of reason'' were shared across racial groups was a delusion (Milmo 2007). Long after the tragedies of World War II, the spectre of eugenics remains present among the genetics community, complicating the legacies of Watson and Crick, who were responsible for one of the 20th century's most remarkable discoveries.
 
 \hypertarget{the-development-of-dna-sequencing}{%
 \subsection{The development of DNA sequencing}\label{the-development-of-dna-sequencing}}
@@ -611,13 +611,13 @@ In the early 1950s, Frederick Sanger (\textbf{Figure \ref{fig:sanger}}), a bioch
 \caption{Undated photo of Frederick Sanger from {``Obituary: {Fred Sanger} the Scientist and Twice {Nobel Prize} Winner Dies''} (2013).}\label{fig:sanger}
 \end{figure}
 
-The Sanger method was highly accurate and efficient, and further refinements of this approach, together with advances in DNA cloning (O'Connor, Peifer, and Bender 1989), led to the development of an method known as ``shotgun sequencing''. The method involves randomly breaking up genomes into short (100-1000 base pair (\textbf{bp})) strands, sequencing them, and then assembling them based on overlapping regions (Staden 1979). This made it possible, for the first time, to sequence whole, large-scale genomes (Shendure et al. 2017). The Human Genome Project was established in 1990 as a large, international consortium, and through the application of shotgun sequencing, published the first draft of the human genome in 2001 (I. H. G. S. Consortium 2001; Venter et al. 2001), with an ``essentially complete'' draft announced in 2003 (I. H. G. S. Consortium 2003).\footnote{The full sequence (including heterochromatic regions) was only completed in 2022 (Nurk et al. 2022).}
+The Sanger method was highly accurate and efficient, and further refinements of this approach, together with advances in DNA cloning (O'Connor, Peifer, and Bender 1989), led to the development of a method known as ``shotgun sequencing''. The method involves randomly breaking up genomes into short (100-1000 base pair (\textbf{bp})) strands, sequencing them, and then assembling them based on overlapping regions (Staden 1979). This made it possible, for the first time, to sequence whole, large-scale genomes (Shendure et al. 2017). The Human Genome Project was established in 1990 as a large, international consortium, and through the application of shotgun sequencing, published the first draft of the human genome in 2001 (I. H. G. S. Consortium 2001; Venter et al. 2001), with an ``essentially complete'' draft announced in 2003 (I. H. G. S. Consortium 2003).\footnote{The full sequence (including heterochromatic regions) was only completed in 2022 (Nurk et al. 2022).}
 
-Shortly after this landmark achievement, Sanger sequencing was superseded by ``second generation'' DNA sequencing, also called ``massively parallel'' or ``next generation'' sequencing (\textbf{NGS}). The first NGS platforms arrived in 2005, involving the dense fixation of a library of millions or billions of DNA templates onto a two-dimensional surface. This allowed for \emph{in vitro} amplification and imaging through the detection of fluorescence from dideoxynucleotides over repeated cycles of biochemistry (Shendure et al. 2017). Each cycle incorporates a single nucleotide, and after imaging to determine which of four colours was incorporated by each template on the surface, the blocking and fluorescent groups are removed to set up the next extension (Shendure et al. 2017). Read lengths from NGS tend to be shorter than the Sanger method (in the low hundreds of bases, compared to 600-700 for Sanger), but with a similar accuracy of over 99.9\% (Shendure et al. 2017). The intense competition between several NGS companies including Solexa (acquired by Illumina) and Complete Genomics resulted in the reduction in the raw, per-megabase count of DNA sequencing from \$1,000 to \$0.10 between 2007 and 2012 (Wetterstrand 2021).
+Shortly after this milestone, Sanger sequencing was superseded by ``second generation'' DNA sequencing, also called ``massively parallel'' or ``next generation'' sequencing (\textbf{NGS}). The first NGS platforms arrived in 2005, involving the dense fixation of a library of millions or billions of DNA templates onto a two-dimensional surface. This allowed for \emph{in vitro} amplification and imaging through the detection of fluorescence from dideoxynucleotides over repeated cycles of biochemistry (Shendure et al. 2017). In this method, each cycle incorporates a single nucleotide, and after imaging to determine which of four colours was incorporated by each template on the surface, the blocking and fluorescent groups are removed to set up the next extension (Shendure et al. 2017). Read lengths from NGS tend to be shorter than the Sanger method (in the low hundreds of bases, compared to 600-700 for Sanger), but with a similar accuracy of over 99.9\% (Shendure et al. 2017). The intense competition between several NGS companies including 454 (acquired by Roche), Solexa (acquired by Illumina) and Complete Genomics resulted in the reduction in the cost of DNA sequencing per-megabase from \$1,000 to \$0.10 between 2007 and 2012 (Wetterstrand 2021).
 
-Both Sanger sequencing and NGS come with drawbacks. Both involve template amplification, which can create copying errors, sequencing-dependent biases, and information loss (for example, DNA modifications) (Shendure et al. 2017). In addition, the short read length can make genome assembly difficult for regions with high repeat content (Amarasinghe et al. 2020). New technologies pioneered by PacBio and Oxford Nanopore Technologies (\textbf{ONT}) can skip the amplification step by sequencing single molecules in real time (Mikheyev and Tin 2014; Rhoads and Au 2015), resulting in reads up to megabases in length (Payne et al. 2019). These ``third-generation'' sequencing technologies used to have a much higher error rate than NGS platforms (Laver et al. 2015), although they are quickly closing the gap (Jain et al. 2018). ONT platforms can also directly sequence DNA modifications (Yunhao Wang et al. 2021).
+Sanger sequencing and NGS both come with drawbacks. They require template amplification, which can create copying errors, sequencing-dependent biases, and information loss (for example, DNA modifications) (Shendure et al. 2017). In addition, the short read length can make genome assembly difficult for regions with high repeat content or structural variation (Amarasinghe et al. 2020). New technologies pioneered by PacBio and Oxford Nanopore Technologies (\textbf{ONT}) overcome both issues by sequencing single molecules in real time (Mikheyev and Tin 2014; Rhoads and Au 2015), which removes the amplification step and generates reads from kilobases (PacBio) up to megabases in length (ONT) (Payne et al. 2019). These ``third-generation'' or ``long-read'' sequencing technologies formerly had a much higher error rate than NGS platforms (Laver et al. 2015), but are now quickly closing the gap (Jain et al. 2018), and recent ONT platforms can also directly sequence DNA modifications (Yunhao Wang et al. 2021). The long reads produced by these technologies have two primary benefits. First, they allow for a more straightforward \emph{de novo} assembly of genomes, making it more feasible to construct pan-genomes in a graph-based format that represent a wider spectrum of diversity in a species, rather than relying on a single reference genome (Sherman and Salzberg 2020). Second, they can capture complex, large-scale structural variation that has remained hidden until now, and which can have significant effects on phenotypes including autism and schizophrenia in humans (Weischenfeldt et al. 2013). In Chapter \ref{MIKK-genomes-chap} I use the long-read ONT platform to detect structural variants in 9 medaka fish genomes, and compare the traditional reference-based approach to the graph-based approach in respect of their ability to detect those variants.
 
-The rapid improvement in sequencing technologies has now reached the stage where a \$100 human genome is on the horizon (Pennisi 2022). These developments are making genetic technologies ever more accessible and informative, paving the way for greater insights into the genetic basis of phenotypic differences. Yet despite these technological advances, the relative contribution of genetics and environment to differences in complex traits is still not fully understood -- especially in humans -- and therefore remains an active area of research.
+Altogether, the rapid improvement in sequencing technologies has now reached the stage where a \$100 human genome is on the horizon (Pennisi 2022). These developments are making genetic technologies ever more accessible and informative, paving the way for greater insights into the genetic basis of phenotypic differences. Yet despite these technological advances, the relative contribution of genetics and environment to differences in complex traits is still not fully understood -- especially in humans -- and therefore remains an active area of research.
 
 \hypertarget{genetic-and-environmental-causes-of-variation-in-complex-traits}{%
 \section{Genetic and environmental causes of variation in complex traits}\label{genetic-and-environmental-causes-of-variation-in-complex-traits}}
@@ -643,9 +643,7 @@ This model could be described mathematically as follows, where \(P\) represents 
 P = G + E \label{eq:pge-simp}
 \end{equation}
 
-It is impossible to parse out the respective contributions of each of these factors at the individual level -- to what extent does the width or the length of a rectangle determine its area? It is determined by the product of the two. But by examining a population of rectangles, one can determine how much of the \emph{variance} within the population depends on either width or length (Knopik et al. 2019).
-
-The same principle applies to genotypic and environmental variation within groups of individuals. Fisher's analysis of variance methodology allows for the partitioning of variance into components that are attributable to different factors. If the total observed phenotypic variation within a population is represented by \(V_{P}\), then it can be decomposed into a simple model that includes genetic and environmental factors (Falconer and Mackay 1996):
+It is impossible to parse out the respective contributions of each of these factors at the individual level -- to what extent does the width or the length of a rectangle determine its area? It is determined by the product of the two. But by examining a population of rectangles, one can determine how much of the \emph{variance} within the population depends on either width or length (Knopik et al. 2019). The same principle applies to genotypic and environmental variation within groups of individuals. Fisher's analysis of variance methodology allows for the partitioning of variance into components that are attributable to different factors. If the total observed phenotypic variation within a population is represented by \(V_{P}\), then it can be decomposed into a simple model that includes genetic and environmental factors (Falconer and Mackay 1996):
 
 \begin{equation}
 V_{P} = V_{G} + V_{E} \label{eq:pge}
@@ -653,17 +651,17 @@ V_{P} = V_{G} + V_{E} \label{eq:pge}
 
 \(V_{G}\) is the total proportion of phenotypic variance attributable to genetic factors, and \(V_{E}\) is that attributable to environmental factors (i.e.~all non-genetic factors). \emph{Broad-sense heritability} (\(H^2\)) measures the proportion of phenotypic variance that is attributable to genetic factors (Falconer and Mackay 1996):
 
-\[
-H^2 = \frac{V_G}{V_P}
-\]
+\begin{equation}
+H^2 = \frac{V_G}{V_P} \label{eq:heritbs}
+\end{equation}
 
-\(V_{G}\) can be parsed into additive, dominance, and interaction (``epistatic'') variances. Additive variance, \(V_A\), also known as the variance of ``breeding values'', measures the degree to which offspring resemble their parents. Dominance variance, \(V_D\), measures the dominance deviation, being the extent to which the phenotype deviates from the additive linear relationship across genotypes. Interaction variance, \(V_I\), measures the degree to which the phenotype deviates from the additive linear relationship across genotypes as a result of interactions between genes at different loci (Falconer and Mackay 1996).
+\(V_{G}\) can be further decomposed into additive, dominance, and interaction (``epistatic'') variances. Additive variance, \(V_A\), also known as the variance of ``breeding values'', measures the degree to which offspring resemble their parents. Dominance variance, \(V_D\), measures the dominance deviation, being the extent to which the phenotype deviates from the additive linear relationship across genotypes as a result of interactions between alleles of the same gene. Interaction variance, \(V_I\), measures the degree to which the phenotype deviates from the additive linear relationship across genotypes as a result of interactions between genes at different loci (Falconer and Mackay 1996).
 
 \begin{equation}
 V_G = V_A + V_D + V_I \label{eq:gendecomp}
 \end{equation}
 
-Research has traditionally focused on \(V_A\) due to its importance for predicting phenotypes between relatives, and opportunities for change through natural or artificial selection (William G. Hill, Goddard, and Visscher 2008). Recent evidence has supported the proposition that most genetic variance is additive (William G. Hill, Goddard, and Visscher 2008; Polderman et al. 2015).\footnote{In a meta-anlysis on practically all twin studies published up to 2015, poldermanMetaanalysisHeritabilityHuman2015 showed that for 69\% of studies, the observed twin correlations were solely due to additive genetic variation. This was most prominent for neurological, ear, nose and throat, cardiovascular and ophthalmological domains. The trait domains that were inconsistent with this model were ``activities'', reproduction, and dematological.} \emph{Narrow-sense heritability} (\(h^2\)) measures the proportion of phenotypic variance attributable to additive genetic variance, and therefore expresses the extent to which phenotypes are determined by the genes transmitted from the parents (Bateson 1909; Falconer and Mackay 1996; Posthuma et al. 2003).
+Research has traditionally focused on \(V_A\) due to its importance for predicting phenotypes between relatives, and opportunities for change through natural or artificial selection (Hill, Goddard, and Visscher 2008). Recent evidence has supported the proposition that most genetic variance is additive (Hill, Goddard, and Visscher 2008; Polderman et al. 2015), although I expand on this point below. \emph{Narrow-sense heritability} (\(h^2\)) measures the proportion of phenotypic variance attributable to additive genetic variance, and therefore expresses the extent to which phenotypes are determined by the genes transmitted from the parents (Bateson 1909; Falconer and Mackay 1996; Posthuma et al. 2003).
 
 \begin{equation}
 h^2 = \frac{V_A}{V_P} \label{eq:heritns}
@@ -671,10 +669,10 @@ h^2 = \frac{V_A}{V_P} \label{eq:heritns}
 
 Environmental variance cannot be removed experimentally because it includes by definition all non-genetic variance, and much of this is beyond experimental control. However, elimination of genotypic variance can be achieved experimentally (Falconer and Mackay 1996) by either using human or animal identical twins, or by creating highly inbred lines. Pursuant to Equation \eqref{eq:pge}, the environmental variance (\(V_E\)) can be subtracted from the total phenotypic variance (\(V_P\)) to give an estimate of the trait's heritability \(V_G\) (Falconer and Mackay 1996). It is important to note, however, that as heritability is measured as a fraction of total phenotypic variance, it is liable to change depending on the level of environmental variation present in the study population (Visscher, Hill, and Wray 2008).
 
-\hypertarget{twin-studies}{%
-\subsection{Twin studies}\label{twin-studies}}
+\hypertarget{heritability-and-twin-studies}{%
+\subsection{Heritability and twin studies}\label{heritability-and-twin-studies}}
 
-In humans, the twin study design has been used widely to disentangle the relative contributions of genes and environment for a variety of traits. The classical twin design is based on contrasting the trait resemblance of monozygotic (\textbf{MZ}) and dizygotic (\textbf{DZ}) twin pairs (Polderman et al. 2015). MZ twins share approximately 100\% of genotypes, whereas DZ twins, like siblings, share on average 50\% of their genotypes (Knopik et al. 2019). Assuming they share the same environment (an point I return to below), a rough estimate of heritability can be obtained by comparing the respective correlations of MZ twins and DZ twins with the phenotype of interest. If \(r_{MZ}\) and \(r_{DZ}\) are the correlation coefficients observed between pairs of MZ and DZ twins for a trait of interest (Equation \eqref{eq:cor} above), \(h^2\) = additive genetic influences (Equation \eqref{eq:heritns} above), and \(c^2\) = common environmental influences, then Falconer's formula tells us:
+In humans, the twin study design has been used widely to disentangle the relative contributions of genes and environment for a variety of traits. The classical twin design is based on contrasting the trait resemblance of monozygotic (\textbf{MZ}) and dizygotic (\textbf{DZ}) twin pairs (Polderman et al. 2015). MZ twins share approximately 100\% of genotypes, whereas DZ twins, like siblings, share on average 50\% of their genotypes (Knopik et al. 2019). Assuming they share the same environment (a point I return to below), a rough estimate of heritability can be obtained by comparing the respective correlations of MZ twins and DZ twins with the phenotype of interest. If \(r_{MZ}\) and \(r_{DZ}\) are the correlation coefficients observed between pairs of MZ and DZ twins for a trait of interest (Equation \eqref{eq:cor} above), \(h^2\) = additive genetic influences (Equation \eqref{eq:heritns} above), and \(c^2\) = common environmental influences, then Falconer's formula tells us:
 
 \begin{equation}
 r_{MZ} = h^2 + c^2
@@ -693,35 +691,30 @@ Therefore:
 h^2 = 2\times(r_{MZ} - r_{DZ})
 \end{equation}
 
-Narrow-sense heritability \(h^2\) can therefore be estimated by doubling the difference between the correlation coefficients of MZ versus DZ twins. A 2015 meta-analysis of virtually all human twin studies that had been performed to that date included 2,748 twin studies assessing \textasciitilde18,000 traits and \textasciitilde14.5M twin pairs. The results showed that across all traits, \(h^2\) is 0.488 and \(c^2\) is 0.174 (Polderman et al. 2015). Moreover, in 69\% of studies \(2r_{DZ} = r_{MZ}\), implying that the shared environment \(c^2\) is equivalent across both MZ and DZ twin pairs. This suggests that for most traits, shared environmental or non-additive genetic variation do not make a substantial contribution to phenotypic variation.
-
-\hypertarget{family-genetic-linkage-studies}{%
-\subsection{Family genetic linkage studies}\label{family-genetic-linkage-studies}}
-
-From the 1980s, advances in DNA sequencing enabled the application of genetic linkage studies -- such as those previously performed in model organisms like \emph{Drosophila} -- to human families, in order to trace inheritances and thereby discover thousands of genes for rare Mendelian diseases (Altshuler, Daly, and Lander 2008). The process involved sequencing known polymorphic regions, and using them as markers to trace the transmission of chromosomal regions in families (Altshuler, Daly, and Lander 2008). The feasibility of this method was first demonstrated in 1983 with Huntington disease (Gusella et al. 1983), and over the following decades demonstrated that Mendelian disease-causing mutations often cause major changes in encoded proteins. The utility of the approach, however, reached its limit when applied to mapping common diseases such as heart disease, breast cancer, and diabetes, even those with familial clustering (Altshuler, Daly, and Lander 2008).
-
-\hypertarget{animal-breeding}{%
-\subsection{Animal breeding}\label{animal-breeding}}
-
-Humans have been manipulating the traits of animals for thousands of years, and this observation greatly influenced Darwin's insights into the power of selection (William G. Hill 2014). The application of the science of genetics to animal breeding was greatly advanced by the work of Jay L. Lush (1896-1982) (Caballero 2020), who developed the well-known `breeder's equation' for predicting an animal population's response to artificial selection depending on: a) the heritability of the trait; and b) the selection pressure exerted (Lush 1937).
-
-``Genetic improvement requires identifying the animals with the highest breeding value and selecting them, then replacing them as better ones come along'' (William G. Hill 2014). ``Charles Henderson, a student of Lush, recognised that in predicting future animal breeding values, there were the''fixed'' effects of the parents' breeding values; fixed effects such as herd, year, or season, which had to be included but not estimated; and then ``random'' effects, such as litter size, which were samples from a distribution. (William G. Hill 2014)'' The In his PhD thesis (Henderson 1948), he formulated a methdodology known as Best Linear Unbiased Prediction (\textbf{BLUP}), which incorporates the genetic additive covariances between individuals in the model as a ``relationship matrix''. Henderson's BLUP method was extended into Restricted (i.e.~residual) Maximum Likelihood (\textbf{REML}) (Patterson and Thompson 1971), which is now the standard method used to fit the linear mixed models in Genome-Wide Association Studies (\textbf{GWAS}).
+Narrow-sense heritability \(h^2\) can therefore be estimated by doubling the difference between the correlation coefficients of MZ versus DZ twins. A 2015 meta-analysis of virtually all human twin studies that had been performed to that date included 2,748 twin studies assessing \textasciitilde18,000 traits and \textasciitilde14.5M twin pairs. The results showed that across all traits, \(h^2\) is 0.488 and \(c^2\) is 0.174 (Polderman et al. 2015). Moreover, in 69\% of studies \(2r_{DZ} = r_{MZ}\), implying that the shared environment \(c^2\) is equivalent across both MZ and DZ twin pairs, and that for most traits, shared environmental or non-additive genetic variation do not make a substantial contribution to phenotypic variation. This was most prominent for neurological, ear, nose and throat, cardiovascular and ophthalmological domains. On the other hand, that study found that several behavioural traits were inconsistent with this model. These traits included conduct disorder, higher-level cognitive functions, mental and behavioural disorders due to the use of alcohol or tobacco, anxiety disorder, and weight maintenance. For these traits, either or both non-additive genetic influences or shared environmental influences are therefore needed to explain the observed patterns of twin correlations (Polderman et al. 2015). Leaving to one side the non-additive genetic influences on a phenotype -- which are outside the scope of this thesis -- the findings of this study make it clear that environmental influences contribute substantially to differences in behaviours in humans, which may be further complicated by interactions between the two sources of variation. As social creatures, our social environment is a particularly salient environmental factor, which I discuss below in section \ref{SGE}.
 
 \hypertarget{GWAS}{%
-\subsection{Genome-Wide Association Analysis (GWAS)}\label{GWAS}}
+\subsection{From global variance to individual loci -- family genetic linkage studies and GWAS}\label{GWAS}}
+
+Twin studies focus on the global partitioning of variances attributable to genetic and environmental facts, but since Morgan's work, researchers have also sought to identify the specific genetic variants responsible for Mendelian phenotypes in humans. From the 1980s, advances in DNA sequencing enabled the application of genetic linkage studies -- such as those previously performed in model organisms like \emph{Drosophila} -- to human families, in order to trace inheritances and thereby discover thousands of genes for rare Mendelian diseases (Altshuler, Daly, and Lander 2008). The process involved sequencing known polymorphic regions, and using them as markers to trace the transmission of chromosomal regions in families (Altshuler, Daly, and Lander 2008). The feasibility of this method was first demonstrated in 1983 with Huntington disease (Gusella et al. 1983), and over the following decades demonstrated that Mendelian disease-causing mutations often cause major changes in encoded proteins. The utility of the approach, however, reached its limit when applied to mapping common diseases such as heart disease, breast cancer, and diabetes, even those with familial clustering (Altshuler, Daly, and Lander 2008).
 
 Instead of tracing genes through families, an alternative approach is to map genes by comparing the frequencies of genetic variants between affected and unaffected individuals, known as a ``case-control'' approach. Early applications focused on candidate genes and found correlations between blood-group antigens and peptic ulcer disease in the 1950s (Aird et al. 1954); the human leukocyte antigen (HLA) locus and autoimmune and infectious diseases in the 1960s and 1970s (Klein and Sato 2000); and apolipoprotein E with Alzheimer's disease in the 1980s (Strittmatter and Roses 1996). These early studies were more the exception than the rule, as candidate genes were a ``shot in the dark'' (as established from the family linkage studies which often found variants previously unsuspected), and they were susceptible to false positives caused by population structure (Altshuler, Daly, and Lander 2008).
 
-It became clear that Mendelian diseases were rare, likely as a consequence of purifying selection {[}CITE{]}. In contrast, common diseases were late onset, therefore leaving reproductive fitness unaffected. This logic led to the ``common disease - common variant'' hypothesis, driving a push to expand association analyses genome-wide (Collins, Guyer, and Chakravarti 1997; Lander 1996; Risch and Merikangas 1996).
+It became clear that Mendelian diseases were rare, caused by highly-penetrant, monogenic variants that remain rare in the population likely as a consequence of purifying selection (Di Rienzo 2006; Jonathan K. Pritchard and Cox 2002; Quintana-Murci and Barreiro 2010; Reich and Lander 2001). In contrast, common diseases tend to be late onset, therefore leaving reproductive fitness unaffected. This logic led to the ``common disease - common variant'' hypothesis, driving a push to expand association analyses genome-wide (Collins, Guyer, and Chakravarti 1997; Lander 1996; Risch and Merikangas 1996).
 
 Next-generation sequencing technologies enabled the inclusion of thousands of SNP markers to be tested simultaneously for their association with a phenotype of interest, with the first genome-wide association study (\textbf{GWAS}) published in 2001 (Ozaki et al. 2002). GWAS aim to identify genetic variants associated with traits by comparing the allele frequencies of individuals who share similar ancestries, but differ in values for the trait in question (Uffelmann et al. 2021). As of 2021, over 5,700 GWAS have been performed for more than 3,330 human traits (Uffelmann et al. 2021).
 
-The standard GWAS process involves first genotyping individuals using SNP microarraysm, which target common genetic variants. Alternatively, one can sequence their full exomes (Whole Exome Sequencing, \textbf{WES} ), which targets only the coding regions of the genome, or their full genomes (Whole-Genome Sequencing, \textbf{WGS}). It is common to then use principal components analysis (\textbf{PCA}) {[}AND OTHER METHODS?{]} to restrict the analysis individuals who share common ancestry, in order to avoid population stratification effects (Uffelmann et al. 2021). Missing genotypes can be imputed using a genetic reference panel such as the 1000 Genomes Project (1000. G. P. Consortium et al. 2015). Finally, an association test can be run, which includes an individual-specific random effect term to account for genetic relatedness among individuals.
+In its simple form, GWAS runs a linear model for each SNP marker of the form (Caballero 2020):
 
-Since it became possible to sequence the genotypes of individuals at scale, it has been an ongoing point of debate as to how best to model the effects that genetic variants have on a trait of interest. The standard linear regression model currently used for GWAS can be written as follows (Uffelmann et al. 2021):
+\[
+\textbf{y} = \alpha + \boldsymbol{\beta} \textbf{x} + \textbf{e}
+\]
+Where \(\textbf{y}\) is a vector of the sample phenotypes, \(\alpha\) is the population mean, \(\boldsymbol{\beta}\) is a vector of the effect sizes of the marker, \(\textbf{x}\) is the number of copies of an allele for each marker, and \(\textbf{e}\) is a vector of random residual errors.
+
+However, GWAS must always grapple with population structure and unequal relatedness among individuals, which in a given cohort can lead to false discoveries (Ewens and Spielman 1995; Members of the Complex Trait Consortium 2003). This phenomenon is caused by the fact that individuals who share common ancestries will share both variants that do affect the trait of interest, and variants that do not. The non-causal variants that are correlated with the causal variants due to this shared ancestry will therefore also be found to be statistically associated with the trait. Recent methods for dealing with this issue include admixture inference (Jonathan K. Pritchard, Stephens, and Donnelly 2000) (to identify related clusters), and principal components analysis (Price et al. 2006) (to include the first set of principal components as covariates in the model). A popular method, which can also be combined with the above methods, is to use a linear mixed model which includes a kinship or Genetic Relationship Matrix (\textbf{GRM}) as a random effect (Loh et al. 2015; Yu et al. 2006). The standard linear regression model currently used for GWAS can be written as follows (Uffelmann et al. 2021):
 
 \begin{equation}
-\textbf{Y} \sim \textbf{W} \alpha ~+~{X_s}{\beta_s} + g + e
+\textbf{Y} \sim \textbf{W} \alpha ~+~\textbf{X}_s\boldsymbol{\beta}_s + g + e
 \end{equation}
 \begin{equation}
 g \sim N(0,\sigma^2_A\psi)
@@ -730,49 +723,25 @@ g \sim N(0,\sigma^2_A\psi)
 e \sim N(0,\sigma^2_e \textbf{I})
 \end{equation}
 
-where, for each individual, \(\textbf{Y}\) is a vector of phenotype values, \(\textbf{W}\) is a matrix of covariates including an intercept term, \(\alpha\) is a corresponding vector of effect sizes, \(X_s\) is a vector of genotype values for all individuals at SNP \(s\), \(\beta_s\) is the corresponding fixed effect size of genetic variant \(s\) (also known as the SNP effect size), \(g\) is a random effect that captures the polygenic effect of other SNPs, \(e\) is a random effect of residual errors, \(\sigma^2_{A}\) measures additive genetic variation of the phenotype, \(\psi\) is the standard genetic relationship matrix, \(\sigma^2_e\) measures residual variance, and \(\textbf{I}\) is an identity matrix (Uffelmann et al. 2021).
+Where, for each individual, \(\textbf{Y}\) is a vector of phenotype values, \(\textbf{W}\) is a matrix of covariates including an intercept term, \(\alpha\) is a corresponding vector of effect sizes, \(X_s\) is a vector of genotype values for all individuals at SNP \(s\), \(\boldsymbol{\beta}_s\) is the corresponding fixed effect size of genetic variant \(s\) (also known as the SNP effect size), \(g\) is a random effect that captures the polygenic effect of other SNPs, \(e\) is a random effect of residual errors, \(\sigma^2_{A}\) measures additive genetic variation of the phenotype, \(\psi\) is the standard genetic relationship matrix, \(\sigma^2_e\) measures residual variance, and \(\textbf{I}\) is an identity matrix (Uffelmann et al. 2021).
 
-GWAS must always grapple with population structure and unequal relatedness among individuals, which in a given cohort can lead to false discoveries (Ewens and Spielman 1995; Members of the Complex Trait Consortium 2003). This is because individuals who share common ancestries will share both variants that do affect the trait of interest, and variants that do not. Both causal and non-causal variants will be correlated with one other due to that shared ancestry, and so, if an association is found between the causal variants and a trait of interest, the non-causal variants that are correlated with the causal variants will also be found to be statistically associated with the trait.
-
-GWAS output a \(p\)-value and directional effect size (commonly denoted as \(\beta\)) for each tested SNP. As the method tends to test millions of SNPs, there need to be restrictions on multiple testing. The statistical significance of SNPs is somewhaare determined by either Bonferroni correction (\(\alpha / M_{SNPs}\), commonly set as \(p < 5 \times 10^{-8}\) for human studies), or by running permutations of the phenotype (and covariates) and selecting the lowest \(p\)-value from those permutations as the significance threshold.\footnote{The summed effect sizes of significant SNPs should theoretically reach the heritability estimates from twin studies, however until recently they fell far short, leading to a discussion on the sources of this ``missing heritability'' (Manolio et al. 2009). GWAS are limited by sample size, as extremely large samples are required to detect rare variants, and variants with small effect sizes. Short-read sequencing technologies are also unable to detect large ``structural'' variants, which may have large effects on the phenotype of interest. However, this issue has largely been resolved through improvements in genotyping that can capture rare variants (Yang et al. 2010), and tools such as GCTA which estimates the variance explained by \emph{all} SNPs in the genome, rather than testing the association of individual SNPs (Yang et al. 2011).}
-
-\hypertarget{beyond-gwas}{%
-\subsection{Beyond GWAS}\label{beyond-gwas}}
-
-{[}START WITH THE SIMPLE END. HERITABILITY. GWAS. ANIMAL BREEDING. FAMILIES. {]}
-
-A simplified causal model for the inheritance of traits from one's parents is presented in \textbf{Figure \ref{fig:pheno-causal-model}}, adapted from Morris et al. (2020). The ancestry of each parent determines both their genotypes and phenotypes (yellow lines). The parents' genotypes directly affect their own phenotypes (black arrows genotype → phenotype). The parents transmit half of each of their alleles \emph{directly} to their offspring (black arrows from genotype → genotype), while the non-transmitted alleles also affect their offspring \emph{indirectly} through their effect on the parents' phenotypes (red lines), a phenomenon known as ``\textbf{dynastic effects}'' (Kong et al. 2018). In addition, the parents' phenotypes can be correlated through ``\textbf{assortative mating}'' (green line), which also has the consequence of creating correlations between the genotypes that affect those phenotypes (Howe et al. 2019).\footnote{The model has been substantiated by Hwang et al. (2020), who discovered that indirect parental genetic effects could influence offspring phenotypes through the alleles that they \emph{do not} pass on to their children, but which drive the parents' own behaviour, ultimately influencing the child's outcomes. Their strategy involved creating ``virtual'' mothers and fathers by estimating the genotypic dosages of parental genotypes using physically genotyped data from relative pairs. They applied the approach to 19,066 sibling pairs from the UK Biobank and showed a polygenic score consisting of imputed parental educational attainment SNP dosages is strongly related to offspring educational attainment even after correcting for offspring genotype at the same loci.}
-
-
-
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/introduction/pheno_causal_model} \caption{Causal model of offspring phenotypes. Ancestry causes differences in both genotypes and phenotypes of the parents (yellow lines). Dynastic effects are transmitted through parental parental phenotypes (red lines). Assortative mating creates associations between the phenotypes of the parents (green line), which will also lead to genotypic correlations. Arrows represent direction of effect. Figure adapted from Morris et al. (2020).}\label{fig:pheno-causal-model}
-\end{figure}
-
-This model only includes environmental factors related to the parents' phenotypes, yet the phenotype of an individual is continuously affected by all other environmental influences it is exposed to throughout its lifetime (Plomin and Asbury 2005).
-
-{[}COULD BE THE INTRO TO: THIS SIMPLE MODEL DOESN'T WORK{]} However, that study found that several behavioural traits were inconsistent with this model. These traits included conduct disorder, higher-level cognitive functions, mental and behavioural disorders due to the use of alcohol or tobacco, anxiety disorder, and weight maintenance. For these traits, either or both non-additive genetic influences or shared environmental influences are therefore needed to explain the observed patterns of twin correlations (Polderman et al. 2015).\footnote{Kong et al. (2018) also showed that parents' non-transmitted alleles can affect a child through their impacts on the parents and other relatives, a phenomenon the authors call ``genetic nurture'', comprising 29.9\% of the transmitted polygenic score.}
-
-Beyond twin-studies, the advent of next-generation sequencing technologies has enabled the dense genotyping of large samples of individuals, leading to the development of new methods for analysing the genetic influences on human traits. The most widely used method is known as the Genome-Wide Association Analysis (\textbf{GWAS}).
+GWAS output a \(p\)-value and directional effect size (\(\beta\)) for each tested SNP. As the method tends to test millions of SNPs, there need to be corrections for multiple testing. The preferred method for setting the \(p\)-value threshold for significance varies depending on the study, but in essence it indicates the proportion of false positives that the investigator is willing to tolerate in their study (Clarke et al. 2011). By convention, in human studies the threshold is set at \(p < 5 \times 10^{-8}\) (Barsh et al. 2012; Bush and Moore 2012; Clarke et al. 2011). Bonferroni correction adjusts the type I error rate \(\alpha\) by the number of tests performed, so if \(\alpha = 0.05\) and the number of loci tested is 500,000, the corrected significance threshold is \(0.05 / 500,000 = 1\times10^{-6}\). However, Bonferroni correction tends to be conservative, as it assumes that all loci are independent, which is untrue due to genetic linkage. A correction for the false discovery rate (\textbf{FDR}) provides an estimate of the proportion of significant results that are actually true (Hochberg and Benjamini 1990), and is widely applied to GWAS (van den Oord 2008), but also suffers from that lack of independence between loci. The `gold standard' method for accurate detection is permutation testing (Westfall and Young 1993), where the phenotype is randomly permuted across samples and a separate GWAS is run \(N\) times, representing \(N\) possible samplings of individuals under the null hypothesis. Although more computationally intensive, it generates an empirical distribution with resolution \(N\), such that an \(N\) of 10 gives an empirical \(p\)-value of 1/10\textsuperscript{th} of a decimal place (Bush and Moore 2012).
 
 \hypertarget{animal-models}{%
 \subsection{Animal models}\label{animal-models}}
 
-The methods described above have led to great advances in our understanding of the genetic basis of complex traits. However they are hampered by the inability to experimentally manipulate either genes or environment in humans. Since the rediscovery of Mendel's work, researchers have resorted to using model organisms, with which it is possible to control for both.
+The methods described above have led to great advances in our understanding of the genetic basis of complex traits. However, when applied to humans, they are hampered by the inability to experimentally manipulate either genes or environment. Since the rediscovery of Mendel's work, researchers have resorted to using model organisms, with which it is possible to control for both. The genetics of model organisms may be controlled to a degree by establishing inbred strains. Mendel used self-fertilising plants, which without sexual reproduction are effectively inbred strains. Given their utility for investigating fundamental biological principles, ``panels'' of inbred strains for several plant and insect model organisms have since been established, including the thale cress (\emph{Arabidopsis thaliana}) (Bergelson and Roux 2010), common bean (\emph{Phaseolus vulgaris L}) (Johnson and Gepts 1999), tomato (\emph{Lycopersicon esculentum}) (Saliba-Colombani et al. 2000), maize (\emph{Zea mays}) (Limami et al. 2002), nematode (\emph{Caenorhabditis elegans}) (Evans et al. 2021), and fruit fly (\emph{Drosophila melanogaster}) (Mackay and Huang 2018).
 
-The genetics of model organisms may be controlled to a degree by establishing inbred strains. Mendel used self-fertilising plants, which without sexual reproduction are effectively inbred strains. At that time, inbred strains of mammals were unknown. But through the repeated mating of siblings over successive generations, as the individuals within each line inherit the same same haplotype from their related parents, they become almost genetically identical to one another, with the added benefit that their genotypes can be replicated across time in subsequent generations.
-In the early 1900s, researchers began to develop inbred lines of guinea pigs and mice for the purpose of genetic research. In 1906, an inbreeding experiment involving guinea-pigs was started by George M. Rommel of the Animal Husbandry Division of the United States Department of Agriculture (Eaton 1932). The experiment was taken over in 1915 by Sewall Wright, who used them to develop his vast contributions to the field.
+In Mendel's time, inbred strains of mammals were unknown, but it is possible in principle to create them through the repeated mating of siblings over successive generations, provided they survive the inbreeding depression (D. Charlesworth and Willis 2009). As the individuals within each line inherit the same haplotype from their related parents, they become almost genetically identical to one another, with the added benefit that their genotypes can be replicated across time in subsequent generations. In the early 1900s, researchers began to develop inbred lines of guinea pigs and mice for the purpose of genetic research. In 1906, an inbreeding experiment involving guinea-pigs was started by George M. Rommel of the Animal Husbandry Division of the United States Department of Agriculture. The experiment was taken over in 1915 by Sewall Wright, who used them to develop his vast contributions to the field (Eaton 1932).
 
-Contemporaneously, the Harvard undergraduate Clarence Cook Little and his supervisor William Ernest Little collaborated with Abbie Lathrop, a breeder of fancy mice and rats which she marketed to rodent hobbyists and keepers of exotic pets, and later began selling in large numbers to scientific researchers (Steensma, Kyle, and Shampo 2010). In 1902, Castle bought some of Lathrop's mice for his laboratory (Steensma, Kyle, and Shampo 2010). The most frequently used laboratory mouse strain for the past 80 years, C57BL/6J (``Black J''), is derived from one of Lathrop's animals -- mouse number 57 -- bred by Little (Steensma, Kyle, and Shampo 2010).
+Contemporaneously, the Harvard undergraduate Clarence Cook Little and his supervisor William Ernest Little collaborated with Abbie Lathrop, a breeder of fancy mice and rats which she marketed to rodent hobbyists and keepers of exotic pets, and later began selling in large numbers to scientific researchers (Steensma, Kyle, and Shampo 2010). In 1902, Castle bought some of Lathrop's mice for his laboratory (Steensma, Kyle, and Shampo 2010). The most frequently used laboratory mouse strain for the past 80 years, C57BL/6J (``Black J''), is derived from one of Lathrop's animals -- mouse number 57 -- bred by Little (Steensma, Kyle, and Shampo 2010). Large panels of inbred mouse lines have since been established, such as the Collaborative Cross (\textbf{CC}) (Threadgill et al. 2011), Diversity Outcross (\textbf{DO}) (Svenson et al. 2012) and B6-by-D2 (\textbf{BXD}) (Peirce et al. 2004).
 
-The utility of inbred strains eventually led to the establishment of ``panels'' of inbred strains for several model organisms including the thale cress (\emph{Arabidopsis thaliana}) (Bergelson and Roux 2010), common bean (\emph{Phaseolus vulgaris L}) (Johnson and Gepts 1999), tomato (\emph{Lycopersicon esculentum}) (Saliba-Colombani et al. 2000), maize (\emph{Zea mays}) (Limami et al. 2002), nematode (\emph{Caenorhabditis elegans}) (Evans et al. 2021), fruit fly (\emph{Drosophila melanogaster}) (Mackay and Huang 2018), and mouse (\emph{Mus musculus}) (Saul et al. 2019).
-
-Although the mouse is an appropriate model for humans due to their orthologous mammalian organ systems and cell types, inbred strains of this organism descend from individuals that had already been domesticated, and therefore do not represent the genetic variation present in wild populations. Furthermore, the large panels of inbred mice such as the Collaborative Cross (\textbf{CC}) (Threadgill et al. 2011), Diversity Outcross (\textbf{DO}) (Svenson et al. 2012) and B6-by-D2 (\textbf{BXD}) (Peirce et al. 2004) are derived from only a small number of individuals. {[}THEY'VE COME FROM THIS COMPLEX HYBRIDISATION FROM THREE DIFFERENT SPECIES OF MICE. HAPPENED IN JAPAN -- FANCY MICE.{]} As gene-environment studies seek to ultimately understand their effects on traits ``in the wild'' (such as with humans), there is accordingly a need for a panel of inbred vertebrates that represents the genetic variation present in natural populations.
+Although the mouse is an appropriate model for humans due to their orthologous mammalian organ systems and cell types, inbred strains of this organism are descended from only a small number of individuals, originating from three separate species that were bred in captivity, then undergoing complex domestication before the laboratory lines were established (Morse 2012; Wade and Daly 2005). They therefore do not represent the genetic variation present in wild populations. As gene-environment studies seek to ultimately understand their effects on traits ``in the wild'' (such as with humans), there is accordingly a need for a panel of inbred vertebrates that represents the genetic variation present in natural populations.
 
 \hypertarget{MIKK-background}{%
 \subsection{The Medaka Inbred Kiyosu-Karlsruhe (MIKK) panel}\label{MIKK-background}}
 
-The medaka fish (\emph{Oryzias latipes}) is the model organism studied by Tatsuo Aida, described above in section \ref{mapping-sec}. It has now been studied as a model organism in Japan for over a century (Wittbrodt, Shima, and Schartl 2002) and is gaining recognition elsewhere as a powerful genetic model for vertebrates (Spivakov et al. 2014). In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, and high fertility), medaka are also -- uniquely among vertebrates -- resilient to inbreeding \emph{from the wild}.
+The medaka fish (\emph{Oryzias latipes}) is the model organism studied by Tatsuo Aida, described above in section \ref{mapping-sec}. It has now been studied as a model organism in Japan for over a century (Wittbrodt, Shima, and Schartl 2002), and is gaining recognition elsewhere as a powerful genetic model for vertebrates (Spivakov et al. 2014). In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, high fertility, and concise genome), medaka are also -- uniquely among vertebrates -- resilient to inbreeding \emph{from the wild}.
 
 This resilience to inbreeding has allowed (predominantly Japanese) researchers to develop several inbred strains that have been maintained for over 100 generations (Murata et al. 2019). One of the most famous inbred medaka strains, \emph{HdrR}, was derived from Tatsuo Aida's collection of southern Japanese medaka fish (Fukamachi and Naruse 2021). Other prominent strains include \emph{HO5} and \emph{iCab} from southern Japan, and \emph{Kaga} and \emph{HNI} from northern Japan. The locations of the originating populations of these strains are set out in \textbf{Figure \ref{fig:line-locations}}.
 
@@ -784,21 +753,21 @@ This resilience to inbreeding has allowed (predominantly Japanese) researchers t
 
 }
 
-\caption{Image adapted from Spivakov et al. (2014), showing the locations of the originating populations of the 5 inbred medaka lines used in this study.}\label{fig:line-locations}
+\caption{Image adapted from Spivakov et al. (2014), showing the locations of the originating populations of the inbred medaka strains used in the studies described in Chapters \ref{Pilot-chap} and \ref{Somite-chap}, as well as the Kiyosu population from which the MIKK panel was derived (Chapters \ref{MIKK-genomes-chap} and \ref(MIKK-F2-chap)).}\label{fig:line-locations}
 \end{figure}
 
-Since 2010, the Birney Group at EMBL-EBI, in collaboration with the Wittbrodt Group at COS, University of Heidelberg and the Loosli Group at the Karlsruhe Institute of Technology (KIT), have been working to establish the world's first panel of vertebrate inbred strains FROM THE WILD -- now known as the Medaka Inbred Kiyosu-Karlsruhe Panel (\textbf{MIKK panel}). The MIKK Panel was bred from a wild population caught near Kiyosu in Southern Japan (\textbf{Figure \ref{fig:line-locations}}), and now comprises 80 inbred, near-isogenic ``lines'' (Fitzgerald et al. 2022).
+Since 2010, the Birney Group at EMBL-EBI, in collaboration with the Wittbrodt Group at COS, University of Heidelberg and the Loosli Group at the Karlsruhe Institute of Technology (\textbf{KIT}), have been working to establish the world's first panel of vertebrate inbred lines from the wild -- now known as the Medaka Inbred Kiyosu-Karlsruhe Panel (\textbf{MIKK panel}). The MIKK Panel was bred from a wild population caught near Kiyosu in Southern Japan (\textbf{Figure \ref{fig:line-locations}}), and now comprises 80 inbred, near-isogenic ``lines'' (Fitzgerald et al. 2022).
 
 The MIKK Panel was created to map genetic variants associated with quantitative traits at a high resolution, and to explore the interactions between those variants and any environmental variables of interest. In \textbf{Chapter \ref{MIKK-genomes-chap}} of this thesis,\footnote{The contents of this Chapter \ref{MIKK-genomes-chap} have been published in Fitzgerald et al. (2022) and Leger et al. (2022).} I describe several genomic characteristics of the MIKK panel that are relevant to its utility for genetic mapping of complex traits, including:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  The inbreeding trajectory of the MIKK panel (section \ref{inbreeding-sec});
-\item
-  The evolutionary history of the MIKK panel's founding population (section \ref{introgression-sec});
+  The inbreeding trajectory of the MIKK panel;
 \item
   Levels of homozygosity across the MIKK panel (section \ref{nuc-div});
+\item
+  The evolutionary history of the MIKK panel's founding population (section \ref{introgression-sec});
 \item
   The allele-frequency distribution and rate of linkage disequilibrium (LD) decay (section \ref{ld-decay-sec}); and
 \item
@@ -810,25 +779,26 @@ The fundamental utility of the MIKK panel arises from: a) its representation of 
 \hypertarget{the-f2-cross}{%
 \subsection{\texorpdfstring{The F\textsubscript{2} cross}{The F2 cross}}\label{the-f2-cross}}
 
-The F\textsubscript{2} cross is the same method used by Mendel in his historic paper, but here applied to identifying genetic variants associated with polygenic traits -- traits that are associated with a number of genes. A schema for the method is presented in \textbf{Figure \ref{fig:F2-cross-schema}}. To restate the process, one starts with two inbred strains that diverge for the trait of interest (the `parental strains', or F\textsubscript{0} generation). One then crosses the parental strains to create a generation of F\textasciitilde1 hybrid individuals who each possess, for every pair of their chromosomes, one chromosome from each of their parents. The individuals in this F\textasciitilde1 generation are genetically identical to their parents with respect to their germ line. Finally, one inter-crosses the F\textasciitilde1 generation to create a set of F\textsubscript{2} individuals that share unique combinations of the original F\textsubscript{0} strains' genotypes, and tend to display values for the trait of interest that span across the spectrum between the extreme values of their parents.
+The F\textsubscript{2} cross is the same method used by Mendel in his historic paper, but here applied to identifying genetic variants associated with polygenic traits -- traits that are associated with a number of genes. A schema for the method is presented in \textbf{Figure \ref{fig:F2-cross-schema}}. To restate the process, one starts with two inbred strains that diverge for the trait of interest (the `parental strains', or F\textsubscript{0} generation). One then crosses the parental strains to create a generation of F\textsubscript{1} hybrid individuals who each possess, for every pair of their chromosomes, one chromosome from each of their parents. The individuals in this F\textsubscript{1} generation are genetically identical to their parents with respect to their germ line. Finally, one inter-crosses the F\textsubscript{1} generation to create a set of F\textsubscript{2} individuals that share unique combinations of the original F\textsubscript{0} strains' genotypes, and tend to display values for the trait of interest that span across the spectrum between the extreme values of their parents.
 
 
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{figs/mikk_behaviour/F2-cross-schema} \caption{Schema of the F\textsubscript{2}-cross experimental setup. The F\textsubscript{0} generation comprises two medaka strains that have extreme, opposing values for a trait of interest, represented by the colours red and blue. Below them is an illustrative single pair of chromosomes. The chromosomes within each pair are depicted as the same colour, as the strains are homozygous through successive generations of inbreeding. Their F\textasciitilde1 offspring is heterozygous for each pair of their 24 chromosomes, and all F\textasciitilde1 individuals are therefore almost genetically identical to one another (with the exception of somatic mutations and the regions of the genome that were not homozygous in the parental generations). The F\textasciitilde1 individuals are then inter-crossed with one another to produce the F\textsubscript{2} generation, which, due to recombination events during gamete formation, have unique combinations of the parental strains' genotypes, and tend to span the phenotypic spectrum between the extremes of their F\textsubscript{0} parental strains, represented by their colours.}\label{fig:F2-cross-schema}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/F2-cross-schema} \caption{Schema of the F\textsubscript{2}-cross experimental setup. The F\textsubscript{0} generation comprises two medaka strains that have extreme, opposing values for a trait of interest, represented by the colours red and blue. Below them is an illustrative single pair of chromosomes. The chromosomes within each pair are depicted as the same colour, as the strains are homozygous through successive generations of inbreeding. Their F\textsubscript{1} offspring is heterozygous for each pair of their 24 chromosomes, and all F\textsubscript{1} individuals are therefore almost genetically identical to one another (with the exception of somatic mutations and the regions of the genome that were not homozygous in the parental generations). The F\textsubscript{1} individuals are then inter-crossed with one another to produce the F\textsubscript{2} generation, which, due to recombination events during gamete formation, have unique combinations of the parental strains' genotypes, and tend to span the phenotypic spectrum between the extremes of their F\textsubscript{0} parental strains, represented by their colours.}\label{fig:F2-cross-schema}
 \end{figure}
 
-By combining this traditional crossing method with modern sequencing technologies, researchers are not only able to map genetic variants associated with a phenotype of interest at a higher resolution than in humans, but also functionally validate those variants by carrying out targeted gene editing in an embryo to confirm that the developed organism shows the expected change in phenotype. Many studies have already made use of this combined method (CITE), known as a ``\textbf{Genome-Wide Linkage Analysis}''.
+By combining this traditional crossing method with modern sequencing technologies, researchers are not only able to map genetic variants associated with a phenotype of interest at a higher resolution than in humans, but also functionally validate those variants by carrying out targeted gene editing in an embryo to confirm that the developed organism shows the expected change in phenotype. Many studies have already made use of this combined method (Blaj et al. 2022; Falker-Gieske et al. 2019; Gu et al. 2011; Stratz et al. 2018), here referred to as an ``\textbf{F\textsubscript{2}-cross GWAS}''.
 
 \hypertarget{studied-phenotypes}{%
 \section{Studied phenotypes}\label{studied-phenotypes}}
 
-In this thesis I apply the Genome-Wide Linkage Analysis method to identifying the genetic variants associated with two traits: the periodicity of somite development (\textbf{Chapter \ref{Somite-chap}}), and bold-type behaviours (\textbf{Chapter \ref{MIKK-F2-chap}}). I discuss each of these phenotypes in turn.
+In this thesis I use the F\textsubscript{2}-cross GWAS method to identify the genetic variants associated with two traits: the periodicity of somite development (\textbf{Chapter \ref{Somite-chap}}), and bold-type behaviours (\textbf{Chapter \ref{MIKK-F2-chap}}). I discuss each of these phenotypes in turn.
 
 \hypertarget{genetic-control-of-somite-period-development}{%
 \subsection{Genetic control of somite period development}\label{genetic-control-of-somite-period-development}}
 
 During the development of an embryo, somites are the earliest primitive segmental structures that form from presomatic mesoderm cells (\textbf{PSM}) (Kim et al. 2011). They later differentiate into vertebrae, ribs, and skeletal muscles, thereby establishing the body's anterior-posterior axis. \textbf{Figure \ref{fig:mouse-embryo}} depicts a number of formed somites in a 9.5-day-old mouse embryo.
+
 
 
 \begin{figure}
@@ -868,12 +838,17 @@ In medaka, it is known that the southern Japanese \emph{Cab} strain and the nort
 \caption{Comparison of period for three inbred medaka strains (\emph{Cab}, \emph{Kaga} and \emph{HdrR}). Kaga's period is lower, and therefore it takes less time to form each somite than \emph{Cab}. Figure generated by Ali Seleit.}\label{fig:F0-Cab-Kaga-HdrR}
 \end{figure}
 
-Our collaborators accordingly set up a one-way F\textsubscript{2} cross experiment as described in Chapter \ref{MIKK-F2-cross}, using the reporter-carrying \emph{Cab} strain and the \emph{Kaga} strain as the parental F\textsubscript{0} strains, in order to identify genetic loci associated with these differences in clock dynamics. They inter-crossed the hybrid F\textasciitilde1 generation to create a sample of 622 F\textsubscript{2} individuals, imaged the developing embryos of these F\textsubscript{2} samples, and used pyBOAT (Schmal, Mönke, and Granada 2022) to extract the oscillation features during somite development. \textbf{Figure \ref{fig:somite-period-ali}} shows a series of raw images used by pyBOAT to track the elongation of a medaka tail during somitogenesis, with the identified posterior tip of the embryo labelled with a blue circle.
+Our collaborators accordingly set up a one-way F\textsubscript{2} cross experiment as described in Chapter \ref{MIKK-F2-cross}, using the reporter-carrying \emph{Cab} strain and the \emph{Kaga} strain as the parental F\textsubscript{0} strains, in order to identify genetic loci associated with these differences in clock dynamics. They inter-crossed the hybrid F\textsubscript{1} generation to create a sample of 622 F\textsubscript{2} individuals, imaged the developing embryos of these F\textsubscript{2} samples, and used pyBOAT (Schmal, Mönke, and Granada 2022) to extract the oscillation features during somite development. \textbf{Figure \ref{fig:somite-period-ali}} shows a series of raw images used by pyBOAT to track the elongation of a medaka tail during somitogenesis, with the identified posterior tip of the embryo labelled with a blue circle.
 
 
 
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{figs/somites/ali_compiled_somite_elong} \caption{Screenshots of vertebral elongation in an F\textsubscript{2} individual captured by Ali Seleit during imaging. The blue circle represents the point tracked by pyBOAT over time, generating the quantitative phenotype data on period development used in this study.}\label{fig:somite-period-ali}
+
+{\centering \includegraphics[width=0.8\linewidth]{figs/somites/ali_compiled_somite_elong} 
+
+}
+
+\caption{Screenshots of vertebral elongation in an F\textsubscript{2} individual captured by Ali Seleit during imaging. The blue circle represents the point tracked by pyBOAT over time, generating the quantitative phenotype data on period development used in this study.}\label{fig:somite-period-ali}
 \end{figure}
 
 \hypertarget{behaviour}{%
@@ -889,8 +864,8 @@ Boldness-shyness has been studied extensively with fish. Shy individuals tend to
 
 Another is the `novel object' assay, where a novel object is introduced to the fishes' environment to simulate a threat (C. Brown, Jones, and Braithwaite 2007; Schjolden, Stoskhus, and Winberg 2005; Wilson et al. 1993; Dominic Wright, Butlin, and Carlborg 2006; D. Wright et al. 2003). Where both assays were performed on the same fish, the behaviours exhibited were found to be correlated across assays, indicating that both were measuring the same boldness-shyness axis (C. Brown, Jones, and Braithwaite 2007). Both the open field and novel object assay also permit the measurement of habituation, where the response of the fish may change over time after growing accustomed to the new environment or object. Variation in the length of time the fish take to return to a more ``normal'' level of movement may indicate different levels of boldness (Laland, Krause, and Brown 2011).
 
-\hypertarget{social-genetic-effects}{%
-\subsubsection{Social genetic effects}\label{social-genetic-effects}}
+\hypertarget{SGE}{%
+\subsection{Social genetic effects}\label{SGE}}
 
 The experiments described in \textbf{Chapters \ref{Pilot-chap}} and \textbf{\ref{MIKK-F2-chap}} are designed to simulataneously measure both the direct effect of an individual's genes on their behaviour, as we as the indirect effect of their social partner's genes on the focal individual's behaviour, which is also an environmental factor (Baud et al. 2017). Social genetic effects have been shown to exert influence on various traits in mice including anxiety, wound healing, immune function, and body weight (Baud et al. 2017), and various traits related to development and survival in many species of livestock (Ellen et al. 2014). However, in those studies the social interactions were maintained throughout development, and it is unclear whether social genetic effects can still exert influence on adaptive behaviours during discrete, time-limited interactions.
 
@@ -962,7 +937,7 @@ A third limitation is the ``quality control'' step that is required during the G
 \hypertarget{differences-in-ld}{%
 \subsubsection{Differences in LD}\label{differences-in-ld}}
 
-Because GWAS SNP markers are often not the causal variants themselves, but merely in physical proximity to them, the estimated effect size of a SNP marker depends on the extent to which it is in LD with the causal variant (Mostafavi et al. 2020; Pritchard and Przeworski 2001). To illustrate the problem, if a SNP has an LD \(r^2\) with a causal variant of 0.8 in the discovery population and 0.6 in the target population, it would explain 25\% = (1 - 0.6/0.8) less trait variation in the target population, and would therefore be less predictive (Ying Wang et al. 2020).
+Because GWAS SNP markers are often not the causal variants themselves, but merely in physical proximity to them, the estimated effect size of a SNP marker depends on the extent to which it is in LD with the causal variant (Mostafavi et al. 2020; Jonathan K. Pritchard and Przeworski 2001). To illustrate the problem, if a SNP has an LD \(r^2\) with a causal variant of 0.8 in the discovery population and 0.6 in the target population, it would explain 25\% = (1 - 0.6/0.8) less trait variation in the target population, and would therefore be less predictive (Ying Wang et al. 2020).
 
 These differences in effect-size estimates may typically be small for most regions of the genome, but as PGS sum across all such effects, they aggregate these population differences (Alicia R. Martin et al. 2019; Berg et al. 2019). Previous empirical and simulation studies have shown that accuracy of PGS scores decay with increased genetic differentiation (\(F_{ST}\) -- described below in \ref{Fst-descr}) and LD differences between populations (Habier et al. 2010; Pszczola et al. 2012; Scutari, Mackay, and Balding 2016; Ying Wang et al. 2020). The issue may be addressed to a degree by using LD information from an external reference panel as a prior to infer the posterior mean effect size of a genetic variant -- Vilhjálmsson et al. (2015) demonstrated through simulations that this could improve PGS predictive accuracy. Yet the most appropriate means of deal with differences between populations in LD remains an active area of research (Duncan et al. 2019).
 
@@ -976,7 +951,7 @@ Differences in allele frequencies between populations can arise through random g
 \hypertarget{fst-env-sec}{%
 \subsubsection{Differences in environment}\label{fst-env-sec}}
 
-Genes continuously interact with each other (GxG, or ``epistasis'' (Gros, Le Nagard, and Tenaillon 2009)), the genes of one's parents (``genetic nurture'', Kong et al. (2018)) or social companions (``social genetic effects'') (Domingue et al. 2018; Baud et al. 2017),\footnote{As also explored in Chapters \ref{Pilot-chap} and \ref{MIKK-F2-chap}} and the wider non-genetic environment (GxE).
+Genes continuously interact with each other (GxG, or ``epistasis'' (Gros, Le Nagard, and Tenaillon 2009)), the genes of one's parents (``genetic nurture'', Kong et al. (2018)) or social companions (``social genetic effects'') (Domingue et al. 2018; Baud et al. 2017),\footnote{Which I also explore in Chapters \ref{Pilot-chap} and \ref{MIKK-F2-chap}} and the wider non-genetic environment (GxE).
 
 The respective contributions of genetics and environment to traits with social value -- such as intelligence -- is highly contentious, especially when there are apparent differences between populations in the mean values for those traits. PGS measure the proportion of variance within a population that is explained by genetics. Because PRS summarises a \emph{proportion} of the total variance, when studying a population that is subject to greater environmental variation, the variance attributable to genetic factors will proportionately reduce. The corollary being that when studying a population where the environment is held constant, the proportion of variance for that trait that is explained by genetic factors will approach 1. Therefore, increases in the amount of environmental variance that a population is exposed to will reduce the accuracy of PGS predictions when applied to that population.
 
@@ -1028,6 +1003,9 @@ Bancroft, Paul. 2016. {``Part 1: {An} Introduction to the {Gouldian} Finch - {Pl
 \leavevmode\vadjust pre{\hypertarget{ref-barrettGlobalizingSocialMovement2004}{}}%
 Barrett, Deborah, and Charles Kurzman. 2004. {``Globalizing Social Movement Theory: {The} Case of Eugenics.''} \emph{Theory and Society} 33 (5): 487--527. \url{https://doi.org/10.1023/B:RYSO.0000045719.45687.aa}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-barshGuidelinesGenomeWideAssociation2012}{}}%
+Barsh, Gregory S., Gregory P. Copenhaver, Greg Gibson, and Scott M. Williams. 2012. {``Guidelines for {Genome-Wide Association Studies}.''} \emph{PLOS Genetics} 8 (7): e1002812. \url{https://doi.org/10.1371/journal.pgen.1002812}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-bartonSewallWrightEvolution2016}{}}%
 Barton, Nicholas H. 2016. {``Sewall {Wright} on {Evolution} in {Mendelian Populations} and the {`{Shifting Balance}'}.''} \emph{Genetics} 202 (1): 3--4. \url{https://doi.org/10.1534/genetics.115.184796}.
 
@@ -1058,11 +1036,17 @@ Björkman, Maria, and Sven Widmalm. 2010. {``Selling Eugenics: The Case of {Swed
 \leavevmode\vadjust pre{\hypertarget{ref-blackWarWeakEugenics2012}{}}%
 Black, Edwin. 2012. \emph{War {Against} the {Weak}: {Eugenics} and {America}'s {Campaign} to {Create} a {Master Race}, {Expanded Edition}}. {Dialog Press}. \url{https://books.google.com?id=xzwTEAAAQBAJ}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-blajStructuralVariantsTandem2022}{}}%
+Blaj, Iulia, Jens Tetens, Jörn Bennewitz, Georg Thaller, and Clemens Falker-Gieske. 2022. {``Structural Variants and Tandem Repeats in the Founder Individuals of Four {F2} Pig Crosses and Implications to {F2 GWAS} Results.''} \emph{BMC Genomics} 23 (1): 631. \url{https://doi.org/10.1186/s12864-022-08716-0}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-brownCorrelationBoldnessBody2007}{}}%
 Brown, C., F. Jones, and V. A. Braithwaite. 2007. {``Correlation Between Boldness and Body Mass in Natural Populations of the Poeciliid {Brachyrhaphis} Episcopi.''} \emph{Journal of Fish Biology} 71 (6): 1590--1601. \url{https://doi.org/10.1111/j.1095-8649.2007.01627.x}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-brownHeritableExperientialEffects2007}{}}%
 Brown, Culum, Fiona Burgess, and Victoria A. Braithwaite. 2007. {``Heritable and Experiential Effects on Boldness in a Tropical Poeciliid.''} \emph{Behavioral Ecology and Sociobiology} 62 (2): 237--43. \url{https://doi.org/10.1007/s00265-007-0458-3}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-bushChapter11GenomeWide2012}{}}%
+Bush, William S., and Jason H. Moore. 2012. {``Chapter 11: {Genome-Wide Association Studies}.''} \emph{PLOS Computational Biology} 8 (12): e1002822. \url{https://doi.org/10.1371/journal.pcbi.1002822}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-bussEvolutionaryPersonalityPsychology1991}{}}%
 Buss, David M. 1991. {``Evolutionary Personality Psychology.''} \emph{Annual Review of Psychology} 42: 459--91. \url{https://doi.org/10.1146/annurev.ps.42.020191.002331}.
@@ -1076,8 +1060,14 @@ Campbell, Gordon. 2010. \emph{King {James Bible}: 400th {Anniversary Edition}}. 
 \leavevmode\vadjust pre{\hypertarget{ref-charlesworthDarwinGenetics2009}{}}%
 Charlesworth, Brian, and Deborah Charlesworth. 2009. {``Darwin and {Genetics}.''} \emph{Genetics} 183 (3): 757--66. \url{https://doi.org/10.1534/genetics.109.109991}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-charlesworthGeneticsInbreedingDepression2009}{}}%
+Charlesworth, Deborah, and John H. Willis. 2009. {``The Genetics of Inbreeding Depression.''} \emph{Nature Reviews Genetics} 10 (11, 11): 783--96. \url{https://doi.org/10.1038/nrg2664}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-clarkImportanceInformationRelatives2012}{}}%
 Clark, Samuel A., John M. Hickey, Hans D. Daetwyler, and Julius HJ van der Werf. 2012. {``The Importance of Information on Relatives for the Prediction of Genomic Breeding Values and the Implications for the Makeup of Reference Data Sets in Livestock Breeding Schemes.''} \emph{Genetics Selection Evolution} 44 (1): 4. \url{https://doi.org/10.1186/1297-9686-44-4}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-clarkeBasicStatisticalAnalysis2011}{}}%
+Clarke, Geraldine M., Carl A. Anderson, Fredrik H. Pettersson, Lon R. Cardon, Andrew P. Morris, and Krina T. Zondervan. 2011. {``Basic Statistical Analysis in Genetic Case-Control Studies.''} \emph{Nature Protocols} 6 (2, 2): 121--33. \url{https://doi.org/10.1038/nprot.2010.182}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-cockTreasureYourExceptions2008}{}}%
 Cock, Alan, and Donald R. Forsdyke. 2008. \emph{Treasure {Your Exceptions}: {The Science} and {Life} of {William Bateson}}. {Springer Science \& Business Media}. \url{https://books.google.com?id=FDUi1xg26gsC}.
@@ -1121,6 +1111,9 @@ Darwin, Charles, Duncan M. Porter, Sheila Ann Dean, Samantha Evans, Shelley Inne
 \leavevmode\vadjust pre{\hypertarget{ref-vriesMutationTheory19091909}{}}%
 de Vries, Hugo. 1909. \emph{The {Mutation} Theory v. 1, 1909}. {Open Court Publishing Company}. \url{https://books.google.com?id=cdOhB5p3HkIC}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-dirienzoPopulationGeneticsModels2006}{}}%
+Di Rienzo, Anna. 2006. {``Population Genetics Models of Common Diseases.''} \emph{Current Opinion in Genetics \& Development}, Genomes and evolution, 16 (6): 630--36. \url{https://doi.org/10.1016/j.gde.2006.10.002}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-dobzhanskyGeneticsNaturalPopulations1943}{}}%
 Dobzhansky, Th. 1943. {``Genetics of Natural Populations {IX}. {Temporal} Changes in the Composition of Populations of Drosophila Pseudoobscura.''} \emph{Genetics} 28 (2): 162--86. \url{https://doi.org/10.1093/genetics/28.2.162}.
 
@@ -1159,6 +1152,9 @@ Falconer, D. S., and T. F. C. Mackay. 1996. \emph{Introduction to Quantitative G
 
 \leavevmode\vadjust pre{\hypertarget{ref-falkImagingOnsetOscillatory2022}{}}%
 Falk, Henning J, Takehito Tomita, Gregor Mönke, Katie McDole, and Alexander Aulehla. 2022. {``Imaging the Onset of Oscillatory Signaling Dynamics During Mouse Embryo Gastrulation.''} \emph{Development (Cambridge, England)} 149 (13): dev200083. \url{https://doi.org/10.1242/dev.200083}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-falker-gieskeGWASMeatCarcass2019}{}}%
+Falker-Gieske, Clemens, Iulia Blaj, Siegfried Preuß, Jörn Bennewitz, Georg Thaller, and Jens Tetens. 2019. {``{GWAS} for {Meat} and {Carcass Traits Using Imputed Sequence Level Genotypes} in {Pooled F2-Designs} in {Pigs}.''} \emph{G3 Genes\textbar Genomes\textbar Genetics} 9 (9): 2823--34. \url{https://doi.org/10.1534/g3.119.400452}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-fisherXVCorrelationRelatives1919}{}}%
 Fisher, R. A. 1919. {``{XV}.---{The Correlation} Between {Relatives} on the {Supposition} of {Mendelian Inheritance}.''} January. \url{https://doi.org/10.1017/s0080456800012163}.
@@ -1214,6 +1210,9 @@ Gridley, Thomas. 2006. {``The Long and Short of It: {Somite} Formation in Mice.'
 \leavevmode\vadjust pre{\hypertarget{ref-grosEvolutionEpistasisIts2009}{}}%
 Gros, Pierre-Alexis, Herv'e Le Nagard, and Olivier Tenaillon. 2009. {``The {Evolution} of {Epistasis} and {Its Links With Genetic Robustness}, {Complexity} and {Drift} in a {Phenotypic Model} of {Adaptation}.''} \emph{Genetics} 182 (1): 277--93. \url{https://doi.org/10.1534/genetics.108.099127}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-guGenomeWideAssociationStudy2011}{}}%
+Gu, Xiaorong, Chungang Feng, Li Ma, Chi Song, Yanqiang Wang, Yang Da, Huifang Li, et al. 2011. {``Genome-{Wide Association Study} of {Body Weight} in {Chicken F2 Resource Population}.''} \emph{PLOS ONE} 6 (7): e21872. \url{https://doi.org/10.1371/journal.pone.0021872}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-guoBayesianHierarchicalModel2009}{}}%
 Guo, Feng, Dipak K. Dey, and Kent E. Holsinger. 2009. {``A {Bayesian Hierarchical Model} for {Analysis} of {Single-Nucleotide Polymorphisms Diversity} in {Multilocus}, {Multipopulation Samples}.''} \emph{Journal of the American Statistical Association} 104 (485): 142--54. \url{https://doi.org/10.1198/jasa.2009.0010}.
 
@@ -1235,20 +1234,17 @@ Hartsoeker, Nicolas. 1694. \emph{Essay de dioptrique}. {J. Anisson}. \url{https:
 \leavevmode\vadjust pre{\hypertarget{ref-hawkinsSocialDarwinismEuropean1997}{}}%
 Hawkins, Mike. 1997. \emph{Social darwinism in European and American thought, 1860-1945: nature as model and nature as threat}. {Cambridge University Press}. \url{https://books.google.com?id=aoXJoAEACAAJ}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-hendersonEstimationGeneralSpecific1948}{}}%
-Henderson, Charles Roy. 1948. {``Estimation of General, Specific and Maternal Combining Abilities in Crosses Among Inbred Lines of Swine.''} PhD thesis, {United States -- Iowa}: {Iowa State University}. \url{https://www.proquest.com/docview/301840571/abstract/4D5A65EDC31B4110PQ/1}.
-
 \leavevmode\vadjust pre{\hypertarget{ref-henigMonkGardenLost2000}{}}%
 Henig, Robin Marantz. 2000. \emph{The {Monk} in the {Garden}: {The Lost} and {Found Genius} of {Gregor Mendel}, the {Father} of {Genetics}}. {Houghton Mifflin Harcourt}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-henslowLetter1051831}{}}%
 Henslow, John. 1831. {``Letter 105.''} {Darwin Correspondence Project}. 1831. \url{https://www.darwinproject.ac.uk/letter/DCP-LETT-105.xml}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-hillApplicationsPopulationGenetics2014}{}}%
-Hill, William G. 2014. {``Applications of {Population Genetics} to {Animal Breeding}, from {Wright}, {Fisher} and {Lush} to {Genomic Prediction}.''} \emph{Genetics} 196 (1): 1--16. \url{https://doi.org/10.1534/genetics.112.147850}.
-
 \leavevmode\vadjust pre{\hypertarget{ref-hillDataTheoryPoint2008}{}}%
 Hill, William G., Michael E. Goddard, and Peter M. Visscher. 2008. {``Data and {Theory Point} to {Mainly Additive Genetic Variance} for {Complex Traits}.''} \emph{PLOS Genetics} 4 (2): e1000008. \url{https://doi.org/10.1371/journal.pgen.1000008}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-hochbergMorePowerfulProcedures1990}{}}%
+Hochberg, Yosef, and Yoav Benjamini. 1990. {``More Powerful Procedures for Multiple Significance Testing.''} \emph{Statistics in Medicine} 9 (7): 811--18. \url{https://doi.org/10.1002/sim.4780090710}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-hodgeGeneticEngineeringManipulating2009}{}}%
 Hodge, Russ. 2009. \emph{Genetic {Engineering}: {Manipulating} the {Mechanisms} of {Life}}. {Infobase Publishing}. \url{https://books.google.com?id=Fqa6lmQ_YVMC}.
@@ -1256,17 +1252,11 @@ Hodge, Russ. 2009. \emph{Genetic {Engineering}: {Manipulating} the {Mechanisms} 
 \leavevmode\vadjust pre{\hypertarget{ref-holsingerGeneticsGeographicallyStructured2009}{}}%
 Holsinger, Kent E., and Bruce S. Weir. 2009. {``Genetics in Geographically Structured Populations: Defining, Estimating and Interpreting {FST}.''} \emph{Nature Reviews Genetics} 10 (9, 9): 639--50. \url{https://doi.org/10.1038/nrg2611}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-howeGeneticEvidenceAssortative2019}{}}%
-Howe, Laurence J., Daniel J. Lawson, Neil M. Davies, Beate St. Pourcain, Sarah J. Lewis, George Davey Smith, and Gibran Hemani. 2019. {``Genetic Evidence for Assortative Mating on Alcohol Consumption in the {UK Biobank}.''} \emph{Nature Communications} 10 (1, 1): 5039. \url{https://doi.org/10.1038/s41467-019-12424-x}.
-
 \leavevmode\vadjust pre{\hypertarget{ref-hubaudSignallingDynamicsVertebrate2014}{}}%
 Hubaud, Alexis, and Olivier Pourqui'e. 2014. {``Signalling Dynamics in Vertebrate Segmentation.''} \emph{Nature Reviews Molecular Cell Biology} 15 (11, 11): 709--21. \url{https://doi.org/10.1038/nrm3891}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-huxleyEvolutionModernSynthesis1942}{}}%
 Huxley, Julian. 1942. {``Evolution. {The} Modern Synthesis.''} \emph{Evolution. The Modern Synthesis.}
-
-\leavevmode\vadjust pre{\hypertarget{ref-hwangEstimatingIndirectParental2020}{}}%
-Hwang, Liang-Dar, Justin D. Tubbs, Justin Luong, Mischa Lundberg, Gunn-Helen Moen, Geng Wang, Nicole M. Warrington, Pak C. Sham, Gabriel Cuellar-Partida, and David M. Evans. 2020. {``Estimating Indirect Parental Genetic Effects on Offspring Phenotypes Using Virtual Parental Genotypes Derived from Sibling and Half Sibling Pairs.''} \emph{PLOS Genetics} 16 (10): e1009154. \url{https://doi.org/10.1371/journal.pgen.1009154}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-iselyOneHundredOne2002}{}}%
 Isely, Duane. 2002. \emph{One {Hundred} and {One Botanists}}. {Purdue University Press}. \url{https://books.google.com?id=an6r8m0JfV8C}.
@@ -1337,6 +1327,9 @@ Lima, Steven L., and Lawrence M. Dill. 1990. {``Behavioral Decisions Made Under 
 \leavevmode\vadjust pre{\hypertarget{ref-limamiGeneticPhysiologicalAnalysis2002}{}}%
 Limami, Anis M., Clothilde Rouillon, Gaëlle Glevarec, Andr'e Gallais, and Bertrand Hirel. 2002. {``Genetic and {Physiological Analysis} of {Germination Efficiency} in {Maize} in {Relation} to {Nitrogen Metabolism Reveals} the {Importance} of {Cytosolic Glutamine Synthetase}.''} \emph{Plant Physiology} 130 (4): 1860--70. \url{https://doi.org/10.1104/pp.009647}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-lohEfficientBayesianMixedmodel2015}{}}%
+Loh, Po-Ru, George Tucker, Brendan K. Bulik-Sullivan, Bjarni J. Vilhj'almsson, Hilary K. Finucane, Rany M. Salem, Daniel I. Chasman, et al. 2015. {``Efficient {Bayesian} Mixed-Model Analysis Increases Association Power in Large Cohorts.''} \emph{Nature Genetics} 47 (3, 3): 284--90. \url{https://doi.org/10.1038/ng.3190}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-lucon-xiccatoIndividualDifferencesCognition2017}{}}%
 Lucon-Xiccato, Tyrone, and Angelo Bisazza. 2017. {``Individual Differences in Cognition Among Teleost Fishes.''} \emph{Behavioural Processes}, The {Cognition} of {Fish}, 141 (August): 184--95. \url{https://doi.org/10.1016/j.beproc.2017.01.015}.
 
@@ -1345,9 +1338,6 @@ Lucon-Xiccato, Tyrone, Francesca Conti, Felix Loosli, Nicholas S. Foulkes, and C
 
 \leavevmode\vadjust pre{\hypertarget{ref-lucon-xiccatoComparisonAnxietylikeSocial2022}{}}%
 Lucon-Xiccato, Tyrone, Felix Loosli, Francesca Conti, Nicholas S. Foulkes, and Cristiano Bertolucci. 2022. {``Comparison of Anxiety-Like and Social Behaviour in Medaka and Zebrafish.''} \emph{Scientific Reports} 12 (1, 1): 10926. \url{https://doi.org/10.1038/s41598-022-14978-1}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-lushAnimalBreedingPlans1937}{}}%
-Lush, Jay L. 1937. \emph{Animal Breeding Plans. {Ames}}. {Collegiate Press, Inc}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-maasBreastCancerRisk2016}{}}%
 Maas, Paige, Myrto Barrdahl, Amit D. Joshi, Paul L. Auer, Mia M. Gaudet, Roger L. Milne, Fredrick R. Schumacher, et al. 2016. {``Breast {Cancer Risk From Modifiable} and {Nonmodifiable Risk Factors Among White Women} in the {United States}.''} \emph{JAMA Oncology} 2 (10): 1295--1302. \url{https://doi.org/10.1001/jamaoncol.2016.1025}.
@@ -1366,9 +1356,6 @@ Malone, John. 2002. \emph{It {Doesn}'t {Take} a {Rocket Scientist}: {Great Amate
 
 \leavevmode\vadjust pre{\hypertarget{ref-malthusEssayPrinciplePopulation1872}{}}%
 Malthus, Thomas Robert. 1872. \emph{An {Essay} on the {Principle} of {Population}..}
-
-\leavevmode\vadjust pre{\hypertarget{ref-manolioFindingMissingHeritability2009}{}}%
-Manolio, Teri A., Francis S. Collins, Nancy J. Cox, David B. Goldstein, Lucia A. Hindorff, David J. Hunter, Mark I. McCarthy, et al. 2009. {``Finding the Missing Heritability of Complex Diseases.''} \emph{Nature} 461 (7265, 7265): 747--53. \url{https://doi.org/10.1038/nature08494}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-marchantAlfredRusselWallace1916}{}}%
 Marchant, Sir James, and Alfred Russel Wallace. 1916. \emph{Alfred {Russel Wallace}: {Letters} and {Reminiscences} ({Complete})}. {Library of Alexandria}. \url{https://books.google.com?id=0IF1K9IYQYMC}.
@@ -1424,8 +1411,8 @@ Morgan, Thomas Hunt. 1916. \emph{A {Critique} of the {Theory} of {Evolution}. {L
 \leavevmode\vadjust pre{\hypertarget{ref-morganMechanismMendelianHeredity1972}{}}%
 ---------. 1972. \emph{The {Mechanism} of {Mendelian Heredity}}. {Johnson Reprint Corporation}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-morrisPopulationPhenomenaInflate2020}{}}%
-Morris, Tim T., Neil M. Davies, Gibran Hemani, and George Davey Smith. 2020. {``Population Phenomena Inflate Genetic Associations of Complex Social Traits.''} \emph{Science Advances} 6 (16): eaay0328. \url{https://doi.org/10.1126/sciadv.aay0328}.
+\leavevmode\vadjust pre{\hypertarget{ref-morseOriginsInbredMice2012}{}}%
+Morse, Herbert C. III. 2012. \emph{Origins of {Inbred Mice}}. {Elsevier}. \url{https://books.google.com?id=mRyp1vKI3fsC}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mostafaviVariablePredictionAccuracy2020}{}}%
 Mostafavi, Hakhamanesh, Arbel Harpak, Ipsita Agarwal, Dalton Conley, Jonathan K Pritchard, and Molly Przeworski. 2020. {``Variable Prediction Accuracy of Polygenic Scores Within an Ancestry Group.''} Edited by Ruth Loos, Michael B Eisen, and Paul O'Reilly. \emph{eLife} 9 (January): e48376. \url{https://doi.org/10.7554/eLife.48376}.
@@ -1463,9 +1450,6 @@ Paquette, Martine, Michael Chong, S'ebastien Th'eriault, Robert Dufour, Guillaum
 \leavevmode\vadjust pre{\hypertarget{ref-parkDistributionAlleleFrequencies2011}{}}%
 Park, Ju-Hyun, Mitchell H. Gail, Clarice R. Weinberg, Raymond J. Carroll, Charles C. Chung, Zhaoming Wang, Stephen J. Chanock, Joseph F. Fraumeni, and Nilanjan Chatterjee. 2011. {``Distribution of Allele Frequencies and Effect Sizes and Their Interrelationships for Common Genetic Susceptibility Variants.''} \emph{Proceedings of the National Academy of Sciences} 108 (44): 18026--31. \url{https://doi.org/10.1073/pnas.1114759108}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-pattersonRecoveryInterblockInformation1971}{}}%
-Patterson, H. D., and R. Thompson. 1971. {``Recovery of Inter-Block Information When Block Sizes Are Unequal.''} \emph{Biometrika} 58 (3): 545--54. \url{https://doi.org/10.1093/biomet/58.3.545}.
-
 \leavevmode\vadjust pre{\hypertarget{ref-payneBulkVisGraphicalViewer2019}{}}%
 Payne, Alexander, Nadine Holmes, Vardhman Rakyan, and Matthew Loose. 2019. {``{BulkVis}: A Graphical Viewer for {Oxford} Nanopore Bulk {Fast5} Files.''} \emph{Bioinformatics} 35 (13): 2193--98. \url{https://doi.org/10.1093/bioinformatics/bty841}.
 
@@ -1490,9 +1474,6 @@ Pennisi, Elizabeth. 2022. {``A \$100 Genome? {New DNA} Sequencers Could Be a {`G
 \leavevmode\vadjust pre{\hypertarget{ref-platoPlatoRepublic2013}{}}%
 Plato. 2013. \emph{Plato's {Republic}}. Translated by Alain Badiou. {John Wiley \& Sons}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-plominNatureNurtureGenetic2005}{}}%
-Plomin, Robert, and Kathryn Asbury. 2005. {``Nature and {Nurture}: {Genetic} and {Environmental Influences} on {Behavior}.''} \emph{The ANNALS of the American Academy of Political and Social Science} 600 (1): 86--98. \url{https://doi.org/10.1177/0002716205277184}.
-
 \leavevmode\vadjust pre{\hypertarget{ref-poldermanMetaanalysisHeritabilityHuman2015}{}}%
 Polderman, Tinca J. C., Beben Benyamin, Christiaan A. de Leeuw, Patrick F. Sullivan, Arjen van Bochoven, Peter M. Visscher, and Danielle Posthuma. 2015. {``Meta-Analysis of the Heritability of Human Traits Based on Fifty Years of Twin Studies.''} \emph{Nature Genetics} 47 (7, 7): 702--9. \url{https://doi.org/10.1038/ng.3285}.
 
@@ -1505,8 +1486,17 @@ Porcu, Eleonora, Serena Sanna, Christian Fuchsberger, and Lars G. Fritsche. 2013
 \leavevmode\vadjust pre{\hypertarget{ref-posthumaTheoryPracticeQuantitative2003}{}}%
 Posthuma, Daniëlle, A. Leo Beem, Eco J. C. de Geus, G. Caroline M. van Baal, Jacob B. von Hjelmborg, Ivan Iachine, and Dorret I. Boomsma. 2003. {``Theory and {Practice} in {Quantitative Genetics}.''} \emph{Twin Research and Human Genetics} 6 (5): 361--76. \url{https://doi.org/10.1375/twin.6.5.361}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-pricePrincipalComponentsAnalysis2006}{}}%
+Price, Alkes L., Nick J. Patterson, Robert M. Plenge, Michael E. Weinblatt, Nancy A. Shadick, and David Reich. 2006. {``Principal Components Analysis Corrects for Stratification in Genome-Wide Association Studies.''} \emph{Nature Genetics} 38 (8, 8): 904--9. \url{https://doi.org/10.1038/ng1847}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-pritchardAllelicArchitectureHuman2002}{}}%
+Pritchard, Jonathan K., and Nancy J. Cox. 2002. {``The Allelic Architecture of Human Disease Genes: Common Disease--Common Variant\ldots{}{\(\mkern1mu\)}or Not?''} \emph{Human Molecular Genetics} 11 (20): 2417--23. \url{https://doi.org/10.1093/hmg/11.20.2417}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-pritchardLinkageDisequilibriumHumans2001}{}}%
 Pritchard, Jonathan K., and Molly Przeworski. 2001. {``Linkage {Disequilibrium} in {Humans}: {Models} and {Data}.''} \emph{The American Journal of Human Genetics} 69 (1): 1--14. \url{https://doi.org/10.1086/321275}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-pritchardInferencePopulationStructure2000}{}}%
+Pritchard, Jonathan K, Matthew Stephens, and Peter Donnelly. 2000. {``Inference of {Population Structure Using Multilocus Genotype Data}.''} \emph{Genetics} 155 (2): 945--59. \url{https://doi.org/10.1093/genetics/155.2.945}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-provineOriginsTheoreticalPopulation2001}{}}%
 Provine, William B. 2001. \emph{The Origins of Theoretical Population Genetics: With a New Afterword}. {University of Chicago Press}.
@@ -1520,11 +1510,17 @@ Pszczola, M., T. Strabel, H. A. Mulder, and M. P. L. Calus. 2012. {``Reliability
 \leavevmode\vadjust pre{\hypertarget{ref-punnettMendelism1905}{}}%
 Punnett, Reginald Crundall. 1905. \emph{Mendelism}. {Macmillan \& Bowes}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-quintana-murciRolePlayedNatural2010}{}}%
+Quintana-Murci, Lluis, and Luis B. Barreiro. 2010. {``The Role Played by Natural Selection on {Mendelian} Traits in Humans.''} \emph{Annals of the New York Academy of Sciences} 1214 (1): 1--17. \url{https://doi.org/10.1111/j.1749-6632.2010.05856.x}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-reeveEncyclopediaGenetics2014}{}}%
 Reeve, Eric C. R. 2014. \emph{Encyclopedia of {Genetics}}. {Routledge}. \url{https://books.google.com?id=BGqYAgAAQBAJ}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-reeveEncyclopediaGenetics2001}{}}%
 Reeve, Eric C. R., and Isobel Black. 2001. \emph{Encyclopedia of {Genetics}}. {Taylor \& Francis}. \url{https://books.google.com?id=JjLWYKqehRsC}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-reichAllelicSpectrumHuman2001}{}}%
+Reich, David E, and Eric S Lander. 2001. {``On the Allelic Spectrum of Human Disease.''} \emph{Trends in Genetics} 17 (9): 502--10. \url{https://doi.org/10.1016/S0168-9525(01)02410-6}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-rheinbergerMendelianInheritanceGermany2000}{}}%
 Rheinberger, Hans-Jörg. 2000. {``Mendelian Inheritance in {Germany} Between 1900 and 1910. {The} Case of {Carl Correns} (1864--1933).''} \emph{Comptes Rendus de l'Académie Des Sciences-Séries III-Sciences de La Vie} 323 (12): 1089--96.
@@ -1565,9 +1561,6 @@ Sanger, F., and H. Tuppy. 1951a. {``The Amino-Acid Sequence in the Phenylalanyl 
 \leavevmode\vadjust pre{\hypertarget{ref-sangerAminoacidSequencePhenylalanyl1951a}{}}%
 ---------. 1951b. {``The Amino-Acid Sequence in the Phenylalanyl Chain of Insulin. 2. {The} Investigation of Peptides from Enzymic Hydrolysates.''} \emph{Biochemical Journal} 49 (4): 481--90. \url{https://doi.org/10.1042/bj0490481}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-saulHighDiversityMousePopulations2019}{}}%
-Saul, Michael C., Vivek M. Philip, Laura G. Reinholdt, and Elissa J. Chesler. 2019. {``High-{Diversity Mouse Populations} for {Complex Traits}.''} \emph{Trends in Genetics} 35 (7): 501--14. \url{https://doi.org/10.1016/j.tig.2019.04.003}.
-
 \leavevmode\vadjust pre{\hypertarget{ref-schjoldenDoesIndividualVariation2005}{}}%
 Schjolden, Joachim, Argaudas Stoskhus, and Svante Winberg. 2005. {``Does {Individual Variation} in {Stress Responses} and {Agonistic Behavior Reflect Divergent Stress Coping Strategies} in {Juvenile Rainbow Trout}?''} \emph{Physiological and Biochemical Zoology} 78 (5): 715--23. \url{https://doi.org/10.1086/432153}.
 
@@ -1601,6 +1594,9 @@ Sharp, Seth A., Stephen S. Rich, Andrew R. Wood, Samuel E. Jones, Robin N. Beaum
 \leavevmode\vadjust pre{\hypertarget{ref-shendureDNASequencing402017}{}}%
 Shendure, Jay, Shankar Balasubramanian, George M. Church, Walter Gilbert, Jane Rogers, Jeffery A. Schloss, and Robert H. Waterston. 2017. {``{DNA} Sequencing at 40: Past, Present and Future.''} \emph{Nature} 550 (7676, 7676): 345--53. \url{https://doi.org/10.1038/nature24286}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-shermanPangenomicsHumanGenome2020}{}}%
+Sherman, Rachel M., and Steven L. Salzberg. 2020. {``Pan-Genomics in the Human Genome Era.''} \emph{Nature Reviews Genetics} 21 (4, 4): 243--54. \url{https://doi.org/10.1038/s41576-020-0210-7}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-simontonOriginsGeniusDarwinian1999}{}}%
 Simonton, Dean Keith. 1999. \emph{Origins of {Genius}: {Darwinian Perspectives} on {Creativity}}. {Oxford University Press}. \url{https://books.google.com?id=ChNnDAAAQBAJ}.
 
@@ -1618,6 +1614,9 @@ Staden, R. 1979. {``A Strategy of {DNA} Sequencing Employing Computer Programs.'
 
 \leavevmode\vadjust pre{\hypertarget{ref-steensmaAbbieLathropMouse2010}{}}%
 Steensma, David P., Robert A. Kyle, and Marc A. Shampo. 2010. {``Abbie {Lathrop}, the {`{Mouse Woman} of {Granby}'}: {Rodent Fancier} and {Accidental Genetics Pioneer}.''} \emph{Mayo Clinic Proceedings} 85 (11): e83. \url{https://doi.org/10.4065/mcp.2010.0647}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-stratzLinkageDisequilibriumPattern2018}{}}%
+Stratz, P., M. Schmid, R. Wellmann, S. Preuß, I. Blaj, J. Tetens, G. Thaller, and J. Bennewitz. 2018. {``Linkage Disequilibrium Pattern and Genome-Wide Association Mapping for Meat Traits in Multiple Porcine {F2} Crosses.''} \emph{Animal Genetics} 49 (5): 403--12. \url{https://doi.org/10.1111/age.12684}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-strickbergerEvolution1990}{}}%
 Strickberger, Monroe W. 1990. \emph{Evolution}. {Jones and Bartlett}. \url{https://books.google.com?id=qU_wAAAAMAAJ}.
@@ -1655,6 +1654,9 @@ Tikkanen, Emmi, Aki S. Havulinna, Aarno Palotie, Veikko Salomaa, and Samuli Ripa
 \leavevmode\vadjust pre{\hypertarget{ref-uffelmannGenomewideAssociationStudies2021}{}}%
 Uffelmann, Emil, Qin Qin Huang, Nchangwi Syntia Munung, Jantina de Vries, Yukinori Okada, Alicia R. Martin, Hilary C. Martin, Tuuli Lappalainen, and Danielle Posthuma. 2021. {``Genome-Wide Association Studies.''} \emph{Nature Reviews Methods Primers} 1 (1, 1): 1--21. \url{https://doi.org/10.1038/s43586-021-00056-9}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-vandenoordControllingFalseDiscoveries2008}{}}%
+van den Oord, Edwin J. C. G. 2008. {``Controlling False Discoveries in Genetic Studies.''} \emph{American Journal of Medical Genetics Part B: Neuropsychiatric Genetics} 147B (5): 637--44. \url{https://doi.org/10.1002/ajmg.b.30650}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-venterSequenceHumanGenome2001}{}}%
 Venter, J. Craig, Mark D. Adams, Eugene W. Myers, Peter W. Li, Richard J. Mural, Granger G. Sutton, Hamilton O. Smith, et al. 2001. {``The {Sequence} of the {Human Genome}.''} \emph{Science} 291 (5507): 1304--51. \url{https://doi.org/10.1126/science.1058040}.
 
@@ -1663,6 +1665,9 @@ Vilhjálmsson, Bjarni J, Jian Yang, Hilary K Finucane, Alexander Gusev, Sara Lin
 
 \leavevmode\vadjust pre{\hypertarget{ref-visscherHeritabilityGenomicsEra2008}{}}%
 Visscher, Peter M., William G. Hill, and Naomi R. Wray. 2008. {``Heritability in the Genomics Era --- Concepts and Misconceptions.''} \emph{Nature Reviews Genetics} 9 (4, 4): 255--66. \url{https://doi.org/10.1038/nrg2322}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-wadeGeneticVariationLaboratory2005}{}}%
+Wade, Claire M., and Mark J. Daly. 2005. {``Genetic Variation in Laboratory Mice.''} \emph{Nature Genetics} 37 (11, 11): 1175--80. \url{https://doi.org/10.1038/ng1666}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wagenseilDNADiscovererBlacks2015}{}}%
 Wagenseil, Paul. 2015. {``{DNA Discoverer}: {Blacks Less Intelligent Than Whites}.''} Text.Article. {Fox News}; {Fox News}. March 25, 2015. \url{https://www.foxnews.com/story/dna-discoverer-blacks-less-intelligent-than-whites}.
@@ -1694,11 +1699,17 @@ Watson, James D., Alexander Gann, and Jan Witkowski. 2012. \emph{The Annotated a
 \leavevmode\vadjust pre{\hypertarget{ref-weirMeasuresHumanPopulation2005}{}}%
 Weir, Bruce S., Lon R. Cardon, Amy D. Anderson, Dahlia M. Nielsen, and William G. Hill. 2005. {``Measures of Human Population Structure Show Heterogeneity Among Genomic Regions.''} \emph{Genome Research} 15 (11): 1468--76. \url{https://doi.org/10.1101/gr.4398405}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-weischenfeldtPhenotypicImpactGenomic2013}{}}%
+Weischenfeldt, Joachim, Orsolya Symmons, François Spitz, and Jan O. Korbel. 2013. {``Phenotypic Impact of Genomic Structural Variation: Insights from and for Human Disease.''} \emph{Nature Reviews Genetics} 14 (2, 2): 125--38. \url{https://doi.org/10.1038/nrg3373}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-wellcomeFrancisCrickControversial2003}{}}%
 Wellcome. 2003. {``Francis {Crick}'s Controversial Archive on First Public Display.''} {Wellcome}. March 31, 2003. \url{https://wellcome.org/press-release/francis-cricks-controversial-archive-first-public-display}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wengerAccurateCircularConsensus2019}{}}%
 Wenger, Aaron M., Paul Peluso, William J. Rowell, Pi-Chuan Chang, Richard J. Hall, Gregory T. Concepcion, Jana Ebler, et al. 2019. {``Accurate Circular Consensus Long-Read Sequencing Improves Variant Detection and Assembly of a Human Genome.''} \emph{Nature Biotechnology} 37 (10, 10): 1155--62. \url{https://doi.org/10.1038/s41587-019-0217-9}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-westfallResamplingBasedMultipleTesting1993}{}}%
+Westfall, Peter H., and S. Stanley Young. 1993. \emph{Resampling-{Based Multiple Testing}: {Examples} and {Methods} for p-{Value Adjustment}}. {John Wiley \& Sons}. \url{https://books.google.com?id=nuQXORVGI1QC}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wetterstrandDNASequencingCosts2021}{}}%
 Wetterstrand, Kris A. 2021. {``{DNA Sequencing Costs}: {Data}.''} {Genome.gov}. November 1, 2021. \url{https://www.genome.gov/about-genomics/fact-sheets/DNA-Sequencing-Costs-Data}.
@@ -1769,17 +1780,14 @@ Wright, Sewall. 1922. {``Coefficients of {Inbreeding} and {Relationship}.''} \em
 \leavevmode\vadjust pre{\hypertarget{ref-wrightGeneticalStructurePopulations1949}{}}%
 ---------. 1949. {``The {Genetical Structure} of {Populations}.''} \emph{Annals of Eugenics} 15 (1): 323--54. \url{https://doi.org/10.1111/j.1469-1809.1949.tb02451.x}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-yangCommonSNPsExplain2010}{}}%
-Yang, Jian, Beben Benyamin, Brian P. McEvoy, Scott Gordon, Anjali K. Henders, Dale R. Nyholt, Pamela A. Madden, et al. 2010. {``Common {SNPs} Explain a Large Proportion of the Heritability for Human Height.''} \emph{Nature Genetics} 42 (7, 7): 565--69. \url{https://doi.org/10.1038/ng.608}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-yangGCTAToolGenomewide2011}{}}%
-Yang, Jian, S. Hong Lee, Michael E. Goddard, and Peter M. Visscher. 2011. {``{GCTA}: {A Tool} for {Genome-wide Complex Trait Analysis}.''} \emph{The American Journal of Human Genetics} 88 (1): 76--82. \url{https://doi.org/10.1016/j.ajhg.2010.11.011}.
-
 \leavevmode\vadjust pre{\hypertarget{ref-yengoMetaanalysisGenomewideAssociation2018}{}}%
 Yengo, Loic, Julia Sidorenko, Kathryn E Kemper, Zhili Zheng, Andrew R Wood, Michael N Weedon, Timothy M Frayling, et al. 2018. {``Meta-Analysis of Genome-Wide Association Studies for Height and Body Mass Index in ~700000 Individuals of {European} Ancestry.''} \emph{Human Molecular Genetics} 27 (20): 3641--49. \url{https://doi.org/10.1093/hmg/ddy271}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-youngNeurobiologyHumanSocial2008}{}}%
 Young, Simon N. 2008. {``The Neurobiology of Human Social Behaviour: An Important but Neglected Topic.''} \emph{Journal of Psychiatry and Neuroscience} 33 (5): 391--92. \url{https://www.jpn.ca/content/33/5/391}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-yuUnifiedMixedmodelMethod2006}{}}%
+Yu, Jianming, Gael Pressoir, William H. Briggs, Irie Vroh Bi, Masanori Yamasaki, John F. Doebley, Michael D. McMullen, et al. 2006. {``A Unified Mixed-Model Method for Association Mapping That Accounts for Multiple Levels of Relatedness.''} \emph{Nature Genetics} 38 (2, 2): 203--8. \url{https://doi.org/10.1038/ng1702}.
 
 \end{CSLReferences}
 

@@ -27,6 +27,8 @@ colorize <- function(x, color, col_name) {
 }
 ```
 
+[MOTIVATE]
+
 ## Phenotypes of interest {#somite-phenotype}
 
 ### Somite development period
