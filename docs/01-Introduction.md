@@ -317,7 +317,7 @@ While Morgan was carrying out his experiments with *Drosophila*, Japanese resear
 
 In the 1930s, Theodosius Dobzhansky (**Figure \@ref(fig:dobzhansky)**), a Ukrainian biologist who had trained with Morgan, used *Drosophila pseudoobscura* to investigate how genetic variation drove evolution [@mukherjeeGeneIntimateHistory2016]. Using a single population of flies that he raised in different temperatures while controlling for all other environmental variables, he found that after four months, the genetic ratios in the two sub-populations had changed [@dobzhanskyGeneticsNaturalPopulations1943]. Through this experiment, he determined that genetic variation was the norm across biology; that the adaptive benefit of a given variant would depend on the particular environment that an individual found itself in; and that most phenotypes were driven by many genes interacting with each other and the environment [@mukherjeeGeneIntimateHistory2016]. 
 
-(ref:dobzhansky) Undated photo of Theodosius Dobzhansky from @coyneTheodosiusDobzhanskyHybrid2016, reprinted courtesy of UW-Madison Archives, #S05461.
+(ref:dobzhansky) Undated photo of Theodosius Dobzhansky from @coyneTheodosiusDobzhanskyHybrid2016.
 
 \begin{figure}
 
@@ -338,7 +338,7 @@ From 1951, British biochemist Rosalind Franklin had been working at King's Colle
 
 \begin{figure}
 
-{\centering \includegraphics[width=1\linewidth]{figs/introduction/Dobzhansky} 
+{\centering \includegraphics[width=0.5\linewidth]{figs/introduction/Photo_51} 
 
 }
 
@@ -349,7 +349,7 @@ Without Franklin's permission, Wilkins brought photo 51 to James Watson, a molec
 
 Watson and Crick built their complete model in the first week of March 1953, and, following consultations with Wilkins and Franklin, who both approved of the model, published their landmark paper on 25 April titled *Molecular structure of nucleic acids: a structure for deoxyribose nucleic acid* [@watsonMolecularStructureNucleic1953]. Theirs was accompanied by two others: one by Gosling and Franklin with crystallographic evidence for the double-helical structure including photo 51 [@franklinMolecularConfigurationSodium1953]; and another by Wilkins corroborating the evidence further with experimental data from DNA crystals [@wilkinsMolecularStructureNucleic1953]. For their discovery, Watson, Crick, and Wilkins were awarded the Nobel Prize in 1962. Unfortunately, Franklin had died two years earlier from ovarian cancer, and so was not nominated. 
 
-It is worth noting that both Watson and Crick have since made a number of controversial comments about eugenics, race and intelligence. For instance, in 2015 Watson said:
+It is worth noting that both Watson and Crick have since made a number of controversial comments about eugenics, race and intelligence.
 
 In 1970, while reading Karl Pearson's biography of Francis Galton in 1970, Crick wrote to Bernard Davis of Harvard University and said:
 
@@ -365,6 +365,7 @@ In an interview with David Pearson of the Wellcome Library for the History and U
 
 >*In the long run, it is unavoidable that society will begin to worry about the character of the next generation ... It is not a subject at the moment which we can tackle easily because people have so many religious beliefs and until we have a more uniform view of ourselves I think it would be risky to try and do anything in the way of eugenics ... I would be astonished if, in the next 100 or 200 years, society did not come round to the view that they would have to try to improve the next generation in some extent or one way or another.* [@wellcomeFrancisCrickControversial2003]
 
+In 2015, Watson said:
 
 > *All our social policies are based on the fact that their (blacks) intelligence is the same as ours (whites) – whereas all the testing says not really ... people who have to deal with black employees find this not true.* [@wagenseilDNADiscovererBlacks2015]
 
@@ -372,36 +373,26 @@ During a speaking tour, Watson also claimed that black people were less intellig
 
 ### The development of DNA sequencing
 
-In the early 1950s, Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University of Cambridge, developed methods of "sequencing by separation", first applied to determine the first protein sequence of insulin [@sangerAminoacidSequencePhenylalanyl1951; @sangerAminoacidSequencePhenylalanyl1951a], and later to decipher the sequence of RNA, with the first being alanine tRNA [@shendureDNASequencing402017].
-
-In 1977 he published what became known as the "Sanger method", using radio-labelled nucleic acids to identify the order and type of nucleotides that made up a DNA sequence [@sangerDNASequencingChainterminating1977], earning him a second Nobel prize in Chemistry in 1980 [@NobelPrizeChemistry]. 
-
-"This early method involved four extensions of a labelled primer by DNA polymerase, each with trace amounts of one chain-terminating nucleotide, to produce fragments of different lengths." [@sangerDNASequencingChainterminating1977; @shendureDNASequencing402017]. The sizes of fragments present in each base-specific reaction were measured by electrophoresis on polyacrylamide slab gels [@maniatisChainLengthDetermination1975].
-
-Shotgun sequencing -- sequencing of random clones followed by sequence assembly based on the overlaps -- was suggested by [@stadenStrategyDNASequencing1979], leading to the assembly of whole genomes, beginning with the bacteriophage lambda in 1982 [@sangerNucleotideSequenceBacteriophage1982].
-
-<!--
-DO I KNOW HOW SEQUENCING WORKS? MAKE SURE I KNOW.
--->
+In the early 1950s, Frederick Sanger (**Figure \@ref(fig:sanger)**), a biochemist at the University of Cambridge, developed methods of "sequencing by separation", first applied to determine the first protein sequence of insulin [@sangerAminoacidSequencePhenylalanyl1951; @sangerAminoacidSequencePhenylalanyl1951a] -- winning him his first Nobel Prize in Chemistry in 1958 [@NobelPrizeChemistrya] -- and later to decipher RNA sequences, with the first being alanine tRNA [@shendureDNASequencing402017]. Following these achievements, Sanger turned to sequencing DNA, developing an approach of "sequencing by synthesis". In 1975 he and Alan Coulson published a preliminary method using radio-labelled nucleic acids to sequence short DNA strands [@sangerRapidMethodDetermining1975]. The major breakthrough, however, occurred in 1977, when he and his colleagues developed what is now known as the "Sanger method" [@sangerDNASequencingChainterminating1977], involving fluorescently-labelled "dideoxy" nucleosides that terminate the chain after being added to the strand. This resulted in strands of different lengths that could be visualised on a four-lane polyacrylamide slab gel, with the location of each fragment indicating the identity of the base at that position.
 
 (ref:sanger) Undated photo of Frederick Sanger from @ObituaryFredSanger2013.
 
 \begin{figure}
 
-\hfill{}\includegraphics[width=1\linewidth]{figs/introduction/sanger} 
+{\centering \includegraphics[width=0.5\linewidth]{figs/introduction/sanger} 
+
+}
 
 \caption{(ref:sanger)}(\#fig:sanger)
 \end{figure}
 
-These technological breakthroughs eventually led to the first draft of the human genome being published in 2001 by a large international consortium [@internationalhumangenomesequencingconsortiumInitialSequencingAnalysis2001a].^[The full sequence (including heterochromatic regions) was only completed in 2022 [@nurkCompleteSequenceHuman2022].] 
+The Sanger method was highly accurate and efficient, and further refinements of this approach, together with advances in DNA cloning [@oconnorConstructionLargeDNA1989], led to the development of an method known as "shotgun sequencing". The method involves randomly breaking up genomes into short (100-1000 base pair (**bp**)) strands, sequencing them, and then assembling them based on overlapping regions [@stadenStrategyDNASequencing1979]. This made it possible, for the first time, to sequence whole, large-scale genomes [@shendureDNASequencing402017]. The Human Genome Project was established in 1990 as a large, international consortium, and through the application of shotgun sequencing, published the first draft of the human genome in 2001 [@internationalhumangenomesequencingconsortiumInitialSequencingAnalysis2001a; @venterSequenceHumanGenome2001], with an "essentially complete" draft announced in 2003 [@internationalhumangenomesequencingconsortiumInternationalConsortiumCompletes2003].^[The full sequence (including heterochromatic regions) was only completed in 2022 [@nurkCompleteSequenceHuman2022].]
 
-After the human genome project, Sanger sequencing was superseded by "second generation" DNA sequencing (also called "massively parallel" or "next generation" sequencing). The first NGS platforms arrived in 2005, involving the dense fixation of a library of millions or billions of DNA templates onto a two-dimensional surface, allowing for a single reaction step and *in vitro* amplification , and imaging through the detection of fluorescence from deoxynucleotides over cycles of biochemistry, known as 'sequencing by synthesis' [@shendureDNASequencing402017]. Each template incorporates one and only one dNTP on each cycle. After imaging to determine which of four colours was incorporated by each template on the surface, both blocking and fluorescent groups are removed to set up the next extension.
+Shortly after this landmark achievement, Sanger sequencing was superseded by "second generation" DNA sequencing, also called "massively parallel" or "next generation" sequencing (**NGS**). The first NGS platforms arrived in 2005, involving the dense fixation of a library of millions or billions of DNA templates onto a two-dimensional surface. This allowed for *in vitro* amplification and imaging through the detection of fluorescence from dideoxynucleotides over repeated cycles of biochemistry [@shendureDNASequencing402017]. Each cycle incorporates a single nucleotide, and after imaging to determine which of four colours was incorporated by each template on the surface, the blocking and fluorescent groups are removed to set up the next extension [@shendureDNASequencing402017]. Read lengths from NGS tend to be shorter than the Sanger method (in the low hundreds of bases, compared to 600-700 for Sanger), but with a similar accuracy of over 99.9% [@shendureDNASequencing402017]. The intense competition between several NGS companies including Solexa (acquired by Illumina) and Complete Genomics resulted in the reduction in the raw, per-megabase count of DNA sequencing from \$1,000 to \$0.10 between 2007 and 2012 [@wetterstrandDNASequencingCosts2021]. 
 
-The intense competition between several NGS companies including 454, Solexa (acquired by Illumina), Agencourt, Helicos, Complete Genomics, and Ion Torrent resulted in the reduction in the raw, per-megabase count of DNA sequencing from \$1,000 to \$0.10 between 2007 and 2012 [@wetterstrandDNASequencingCosts2021]. Read lengths tend to be in the low hundreds of bases, and are mostly over 99.9% accurate. 
+Both Sanger sequencing and NGS come with drawbacks. Both involve template amplification, which can create copying errors, sequencing-dependent biases, and information loss (for example, DNA modifications) [@shendureDNASequencing402017]. In addition, the short read length can make genome assembly difficult for regions with high repeat content [@amarasingheOpportunitiesChallengesLongread2020]. New technologies pioneered by PacBio and Oxford Nanopore Technologies (**ONT**) can skip the amplification step by sequencing single molecules in real time [@mikheyevFirstLookOxford2014; @rhoadsPacBioSequencingIts2015], resulting in reads up to megabases in length [@payneBulkVisGraphicalViewer2019]. These "third-generation" sequencing technologies used to have a much higher error rate than NGS platforms [@laverAssessingPerformanceOxford2015], although they are quickly closing the gap [[@jainNanoporeSequencingAssembly2018]@wengerAccurateCircularConsensus2019]. ONT platforms can also directly sequence DNA modifications [@wangNanoporeSequencingTechnology2021].
 
-Sanger sequencing and NGS involve template amplification, which can create copying errors, sequencing-dependent biases, and information loss (e.g. DNA modifications) [@shendureDNASequencing402017]. New technologies pioneered by PacBio and Oxford Nanopore Technologies (**ONT**) can skip this amplification step and sequence single molecules in real time, resulting in reads up to megabases in length. These third-generation sequencing technologies have a much higher error rate than NGS of around 10%, although this is reducing. ONT devices can also be as small as a USB memory stick, also making them extremely portable. 
-
-The improvement in sequencing technologies has continued to progess to the stage where a $100 human genome is now on the horizon [@pennisi100GenomeNew2022]. Long-read technologies developed by Pacific Biosciences and Oxford Nanopore Technologies can also generate single reads of over 2 megabases in length [@payneBulkVisGraphicalViewer2019] and directly sequence DNA modifications [@wangNanoporeSequencingTechnology2021]. These developments are making genetic technologies ever more accessible and informative, paving the way for greater insights into the genetic basis of phenotypic differences. Yet despite these technological advances, the relative contribution of genetics and environment to differences in complex traits is still not fully understood -- especially in humans -- and therefore remains an active area of research.
+The rapid improvement in sequencing technologies has now reached the stage where a $100 human genome is on the horizon [@pennisi100GenomeNew2022]. These developments are making genetic technologies ever more accessible and informative, paving the way for greater insights into the genetic basis of phenotypic differences. Yet despite these technological advances, the relative contribution of genetics and environment to differences in complex traits is still not fully understood -- especially in humans -- and therefore remains an active area of research.
 
 ## Genetic and environmental causes of variation in complex traits
 
@@ -493,7 +484,7 @@ Instead of tracing genes through families, an alternative approach is to map gen
 
 It became clear that Mendelian diseases were rare, likely as a consequence of purifying selection [CITE]. In contrast, common diseases were late onset, therefore leaving reproductive fitness unaffected. This logic led to the "common disease - common variant" hypothesis, driving a push to expand association analyses genome-wide [@collinsVariationsThemeCataloging1997; @landerNewGenomicsGlobal1996; @rischFutureGeneticStudies1996]. 
 
-Next-generation sequencing technologies enabled the inclusion of thousands of SNP markers to be tested simultaneously for their association with a phenotype of interest, with the first genome-wide assocaition study (**GWAS**) published in 2001 [@ozakiFunctionalSNPsLymphotoxina2002]. GWAS aim to identify genetic variants associated with traits by comparing the allele frequencies of individuals who share similar ancestries, but differ in values for the trait in question [@uffelmannGenomewideAssociationStudies2021]. As of 2021, over 5,700 GWAS have been performed for more than 3,330 human traits [@uffelmannGenomewideAssociationStudies2021]. 
+Next-generation sequencing technologies enabled the inclusion of thousands of SNP markers to be tested simultaneously for their association with a phenotype of interest, with the first genome-wide association study (**GWAS**) published in 2001 [@ozakiFunctionalSNPsLymphotoxina2002]. GWAS aim to identify genetic variants associated with traits by comparing the allele frequencies of individuals who share similar ancestries, but differ in values for the trait in question [@uffelmannGenomewideAssociationStudies2021]. As of 2021, over 5,700 GWAS have been performed for more than 3,330 human traits [@uffelmannGenomewideAssociationStudies2021]. 
 
 The standard GWAS process involves first genotyping individuals using SNP microarraysm, which target common genetic variants. Alternatively, one can sequence their full exomes (Whole Exome Sequencing, **WES** ), which targets only the coding regions of the genome, or their full genomes (Whole-Genome Sequencing, **WGS**). It is common to then use principal components analysis (**PCA**) [AND OTHER METHODS?] to restrict the analysis individuals who share common ancestry, in order to avoid population stratification effects [@uffelmannGenomewideAssociationStudies2021]. Missing genotypes can be imputed using a genetic reference panel such as the 1000 Genomes Project [@10002015global]. Finally, an association test can be run, which includes an individual-specific random effect term to account for genetic relatedness among individuals.
 
@@ -533,8 +524,6 @@ A simplified causal model for the inheritance of traits from one's parents is pr
 \end{figure}
 
 This model only includes environmental factors related to the parents' phenotypes, yet the phenotype of an individual is continuously affected by all other environmental influences it is exposed to throughout its lifetime [@plominNatureNurtureGenetic2005]. 
-
-
 
 [COULD BE THE INTRO TO: THIS SIMPLE MODEL DOESN'T WORK] However, that study found that several behavioural traits were inconsistent with this model. These traits included conduct disorder, higher-level cognitive functions, mental and behavioural disorders due to the use of alcohol or tobacco, anxiety disorder, and weight maintenance. For these traits, either or both non-additive genetic influences or shared environmental influences are therefore needed to explain the observed patterns of twin correlations [@poldermanMetaanalysisHeritabilityHuman2015].^[@kongNatureNurtureEffects2018 also showed that parents' non-transmitted alleles can affect a child through their impacts on the parents and other relatives, a phenomenon the authors call "genetic nurture", comprising 29.9% of the transmitted polygenic score.]
 

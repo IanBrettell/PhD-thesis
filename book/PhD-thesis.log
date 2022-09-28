@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.25)  28 SEP 2022 03:02
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.25)  28 SEP 2022 14:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1071,16 +1071,20 @@ LaTeX Warning: Float too large for page by 21.56879pt on input line 539.
 [29] [30]
 File: figs/introduction/Dobzhansky.pdf Graphic file (type pdf)
 <use figs/introduction/Dobzhansky.pdf>
-[31]
-File: figs/introduction/Dobzhansky.pdf Graphic file (type pdf)
-<use figs/introduction/Dobzhansky.pdf>
-[32] [33]
+File: figs/introduction/Photo_51.pdf Graphic file (type pdf)
+<use figs/introduction/Photo_51.pdf>
+[31] [32]
 File: figs/introduction/sanger.pdf Graphic file (type pdf)
 <use figs/introduction/sanger.pdf>
-[34] [35]
+[33] [34]
 File: figs/introduction/pge-simp.pdf Graphic file (type pdf)
 <use figs/introduction/pge-simp.pdf>
-[36]
+
+Overfull \hbox (32.71817pt too wide) has occurred while \output is active
+\TU/LibreBaskerville(0)/m/it/10 1.2.  GENETIC AND ENVIRONMENTAL CAUSES OF VARIATION IN COMPLEX TRAITS \TU/LibreBaskerville(0)/m/n/10 35
+ []
+
+[35] [36]
 Overfull \hbox (32.05818pt too wide) has occurred while \output is active
 \TU/LibreBaskerville(0)/m/it/10 1.2.  GENETIC AND ENVIRONMENTAL CAUSES OF VARIATION IN COMPLEX TRAITS \TU/LibreBaskerville(0)/m/n/10 37
  []
@@ -1090,43 +1094,47 @@ Overfull \hbox (33.46817pt too wide) has occurred while \output is active
 \TU/LibreBaskerville(0)/m/it/10 1.2.  GENETIC AND ENVIRONMENTAL CAUSES OF VARIATION IN COMPLEX TRAITS \TU/LibreBaskerville(0)/m/n/10 39
  []
 
-[39] [40]
+[39]
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 728.
+(Font)              scaled to size 5.0pt on input line 724.
+[40]
+Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
+File: figs/introduction/pheno_causal_model.pdf Graphic file (type pdf)
+<use figs/introduction/pheno_causal_model.pdf>
 
 Overfull \hbox (31.18817pt too wide) has occurred while \output is active
 \TU/LibreBaskerville(0)/m/it/10 1.2.  GENETIC AND ENVIRONMENTAL CAUSES OF VARIATION IN COMPLEX TRAITS \TU/LibreBaskerville(0)/m/n/10 41
  []
 
-[41]
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no → (U+2192) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
-File: figs/introduction/pheno_causal_model.pdf Graphic file (type pdf)
-<use figs/introduction/pheno_causal_model.pdf>
-[42]
+[41] [42]
 Overfull \hbox (32.88817pt too wide) has occurred while \output is active
 \TU/LibreBaskerville(0)/m/it/10 1.2.  GENETIC AND ENVIRONMENTAL CAUSES OF VARIATION IN COMPLEX TRAITS \TU/LibreBaskerville(0)/m/n/10 43
  []
 
-[43] [44]
+[43]
 File: figs/pilot/line_locations.pdf Graphic file (type pdf)
 <use figs/pilot/line_locations.pdf>
+[44]
 
-LaTeX Warning: Reference `MIKK-genomes-chap' on page 45 undefined on input line 796.
+LaTeX Warning: Reference `MIKK-genomes-chap' on page 45 undefined on input line 792.
 
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 796.
+(Font)              scaled to size 8.0pt on input line 792.
 
-LaTeX Warning: Reference `MIKK-genomes-chap' on page 45 undefined on input line 796.
-
-
-LaTeX Warning: Reference `inbreeding-sec' on page 45 undefined on input line 801.
+LaTeX Warning: Reference `MIKK-genomes-chap' on page 45 undefined on input line 792.
 
 
-LaTeX Warning: Reference `introgression-sec' on page 45 undefined on input line 803.
+LaTeX Warning: Reference `inbreeding-sec' on page 45 undefined on input line 797.
 
 
-LaTeX Warning: Reference `nuc-div' on page 45 undefined on input line 805.
+LaTeX Warning: Reference `introgression-sec' on page 45 undefined on input line 799.
+
+
+LaTeX Warning: Reference `nuc-div' on page 45 undefined on input line 801.
+
+
+LaTeX Warning: Reference `ld-decay-sec' on page 45 undefined on input line 803.
 
 
 Overfull \hbox (32.40817pt too wide) has occurred while \output is active
@@ -1135,47 +1143,42 @@ Overfull \hbox (32.40817pt too wide) has occurred while \output is active
 
 [45]
 
-LaTeX Warning: Reference `ld-decay-sec' on page 46 undefined on input line 807.
-
-
-LaTeX Warning: Reference `mikksv-sec' on page 46 undefined on input line 809.
+LaTeX Warning: Reference `mikksv-sec' on page 46 undefined on input line 805.
 
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 815.
-[46]
+(Font)              scaled to size 12.0pt on input line 811.
 File: figs/mikk_behaviour/F2-cross-schema.pdf Graphic file (type pdf)
 <use figs/mikk_behaviour/F2-cross-schema.pdf>
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 11.06721pt on input line 822.
+(Font)              scaled to size 11.06721pt on input line 818.
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 822.
+(Font)              scaled to size 9.0pt on input line 818.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 11.06831pt on input line 822.
+(Font)              scaled to size 11.06831pt on input line 818.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.06612pt on input line 822.
+(Font)              scaled to size 11.06612pt on input line 818.
 
-Overfull \hbox (31.74817pt too wide) has occurred while \output is active
-\TU/LibreBaskerville(0)/m/it/10 1.2.  GENETIC AND ENVIRONMENTAL CAUSES OF VARIATION IN COMPLEX TRAITS \TU/LibreBaskerville(0)/m/n/10 47
- []
-
-[47]
-
-LaTeX Warning: Reference `Somite-chap' on page 48 undefined on input line 830.
+LaTeX Warning: Reference `Somite-chap' on page 46 undefined on input line 826.
 
 
-LaTeX Warning: Reference `MIKK-F2-chap' on page 48 undefined on input line 830.
+LaTeX Warning: Reference `MIKK-F2-chap' on page 46 undefined on input line 826.
 
+
+Underfull \vbox (badness 4859) has occurred while \output is active []
+
+[46]
 File: figs/somites/mouse_embryo_gridley.pdf Graphic file (type pdf)
 <use figs/somites/mouse_embryo_gridley.pdf>
+[47]
 File: figs/somites/ali_fish_seg_compiled.pdf Graphic file (type pdf)
 <use figs/somites/ali_fish_seg_compiled.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 853--854
+Underfull \hbox (badness 10000) in paragraph at lines 849--850
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 853--854
+Underfull \hbox (badness 10000) in paragraph at lines 849--850
 
  []
 
@@ -1183,34 +1186,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 853--854
 File: figs/somites/ali_period_F0_Cab_Kaga.pdf Graphic file (type pdf)
 <use figs/somites/ali_period_F0_Cab_Kaga.pdf>
 LaTeX Font Info:    Font shape `TU/LibreBaskerville(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 872.
+(Font)              scaled to size 9.0pt on input line 868.
 
-LaTeX Warning: Reference `MIKK-F2-cross' on page 50 undefined on input line 875.
+LaTeX Warning: Reference `MIKK-F2-cross' on page 50 undefined on input line 871.
 
-[50]
 File: figs/somites/ali_compiled_somite_elong.pdf Graphic file (type pdf)
 <use figs/somites/ali_compiled_somite_elong.pdf>
 
-LaTeX Warning: Reference `Pilot-chap' on page 51 undefined on input line 886.
+LaTeX Warning: Reference `Pilot-chap' on page 50 undefined on input line 882.
 
 
-LaTeX Warning: Reference `MIKK-F2-chap' on page 51 undefined on input line 886.
+LaTeX Warning: Reference `MIKK-F2-chap' on page 50 undefined on input line 882.
 
-[51] [52]
+[50] [51]
 
-LaTeX Warning: Reference `Pilot-chap' on page 53 undefined on input line 899.
+LaTeX Warning: Reference `Pilot-chap' on page 52 undefined on input line 895.
 
+
+LaTeX Warning: Reference `MIKK-F2-chap' on page 52 undefined on input line 895.
+
+[52]
 
 LaTeX Warning: Reference `MIKK-F2-chap' on page 53 undefined on input line 899.
 
 
-LaTeX Warning: Reference `MIKK-F2-chap' on page 53 undefined on input line 903.
+LaTeX Warning: Reference `Pilot-chap' on page 53 undefined on input line 899.
 
 
-LaTeX Warning: Reference `Pilot-chap' on page 53 undefined on input line 903.
+LaTeX Warning: Reference `Fst-chap' on page 53 undefined on input line 906.
 
 
-LaTeX Warning: Reference `Fst-chap' on page 53 undefined on input line 910.
+Underfull \hbox (badness 1147) in paragraph at lines 910--911
+\TU/LibreBaskerville(0)/m/n/10 or clinical factors), clinicians could move towards the practice of “precision
+ []
 
 
 Overfull \hbox (72.51819pt too wide) has occurred while \output is active
@@ -1218,12 +1226,7 @@ Overfull \hbox (72.51819pt too wide) has occurred while \output is active
  []
 
 [53]
-Underfull \hbox (badness 1147) in paragraph at lines 914--915
-\TU/LibreBaskerville(0)/m/n/10 or clinical factors), clinicians could move towards the practice of “precision
- []
-
-
-Underfull \hbox (badness 1024) in paragraph at lines 927--928
+Underfull \hbox (badness 1024) in paragraph at lines 923--924
 \TU/LibreBaskerville(0)/m/n/10 and the proportion of non-European individuals has remained the same or
  []
 
@@ -1233,48 +1236,52 @@ Overfull \hbox (72.0382pt too wide) has occurred while \output is active
  []
 
 [55] [56]
+
+LaTeX Warning: Reference `Fst-chap' on page 57 undefined on input line 974.
+
+
+LaTeX Warning: Reference `Pilot-chap' on page 57 undefined on input line 979.
+
+
+LaTeX Warning: Reference `MIKK-F2-chap' on page 57 undefined on input line 979.
+
+
 Overfull \hbox (71.37819pt too wide) has occurred while \output is active
 \TU/LibreBaskerville(0)/m/it/10 1.4.  POOR TRANSFERABILITY OF POLYGENIC SCORES TO DIVERSE HUMAN POPULATIONS \TU/LibreBaskerville(0)/m/n/10 57
  []
 
 [57]
 
-LaTeX Warning: Reference `Fst-chap' on page 58 undefined on input line 978.
-
-
 LaTeX Warning: Reference `Pilot-chap' on page 58 undefined on input line 983.
 
 
 LaTeX Warning: Reference `MIKK-F2-chap' on page 58 undefined on input line 983.
 
-
-LaTeX Warning: Reference `Pilot-chap' on page 58 undefined on input line 987.
-
-
-LaTeX Warning: Reference `MIKK-F2-chap' on page 58 undefined on input line 987.
-
 [58]
+Underfull \hbox (badness 1097) in paragraph at lines 1019--1021
+\TU/LibreBaskerville(0)/m/it/10 Science and Religion\TU/LibreBaskerville(0)/m/n/10 . Gracewing Publishing. []$[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][][] [] [][] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (72.7882pt too wide) has occurred while \output is active
 \TU/LibreBaskerville(0)/m/it/10 1.4.  POOR TRANSFERABILITY OF POLYGENIC SCORES TO DIVERSE HUMAN POPULATIONS \TU/LibreBaskerville(0)/m/n/10 59
  []
 
 [59]
-Underfull \hbox (badness 1097) in paragraph at lines 1020--1022
-\TU/LibreBaskerville(0)/m/it/10 Science and Religion\TU/LibreBaskerville(0)/m/n/10 . Gracewing Publishing. []$[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][][] [] [][] []
- []
-
-
-Underfull \hbox (badness 5077) in paragraph at lines 1050--1052
+Underfull \hbox (badness 5077) in paragraph at lines 1049--1051
 []\TU/LibreBaskerville(0)/m/n/10 Berg, Jeremy J, Arbel Harpak, Nasa Sinnott-Armstrong, Anja Moltke Jo-
  []
 
 
-Underfull \hbox (badness 6078) in paragraph at lines 1050--1052
+Underfull \hbox (badness 6078) in paragraph at lines 1049--1051
 \TU/LibreBaskerville(0)/m/n/10 ergensen, Hakhamanesh Mostafavi, Yair Field, Evan August Boyle, et
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 1050--1052
+Underfull \hbox (badness 2245) in paragraph at lines 1049--1051
 \TU/LibreBaskerville(0)/m/n/10 al. 2019. “Reduced Signal for Polygenic Adaptation of Height in UK
  []
 
@@ -1282,6 +1289,11 @@ Underfull \hbox (badness 2245) in paragraph at lines 1050--1052
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [60]
+Underfull \hbox (badness 2073) in paragraph at lines 1094--1096
+\TU/LibreBaskerville(0)/m/n/10 Genome.gov. April 14, 2003. []$[][][][][] [] [] [] [][][] [] [][][][][][] [] [][][] [] [][][][][][][][] [] [][][][] [][]
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1293,8 +1305,18 @@ Overfull \hbox (71.56819pt too wide) has occurred while \output is active
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [62]
-Underfull \hbox (badness 10000) in paragraph at lines 1179--1181
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1183
 []$[][][][][] [] [] [] [][][][][][][][][][][][][][] [] [][][] [] [][][] [][] [][][][][] [][] [][][][][] [][] [][][] [][] [][][][][][][] [][] [][][][][][][][][][][][][] [][]
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 1202--1204
+[]\TU/LibreBaskerville(0)/m/n/10 Goodnight, Charles. 2014. “Sewall Wright’s Seven Generalizations about
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1202--1204
+[] [] [][][][] [] [][][] [] [][][] [] [][][][][][][][] [] [][][][] [] [][] [] [][] [] [][][][][][] [][] [][][][][][][] [][] [][][][][] [][] [][][][][][][][][][][][][][][] [][]
  []
 
 
@@ -1306,31 +1328,31 @@ Overfull \hbox (73.26819pt too wide) has occurred while \output is active
  []
 
 [63]
-Underfull \hbox (badness 2521) in paragraph at lines 1200--1202
-[]\TU/LibreBaskerville(0)/m/n/10 Goodnight, Charles. 2014. “Sewall Wright’s Seven Generalizations about
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1200--1202
-[] [] [][][][] [] [][][] [] [][][] [] [][][][][][][][] [] [][][][] [] [][] [] [][] [] [][][][][][] [][] [][][][][][][] [][] [][][][][] [][] [][][][][][][][][][][][][][][] [][]
+Underfull \hbox (badness 1259) in paragraph at lines 1238--1240
+\TU/LibreBaskerville(0)/m/n/10 United States – Iowa: Iowa State University. []$[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [64]
-Underfull \hbox (badness 1259) in paragraph at lines 1236--1238
-\TU/LibreBaskerville(0)/m/n/10 United States – Iowa: Iowa State University. []$[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] []
- []
-
-
-Underfull \hbox (badness 1019) in paragraph at lines 1266--1268
+Underfull \hbox (badness 1019) in paragraph at lines 1268--1270
 []\TU/LibreBaskerville(0)/m/n/10 Hwang, Liang-Dar, Justin D. Tubbs, Justin Luong, Mischa Lundberg, Gunn-
  []
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 1266--1268
+Underfull \hbox (badness 1701) in paragraph at lines 1268--1270
 \TU/LibreBaskerville(0)/m/n/10 Helen Moen, Geng Wang, Nicole M. Warrington, Pak C. Sham, Gabriel
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 1280--1282
+\TU/LibreBaskerville(0)/m/n/10 Recombinant Inbred Populations Resulting from Inter-Gene Pool Crosses
+ []
+
+
+Underfull \hbox (badness 2772) in paragraph at lines 1280--1282
+\TU/LibreBaskerville(0)/m/n/10 of Common Bean ( Phaseolus Vulgaris L.).” \TU/LibreBaskerville(0)/m/it/10 Euphytica \TU/LibreBaskerville(0)/m/n/10 106 (1): 45–56.
  []
 
 
@@ -1342,42 +1364,32 @@ Overfull \hbox (72.7882pt too wide) has occurred while \output is active
  []
 
 [65]
-Underfull \hbox (badness 1237) in paragraph at lines 1275--1277
-\TU/LibreBaskerville(0)/m/n/10 Recombinant Inbred Populations Resulting from Inter-Gene Pool Crosses
- []
-
-
-Underfull \hbox (badness 2772) in paragraph at lines 1275--1277
-\TU/LibreBaskerville(0)/m/n/10 of Common Bean ( Phaseolus Vulgaris L.).” \TU/LibreBaskerville(0)/m/it/10 Euphytica \TU/LibreBaskerville(0)/m/n/10 106 (1): 45–56.
- []
-
-
-Underfull \hbox (badness 1117) in paragraph at lines 1284--1286
+Underfull \hbox (badness 1117) in paragraph at lines 1289--1291
 []\TU/LibreBaskerville(0)/m/n/10 Kerminen, Sini, Alicia R. Martin, Jukka Koskela, Sanni E. Ruotsalainen, Aki
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 1284--1286
+Underfull \hbox (badness 2027) in paragraph at lines 1289--1291
 \TU/LibreBaskerville(0)/m/n/10 ation and Bias in the Polygenic Scores of Complex Diseases and Traits
  []
 
 
-Underfull \hbox (badness 3108) in paragraph at lines 1284--1286
+Underfull \hbox (badness 3108) in paragraph at lines 1289--1291
 \TU/LibreBaskerville(0)/m/n/10 in Finland.” \TU/LibreBaskerville(0)/m/it/10 The American Journal of Human Genetics \TU/LibreBaskerville(0)/m/n/10 104 (6): 1169–81.
  []
 
 
-Underfull \hbox (badness 1348) in paragraph at lines 1290--1292
+Underfull \hbox (badness 1348) in paragraph at lines 1295--1297
 []\TU/LibreBaskerville(0)/m/n/10 Khera, Amit V., Mark Chaffin, Krishna G. Aragam, Mary E. Haas, Carolina
  []
 
 
-Underfull \hbox (badness 5388) in paragraph at lines 1290--1292
+Underfull \hbox (badness 5388) in paragraph at lines 1295--1297
 \TU/LibreBaskerville(0)/m/n/10 Polygenic Scores for Common Diseases Identify Individuals with Risk
  []
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 1290--1292
+Underfull \hbox (badness 1152) in paragraph at lines 1295--1297
 \TU/LibreBaskerville(0)/m/n/10 Equivalent to Monogenic Mutations.” \TU/LibreBaskerville(0)/m/it/10 Nature Genetics \TU/LibreBaskerville(0)/m/n/10 50 (9, 9): 1219–24.
  []
 
@@ -1396,27 +1408,27 @@ Overfull \hbox (72.12819pt too wide) has occurred while \output is active
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [68]
-Underfull \hbox (badness 1377) in paragraph at lines 1404--1406
+Underfull \hbox (badness 1377) in paragraph at lines 1412--1414
 []\TU/LibreBaskerville(0)/m/n/10 Milmo, Cahal. 2007. “Fury at DNA Pioneer’s Theory: Africans Are Less
  []
 
 
-Underfull \hbox (badness 1748) in paragraph at lines 1404--1406
+Underfull \hbox (badness 1748) in paragraph at lines 1412--1414
 \TU/LibreBaskerville(0)/m/n/10 Intelligent Than Westerners.” \TU/LibreBaskerville(0)/m/it/10 The Independent: News\TU/LibreBaskerville(0)/m/n/10 , October 16, 2007.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1404--1406
+Underfull \hbox (badness 10000) in paragraph at lines 1412--1414
 []$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][] [] [][] [] [][] [] [][][][] [] [][][][][][][] [] [][][][] [][] [][] [][] [][][] [][] [][][][][][][] [][] [] [][] [][][][][][] [][]
  []
 
 
-Underfull \hbox (badness 1460) in paragraph at lines 1440--1442
+Underfull \hbox (badness 1460) in paragraph at lines 1451--1453
 []\TU/LibreBaskerville(0)/m/n/10 “Obituary: Fred Sanger the Scientist and Twice Nobel Prize Winner Dies.”
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1440--1442
+Underfull \hbox (badness 10000) in paragraph at lines 1451--1453
 [][][][][][][][][][] [] [][][][][][] [] [][][][][][][][] [][] [][][][] [][] [][][][][][] [][] [][][] [][] [][][][][][][][][] [][] [][][] [][] [][][][][] [][] [][][][][] [][]
  []
 
@@ -1431,27 +1443,27 @@ Overfull \hbox (73.5382pt too wide) has occurred while \output is active
 [69]
 Missing character: There is no α (U+03B1) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
 
-Underfull \hbox (badness 2142) in paragraph at lines 1446--1448
+Underfull \hbox (badness 2142) in paragraph at lines 1457--1459
 []\TU/LibreBaskerville(0)/m/n/10 Ozaki, Kouichi, Yozo Ohnishi, Aritoshi Iida, Akihiko Sekine, Ryo Yamada,
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 1446--1448
+Underfull \hbox (badness 1057) in paragraph at lines 1457--1459
 \TU/LibreBaskerville(0)/m/n/10 Tatsuhiko Tsunoda, Hiroshi Sato, et al. 2002. “Functional SNPs in the
  []
 
 
-Underfull \hbox (badness 6927) in paragraph at lines 1449--1451
+Underfull \hbox (badness 6927) in paragraph at lines 1460--1462
 []\TU/LibreBaskerville(0)/m/n/10 Paquette, Martine, Michael Chong, S’ebastien Th’eriault, Robert Dufour,
  []
 
 
-Underfull \hbox (badness 5787) in paragraph at lines 1449--1451
+Underfull \hbox (badness 5787) in paragraph at lines 1460--1462
 \TU/LibreBaskerville(0)/m/n/10 Prevalence of Cardiovascular Disease in Patients with Familial Hyper-
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 1449--1451
+Underfull \hbox (badness 1472) in paragraph at lines 1460--1462
 \TU/LibreBaskerville(0)/m/n/10 cholesterolemia.” \TU/LibreBaskerville(0)/m/it/10 Journal of Clinical Lipidology \TU/LibreBaskerville(0)/m/n/10 11 (3): 725–732.e5. []$[][][][][] []
  []
 
@@ -1459,22 +1471,22 @@ Underfull \hbox (badness 1472) in paragraph at lines 1449--1451
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [70]
-Underfull \hbox (badness 10000) in paragraph at lines 1476--1478
+Underfull \hbox (badness 10000) in paragraph at lines 1487--1489
 []$[][][][][] [] [] [] [][][] [] [][][][][][][] [] [][][] [] [][][][][][][] [] [][][][][][][] [] [][][] [][] [][][][][][] [][] [][][] [][] [][][] [][] [][][][][][][][][][] [][]
  []
 
 
-Underfull \hbox (badness 2134) in paragraph at lines 1482--1484
+Underfull \hbox (badness 2134) in paragraph at lines 1493--1495
 []\TU/LibreBaskerville(0)/m/n/10 Plomin, Robert, and Kathryn Asbury. 2005. “Nature and Nurture: Ge-
  []
 
 
-Underfull \hbox (badness 2941) in paragraph at lines 1482--1484
+Underfull \hbox (badness 2941) in paragraph at lines 1493--1495
 \TU/LibreBaskerville(0)/m/n/10 netic and Environmental Influences on Behavior.” \TU/LibreBaskerville(0)/m/it/10 The ANNALS of the
  []
 
 
-Underfull \hbox (badness 3364) in paragraph at lines 1482--1484
+Underfull \hbox (badness 3364) in paragraph at lines 1493--1495
 \TU/LibreBaskerville(0)/m/it/10 American Academy of Political and Social Science \TU/LibreBaskerville(0)/m/n/10 600 (1): 86–98. []$[][][][][] []
  []
 
@@ -1487,11 +1499,10 @@ Overfull \hbox (70.15819pt too wide) has occurred while \output is active
  []
 
 [71]
-Underfull \hbox (badness 3019) in paragraph at lines 1536--1538
+Underfull \hbox (badness 3019) in paragraph at lines 1550--1552
 []\TU/LibreBaskerville(0)/m/n/10 Saliba-Colombani, Vera, Mathilde Causse, Laurent Gervais, and Jacqueline
  []
 
-Missing character: There is no λ (U+03BB) in font Libre Baskerville/OT:script=latn;language=dflt;mapping=tex-text;!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1504,42 +1515,42 @@ Overfull \hbox (71.8582pt too wide) has occurred while \output is active
  []
 
 [73]
-Underfull \hbox (badness 1365) in paragraph at lines 1611--1613
+Underfull \hbox (badness 1365) in paragraph at lines 1625--1627
 []\TU/LibreBaskerville(0)/m/n/10 Strittmatter, Warren J., and Allen D. Roses. 1996. “Apolipoprotein E and
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 1611--1613
+Underfull \hbox (badness 1173) in paragraph at lines 1625--1627
 \TU/LibreBaskerville(0)/m/n/10 Alzheimer’s Disease.” \TU/LibreBaskerville(0)/m/it/10 Annual Review of Neuroscience \TU/LibreBaskerville(0)/m/n/10 19 (1): 53–77. []$[][][][][] []
  []
 
 
-Underfull \hbox (badness 5681) in paragraph at lines 1620--1622
+Underfull \hbox (badness 5681) in paragraph at lines 1634--1636
 \TU/LibreBaskerville(0)/m/n/10 Cheng, Elissa J Chesler, Abraham A Palmer, Leonard McMillan, and
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 1620--1622
+Underfull \hbox (badness 1596) in paragraph at lines 1634--1636
 \TU/LibreBaskerville(0)/m/n/10 Gary A Churchill. 2012. “High-Resolution Genetic Mapping Using the
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 1620--1622
+Underfull \hbox (badness 1902) in paragraph at lines 1634--1636
 \TU/LibreBaskerville(0)/m/n/10 Mouse Diversity Outbred Population.” \TU/LibreBaskerville(0)/m/it/10 Genetics \TU/LibreBaskerville(0)/m/n/10 190 (2): 437–47. []$[][][][][] []
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 1626--1628
+Underfull \hbox (badness 1571) in paragraph at lines 1640--1642
 []\TU/LibreBaskerville(0)/m/n/10 “The $11.9 Trillion Global Healthcare Market: Key Opportunities & Strate-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1626--1628
+Underfull \hbox (badness 10000) in paragraph at lines 1640--1642
 [][][] [] [][][][][][][][][][][][] [] [][][] [] [][][][] [] [][][][] [] [][][][][][][][][][][][][][] [] [][] [] [][][] [][] [][] [] [] [][] [][][][][][][][] [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1626--1628
+Underfull \hbox (badness 10000) in paragraph at lines 1640--1642
 [][][][][][] [][] [][][][][][][][][][] [][] [][][][][][] [][] [][][] [][] [][][][][][][][][][][][][] [][] [][][][][][][][][][] [][] [][][][] [][] [][][][] [][][][][][]
  []
 
@@ -1555,36 +1566,31 @@ Overfull \hbox (71.23819pt too wide) has occurred while \output is active
  []
 
 [75]
-Underfull \hbox (badness 5008) in paragraph at lines 1683--1685
+Underfull \hbox (badness 5008) in paragraph at lines 1703--1705
 \TU/LibreBaskerville(0)/m/n/10 ber 1, 2021. []$[][][][][] [] [] [] [][][] [] [][][][][][] [] [][][] [] [][][][][] [][] [][][][][][][][] [] [][][][] [][] [][][][][][] [] [][][] [][]
  []
 
 
-Underfull \hbox (badness 2426) in paragraph at lines 1686--1688
+Underfull \hbox (badness 2426) in paragraph at lines 1706--1708
 \TU/LibreBaskerville(0)/m/n/10 Free Media Repository.” []$[][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][][][] [] [][][] [] [] [] [][][][][] []
  []
 
 
-Underfull \hbox (badness 5578) in paragraph at lines 1698--1700
+Underfull \hbox (badness 5578) in paragraph at lines 1718--1720
 \TU/LibreBaskerville(0)/m/n/10 Media Repository.” []$[][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][][][] [] [][][] [] [] [] [][][][][] [] [][][] []
  []
 
 
-Underfull \hbox (badness 5578) in paragraph at lines 1704--1706
+Underfull \hbox (badness 5578) in paragraph at lines 1724--1726
 \TU/LibreBaskerville(0)/m/n/10 Media Repository.” []$[][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][][][] [] [][][] [] [] [] [][][][][] [] [][][] []
- []
-
-
-Underfull \hbox (badness 2426) in paragraph at lines 1713--1715
-\TU/LibreBaskerville(0)/m/n/10 Free Media Repository.” []$[][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][][][] [] [][][] [] [] [] [][][][][] []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [76]
-Underfull \hbox (badness 3118) in paragraph at lines 1758--1760
-\TU/LibreBaskerville(0)/m/n/10 Genome-Wide Association Studies for Height and Body Mass Index in
+Underfull \hbox (badness 2426) in paragraph at lines 1733--1735
+\TU/LibreBaskerville(0)/m/n/10 Free Media Repository.” []$[][][][] [] [][][][][][][] [] [] [] [][][][][][][] [] [][][][][][][][][] [] [][][] [] [] [] [][][][][] []
  []
 
 
@@ -1595,7 +1601,12 @@ Overfull \hbox (70.71819pt too wide) has occurred while \output is active
 \TU/LibreBaskerville(0)/m/it/10 1.4.  POOR TRANSFERABILITY OF POLYGENIC SCORES TO DIVERSE HUMAN POPULATIONS \TU/LibreBaskerville(0)/m/n/10 77
  []
 
-[77] [78] (./PhD-thesis.aux)
+[77]
+Underfull \hbox (badness 3118) in paragraph at lines 1778--1780
+\TU/LibreBaskerville(0)/m/n/10 Genome-Wide Association Studies for Height and Body Mass Index in
+ []
+
+[78] (./PhD-thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1603,10 +1614,10 @@ Package rerunfilecheck Info: File `PhD-thesis.out' has not changed.
 (rerunfilecheck)             Checksum: F7248FC027EE37BF88F4A5CF8E2049D5;1554.
  ) 
 Here is how much of TeX's memory you used:
- 21597 strings out of 477747
- 413839 string characters out of 5843090
- 1007492 words of memory out of 5000000
- 42286 multiletter control sequences out of 15000+600000
+ 21607 strings out of 477747
+ 414176 string characters out of 5843090
+ 1005440 words of memory out of 5000000
+ 42295 multiletter control sequences out of 15000+600000
  476887 words of font info for 114 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  86i,8n,122p,1764b,532s stack positions out of 10000i,1000n,20000p,200000b,200000s
