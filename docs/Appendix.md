@@ -8,16 +8,6 @@
 \includegraphics[width=1\linewidth]{figs/mikk_genome/supp_02_pi_chrs_1_22} \caption{(ref:uc-div-per-indiv)}(\#fig:nuc-div-per-indiv)
 \end{figure}
 
-# Chapter 4 supplementary information
-
-## Recombination blocks for F2 individuals showing regions with missing genotype calls
-
-(ref:karyo-wi-missing) Recombination blocks in 622 F2 samples based on the ratio of reads mapping to either the *Cab* or *Kaga* allele within 5-kb bins, with homozygous-*Cab* blocks in green, heterozoygous blocks in navy blue, and homozygous *Kaga* blocks in red. Most blocks show 0-2 crossover events, as expected, with some regions showing higher numbers of crossovers interpreted as noise. Unfilled regions are those with no state called by the HMM due to a lack of reads mapping to SNPs within those 5-kb bins.
-
-\begin{figure}
-\includegraphics[width=1\linewidth]{figs/somites/karyoplot_wi_missing} \caption{(ref:karyo-wi-missing)}(\#fig:karyo-wi-missing)
-\end{figure}
-
 # Chapter 5 supplementary information
 
 ## 15 HMM states with 0.05 second interval

@@ -90,6 +90,9 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 \usepackage{float}
+%\usepackage{newtxmath}
+\usepackage{amsmath}
+\usepackage{listings}
 %\floatplacement{figure}{H}
 \usepackage{booktabs}
 \usepackage{setspace}
@@ -182,8 +185,6 @@
 \chapter*{Acknowledgements}\label{acknowledgements}}
 \addcontentsline{toc}{chapter}{Acknowledgements}
 
-Thanks.
-
 \hypertarget{preface}{%
 \chapter*{Preface}\label{preface}}
 \addcontentsline{toc}{chapter}{Preface}
@@ -198,15 +199,15 @@ It does not exceed the prescribed word limit for the Degree Committee for the Fa
 \chapter*{Abstract}\label{abstract}}
 \addcontentsline{toc}{chapter}{Abstract}
 
-This thesis primarily explores how an individual's genes interact with the genes of their social companions to create differences in behaviour, using the Japanese medaka fish as a model organism. Chapter 1 sets out the introduction to the diverse topics covered in this thesis.
+This thesis primarily explores how an individual's genes interact with the genes of their social companions to create differences in behaviour, using the Japanese medaka fish as a model organism. Chapter 1 sets out the introduction to the diverse topics covered in this thesis, followed by five substantive chapters.
 
 Chapter 2 describes several genomic characteristics of the Medaka Inbred Kiyosu-Karlsruhe (MIKK) panel, which comprises 80 inbred lines of medaka that were bred from a wild population found in the city of Kiyosu, in southern Japan. In this chapter I plot the inbreeding trajectory of the MIKK panel and analyse a number of genomic characteristics relevant to its utility for the genetic mapping of complex traits, including: the panel's evolutionary relationship with other previously established inbred medaka strains; the degree of homozygosity in the inbred lines; the rate of linkage disequilibrium decay across the panel; and the genomic repeats and structural variation present in their genomes.
 
 In Chapter 3, I use a custom behavioural assay to characterise and classify bold-shy behaviours in 5 previously established inbred medaka lines. I describe the assay, assess its robustness against confounding factors, and apply a hidden markov model (HMM) to classify the fishes' behaviours across a spectrum of boldness-shyness based on the individuals' distance and angle of travel between pre-defined time intervals. I describe how the lines differ in their behaviours over the course of the assay (a ``direct genetic effect'') and how the behaviour of a single ``reference'' line (\emph{iCab}) differs in the presence of different lines (a ``social genetic effect'').
 
-In Chapter 4 I describe the bioinformatic processes and genetic association models that I used to map the variants associated with differences in the period of somite development, based on an F2 cross between the southern Japanese \emph{iCab} strain, and the northern Japanese \emph{Kaga} strain.
+In Chapter 4 I describe the bioinformatic processes and genetic association models that I used to map the variants associated with differences in the period of somite development, based on an F\textsubscript{2} cross between the southern Japanese \emph{iCab} strain, and the northern Japanese \emph{Kaga} strain.
 
-In Chapter 5, I explain how I ran our custom behavioural assay over the MIKK panel to identify lines that diverge in both their own bold-shy behaviours (the direct genetic effect) and the extent to which they transmit those behaviours onto their tank partners (the social genetic effect). I then describe how I used those divergent lines as the parental lines in a multi-way F2 cross in an attempt to isolate the genetic variants that are associated with both direct and social genetic effects.
+In Chapter 5, I explain how I ran our custom behavioural assay over the MIKK panel to identify lines that diverge in both their own bold-shy behaviours (the direct genetic effect) and the extent to which they transmit those behaviours onto their tank partners (the social genetic effect). I then describe how I used those divergent lines as the parental lines in a multi-way F\textsubscript{2} cross in an attempt to isolate the genetic variants that are associated with both direct and social genetic effects.
 
 Finally, in Chapter 6, I turn to humans to compare and rank all complex traits in the GWAS Catalog based on the extent to which their associated alleles vary across global populations, using the Fixation Index (\(F_{ST}\)) as a metric, and the 1000 Genomes dataset as a sample of global genetic variation. In this chapter I set out the bioinformatic pipelines used to process the data, present the distributions of \(F_{ST}\) for trait-associated alleles across the genome, and use the Kolmogorov-Smirnov test to compare the distributions of \(F_{ST}\) across different traits.
 
@@ -520,7 +521,7 @@ While Morgan was carrying out his experiments with \emph{Drosophila}, Japanese r
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.9\linewidth]{figs/introduction/Aida} 
+{\centering \includegraphics[width=0.8\linewidth]{figs/introduction/Aida} 
 
 }
 
@@ -544,7 +545,7 @@ In the 1930s, Theodosius Dobzhansky (\textbf{Figure \ref{fig:dobzhansky}}), a Uk
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{figs/introduction/Dobzhansky} 
+{\centering \includegraphics[width=0.5\linewidth]{figs/introduction/Dobzhansky} 
 
 }
 
@@ -693,6 +694,45 @@ h^2 = 2\times(r_{MZ} - r_{DZ})
 
 Narrow-sense heritability \(h^2\) can therefore be estimated by doubling the difference between the correlation coefficients of MZ versus DZ twins. A 2015 meta-analysis of virtually all human twin studies that had been performed to that date included 2,748 twin studies assessing \textasciitilde18,000 traits and \textasciitilde14.5M twin pairs. The results showed that across all traits, \(h^2\) is 0.488 and \(c^2\) is 0.174 (Polderman et al. 2015). Moreover, in 69\% of studies \(2r_{DZ} = r_{MZ}\), implying that the shared environment \(c^2\) is equivalent across both MZ and DZ twin pairs, and that for most traits, shared environmental or non-additive genetic variation do not make a substantial contribution to phenotypic variation. This was most prominent for neurological, ear, nose and throat, cardiovascular and ophthalmological domains. On the other hand, that study found that several behavioural traits were inconsistent with this model. These traits included conduct disorder, higher-level cognitive functions, mental and behavioural disorders due to the use of alcohol or tobacco, anxiety disorder, and weight maintenance. For these traits, either or both non-additive genetic influences or shared environmental influences are therefore needed to explain the observed patterns of twin correlations (Polderman et al. 2015). Leaving to one side the non-additive genetic influences on a phenotype -- which are outside the scope of this thesis -- the findings of this study make it clear that environmental influences contribute substantially to differences in behaviours in humans, which may be further complicated by interactions between the two sources of variation. As social creatures, our social environment is a particularly salient environmental factor, which I discuss below in section \ref{SGE}.
 
+\hypertarget{gene-environment-interactions}{%
+\subsection{Gene-environment interactions}\label{gene-environment-interactions}}
+
+The model presented above in Equation \eqref{eq:pge-simp} assumes that the environment has the same effect on different genotypes. When this is not true, and the variance components of genes and environment do not add up, that is, where \(V_{P} \neq V_{G} + V_{E}\), there is said to be an interaction between genes and environment (\textbf{GxE}) (\textbf{Figure \ref{fig:pgxe}}) (Falconer and Mackay 1996).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figs/introduction/pgxe} 
+
+}
+
+\caption{(ref:pgxe)}\label{fig:pgxe}
+\end{figure}
+
+It can be expressed mathematically as:
+
+\begin{equation}
+P = G + E + I_{G\times E} \label{eq:gbye}
+\end{equation}
+
+Where the variance decomposition is:
+
+\begin{equation}
+V_P = V_G + V_E + V_{G\times E} \label{eq:gbyedecomp}
+\end{equation}
+
+The general concept behind GxE is set out in the schema presented in \textbf{Figure \ref{fig:schema-gxe}}, where two different genotypes, \(G_A\) and \(G_B\), are measured for the phenotype \(P\) under two different environments, \(E_1\) and \(E_2\). Figure \ref{fig:schema-gxe}A represents a situation where \(P = G + E\) holds. Figure \ref{fig:schema-gxe}B represents a situation where there is an interaction between genes and environment. GxE is common in nature (Garcia de Le'aniz, Verspoor, and Hawkins 1989; Sgr`o and Hoffmann 2004), and is likely to be particularly relevant to social behaviours, which I expand upon below in section \ref{SGE}.
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figs/introduction/schema_gxe} 
+
+}
+
+\caption{Two different genotypes, \(G_A\) and \(G_B\) are measured for the phenotype \(P\) under two different environments, \(E_1\) and \(E_2\). Figure adapted from (Caballero 2020).}\label{fig:schema-gxe}
+\end{figure}
+
 \hypertarget{GWAS}{%
 \subsection{From global variance to individual loci -- family genetic linkage studies and GWAS}\label{GWAS}}
 
@@ -702,28 +742,29 @@ Instead of tracing genes through families, an alternative approach is to map gen
 
 It became clear that Mendelian diseases were rare, caused by highly-penetrant, monogenic variants that remain rare in the population likely as a consequence of purifying selection (Di Rienzo 2006; Jonathan K. Pritchard and Cox 2002; Quintana-Murci and Barreiro 2010; Reich and Lander 2001). In contrast, common diseases tend to be late onset, therefore leaving reproductive fitness unaffected. This logic led to the ``common disease - common variant'' hypothesis, driving a push to expand association analyses genome-wide (Collins, Guyer, and Chakravarti 1997; Lander 1996; Risch and Merikangas 1996).
 
-Next-generation sequencing technologies enabled the inclusion of thousands of SNP markers to be tested simultaneously for their association with a phenotype of interest, with the first genome-wide association study (\textbf{GWAS}) published in 2001 (Ozaki et al. 2002). GWAS aim to identify genetic variants associated with traits by comparing the allele frequencies of individuals who share similar ancestries, but differ in values for the trait in question (Uffelmann et al. 2021). As of 2021, over 5,700 GWAS have been performed for more than 3,330 human traits (Uffelmann et al. 2021).
+Next-generation sequencing technologies enabled the inclusion of thousands of SNP markers to be tested simultaneously for their association with a phenotype of interest, with the first Genome-Wide Association Study (\textbf{GWAS}) published in 2001 (Ozaki et al. 2002). GWAS aim to identify genetic variants associated with traits by comparing the allele frequencies of individuals who share similar ancestries, but differ in values for the trait in question (Uffelmann et al. 2021). As of 2021, over 5,700 GWAS have been performed for more than 3,330 human traits (Uffelmann et al. 2021).
 
 In its simple form, GWAS runs a linear model for each SNP marker of the form (Caballero 2020):
 
-\[
-\textbf{y} = \alpha + \boldsymbol{\beta} \textbf{x} + \textbf{e}
-\]
-Where \(\textbf{y}\) is a vector of the sample phenotypes, \(\alpha\) is the population mean, \(\boldsymbol{\beta}\) is a vector of the effect sizes of the marker, \(\textbf{x}\) is the number of copies of an allele for each marker, and \(\textbf{e}\) is a vector of random residual errors.
+\begin{equation}
+\textbf{y} = \alpha + \pmb{\beta} \textbf{x} + \textbf{e} \label{eq:gwassimp}
+\end{equation}
+
+Where \(\textbf{y}\) is a vector of the sample phenotypes, \(\alpha\) is the population mean, \(\pmb{\beta}\) is a vector of the effect sizes of the marker, \(\textbf{x}\) is the number of copies of an allele for each marker, and \(\textbf{e}\) is a vector of random residual errors.
 
 However, GWAS must always grapple with population structure and unequal relatedness among individuals, which in a given cohort can lead to false discoveries (Ewens and Spielman 1995; Members of the Complex Trait Consortium 2003). This phenomenon is caused by the fact that individuals who share common ancestries will share both variants that do affect the trait of interest, and variants that do not. The non-causal variants that are correlated with the causal variants due to this shared ancestry will therefore also be found to be statistically associated with the trait. Recent methods for dealing with this issue include admixture inference (Jonathan K. Pritchard, Stephens, and Donnelly 2000) (to identify related clusters), and principal components analysis (Price et al. 2006) (to include the first set of principal components as covariates in the model). A popular method, which can also be combined with the above methods, is to use a linear mixed model which includes a kinship or Genetic Relationship Matrix (\textbf{GRM}) as a random effect (Loh et al. 2015; Yu et al. 2006). The standard linear regression model currently used for GWAS can be written as follows (Uffelmann et al. 2021):
 
 \begin{equation}
-\textbf{Y} \sim \textbf{W} \alpha ~+~\textbf{X}_s\boldsymbol{\beta}_s + g + e
+\textbf{Y} \sim \textbf{W} \alpha ~+~\textbf{X}_s\pmb{\beta}_s + g + e \label{eq:gwaslmm}
 \end{equation}
 \begin{equation}
-g \sim N(0,\sigma^2_A\psi)
+g \sim N(0,\sigma^2_A\pmb{\psi}) \label{eq:gwaslmmg}
 \end{equation}
 \begin{equation}
-e \sim N(0,\sigma^2_e \textbf{I})
+e \sim N(0,\sigma^2_e \textbf{I}) \label{eq:gwaslmme}
 \end{equation}
 
-Where, for each individual, \(\textbf{Y}\) is a vector of phenotype values, \(\textbf{W}\) is a matrix of covariates including an intercept term, \(\alpha\) is a corresponding vector of effect sizes, \(X_s\) is a vector of genotype values for all individuals at SNP \(s\), \(\boldsymbol{\beta}_s\) is the corresponding fixed effect size of genetic variant \(s\) (also known as the SNP effect size), \(g\) is a random effect that captures the polygenic effect of other SNPs, \(e\) is a random effect of residual errors, \(\sigma^2_{A}\) measures additive genetic variation of the phenotype, \(\psi\) is the standard genetic relationship matrix, \(\sigma^2_e\) measures residual variance, and \(\textbf{I}\) is an identity matrix (Uffelmann et al. 2021).
+Where, for each individual, \(\textbf{Y}\) is a vector of phenotype values, \(\textbf{W}\) is a matrix of covariates including an intercept term, \(\alpha\) is a corresponding vector of effect sizes, \(X_s\) is a vector of genotype values for all individuals at SNP \(s\), \(\pmb{\beta}_s\) is the corresponding fixed effect size of genetic variant \(s\) (also known as the SNP effect size), \(g\) is a random effect that captures the polygenic effect of other SNPs, \(e\) is a random effect of residual errors, \(\sigma^2_{A}\) measures additive genetic variation of the phenotype, \(\pmb{\psi}\) is the standard genetic relationship matrix, \(\sigma^2_e\) measures residual variance, and \(\textbf{I}\) is an identity matrix (Uffelmann et al. 2021).
 
 GWAS output a \(p\)-value and directional effect size (\(\beta\)) for each tested SNP. As the method tends to test millions of SNPs, there need to be corrections for multiple testing. The preferred method for setting the \(p\)-value threshold for significance varies depending on the study, but in essence it indicates the proportion of false positives that the investigator is willing to tolerate in their study (Clarke et al. 2011). By convention, in human studies the threshold is set at \(p < 5 \times 10^{-8}\) (Barsh et al. 2012; Bush and Moore 2012; Clarke et al. 2011). Bonferroni correction adjusts the type I error rate \(\alpha\) by the number of tests performed, so if \(\alpha = 0.05\) and the number of loci tested is 500,000, the corrected significance threshold is \(0.05 / 500,000 = 1\times10^{-6}\). However, Bonferroni correction tends to be conservative, as it assumes that all loci are independent, which is untrue due to genetic linkage. A correction for the false discovery rate (\textbf{FDR}) provides an estimate of the proportion of significant results that are actually true (Hochberg and Benjamini 1990), and is widely applied to GWAS (van den Oord 2008), but also suffers from that lack of independence between loci. The `gold standard' method for accurate detection is permutation testing (Westfall and Young 1993), where the phenotype is randomly permuted across samples and a separate GWAS is run \(N\) times, representing \(N\) possible samplings of individuals under the null hypothesis. Although more computationally intensive, it generates an empirical distribution with resolution \(N\), such that an \(N\) of 10 gives an empirical \(p\)-value of 1/10\textsuperscript{th} of a decimal place (Bush and Moore 2012).
 
@@ -741,7 +782,7 @@ Although the mouse is an appropriate model for humans due to their orthologous m
 \hypertarget{MIKK-background}{%
 \subsection{The Medaka Inbred Kiyosu-Karlsruhe (MIKK) panel}\label{MIKK-background}}
 
-The medaka fish (\emph{Oryzias latipes}) is the model organism studied by Tatsuo Aida, described above in section \ref{mapping-sec}. It has now been studied as a model organism in Japan for over a century (Wittbrodt, Shima, and Schartl 2002), and is gaining recognition elsewhere as a powerful genetic model for vertebrates (Spivakov et al. 2014). In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, high fertility, and concise genome), medaka are also -- uniquely among vertebrates -- resilient to inbreeding \emph{from the wild}.
+The medaka fish (\emph{Oryzias latipes}) is the model organism studied by Tatsuo Aida, introduced above in section \ref{mapping-sec}. It has now been studied as a model organism in Japan for over a century (Wittbrodt, Shima, and Schartl 2002), and is gaining recognition elsewhere as a powerful genetic model for vertebrates (Spivakov et al. 2014). In addition to possessing a number of desirable traits that are characteristic of model organisms (including their small-size, short reproduction time, high fertility, and concise genome), medaka are also -- uniquely among vertebrates -- resilient to inbreeding \emph{from the wild}.
 
 This resilience to inbreeding has allowed (predominantly Japanese) researchers to develop several inbred strains that have been maintained for over 100 generations (Murata et al. 2019). One of the most famous inbred medaka strains, \emph{HdrR}, was derived from Tatsuo Aida's collection of southern Japanese medaka fish (Fukamachi and Naruse 2021). Other prominent strains include \emph{HO5} and \emph{iCab} from southern Japan, and \emph{Kaga} and \emph{HNI} from northern Japan. The locations of the originating populations of these strains are set out in \textbf{Figure \ref{fig:line-locations}}.
 
@@ -774,7 +815,7 @@ The MIKK Panel was created to map genetic variants associated with quantitative 
   The structural variants present in a smaller sample of lines using Oxford Nanopore long-read sequencing data (Chapter \ref{mikksv-sec}).
 \end{enumerate}
 
-The fundamental utility of the MIKK panel arises from: a) its representation of the genetic variation that exists in a wild population; b) the ability to replicate individuals with near-identical genotypes, allowing one to modify environmental variables while keeping the genetics constant to determine the strength of those environmental effects; and c) the presence of numerous inbred lines that can by placed in the same environment, allowing one to infer the strength of the genetic effect. The overarching purpose of the MIKK panel is to provide a resource for researchers who seek to combine the traditional F\textsubscript{2} cross technique used by Mendel with modern genetic sequencing and statistical methods, in order to identify genetic variants associated with complex traits. I describe this process below.
+The fundamental utility of the MIKK panel arises from: a) its representation of the genetic variation that exists in a wild population; b) the ability to replicate individuals with near-identical genotypes, allowing one to modify environmental variables while keeping the genetics constant to determine the strength of those environmental effects; and c) the presence of numerous inbred lines that can by placed in the same environment, allowing one to infer the strength of the genetic effect. The overarching purpose of the MIKK panel is to provide a resource for researchers who seek to combine the traditional F\textsubscript{2} cross technique used by Mendel with modern genetic sequencing and statistical methods, in order to identify genetic variants associated with complex traits. I describe this process below. For the sake of clarity, in this thesis I refer to the previously established inbred medaka strains \emph{iCab}, \emph{HdrR}, \emph{HO5}, \emph{HNI} and \emph{Kaga} as ``strains'', and the MIKK panel inbred lines as ``lines'', although in effect the two terms are synonymous.
 
 \hypertarget{the-f2-cross}{%
 \subsection{\texorpdfstring{The F\textsubscript{2} cross}{The F2 cross}}\label{the-f2-cross}}
@@ -823,9 +864,7 @@ Somite formation occurs rhythmically and sequentially, with the time between the
 
 The period of somite formation is controlled by a molecular oscillator, known as the `segmentation clock', which drives waves of gene expression in the Notch, fibroblast growth factor (FGF), and Wnt pathways, forming a signalling gradient that regresses towards the tail in concert with axis elongation (Gomez et al. 2008). Over the course of elongation, the wave period increases (i.e.~each somite takes longer to form), and the PSM progressively shrinks until it is exhausted, eventually terminating somite formation (Gomez et al. 2008).
 
-It is not fully understood how the phase waves of the segmentation clock are initially established (Falk et al. 2022). Matsuda et al. (2020) found that period differences between mouse and human occur at the single-cell level (i.e.~not due to intercellular communication), and are driven by biochemical reaction speeds - specifically, mRNA and protein degradation rates, transcription and translation delays, and intron and splicing delays. To identify the genetic basis of these biochemical differences, our collaborators Ali Seleit and Alexander Aulehla at EMBL-Heidelberg used a CRISPR-Case9 knock-in approach (Seleit, Aulehla, and Paix 2021) to establish a medaka \emph{Cab} strain with an endogenous, fluorescing reporter gene (Her7-Venus) for the oscillation signalling pathway. This method allows them to image somite formation and extract quantitative measures for segmentation clock dynamics.
-
-In medaka, it is known that the southern Japanese \emph{Cab} strain and the northern Japanese \emph{Kaga} strain have divergent somite periodicity, where \emph{Kaga}'s tends to be faster, and \emph{Cab}'s slower (\textbf{Figure \ref{fig:F0-Cab-Kaga-HdrR}}).
+It is not fully understood how the phase waves of the segmentation clock are initially established (Falk et al. 2022). Matsuda et al. (2020) found that period differences between mouse and human occur at the single-cell level (i.e.~not due to intercellular communication), and are driven by biochemical reaction speeds - specifically, mRNA and protein degradation rates, transcription and translation delays, and intron and splicing delays. To identify the genetic basis of these biochemical differences, our collaborators Ali Seleit and Alexander Aulehla at EMBL-Heidelberg used a CRISPR-Cas9 knock-in approach (Seleit, Aulehla, and Paix 2021) to establish a medaka \emph{Cab} strain with an endogenous, fluorescing reporter gene (Her7-Venus) for the oscillation signalling pathway. This method allows them to image somite formation and extract quantitative measures for segmentation clock dynamics, and they determined that the southern Japanese \emph{Cab} strain and the northern Japanese \emph{Kaga} strain have divergent somite periodicity, where \emph{Kaga}'s tends to be faster, and \emph{Cab}'s slower (\textbf{Figure \ref{fig:F0-Cab-Kaga-HdrR}}).
 
 
 
@@ -838,7 +877,7 @@ In medaka, it is known that the southern Japanese \emph{Cab} strain and the nort
 \caption{Comparison of period for three inbred medaka strains (\emph{Cab}, \emph{Kaga} and \emph{HdrR}). Kaga's period is lower, and therefore it takes less time to form each somite than \emph{Cab}. Figure generated by Ali Seleit.}\label{fig:F0-Cab-Kaga-HdrR}
 \end{figure}
 
-Our collaborators accordingly set up a one-way F\textsubscript{2} cross experiment as described in Chapter \ref{MIKK-F2-cross}, using the reporter-carrying \emph{Cab} strain and the \emph{Kaga} strain as the parental F\textsubscript{0} strains, in order to identify genetic loci associated with these differences in clock dynamics. They inter-crossed the hybrid F\textsubscript{1} generation to create a sample of 622 F\textsubscript{2} individuals, imaged the developing embryos of these F\textsubscript{2} samples, and used pyBOAT (Schmal, Mönke, and Granada 2022) to extract the oscillation features during somite development. \textbf{Figure \ref{fig:somite-period-ali}} shows a series of raw images used by pyBOAT to track the elongation of a medaka tail during somitogenesis, with the identified posterior tip of the embryo labelled with a blue circle.
+Our collaborators accordingly set up an F\textsubscript{2} cross experiment as described above, using the reporter-carrying \emph{Cab} strain and the \emph{Kaga} strain as the parental F\textsubscript{0} strains, in order to identify genetic loci associated with these differences in clock dynamics. They inter-crossed the hybrid F\textsubscript{1} generation to create a sample of 622 F\textsubscript{2} individuals, imaged the developing embryos of these F\textsubscript{2} samples, and used pyBOAT (Schmal, Mönke, and Granada 2022) to extract the oscillation features during somite development. \textbf{Figure \ref{fig:somite-period-ali}} shows a series of raw images used by pyBOAT to track the elongation of a medaka tail during somitogenesis, with the identified posterior tip of the embryo labelled with a blue circle. In \textbf{Chapter \ref{Somite-chap}}, I describe the bioinformatic analyses I performed to map the genetic variants associated with this period phenotype.
 
 
 
@@ -858,31 +897,25 @@ In \textbf{Chapters \ref{Pilot-chap}} and \textbf{\ref{MIKK-F2-chap}} I use meda
 
 Boldness-shyness is thought to be a fundamental axis of behavioural variation in many species, with an obvious causal relationship to an individual's likelihood of survival, and consequently with natural selection at the population level (Sloan Wilson et al. 1994). It represents an evolutionary trade-off between acquiring benefits (in terms of food or mates) and avoiding harms (in terms of predators or conspecific competitors), with each situation accompanied by its own optimal degree of risk (Lima and Dill 1990). It is both heritable (Svartberg 2002; Culum Brown, Burgess, and Braithwaite 2007), and subject to change following different life experiences or under different environmental conditions (Culum Brown, Burgess, and Braithwaite 2007).
 
-{[}OPEN FIELD AND NOVEL OBJECT IS A GENERIC PARADIGM, NOT JUST FISH. CITE BAUD.{]}
+This axis of behaviour has been studied extensively in many organisms. Two generic paradigms for measuring boldness include the `open field' test, and the `novel object' test. The open field test involves observing the test subject while it moves freely in an experimental setting, and has been performed on the bullfrog tadpole (Carlson and Langkilde 2013), gecko (Nordberg, Denny, and Schwarzkopf 2021), mouse (Garfield et al. 2011; Yuen et al. 2017), rat (Baud et al. 2014), rabbit (Meijsser et al. 1989), common vole (Herde and Eccard 2013), and Siberian dwarf hamster (Kanda, Louon, and Straley 2012). It is particularly favoured with fish, where the general interpretation is that shy individuals tend to react to novelty by reducing their activity and becoming more vigilant, whereas bold individuals show higher levels of activity and exploratory behaviour (C. Brown, Jones, and Braithwaite 2007; Matsunaga and Watanabe 2010; Laland, Krause, and Brown 2011; Dahlbom et al. 2011; Lucon-Xiccato and Bisazza 2017; Alfonso et al. 2019; Lucon-Xiccato et al. 2020, 2022; Hamilton et al. 2021){]}
 
-Boldness-shyness has been studied extensively with fish. Shy individuals tend to react to novelty by reducing their activity and becoming more vigilant, whereas bold individuals show higher levels of activity and exploratory behaviour (C. Brown, Jones, and Braithwaite 2007). One assay commonly used to measure this behavioural domain is referred to as the `open field' assay, where fishes are observed while swimming freely in an experimental setting (C. Brown, Jones, and Braithwaite 2007; Laland, Krause, and Brown 2011; Lucon-Xiccato et al. 2022, 2020; Lucon-Xiccato and Bisazza 2017; Matsunaga and Watanabe 2010).
+The second paradigm is the `novel object' test, where a novel object is introduced to the test subject's environment as a way of simulating a threat. The test has been used with birds (de Azevedo and Young 2006), squirrels (Uchida et al. 2019), rabbits (A. Andersson, Laikre, and Bergvall 2014), baboons (Carter et al. 2012), vervet monkeys (Blaszczyk 2017), and grey mouse lemurs (Dammhahn and Almeling 2012). Like the open field test, it has also been extensively used with fish (C. Brown, Jones, and Braithwaite 2007; Schjolden, Stoskhus, and Winberg 2005; Wilson et al. 1993; Dominic Wright, Butlin, and Carlborg 2006; D. Wright et al. 2003; Hamilton et al. 2021).
 
-Another is the `novel object' assay, where a novel object is introduced to the fishes' environment to simulate a threat (C. Brown, Jones, and Braithwaite 2007; Schjolden, Stoskhus, and Winberg 2005; Wilson et al. 1993; Dominic Wright, Butlin, and Carlborg 2006; D. Wright et al. 2003). Where both assays were performed on the same fish, the behaviours exhibited were found to be correlated across assays, indicating that both were measuring the same boldness-shyness axis (C. Brown, Jones, and Braithwaite 2007). Both the open field and novel object assay also permit the measurement of habituation, where the response of the fish may change over time after growing accustomed to the new environment or object. Variation in the length of time the fish take to return to a more ``normal'' level of movement may indicate different levels of boldness (Laland, Krause, and Brown 2011).
+Where both test paradigms are performed on the same fish, the behaviours exhibited were found to be correlated across assays, indicating that both were measuring the same boldness-shyness axis (C. Brown, Jones, and Braithwaite 2007). Both the open field and novel object test also permit the measurement of habituation, where the response of the fish may change over time after growing accustomed to the new environment or object. Variation in the length of time the fish take to return to a more ``normal'' level of movement may indicate different levels of boldness (Laland, Krause, and Brown 2011).
 
 \hypertarget{SGE}{%
 \subsection{Social genetic effects}\label{SGE}}
 
-The experiments described in \textbf{Chapters \ref{Pilot-chap}} and \textbf{\ref{MIKK-F2-chap}} are designed to simulataneously measure both the direct effect of an individual's genes on their behaviour, as we as the indirect effect of their social partner's genes on the focal individual's behaviour, which is also an environmental factor (Baud et al. 2017). Social genetic effects have been shown to exert influence on various traits in mice including anxiety, wound healing, immune function, and body weight (Baud et al. 2017), and various traits related to development and survival in many species of livestock (Ellen et al. 2014). However, in those studies the social interactions were maintained throughout development, and it is unclear whether social genetic effects can still exert influence on adaptive behaviours during discrete, time-limited interactions.
+The experiments I describe in \textbf{Chapters \ref{Pilot-chap}} and \textbf{\ref{MIKK-F2-chap}} are designed to simultaneously measure both the direct effect of an individual's genes on their behaviour, as well as the indirect effect of their social partner's genes on the focal individual's behaviour, which is also an environmental factor (Baud et al. 2017). Social genetic effects have been shown to exert influence on various traits in mice including anxiety, wound healing, immune function, and body weight (Baud et al. 2017), and various traits related to development and survival in many species of livestock (Ellen et al. 2014). However, in those studies the social interactions were maintained throughout development, and it is unclear whether social genetic effects can still exert influence on adaptive behaviours during discrete, time-limited interactions.
 
-{[}CHECK FLOW{]}
-
-In \textbf{Chapter \ref{MIKK-F2-chap}} I extend the behavioural analysis described in Chapter \ref{Pilot-chap} over the MIKK panel. I then identify the lines that diverged in both (a) their own behaviour; and (b) the level of transmission of their behaviour onto their \emph{\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}} reference tank partner, and then use them as the parental strains in an F\textsubscript{2} cross to attempt to identify the genetic variants associated with those differences.
+In \textbf{Chapter \ref{Pilot-chap}} I apply a combined open field and novel object assay to determine the respective contributions of direct and social genetic effects on bold-shy behaviours in medaka fish, using 5 previously-established inbred strains. This ``pilot study'' was intended to validate the assay by ensuring that it could detect both direct and social genetic effects, and to confirm that it isn't unduly affected by confounding factors. In \textbf{Chapter \ref{MIKK-F2-chap}} I extend this analysis over the MIKK panel. I then identify the lines that diverged in both (a) their own behaviour; and (b) the level of transmission of their behaviour onto their \emph{\definecolor{iCab_424B4D}{HTML}{424B4D}\textcolor{iCab_424B4D}{iCab}} tank partner, and then use them as the parental strains in an F\textsubscript{2} cross to identify the genetic variants associated with those differences.
 
 \hypertarget{poor-transferability-of-polygenic-scores-to-diverse-human-populations}{%
 \section{Poor transferability of polygenic scores to diverse human populations}\label{poor-transferability-of-polygenic-scores-to-diverse-human-populations}}
 
-{[}CITE MIKE INOUYE{]}
+\textbf{Chapter \ref{Fst-chap}} -- the final chapter of this thesis -- relates to the poor transferability of polygenic scores derived from GWAS results when applied to non-European populations. Humans have long sought to use genetic information to predict an individual's likely value for a given trait, in our own species and in other organisms. It is now clear that complex traits such as height, intelligence, and behaviour are highly polygenic, meaning that they are genetically influenced by hundreds or thousands of genetic variants, each exerting a small effect in one or the other direction along the trait's spectrum (Sella and Barton 2019). A richer understanding of the cumulative effect of genetic variants on any trait allows for the prediction of the value that an individual is most likely to have for that trait. Of all human traits, diseases are particularly salient; in 2018, the global healthcare industry was valued at US\$8 trillion, and predicted to increase to US\$12 trillion by 2022 ({``The \$11.9 {Trillion Global Healthcare Market}: {Key Opportunities} \& {Strategies} (2014-2022) - {ResearchAndMarkets}.com''} 2019). This strong financial imperative complements the moral imperative to reduce suffering, together driving the question of how to use genetic information to improve human health.
 
-\textbf{Chapter \ref{Fst-chap}} -- the final chapter of this thesis -- relates to the poor transferability of polygenic scores (\textbf{PRS}) derived from GWAS results when applied to non-European populations. Humans have long sought to use genetic information to predict an individual's likely value for a given trait, in our own species and in other organisms. As already discussed, an individual's phenotypic value at a given point in time is the product of complex interactions between their genome and their environment, beginning from embryonic development and continuing throughout their lifetimes. It is now clear that ``complex'' traits such as height, intelligence, and behaviour are highly polygenic, meaning that they are genetically influenced by hundreds or thousands of genetic variants, each exerting a small effect in one or the other direction along the trait's spectrum (Sella and Barton 2019).
-
-A richer understanding of the cumulative effect of genetic variants on any trait allows for the prediction of the value that an individual is most likely to have for that trait. Of all human traits, diseases are particularly salient; in 2018, the global healthcare industry was valued at US\$8 trillion, and predicted to increase to US\$12 trillion by 2022 ({``The \$11.9 {Trillion Global Healthcare Market}: {Key Opportunities} \& {Strategies} (2014-2022) - {ResearchAndMarkets}.com''} 2019). This strong financial imperative complements the moral imperative to reduce suffering, together driving the question of how to use genetic information to improve human health.
-
-Recent technological developments have made it possible to sequence human genomes at scale, and it is thought that by combining detailed genetic information with with other environmental and phenotypic information (such as lifestyle or clinical factors), clinicians could move towards the practice of ``precision medicine'', where interventions could be tailored to their patients' unique risk profiles (Wray, Goddard, and Visscher 2007). The use of genetic information to predict individuals' values for a trait of interest entails the construction of metrics known as ``polygenic scores'' (\textbf{PGS}). When the trait is a disease, PGS is commonly known as polygenic risk scores (\textbf{PRS}), or genetic risk profiling, but I use the term PGS to encompass both disease and non-disease traits.
+Recent technological developments have made it possible to sequence human genomes at scale, and it is thought that by combining detailed genetic information with with other environmental and phenotypic information (such as lifestyle or clinical factors), clinicians could move towards the practice of ``precision medicine'', where interventions could be tailored to their patients' unique risk profiles (Wray, Goddard, and Visscher 2007). The use of genetic information to predict individuals' values for a trait of interest entails the construction of metrics known as ``polygenic scores'' (\textbf{PGS}) (Lambert, Abraham, and Inouye 2019). When the trait is a disease, PGS is commonly known as polygenic risk scores (\textbf{PRS}), or genetic risk profiling, but I use the term PGS to encompass both disease and non-disease traits.
 
 \hypertarget{pgs-and-gwas}{%
 \subsection{PGS and GWAS}\label{pgs-and-gwas}}
@@ -897,9 +930,7 @@ PGS using genetic information alone show modest yet reliable accuracy for the pr
 
 Most GWAS have been performed with individuals of European ancestry, despite only constituting around 16\% of the present global population. Although the proportion of participants in GWAS from a non-European background increased from 4\% in 2009 to 16\% in 2016 (Popejoy and Fullerton 2016)), as of 2019, 79\% of all GWAS participants recorded in the GWAS Catalog were of European ancestry, and the proportion of non-European individuals has remained the same or reduced since late 2014 (Alicia R. Martin et al. 2019). This bias extends to PGS studies, where as of 2019, only 67\% of them included only participants of European ancestry, with another 19\% including only East Asian ancestry participants, and only 3.8\% with cohorts of African, Hispanic, or Indigenous ancestry (Duncan et al. 2019).
 
-It is therefore unsurprising that PGS scores are far better at predicting disease risk in individuals of European ancestry than in those of non-European ancestry (Alicia R. Martin et al. 2017; Alicia R. Martin et al. 2019). Indeed, the predictive accuracy of PGS scores decays with genetic divergence of the GWAS ``independent'' or ``test'' sample, from the ``discovery'' or ``training'' sample, as established in both humans (Alicia R. Martin et al. 2017; Alicia R. Martin et al. 2019), and livestock (Clark et al. 2012; Habier et al. 2010; Pszczola et al. 2012).
-
-Compared to PGS scores for those of European ancestry, PGS scores across multiple traits are \textasciitilde64-78\% less accurate for individuals of African ancestry, (Duncan et al. 2019; Alicia R. Martin et al. 2019), \textasciitilde50\% less accurate for individuals of East-Asian ancestry, and \textasciitilde37\% less accurate for individuals of South-Asian ancestry (Alicia R. Martin et al. 2019).
+It is therefore unsurprising that PGS scores are far better at predicting disease risk in individuals of European ancestry than in those of non-European ancestry (Alicia R. Martin et al. 2017; Alicia R. Martin et al. 2019). Indeed, the predictive accuracy of PGS scores decays with genetic divergence of the GWAS ``independent'' or ``test'' sample, from the ``discovery'' or ``training'' sample, as established in both humans (Alicia R. Martin et al. 2017; Alicia R. Martin et al. 2019), and livestock (Clark et al. 2012; Habier et al. 2010; Pszczola et al. 2012). Compared to PGS scores for those of European ancestry, PGS scores across multiple traits are \textasciitilde64-78\% less accurate for individuals of African ancestry, (Duncan et al. 2019; Alicia R. Martin et al. 2019), \textasciitilde50\% less accurate for individuals of East-Asian ancestry, and \textasciitilde37\% less accurate for individuals of South-Asian ancestry (Alicia R. Martin et al. 2019).
 
 \hypertarget{contributors-to-pgs-non-transferability}{%
 \subsection{Contributors to PGS non-transferability}\label{contributors-to-pgs-non-transferability}}
@@ -918,19 +949,20 @@ What explains this disparity in predictive value? A number of factors may be res
   The environments and demographies of populations tend to differ. Such differences are often correlated with genetic divergence due to geography, making it difficult to determine whether the associations are driven by the differences between population in their genetics, or their environments (Alicia R. Martin et al. 2019; Kerminen et al. 2019).
 \end{enumerate}
 
-The first three factors can degrade predictive performance even in the absence of biological and environmental differences. On the other hand, environmental and demographic differences can drive forces of natural selection can in turn drive differences in causal genetic architecture (Alicia R. Martin et al. 2019).
+The first three factors can degrade predictive performance even in the absence of biological and environmental differences. On the other hand, environmental and demographic differences can drive forces of natural selection which can in turn drive differences in causal genetic architecture (Alicia R. Martin et al. 2019).
 
-I will discuss each of these factors in turn before addressing point (3) in this analysis.
+I discuss each of these factors in turn before addressing point (3) in \textbf{Chapter \ref{Fst-chap}}.
 
 \hypertarget{fst-discovery-sec}{%
 \subsubsection{Technological and methodological limitations of GWAS}\label{fst-discovery-sec}}
 
 The power to discover a causal variant through GWAS depends on the variant's effect size and frequency in the study population (Alicia R. Martin et al. 2019; Sham et al. 2000). That is to say, the stronger the variant's effect, or the more common it is, the more likely it is to be discovered. Rare variants tend to have stronger effect sizes (Watanabe et al. 2019), likely due to purifying selection (Park et al. 2011), and tend not to be shared across populations (Gravel et al. 2011; 1000. G. P. Consortium et al. 2015). This is particularly relevant for African populations, as they have a much greater level of genetic variance than other populations due to the human species having originated on that continent (1000. G. P. Consortium et al. 2015). Therefore, if GWAS aren't performed on diverse populations, PGS can't take into account the rare variants present in non-European populations that are likely to exert stronger effects on the trait of interest. There are also several other issues that can affect the discoverability of causal variants through GWAS, including the technology used for genotyping, the selection of the cohort, and the necessary exclusion of genotypic outliers.
-With respect to genotyping technologies, GWAS often use data from SNP microarrays. These do not sequence the whole genome, but rather a selection (from several hundred thousand to millions) of genetic markers intended to present \emph{common} genetic variation (Porcu et al. 2013), which accordingly tend to neglect rare genetic variants (Uffelmann et al. 2021). To increase the density of genotypes, which would increase the likelihood of refining the association signal and identifying causal variants, researchers often ``impute'' variants that aren't sequenced directly (Porcu et al. 2013). The imputation process involves ``phasing'' the study genotypes onto the genotypes of a ``reference panel'' (McCarthy et al. 2016). However, if the reference panel does not sufficiently represent the population in the study sample, they are likely to miss or incorrectly impute those genotypes (Alicia R. Martin et al. 2019). Again, this is particularly problematic for African populations.
+
+With respect to genotyping technologies, GWAS often use data from SNP microarrays. These do not sequence the whole genome, but rather a selection (from several hundred thousand to millions) of genetic markers intended to present \emph{common} genetic variation (Porcu et al. 2013), which accordingly tend to neglect rare genetic variants (Uffelmann et al. 2021). To increase the density of genotypes, which would increase the likelihood of refining the association signal and identifying causal variants, researchers often ``impute'' variants that aren't sequenced directly (Porcu et al. 2013). The imputation process involves ``phasing'' the study genotypes onto the genotypes of a ``reference panel'' (McCarthy et al. 2016). However, if the reference panel does not sufficiently represent the population in the study sample, they are likely to miss or incorrectly impute those genotypes (Alicia R. Martin et al. 2019). Again, this is particularly problematic for under-represented African populations.
 
 The lack of representation of rare variants in SNP microarrays can be overcome by using next-generation sequencing technologies such as whole-genome sequencing (\textbf{WGS}) and whole-exome sequencing (\textbf{WES}). (The former seeks to sequence the full genome, and the latter of only targets the coding regions of the genome.) These methods are more expensive than SNP microarrays, which hinders their widespread use at scale, and although their costs are continuing to decrease rapidly, there is a question as to whether they return a proportionate benefit in all use cases (Schwarze et al. 2018).
 
-A second limitation is the selection of GWAS cohorts, which can introduce selection and collider biases (Uffelmann et al. 2021). For instance, the UK Biobank, which contains genetic and phenotypic data on 500,000 participants who volunteered for inclusion between 2006 and 2010, tend to be older, female, healthier, and wealthier than non-participants (Fry et al. 2017). This creaties the possibility of confounding genetic associations with environmental factors, which I discuss further in \ref{fst-env-sec} below.
+A second limitation is the selection of GWAS cohorts, which can introduce selection and collider biases (Uffelmann et al. 2021). For instance, the UK Biobank, which contains genetic and phenotypic data on 500,000 participants who volunteered for inclusion between 2006 and 2010, tend to be older, female, healthier, and wealthier than non-participants (Fry et al. 2017). This creates the possibility of confounding genetic associations with environmental factors, which I discuss further in section \ref{fst-env-sec} of Chapter \ref{Fst-chap}
 
 A third limitation is the ``quality control'' step that is required during the GWAS process (Uffelmann et al. 2021). To avoid confounding from population stratification, which can lead to overestimated heritability and biased PGS, GWAS cohorts are filtered to include only those with similar ancestries -- or relative genetic homogeneity -- by clustering individuals through principal component analysis (\textbf{PCA}) of their genotypes, and excluding outliers. I elaborate on the issue of population stratification in section \ref{fst-env-sec} below, but at present, a statistical model for GWAS that can include cohorts with diverse ancestries without the risk of serious confounding is yet to be developed (Berg et al. 2019).
 
@@ -944,7 +976,7 @@ These differences in effect-size estimates may typically be small for most regio
 \hypertarget{differences-in-allele-frequencies}{%
 \subsubsection{Differences in allele frequencies}\label{differences-in-allele-frequencies}}
 
-Causal variants can differ in both frequency and effect size between different ancestry groups, e.g.~for lactase persistence (S'egurel and Bon 2017), or skin pigmentation (Adhikari et al. 2019). If a causal allele is rare in the GWAS discovery population, even if it is discovered (see \ref{fst-discovery-sec}), it is likely to have noisy effect size estimates, and therefore likely to inaccurately estimate its effect size in a different population where it exists at a higher frequency.
+Causal variants can differ in both frequency and effect size between different ancestry groups, e.g.~for lactase persistence (S'egurel and Bon 2017), or skin pigmentation (Adhikari et al. 2019). If a causal allele is rare in the GWAS discovery population, even if it is discovered (see section \ref{fst-discovery-sec} above), it is likely to have noisy effect size estimates, and therefore likely to inaccurately estimate its effect size in a different population where it exists at a higher frequency.
 
 Differences in allele frequencies between populations can arise through random genetic drift, or be driven by selective pressures towards the trait optima for a given environment (Harpak and Przeworski 2021). However, evolutionary biologists have found that differences between populations in the mean values for traits tend to occur through small, coordinated shifts in their allele frequencies (Berg et al. 2019; Edge and Coop 2019). In Chapter \ref{Fst-chap}, I explore the differences in allele frequencies across populations for all polygenic traits in the GWAS Catalog, and confirm that with few exceptions -- including skin pigmentation, and HIV viral load -- the differences in allele frequencies between populations tends to be small.
 
@@ -955,12 +987,14 @@ Genes continuously interact with each other (GxG, or ``epistasis'' (Gros, Le Nag
 
 The respective contributions of genetics and environment to traits with social value -- such as intelligence -- is highly contentious, especially when there are apparent differences between populations in the mean values for those traits. PGS measure the proportion of variance within a population that is explained by genetics. Because PRS summarises a \emph{proportion} of the total variance, when studying a population that is subject to greater environmental variation, the variance attributable to genetic factors will proportionately reduce. The corollary being that when studying a population where the environment is held constant, the proportion of variance for that trait that is explained by genetic factors will approach 1. Therefore, increases in the amount of environmental variance that a population is exposed to will reduce the accuracy of PGS predictions when applied to that population.
 
-Different environments are also often correlated with population structure (Berg et al. 2019). For example, in East Asia, there is a greater proportion of individuals of East-Asian ancestry than there is of European ancestry, and \emph{vice versa} in Europe. Those East-Asian individuals will therefore tend to share more of their genetic background with each other than with Europeans, and that population structure will be correlated with the different environments that exist in East Asia compared to Europe. This makes it difficult to determine whether it is the differences in their environments or the differences in their genetics that is driving the discrepancies between the mean values for traits between those populations. These complexities are unlikely to be resolved in the near future, which makes it attractive to turn to model organisms to address more basic biological questions regarding GxE in relation to complex traits (Andersson and Georges 2004), as we have done with respect to behaviour in Chapters \ref{Pilot-chap} and \ref{MIKK-F2-chap}.
+Different environments are also often correlated with population structure (Berg et al. 2019). For example, in East Asia, there is a greater proportion of individuals of East-Asian ancestry than there is of European ancestry, and \emph{vice versa} in Europe. Those East-Asian individuals will therefore tend to share more of their genetic background with each other than with Europeans, and that population structure will be correlated with the different environments that exist in East Asia compared to Europe. This makes it difficult to determine whether it is the differences in their environments or the differences in their genetics that is driving the discrepancies between the mean values for traits between those populations. These complexities are unlikely to be resolved in the near future, which makes it attractive to turn to model organisms to address more basic biological questions regarding GxE in relation to complex traits (L. Andersson and Georges 2004), as I have done with respect to behaviour in Chapters \ref{Pilot-chap} and \ref{MIKK-F2-chap}.
 
 \hypertarget{Fst-descr}{%
 \subsection{\texorpdfstring{\(F_{ST}\)}{F\_\{ST\}}}\label{Fst-descr}}
 
 The widely-used fixation index (\(F_{ST}\)) was introduced independently by Sewall Wright (S. Wright 1949) and Gustave Malécot (Mal'ecot 1948) as a metric for measuring the genetic diversity between populations. In Wright's notation, \(F\) refers to ``fixation'' of an allele, and \(_{ST}\) refers to ``subpopulations within the total population''. \(F_{ST}\) quantifies the relative variance in allele frequency between groups compared to within groups, reflecting the combined effects of genetic drift, migration, mutation, and selection (Holsinger and Weir 2009). The metric ranges from 0 to 1, where loci with high \(F_{ST}\) values -- that is, loci with a large relative between-group variance in allele frequencies -- may have been subject to selection or different demographic processes (Holsinger and Weir 2009). The metric has customarily been used to identify regions of the genome have been subject to diversifying selection (Akey et al. 2002; Guo, Dey, and Holsinger 2009; Weir et al. 2005).
+
+In Chapter \ref{Fst-chap}, I extract all approximately-unlinked, trait-associated SNPs in the GWAS Catalog (MacArthur et al. 2017), and use \(F_{ST}\) to measure the differences in allele frequencies between the 26 diverse populations in the 1000 Genomes Project phase 3 release dataset (1000. G. P. Consortium et al. 2015). I then rank the traits based on the differences in the distributions of \(F_{ST}\) relative to an allele-frequency matched set of control SNPs, and find that with few exceptions (most notably, HIV viral load and race-related traits such as skin pigmentation), the diverse human populations do not differ substantially in their allele frequencies for these traits. This work provides evidence that the poor portability of PGS to non-European populations may not be attributable to differences in their allele frequencies, and may rather be attributable to differences in LD and environment.
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
@@ -976,6 +1010,9 @@ Aird, Ian, H. H. Bentall, J. A. Mehigan, and J. A. Fraser Roberts. 1954. {``The 
 \leavevmode\vadjust pre{\hypertarget{ref-akeyInterrogatingHighDensitySNP2002}{}}%
 Akey, Joshua M., Ge Zhang, Kun Zhang, Li Jin, and Mark D. Shriver. 2002. {``Interrogating a {High-Density SNP Map} for {Signatures} of {Natural Selection}.''} \emph{Genome Research} 12 (12): 1805--14. \url{https://doi.org/10.1101/gr.631202}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-alfonsoCopingStylesEuropean2019}{}}%
+Alfonso, S'ebastien, Bastien Sadoul, Manuel Gesto, Lucette Joassard, B'eatrice Chatain, Benjamin Geffroy, and Marie-Laure B'egout. 2019. {``Coping Styles in {European} Sea Bass: {The} Link Between Boldness, Stress Response and Neurogenesis.''} \emph{Physiology \& Behavior} 207 (August): 76--85. \url{https://doi.org/10.1016/j.physbeh.2019.04.020}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-allenThomasHuntMorgan1978}{}}%
 Allen, Garland E. 1978. \emph{Thomas {Hunt Morgan}: {The Man} and {His Science}}. {Princeton University Press}. \url{https://books.google.com?id=MdVOAQAAIAAJ}.
 
@@ -984,6 +1021,9 @@ Altshuler, David, Mark J. Daly, and Eric S. Lander. 2008. {``Genetic {Mapping} i
 
 \leavevmode\vadjust pre{\hypertarget{ref-amarasingheOpportunitiesChallengesLongread2020}{}}%
 Amarasinghe, Shanika L., Shian Su, Xueyi Dong, Luke Zappia, Matthew E. Ritchie, and Quentin Gouil. 2020. {``Opportunities and Challenges in Long-Read Sequencing Data Analysis.''} \emph{Genome Biology} 21 (1): 30. \url{https://doi.org/10.1186/s13059-020-1935-5}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-anderssonTwoShadesBoldness2014}{}}%
+Andersson, Anastasia, Linda Laikre, and Ulrika A. Bergvall. 2014. {``Two Shades of Boldness: Novel Object and Anti-Predator Behavior Reflect Different Personality Dimensions in Domestic Rabbits.''} \emph{Journal of Ethology} 32 (3): 123--36. \url{https://doi.org/10.1007/s10164-014-0401-9}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-anderssonDomesticanimalGenomicsDeciphering2004}{}}%
 Andersson, Leif, and Michel Georges. 2004. {``Domestic-Animal Genomics: Deciphering the Genetics of Complex Traits.''} \emph{Nature Reviews Genetics} 5 (3, 3): 202--12. \url{https://doi.org/10.1038/nrg1294}.
@@ -1021,6 +1061,9 @@ Bateson, William. 1894. \emph{Materials for the {Study} of {Variation}: {Treated
 \leavevmode\vadjust pre{\hypertarget{ref-batesonMendelPrinciplesHeredity1909}{}}%
 ---------. 1909. {``Mendel's {Principles} of {Heredity}: {Cambridge University Press}.''} \emph{März 1909; 2nd Impr} 3: 1913.
 
+\leavevmode\vadjust pre{\hypertarget{ref-baudGenomesPhenomesPopulation2014}{}}%
+Baud, Amelie, Victor Guryev, Oliver Hummel, Martina Johannesson, and Jonathan Flint. 2014. {``Genomes and Phenomes of a Population of Outbred Rats and Its Progenitors.''} \emph{Scientific Data} 1 (1, 1): 140011. \url{https://doi.org/10.1038/sdata.2014.11}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-baudGeneticVariationSocial2017}{}}%
 Baud, Amelie, Megan K. Mulligan, Francesco Paolo Casale, Jesse F. Ingels, Casey J. Bohl, Jacques Callebert, Jean-Marie Launay, et al. 2017. {``Genetic {Variation} in the {Social Environment Contributes} to {Health} and {Disease}.''} \emph{PLOS Genetics} 13 (1): e1006498. \url{https://doi.org/10.1371/journal.pgen.1006498}.
 
@@ -1039,6 +1082,9 @@ Black, Edwin. 2012. \emph{War {Against} the {Weak}: {Eugenics} and {America}'s {
 \leavevmode\vadjust pre{\hypertarget{ref-blajStructuralVariantsTandem2022}{}}%
 Blaj, Iulia, Jens Tetens, Jörn Bennewitz, Georg Thaller, and Clemens Falker-Gieske. 2022. {``Structural Variants and Tandem Repeats in the Founder Individuals of Four {F2} Pig Crosses and Implications to {F2 GWAS} Results.''} \emph{BMC Genomics} 23 (1): 631. \url{https://doi.org/10.1186/s12864-022-08716-0}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-blaszczykBoldnessNovelObjects2017}{}}%
+Blaszczyk, Maryjka B. 2017. {``Boldness Towards Novel Objects Predicts Predator Inspection in Wild Vervet Monkeys.''} \emph{Animal Behaviour} 123 (January): 91--100. \url{https://doi.org/10.1016/j.anbehav.2016.10.017}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-brownCorrelationBoldnessBody2007}{}}%
 Brown, C., F. Jones, and V. A. Braithwaite. 2007. {``Correlation Between Boldness and Body Mass in Natural Populations of the Poeciliid {Brachyrhaphis} Episcopi.''} \emph{Journal of Fish Biology} 71 (6): 1590--1601. \url{https://doi.org/10.1111/j.1095-8649.2007.01627.x}.
 
@@ -1056,6 +1102,12 @@ Caballero, Armando. 2020. \emph{Quantitative {Genetics}}. {Cambridge University 
 
 \leavevmode\vadjust pre{\hypertarget{ref-campbellKingJamesBible2010}{}}%
 Campbell, Gordon. 2010. \emph{King {James Bible}: 400th {Anniversary Edition}}. {OUP Oxford}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-carlsonPersonalityTraitsAre2013}{}}%
+Carlson, Bradley E., and Tracy Langkilde. 2013. {``Personality {Traits Are Expressed} in {Bullfrog Tadpoles} During {Open-Field Trials}.''} \emph{Journal of Herpetology} 47 (2): 378--83. \url{https://doi.org/10.1670/12-061}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-carterHowNotMeasure2012}{}}%
+Carter, Alecia J., Harry H. Marshall, Robert Heinsohn, and Guy Cowlishaw. 2012. {``How Not to Measure Boldness: Novel Object and Antipredator Responses Are Not the Same in Wild Baboons.''} \emph{Animal Behaviour} 84 (3): 603--9. \url{https://doi.org/10.1016/j.anbehav.2012.06.015}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-charlesworthDarwinGenetics2009}{}}%
 Charlesworth, Brian, and Deborah Charlesworth. 2009. {``Darwin and {Genetics}.''} \emph{Genetics} 183 (3): 757--66. \url{https://doi.org/10.1534/genetics.109.109991}.
@@ -1087,6 +1139,12 @@ Consortium, International Human Genome Sequencing. 2001. {``Initial Sequencing a
 \leavevmode\vadjust pre{\hypertarget{ref-coyneTheodosiusDobzhanskyHybrid2016}{}}%
 Coyne, Jerry A. 2016. {``Theodosius {Dobzhansky} on {Hybrid Sterility} and {Speciation}.''} \emph{Genetics} 202 (1): 5--7. \url{https://doi.org/10.1534/genetics.115.184770}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-dahlbomBoldnessPredictsSocial2011}{}}%
+Dahlbom, S. Josefin, David Lagman, Katrin Lundstedt-Enkel, L. Fredrik Sundström, and Svante Winberg. 2011. {``Boldness {Predicts Social Status} in {Zebrafish} ({Danio} Rerio).''} \emph{PLOS ONE} 6 (8): e23565. \url{https://doi.org/10.1371/journal.pone.0023565}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-dammhahnRiskTakingForaging2012}{}}%
+Dammhahn, Melanie, and Laura Almeling. 2012. {``Is Risk Taking During Foraging a Personality Trait? {A} Field Test for Cross-Context Consistency in Boldness.''} \emph{Animal Behaviour} 84 (5): 1131--39. \url{https://doi.org/10.1016/j.anbehav.2012.08.014}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-darwinJournalResearchesNatural1845}{}}%
 Darwin, Charles. 1845. \emph{Journal of {Researches Into} the {Natural History} and {Geology} of the {Countries Visited During} the {Voyage} of {H}.{M}.{S}. {Beagle Round} the {World}: {Under} the {Command} of {Capt}. {Fitz Roy}, {R}.{N}}. 2nd ed. {J. Murray}. \url{https://books.google.com?id=nXm9vEpV8BAC}.
 
@@ -1107,6 +1165,9 @@ Darwin, Charles. 1845. \emph{Journal of {Researches Into} the {Natural History} 
 
 \leavevmode\vadjust pre{\hypertarget{ref-darwinCorrespondenceCharlesDarwin2002}{}}%
 Darwin, Charles, Duncan M. Porter, Sheila Ann Dean, Samantha Evans, Shelley Innes, and Alison M. Pearn. 2002. \emph{The {Correspondence} of {Charles Darwin}: 1821-1860}. {Cambridge University Press}. \url{https://books.google.com?id=oCWGX18UrhEC}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-azevedoShynessBoldnessGreater2006}{}}%
+de Azevedo, Cristiano S., and Robert J. Young. 2006. {``Shyness and Boldness in Greater Rheas {Rhea} Americana {Linnaeus} ({Rheiformes}, {Rheidae}): The Effects of Antipredator Training on the Personality of the Birds.''} \emph{Revista Brasileira de Zoologia} 23 (March): 202--10. \url{https://doi.org/10.1590/S0101-81752006000100012}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-vriesMutationTheory19091909}{}}%
 de Vries, Hugo. 1909. \emph{The {Mutation} Theory v. 1, 1909}. {Open Court Publishing Company}. \url{https://books.google.com?id=cdOhB5p3HkIC}.
@@ -1192,6 +1253,12 @@ Galton, Francis. 1874. {``On {Men} of {Science}, Their {Nature} and Their {Nurtu
 \leavevmode\vadjust pre{\hypertarget{ref-galtonEugenicsItsDefinition1904}{}}%
 ---------. 1904. {``Eugenics: {Its Definition}, {Scope}, and {Aims}.''} \emph{American Journal of Sociology} 10 (1): 1--25. \url{https://doi.org/10.1086/211280}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-garciadeleanizGeneticDeterminationContribution1989}{}}%
+Garcia de Le'aniz, C., E. Verspoor, and A. D. Hawkins. 1989. {``Genetic Determination of the Contribution of Stocked and Wild {Atlantic} Salmon, {Salmo} Salar {L}., To the Angling Fisheries in Two {Spanish} Rivers.''} \emph{Journal of Fish Biology} 35: 261--70. \url{https://doi.org/10.1111/j.1095-8649.1989.tb03069.x}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-garfieldDistinctPhysiologicalBehavioural2011}{}}%
+Garfield, Alastair S., Michael Cowley, Florentia M. Smith, Kim Moorwood, Joanne E. Stewart-Cox, Kerry Gilroy, Sian Baker, et al. 2011. {``Distinct Physiological and Behavioural Functions for Parental Alleles of Imprinted {Grb10}.''} \emph{Nature} 469 (7331, 7331): 534--38. \url{https://doi.org/10.1038/nature09651}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-gomezControlSegmentNumber2008}{}}%
 Gomez, C'eline, Ertuğrul M. Özbudak, Joshua Wunderlich, Diana Baumann, Julian Lewis, and Olivier Pourqui'e. 2008. {``Control of Segment Number in Vertebrate Embryos.''} \emph{Nature} 454 (7202, 7202): 335--39. \url{https://doi.org/10.1038/nature07020}.
 
@@ -1222,6 +1289,9 @@ Gusella, James F., Nancy S. Wexler, P. Michael Conneally, Susan L. Naylor, Mary 
 \leavevmode\vadjust pre{\hypertarget{ref-habierImpactGeneticRelationship2010}{}}%
 Habier, David, Jens Tetens, Franz-Reinhold Seefried, Peter Lichtner, and Georg Thaller. 2010. {``The Impact of Genetic Relationship Information on Genomic Breeding Values in {German Holstein} Cattle.''} \emph{Genetics Selection Evolution} 42 (1): 5. \url{https://doi.org/10.1186/1297-9686-42-5}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-hamiltonShoalingBoldnessAnxietylike2021}{}}%
+Hamilton, Trevor J., Jeffrey Krook, Joshua Szaszkiewicz, and Warren Burggren. 2021. {``Shoaling, Boldness, Anxiety-Like Behavior and Locomotion in Zebrafish ({Danio} Rerio) Are Altered by Acute Benzo{[}a{]}pyrene Exposure.''} \emph{Science of The Total Environment} 774 (June): 145702. \url{https://doi.org/10.1016/j.scitotenv.2021.145702}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-hardenGeneticLotteryWhy2021}{}}%
 Harden, Kathryn Paige. 2021. \emph{The {Genetic Lottery}: {Why DNA Matters} for {Social Equality}}. {Princeton University Press}. \url{https://books.google.com?id=R9oiEAAAQBAJ}.
 
@@ -1239,6 +1309,9 @@ Henig, Robin Marantz. 2000. \emph{The {Monk} in the {Garden}: {The Lost} and {Fo
 
 \leavevmode\vadjust pre{\hypertarget{ref-henslowLetter1051831}{}}%
 Henslow, John. 1831. {``Letter 105.''} {Darwin Correspondence Project}. 1831. \url{https://www.darwinproject.ac.uk/letter/DCP-LETT-105.xml}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-herdeConsistencyBoldnessActivity2013}{}}%
+Herde, Antje, and Jana A. Eccard. 2013. {``Consistency in Boldness, Activity and Exploration at Different Stages of Life.''} \emph{BMC Ecology} 13 (1): 49. \url{https://doi.org/10.1186/1472-6785-13-49}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-hillDataTheoryPoint2008}{}}%
 Hill, William G., Michael E. Goddard, and Peter M. Visscher. 2008. {``Data and {Theory Point} to {Mainly Additive Genetic Variance} for {Complex Traits}.''} \emph{PLOS Genetics} 4 (2): e1000008. \url{https://doi.org/10.1371/journal.pgen.1000008}.
@@ -1269,6 +1342,9 @@ Jenkin, Fleeming. 1867. {``The Origin of Species.''} \emph{North British Review}
 
 \leavevmode\vadjust pre{\hypertarget{ref-johnsonSegregationPerformanceRecombinant1999}{}}%
 Johnson, William C., and Paul Gepts. 1999. {``Segregation for Performance in Recombinant Inbred Populations Resulting from Inter-Gene Pool Crosses of Common Bean ( {Phaseolus} Vulgaris {L}.).''} \emph{Euphytica} 106 (1): 45--56. \url{https://doi.org/10.1023/A:1003541201923}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-kandaStabilityActivityBoldness2012}{}}%
+Kanda, L. Leann, Laura Louon, and Katherine Straley. 2012. {``Stability in {Activity} and {Boldness Across Time} and {Context} in {Captive Siberian Dwarf Hamsters}.''} \emph{Ethology} 118 (6): 518--33. \url{https://doi.org/10.1111/j.1439-0310.2012.02038.x}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-karlNationalLifeStandpoint1901a}{}}%
 Karl, Pearson. 1901. \emph{National {Life} from the Standpoint of {Science}}. {London}.
@@ -1306,6 +1382,9 @@ Laird, Nan M., and Christoph Lange. 2010. \emph{The {Fundamentals} of {Modern St
 \leavevmode\vadjust pre{\hypertarget{ref-lalandFishCognitionBehavior2011}{}}%
 Laland, Kevin, Jens Krause, and Culum Brown. 2011. \emph{Fish {Cognition} and {Behavior}}. {John Wiley \& Sons}. \url{https://books.google.com?id=cI9gbVyH6lsC}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-lambertClinicalUtilityPolygenic2019}{}}%
+Lambert, Samuel A, Gad Abraham, and Michael Inouye. 2019. {``Towards Clinical Utility of Polygenic Risk Scores.''} \emph{Human Molecular Genetics} 28 (R2): R133--42. \url{https://doi.org/10.1093/hmg/ddz187}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-landerNewGenomicsGlobal1996}{}}%
 Lander, Eric S. 1996. {``The {New Genomics}: {Global Views} of {Biology}.''} \emph{Science} 274 (5287): 536--39. \url{https://doi.org/10.1126/science.274.5287.536}.
 
@@ -1341,6 +1420,9 @@ Lucon-Xiccato, Tyrone, Felix Loosli, Francesca Conti, Nicholas S. Foulkes, and C
 
 \leavevmode\vadjust pre{\hypertarget{ref-maasBreastCancerRisk2016}{}}%
 Maas, Paige, Myrto Barrdahl, Amit D. Joshi, Paul L. Auer, Mia M. Gaudet, Roger L. Milne, Fredrick R. Schumacher, et al. 2016. {``Breast {Cancer Risk From Modifiable} and {Nonmodifiable Risk Factors Among White Women} in the {United States}.''} \emph{JAMA Oncology} 2 (10): 1295--1302. \url{https://doi.org/10.1001/jamaoncol.2016.1025}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-macarthurNewNHGRIEBICatalog2017}{}}%
+MacArthur, Jacqueline, Emily Bowler, Maria Cerezo, Laurent Gil, Peggy Hall, Emma Hastings, Heather Junkins, et al. 2017. {``The New {NHGRI-EBI Catalog} of Published Genome-Wide Association Studies ({GWAS Catalog}).''} \emph{Nucleic Acids Research} 45 (D1): D896--901. \url{https://doi.org/10.1093/nar/gkw1133}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mackayChartingGenotypePhenotype2018}{}}%
 Mackay, Trudy F. C., and Wen Huang. 2018. {``Charting the Genotype--Phenotype Map: Lessons from the {Drosophila} Melanogaster {Genetic Reference Panel}.''} \emph{WIREs Developmental Biology} 7 (1): e289. \url{https://doi.org/10.1002/wdev.289}.
@@ -1387,6 +1469,9 @@ McCarthy, Shane, Sayantan Das, Warren Kretzschmar, Olivier Delaneau, Andrew R Wo
 \leavevmode\vadjust pre{\hypertarget{ref-mclarenOurOwnMaster2015}{}}%
 McLaren, Angus. 2015. \emph{Our {Own Master Race}: {Eugenics} in {Canada}, 1885-1945}. {University of Toronto Press}. \url{https://books.google.com?id=4rP3rQEACAAJ}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-meijsserAnalysisOpenfieldPerformance1989}{}}%
+Meijsser, F. M., A. M. P. Kersten, P. R. Wiepkema, and J. H. M. Metz. 1989. {``An Analysis of the Open-Field Performance of Sub-Adult Rabbits.''} \emph{Applied Animal Behaviour Science} 24 (2): 147--55. \url{https://doi.org/10.1016/0168-1591(89)90042-7}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-membersofthecomplextraitconsortiumNatureIdentificationQuantitative2003}{}}%
 Members of the Complex Trait Consortium. 2003. {``The Nature and Identification of Quantitative Trait Loci: A Community's View.''} \emph{Nature Reviews Genetics} 4 (11, 11): 911--16. \url{https://doi.org/10.1038/nrg1206}.
 
@@ -1428,6 +1513,9 @@ Naruse, Kiyoshi, Minoru Tanaka, and Hiroyuki Takeda. 2011. \emph{Medaka: A Model
 
 \leavevmode\vadjust pre{\hypertarget{ref-natarajanPolygenicRiskScore2017}{}}%
 Natarajan, Pradeep, Robin Young, Nathan O. Stitziel, Sandosh Padmanabhan, Usman Baber, Roxana Mehran, Samantha Sartori, et al. 2017. {``Polygenic {Risk Score Identifies Subgroup With Higher Burden} of {Atherosclerosis} and {Greater Relative Benefit From Statin Therapy} in the {Primary Prevention Setting}.''} \emph{Circulation} 135 (22): 2091--101. \url{https://doi.org/10.1161/CIRCULATIONAHA.116.024436}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-nordbergTestingMeasuresBoldness2021}{}}%
+Nordberg, Eric, Rheanne Denny, and Lin Schwarzkopf. 2021. {``Testing Measures of Boldness and Exploratory Activity in Native Versus Invasive Species: Geckos as a Model System.''} \emph{Animal Behaviour} 177 (July): 215--22. \url{https://doi.org/10.1016/j.anbehav.2021.05.013}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-nurkCompleteSequenceHuman2022}{}}%
 Nurk, Sergey, Sergey Koren, Arang Rhie, Mikko Rautiainen, Andrey V. Bzikadze, Alla Mikheenko, Mitchell R. Vollger, et al. 2022. {``The Complete Sequence of a Human Genome.''} \emph{Science} 376 (6588): 44--53. \url{https://doi.org/10.1126/science.abj6987}.
@@ -1585,6 +1673,9 @@ Seleit, Ali, Alexander Aulehla, and Alexandre Paix. 2021. {``Endogenous Protein 
 \leavevmode\vadjust pre{\hypertarget{ref-sellaThinkingEvolutionComplex2019}{}}%
 Sella, G., and N. Barton. 2019. {``Thinking {About} the {Evolution} of {Complex Traits} in the {Era} of {Genome-Wide Association Studies}.''} \emph{Annual Review of Genomics and Human Genetics}. \url{https://doi.org/10.1146/annurev-genom-083115-022316}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-sgroGeneticCorrelationsTradeoffs2004}{}}%
+Sgr`o, C. M., and A. A. Hoffmann. 2004. {``Genetic Correlations, Tradeoffs and Environmental Variation.''} \emph{Heredity} 93 (3, 3): 241--48. \url{https://doi.org/10.1038/sj.hdy.6800532}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-shamPowerLinkageAssociation2000}{}}%
 Sham, P. C., S. S. Cherny, S. Purcell, and J. K. Hewitt. 2000. {``Power of {Linkage} Versus {Association Analysis} of {Quantitative Traits}, by {Use} of {Variance-Components Models}, for {Sibship Data}.''} \emph{The American Journal of Human Genetics} 66 (5): 1616--30. \url{https://doi.org/10.1086/302891}.
 
@@ -1650,6 +1741,9 @@ Threadgill, David W., Darla R. Miller, Gary A. Churchill, and Fernando Pardo-Man
 
 \leavevmode\vadjust pre{\hypertarget{ref-tikkanenGeneticRiskPrediction2013}{}}%
 Tikkanen, Emmi, Aki S. Havulinna, Aarno Palotie, Veikko Salomaa, and Samuli Ripatti. 2013. {``Genetic {Risk Prediction} and a 2-{Stage Risk Screening Strategy} for {Coronary Heart Disease}.''} \emph{Arteriosclerosis, Thrombosis, and Vascular Biology} 33 (9): 2261--66. \url{https://doi.org/10.1161/ATVBAHA.112.301120}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-uchidaDecreasedVigilanceHabituation2019}{}}%
+Uchida, Kenta, Kei K Suzuki, Tatsuki Shimamoto, Hisashi Yanagawa, and Itsuro Koizumi. 2019. {``Decreased Vigilance or Habituation to Humans? {Mechanisms} on Increased Boldness in Urban Animals.''} \emph{Behavioral Ecology} 30 (6): 1583--90. \url{https://doi.org/10.1093/beheco/arz117}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-uffelmannGenomewideAssociationStudies2021}{}}%
 Uffelmann, Emil, Qin Qin Huang, Nchangwi Syntia Munung, Jantina de Vries, Yukinori Okada, Alicia R. Martin, Hilary C. Martin, Tuuli Lappalainen, and Danielle Posthuma. 2021. {``Genome-Wide Association Studies.''} \emph{Nature Reviews Methods Primers} 1 (1, 1): 1--21. \url{https://doi.org/10.1038/s43586-021-00056-9}.
@@ -1788,6 +1882,9 @@ Young, Simon N. 2008. {``The Neurobiology of Human Social Behaviour: An Importan
 
 \leavevmode\vadjust pre{\hypertarget{ref-yuUnifiedMixedmodelMethod2006}{}}%
 Yu, Jianming, Gael Pressoir, William H. Briggs, Irie Vroh Bi, Masanori Yamasaki, John F. Doebley, Michael D. McMullen, et al. 2006. {``A Unified Mixed-Model Method for Association Mapping That Accounts for Multiple Levels of Relatedness.''} \emph{Nature Genetics} 38 (2, 2): 203--8. \url{https://doi.org/10.1038/ng1702}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-yuenBoldnessAreOpen2017}{}}%
+Yuen, C. H., I. Schoepf, C. Schradin, and N. Pillay. 2017. {``Boldness: Are Open Field and Startle Tests Measuring the Same Personality Trait?''} \emph{Animal Behaviour} 128 (June): 143--51. \url{https://doi.org/10.1016/j.anbehav.2017.04.009}.
 
 \end{CSLReferences}
 

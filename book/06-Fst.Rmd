@@ -1,8 +1,9 @@
 # Variation in the frequency of trait-associated alleles across global human populations {#Fst-chap}
 
-[MOTIVATE]
-
 \chaptermark{Human $F_{ST}$ distributions}
+
+Thousands of GWAS have now been performed for more than 3,330 human traits [@uffelmannGenomewideAssociationStudies2021], identifying tens of thousands of loci that are associated with variation in these traits, together with the strengths of their effects [@macarthurNewNHGRIEBICatalog2017]. Researchers have used these data to develop polygenic scores (**PGS**), which can predict the values that individuals will have for a trait based on their genotypes [@lambertClinicalUtilityPolygenic2019]. However, as most GWAS have been performed on European populations, PGS predictions haven proven to be less robust when applied to non-European populations. The likely causes of this poor transferability of PGS are proposed to be some combination of differences between global populations in linkage disequilibrium patterns, trait-associated allele frequencies, and environment. 
+The purpose of the analysis in this Chapter was to explore the extent to which differences in trait-associated allele frequencies between diverse human populations was responsible for the poor portability of Polygenic Scores (**PGS**) to non-European populations. To achieve this, I sougght to extract all approximately-unlinked, trait-associated SNPs in the GWAS Catalog [@macarthurNewNHGRIEBICatalog2017], and use $F_{ST}$ to measure the differences in allele frequencies between the 26 diverse populations in the 1000 Genomes Project phase 3 release dataset [@10002015global]. I then rank the traits based on the differences in the distributions of $F_{ST}$ relative to an allele-frequency matched set of control SNPs, and find that with few exceptions (most notably, HIV viral load and race-related traits such as skin pigmentation), the diverse human populations do not differ substantially in their allele frequencies for these traits. This work provides evidence that the poor portability of PGS to non-European populations may not be attributable to differences in their allele frequencies, and may rather be attributable to differences in LD and environment.
 
 In this Chapter, I describe my analysis of the distribution of $F_{ST}$ for trait-associated alleles across diverse human populations, to explore the extent to which different allele frequencies contribute to the poor transferability of PGS to non-European populations. 
 
@@ -82,14 +83,4 @@ There is a question as to whether the higher distributions of $F_{ST}$ observed 
 knitr::include_graphics(here::here("book/figs/fst/20220324_n_individuals.png"), auto_pdf = T)
 ```
 
-## Implications
 
-### Limitation of $F_{ST}$
-
-The first relevant limitation of $F_{ST}$ is that it does not correspond to similarities or differences between populations in trait values. This is because $F_{ST}$ does not take into account the effect size or the direction of effect of the trait-associated allele, so for highly-polygenic traits like the ones shown here, $F_{ST}$ is almost entirely decoupled from the mean additive genetic value between populations [@bergPopulationGeneticSignal2014a]. This means that even when a trait's associated alleles have low $F_{ST}$, as we see for most traits here, it does not follow that the population mean values for that trait would be the same due to genetic similarities between those populations. As @kremerDecouplingDifferentiationTraits2012 determined by through simulations, for highly polygenic traits, mean trait differences are driven by small, coordinated shifts in allele frequencies, which would not be detected by $F_{ST}$ [@lecorreGeneticDifferentiationQuantitative2012].
-
-The second relevant limitation is that $F_{ST}$ is not sufficiently powered to detect selection for polygenic traits [@bergPopulationGeneticSignal2014], which means that these results cannot be used to determine the extent to which alleles are under selection in a given population. This is apparent in our analysis, where in contrast with @racimoDetectingPolygenicAdaptation2018, height and BMI, which have been found to be under strong differential selection, appear similar to other polygenic traits.
-
-### The importance of environment, and a push for diversity in genetic studies
-
-The obvious solution to this issue of non-transferability of PGS scores to diverse populations is to increase the representation of those populations in GWAS and PGS studies, as has been often proposed elsewhere [@martinHumanDemographicHistory2017; @martinCriticalNeedsChallenges2018; @bienFutureGenomicStudies2019; @martinClinicalUseCurrent2019;  @sirugoMissingDiversityHuman2019; @wojcikGeneticAnalysesDiverse2019]. [ELABORATE]
