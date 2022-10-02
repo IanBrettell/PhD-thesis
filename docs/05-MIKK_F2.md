@@ -296,11 +296,11 @@ I then used these values for all F~2~ individuals as the input to a Hidden Marko
 
 I was nevertheless satisfied that the concordance between our observed genotypes and their expected frequencies indicated that our HMM genotyping was sufficiently robust. I therefore proceeded to use these HMM-generated haplotype block calls to impute each sample's SNP-level genotypes using the homozygous biallelic SNP calls in the high-coverage .vcf file for the MIKK panel F~0~ lines described in Chapter \@ref(MIKK-genomes-chap). This set of variants included a total of ~20.7M SNPs, which I used to generate a Plink-format .bed file, forming the genotype input for the genetic linkage analysis.
 
-### Genetic linkage analysis
+### F~2~-cross GWAS
 
-For the purpose of using the *GCTA* software package [@yangGCTAToolGenomewide2011] for the genetic linkage analysis,  That software requires the construction of a genetic relationship matrix (**GRM**) $\textbf{A} = \textbf{WW}'/N$. $\textbf{W}$ is a standardised genotype matrix with the $ij^{th}$ element $w_{ij} = (x_{ij} - 2p_i) / \sqrt{(2p_i(1-p_i)}$, where $x_{ij}$ is the number of copies of the reference allele for the $i^{th}$ SNP of the $j^{th}$ individual and $p_i$ is the frequency of the reference allele [@yangGCTAToolGenomewide2011].
+#### GRM
 
-For the GRM, I first filtered the .bed for SNPs that had no missing calls for any samples ($M_{SNPs}$ = 44,360). I then used these SNPs to construct a "leave-one-chromosome-out" (**LOCO**) genetic relationship matrix for each chromosome -- that is, if the "focal" chromosome was chr1, I would exclude the SNPs on that chromosome before constructing the GRM. To illustrate, **Figure \@ref(fig:F2-grm)** is a GRM constructed using all 44,360 non-missing SNPs. However, given the relatively small amount of non-missing SNPs on each chromosome, the number of SNPs on the focal chromosome that were excluded was small, resulting in GRMs that appear almost identical by eye -- see the LOCO-GRM for chromosome 1 in **Appendix \@ref(fig:loco-grm-chr1)**. The individuals from each cross neatly cluster together, and the individuals that share one parental strain cluster nearby.
+For the purpose of using the *GCTA* software package [@yangGCTAToolGenomewide2011] for the genetic association testing, I was required to construct a genetic relationship matrix (**GRM**) in the manner described in the Introduction (Equations \@ref(eq:grmstd) and \@ref(eq:grm)). I first filtered the .bed for SNPs that had no missing calls for any samples ($M_{SNPs}$ = 44,360). I then used these SNPs to construct a "leave-one-chromosome-out" (**LOCO**) genetic relationship matrix for each chromosome -- that is, if the "focal" chromosome was chr1, I would exclude the SNPs on that chromosome before constructing the GRM. To illustrate, **Figure \@ref(fig:F2-grm)** is a GRM constructed using all 44,360 non-missing SNPs. However, given the relatively small amount of non-missing SNPs on each chromosome, the number of SNPs on the focal chromosome that were excluded was small, resulting in GRMs that appear almost identical by eye -- see the LOCO-GRM for chromosome 1 in **Appendix \@ref(fig:loco-grm-chr1)**. In contrast to the GRM presented in the previous Chapter (Figure \@ref(fig:somite-grm)), which was based on a single F~2~ cross and looked relatively homogenous, here the individuals from each separate cross neatly cluster together, and the individuals that share one parental strain cluster nearby.
 
 (ref:F2-grm) Genetic relationship matrix for 271 F~2~ samples based on 44,360 non-missing SNPs.
 
@@ -308,15 +308,21 @@ For the GRM, I first filtered the .bed for SNPs that had no missing calls for an
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/grm_man_0.8} \caption{(ref:F2-grm)}(\#fig:F2-grm)
 \end{figure}
 
-I used these GRMs in the mixed linear model based association analysis (**MLMA**) implemented in GCTA [@yangGCTAToolGenomewide2011], where the model was generally specified as follows:
+#### Heritability
 
-$$
-y = a + bx + g + e
-$$
+I used the above GRM with GCTA [@yangGCTAToolGenomewide2011] to calculate the narrow-sense heritability ($h^2$) of the inverse-normalised proportions of time the fish spent in each state (direct genetic effects), and for the proportions of time their tank partners spent in each state (social genetic effects) (**Figure \@ref(fig:F2-heritability)**). For direct genetic effects (**Figure \@ref(fig:F2-heritability)A**), the maximum estimates are smaller than expected, with a maximum $h^2$ of 0.173 for state 2 during the open field assay component. There is also higher heritability detected through the open field assay than the novel object assay. Interestingly, the somewhat wider- and forward-moving state 6 shows no heritability, which indicates that the proportions of time spent in that state is not affected by genetics. The heritability estimates for social genetic effects (**Figure \@ref(fig:F2-heritability)B**) are near 0, with a slight exception for the straighter- and forward-moving state 8 in the novel object assay, which also showed significant differences between the F~0~ lines.
 
-$y$ was the phenotype, $a$ was the mean term, $b$ was the additive effect (fixed effect) of the candidate SNP tested for association, $x$ was the SNP genotype indicator variable coded as 0, 1 or 2, $g$ was the polygenic effect (random effect) i.e. the accumulated effect of all SNPs (as captured by the GRM calculated using all SNPs) and $e$ was the residual [@yangGCTAToolGenomewide2011]. For $y$, I used the inverse-normalised state frequencies described above, and the LOCO-GRM as $g$ for all SNPs on the focal chromosome. For example, for all SNPs on chr18, I used the LOCO-GRM that excluded all SNPs from that chromosome. In addition, I included the time of assay and the tank quadrant as covariates, which the software regresses out from the phenotype prior to running the MLMA. I excluded the date of assay and the tank side as covariates because individuals from the same cross tended to be assayed in the same test tank on the same day, and are therefore confounded with their genetics. 
+(ref:F2-heritability) Narrow-sense heritability ($h^2$) computed by GCTA [@yangGCTAToolGenomewide2011; @yangGenomePartitioningGenetic2011] based on all non-missing SNPs used to generate the GRM ($N$ = 44,360), for direct genetic effects (**A**) and social genetic effects (**B**). 
 
-To set a significance threshold, for each combination of HMM state and assay, I ran 10 MLMA tests over the same dataset where I had permuted the phenotype and covariates using a different random seed. The logic behind this method is to determine the lowest p-value that one could expect when there is no true relationship between the individuals' genetics and their phenotype. I then extracted the smallest p-value from all 10 results, and used this as the significance threshold. I additionally calculated the Bonferroni threshold as $\alpha / M$, where $\alpha$ is set to 0.05 and $M$ is the total number of SNPs in the dataset (2,726,797) = 1.83 x 10^-8^.
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/mikk_behaviour/heritability} \caption{(ref:F2-heritability)}(\#fig:F2-heritability)
+\end{figure}
+
+#### GWAS
+
+For the association testing, I used a linear mixed model (**LMM**) as implemented in GCTA [@yangGCTAToolGenomewide2011]. For the phenotype, I used the inverse-normalised state frequencies described above, and the LOCO-GRM for all SNPs on the focal chromosome. That is to say, for all SNPs on chr18, I used the LOCO-GRM that excluded all SNPs from that chromosome. In addition, I included the time of assay and the tank quadrant as covariates, which the software regresses out from the phenotype prior to running the LMM I excluded the date of assay and the tank side as covariates because individuals from the same cross tended to be assayed in the same test tank on the same day, and are therefore confounded with their genetics. 
+
+To set a significance threshold, for each combination of HMM state and assay, I ran 10 LMM tests over the same dataset where I had permuted the phenotype and covariates using a different random seed. The logic behind this method is to determine the lowest p-value that one could expect when there is no true relationship between the individuals' genetics and their phenotype. I then extracted the smallest p-value from all 10 results, and used this as the significance threshold. I additionally calculated the Bonferroni threshold as $\alpha / M$, where $\alpha$ is set to 0.05 and $M$ is the total number of SNPs in the dataset (2,726,797) = 1.83 x 10^-8^.
 
 #### Direct genetic effects
 
@@ -404,10 +410,15 @@ One SNP, 10:15,319,434, was significant in respect of DGE for frequencies in bot
 (ref:sig-snp-10-15mb) State 3 frequency during the novel object assay for counts of the alternative allele (T) at SNP 10:15,319,434 in the protocadherin gene. The boxes are coloured on the left by the paternal line, and on the right by the maternal line.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{figs/mikk_behaviour/sig_snps_boxplots/3-10:15319434} \caption{(ref:sig-snp-10-15mb)}(\#fig:sig-snp-10-15mb)
+
+{\centering \includegraphics[width=0.5\linewidth]{figs/mikk_behaviour/sig_snps_boxplots/3-10:15319434} 
+
+}
+
+\caption{(ref:sig-snp-10-15mb)}(\#fig:sig-snp-10-15mb)
 \end{figure}
 
-The second predicted missense variant of note was detected for SGE in the open field assay for frequencies in state 13. The locus 12:5,136,828 maps to gene ENSORLG00000002961, which is described as a complement *C9*. Discovered phenotypes for species orthologues include reduced prepulse inhibition and heart phenotypes in mice [Mouse Genome Database, @blakeMouseGenomeDatabase2021], and neurodevelopmental disorders in rats [Rat Genome Database, @smithYearRatRat2020]. Here, in the F~2~ individuals, it appears to have a complex effect on the behaviour of the test fishes between the crosses, where it apparently causes the reference fish to increase the proportion of time it spends in the fast-moving state 13 (**Figure \@ref(fig:F2-man-sge-of-13)**).
+The second predicted missense variant of note was detected for SGE in the open field assay for frequencies in state 13. The locus 12:5,136,828 maps to gene ENSORLG00000002961, which is described as a complement *C9* (**Figure \@ref(fig:sig-snp-12-5mb)**). Discovered phenotypes for species orthologues include reduced prepulse inhibition and heart phenotypes in mice [Mouse Genome Database, @blakeMouseGenomeDatabase2021], and neurodevelopmental disorders in rats [Rat Genome Database, @smithYearRatRat2020]. Here, in the F~2~ individuals, it appears to have a complex effect on the behaviour of the test fishes between the crosses, where it apparently causes the reference fish to increase the proportion of time it spends in the fast-moving state 13 (**Figure \@ref(fig:F2-man-sge-of-13)**).
 
 (ref:sig-snp-12-5mb) State 13 frequency during the open field assay for counts of the alternative allele (A) at SNP 12:5,136,828. The boxes are coloured on the left by the paternal line, and on the right by the maternal line.
 
@@ -481,7 +492,7 @@ The locus around 10:18,537,719 (**Figure \@ref(fig:sig-snp-10-18mb)**) sits with
 
 ##### *PANX2*
 
-The locus around 6:30,807,013 in the pannexin 2 (*panx2*) gene (ENSORLG00000016329), a projected zinc finger orthologue with the human gene *PANX2*. Its orthologues have been associated with decreased prepulse inhibition in mice [@blakeMouseGenomeDatabase2021], and intellectual disability and autism spectrum disorder in rats [@smithYearRatRat2020].
+The locus around 6:30,807,013 in the pannexin 2 (*panx2*) gene (ENSORLG00000016329), a projected zinc finger orthologue with the human gene *PANX2* (**Figure \@ref(fig:sig-snp-6-30mb)**). Its orthologues have been associated with decreased prepulse inhibition in mice [@blakeMouseGenomeDatabase2021], and intellectual disability and autism spectrum disorder in rats [@smithYearRatRat2020].
 
 (ref:sig-snp-6-30mb) State 9 frequency during the novel object assay for counts of the alternative allele (A) at 6:30,807,013. The boxes are coloured on the left by the paternal line, and on the right by the maternal line.
 
@@ -491,5 +502,5 @@ The locus around 6:30,807,013 in the pannexin 2 (*panx2*) gene (ENSORLG000000163
 
 ## Discussion 
 
-These results of this chapter confirm that the F~2~ cross method applied to the MIKK panel is a powerful technique for the discovery of loci associated with complex traits. I applied modern computational methods to first develop a data-driven analysis of fish behaviour, and then select a subset of inbred lines that diverged in both their own behaviour, and the extent to which they transmitted their behaviours to their social partners. I then performed an F~2~ cross with those lines to map the genetic variants associated with those differences. Although this analysis was vastly under-powered, I nevertheless discovered a number of statistically significant loci in orthologue genes that have been found to be related to neurological phenotypes in mice, rats, and humans. Future work can functionally validate these loci with targeted CRISPR-Cas9 knockouts, expanding on our knowledge about the genetic and environmental contributions to trait variation through an improved ability to control both genes and social environment with inbred lines that are representative of the kinds of variation that is naturally occurring in the wild. [MAKE THIS SEXIER] 
+These results of this chapter confirm that the F~2~ cross method applied to the MIKK panel is a powerful technique for the discovery of loci associated with complex traits. I applied modern computational methods to first develop a data-driven analysis of fish behaviour, and then select a subset of inbred lines that diverged in both their own behaviour, and the extent to which they transmitted their behaviours to their social partners. I then performed an F~2~ cross with those lines to map the genetic variants associated with those differences. Although this analysis was vastly under-powered, I nevertheless discovered a number of statistically significant loci in orthologue genes that have been found to be related to neurological phenotypes in mice, rats, and humans. Future work can functionally validate these loci with targeted CRISPR-Cas9 knockouts, expanding on our knowledge about the genetic and environmental contributions to trait variation through an improved ability to control both genes and social environment with inbred lines that are representative of the kinds of variation that is naturally occurring in the wild.
 

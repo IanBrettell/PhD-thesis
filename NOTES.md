@@ -1,5 +1,11 @@
 # Notes
 
+## 30 Sept
+
+Somites GRM:
+
+* Big block for samples 550-650 (compare to karyoplot)
+
 ## 27 Sept
 
 Doesn't print:
