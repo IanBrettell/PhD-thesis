@@ -1,5 +1,17 @@
 # Notes
 
+## 3 October
+
+Lines with regions of heterozygosity:
+
+- 11-1
+- 13-2
+- 14-1
+- 17-1
+- 25-1 (nice sex det region)
+- 50-2 (nice sex det region)
+- 55-2 (nice sex det region)
+
 ## 30 Sept
 
 Somites GRM:

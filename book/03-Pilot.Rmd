@@ -135,10 +135,10 @@ knitr::include_graphics(here::here("book/figs/pilot/0.08_14_sge.png"), auto_pdf 
 
 Finally, to develop a metric to quantify the degree to which the *iCab* reference fishes’ behaviour is influenced by the strain of its tank partner, I calculated the proportions of time that the pairs of fish spent simultaneously occupying the same HMM state. **Figure \@ref(fig:pilot-cooc-heat)** shows that when paired with the slowest-moving *HdrR* strain, the *iCab* reference fishes spent more time co-occupying the slow- and forward-moving state 2, whereas they tended to co-occupy the fast- and forward-moving state 11 when paired with the faster-moving northern *Kaga* and *HNI* strains. When paired with another *iCab*, they preferred to co-occupy the slow-moving and pan-directional state 4. For each combination of assay component and state, I then ran a Kruskal-Wallis test to determine whether there were differences in the frequencies of state co-occupancy under different strain pairings ($p$ < 0.05, FDR-adjusted), and found significant differences for states 1 to 6 for the open field component (1.1x10^-8^ < $p$ < 4.1x10^-2^), and states 1 to 4 and 7 for the novel object component (1.6x10^-6^ < $p$ < 2.5x10^-2^). The heatmaps show that *iCab* tends to co-occupy state 4 at the highest frequency when paired with another *iCab*, which suggests that this pan-directional, slow-moving state is a more comfortable or natural state for *iCab* to occupy, particularly when under stress.
 
-(ref:pilot-cooc-heat) Frequency of HMM state co-occupancy between pairs of fish, calculated across all all videos per strain-pairing. MAKE TEXT BIGGER
+(ref:pilot-cooc-heat) Frequency of HMM state co-occupancy between pairs of fish, calculated across all all videos per strain-pairing.
 
 ```{r pilot-cooc-heat, echo = F, fig.cap = '(ref:pilot-cooc-heat)', out.width='100%'}
-knitr::include_graphics(here::here("book/figs/pilot/0.08_14_cooc_heatmap.png"), auto_pdf = T)
+knitr::include_graphics(here::here("book/figs/pilot/0.08_14_cooc_heatmap_annotated.png"), auto_pdf = T)
 ```
 
 
