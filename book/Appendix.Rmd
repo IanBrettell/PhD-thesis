@@ -22,6 +22,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.05_15_polar_all_d
 
 All frame grabs were taken at the 300th second (5-minute mark) of each 10-minute assay component.
 
+\clearpage
 ### Open field
 
 #### 8-2
@@ -120,6 +121,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/op
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/open_field_20191118_1129_40-1_R_B_300.png"), auto_pdf = T)
 ```
 
+\clearpage
 ### Novel object
 
 #### 8-2
@@ -218,6 +220,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/no
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/four_panel_plots/novel_object_20191118_1129_40-1_R_B_300.png"), auto_pdf = T)
 ```
 
+\clearpage
 ## HMM state time dependence for all MIKK panel lines
 
 ### Direct genetic effects
@@ -256,6 +259,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_tile_sge.pn
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_dens_sge.png"), auto_pdf = T)
 ```
 
+\clearpage
 ## F2 recombination karyoplot with missing calls
 
 (ref:F2-recomb-blocks-missing) Karyoplot for F2 samples, coloured by genotype. Samples are sorted in the order in which they were phenotyped. Blocks are filled with the colour of the paternal F0 line for the homozygous paternal haplotype block, black for heterozygous, and the colour of the maternal F0 line for the homozygous maternal haplotype block. 
@@ -263,7 +267,7 @@ knitr::include_graphics(here::here("book/figs/mikk_behaviour/0.08_15_dens_sge.pn
 ```{r F2-recomb-blocks-missing, echo = F, fig.cap = '(ref:F2-recomb-blocks-missing)', out.width='100%'}
 knitr::include_graphics(here::here("book/figs/mikk_behaviour/karyoplot_wi_missing.png"), auto_pdf = T)
 ```
-
+\clearpage
 ## LOCO GRM for chromosome 1 
 
 (ref:loco-grm-chr1) "Leave-one-chromosome-out" genetic relationship matrix for 271 F2 samples based on 44,284 non-missing SNPs, having excluded 76 SNPs on chromosome 1.

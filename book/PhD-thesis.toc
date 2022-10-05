@@ -19,122 +19,121 @@
 \contentsline {subsection}{\numberline {1.2.5}Animal models}{45}{subsection.1.2.5}%
 \contentsline {subsection}{\numberline {1.2.6}The Medaka Inbred Kiyosu-Karlsruhe (MIKK) panel}{47}{subsection.1.2.6}%
 \contentsline {subsection}{\numberline {1.2.7}The F\textsubscript {2}-cross}{49}{subsection.1.2.7}%
-\contentsline {section}{\numberline {1.3}Studied phenotypes}{50}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Genetic control of somite period development}{50}{subsection.1.3.1}%
+\contentsline {section}{\numberline {1.3}Studied phenotypes}{49}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Genetic control of somite period development}{49}{subsection.1.3.1}%
 \contentsline {subsection}{\numberline {1.3.2}Behaviour}{53}{subsection.1.3.2}%
 \contentsline {subsection}{\numberline {1.3.3}Social genetic effects}{55}{subsection.1.3.3}%
 \contentsline {section}{\numberline {1.4}Poor transferability of polygenic scores to diverse human populations}{56}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}PGS and GWAS}{56}{subsection.1.4.1}%
-\contentsline {subsubsection}{\numberline {1.4.1.1}PGS}{56}{subsubsection.1.4.1.1}%
+\contentsline {subsection}{\numberline {1.4.1}PGS and GWAS}{57}{subsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.1.1}PGS}{57}{subsubsection.1.4.1.1}%
 \contentsline {subsubsection}{\numberline {1.4.1.2}GWAS}{57}{subsubsection.1.4.1.2}%
-\contentsline {subsection}{\numberline {1.4.2}Contributors to PGS non-transferability}{57}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.2}Contributors to PGS non-transferability}{58}{subsection.1.4.2}%
 \contentsline {subsubsection}{\numberline {1.4.2.1}Technological and methodological limitations of GWAS}{58}{subsubsection.1.4.2.1}%
-\contentsline {subsubsection}{\numberline {1.4.2.2}Differences in LD}{59}{subsubsection.1.4.2.2}%
+\contentsline {subsubsection}{\numberline {1.4.2.2}Differences in LD}{60}{subsubsection.1.4.2.2}%
 \contentsline {subsubsection}{\numberline {1.4.2.3}Differences in allele frequencies}{60}{subsubsection.1.4.2.3}%
-\contentsline {subsubsection}{\numberline {1.4.2.4}Differences in environment}{60}{subsubsection.1.4.2.4}%
+\contentsline {subsubsection}{\numberline {1.4.2.4}Differences in environment}{61}{subsubsection.1.4.2.4}%
 \contentsline {subsection}{\numberline {1.4.3}Variation in trait-associated allele frequencies across diverse human populations}{61}{subsection.1.4.3}%
-\contentsline {section}{\numberline {1.5}Summary of results chapters}{61}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Genomic variations in the MIKK panel}{63}{chapter.2}%
-\contentsline {section}{\numberline {2.1}The Medaka Inbred Kiyosu-Karlruhe (MIKK) panel}{63}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Genomic characterisation of the MIKK panel}{63}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}MIKK panel DNA sequence dataset}{63}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Assessing the inbreeding trajectory of the MIKK panel}{64}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Levels of homozygosity}{65}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Nucleotide diversity}{68}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Introgression with northern Japanese and eastern Korean medaka populations}{71}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}LD decay}{73}{subsection.2.2.6}%
-\contentsline {section}{\numberline {2.3}Structural variation in the MIKK panel}{75}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Classification of bold/shy behaviours in 5 established inbred medaka strains}{79}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Results}{80}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Data collection}{80}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Tracking}{82}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Effect of covariates}{82}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Choice of time interval and number of HMM states}{83}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Direct and social genetic effects on bold/shy behaviour}{87}{subsection.3.1.5}%
-\contentsline {subsubsection}{\numberline {3.1.5.1}Direct genetic effects}{87}{subsubsection.3.1.5.1}%
-\contentsline {subsubsection}{\numberline {3.1.5.2}Social genetic effects}{91}{subsubsection.3.1.5.2}%
-\contentsline {chapter}{\numberline {4}Genetic loci associated with somite development periodicity}{95}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Phenotypes of interest}{96}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Somite development period}{96}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Unsegmented presomitic mesoderm area (PSM)}{98}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Comparisons between F\textsubscript {0}, F\textsubscript {1} and F\textsubscript {2} generations}{99}{subsection.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.1.3.1}Inverse-normalisation}{100}{subsubsection.4.1.3.1}%
-\contentsline {section}{\numberline {4.2}Genetic sequencing data}{102}{section.4.2}%
-\contentsline {section}{\numberline {4.3}F\textsubscript {0} homozygosity and F\textsubscript {1} heterozygosity}{103}{section.4.3}%
-\contentsline {section}{\numberline {4.4}F\textsubscript {1} homozygosity}{106}{section.4.4}%
-\contentsline {section}{\numberline {4.5}F\textsubscript {2} genotyping}{109}{section.4.5}%
-\contentsline {section}{\numberline {4.6}GWAS}{114}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Period intercept}{115}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}PSM area}{118}{subsection.4.6.2}%
-\contentsline {chapter}{\numberline {5}Genetic linkage study of bold/shy behaviours in the MIKK panel}{121}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Data collection - F\textsubscript {0} generation}{121}{section.5.1}%
-\contentsline {section}{\numberline {5.2}HMM states}{127}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Social genetic effects}{131}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}State co-occupancy}{131}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Deviation of \emph {\definecolor {iCab_424B4D}{HTML}{424B4D}\textcolor {iCab_424B4D}{iCab}} from its control condition}{132}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Selection of lines for the F\textsubscript {2}-cross}{135}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Direct genetic effects}{138}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Social genetic effects}{141}{subsection.5.5.1}%
-\contentsline {section}{\numberline {5.6}F\textsubscript {2} generation}{144}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Behavioural data collection}{144}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Behavioural phenotyping}{145}{subsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.6.3}Genotyping}{145}{subsection.5.6.3}%
-\contentsline {subsection}{\numberline {5.6.4}F\textsubscript {2}-cross GWAS}{151}{subsection.5.6.4}%
-\contentsline {subsubsection}{\numberline {5.6.4.1}GRM}{151}{subsubsection.5.6.4.1}%
-\contentsline {subsubsection}{\numberline {5.6.4.2}Heritability}{151}{subsubsection.5.6.4.2}%
-\contentsline {subsubsection}{\numberline {5.6.4.3}GWAS}{151}{subsubsection.5.6.4.3}%
-\contentsline {subsubsection}{\numberline {5.6.4.4}Direct genetic effects}{154}{subsubsection.5.6.4.4}%
-\contentsline {subsubsection}{\numberline {5.6.4.5}Social genetic effects}{154}{subsubsection.5.6.4.5}%
-\contentsline {subsection}{\numberline {5.6.5}Candidate loci for CRISPR-knockouts}{155}{subsection.5.6.5}%
-\contentsline {subsubsection}{\numberline {5.6.5.1}Missense variants}{155}{subsubsection.5.6.5.1}%
-\contentsline {subsubsection}{\numberline {5.6.5.2}Other potentially causal variants}{158}{subsubsection.5.6.5.2}%
-\contentsline {paragraph}{\numberline {5.6.5.2.1}\emph {RELL1}}{158}{paragraph.5.6.5.2.1}%
-\contentsline {paragraph}{\numberline {5.6.5.2.2}\emph {CLDN19}}{158}{paragraph.5.6.5.2.2}%
-\contentsline {paragraph}{\numberline {5.6.5.2.3}\emph {GRID2}}{159}{paragraph.5.6.5.2.3}%
-\contentsline {paragraph}{\numberline {5.6.5.2.4}\emph {NLGN3}}{160}{paragraph.5.6.5.2.4}%
-\contentsline {paragraph}{\numberline {5.6.5.2.5}\emph {PANX2}}{160}{paragraph.5.6.5.2.5}%
-\contentsline {section}{\numberline {5.7}Discussion}{161}{section.5.7}%
-\contentsline {chapter}{\numberline {6}Variation in the frequency of trait-associated alleles across global human populations}{163}{chapter.6}%
-\contentsline {section}{\numberline {6.1}\(F_{ST}\) distribution for all SNPs in the human genome}{164}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Analysis}{167}{section.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.0.1}GWAS Catalog}{167}{subsubsection.6.2.0.1}%
-\contentsline {subsection}{\numberline {6.2.1}Linkage disequilibrium}{167}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Control SNPs}{167}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}\(F_{ST}\) and ranking traits by signed Kolmogorov-Smirnov \(D\) statistic}{168}{subsection.6.2.3}%
-\contentsline {chapter}{Conclusions}{173}{chapter*.119}%
-\contentsline {section}{Chapter \ref {MIKK-genomes-chap}}{173}{section*.120}%
-\contentsline {section}{Chapter \ref {Pilot-chap}}{174}{section*.120}%
-\contentsline {section}{Chapter \ref {Somite-chap}}{176}{section*.120}%
-\contentsline {section}{Chapter \ref {MIKK-F2-chap}}{176}{section*.120}%
-\contentsline {subsection}{\numberline {6.2.4}Future directions for the F\textsubscript {2}-cross GWAS for bold-type behaviours in the MIKK panel}{178}{subsection.6.2.4}%
-\contentsline {section}{Chapter \ref {Fst-chap}}{180}{subsection.6.2.4}%
-\contentsline {chapter}{References}{183}{chapter*.121}%
-\contentsline {chapter}{\numberline {A}Chapter 2 supplementary information}{213}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Chapter 5 supplementary information}{215}{appendix.B}%
-\contentsline {section}{\numberline {B.1}15 HMM states with 0.05 second interval}{215}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Four-panel plots for MIKK lines selected for the F2 cross}{215}{section.B.2}%
-\contentsline {subsection}{\numberline {B.2.1}Open field}{250}{subsection.B.2.1}%
-\contentsline {subsubsection}{\numberline {B.2.1.1}8-2}{250}{subsubsection.B.2.1.1}%
-\contentsline {subsubsection}{\numberline {B.2.1.2}18-2}{250}{subsubsection.B.2.1.2}%
-\contentsline {subsubsection}{\numberline {B.2.1.3}50-2}{250}{subsubsection.B.2.1.3}%
-\contentsline {subsubsection}{\numberline {B.2.1.4}38-2}{250}{subsubsection.B.2.1.4}%
-\contentsline {subsubsection}{\numberline {B.2.1.5}21-2}{250}{subsubsection.B.2.1.5}%
-\contentsline {subsubsection}{\numberline {B.2.1.6}40-1}{250}{subsubsection.B.2.1.6}%
-\contentsline {subsection}{\numberline {B.2.2}Novel object}{250}{subsection.B.2.2}%
-\contentsline {subsubsection}{\numberline {B.2.2.1}8-2}{250}{subsubsection.B.2.2.1}%
-\contentsline {subsubsection}{\numberline {B.2.2.2}18-2}{250}{subsubsection.B.2.2.2}%
-\contentsline {subsubsection}{\numberline {B.2.2.3}50-2}{250}{subsubsection.B.2.2.3}%
-\contentsline {subsubsection}{\numberline {B.2.2.4}38-2}{250}{subsubsection.B.2.2.4}%
-\contentsline {subsubsection}{\numberline {B.2.2.5}21-2}{250}{subsubsection.B.2.2.5}%
-\contentsline {subsubsection}{\numberline {B.2.2.6}40-1}{250}{subsubsection.B.2.2.6}%
-\contentsline {section}{\numberline {B.3}HMM state time dependence for all MIKK panel lines}{250}{section.B.3}%
-\contentsline {subsection}{\numberline {B.3.1}Direct genetic effects}{250}{subsection.B.3.1}%
-\contentsline {subsubsection}{\numberline {B.3.1.1}Tile plot}{250}{subsubsection.B.3.1.1}%
-\contentsline {subsubsection}{\numberline {B.3.1.2}Density plot}{250}{subsubsection.B.3.1.2}%
-\contentsline {subsection}{\numberline {B.3.2}Social genetic effects}{250}{subsection.B.3.2}%
-\contentsline {subsubsection}{\numberline {B.3.2.1}Tile plot}{250}{subsubsection.B.3.2.1}%
-\contentsline {subsubsection}{\numberline {B.3.2.2}Density plot}{250}{subsubsection.B.3.2.2}%
-\contentsline {section}{\numberline {B.4}F2 recombination karyoplot with missing calls}{250}{section.B.4}%
-\contentsline {section}{\numberline {B.5}LOCO GRM for chromosome 1}{250}{section.B.5}%
-\contentsline {chapter}{\numberline {C}Chapter 6 supplementary information}{253}{appendix.C}%
-\contentsline {section}{\numberline {C.1}eCDF of all polygenic traits in the GWAS Catalog ranked by \({D_t^S}\)}{253}{section.C.1}%
+\contentsline {section}{\numberline {1.5}Summary of results chapters}{62}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Genomic variations in the MIKK panel}{65}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The Medaka Inbred Kiyosu-Karlruhe (MIKK) panel}{65}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Genomic characterisation of the MIKK panel}{65}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}MIKK panel DNA sequence dataset}{65}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Assessing the inbreeding trajectory of the MIKK panel}{66}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Levels of homozygosity}{67}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Nucleotide diversity}{70}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Introgression with northern Japanese and eastern Korean medaka populations}{73}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}LD decay}{75}{subsection.2.2.6}%
+\contentsline {section}{\numberline {2.3}Structural variation in the MIKK panel}{77}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Classification of bold/shy behaviours in 5 established inbred medaka strains}{81}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Data collection}{81}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Tracking}{84}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Effect of covariates}{84}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Choice of time interval and number of Hidden Markov Model (HMM) states}{85}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Direct and social genetic effects on bold/shy behaviour}{89}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Direct genetic effects}{89}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Social genetic effects}{93}{subsection.3.5.2}%
+\contentsline {chapter}{\numberline {4}Genetic loci associated with somite development periodicity}{97}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Phenotypes of interest}{98}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Somite development period}{98}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Unsegmented presomitic mesoderm area (PSM)}{100}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Comparisons between F\textsubscript {0}, F\textsubscript {1} and F\textsubscript {2} generations}{101}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}Inverse-normalisation}{103}{subsubsection.4.1.3.1}%
+\contentsline {section}{\numberline {4.2}Genetic sequencing data}{105}{section.4.2}%
+\contentsline {section}{\numberline {4.3}F\textsubscript {0} homozygosity and F\textsubscript {1} heterozygosity}{106}{section.4.3}%
+\contentsline {section}{\numberline {4.4}F\textsubscript {1} homozygosity}{109}{section.4.4}%
+\contentsline {section}{\numberline {4.5}F\textsubscript {2} genotyping}{112}{section.4.5}%
+\contentsline {section}{\numberline {4.6}GWAS}{117}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Period intercept}{118}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}PSM area}{121}{subsection.4.6.2}%
+\contentsline {chapter}{\numberline {5}Genetic linkage study of bold/shy behaviours in the MIKK panel}{125}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Data collection - F\textsubscript {0} generation}{125}{section.5.1}%
+\contentsline {section}{\numberline {5.2}HMM states}{131}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Social genetic effects}{135}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}State co-occupancy}{135}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Deviation of \emph {\definecolor {iCab_424B4D}{HTML}{424B4D}\textcolor {iCab_424B4D}{iCab}} from its control condition}{136}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Selection of lines for the F\textsubscript {2}-cross}{139}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Direct genetic effects}{142}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Social genetic effects}{145}{subsection.5.5.1}%
+\contentsline {section}{\numberline {5.6}F\textsubscript {2} generation}{148}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Behavioural data collection}{148}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Behavioural phenotyping}{149}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Genotyping}{149}{subsection.5.6.3}%
+\contentsline {subsection}{\numberline {5.6.4}F\textsubscript {2}-cross GWAS}{155}{subsection.5.6.4}%
+\contentsline {subsubsection}{\numberline {5.6.4.1}GRM}{155}{subsubsection.5.6.4.1}%
+\contentsline {subsubsection}{\numberline {5.6.4.2}Heritability}{155}{subsubsection.5.6.4.2}%
+\contentsline {subsubsection}{\numberline {5.6.4.3}GWAS}{155}{subsubsection.5.6.4.3}%
+\contentsline {subsubsection}{\numberline {5.6.4.4}Direct genetic effects}{158}{subsubsection.5.6.4.4}%
+\contentsline {subsubsection}{\numberline {5.6.4.5}Social genetic effects}{158}{subsubsection.5.6.4.5}%
+\contentsline {subsection}{\numberline {5.6.5}Candidate loci for CRISPR-knockouts}{159}{subsection.5.6.5}%
+\contentsline {subsubsection}{\numberline {5.6.5.1}Missense variants}{159}{subsubsection.5.6.5.1}%
+\contentsline {subsubsection}{\numberline {5.6.5.2}Other potentially causal variants}{162}{subsubsection.5.6.5.2}%
+\contentsline {paragraph}{\numberline {5.6.5.2.1}\emph {RELL1}}{162}{paragraph.5.6.5.2.1}%
+\contentsline {paragraph}{\numberline {5.6.5.2.2}\emph {CLDN19}}{162}{paragraph.5.6.5.2.2}%
+\contentsline {paragraph}{\numberline {5.6.5.2.3}\emph {GRID2}}{163}{paragraph.5.6.5.2.3}%
+\contentsline {paragraph}{\numberline {5.6.5.2.4}\emph {NLGN3}}{164}{paragraph.5.6.5.2.4}%
+\contentsline {paragraph}{\numberline {5.6.5.2.5}\emph {PANX2}}{165}{paragraph.5.6.5.2.5}%
+\contentsline {section}{\numberline {5.7}Discussion}{165}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Variation in the frequency of trait-associated alleles across global human populations}{167}{chapter.6}%
+\contentsline {section}{\numberline {6.1}\(F_{ST}\) distribution for all SNPs in the human genome}{168}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Analysis}{171}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}GWAS Catalog}{171}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Linkage disequilibrium}{171}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Control SNPs}{171}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}\(F_{ST}\) and ranking traits by signed Kolmogorov-Smirnov \(D\) statistic}{172}{subsection.6.2.4}%
+\contentsline {chapter}{Conclusions}{177}{chapter*.119}%
+\contentsline {section}{Chapter \ref {MIKK-genomes-chap}}{177}{section*.120}%
+\contentsline {section}{Chapter \ref {Pilot-chap}}{178}{section*.120}%
+\contentsline {section}{Chapter \ref {Somite-chap}}{180}{section*.120}%
+\contentsline {section}{Chapter \ref {MIKK-F2-chap}}{180}{section*.120}%
+\contentsline {subsection}{\numberline {6.2.5}Future directions for the F\textsubscript {2}-cross GWAS for bold-type behaviours in the MIKK panel}{182}{subsection.6.2.5}%
+\contentsline {section}{Chapter \ref {Fst-chap}}{184}{subsection.6.2.5}%
+\contentsline {chapter}{References}{187}{chapter*.121}%
+\contentsline {chapter}{\numberline {A}Chapter 2 supplementary information}{217}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Chapter 5 supplementary information}{219}{appendix.B}%
+\contentsline {section}{\numberline {B.1}15 HMM states with 0.05 second interval}{219}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Four-panel plots for MIKK lines selected for the F2 cross}{219}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}Open field}{221}{subsection.B.2.1}%
+\contentsline {subsubsection}{\numberline {B.2.1.1}8-2}{221}{subsubsection.B.2.1.1}%
+\contentsline {subsubsection}{\numberline {B.2.1.2}18-2}{233}{subsubsection.B.2.1.2}%
+\contentsline {subsubsection}{\numberline {B.2.1.3}50-2}{233}{subsubsection.B.2.1.3}%
+\contentsline {subsubsection}{\numberline {B.2.1.4}38-2}{233}{subsubsection.B.2.1.4}%
+\contentsline {subsubsection}{\numberline {B.2.1.5}21-2}{233}{subsubsection.B.2.1.5}%
+\contentsline {subsubsection}{\numberline {B.2.1.6}40-1}{233}{subsubsection.B.2.1.6}%
+\contentsline {subsection}{\numberline {B.2.2}Novel object}{235}{subsection.B.2.2}%
+\contentsline {subsubsection}{\numberline {B.2.2.1}8-2}{235}{subsubsection.B.2.2.1}%
+\contentsline {subsubsection}{\numberline {B.2.2.2}18-2}{247}{subsubsection.B.2.2.2}%
+\contentsline {subsubsection}{\numberline {B.2.2.3}50-2}{247}{subsubsection.B.2.2.3}%
+\contentsline {subsubsection}{\numberline {B.2.2.4}38-2}{247}{subsubsection.B.2.2.4}%
+\contentsline {subsubsection}{\numberline {B.2.2.5}21-2}{247}{subsubsection.B.2.2.5}%
+\contentsline {subsubsection}{\numberline {B.2.2.6}40-1}{247}{subsubsection.B.2.2.6}%
+\contentsline {section}{\numberline {B.3}HMM state time dependence for all MIKK panel lines}{249}{section.B.3}%
+\contentsline {subsection}{\numberline {B.3.1}Direct genetic effects}{249}{subsection.B.3.1}%
+\contentsline {subsubsection}{\numberline {B.3.1.1}Tile plot}{249}{subsubsection.B.3.1.1}%
+\contentsline {subsubsection}{\numberline {B.3.1.2}Density plot}{249}{subsubsection.B.3.1.2}%
+\contentsline {subsection}{\numberline {B.3.2}Social genetic effects}{249}{subsection.B.3.2}%
+\contentsline {subsubsection}{\numberline {B.3.2.1}Tile plot}{249}{subsubsection.B.3.2.1}%
+\contentsline {subsubsection}{\numberline {B.3.2.2}Density plot}{249}{subsubsection.B.3.2.2}%
+\contentsline {section}{\numberline {B.4}F2 recombination karyoplot with missing calls}{254}{section.B.4}%
+\contentsline {section}{\numberline {B.5}LOCO GRM for chromosome 1}{256}{section.B.5}%
+\contentsline {chapter}{\numberline {C}Chapter 6 supplementary information}{257}{appendix.C}%
+\contentsline {section}{\numberline {C.1}eCDF of all polygenic traits in the GWAS Catalog ranked by \({D_t^S}\)}{257}{section.C.1}%

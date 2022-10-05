@@ -22,6 +22,7 @@
 
 All frame grabs were taken at the 300th second (5-minute mark) of each 10-minute assay component.
 
+\clearpage
 ### Open field
 
 #### 8-2
@@ -120,6 +121,7 @@ All frame grabs were taken at the 300th second (5-minute mark) of each 10-minute
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/open_field_20191118_1129_40-1_R_B_300} \caption{(ref:4p-40-1-of-B)}(\#fig:4p-40-1-of-B)
 \end{figure}
 
+\clearpage
 ### Novel object
 
 #### 8-2
@@ -218,6 +220,7 @@ All frame grabs were taken at the 300th second (5-minute mark) of each 10-minute
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/four_panel_plots/novel_object_20191118_1129_40-1_R_B_300} \caption{(ref:4p-40-1-no-B)}(\#fig:4p-40-1-no-B)
 \end{figure}
 
+\clearpage
 ## HMM state time dependence for all MIKK panel lines
 
 ### Direct genetic effects
@@ -256,6 +259,7 @@ All frame grabs were taken at the 300th second (5-minute mark) of each 10-minute
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/0.08_15_dens_sge} \caption{(ref:mikk-all-tile-sge)}(\#fig:mikk-all-dens-sge)
 \end{figure}
 
+\clearpage
 ## F2 recombination karyoplot with missing calls
 
 (ref:F2-recomb-blocks-missing) Karyoplot for F2 samples, coloured by genotype. Samples are sorted in the order in which they were phenotyped. Blocks are filled with the colour of the paternal F0 line for the homozygous paternal haplotype block, black for heterozygous, and the colour of the maternal F0 line for the homozygous maternal haplotype block. 
@@ -263,7 +267,7 @@ All frame grabs were taken at the 300th second (5-minute mark) of each 10-minute
 \begin{figure}
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/karyoplot_wi_missing} \caption{(ref:F2-recomb-blocks-missing)}(\#fig:F2-recomb-blocks-missing)
 \end{figure}
-
+\clearpage
 ## LOCO GRM for chromosome 1 
 
 (ref:loco-grm-chr1) "Leave-one-chromosome-out" genetic relationship matrix for 271 F2 samples based on 44,284 non-missing SNPs, having excluded 76 SNPs on chromosome 1.
