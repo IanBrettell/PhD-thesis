@@ -18,7 +18,7 @@ To the staff of Pembroke College, you've made it feel like home.
 
 To the wider network at EMBL and EBI, I'm so grateful to have been a part of the International PhD program. The funding, resources, and introductory course were all fantastic, and I never wanted for anything.
 
-To the Birney Research Group and our wider set of collaborators, it's been wonderful working with you, and I'm excited to see all the amazing science (or whatever else) you'll do throughout your careers. A special thank you to Tom Fitzgerald, for your constant and reassuring presence. 
+To the Birney Research Group and our wider set of collaborators, it's been wonderful working with you, and I'm excited to see all the amazing science (or whatever else) you'll do throughout your careers. A special thank you to Tom Fitzgerald for your constant and reassuring presence. 
 
 To my Thesis Advisory Committee -- Virginie Uhlmann, Cornelius Gross, and Anne Ferguson-Smith -- thank you for your sage guidance throughout this process.
 

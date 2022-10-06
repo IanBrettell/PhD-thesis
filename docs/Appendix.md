@@ -5,7 +5,7 @@
 (ref:nuc-div-per-indiv) Nucleotide diversity ($\hat{\pi}$) calculated within 500-kb non-overlapping windows for each of the 63 non-"sibling" lines from the MIKK panel individually, for chromosome 1 (left) and 22 (right). The windows that include the medaka sex determination region (1:~16-17 Mb) show consistent elevated nucleotide diversity across most lines. 
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{figs/mikk_genome/supp_02_pi_chrs_1_22} \caption{(ref:uc-div-per-indiv)}(\#fig:nuc-div-per-indiv)
+\includegraphics[width=1\linewidth]{figs/mikk_genome/supp_02_pi_chrs_1_22} \caption{(ref:nuc-div-per-indiv)}(\#fig:nuc-div-per-indiv)
 \end{figure}
 
 # Chapter 5 supplementary information
