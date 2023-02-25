@@ -19,18 +19,18 @@
 \contentsline {subsection}{\numberline {1.2.5}Animal models}{43}{subsection.1.2.5}%
 \contentsline {subsection}{\numberline {1.2.6}The Medaka Inbred Kiyosu-Karlsruhe (MIKK) panel}{45}{subsection.1.2.6}%
 \contentsline {subsection}{\numberline {1.2.7}The F\textsubscript {2}-cross}{47}{subsection.1.2.7}%
-\contentsline {section}{\numberline {1.3}Studied phenotypes}{47}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Genetic control of somite period development}{47}{subsection.1.3.1}%
+\contentsline {section}{\numberline {1.3}Studied phenotypes}{48}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Genetic control of somite period development}{48}{subsection.1.3.1}%
 \contentsline {subsection}{\numberline {1.3.2}Behaviour}{51}{subsection.1.3.2}%
 \contentsline {subsection}{\numberline {1.3.3}Social genetic effects}{53}{subsection.1.3.3}%
 \contentsline {section}{\numberline {1.4}Poor transferability of polygenic scores to diverse human populations}{54}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}PGS and GWAS}{55}{subsection.1.4.1}%
-\contentsline {subsubsection}{\numberline {1.4.1.1}PGS}{55}{subsubsection.1.4.1.1}%
+\contentsline {subsection}{\numberline {1.4.1}PGS and GWAS}{54}{subsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.1.1}PGS}{54}{subsubsection.1.4.1.1}%
 \contentsline {subsubsection}{\numberline {1.4.1.2}GWAS}{55}{subsubsection.1.4.1.2}%
-\contentsline {subsection}{\numberline {1.4.2}Contributors to PGS non-transferability}{56}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.2}Contributors to PGS non-transferability}{55}{subsection.1.4.2}%
 \contentsline {subsubsection}{\numberline {1.4.2.1}Technological and methodological limitations of GWAS}{56}{subsubsection.1.4.2.1}%
-\contentsline {subsubsection}{\numberline {1.4.2.2}Differences in LD}{58}{subsubsection.1.4.2.2}%
+\contentsline {subsubsection}{\numberline {1.4.2.2}Differences in LD}{57}{subsubsection.1.4.2.2}%
 \contentsline {subsubsection}{\numberline {1.4.2.3}Differences in allele frequencies}{58}{subsubsection.1.4.2.3}%
-\contentsline {subsubsection}{\numberline {1.4.2.4}Differences in environment}{59}{subsubsection.1.4.2.4}%
-\contentsline {subsection}{\numberline {1.4.3}Variation in trait-associated allele frequencies across diverse human populations}{60}{subsection.1.4.3}%
-\contentsline {section}{\numberline {1.5}Summary of results chapters}{60}{section.1.5}%
+\contentsline {subsubsection}{\numberline {1.4.2.4}Differences in environment}{58}{subsubsection.1.4.2.4}%
+\contentsline {subsection}{\numberline {1.4.3}Variation in trait-associated allele frequencies across diverse human populations}{59}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Summary of results chapters}{59}{section.1.5}%

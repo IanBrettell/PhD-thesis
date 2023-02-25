@@ -648,7 +648,7 @@ Altogether, the rapid improvement in sequencing technologies has now reached the
 \hypertarget{causes-of-variation-in-complex-traits}{%
 \section{Causes of variation in complex traits}\label{causes-of-variation-in-complex-traits}}
 
-As discussed above, individual differences in human traits have now been studied for more than a century, yet the causes of variation in human traits remain uncertain and complex (Polderman et al. 2015). Specifically, the partitioning of observed variability into underlying genetic and environmental sources, and the relative importance of additive and non-additive genetic variation, continue to be debated to this day (Polderman et al. 2015).
+As discussed above, individual differences in human traits have now been studied for more than a century, yet the causes of variation in human traits remain uncertain and complex (Polderman et al. 2015). Specifically, the partitioning of observed variability into underlying genetic and environmental sources, and the relative importance of additive and non-additive genetic variation, continue to be debated to this day (Polderman et al. 2015). For the sake of clarity, in this section -- unless otherwise indicated -- the term ``genetic'' refers to an individual's complete DNA sequence, usually in contrast to the ``environment''; ``allele'' refers to differences in DNA sequence at the same genomic locus, including both coding and non-coding DNA; and ``genotype'' refers to an individual's full set of alleles at a given locus (where humans, being diploid, have two alleles at each autosomal locus).
 
 The most simple causal model for phenotypes is shown in \textbf{Figure \ref{fig:pge-simp}}.
 
@@ -681,7 +681,7 @@ V_{P} = V_{G} + V_{E} \label{eq:pge}
 H^2 = \frac{V_G}{V_P} \label{eq:heritbs}
 \end{equation}
 
-\(V_{G}\) can be further decomposed into additive, dominance, and interaction (``epistatic'') variances. Additive variance, \(V_A\), also known as the variance of ``breeding values'', measures the degree to which offspring deviate from the mean phenotype due to the inheritance of a particular allele and its relative effect on the phenotype (Byers 2008). Dominance variance, \(V_D\), measures the dominance deviation, being the extent to which the phenotype deviates from the additive linear relationship across genotypes as a result of interactions between alleles of the same gene. Interaction variance, \(V_I\), measures the degree to which the phenotype deviates from the additive linear relationship across genotypes as a result of interactions between genes at different loci (Falconer and Mackay 1996).
+\(V_{G}\) can be further decomposed into additive, dominance, and interaction (``epistatic'') variances. Additive variance, \(V_A\), also known as the variance of ``breeding values'', measures the degree to which offspring deviate from the mean phenotype due to the inheritance of a particular allele and its relative effect on the phenotype (Byers 2008). Dominance variance, \(V_D\), measures the dominance deviation, being the extent to which the phenotype deviates from the additive linear relationship across genotypes as a result of interactions between alleles at the same locus. Interaction variance, \(V_I\), measures the degree to which the phenotype deviates from the additive linear relationship across genotypes as a result of interactions between different loci (Falconer and Mackay 1996).
 
 \begin{equation}
 V_G = V_A + V_D + V_I \label{eq:gendecomp}
@@ -698,7 +698,7 @@ It is important to note, however, that as heritability (both in its narrow and b
 \hypertarget{heritability-and-twin-studies}{%
 \subsection{Heritability and twin studies}\label{heritability-and-twin-studies}}
 
-In humans, the twin study design has been used widely to disentangle the relative contributions of genes and environment for a variety of traits. The classical twin design is based on contrasting the trait resemblance of monozygotic (\textbf{MZ}) and dizygotic (\textbf{DZ}) twin pairs (Polderman et al. 2015). MZ twins share approximately 100\% of genotypes, whereas DZ twins, like siblings, share on average 50\% of their genotypes (Knopik et al. 2019). Assuming they share the same environment (a point I return to below), a rough estimate of heritability can be obtained by comparing the respective correlations of MZ twins and DZ twins with the phenotype of interest. If \(r_{MZ}\) and \(r_{DZ}\) are the correlation coefficients observed between pairs of MZ and DZ twins for a trait of interest (Equation \eqref{eq:cor} above), \(h^2\) = additive genetic influences (Equation \eqref{eq:heritns} above), and \(c^2\) = common environmental influences, then Falconer's formula tells us:
+In humans, the twin study design has been used widely to disentangle the relative contributions of genetics and environment for a variety of traits. The classical twin design is based on contrasting the trait resemblance of monozygotic (\textbf{MZ}) and dizygotic (\textbf{DZ}) twin pairs (Polderman et al. 2015). MZ twins share approximately 100\% of genotypes, whereas DZ twins, like siblings, share on average 50\% of their genotypes (Knopik et al. 2019). Assuming they share the same environment (a point I return to below), a rough estimate of heritability can be obtained by comparing the respective correlations of MZ twins and DZ twins with the phenotype of interest. If \(r_{MZ}\) and \(r_{DZ}\) are the correlation coefficients observed between pairs of MZ and DZ twins for a trait of interest (Equation \eqref{eq:cor} above), \(h^2\) = additive genetic influences (Equation \eqref{eq:heritns} above), and \(c^2\) = common environmental influences, then Falconer's formula tells us:
 
 \begin{equation}
 r_{MZ} = h^2 + c^2
@@ -722,7 +722,7 @@ Narrow-sense heritability \(h^2\) can therefore be estimated by doubling the dif
 \hypertarget{gene-environment-interactions}{%
 \subsection{Gene-environment interactions}\label{gene-environment-interactions}}
 
-The model presented above in Equation \eqref{eq:pge-simp} assumes that the environment has the same effect on different genotypes. When this is not true, and the variance components of genes and environment do not add up -- that is, where \(V_{P} \neq V_{G} + V_{E}\) -- there is said to be an interaction between genes and environment (\textbf{GxE}) (\textbf{Figure \ref{fig:pgxe}}) (Falconer and Mackay 1996).
+The model presented above in Equation \eqref{eq:pge-simp} assumes that the environment has the same effect on different genotypes. When this is not true, and the variance components of genetics and environment do not add up -- that is, where \(V_{P} \neq V_{G} + V_{E}\) -- there is said to be an interaction between genetics and environment (\textbf{GxE}) (\textbf{Figure \ref{fig:pgxe}}) (Falconer and Mackay 1996).
 
 
 
@@ -747,7 +747,7 @@ Where the variance decomposition is:
 V_P = V_G + V_E + V_{G\times E} \label{eq:gbyedecomp}
 \end{equation}
 
-\textbf{Figure \ref{fig:schema-gxe}} illustrates the general concept behind GxE. Two different genotypes, \(G_A\) and \(G_B\), are measured for the phenotype \(P\) under two different environments, \(E_1\) and \(E_2\). Figure \ref{fig:schema-gxe}A represents a situation where \(P = G + E\) holds. Figure \ref{fig:schema-gxe}B represents a situation where there is an interaction between genes and environment. GxE is common in nature (Garcia de Leániz, Verspoor, and Hawkins 1989; Sgrò and Hoffmann 2004), and is likely to be particularly relevant to social behaviours, which I expand upon below in section \ref{SGE}.
+\textbf{Figure \ref{fig:schema-gxe}} illustrates the general concept behind GxE. Two different genotypes, \(G_A\) and \(G_B\), are measured for the phenotype \(P\) under two different environments, \(E_1\) and \(E_2\). Figure \ref{fig:schema-gxe}A represents a situation where \(P = G + E\) holds. Figure \ref{fig:schema-gxe}B represents a situation where there is an interaction between genetics and environment. GxE is common in nature (Garcia de Leániz, Verspoor, and Hawkins 1989; Sgrò and Hoffmann 2004), and is likely to be particularly relevant to social behaviours, which I expand upon below in section \ref{SGE}.
 
 
 
@@ -770,7 +770,7 @@ Animal breeding involves identifying the animals with the highest breeding value
 \hypertarget{GWAS}{%
 \subsection{From global variance to individual loci -- family genetic linkage studies and GWAS}\label{GWAS}}
 
-Twin studies focus on the global partitioning of variances attributable to genetic and environmental facts, but since Morgan's work, researchers have also sought to identify the specific genetic variants responsible for Mendelian phenotypes in humans. From the 1980s, advances in DNA sequencing enabled the application of genetic linkage studies -- such as those previously performed in model organisms like \emph{Drosophila} -- to human families, in order to trace inheritances and thereby discover thousands of genes for rare Mendelian diseases (Altshuler, Daly, and Lander 2008). The process involved determining known polymorphic regions, and using them as markers to trace the transmission of chromosomal regions in families (Altshuler, Daly, and Lander 2008). The feasibility of this method was first demonstrated in 1983 with Huntington disease (Gusella et al. 1983), and over the following decades demonstrated that Mendelian disease-causing mutations often cause major changes in encoded proteins. The utility of the approach, however, reached its limit when applied to mapping common diseases such as heart disease, breast cancer, and diabetes (T. W. T. C. C. Consortium 2007; Altshuler, Daly, and Lander 2008).
+Twin studies focus on the global partitioning of variances attributable to genetic and environmental factors, but since Morgan's work, researchers have also sought to identify the specific genetic variants responsible for Mendelian phenotypes in humans. From the 1980s, advances in DNA sequencing enabled the application of genetic linkage studies -- such as those previously performed in model organisms like \emph{Drosophila} -- to human families, in order to trace inheritances and thereby discover thousands of genes for rare Mendelian diseases (Altshuler, Daly, and Lander 2008). The process involved determining known polymorphic regions, and using them as markers to trace the transmission of chromosomal regions in families (Altshuler, Daly, and Lander 2008). The feasibility of this method was first demonstrated in 1983 with Huntington disease (Gusella et al. 1983), and over the following decades demonstrated that Mendelian disease-causing mutations often cause major changes in encoded proteins. The utility of the approach, however, reached its limit when applied to mapping common diseases such as heart disease, breast cancer, and diabetes (T. W. T. C. C. Consortium 2007; Altshuler, Daly, and Lander 2008).
 
 Instead of tracing genes through families, an alternative approach is to map genes by comparing the frequencies of genetic variants between affected and unaffected individuals, known as a ``case-control'' approach. Early applications focused on candidate genes and found correlations between blood-group antigens and peptic ulcer disease in the 1950s (Aird et al. 1954); the human leukocyte antigen (HLA) locus and autoimmune and infectious diseases in the 1960s and 1970s (Klein and Sato 2000); and apolipoprotein E with Alzheimer's disease in the 1980s (Strittmatter and Roses 1996). These early studies were more the exception than the rule, as candidate genes were a ``shot in the dark'' (as established from the family linkage studies, which often found variants that were previously unsuspected). They were susceptible to false positives caused by population structure (Altshuler, Daly, and Lander 2008).
 
@@ -778,40 +778,36 @@ It became clear that Mendelian diseases were rare, caused by highly-penetrant, m
 
 Next-generation sequencing technologies enabled the inclusion of thousands of SNP markers to be tested simultaneously for their association with a phenotype of interest, with the first Genome-Wide Association Study (\textbf{GWAS}) published in 2001 (Ozaki et al. 2002). GWAS aim to identify genetic variants associated with traits by comparing the allele frequencies of individuals who share similar ancestries, but differ in values for the trait in question (Uffelmann et al. 2021). As of 2021, over 5,700 GWAS have been performed for more than 3,330 human traits (Uffelmann et al. 2021).
 
-In its simple form, GWAS construct a linear model for each SNP marker of the form (Caballero 2020):
+In its simple form, GWAS construct a linear model for each SNP marker \(s\) of the form (Caballero 2020; Uffelmann et al. 2021):
 
 \begin{equation}
-\mathbold{y} = \alpha \pmb{\alpha} \boldsymbol{\alpha} \mathbold{\alpha} + \mathbold{\beta} \mathbold{x} + \mathbold{e} e \pmb{e} \label{eq:gwassimp}
-\end{equation}
-
-Where \(\mathbold{y}\) is a vector of phenotype values, \(\mathbold{W}\) is a matrix of covariates including an intercept term, \(\mathbold{\alpha}\) is a corresponding vector of effect sizes, \(\mathbold{\beta}\) is a vector of the effect sizes of the marker, \(\mathbold{x}\) is the number of copies of an allele for each marker (usually 0, 1, or 2), and \(\mathbold{e}\) is a vector of random residual errors.
-
-However, GWAS must always grapple with population structure and unequal relatedness among individuals, which in a given cohort can lead to false discoveries (Ewens and Spielman 1995; Members of the Complex Trait Consortium 2003). This phenomenon is caused by the fact that individuals who share common ancestries will share both variants that do affect the trait of interest, and variants that do not. The non-causal variants that are correlated with the causal variants due to this shared ancestry will therefore also be found to be statistically associated with the trait. Recent methods for dealing with this issue include admixture inference (to identify related clusters, Jonathan K. Pritchard, Stephens, and Donnelly 2000), and principal components analysis (to include the first set of principal components as covariates in the model, Price et al. 2006). A popular method, which can also be combined with the above methods, is to use a linear mixed model that includes the random effect \(g\) to capture the polygenic effect of all SNPs other than the one being tested. \(g\) in turn has a variance that is adjusted by a ``kinship matrix'' or Genetic Relationship Matrix (\textbf{GRM}), \(\mathbold{\psi}\), which measures the degree of relatedness between individuals in the sample (Yu et al. 2006; Yang et al. 2011; Loh et al. 2015). The standard linear regression model currently used for GWAS can be written as follows (Uffelmann et al. 2021):
-
-\begin{equation}
-\mathbold{y} \sim \mathbold{W} \alpha ~+~\textbf{X}_s\mathbold{\beta}_s + g + e \label{eq:gwaslmm}
+\pmb{y} \sim \pmb{W} \pmb{\alpha} + \pmb{x}_s\beta_s + \pmb{e}  \label{eq:gwassimp}
 \end{equation}
 \begin{equation}
-g \sim N(0,\sigma^2_A\pmb{\psi}) \label{eq:gwaslmmg}
-\end{equation}
-\begin{equation}
-e \sim N(0,\sigma^2_e \textbf{I}) \label{eq:gwaslmme}
+\pmb{e} \sim N(0,\sigma^2_e \pmb{I}) \label{eq:gwassimpe}
 \end{equation}
 
-Where, for each individual, \(\mathbold{y}\) is a vector of phenotype values, \(\mathbold{W}\) is a matrix of covariates including an intercept term, \(\alpha\) is a corresponding vector of effect sizes, \(X_s\) is a vector of genotype values for all individuals at SNP \(s\), \(\pmb{\beta}_s\) is the corresponding fixed effect size of genetic variant \(s\) (also known as the SNP effect size), \(g\) is a random effect that captures the polygenic effect of other SNPs, \(\mathbold{e}\) is a random effect of residual errors, \(\sigma^2_{A}\) measures additive genetic variation of the phenotype, \(\pmb{\psi}\) is the standard GRM, \(\sigma^2_e\) measures residual variance, and \(\textbf{I}\) is an identity matrix (Uffelmann et al. 2021).
+Where \(\pmb{y}\) is a vector of phenotype values for the individuals in the sample, \(\pmb{W}\) is a matrix of covariates including an intercept term, \(\pmb{\alpha}\) is a corresponding vector of effect sizes, \(\pmb{x}_s\) is a vector of genotype values for all individuals at SNP \(s\), \(\beta_s\) is the corresponding fixed effect size of genetic variant \(s\) (also known as the SNP effect size), \(\pmb{e}\) is a vector of random effect residual errors, \(\sigma^2_e\) measures residual variance, and \(\pmb{I}\) is an identity matrix.
 
-The standard GRM (\(\pmb{\psi}\)) is calculated by first standardising the vector of genotype values at each SNP as follows, where genotype \(k_{ij}\) represents the \(i\)\textsuperscript{th} SNP of the \(j\)\textsuperscript{th} individual (Yang et al. 2011):
+However, GWAS must always grapple with population structure and unequal relatedness among individuals, which in a given cohort can lead to false discoveries (Ewens and Spielman 1995; Members of the Complex Trait Consortium 2003). This phenomenon is caused by the fact that individuals who share common ancestries will share both variants that do affect the trait of interest, and variants that do not. The non-causal variants that are correlated with the causal variants due to this shared ancestry will therefore also be found to be statistically associated with the trait. Recent methods for dealing with this issue include admixture inference (to identify related clusters, Jonathan K. Pritchard, Stephens, and Donnelly 2000), and principal components analysis (to include the first set of principal components as covariates in the model, Price et al. 2006). A popular method, which can also be combined with the above methods, is to use a linear mixed model that includes the random effect \(\pmb{g}\) to capture the polygenic effect of all SNPs other than the one being tested. \(\pmb{g}\) in turn has a variance that is adjusted by a ``kinship matrix'' or Genetic Relationship Matrix (\textbf{GRM}), \(\pmb{\psi}\), which measures the degree of relatedness between individuals in the sample (Yu et al. 2006; Yang et al. 2011; Loh et al. 2015). The standard linear regression model currently used for GWAS can be written as follows (Uffelmann et al. 2021):
 
 \begin{equation}
-k_{ij} = (x_{ij} - 2p_i)/\sqrt{2p_i(1-p_i)} \label{eq:grmstd}
+\pmb{y} \sim \pmb{W} \pmb{\alpha} + \pmb{x}_s\beta_s + \pmb{g} + \pmb{e} \label{eq:gwaslmm}
+\end{equation}
+\begin{equation}
+\pmb{g} \sim N(0,\sigma^2_A\pmb{\psi}) \label{eq:gwaslmmg}
 \end{equation}
 
-Where \(x_{ij}\) is the number of copies of the alternative allele (0, 1, 2), and \(p_i\) is the frequency of the alternative allele.
-
-The matrix of standardised genotypes \(\textbf{K}\) is then multiplied by its transpose and divided by the number of samples \(N\) to produce \(\pmb{\psi}\) (Yang et al. 2011):
+Equation \eqref{eq:gwaslmm} is identical to Equation \eqref{eq:gwassimp} above, except it now includes the term \(\pmb{g}\), which is a random effect that captures the polygenic effect of other SNPs. \(\sigma^2_{A}\) measures additive genetic variation of the phenotype, and the standard GRM (\(\pmb{\psi}\)) is calculated by first standardising the vector of genotype values at each SNP as follows, where genotype \(\pmb{K}_{ij}\) represents the \(i\)\textsuperscript{th} SNP of the \(j\)\textsuperscript{th} individual (Uffelmann et al. 2021; Yang et al. 2011):
 
 \begin{equation}
-\pmb{\psi} = \textbf{K}\textbf{K}'/ N \label{eq:grm}
+\pmb{K}_{ij} = (x_{ij} - 2p_i)/\sqrt{2p_i(1-p_i)} \label{eq:grmstd}
+\end{equation}
+
+Where \(x_{ij}\) is the number of copies of the alternative allele (0, 1, 2), and \(p_i\) is the frequency of the alternative allele. The matrix of standardised genotypes \(\pmb{K}\) is then multiplied by its transpose and divided by the number of samples \(N\) to produce \(\pmb{\psi}\) (Yang et al. 2011):
+
+\begin{equation}
+\pmb{\psi} = \pmb{K}\pmb{K}'/ N \label{eq:grm}
 \end{equation}
 
 GWAS generate outputs that include a \(p\)-value and directional effect size (\(\beta\)) for each tested SNP. As the method tends to test millions of SNPs, there need to be corrections for multiple testing. The preferred method for setting the \(p\)-value threshold for significance varies depending on the study, but in essence it indicates the proportion of false positives that the investigator is willing to tolerate in their study (Clarke et al. 2011). By convention, in human studies the threshold is set at \(p < 5 \times 10^{-8}\) (Barsh et al. 2012; Bush and Moore 2012; Clarke et al. 2011). The most conservative method, Bonferroni correction, adjusts the type I error rate \(\alpha\) by the number of tests performed, so if \(\alpha = 0.05\) and the number of loci tested is 500,000, the corrected significance threshold is \(0.05 / 500,000 = 1\times10^{-6}\). Bonferroni correction tends to be conservative because it assumes that all loci are independent, which is untrue due to genetic linkage. A less conservative method is a correction for the false discovery rate (\textbf{FDR}), which provides an estimate of the proportion of significant results that are actually true (Hochberg and Benjamini 1990). It is widely applied to GWAS (van den Oord 2008), but suffers from the same lack of independence between loci. The `gold standard' method for accurate detection is permutation testing (Westfall and Young 1993), where the phenotype is randomly permuted across samples and a separate GWAS is run \(N\) times, representing \(N\) possible samplings of individuals under the null hypothesis, with the lowest \(p\)-value from those permutations setting the significance threshold.
