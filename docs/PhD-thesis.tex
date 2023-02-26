@@ -159,6 +159,19 @@
 \predate{\begin{center} Pembroke College \\ \bigskip }
 \postdate{\end{center} \begin{center} \bigskip \bigskip \bigskip This thesis is submitted for the degree of Doctor of Philosophy. \end{center} \centering \begin{figure}[!tpb] \centering \begin{subfigure}{0.49 \linewidth} \centering \vfill \includegraphics[height=0.45in]{/Users/brettell/Documents/Repositories/PhD-thesis/book/figs/title/cambridge_university2.pdf} \end{subfigure} \hfill \begin{subfigure}{0.49 \linewidth} \centering \includegraphics[height=0.55in]{/Users/brettell/Documents/Repositories/PhD-thesis/book/figs/title/EMBL_EBI_Logo_black.pdf} \end{subfigure} \end{figure} }
 \usepackage{float}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -507,7 +520,7 @@ In the same paper, Fisher also introduced the concept of \emph{variance} as the 
 
 Fisher was also an ardent eugenicist, and his statistical innovations were developed in part to assess the relative importance of nature and nurture for traits like feeble-mindedness (Tabery 2014). He helped create the Cambridge University Eugenics Society in 1911, hosting meetings in his rooms, organising public lectures by well-known eugenicists, assisting at the First International Eugenics Congress, and delivering his own eugenic lectures. Fisher also helped establish the Society's Committee for Legalising Sterilisation (Mazumdar 2005; Tabery 2014).
 
-Through the sustained advocacy of scientists led by Galton, Pearson, and Fisher, the concept of eugenics took a firm hold on Western thought (Hawkins 1997), leading to the implementation of eugenics policies in a number of American and European countries including the United States (Barrett and Kurzman 2004), Canada (McLaren 2015), Sweden (Björkman and Widmalm 2010), and Nazi Germany (Bartov 2015). From the early 1900s through to the end of World War II, these policies resulted in the forced sterilisation and murder of millions (Bashford and Levine 2010). The eugenics movement was inextricably linked to these horrors, and subsequently fell into decline (Black 2012).
+Through the sustained advocacy of scientists led by Galton, Pearson, and Fisher, the concept of eugenics took a firm hold on Western thought (Hawkins 1997), leading to the implementation of eugenics policies in a number of American and European countries including the United States (Barrett and Kurzman 2004), Canada (A. McLaren 2015), Sweden (Björkman and Widmalm 2010), and Nazi Germany (Bartov 2015). From the early 1900s through to the end of World War II, these policies resulted in the forced sterilisation and murder of millions (Bashford and Levine 2010). The eugenics movement was inextricably linked to these horrors, and subsequently fell into decline (Black 2012).
 
 Prior to the war, around the time Fisher was working on his 1919 paper, the American geneticist Sewall Wright (\textbf{Figure \ref{fig:wright}}) was using his work on guinea pigs to reconcile Mendelian inheritance with continuous variation (S. Wright 1930). He developed a mathematical theory of inbreeding, eventually introducing the inbreeding coefficient \(F\) as the correlation between uniting gametes in 1922 (S. Wright 1922). Over the course of an esteemed career, together with Fisher and John B. S. Haldane, he advanced the modern evolutionary synthesis (Provine 2001; Tabery 2014), and founded the field of population genetics with his papers on mating systems (S. Wright 1946) and genetic drift (S. Wright 1948).
 
@@ -874,7 +887,7 @@ The F\textsubscript{2}-cross is the same method used by Mendel in his historic p
 \includegraphics[width=1\linewidth]{figs/mikk_behaviour/F2-cross-schema} \caption{Schema of the F\textsubscript{2}-cross experimental setup. The F\textsubscript{0} generation comprises two medaka strains that have extreme, opposing values for a trait of interest, represented by the colours \emph{purple} and \emph{yellow}. Below them is an illustrative single pair of chromosomes. The chromosomes within each pair are depicted as the same colour, as the strains are homozygous through successive generations of inbreeding. Their F\textsubscript{1} offspring is heterozygous for each pair of their 24 chromosomes, and all F\textsubscript{1} individuals are therefore almost genetically identical to one another (with the exception of somatic mutations and the regions of the genome that were not homozygous in the parental generations). The F\textsubscript{1} individuals are then inter-crossed with one another to produce the F\textsubscript{2} generation, which, due to recombination events during gamete formation, have unique combinations of the parental strains' alleles, and tend to span the phenotypic spectrum between the extremes of their F\textsubscript{0} parental strains, represented by their colours.}\label{fig:F2-cross-schema}
 \end{figure}
 
-By combining this traditional crossing method with modern sequencing technologies, researchers are not only able to map genetic variants associated with a phenotype of interest at a higher resolution than in humans, but also functionally validate those variants by carrying out targeted gene editing in an embryo and then confirming that the developed organism's offspring show the expected change in phenotype. Many studies have already made use of this combined method (Blaj et al. 2022; Falker-Gieske et al. 2019; Gu et al. 2011; Stratz et al. 2018), here referred to as an ``\textbf{F\textsubscript{2}-cross GWAS}''.
+By combining this traditional crossing method with modern sequencing technologies, researchers are not only able to map genetic variants associated with a phenotype of interest at a higher resolution than in humans, but also functionally validate those variants by carrying out targeted gene editing in an embryo and then confirming that the developed organism's offspring show the expected change in phenotype. Many studies have already made use of this combined method (Blaj et al. 2022; Falker-Gieske et al. 2019; X. Gu et al. 2011; Stratz et al. 2018), here referred to as an ``\textbf{F\textsubscript{2}-cross GWAS}''.
 
 \hypertarget{studied-phenotypes}{%
 \section{Studied phenotypes}\label{studied-phenotypes}}
@@ -1055,6 +1068,438 @@ Finally, in Chapter 6, I turn to humans to compare and rank all complex traits i
 
 Altogether, this thesis describes some of the genomic characteristics of both medaka fish and humans, and how those variations relate to differences in complex traits, with a particular focus on the genetic causes of adaptive behaviours and the transmission of those behaviours onto one's social companions.
 
+\hypertarget{Somite-chap}{%
+\chapter[Genetic loci associated with somite development periodicity]{\texorpdfstring{Genetic loci associated with somite development periodicity\footnote{During my PhD I spent a substantial period waiting for the F\textsubscript{1} and F\textsubscript{2} generations from the MIKK panel F\textsubscript{2}-cross -- as described in the next chapter -- to breed. During this time I collaborated with Ali Seleit and Alexander Aulehla at EMBL-Heidelberg on a project where they had set up a similar F\textsubscript{2}-cross with inbred medaka strains. For their project I performed the bioinformatic analyses required to map the genetic variants associated with their phenotype of interest (somite development periodicity). This chapter describes my contributions to their project, and sets out some of the methodology that I would later use to analyse the F\textsubscript{2}-cross in my own project, which I describe in full in the next chapter.}}{Genetic loci associated with somite development periodicity}}\label{Somite-chap}}
+
+\chaptermark{Somite development periodicity}
+
+Somites are the earliest primitive segmental structures that form from presomatic mesoderm cells (\textbf{PSM}) in the embryo (Kim et al. 2011), later differentiating into vertebrae, ribs, and skeletal muscles. Somite formation occurs rhythmically and sequentially, with the time between the formation of each pair of somites referred to as the ``period''. The period of somite formation varies greatly between species (Matsuda et al. 2020), and is controlled by a molecular oscillator, known as the `segmentation clock', which drives waves of gene expression in developmental pathways.
+
+It is not fully understood how the phase waves of the segmentation clock are initially established (Falk et al. 2022). To identify the genetic basis of these phase waves, our collaborators Ali Seleit and Alexander Aulehla at EMBL-Heidelberg used a CRISPR-Cas9 knock-in approach (Seleit, Aulehla, and Paix 2021) to establish a medaka \emph{Cab} strain with an endogenous, fluorescing reporter gene (Her7-Venus) for the oscillation signalling pathway. This method allows them to image somite formation and extract quantitative measures for segmentation clock dynamics. They determined that the southern Japanese \emph{Cab} strain and the northern Japanese \emph{Kaga} strain have divergent somite periodicity, where \emph{Kaga}'s tends to be faster, and \emph{Cab}'s slower (\textbf{Figure \ref{fig:F0-Cab-Kaga-HdrR}}), and selected them as the parental strains in an F\textsubscript{2}-cross. This chapter sets out my bioinformatic contributions to the project by identifying the genetic variations associated with differences in somite periodicity.
+
+\hypertarget{somite-phenotype}{%
+\section{Phenotypes of interest}\label{somite-phenotype}}
+
+\hypertarget{somite-development-period}{%
+\subsection{Somite development period}\label{somite-development-period}}
+
+\textbf{Figure \ref{fig:ali-somite-period-lines}} shows the period data generated by pyBOAT for this study, for 100 illustrative F\textsubscript{2} samples over 300 minutes. The same data can be represented by boxplots as shown in \textbf{Figure \ref{fig:ali-somite-period-box}}. I experimented with using the F\textsubscript{2} individuals' mean period and period intercept as the phenotype of interest. The two measures are highly correlated (\(Pearson's~r =\) 0.84, \(p\) \textless{} 2.2 x 10\textsuperscript{-16}), so after displaying the distributions for both measures in Figure \ref{fig:somite-phenos}, I proceed to only discuss the analysis of period intercept, as it would appear to potentially be more robust to the changes in slope that can be observed in Figure \ref{fig:ali-somite-period-lines}.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/ali_period_lines_100fish300mins} \caption{PyBOAT results for 100 illustrative F\textsubscript{2} samples, showing the period length in minutes over the course of 300 minutes. Period tends to increase over time, meaning that as the embryo develops, each successive somite takes longer to form. Figure generated by Ali Seleit.}\label{fig:ali-somite-period-lines}
+\end{figure}
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/ali_F2_mean_period} \caption{Period measurements for 70 F\textsubscript{2} individuals displayed as boxplots with each individual's median and interquartile range. Figure generated by Ali Seleit.}\label{fig:ali-somite-period-box}
+\end{figure}
+
+\clearpage
+
+\hypertarget{unsegmented-presomitic-mesoderm-area-psm}{%
+\subsection{Unsegmented presomitic mesoderm area (PSM)}\label{unsegmented-presomitic-mesoderm-area-psm}}
+
+In the proceeding analyses, I also included a second phenotype of interest: the total area of the unsegmented tissue at the stage where 10-11 somites had been formed (\textbf{PSM area}). As the measure is simply based on the total number of pixels covered by the embryo object, I considered it to be potentially more robust than the period measurements, and therefore included it as a type of positive control for the genetic association analyses on the period phenotype. The measurements for PSM area comparing F\textsubscript{0} \emph{Cab} and \emph{Kaga} strains are shown in \textbf{Figure \ref{fig:ali-psm-F0}}.
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{figs/somites/ali_PSM_Cab_Kaga} 
+
+}
+
+\caption{Measurements of unsegmented PSM area in pixels for the F\textsubscript{0} individuals from the \emph{Cab} strain (\(N = 19\)) and \emph{Kaga} strain (\(N = 10\)). \emph{Kaga} tends to have a smaller PSM than \emph{Cab}. Figure generated by Ali Seleit.}\label{fig:ali-psm-F0}
+\end{figure}
+
+\clearpage
+
+\hypertarget{comparisons-between-f0-f1-and-f2-generations}{%
+\subsection{\texorpdfstring{Comparisons between F\textsubscript{0}, F\textsubscript{1} and F\textsubscript{2} generations}{Comparisons between F0, F1 and F2 generations}}\label{comparisons-between-f0-f1-and-f2-generations}}
+
+\textbf{Figure \ref{fig:somite-phenos}} shows the distributions of the period intercept and unsegmented PSM area phenotypes across the F\textsubscript{0}, F\textsubscript{1} and F\textsubscript{2} generations. In relation to the period intercept phenotype, only the \emph{Cab} strain in shown for F\textsubscript{0} because only the \emph{Cab} strain carries the reporter gene, which prohibited the collection of data for \emph{Kaga} using this pyBOAT method. However, from previous bright field image analyses (which did not require the reporter), my collaborators determined that the \emph{Kaga} strain has a lower (i.e.~faster) period than \emph{Cab} by around 10 minutes (see Figure \ref{fig:F0-Cab-Kaga-HdrR} in the Introduction). Given these differences, the F\textsubscript{1} generation shows the expected intermediate median between the \emph{Cab} and \emph{Kaga} F\textsubscript{0} strains. Given this median value for the F\textsubscript{1} generation, I expected to observe a similar median for the F\textsubscript{2} generation, but with a wider variance caused by their greater sample size. Instead, I observed that the F\textsubscript{2} generation has a median that is slightly \emph{slower} than the median of the slower-period F\textsubscript{0} \emph{Cab} strain. My collaborators assured me that these observations were unlikely to be caused by technical issues, so this may have been caused by instances of epistasis, heterosis, or overdominance between the \emph{Cab} and \emph{Kaga} alleles. A possible biological explanation of this is that there are more genetic combinations that slow down the clock rather than speed it up (Sanchez et al. 2022; Schröter and Oates 2010). This phenomenon could be exacerbated by the fact that the \emph{Cab} and \emph{Kaga} strains originate from different Japanese medaka populations (southern and northern respectively), which are understood to be at the point of speciation (see Chapter \ref{MIKK-genomes-chap}), so this slower period may be driven by a biological incompatibility between their genomes in cases where they do not have a complete chromosome from each parent (as the F\textsubscript{1} generation does). I nevertheless proceeded with the genetic analysis with a view to potentially discovering the reason for this unusual distribution.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/phenotypes} \caption{Comparisons between the F\textsubscript{0}, F\textsubscript{1} and F\textsubscript{2} generations for period intercept and unsegmented PSM area. As only the \emph{Cab} strain contains the reporter gene, the F\textsubscript{0} only shows period intercept for \emph{Cab} individuals (with the \emph{Kaga} strain previously estimated to have a period of \textasciitilde10 minutes slower than \emph{Cab}). \textbf{A}: period intercept in minutes. \textbf{B}: unsegmented PSM area in pixels. \(P\)-values are derived from Kruskal-Wallis tests comparing the F\textsubscript{2} individuals across microscopes. For unsegmented PSM area, data was only collected for the F\textsubscript{2} generation.}\label{fig:somite-phenos}
+\end{figure}
+
+Another important issue to note is that the F\textsubscript{2} individuals were sequenced using different microscopes of the same model (Zeiss LSM 780) but with different temperature control units and incubator boxes, denoted as `AU' and `DB'.\footnote{`AU' for the Aulehla Lab microscope, and `DB' for EMBL-Heidelberg's Developmental Biology Unit microscope.} Our collaborators noticed that there was a difference between the microscopes in their temperatures of 0.7-0.8°C, translating to a 4-minute difference in the F\textsubscript{2} means for the period intercept measure (Kruskal-Wallis = 177.97, \(p\) = 1.34 x 10\textsuperscript{-40}), and a 3.5-minute difference in the F\textsubscript{2} means for the period mean measure (Kruskal-Wallis = 141.79, \(p\) = 1.08 x 10\textsuperscript{-32}). This difference would need to be accounted for in the downstream analysis through either adjusting the phenotype prior to running the genetic association model, or by including microscope as a covariate in the model. For unsegmentated PSM area, I did not find a significant difference between microscopes, so I determined that it was not necessary to control for microscope in the downstream analysis for this phenotype.
+
+\clearpage
+
+\hypertarget{inverse-norm-sec}{%
+\subsubsection{Inverse-normalisation}\label{inverse-norm-sec}}
+
+To resolve this difference between microscopes for the period intercept data, I elected to transform it for the F\textsubscript{2} generation by ``inverse-normalising'' the period intercept within each microscope (\textbf{Figure \ref{fig:invnorm-intercept}}), and used this transformed phenotype for the downstream analysis. Inverse-normalisation is a rank-based normalisation approach which involves replacing the values in the phenotype vector with their rank (where ties are averaged), then converting the ranks into a normal distribution with the quantile function (Wichura 1988). The inverse-normalisation function I used for this analysis is set out in the following \passthrough{\lstinline!R!} code:
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+\begin{lstlisting}[language=R, caption=Inverse-normalisation function ]
+invnorm = function(x) {
+  res = rank(x)
+  # The arbitrary 0.5 value is added to the denominator below 
+  # to avoid `qnorm()` returning 'Inf' for the last-ranked value
+  res = qnorm(res/(length(res)+0.5))
+  return(res)
+}
+\end{lstlisting}
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/invnorm_intercept} \caption{Comparison of the period intercept phenotype data for the F\textsubscript{2} generation before (\textbf{A}) and after (\textbf{B}) inverse-normalisation, with vertical lines marking the mean of each group.}\label{fig:invnorm-intercept}
+\end{figure}
+
+\clearpage
+
+\hypertarget{genetic-sequencing-data}{%
+\section{Genetic sequencing data}\label{genetic-sequencing-data}}
+
+Our collaborators extracted DNA from the F\textsubscript{0}, F\textsubscript{1}, and F\textsubscript{2}, and sequenced the F\textsubscript{0} and F\textsubscript{1} samples with the Illumina platform at high coverage (\textasciitilde26x for \emph{Cab} and \textasciitilde29x for \emph{Kaga}), as measured by \emph{SAMtools} (Danecek et al. 2021). \textbf{Figure \ref{fig:F0-coverage}} sets out the mean sequencing depth within each chromosome and across the whole genome for the \emph{Cab} and \emph{Kaga} F\textsubscript{0} samples. Our collaborators then sequenced the F\textsubscript{2} samples at low coverage (\textasciitilde1x), which would be sufficient to map their genotypes back to the haplotypes of their parental strains (see section \ref{somite-f2-sequencing} below for further details).
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/F0_coverage} \caption{Mean sequencing depth per chromosome for \emph{Cab} and \emph{Kaga} F\textsubscript{0} strains, with genome-wide mean depth across all chromosomes shown under the subtitles.}\label{fig:F0-coverage}
+\end{figure}
+
+\clearpage
+
+\hypertarget{f0-homozygosity-and-f1-heterozygosity}{%
+\section{\texorpdfstring{F\textsubscript{0} homozygosity and F\textsubscript{1} heterozygosity}{F0 homozygosity and F1 heterozygosity}}\label{f0-homozygosity-and-f1-heterozygosity}}
+
+Before proceeding to map the F\textsubscript{2} sequences to the haplotypes of the F\textsubscript{0} generation, I first investigated the levels of homozygosity in the F\textsubscript{0} \emph{Cab} and \emph{Kaga} strains, as this would affect our ability to accurately call the F\textsubscript{2} generation. That is to say, for regions where either F\textsubscript{0} parent is consistently heterozygous, it would be difficult to determine the parent from which a particular F\textsubscript{2} individual derived its chromosomes at that locus. I therefore aligned the high-coverage sequencing data for the F\textsubscript{0} \emph{Cab} and \emph{Kaga} strains to the medaka \emph{HdrR} reference (Ensembl release 104, build ASM223467v1) using \emph{BWA-MEM2} (Vasimuddin et al. 2019), sorted the aligned .sam files, marked duplicate reads, and merged the paired reads with picard ({``Picard Toolkit''} 2019), and indexed the .bam files with \emph{SAMtools} (Li et al. 2009).
+
+To call variants, I followed the GATK best practices (to the extent they were applicable) (McKenna et al. 2010; DePristo et al. 2011; Van der Auwera and O'Connor 2020) with GATK's HaplotypeCaller and GenotypeGVCFs tools (Poplin et al. 2018), then merged all calls into a single .vcf file with \emph{Picard} ({``Picard Toolkit''} 2019). Finally, I extracted the biallelic calls for \emph{Cab} and \emph{Kaga} with \emph{bcftools} (Danecek et al. 2021), counted the number of SNPs within non-overlapping, 5-kb bins, and calculated the proportion of SNPs within each bin that were homozgyous.
+
+\textbf{Figure \ref{fig:somite-f0-cab}} is a circos plot generated with \emph{circlize} (Z. Gu et al. 2014) for the \emph{Cab} F\textsubscript{0} strain used in this experiment, featuring the proportion of homozygous SNPs per 5-kb bin (green), and the total number of SNPs in each bin (yellow). As expected for a strain that has been inbred for over 10 generations, the mean homozygosity for this strain is high, with a mean proportion of homozygosity across all bins of 83\%.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/Cab} \caption{Proportion of homozygous SNPs within 5 kb bins in the \emph{Cab} F\textsubscript{0} generation genome (green), and number of SNPs in each bin (yellow).}\label{fig:somite-f0-cab}
+\end{figure}
+
+\clearpage
+
+However, the levels of homozygosity in the \emph{Kaga} strain used in this experiment was far lower, with a mean homozygosity across all bins of only 31\% (\textbf{Figure \ref{fig:somite-f0-kaga}}). This was a surprise, as it is an established strain that has been extant for decades, and we therefore expected the level of homozygosity to be commensurate with that observed in the \emph{Cab} strain. An obvious exception is chr22, for which \emph{Kaga} appears to be homozygous across its entire length.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/Kaga} \caption{Proportion of homozygous SNPs within 5 kb bins in the \emph{Kaga} F\textsubscript{0} generation genome (red), and number of SNPs in each bin (yellow).}\label{fig:somite-f0-kaga}
+\end{figure}
+
+To determine whether the low levels of observed homozygosity in Kaga was affected by its alignments to the southern Japanese \emph{HdrR} reference, we also aligned the F\textsubscript{0} samples to the northern Japanese \emph{HNI} reference (\textbf{Figure \ref{fig:somite-f0-kaga-hni}}. This did not make differences to the levels of observed homozygosity in either sample, which gave us confidence that the low homozygosity observed in \emph{Kaga} was not driven by reference bias. I understand from our collaborators that the low homozygosity of this \emph{Kaga} individual must have resulted from the strain having been contaminated at some stage by breeding with a different inbred strain prior to when they received the individuals.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/Kaga_HNI} \caption{Proportion of homozygous SNPs within 5 kb bins in the \emph{Kaga} F\textsubscript{0} generation genome when aligned to the \emph{HNI} reference (red), and number of SNPs in each bin (yellow).}\label{fig:somite-f0-kaga-hni}
+\end{figure}
+
+\hypertarget{f1-homozygosity}{%
+\section{\texorpdfstring{F\textsubscript{1} homozygosity}{F1 homozygosity}}\label{f1-homozygosity}}
+
+I next examined the level of heterozygosity in the F\textsubscript{1} generation from the \emph{Cab}-\emph{Kaga} cross. \textbf{Figure \ref{fig:somite-f1}} shows the level of heterozygosity across the genome of the F\textsubscript{1} hybrid in brown measured by the proportion of heterozygous SNPs within 5-kb bins (brown), and the number of SNPs in each bin (yellow). Approximately half the chromosomes show inconsistent heterozygosity, with a mean heterozygosity across all bins of 67\%. This lower level of apparent heterozygosity than expected was likely caused by the low levels of homozygosity in the \emph{Kaga} F\textsubscript{0} parent.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/F1} \caption{Proportion of heterozygous SNPs within 5 kb bins in the \emph{Cab}-\emph{Kaga} F\textsubscript{1} cross (brown), and number of SNPs in each bin (yellow).}\label{fig:somite-f1}
+\end{figure}
+
+For the purpose of mapping the F\textsubscript{2} sample sequences to the genomes of their parental strains, I selected only biallelic SNPs that were homozygous-divergent in the F\textsubscript{0} generation (i.e.~homozygous reference allele in \emph{Cab} and homozygous alternative allele in \emph{Kaga} or vice versa) \emph{and} heterozygous in the F\textsubscript{1} generation. The number of SNPs that met these criteria per chromosome are set out in \textbf{Figure \ref{fig:snp-counts-per-chrom}}. The strong homozygosity of \emph{Kaga} on chr22 is likely responsible for the much greater number of loci on that chromosome that can be used for calling genoytpes in the F\textsubscript{2} generation, and highlights the importance of the parental strains being highly homozygous when used in experimental crosses such as this.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/snp_counts_per_chr_hdrr} \caption{Number of SNPs per chromosome that were homozygous-divergent in the F\textsubscript{0} \emph{Cab} and \emph{Kaga} generations, and heterozygous in the F\textsubscript{1} generation.}\label{fig:snp-counts-per-chrom}
+\end{figure}
+
+\clearpage
+
+\hypertarget{somite-f2-sequencing}{%
+\section{\texorpdfstring{F\textsubscript{2} genotyping}{F2 genotyping}}\label{somite-f2-sequencing}}
+
+To maximise the efficiency of our sequencing runs, our collaborators ``shallow-sequenced'' the F\textsubscript{2} generation with the short-read Illumina platform at a depth of \textasciitilde1x with a view to imputing their genotypes based on the haplotypes of their \emph{Cab} and \emph{Kaga} parental strains and thereby increase power for the GWAS (Pasaniuc et al. 2012). To prepare the sequences for imputation, I first aligned these sequences to the \emph{HdrR} reference with \emph{BWA-MEM2} (Vasimuddin et al. 2019), sorted the reads and marked duplicates with \emph{Picard} ({``Picard Toolkit''} 2019), then indexed the resulting BAM files with \emph{SAMtools} (Danecek et al. 2021).
+
+Several methods have been developed to impute the genotypes of shallow-sequenced samples based on the haplotypes of their founding strains (Huang and George 2011; Sargolzaei, Chesnais, and Schenkel 2014; Swarts et al. 2014; VanRaden, Sun, and O'NAConnel 2015), and the method implemented in the STITCH software package has demonstrated especially high imputation accuracy even at extremely low sequencing coverage (Davies et al. 2016). Although STITCH does not use any information from the F\textsubscript{0} parental genotypes, making it less biased and more capable of dealing with regions that were not fully inbred, it only imputes the SNPs and does not output the recombination sites themselves. I on the other hand intended to use the \emph{recombination blocks} as pseudo-SNPs, which would require me to perform fewer association tests and thereby reduce the significance threshold.
+
+I therefore developed a different method where I used \emph{bam-readcount} (Khanna et al. 2022) to count the reads that supported either the \emph{Cab} or the \emph{Kaga} allele for all SNPs that met the criteria described above in section \ref{f1-homozygosity} above, summed the read counts within 5 kb blocks, and calculated the frequency of reads within each bin that supported the \emph{Kaga} allele. This generated a value for each bin between 0 and 1, where 0 signified that all reads within that bin supported the \emph{Cab} allele, and 1 signified that all reads within that bin supported the \emph{Kaga} allele. Bins containing no reads were imputed with a value of 0.5.
+
+I then used these values for all F\textsubscript{2} individuals as the input to a Hidden Markov Model (HMM) with the software package \emph{hmmlearn} (\emph{Hmmlearn/Hmmlearn} {[}2014{]} 2022), which I applied to classify each bin as one of three states, with state 0 corresponding to homozygous-\emph{Cab}, 1 corresponding to heterozygous, and 2 corresponding to homozygous-\emph{Kaga}. Across each chromosome of every sample, the output of the HMM was expected to produce a sequence of states. Based on previous biological knowledge that crossover events occur on average less than once per chromosome (Haenel et al. 2018), I expected to observe the same state persisting for long stretches of the chromosome, only changing to another state between 0 and 3 times, and rarely more. To achieve this, I adjusted the HMM's transition probabilities to be extremely low, and the Gaussian emission probabilities for each state to have a variance of 0.8, which resulted in long ``blocks'' of the same haplotype call across the chromosome with only a small number of average transitions (i.e.~crossover events) per chromosome.
+
+\clearpage
+
+I used these genotype-block calls to generate the recombination karyoplot shown in \textbf{Figure \ref{fig:karyo-wi-missing}}, with homozygous-\emph{Cab} blocks in green, heterozoygous blocks in navy blue, and homozygous \emph{Kaga} blocks in red. Missing calls are blank, where the vertical blank lines indicate that the region could not be called for any F\textsubscript{2} individuals, likely due to an insufficient number of informative SNPs residing in those 5-kb blocks; and horizontal blank lines indicate that the sample could not be called, likely due to low sequencing coverage for that sample.
+
+
+
+\begin{figure}
+
+{\centering \includegraphics[height=0.95\textheight]{figs/somites/karyoplot_wi_missing_cropped} 
+
+}
+
+\caption{Recombination blocks in 622 F\textsubscript{2} samples based on the ratio of reads mapping to either the \emph{Cab} or \emph{Kaga} allele within 5-kb bins, with homozygous-\emph{Cab} blocks in green, heterozoygous blocks in navy blue, and homozygous \emph{Kaga} blocks in red. Most blocks show 0-2 crossover events, as expected, with some regions showing higher numbers of crossovers interpreted as noise. Unfilled regions are those with no state called by the HMM due to a lack of reads mapping to SNPs within those 5-kb bins.}\label{fig:karyo-wi-missing}
+\end{figure}
+
+In the downstream analysis, I excluded the 22 samples that showed poor coverage across the genome. For the remaining samples, I ``filled'' the bins with missing genotypes based on the call of the previous called bin, or if unavailable (e.g.~the missing bin was at the start of the chromosome), then the next called bin (\textbf{Figure \ref{fig:karyo-no-missing}}; note that this figure retains the low-coverage samples (horizontal blank lines) that were excluded from further analysis to allow for a direct comparison with \textbf{Figure \ref{fig:karyo-wi-missing}}). I used these filled genotype calls for the association tests described below in section \textbf{\ref{somite-assoc-tests}}. As a rough way to estimate the accuracy of this genotyping method, we checked the genotypes called by the HMM for the reporter region on chr16 \textasciitilde28.7Mb against our collaborators' manual recording of reporter gene counts based on the intensity of the \emph{Her7}-Venus reporter's fluorescence. The confusion matrix is set out in \textbf{Table \ref{tab:reporter-conc-tbl}}, showing that 83\% of genotypes called by the HMM were consistent with the reporter genotypes as inferred from fluorescence brightness.
+
+\begin{table}
+
+\caption{\label{tab:reporter-conc-tbl}Confusion matrix for reporter genotype as called by the HMM, and as inferred from the fluorescence brightness.}
+\centering
+\begin{tabular}[t]{llr}
+\toprule
+HMM state & Reporter phenotype & Count\\
+\midrule
+\cellcolor{gray!6}{0} & \cellcolor{gray!6}{0} & \cellcolor{gray!6}{252}\\
+0 & 1 & 91\\
+\cellcolor{gray!6}{1} & \cellcolor{gray!6}{0} & \cellcolor{gray!6}{9}\\
+1 & 1 & 245\\
+\cellcolor{gray!6}{2} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{1}\\
+\addlinespace
+Total & - & 598\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These karyoplots show interesting recombination patterns for several chromosomes. Given the F\textsubscript{2} individuals were selected for the reporter gene on chr16, as expected, there appears to be a strong strong skew towards those genotypes across the whole chromosome. On chr3, most samples are homozygous-\emph{Cab} for the second half of the chromosome, with a consistent breakpoint around \textasciitilde22 Mb. However, the final fifth of samples which show a different recombination pattern. The samples are sorted based on the order that they were phenotyped and sequenced, so this difference could have been caused by their being generated from different F\textsubscript{1} individuals with distinct haplotypes.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/karyoplot_no_missing_cropped} \caption{Recombination blocks in 622 F\textsubscript{2} samples based on the ratio of reads mapping to either the \emph{Cab} or \emph{Kaga} allele within 5-kb bins, with homozygous-\emph{Cab} blocks in green, heterozoygous blocks in navy blue, and homozygous \emph{Kaga} blocks in red. Most blocks show 0-2 crossover events, as expected, with some regions showing higher numbers of crossovers interpreted as noise. Bins with missing genotypes were ``filled'' based on the call of the previous called bin, or if unavailable (e.g.~the missing bin was at the start of the chromosome), then the next called bin.}\label{fig:karyo-no-missing}
+\end{figure}
+
+\textbf{Figure \ref{fig:prop-sites-total}} shows the proportion of 5-kb bins called as either homozygous-\emph{Cab}, heterozygous, or homozygous-\emph{Kaga} within each F\textsubscript{2} sample (points). The ordinary expectation for the ratios would be 0.25, 0.5, and 0.25 respectively. However, we observe a skew towards homozygous-\emph{Cab} and away from homozygous \emph{Kaga}. This was likely caused by the hybrid incompatibility between \emph{Cab} and \emph{Kaga}, given the two strains were derived from populations that are thought to be at the point of speciation (see the previous analysis in \textbf{Chapter \ref{MIKK-genomes-chap}}, section \textbf{\ref{introgression-sec}}).
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/prop_sites_total} \caption{Proportions of 5-kb blocks called as either homozygous-\emph{Cab}, heterozygous, or homozygous-\emph{Kaga}.}\label{fig:prop-sites-total}
+\end{figure}
+
+\clearpage
+
+\hypertarget{somite-assoc-tests}{%
+\section{GWAS}\label{somite-assoc-tests}}
+
+Finally, I used the called recombination blocks as pseudo-SNPs in a genetic linkage analysis. To detect associations between the pseudo-SNPs and the three phenotypes of interest, I used a linear mixed model (\textbf{LMM}) as implemented in GCTA (Yang et al. 2011), which follows the form set out in the Introduction in section \ref{GWAS}, equations \eqref{eq:gwaslmm} to \eqref{eq:gwaslmme}. For the genetic relationship matrix (\textbf{GRM}), I additionally used the leave-one-chromosome-out implementation of GCTA's LMM, with excludes the chromosome on which the candidate SNP is located when calculating the GRM. A GRM constructed from the entire genome is presented in \textbf{Figure \ref{fig:somite-grm}}. The square in the top right-hand corner is created by samples \textasciitilde550-648, which, based on Figure \ref{fig:karyo-no-missing} above, clearly have distinct genotypes to the rest of the samples due to their having been bred from different F\textsubscript{1} parents.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/grm_man_0.8} \caption{GRM generated for 600 F\textsubscript{2} samples using Equations \eqref{eq:grmstd} and \eqref{eq:grm}.}\label{fig:somite-grm}
+\end{figure}
+
+As described above in \textbf{section \ref{somite-phenotype}}, the microscope used to image the embryos (either AU or DB) differed by several degrees in heat, which likely caused differences in the measurements observed. I accordingly experimented with including microscope as a covariate, either alone or together with the genotype for the reporter locus (either homozygous or heterozygous), or excluding it altogether. In an attempt to avoid complications resulting from its inclusion, I also tried inverse-normalising the period phenotype within each microscope group, transforming the phenotype to fit a normal distribution across both microscopes. I only show the results from this transformed phenotype in the following section.
+
+Cheng and Palmer (2013) demonstrated through simulations that permutation tests (Churchill and Doerge 1994) are an effective means of controlling for Type I errors in GWAS using an inbred mapping population, provided that polygenic variation (i.e.~\(\pmb{g}\)) is included in the model, as it was here. Accordingly, to set the significance threshold, I permuted the phenotype across samples using 10 different random seeds, together with all covariates when included, and ran a separate GWAS model for each permutation. I then set the lowest \(p\)-value from all 10 permutations as the significance threshold for the non-permuted model, approximating a deliberately permissive \(\alpha\) well above 0.05. I additionally applied a Bonferroni correction to the \(p\)-values by dividing \(\alpha\) (0.05) by the number of pseudo-SNPs in the model, and set this as a conservative secondary threshold. The low significance threshold set by the permutations is likely to produce a large number of false positive associations, and is a salient limitation to the following analysis as it relates to any loci that did not also reach the Bonferroni threshold. I intend to refine this work in the future by applying the more robust strategy described in Baud et al. (2021) and Nicod et al. (2016), which accounted for LD patterns in the sample and used 100 permutations rather than the mere 10 here. This should have the effect of improving the accuracy of the fine-mapping described below while removing spurious associations.
+
+\hypertarget{period-intercept}{%
+\subsection{Period intercept}\label{period-intercept}}
+
+\textbf{Figure \ref{fig:somite-manhattan}} is a Manhattan plot of the genetic linkage results for the period intercept phenotype, inverse-normalised across microscopes. The regions found to be significant based on the permutations' minimum \(p\)-value are set out in \textbf{Table \ref{tab:somite-sig-int-tbl}}.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/manhattan_intercept} \caption{Manhattan plot of the genetic linkage results for the period intercept phenotype, inverse-normalised across microscopes. Pseudo-SNPs with \(p\)-values lower than the permutation significance threshold are highlighted in red.}\label{fig:somite-manhattan}
+\end{figure}
+
+\begin{table}
+
+\caption{\label{tab:somite-sig-int-tbl}Significant 5-kb bin ranges for period intercept below the minimum p-value from 10 permutations.}
+\centering
+\begin{tabular}[t]{rrrr}
+\toprule
+Chromosome & Bin start & Bin end & Length (kb)\\
+\midrule
+\cellcolor{gray!6}{3} & \cellcolor{gray!6}{31880001} & \cellcolor{gray!6}{35420000} & \cellcolor{gray!6}{3540}\\
+4 & 18090001 & 18095000 & 5\\
+\cellcolor{gray!6}{10} & \cellcolor{gray!6}{2995001} & \cellcolor{gray!6}{3690000} & \cellcolor{gray!6}{695}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These regions contained a total of 46,872 SNPs imputed from the haplotypes of the F\textsubscript{0} parental strains.
+I ran Ensembl's Variant Effect Predictor (W. McLaren et al. 2016) over these SNPs to identify those that would be most likely to have functional consequences. The full counts of SNPs falling into each category of `consequence' are set out in \textbf{Table \ref{tab:int-consequence-tbl}}. From this process I identified 38 genes that included a missense variant, 1 that included a missense variant and a start lost (ENSORLG00000014616), ane 1 that included a missense variant and a stop lost (ENSORLG00000015149).
+
+\begin{table}
+
+\caption{\label{tab:int-consequence-tbl}Variant Effect Predictor results for SNPs in the bins.}
+\centering
+\begin{tabular}[t]{lr}
+\toprule
+Consequence & Count\\
+\midrule
+\cellcolor{gray!6}{intron variant} & \cellcolor{gray!6}{47211}\\
+intergenic variant & 20045\\
+\cellcolor{gray!6}{upstream gene variant} & \cellcolor{gray!6}{7304}\\
+downstream gene variant & 5229\\
+\cellcolor{gray!6}{3 prime UTR variant} & \cellcolor{gray!6}{1082}\\
+\addlinespace
+synonymous variant & 694\\
+\cellcolor{gray!6}{missense variant} & \cellcolor{gray!6}{383}\\
+5 prime UTR variant & 201\\
+\cellcolor{gray!6}{splice region variant,intron variant} & \cellcolor{gray!6}{126}\\
+missense variant,splice region variant & 19\\
+\addlinespace
+\cellcolor{gray!6}{splice region variant,synonymous variant} & \cellcolor{gray!6}{17}\\
+stop gained & 3\\
+\cellcolor{gray!6}{splice donor variant} & \cellcolor{gray!6}{1}\\
+start lost & 1\\
+\cellcolor{gray!6}{stop lost} & \cellcolor{gray!6}{1}\\
+\addlinespace
+stop lost,splice region variant & 1\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+My collaborators then combined these results with bulk RNA-seq that they had performed on F\textsubscript{0} \emph{Cab} and \emph{Kaga} individuals, to determine which of these genes are expressed in the tail during embryogenesis. This allowed them to reduce to the list to 29 genes, and a gene ontology analysis of this found that the list of genes was enriched for body axis, somitogenesis, and segmentation (\textbf{Table \ref{tab:psm-final-genes}}). For this list of genes, our collaborators are now in the process of knocking out the protein-altering \emph{Cab} allele into \emph{Kaga} embryos, and \emph{vice versa}, to functionally validate these variants.
+
+\begin{landscape}\begin{table}
+
+\caption{\label{tab:psm-final-genes}Target genes for functional validation expressed in the unsegmented PSM and containing protein alterations. Table generated by Ali Seleit.}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{rlll}
+\toprule
+Chromosome & Ensembl gene ID & Description & Role\\
+\midrule
+\cellcolor{gray!6}{3} & \cellcolor{gray!6}{ENSORLG00000014656} & \cellcolor{gray!6}{mesoderm posterior protein 2-like} & \cellcolor{gray!6}{Somitogenesis}\\
+3 & ENSORLG00000014659 & mesp & Somitogenesis\\
+\cellcolor{gray!6}{10} & \cellcolor{gray!6}{ENSORLG00000020474} & \cellcolor{gray!6}{protocadherin 10b} & \cellcolor{gray!6}{Somitogenesis}\\
+3 & ENSORLG00000014616 & NA & Possible role in Somitogenesis (MAP-kinase)\\
+\cellcolor{gray!6}{10} & \cellcolor{gray!6}{ENSORLG00000020551} & \cellcolor{gray!6}{FAT atypical cadherin 4} & \cellcolor{gray!6}{Possible role in Somitogenesis (PCP, Yap1 regulator)}\\
+\addlinespace
+10 & ENSORLG00000020531 & neurogenin 1 & Possible role in Somitogenesis (BHLH-TF regulation of Wnt)\\
+\cellcolor{gray!6}{3} & \cellcolor{gray!6}{ENSORLG00000015149} & \cellcolor{gray!6}{ADAM metallopeptidase with thrombospondin type 1 motif 18} & \cellcolor{gray!6}{Extracellular matrix}\\
+3 & ENSORLG00000015418 & matrix metallopeptidase 15 & Extracellular matrix\\
+\cellcolor{gray!6}{10} & \cellcolor{gray!6}{ENSORLG00000020488} & \cellcolor{gray!6}{transforming growth factor beta induced} & \cellcolor{gray!6}{Extracellular matrix}\\
+3 & ENSORLG00000028055 & NA &  Signal trasduction (Rho)\\
+\addlinespace
+\cellcolor{gray!6}{10} & \cellcolor{gray!6}{ENSORLG00000020481} & \cellcolor{gray!6}{ArfGAP with RhoGAP domain, ankyrin repeat and PH domain 3} & \cellcolor{gray!6}{ Signal transduction (GTPase activator RhoGap)}\\
+10 & ENSORLG00000020525 & TBC1 domain family member 2A-like & Signal transduction Gtpase activator, cadherin recycling\\
+\cellcolor{gray!6}{3} & \cellcolor{gray!6}{ENSORLG00000015260} & \cellcolor{gray!6}{synapse associated protein 1} & \cellcolor{gray!6}{TOR acitivity}\\
+10 & ENSORLG00000028553 & NA & NA\\
+\cellcolor{gray!6}{3} & \cellcolor{gray!6}{ENSORLG00000015460} & \cellcolor{gray!6}{dpy-19 like C-mannosyltransferase 3} & \cellcolor{gray!6}{glycosylation}\\
+\addlinespace
+10 & ENSORLG00000022010 & beta-1,4-galactosyltransferase 1 & glycosylation\\
+\cellcolor{gray!6}{10} & \cellcolor{gray!6}{ENSORLG00000020498} & \cellcolor{gray!6}{protein NipSnap homolog 3A} & \cellcolor{gray!6}{Mitochondria}\\
+10 & ENSORLG00000020494 & nitric oxide associated 1 & Mitochondria\\
+\cellcolor{gray!6}{10} & \cellcolor{gray!6}{ENSORLG00000020504} & \cellcolor{gray!6}{ATP-binding cassette sub-family A member 1} & \cellcolor{gray!6}{Metabolism (cholestrol efflux)}\\
+3 & ENSORLG00000015118 & phosphorylase kinase regulatory subunit beta & Metabolism\\
+\addlinespace
+\cellcolor{gray!6}{10} & \cellcolor{gray!6}{ENSORLG00000020493} & \cellcolor{gray!6}{RE1 silencing transcription factor} & \cellcolor{gray!6}{RNA pol II (transcritpion regulation}\\
+3 & ENSORLG00000015365 & solute carrier family 7 member 6 opposite strand & RNA pol II (nuclear export)\\
+\cellcolor{gray!6}{10} & \cellcolor{gray!6}{ENSORLG00000029052} & \cellcolor{gray!6}{exosome component 3} & \cellcolor{gray!6}{rRNA + RNA binding}\\
+3 & ENSORLG00000015278 & adhesion G protein-coupled receptor G3 & G-protein coupled receptor\\
+\cellcolor{gray!6}{3} & \cellcolor{gray!6}{ENSORLG00000015287} & \cellcolor{gray!6}{adhesion G-protein coupled receptor G5} & \cellcolor{gray!6}{G-protein coupled receptor}\\
+\addlinespace
+10 & ENSORLG00000025674 & matrin-3 & inner nuclear protein (chromatin architecture\\
+\cellcolor{gray!6}{10} & \cellcolor{gray!6}{ENSORLG00000023325} & \cellcolor{gray!6}{matrin-3} & \cellcolor{gray!6}{inner nuclear protein (chromatin architecture}\\
+10 & ENSORLG00000022388 & poly(A) binding protein interacting protein 2 & Translation repressor\\
+\cellcolor{gray!6}{3} & \cellcolor{gray!6}{ENSORLG00000015096} & \cellcolor{gray!6}{integrin alpha FG-GAP repeat containing 1} & \cellcolor{gray!6}{NA possibly T cell activation}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+\end{landscape}
+
+My collaborators have begun the process of using the CRISPR-Cas9 system (Campenhout et al. 2019) to knock out some of these candidate genes to determine their effect on the period phenotype. The \emph{mespb} (ENSORLG00000014656) and \emph{pcdh10b} (ENSORLG00000020474) genes have both been found to be involved in segmental boundary formation and somite patterning (Hitachi et al. 2008; Rangarajan, Luo, and Sargent 2006), and are highly conserved in vertebrates (Gul et al. 2017; Satou, Imai, and Satoh 2004). Preliminary results have shown that knocking out either of these genes from the \emph{Cab} strain significantly speeds up somite period development by 2-3 minutes (\textbf{Figure \ref{fig:ko-period}}), providing promising evidence that these genes are involved in the establishment of the segmentation clock.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/ko_results} \caption{Period intercept for \emph{Cab} embryos with CRISPR-Cas9 knock-outs (Campenhout et al. 2019) of \emph{mespb} and \emph{pcdh10b} compared to controls. Figure generated by Ali Seleit.}\label{fig:ko-period}
+\end{figure}
+
+\hypertarget{psm-area}{%
+\subsection{PSM area}\label{psm-area}}
+
+\textbf{Figure \ref{fig:psm-manhattan}} is a Manhattan plot of the genetic linkage results for the PSM area phenotype. The regions found to be significant based on the permutations' minimum \(p\)-value are set out in \textbf{Table \ref{tab:somite-sig-psm-tbl}}, although they exceed the Bonferroni correction threshold as well. I note that this \textasciitilde6 Mb significant region on chromosome 3 does not overlap at all with the significant region discovered for the period intercept phenotype.
+
+
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figs/somites/manhattan_psm_no-covariates} \caption{Manhattan plot of the genetic linkage results for the PSM area phenotype. Pseudo-SNPs with \(p\)-values lower than the permutation significance threshold are highlighted in yellow.}\label{fig:psm-manhattan}
+\end{figure}
+
+\begin{table}
+
+\caption{\label{tab:somite-sig-psm-tbl}Significant 5-kb bin range for PSM area below the minimum p-value from 10 permutations.}
+\centering
+\begin{tabular}[t]{rrrr}
+\toprule
+Chromosome & Bin start & Bin end & Length (kb)\\
+\midrule
+\cellcolor{gray!6}{3} & \cellcolor{gray!6}{20375001} & \cellcolor{gray!6}{26285000} & \cellcolor{gray!6}{5910}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This region contained a total of 29,096 SNPs imputed from the haplotypes of the F\textsubscript{0} parental strains.
+I ran Ensembl's Variant Effect Predictor (W. McLaren et al. 2016) over these SNPs to identify those that would be most likely to have functional consequences. The full counts of SNPs falling into each category of `consequence' are set out in \textbf{Table \ref{tab:psm-consequence-tbl}}. From this process I identified 114 genes that included a missense variant, and 1 that included a both a missense variant and a start lost (ENSORLG00000010863, a centriole, cilia and spindle-associated protein).
+
+\begin{table}
+
+\caption{\label{tab:psm-consequence-tbl}Variant Effect Predictor results for SNPs in the bins.}
+\centering
+\begin{tabular}[t]{lr}
+\toprule
+Consequence & Count\\
+\midrule
+\cellcolor{gray!6}{intron variant} & \cellcolor{gray!6}{23189}\\
+intergenic variant & 9171\\
+\cellcolor{gray!6}{downstream gene variant} & \cellcolor{gray!6}{8894}\\
+upstream gene variant & 8491\\
+\cellcolor{gray!6}{3 prime UTR variant} & \cellcolor{gray!6}{2104}\\
+\addlinespace
+synonymous variant & 1141\\
+\cellcolor{gray!6}{missense variant} & \cellcolor{gray!6}{716}\\
+5 prime UTR variant & 433\\
+\cellcolor{gray!6}{splice region variant,intron variant} & \cellcolor{gray!6}{184}\\
+splice region variant,synonymous variant & 18\\
+\addlinespace
+\cellcolor{gray!6}{missense variant,splice region variant} & \cellcolor{gray!6}{7}\\
+stop gained & 2\\
+\cellcolor{gray!6}{splice donor variant} & \cellcolor{gray!6}{1}\\
+start lost & 1\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Our collaborators then combined these results with bulk RNA-seq that they had performed on F\textsubscript{0} \emph{Cab} and \emph{Kaga} individuals, to determine which of these genes are expressed in the unsegmented tail during embryogenesis. This allowed them to reduce to the list to 96 genes, although they were not apparently associated with a specific gene ontology as perhaps expected, given this is a single locus that is potentially driven by just one gene. As with the period intercept phenotype, our collaborators are now in the process of knocking in the \emph{Cab} allele into \emph{Kaga} embryos, and \emph{vice versa}, to functionally validate these variants.
+
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
 \leavevmode\vadjust pre{\hypertarget{ref-adhikariGWASLatinAmericans2019}{}}%
@@ -1123,6 +1568,9 @@ Bateson, William. 1894. \emph{Materials for the {Study} of {Variation}: {Treated
 \leavevmode\vadjust pre{\hypertarget{ref-batesonMendelPrinciplesHeredity1909}{}}%
 ---------. 1909. {``Mendel's {Principles} of {Heredity}: {Cambridge University Press}.''} \emph{März 1909; 2nd Impr} 3: 1913.
 
+\leavevmode\vadjust pre{\hypertarget{ref-baudDissectingIndirectGenetic2021}{}}%
+Baud, Amelie, Francesco Paolo Casale, Amanda M. Barkley-Levenson, Nilgoun Farhadi, Charlotte Montillot, Binnaz Yalcin, Jerome Nicod, Abraham A. Palmer, and Oliver Stegle. 2021. {``Dissecting Indirect Genetic Effects from Peers in Laboratory Mice.''} \emph{Genome Biology} 22 (1): 216. \url{https://doi.org/10.1186/s13059-021-02415-x}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-baudGenomesPhenomesPopulation2014}{}}%
 Baud, Amelie, Victor Guryev, Oliver Hummel, Martina Johannesson, and Jonathan Flint. 2014. {``Genomes and Phenomes of a Population of Outbred Rats and Its Progenitors.''} \emph{Scientific Data} 1 (1, 1): 140011. \url{https://doi.org/10.1038/sdata.2014.11}.
 
@@ -1177,6 +1625,9 @@ Caballero, Armando. 2020. \emph{Quantitative {Genetics}}. {Cambridge University 
 \leavevmode\vadjust pre{\hypertarget{ref-campbellKingJamesBible2010}{}}%
 Campbell, Gordon. 2010. \emph{King {James Bible}: 400th {Anniversary Edition}}. {OUP Oxford}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-campenhoutGuidelinesOptimizedGene2019}{}}%
+Campenhout, Claude Van, Pauline Cabochette, Anne-Clémence Veillard, Miklos Laczik, Agnieszka Zelisko-Schmidt, Céline Sabatel, Maxime Dhainaut, Benoit Vanhollebeke, Cyril Gueydan, and Véronique Kruys. 2019. {``Guidelines for Optimized Gene Knockout Using {CRISPR}/{Cas9}.''} \emph{BioTechniques} 66 (6): 295--302. \url{https://doi.org/10.2144/btn-2018-0187}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-carlsonPersonalityTraitsAre2013}{}}%
 Carlson, Bradley E., and Tracy Langkilde. 2013. {``Personality {Traits Are Expressed} in {Bullfrog Tadpoles} During {Open-Field Trials}.''} \emph{Journal of Herpetology} 47 (2): 378--83. \url{https://doi.org/10.1670/12-061}.
 
@@ -1188,6 +1639,12 @@ Charlesworth, Brian, and Deborah Charlesworth. 2009. {``Darwin and {Genetics}.''
 
 \leavevmode\vadjust pre{\hypertarget{ref-charlesworthGeneticsInbreedingDepression2009}{}}%
 Charlesworth, Deborah, and John H. Willis. 2009. {``The Genetics of Inbreeding Depression.''} \emph{Nature Reviews Genetics} 10 (11, 11): 783--96. \url{https://doi.org/10.1038/nrg2664}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-chengSimulationStudyPermutation2013}{}}%
+Cheng, Riyan, and Abraham A Palmer. 2013. {``A {Simulation Study} of {Permutation}, {Bootstrap}, and {Gene Dropping} for {Assessing Statistical Significance} in the {Case} of {Unequal Relatedness}.''} \emph{Genetics} 193 (3): 1015--18. \url{https://doi.org/10.1534/genetics.112.146332}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-churchillEmpiricalThresholdValues1994}{}}%
+Churchill, G A, and R W Doerge. 1994. {``Empirical Threshold Values for Quantitative Trait Mapping.''} \emph{Genetics} 138 (3): 963--71. \url{https://doi.org/10.1093/genetics/138.3.963}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-clarkImportanceInformationRelatives2012}{}}%
 Clark, Samuel A., John M. Hickey, Hans D. Daetwyler, and Julius HJ van der Werf. 2012. {``The Importance of Information on Relatives for the Prediction of Genomic Breeding Values and the Implications for the Makeup of Reference Data Sets in Livestock Breeding Schemes.''} \emph{Genetics Selection Evolution} 44 (1): 4. \url{https://doi.org/10.1186/1297-9686-44-4}.
@@ -1222,6 +1679,9 @@ Dahlbom, S. Josefin, David Lagman, Katrin Lundstedt-Enkel, L. Fredrik Sundström
 \leavevmode\vadjust pre{\hypertarget{ref-dammhahnRiskTakingForaging2012}{}}%
 Dammhahn, Melanie, and Laura Almeling. 2012. {``Is Risk Taking During Foraging a Personality Trait? {A} Field Test for Cross-Context Consistency in Boldness.''} \emph{Animal Behaviour} 84 (5): 1131--39. \url{https://doi.org/10.1016/j.anbehav.2012.08.014}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-danecekTwelveYearsSAMtools2021}{}}%
+Danecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, Martin O Pollard, Andrew Whitwham, et al. 2021. {``Twelve Years of {SAMtools} and {BCFtools}.''} \emph{GigaScience} 10 (2): giab008. \url{https://doi.org/10.1093/gigascience/giab008}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-darwinJournalResearchesNatural1845}{}}%
 Darwin, Charles. 1845. \emph{Journal of {Researches Into} the {Natural History} and {Geology} of the {Countries Visited During} the {Voyage} of {H}.{M}.{S}. {Beagle Round} the {World}: {Under} the {Command} of {Capt}. {Fitz Roy}, {R}.{N}}. 2nd ed. {J. Murray}. \url{https://books.google.com?id=nXm9vEpV8BAC}.
 
@@ -1243,11 +1703,17 @@ Darwin, Charles. 1845. \emph{Journal of {Researches Into} the {Natural History} 
 \leavevmode\vadjust pre{\hypertarget{ref-darwinCorrespondenceCharlesDarwin2002}{}}%
 Darwin, Charles, Duncan M. Porter, Sheila Ann Dean, Samantha Evans, Shelley Innes, and Alison M. Pearn. 2002. \emph{The {Correspondence} of {Charles Darwin}: 1821-1860}. {Cambridge University Press}. \url{https://books.google.com?id=oCWGX18UrhEC}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-daviesRapidGenotypeImputation2016}{}}%
+Davies, Robert W., Jonathan Flint, Simon Myers, and Richard Mott. 2016. {``Rapid Genotype Imputation from Sequence Without Reference Panels.''} \emph{Nature Genetics} 48 (8, 8): 965--69. \url{https://doi.org/10.1038/ng.3594}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-azevedoShynessBoldnessGreater2006}{}}%
 de Azevedo, Cristiano S., and Robert J. Young. 2006. {``Shyness and Boldness in Greater Rheas {Rhea} Americana {Linnaeus} ({Rheiformes}, {Rheidae}): The Effects of Antipredator Training on the Personality of the Birds.''} \emph{Revista Brasileira de Zoologia} 23 (March): 202--10. \url{https://doi.org/10.1590/S0101-81752006000100012}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-vriesMutationTheory19091909}{}}%
 de Vries, Hugo. 1909. \emph{The {Mutation} Theory v. 1, 1909}. {Open Court Publishing Company}. \url{https://books.google.com?id=cdOhB5p3HkIC}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-depristoFrameworkVariationDiscovery2011}{}}%
+DePristo, Mark A., Eric Banks, Ryan Poplin, Kiran V. Garimella, Jared R. Maguire, Christopher Hartl, Anthony A. Philippakis, et al. 2011. {``A Framework for Variation Discovery and Genotyping Using Next-Generation {DNA} Sequencing Data.''} \emph{Nature Genetics} 43 (5, 5): 491--98. \url{https://doi.org/10.1038/ng.806}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-dirienzoPopulationGeneticsModels2006}{}}%
 Di Rienzo, Anna. 2006. {``Population Genetics Models of Common Diseases.''} \emph{Current Opinion in Genetics \& Development}, Genomes and evolution, 16 (6): 630--36. \url{https://doi.org/10.1016/j.gde.2006.10.002}.
@@ -1360,6 +1826,12 @@ Gros, Pierre-Alexis, Hervé Le Nagard, and Olivier Tenaillon. 2009. {``The {Evol
 \leavevmode\vadjust pre{\hypertarget{ref-guGenomeWideAssociationStudy2011}{}}%
 Gu, Xiaorong, Chungang Feng, Li Ma, Chi Song, Yanqiang Wang, Yang Da, Huifang Li, et al. 2011. {``Genome-{Wide Association Study} of {Body Weight} in {Chicken F2 Resource Population}.''} \emph{PLOS ONE} 6 (7): e21872. \url{https://doi.org/10.1371/journal.pone.0021872}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-guCirclizeImplementsEnhances2014}{}}%
+Gu, Zuguang, Lei Gu, Roland Eils, Matthias Schlesner, and Benedikt Brors. 2014. {``Circlize Implements and Enhances Circular Visualization in {R}.''} \emph{Bioinformatics} 30 (19): 2811--12. \url{https://doi.org/10.1093/bioinformatics/btu393}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-gulEvolutionDiversityCadherins2017}{}}%
+Gul, Ismail Sahin, Paco Hulpiau, Yvan Saeys, and Frans van Roy. 2017. {``Evolution and Diversity of Cadherins and Catenins.''} \emph{Experimental Cell Research}, Cell {Sensing} and {Signaling} via {Cell-Cell Adhesion}, 358 (1): 3--9. \url{https://doi.org/10.1016/j.yexcr.2017.03.001}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-guoBayesianHierarchicalModel2009}{}}%
 Guo, Feng, Dipak K. Dey, and Kent E. Holsinger. 2009. {``A {Bayesian Hierarchical Model} for {Analysis} of {Single-Nucleotide Polymorphisms Diversity} in {Multilocus}, {Multipopulation Samples}.''} \emph{Journal of the American Statistical Association} 104 (485): 142--54. \url{https://doi.org/10.1198/jasa.2009.0010}.
 
@@ -1368,6 +1840,9 @@ Gusella, James F., Nancy S. Wexler, P. Michael Conneally, Susan L. Naylor, Mary 
 
 \leavevmode\vadjust pre{\hypertarget{ref-habierImpactGeneticRelationship2010}{}}%
 Habier, David, Jens Tetens, Franz-Reinhold Seefried, Peter Lichtner, and Georg Thaller. 2010. {``The Impact of Genetic Relationship Information on Genomic Breeding Values in {German Holstein} Cattle.''} \emph{Genetics Selection Evolution} 42 (1): 5. \url{https://doi.org/10.1186/1297-9686-42-5}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-haenelMetaanalysisChromosomescaleCrossover2018}{}}%
+Haenel, Quiterie, Telma G. Laurentino, Marius Roesti, and Daniel Berner. 2018. {``Meta-Analysis of Chromosome-Scale Crossover Rate Variation in Eukaryotes and Its Significance to Evolutionary Genomics.''} \emph{Molecular Ecology} 27 (11): 2477--97. \url{https://doi.org/10.1111/mec.14699}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-hamiltonShoalingBoldnessAnxietylike2021}{}}%
 Hamilton, Trevor J., Jeffrey Krook, Joshua Szaszkiewicz, and Warren Burggren. 2021. {``Shoaling, Boldness, Anxiety-Like Behavior and Locomotion in Zebrafish ({Danio} Rerio) Are Altered by Acute Benzo{[}a{]}pyrene Exposure.''} \emph{Science of The Total Environment} 774 (June): 145702. \url{https://doi.org/10.1016/j.scitotenv.2021.145702}.
@@ -1402,6 +1877,12 @@ Hill, William G. 2014. {``Applications of {Population Genetics} to {Animal Breed
 \leavevmode\vadjust pre{\hypertarget{ref-hillDataTheoryPoint2008}{}}%
 Hill, William G., Michael E. Goddard, and Peter M. Visscher. 2008. {``Data and {Theory Point} to {Mainly Additive Genetic Variance} for {Complex Traits}.''} \emph{PLOS Genetics} 4 (2): e1000008. \url{https://doi.org/10.1371/journal.pgen.1000008}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-hitachiPhysicalInteractionTbx62008}{}}%
+Hitachi, Keisuke, Hiroki Danno, Akiko Kondow, Kiyoshi Ohnuma, Hideho Uchiyama, Shoichi Ishiura, Akira Kurisaki, and Makoto Asashima. 2008. {``Physical Interaction Between {Tbx6} and Mespb Is Indispensable for the Activation of Bowline Expression During {Xenopus} Somitogenesis.''} \emph{Biochemical and Biophysical Research Communications} 372 (4): 607--12. \url{https://doi.org/10.1016/j.bbrc.2008.05.083}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-HmmlearnHmmlearn2022}{}}%
+\emph{Hmmlearn/Hmmlearn}. (2014) 2022. {hmmlearn}. \url{https://github.com/hmmlearn/hmmlearn}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-hochbergMorePowerfulProcedures1990}{}}%
 Hochberg, Yosef, and Yoav Benjamini. 1990. {``More Powerful Procedures for Multiple Significance Testing.''} \emph{Statistics in Medicine} 9 (7): 811--18. \url{https://doi.org/10.1002/sim.4780090710}.
 
@@ -1410,6 +1891,9 @@ Hodge, Russ. 2009. \emph{Genetic {Engineering}: {Manipulating} the {Mechanisms} 
 
 \leavevmode\vadjust pre{\hypertarget{ref-holsingerGeneticsGeographicallyStructured2009}{}}%
 Holsinger, Kent E., and Bruce S. Weir. 2009. {``Genetics in Geographically Structured Populations: Defining, Estimating and Interpreting {FST}.''} \emph{Nature Reviews Genetics} 10 (9, 9): 639--50. \url{https://doi.org/10.1038/nrg2611}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-huangMpMapComputationalPlatform2011}{}}%
+Huang, B. Emma, and Andrew W. George. 2011. {``R/{mpMap}: A Computational Platform for the Genetic Analysis of Multiparent Recombinant Inbred Lines.''} \emph{Bioinformatics} 27 (5): 727--29. \url{https://doi.org/10.1093/bioinformatics/btq719}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-hubaudSignallingDynamicsVertebrate2014}{}}%
 Hubaud, Alexis, and Olivier Pourquié. 2014. {``Signalling Dynamics in Vertebrate Segmentation.''} \emph{Nature Reviews Molecular Cell Biology} 15 (11, 11): 709--21. \url{https://doi.org/10.1038/nrm3891}.
@@ -1443,6 +1927,9 @@ Kerminen, Sini, Alicia R. Martin, Jukka Koskela, Sanni E. Ruotsalainen, Aki S. H
 
 \leavevmode\vadjust pre{\hypertarget{ref-kevlesNameEugenicsGenetics1995}{}}%
 Kevles, Daniel J. 1995. \emph{In the {Name} of {Eugenics}: {Genetics} and the {Uses} of {Human Heredity}}. {Harvard University Press}. \url{https://books.google.com?id=NWBi9kyb8xUC}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-khannaBamreadcountRapidGeneration2022}{}}%
+Khanna, Ajay, David E. Larson, Sridhar Nonavinkere Srivatsan, Matthew Mosior, Travis E. Abbott, Susanna Kiwala, Timothy J. Ley, et al. 2022. {``Bam-Readcount - Rapid Generation of Basepair-Resolution Sequence Metrics.''} \emph{Journal of Open Source Software} 7 (69): 3722. \url{https://doi.org/10.21105/joss.03722}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-kheraGenomewidePolygenicScores2018}{}}%
 Khera, Amit V., Mark Chaffin, Krishna G. Aragam, Mary E. Haas, Carolina Roselli, Seung Hoan Choi, Pradeep Natarajan, et al. 2018. {``Genome-Wide Polygenic Scores for Common Diseases Identify Individuals with Risk Equivalent to Monogenic Mutations.''} \emph{Nature Genetics} 50 (9, 9): 1219--24. \url{https://doi.org/10.1038/s41588-018-0183-z}.
@@ -1488,6 +1975,9 @@ Leger, Adrien, Ian Brettell, Jack Monahan, Carl Barton, Nadeshda Wolf, Natalja K
 
 \leavevmode\vadjust pre{\hypertarget{ref-lewisPolygenicRiskScores2020}{}}%
 Lewis, Cathryn M., and Evangelos Vassos. 2020. {``Polygenic Risk Scores: From Research Tools to Clinical Instruments.''} \emph{Genome Medicine} 12 (1): 44. \url{https://doi.org/10.1186/s13073-020-00742-5}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-liSequenceAlignmentMap2009}{}}%
+Li, Heng, Bob Handsaker, Alec Wysoker, Tim Fennell, Jue Ruan, Nils Homer, Gabor Marth, Goncalo Abecasis, Richard Durbin, and 1000 Genome Project Data Processing Subgroup. 2009. {``The {Sequence} Alignment/Map ({SAM}) Format and {SAMtools}.''} \emph{Bioinformatics} 25 (16): 2078--79.
 
 \leavevmode\vadjust pre{\hypertarget{ref-limaBehavioralDecisionsMade1990}{}}%
 Lima, Steven L., and Lawrence M. Dill. 1990. {``Behavioral Decisions Made Under the Risk of Predation: A Review and Prospectus.''} \emph{Canadian Journal of Zoology} 68 (4): 619--40. \url{https://doi.org/10.1139/z90-092}.
@@ -1558,8 +2048,14 @@ Mazumdar, Pauline. 2005. \emph{Eugenics, Human Genetics and Human Failings: The 
 \leavevmode\vadjust pre{\hypertarget{ref-mccarthyReferencePanel642016}{}}%
 McCarthy, Shane, Sayantan Das, Warren Kretzschmar, Olivier Delaneau, Andrew R Wood, Alexander Teumer, Hyun Min Kang, et al. 2016. {``A Reference Panel of 64,976 Haplotypes for Genotype Imputation.''} \emph{Nature Genetics} 48 (10, 10): 1279--83. \url{https://doi.org/10.1038/ng.3643}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-mckennaGenomeAnalysisToolkit2010}{}}%
+McKenna, Aaron, Matthew Hanna, Eric Banks, Andrey Sivachenko, Kristian Cibulskis, Andrew Kernytsky, Kiran Garimella, et al. 2010. {``The {Genome Analysis Toolkit}: {A MapReduce} Framework for Analyzing Next-Generation {DNA} Sequencing Data.''} \emph{Genome Research} 20 (9): 1297--1303. \url{https://doi.org/10.1101/gr.107524.110}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-mclarenOurOwnMaster2015}{}}%
 McLaren, Angus. 2015. \emph{Our {Own Master Race}: {Eugenics} in {Canada}, 1885-1945}. {University of Toronto Press}. \url{https://books.google.com?id=4rP3rQEACAAJ}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mclarenEnsemblVariantEffect2016}{}}%
+McLaren, William, Laurent Gil, Sarah E. Hunt, Harpreet Singh Riat, Graham R. S. Ritchie, Anja Thormann, Paul Flicek, and Fiona Cunningham. 2016. {``The {Ensembl Variant Effect Predictor}.''} \emph{Genome Biology} 17 (1): 122. \url{https://doi.org/10.1186/s13059-016-0974-4}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-meijsserAnalysisOpenfieldPerformance1989}{}}%
 Meijsser, F. M., A. M. P. Kersten, P. R. Wiepkema, and J. H. M. Metz. 1989. {``An Analysis of the Open-Field Performance of Sub-Adult Rabbits.''} \emph{Applied Animal Behaviour Science} 24 (2): 147--55. \url{https://doi.org/10.1016/0168-1591(89)90042-7}.
@@ -1609,6 +2105,9 @@ Nasmyth, Kim. 2022. {``The Magic and Meaning of {Mendel}'s Miracle.''} \emph{Nat
 \leavevmode\vadjust pre{\hypertarget{ref-natarajanPolygenicRiskScore2017}{}}%
 Natarajan, Pradeep, Robin Young, Nathan O. Stitziel, Sandosh Padmanabhan, Usman Baber, Roxana Mehran, Samantha Sartori, et al. 2017. {``Polygenic {Risk Score Identifies Subgroup With Higher Burden} of {Atherosclerosis} and {Greater Relative Benefit From Statin Therapy} in the {Primary Prevention Setting}.''} \emph{Circulation} 135 (22): 2091--101. \url{https://doi.org/10.1161/CIRCULATIONAHA.116.024436}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-nicodGenomewideAssociationMultiple2016}{}}%
+Nicod, J'erôme, Robert W. Davies, Na Cai, Carl Hassett, Leo Goodstadt, Cormac Cosgrove, Benjamin K. Yee, et al. 2016. {``Genome-Wide Association of Multiple Complex Traits in Outbred Mice by Ultra-Low-Coverage Sequencing.''} \emph{Nature Genetics} 48 (8, 8): 912--18. \url{https://doi.org/10.1038/ng.3595}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-nordbergTestingMeasuresBoldness2021}{}}%
 Nordberg, Eric, Rheanne Denny, and Lin Schwarzkopf. 2021. {``Testing Measures of Boldness and Exploratory Activity in Native Versus Invasive Species: Geckos as a Model System.''} \emph{Animal Behaviour} 177 (July): 215--22. \url{https://doi.org/10.1016/j.anbehav.2021.05.013}.
 
@@ -1632,6 +2131,9 @@ Paquette, Martine, Michael Chong, Sébastien Thériault, Robert Dufour, Guillaum
 
 \leavevmode\vadjust pre{\hypertarget{ref-parkDistributionAlleleFrequencies2011}{}}%
 Park, Ju-Hyun, Mitchell H. Gail, Clarice R. Weinberg, Raymond J. Carroll, Charles C. Chung, Zhaoming Wang, Stephen J. Chanock, Joseph F. Fraumeni, and Nilanjan Chatterjee. 2011. {``Distribution of Allele Frequencies and Effect Sizes and Their Interrelationships for Common Genetic Susceptibility Variants.''} \emph{Proceedings of the National Academy of Sciences} 108 (44): 18026--31. \url{https://doi.org/10.1073/pnas.1114759108}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-pasaniucExtremelyLowcoverageSequencing2012}{}}%
+Pasaniuc, Bogdan, Nadin Rohland, Paul J. McLaren, Kiran Garimella, Noah Zaitlen, Heng Li, Namrata Gupta, et al. 2012. {``Extremely Low-Coverage Sequencing and Imputation Increases Power for Genome-Wide Association Studies.''} \emph{Nature Genetics} 44 (6, 6): 631--35. \url{https://doi.org/10.1038/ng.2283}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-pattersonRecoveryInterblockInformation1971}{}}%
 Patterson, H. D., and R. Thompson. 1971. {``Recovery of Inter-Block Information When Block Sizes Are Unequal.''} \emph{Biometrika} 58 (3): 545--54. \url{https://doi.org/10.1093/biomet/58.3.545}.
@@ -1660,6 +2162,9 @@ Peirce, Jeremy L., Lu Lu, Jing Gu, Lee M. Silver, and Robert W. Williams. 2004. 
 \leavevmode\vadjust pre{\hypertarget{ref-pennisi100GenomeNew2022}{}}%
 Pennisi, Elizabeth. 2022. {``A \$100 Genome? {New DNA} Sequencers Could Be a {`Game Changer'} for Biology, Medicine \textbar{} {Science} \textbar{} {AAAS}.''} \emph{Science}, June 15, 2022. \url{https://www.science.org/content/article/100-genome-new-dna-sequencers-could-be-game-changer-biology-medicine}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-Picard2019toolkit}{}}%
+{``Picard Toolkit.''} 2019. \emph{Broad Institute, GitHub Repository}. \url{https://broadinstitute.github.io/picard/}; Broad Institute.
+
 \leavevmode\vadjust pre{\hypertarget{ref-platoPlatoRepublic2013}{}}%
 Plato. 2013. \emph{Plato's {Republic}}. Translated by Alain Badiou. {John Wiley \& Sons}.
 
@@ -1668,6 +2173,9 @@ Polderman, Tinca J. C., Beben Benyamin, Christiaan A. de Leeuw, Patrick F. Sulli
 
 \leavevmode\vadjust pre{\hypertarget{ref-popejoyGenomicsFailingDiversity2016}{}}%
 Popejoy, Alice B., and Stephanie M. Fullerton. 2016. {``Genomics Is Failing on Diversity.''} \emph{Nature} 538 (7624, 7624): 161--64. \url{https://doi.org/10.1038/538161a}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-poplinScalingAccurateGenetic2018}{}}%
+Poplin, Ryan, Valentin Ruano-Rubio, Mark A. DePristo, Tim J. Fennell, Mauricio O. Carneiro, Geraldine A. Van der Auwera, David E. Kling, et al. 2018. {``Scaling Accurate Genetic Variant Discovery to Tens of Thousands of Samples.''} {bioRxiv}. \url{https://doi.org/10.1101/201178}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-porcuGenotypeImputationGenomeWide2013}{}}%
 Porcu, Eleonora, Serena Sanna, Christian Fuchsberger, and Lars G. Fritsche. 2013. {``Genotype {Imputation} in {Genome-Wide Association Studies}.''} \emph{Current Protocols in Human Genetics} 78 (1): 1.25.1--14. \url{https://doi.org/10.1002/0471142905.hg0125s78}.
@@ -1702,6 +2210,9 @@ Punnett, Reginald Crundall. 1905. \emph{Mendelism}. {Macmillan \& Bowes}.
 \leavevmode\vadjust pre{\hypertarget{ref-quintana-murciRolePlayedNatural2010}{}}%
 Quintana-Murci, Lluis, and Luis B. Barreiro. 2010. {``The Role Played by Natural Selection on {Mendelian} Traits in Humans.''} \emph{Annals of the New York Academy of Sciences} 1214 (1): 1--17. \url{https://doi.org/10.1111/j.1749-6632.2010.05856.x}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-rangarajanPCNSNovelProtocadherin2006}{}}%
+Rangarajan, Janaki, Ting Luo, and Thomas D. Sargent. 2006. {``{PCNS}: {A} Novel Protocadherin Required for Cranial Neural Crest Migration and Somite Morphogenesis in {Xenopus}.''} \emph{Developmental Biology} 295 (1): 206--18. \url{https://doi.org/10.1016/j.ydbio.2006.03.025}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-reeveEncyclopediaGenetics2014}{}}%
 Reeve, Eric C. R. 2014. \emph{Encyclopedia of {Genetics}}. {Routledge}. \url{https://books.google.com?id=BGqYAgAAQBAJ}.
 
@@ -1735,6 +2246,9 @@ Ruzzante, D. E., and R. W. Doyle. 1990. {``Behavioural and Growth Responses to t
 \leavevmode\vadjust pre{\hypertarget{ref-saliba-colombaniEfficiencyRFLPRAPD2000}{}}%
 Saliba-Colombani, Vera, Mathilde Causse, Laurent Gervais, and Jacqueline Philouze. 2000. {``Efficiency of {RFLP}, {RAPD}, and {AFLP} Markers for the Construction of an Intraspecific Map of the Tomato Genome.''} \emph{Genome} 43 (1): 29--40. \url{https://doi.org/10.1139/g99-096}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-sanchezArnoldTongueEntrainment2022}{}}%
+Sanchez, Paul Gerald Layague, Victoria Mochulska, Christian Mauffette Denis, Gregor Mönke, Takehito Tomita, Nobuko Tsuchida-Straeten, Yvonne Petersen, Katharina F. Sonnen, Paul François, and Alexander Aulehla. 2022. {``Arnold Tongue Entrainment Reveals Dynamical Principles of the Embryonic Segmentation Clock.''} {bioRxiv}. \url{https://doi.org/10.1101/2021.10.20.465101}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-sandlerConceptualAmbiguityThat1985}{}}%
 Sandler, Iris, and Laurence Sandler. 1985. {``A {Conceptual Ambiguity} That {Contributed} to the {Neglect} of {Mendel}'s {Paper}.''} \emph{History and Philosophy of the Life Sciences} 7 (1): 3--70. \url{https://www.jstor.org/stable/23328361}.
 
@@ -1750,11 +2264,20 @@ Sanger, F., and H. Tuppy. 1951a. {``The Amino-Acid Sequence in the Phenylalanyl 
 \leavevmode\vadjust pre{\hypertarget{ref-sangerAminoacidSequencePhenylalanyl1951a}{}}%
 ---------. 1951b. {``The Amino-Acid Sequence in the Phenylalanyl Chain of Insulin. 2. {The} Investigation of Peptides from Enzymic Hydrolysates.''} \emph{Biochemical Journal} 49 (4): 481--90. \url{https://doi.org/10.1042/bj0490481}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-sargolzaeiNewApproachEfficient2014}{}}%
+Sargolzaei, Mehdi, Jacques P. Chesnais, and Flavio S. Schenkel. 2014. {``A New Approach for Efficient Genotype Imputation Using Information from Relatives.''} \emph{BMC Genomics} 15 (1): 478. \url{https://doi.org/10.1186/1471-2164-15-478}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-satouAscidianMespGene2004}{}}%
+Satou, Yutaka, Kaoru S. Imai, and Nori Satoh. 2004. {``The Ascidian {Mesp} Gene Specifies Heart Precursor Cells.''} \emph{Development} 131 (11): 2533--41. \url{https://doi.org/10.1242/dev.01145}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-schjoldenDoesIndividualVariation2005}{}}%
 Schjolden, Joachim, Argaudas Stoskhus, and Svante Winberg. 2005. {``Does {Individual Variation} in {Stress Responses} and {Agonistic Behavior Reflect Divergent Stress Coping Strategies} in {Juvenile Rainbow Trout}?''} \emph{Physiological and Biochemical Zoology} 78 (5): 715--23. \url{https://doi.org/10.1086/432153}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-schmalAnalysisComplexCircadian2022}{}}%
 Schmal, Christoph, Gregor Mönke, and Adrián E. Granada. 2022. {``Analysis of {Complex Circadian Time Series Data Using Wavelets}.''} In \emph{Circadian {Regulation}: {Methods} and {Protocols}}, edited by Guiomar Solanas and Patrick -Simon Welz, 35--54. Methods in {Molecular Biology}. {New York, NY}: {Springer US}. \url{https://doi.org/10.1007/978-1-0716-2249-0_3}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-schroterSegmentNumberAxial2010}{}}%
+Schröter, Christian, and Andrew C. Oates. 2010. {``Segment {Number} and {Axial Identity} in a {Segmentation Clock Period Mutant}.''} \emph{Current Biology} 20 (14): 1254--58. \url{https://doi.org/10.1016/j.cub.2010.05.071}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-schumacherAssociationAnalysesMore2018}{}}%
 Schumacher, Fredrick R., Ali Amin Al Olama, Sonja I. Berndt, Sara Benlloch, Mahbubl Ahmed, Edward J. Saunders, Tokhir Dadaev, et al. 2018. {``Association Analyses of More Than 140,000 Men Identify 63 New Prostate Cancer Susceptibility Loci.''} \emph{Nature Genetics} 50 (7, 7): 928--36. \url{https://doi.org/10.1038/s41588-018-0142-8}.
@@ -1828,6 +2351,9 @@ Svartberg, Kenth. 2002. {``Shyness--Boldness Predicts Performance in Working Dog
 \leavevmode\vadjust pre{\hypertarget{ref-svensonHighResolutionGeneticMapping2012}{}}%
 Svenson, Karen L, Daniel M Gatti, William Valdar, Catherine E Welsh, Riyan Cheng, Elissa J Chesler, Abraham A Palmer, Leonard McMillan, and Gary A Churchill. 2012. {``High-{Resolution Genetic Mapping Using} the {Mouse Diversity Outbred Population}.''} \emph{Genetics} 190 (2): 437--47. \url{https://doi.org/10.1534/genetics.111.132597}.
 
+\leavevmode\vadjust pre{\hypertarget{ref-swartsNovelMethodsOptimize2014}{}}%
+Swarts, Kelly, Huihui Li, J. Alberto Romero Navarro, Dong An, Maria Cinta Romay, Sarah Hearne, Charlotte Acharya, et al. 2014. {``Novel {Methods} to {Optimize Genotypic Imputation} for {Low-Coverage}, {Next-Generation Sequence Data} in {Crop Plants}.''} \emph{The Plant Genome} 7 (3): plantgenome2014.05.0023. \url{https://doi.org/10.3835/plantgenome2014.05.0023}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-taberyStruggleUnderstandInteraction2014}{}}%
 Tabery, James. 2014. \emph{Beyond Versus: {The} Struggle to Understand the Interaction of Nature and Nurture}. {mit Press}.
 
@@ -1854,6 +2380,15 @@ Uffelmann, Emil, Qin Qin Huang, Nchangwi Syntia Munung, Jantina de Vries, Yukino
 
 \leavevmode\vadjust pre{\hypertarget{ref-vandenoordControllingFalseDiscoveries2008}{}}%
 van den Oord, Edwin J. C. G. 2008. {``Controlling False Discoveries in Genetic Studies.''} \emph{American Journal of Medical Genetics Part B: Neuropsychiatric Genetics} 147B (5): 637--44. \url{https://doi.org/10.1002/ajmg.b.30650}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-vanderauweraGenomicsCloudUsing2020}{}}%
+Van der Auwera, Geraldine A., and Brian D. O'Connor. 2020. \emph{Genomics in the Cloud: Using {Docker}, {GATK}, and {WDL} in {Terra}}. {O'Reilly Media}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-vanradenFastImputationUsing2015}{}}%
+VanRaden, Paul M., Chuanyu Sun, and Jeffrey R. O'NAConnel. 2015. {``Fast Imputation Using Medium or Low-Coverage Sequence Data.''} \emph{BMC Genetics} 16 (1): 82. \url{https://doi.org/10.1186/s12863-015-0243-7}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-vasimuddinEfficientArchitectureawareAcceleration2019}{}}%
+Vasimuddin, Md, Sanchit Misra, Heng Li, and Srinivas Aluru. 2019. {``Efficient Architecture-Aware Acceleration of {BWA-MEM} for Multicore Systems.''} In \emph{2019 {IEEE International Parallel} and {Distributed Processing Symposium} ({IPDPS})}, 314--24. {IEEE}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-venterSequenceHumanGenome2001}{}}%
 Venter, J. Craig, Mark D. Adams, Eugene W. Myers, Peter W. Li, Richard J. Mural, Granger G. Sutton, Hamilton O. Smith, et al. 2001. {``The {Sequence} of the {Human Genome}.''} \emph{Science} 291 (5507): 1304--51. \url{https://doi.org/10.1126/science.1058040}.
@@ -1911,6 +2446,9 @@ Westfall, Peter H., and S. Stanley Young. 1993. \emph{Resampling-{Based Multiple
 
 \leavevmode\vadjust pre{\hypertarget{ref-wetterstrandDNASequencingCosts2021}{}}%
 Wetterstrand, Kris A. 2021. {``{DNA Sequencing Costs}: {Data}.''} {Genome.gov}. November 1, 2021. \url{https://www.genome.gov/about-genomics/fact-sheets/DNA-Sequencing-Costs-Data}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-wichuraAlgorithm241Percentage1988}{}}%
+Wichura, Michael J. 1988. {``Algorithm {AS} 241: {The Percentage Points} of the {Normal Distribution}.''} \emph{Journal of the Royal Statistical Society. Series C (Applied Statistics)} 37 (3): 477--84. \url{https://doi.org/10.2307/2347330}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-batesonPhoto}{}}%
 Wikimedia Commons. 2017a. {``File:Bateson2.jpg --- Wikimedia Commons{,} the Free Media Repository.''} \url{/url\%7Bhttps://commons.wikimedia.org/w/index.php?title=File:Bateson2.jpg\&oldid=255958176\%7D}.
