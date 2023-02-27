@@ -317,8 +317,7 @@ kableExtra::kbl(
   kableExtra::kable_styling(latex_options = "striped")
 ```
 
-These regions contained a total of 46,872 SNPs imputed from the haplotypes of the F~0~ parental strains. 
-I ran Ensembl's Variant Effect Predictor [@mclarenEnsemblVariantEffect2016] over these SNPs to identify those that would be most likely to have functional consequences. The full counts of SNPs falling into each category of 'consequence' are set out in **Table \@ref(tab:int-consequence-tbl)**. From this process I identified 38 genes that included a missense variant, 1 that included a missense variant and a start lost (ENSORLG00000014616), ane 1 that included a missense variant and a stop lost (ENSORLG00000015149).
+These regions contained a total of 46,872 SNPs imputed from the haplotypes of the F~0~ parental strains. I ran Ensembl's Variant Effect Predictor [@mclarenEnsemblVariantEffect2016] over these SNPs to identify those that would be most likely to have functional consequences. The full counts of SNPs falling into each category of 'consequence' are set out in **Table \@ref(tab:int-consequence-tbl)**. From this process I identified 38 genes that included a missense variant, 1 that included a missense variant and a start lost (ENSORLG00000014616), and 1 that included a missense variant and a stop lost (ENSORLG00000015149).
 
 
 ```{r int-consequence-tbl, echo = F, message = F, warning = F, fig.cap = '(ref:somite-sig-int-tb)', out.width='100%'}
@@ -330,7 +329,7 @@ kableExtra::kbl(
   kableExtra::kable_styling(latex_options = "striped")
 ```
 
-My collaborators then combined these results with bulk RNA-seq that they had performed on F~0~ *Cab* and *Kaga* individuals, to determine which of these genes are expressed in the tail during embryogenesis. This allowed them to reduce to the list to 29 genes, and a gene ontology analysis of this found that the list of genes was enriched for body axis, somitogenesis, and segmentation (**Table \@ref(tab:psm-final-genes)**). For this list of genes, our collaborators are now in the process of knocking out the protein-altering *Cab* allele into *Kaga* embryos, and *vice versa*, to functionally validate these variants.
+My collaborators then combined these results with bulk RNA-seq that they had performed on F~0~ *Cab* and *Kaga* individuals, to determine which of these genes are expressed in the tail during embryogenesis. This allowed them to reduce to the list to 29 genes, and a gene ontology analysis of this found that the list of genes was enriched for body axis, somitogenesis, and segmentation (**Table \@ref(tab:psm-final-genes)**).
 
 ```{r psm-final-genes, echo = F, message = F, warning = F, fig.cap = '(ref:psm-final-genes)', out.width='100%'}
 kableExtra::kbl(  
@@ -376,8 +375,7 @@ kableExtra::kbl(
   kableExtra::kable_styling(latex_options = "striped")
 ```
 
-This region contained a total of 29,096 SNPs imputed from the haplotypes of the F~0~ parental strains. 
-I ran Ensembl's Variant Effect Predictor [@mclarenEnsemblVariantEffect2016] over these SNPs to identify those that would be most likely to have functional consequences. The full counts of SNPs falling into each category of 'consequence' are set out in **Table \@ref(tab:psm-consequence-tbl)**. From this process I identified 114 genes that included a missense variant, and 1 that included a both a missense variant and a start lost (ENSORLG00000010863, a centriole, cilia and spindle-associated protein).
+This region contained a total of 29,096 SNPs imputed from the haplotypes of the F~0~ parental strains. I ran Ensembl's Variant Effect Predictor [@mclarenEnsemblVariantEffect2016] over these SNPs to identify those that would be most likely to have functional consequences. The full counts of SNPs falling into each category of 'consequence' are set out in **Table \@ref(tab:psm-consequence-tbl)**. From this process I identified 114 genes that included a missense variant, and 1 that included a both a missense variant and a start lost (ENSORLG00000010863, a centriole, cilia and spindle-associated protein).
 
 ```{r psm-consequence-tbl, echo = F, message = F, warning = F, fig.cap = '(ref:psm-consequence-tbl)', out.width='100%'}
 kableExtra::kbl(
@@ -388,5 +386,7 @@ kableExtra::kbl(
   kableExtra::kable_styling(latex_options = "striped")
 ```
 
-Our collaborators then combined these results with bulk RNA-seq that they had performed on F~0~ *Cab* and *Kaga* individuals, to determine which of these genes are expressed in the unsegmented tail during embryogenesis. This allowed them to reduce to the list to 96 genes, although they were not apparently associated with a specific gene ontology as perhaps expected, given this is a single locus that is potentially driven by just one gene. As with the period intercept phenotype, our collaborators are now in the process of knocking in the *Cab* allele into *Kaga* embryos, and *vice versa*, to functionally validate these variants.
+Our collaborators then combined these results with bulk RNA-seq that they had performed on F~0~ *Cab* and *Kaga* individuals, to determine which of these genes are expressed in the unsegmented tail during embryogenesis. This allowed them to reduce to the list to 96 genes, still an unwieldy number to attempt to validate with CRISPR knockouts. To assist our collaborators with refining the QTL region, future work will seek to reduce the confidence interval of this QTL by using either a non-parametric bootstrap [@visscherConfidenceIntervalsQTL1996], the LOG drop method [@lipkinUseKosherPhenotyping2016], or information about the LD block in the region [@ulebergFineMappingMultiple2007].
+
+As with the period intercept phenotype, our collaborators are now in the process of knocking in the *Cab* allele into *Kaga* embryos, and *vice versa*, to functionally validate these variants.
 
