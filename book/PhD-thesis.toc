@@ -57,3 +57,4 @@
 \contentsline {section}{\numberline {3.6}GWAS}{102}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Period intercept}{103}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}PSM area}{107}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3.7}Discussion}{109}{section.3.7}%
