@@ -2,7 +2,7 @@
 title: |
   Japanese courage: a genetic analysis of complex traits in medaka fish and humans
 author: "Ian Narain Brettell"
-date: "30 September 2022"
+date: "6 October 2022"
 site: bookdown::bookdown_site
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
