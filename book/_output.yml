@@ -10,6 +10,7 @@ bookdown::pdf_book:
   biblio-style: apalike
   highlight: tango
   extra_dependencies: ["float"]
+  toc: false
 bookdown::bs4_book:
   css: style.css
   theme:

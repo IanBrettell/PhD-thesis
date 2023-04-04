@@ -50,5 +50,24 @@ header-includes:
       \end{subfigure}
       \end{figure}
     }
+  - \cleardoublepage
 ---
+
+```{r child = 'Declaration.Rmd'}
+```
+
+```{r child = 'Abstract.Rmd'}
+```
+
+```{r child = 'Acknowledgements.Rmd'}
+```
+
+```{r child = 'Preface.Rmd'}
+```
+
+```{=latex}
+% Trigger ToC creation in LaTeX
+\tableofcontents
+```
+
 

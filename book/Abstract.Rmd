@@ -1,5 +1,9 @@
 # Abstract {-}
 
+## Japanese courage: a genetic analysis of complex traits in medaka fish and humans {.unlisted .unnumbered}
+
+### Ian Brettell {.unlisted .unnumbered}
+
 This thesis primarily explores how an individual's genes interact with the genes of their social companions to create differences in behaviour, using the Japanese medaka fish as a model organism. Chapter 1 sets out the introduction to the diverse topics covered in this thesis, and is followed by five substantive chapters.
 
 Chapter 2 describes several genomic characteristics of the Medaka Inbred Kiyosu-Karlsruhe (MIKK) panel, which comprises 80 inbred lines of medaka that were bred from a wild population from the city of Kiyosu, southern Japan. In this chapter I plot the inbreeding trajectory of the MIKK panel and analyse a number of genomic characteristics relevant to its utility for the genetic mapping of complex traits, including: the panel's evolutionary relationship with other previously-established inbred medaka strains; the degree of homozygosity in the inbred lines; the rate of linkage disequilibrium decay across the panel; and the genomic repeats and structural variation present in their genomes.

@@ -8,9 +8,6 @@ language:
 output_dir: "../docs"
 rmd_files: [
   "index.Rmd",
-  "Acknowledgements.Rmd",
-  "Preface.Rmd",
-  "Abstract.Rmd",
   "01-Introduction.Rmd",
   "02-MIKK_genome.Rmd",
   "03-Pilot.Rmd",
